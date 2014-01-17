@@ -1,0 +1,23 @@
+{
+    "Desciption": "", 
+    "ID": "TexColorToFloat", 
+    "Name": "Color To Float", 
+    "Parameters": [
+        {
+            "attr": "input", 
+            "default": 0, 
+            "desc": "The color value", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": []
+    }
+}

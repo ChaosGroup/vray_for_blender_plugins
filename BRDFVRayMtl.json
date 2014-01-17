@@ -1,0 +1,1193 @@
+{
+    "Desciption": "Standart V-Ray BRDF", 
+    "ID": "BRDFVRayMtl", 
+    "Name": "VRayMtl", 
+    "Parameters": [
+        {
+            "attr": "opacity", 
+            "default": 1, 
+            "desc": "The opacity of the material", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "diffuse", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "The diffuse color of the material", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "roughness", 
+            "default": 0, 
+            "desc": "The roughness of the diffuse part of the material", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "self_illumination", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The self-illumination color of the material", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "self_illumination_gi", 
+            "default": true, 
+            "desc": "true if the self-illumination should affect GI", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "brdf_type", 
+            "default": "1", 
+            "desc": "The BRDF type", 
+            "items": [
+                [
+                    "0", 
+                    "Phong", 
+                    "Phong"
+                ], 
+                [
+                    "1", 
+                    "Blinn", 
+                    "Blinn"
+                ], 
+                [
+                    "2", 
+                    "Ward", 
+                    "Ward"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "reflect", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The reflection color of the material", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "reflect_glossiness", 
+            "default": 1, 
+            "desc": "The glossiness of the reflections", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "hilight_glossiness", 
+            "default": 1, 
+            "desc": "The glossiness of the hilights", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "hilight_glossiness_lock", 
+            "default": true, 
+            "desc": "true to use the reflection glossiness also for hilights (hilight_glossiness is ignored)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "fresnel", 
+            "default": false, 
+            "desc": "true to enable fresnel reflections", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "fresnel_ior", 
+            "default": 1.6, 
+            "desc": "The ior for calculating the Fresnel term", 
+            "name": "Fresnel IOR", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fresnel_ior_lock", 
+            "default": true, 
+            "desc": "true to use the refraction ior also for the Fresnel term (fresnel_ior is ignored)", 
+            "name": "Fresnel IOR Lock", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflect_subdivs", 
+            "default": 8, 
+            "desc": "Subdivs for glossy reflectons", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_trace", 
+            "default": true, 
+            "desc": "true to trace reflections and false to only do hilights", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflect_depth", 
+            "default": 5, 
+            "desc": "The maximum depth for reflections", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_exit_color", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The color to use when the maximum depth is reached", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "hilight_soften", 
+            "default": 0, 
+            "desc": "How much to soften hilights and reflections at grazing light angles", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_dim_distance", 
+            "default": 1e+18, 
+            "desc": "How much to dim reflection as length of rays increases", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_dim_distance_on", 
+            "default": false, 
+            "desc": "True to enable dim distance", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflect_dim_distance_falloff", 
+            "default": 0, 
+            "desc": "Fall off for the dim distance", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_affect_alpha", 
+            "default": "0", 
+            "desc": "Determines how reflections affect the alpha channel", 
+            "items": [
+                [
+                    "0", 
+                    "Color Only", 
+                    "The transperency will affect only the RGB channel of the final render"
+                ], 
+                [
+                    "1", 
+                    "Color+Alpha", 
+                    "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
+                ], 
+                [
+                    "2", 
+                    "All Channels", 
+                    "All channels and render elements will be affected by the transperency of the material"
+                ]
+            ], 
+            "name": "Affect Alpha", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "anisotropy", 
+            "default": 0, 
+            "desc": "The anisotropy for glossy reflections, from -1 to 1 (0.0 is isotropic reflections)", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anisotropy_rotation", 
+            "default": 0, 
+            "desc": "The rotation of the anisotropy axes, from 0.0 to 1.0", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anisotropy_derivation", 
+            "default": "0", 
+            "desc": "What method to use for deriving anisotropy axes", 
+            "items": [
+                [
+                    "0", 
+                    "Local Axis", 
+                    "Local object axis"
+                ], 
+                [
+                    "1", 
+                    "UvwGen", 
+                    "The specified UVW generator"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "anisotropy_axis", 
+            "default": 2, 
+            "desc": "Which local object axis to use when anisotropy_derivation is 0", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anisotropy_uvwgen", 
+            "default": "", 
+            "desc": "The uvw generator to use for anisotropy when anisotropy_derivation is 1", 
+            "type": "UVWGEN"
+        }, 
+        {
+            "attr": "refract", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The refraction color of the material", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "refract_ior", 
+            "default": 1.6, 
+            "desc": "The IOR for refractions", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refract_glossiness", 
+            "default": 1, 
+            "desc": "Glossiness for refractions", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refract_subdivs", 
+            "default": 8, 
+            "desc": "Subdivs for glossy refractions", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refract_trace", 
+            "default": true, 
+            "desc": "1 to trace refractions; 0 to disable them", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "refract_depth", 
+            "default": 5, 
+            "desc": "The maximum depth for refractions", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refract_exit_color", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The color to use when maximum depth is reached when refract_exit_color_on is true", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "refract_exit_color_on", 
+            "default": false, 
+            "desc": "If false, when the maximum refraction depth is reached, the material is assumed transparent, instead of terminating the ray", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "refract_affect_alpha", 
+            "default": "0", 
+            "desc": "Determines how refractions affect the alpha channel", 
+            "items": [
+                [
+                    "0", 
+                    "Color Only", 
+                    "The transperency will affect only the RGB channel of the final render"
+                ], 
+                [
+                    "1", 
+                    "Color+Alpha", 
+                    "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
+                ], 
+                [
+                    "2", 
+                    "All Channels", 
+                    "All channels and render elements will be affected by the transperency of the material"
+                ]
+            ], 
+            "name": "Affect Alpha", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "refract_affect_shadows", 
+            "default": false, 
+            "desc": "true to enable the refraction to affect the shadows cast by the material (as transparent shadows)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dispersion_on", 
+            "default": false, 
+            "desc": "true to enable dispersion", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dispersion", 
+            "default": 50, 
+            "desc": "abbe value", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fog_color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "The absorption (fog) color", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "fog_color_tex", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "The absorption (fog) color texture", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "fog_mult", 
+            "default": 1, 
+            "desc": "Multiplier for the absorption", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fog_bias", 
+            "default": 0, 
+            "desc": "Bias for the absorption", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fog_unit_scale_on", 
+            "default": true, 
+            "desc": "Enable unit scale multiplication, when calculating absorption", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "translucency", 
+            "default": "0", 
+            "desc": "Translucency mode", 
+            "items": [
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Hard (wax) model", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Soft (water) model", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Hybrid model", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "translucency_color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "Filter color for the translucency effect", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "translucency_light_mult", 
+            "default": 1, 
+            "desc": "A multiplier for the calculated lighting for the translucency effect", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "translucency_scatter_dir", 
+            "default": 0.5, 
+            "desc": "Scatter direction (0.0f is backward, 1.0f is forward)", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "translucency_scatter_coeff", 
+            "default": 0, 
+            "desc": "Scattering cone (0.0f - no scattering, 1.0f - full scattering", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "translucency_thickness", 
+            "default": 1e+18, 
+            "desc": "Maximum distance to trace inside the object", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "option_double_sided", 
+            "default": true, 
+            "desc": "true if the material is double-sided", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "option_reflect_on_back", 
+            "default": false, 
+            "desc": "true to compute reflections for back sides of objects", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "option_glossy_rays_as_gi", 
+            "default": "1", 
+            "desc": "Specifies when to treat GI rays as glossy rays", 
+            "items": [
+                [
+                    "0", 
+                    "Never", 
+                    "Never"
+                ], 
+                [
+                    "1", 
+                    "GI Rays", 
+                    "Only for rays that are already marked as GI rays"
+                ], 
+                [
+                    "2", 
+                    "Always", 
+                    "Always"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "option_cutoff", 
+            "default": 0.001, 
+            "desc": "Specifies a cutoff threshold for tracing reflections/refractions", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "option_use_irradiance_map", 
+            "default": true, 
+            "desc": "false to perform local brute-force GI calculatons and true to use the current GI engine", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "option_energy_mode", 
+            "default": "0", 
+            "desc": "Energy preservation mode for reflections and refractions", 
+            "items": [
+                [
+                    "1", 
+                    "Monochrome", 
+                    ""
+                ], 
+                [
+                    "0", 
+                    "Color", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "option_fix_dark_edges", 
+            "default": 1, 
+            "desc": "true to fix dark edges for glossy reflections with low samples; only set this to false for compatibility with older versions", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "environment_override", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "Environment override texture", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "environment_priority", 
+            "default": 0, 
+            "desc": "Environment override priority (used when several materials override it along a ray path)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refl_interpolation_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "refl_imap_min_rate", 
+            "default": -1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refl_imap_max_rate", 
+            "default": 1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refl_imap_color_thresh", 
+            "default": 0.25, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refl_imap_norm_thresh", 
+            "default": 0.4, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refl_imap_samples", 
+            "default": 20, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refr_interpolation_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "refr_imap_min_rate", 
+            "default": -1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refr_imap_max_rate", 
+            "default": 1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refr_imap_color_thresh", 
+            "default": 0.25, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refr_imap_norm_thresh", 
+            "default": 0.4, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refr_imap_samples", 
+            "default": 20, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "label": "Reflections", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "brdf_type"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "label": "Subdivs", 
+                        "name": "reflect_subdivs"
+                    }, 
+                    {
+                        "label": "Depth", 
+                        "name": "reflect_depth"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "fresnel"
+                    }, 
+                    {
+                        "name": "fresnel_ior"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Affect Channels", 
+                        "name": "reflect_affect_alpha"
+                    }, 
+                    {
+                        "name": "anisotropy_derivation"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "label": "Refractions", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "label": "Subdivs", 
+                        "name": "refract_subdivs"
+                    }, 
+                    {
+                        "label": "Depth", 
+                        "name": "refract_depth"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "dispersion_on"
+                            }, 
+                            {
+                                "active": {
+                                    "prop": "dispersion_on"
+                                }, 
+                                "name": "dispersion"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "fog_mult"
+                            }, 
+                            {
+                                "name": "fog_bias"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Affect Channels", 
+                        "name": "refract_affect_alpha"
+                    }, 
+                    {
+                        "name": "refract_affect_shadows"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "label": "Translucency", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "translucency"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "", 
+                                "name": "translucency_color"
+                            }, 
+                            {
+                                "label": "Thickness", 
+                                "name": "translucency_thickness"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Scatter Coeff", 
+                                "name": "translucency_scatter_coeff"
+                            }, 
+                            {
+                                "label": "Fwd/Bck Coeff", 
+                                "name": "translucency_scatter_dir"
+                            }, 
+                            {
+                                "label": "Light Multiplier", 
+                                "name": "translucency_light_mult"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "reflect_trace"
+                            }, 
+                            {
+                                "name": "refract_trace"
+                            }, 
+                            {
+                                "name": "option_cutoff"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "option_double_sided"
+                            }, 
+                            {
+                                "name": "option_reflect_on_back"
+                            }, 
+                            {
+                                "name": "option_use_irradiance_map"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Dim Reflect Ray Distance", 
+                        "name": "reflect_dim_distance_on"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "active": {
+                    "prop": "reflect_dim_distance_on"
+                }, 
+                "attrs": [
+                    {
+                        "label": "Distance", 
+                        "name": "reflect_dim_distance"
+                    }, 
+                    {
+                        "label": "Falloff", 
+                        "name": "reflect_dim_distance_falloff"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Reflect Interp.", 
+                        "name": "refl_interpolation_on"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "active": {
+                            "prop": "refl_interpolation_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Min Rate", 
+                                "name": "refl_imap_min_rate"
+                            }, 
+                            {
+                                "label": "Max Rate", 
+                                "name": "refl_imap_max_rate"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "refl_interpolation_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Samples", 
+                                "name": "refl_imap_samples"
+                            }, 
+                            {
+                                "label": "Color Thresh.", 
+                                "name": "refl_imap_color_thresh"
+                            }, 
+                            {
+                                "label": "Normal Thresh.", 
+                                "name": "refl_imap_norm_thresh"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Refract Interp.", 
+                        "name": "refr_interpolation_on"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "active": {
+                            "prop": "refr_interpolation_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Min Rate", 
+                                "name": "refr_imap_min_rate"
+                            }, 
+                            {
+                                "label": "Max Rate", 
+                                "name": "refr_imap_max_rate"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "refr_interpolation_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Samples", 
+                                "name": "refr_imap_samples"
+                            }, 
+                            {
+                                "label": "Color Thresh.", 
+                                "name": "refr_imap_color_thresh"
+                            }, 
+                            {
+                                "label": "Normal Thresh.", 
+                                "name": "refr_imap_norm_thresh"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "reflect_exit_color"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "refract_exit_color"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Glossy Rays As GI", 
+                        "name": "option_glossy_rays_as_gi"
+                    }, 
+                    {
+                        "label": "Energy Mode", 
+                        "name": "option_energy_mode"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "environment_priority"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

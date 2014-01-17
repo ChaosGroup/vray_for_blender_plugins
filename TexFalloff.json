@@ -1,0 +1,426 @@
+{
+    "Desciption": "", 
+    "ID": "TexFalloff", 
+    "Name": "Falloff", 
+    "Parameters": [
+        {
+            "attr": "compatibility_with", 
+            "default": "0", 
+            "desc": "This is used to differentiate between textures exported from different applications", 
+            "items": [
+                [
+                    "0", 
+                    "3ds Max", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Maya", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "alpha_from_intensity", 
+            "default": "0", 
+            "desc": "", 
+            "items": [
+                [
+                    "0", 
+                    "Self", 
+                    "The alpha is taken from the alpha"
+                ], 
+                [
+                    "1", 
+                    "Maya", 
+                    "The resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1)"
+                ], 
+                [
+                    "2", 
+                    "Force 1.0", 
+                    "The alpha is forced to 1.0f"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "invert", 
+            "default": false, 
+            "desc": "If true, the resulting texture color will be inverted", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "invert_alpha", 
+            "default": true, 
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "color_mult", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "A multiplier for the texture color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color_offset", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "An additional offset for the texture color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "alpha_mult", 
+            "default": 1, 
+            "desc": "A multiplier for the texture alpha", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "alpha_offset", 
+            "default": 0, 
+            "desc": "An additional offset for the texture alpha", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "nouvw_color", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "The color when there are no valid uvw coordinates", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "The resulting color", 
+            "type": "OUTPUT_TEXTURE"
+        }, 
+        {
+            "attr": "out_transparency", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "The resulting transparency", 
+            "type": "OUTPUT_TEXTURE"
+        }, 
+        {
+            "attr": "out_alpha", 
+            "default": 1.0, 
+            "desc": "The resulting alpha", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "out_intensity", 
+            "default": 1.0, 
+            "desc": "The resulting intensity", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "color1", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "First color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color2", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "Second color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "type", 
+            "default": "0", 
+            "desc": "Type", 
+            "items": [
+                [
+                    "0", 
+                    "Towards / Away", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Perpendicular / Parallel", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Fresnel", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Shadow / Light", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Distance Blend", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "direction_type", 
+            "default": "0", 
+            "desc": "Direction type", 
+            "items": [
+                [
+                    "0", 
+                    "View Z", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "View X", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "View Y", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Explicit", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Local X", 
+                    ""
+                ], 
+                [
+                    "5", 
+                    "Local Y", 
+                    ""
+                ], 
+                [
+                    "6", 
+                    "Local Z", 
+                    ""
+                ], 
+                [
+                    "7", 
+                    "World X", 
+                    ""
+                ], 
+                [
+                    "8", 
+                    "World Y", 
+                    ""
+                ], 
+                [
+                    "9", 
+                    "World Z", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "fresnel_ior", 
+            "default": 1.6, 
+            "desc": "IOR for the Fresnel falloff type", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "dist_extrapolate", 
+            "default": false, 
+            "desc": "Extrapolate for the distance blend falloff type", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dist_near", 
+            "default": 0, 
+            "desc": "Near distance for the distance blend falloff type", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "dist_far", 
+            "default": 100, 
+            "desc": "Far distance for the distance blend falloff type", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "explicit_dir", 
+            "default": [
+                0, 
+                0, 
+                1
+            ], 
+            "desc": "Direction for the explicit direction type", 
+            "type": "VECTOR"
+        }, 
+        {
+            "attr": "use_blend_input", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "blend_input", 
+            "default": 0.5, 
+            "desc": "If specified and 'Use Blend Input' is true, the final blending amount will be taken from this texture", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "blend_output", 
+            "default": 1.0, 
+            "desc": "The blending amount, based on the parameters", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "type"
+                    }, 
+                    {
+                        "name": "direction_type"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "fresnel_ior"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "dist_near"
+                            }, 
+                            {
+                                "name": "dist_far"
+                            }, 
+                            {
+                                "name": "dist_extrapolate"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "label": "Common Properties", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Compatibility", 
+                        "name": "compatibility_with"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "label": "Color", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "invert"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "label": "Alpha", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "label": "Alpha From", 
+                        "name": "alpha_from_intensity"
+                    }, 
+                    {
+                        "name": "invert_alpha"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

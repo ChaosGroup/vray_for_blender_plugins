@@ -1,0 +1,29 @@
+{
+    "Desciption": "", 
+    "ID": "MtlStreakFade", 
+    "Name": "Streak Fade", 
+    "Parameters": [
+        {
+            "attr": "base_mtl", 
+            "default": "", 
+            "desc": "Base material", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "fade", 
+            "default": 1, 
+            "desc": "1.0f - no fade, < 1.0f - fade", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

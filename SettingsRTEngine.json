@@ -1,0 +1,354 @@
+{
+    "Desciption": "Realtime Engine settings", 
+    "ID": "SettingsRTEngine", 
+    "Name": "Realtime Engine Settings", 
+    "Parameters": [
+        {
+            "attr": "cpu_bundle_size", 
+            "default": 128, 
+            "desc": "Number of samples to transfer over the network for RT-CPU", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cpu_samples_per_pixel", 
+            "default": 4, 
+            "desc": "Number of samples per pixel for RT-CPU", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "gpu_bundle_size", 
+            "default": 128, 
+            "desc": "Number of samples to transfer over the network for RT-GPU", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "gpu_samples_per_pixel", 
+            "default": 1, 
+            "desc": "Number of samples per pixel for RT-GPU", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "trace_depth", 
+            "default": 5, 
+            "desc": "Maximum trace depth for reflections/refractions etc", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "gi_depth", 
+            "default": 3, 
+            "desc": "Maximum trace depth for GI", 
+            "name": "GI Depth", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "coherent_tracing", 
+            "default": false, 
+            "desc": "true to enable coherent tracing of gi/reflections/refractions etc", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "stereo_mode", 
+            "default": false, 
+            "desc": "Enable side-by-side stereo rendering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "stereo_eye_distance", 
+            "default": 0.065, 
+            "desc": "Distance between the two cameras for stereo mode", 
+            "precision": 4, 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "stereo_focus", 
+            "default": "2", 
+            "desc": "Focus mode", 
+            "items": [
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Rotation", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Shear", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "opencl_texsize", 
+            "default": 512, 
+            "desc": "OpenCL Single Kernel maximum texture size - bigger textures are scaled to fit this size", 
+            "name": "OpenCL Tex Size", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "opencl_resizeTextures", 
+            "default": true, 
+            "desc": "true to resize textures for the GPU based on opencl_texsize; false to use full resolution textures", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "opencl_textureFormat", 
+            "default": "1", 
+            "desc": "Format for the textures on the GPU", 
+            "items": [
+                [
+                    "0", 
+                    "32-Bit Float", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "16-Bit Half Float", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "progressive_samples_per_pixel", 
+            "default": 1, 
+            "desc": "Progressive increase for samples_per_pixel (from 1 to real value). Use this for faster feadback", 
+            "type": "INT", 
+            "ui": {
+                "min": 0
+            }
+        }, 
+        {
+            "attr": "undersampling", 
+            "default": true, 
+            "desc": "Use undersampling", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "disable_render_elements", 
+            "default": true, 
+            "desc": "Produce only RGBA", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "max_render_time", 
+            "default": 0, 
+            "desc": "Max render time (0 = inf)", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "max_sample_level", 
+            "default": 0, 
+            "desc": "Max sample level (0 = inf)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "noise_threshold", 
+            "default": 0.001, 
+            "desc": "Noise threshold for the image sampler (0 = inf)", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "enable_mask", 
+            "default": false, 
+            "desc": "Show AA mask", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "trace_depth"
+                    }, 
+                    {
+                        "name": "gi_depth"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "cpu_bundle_size"
+                    }, 
+                    {
+                        "name": "cpu_samples_per_pixel"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "opencl_texsize"
+                            }, 
+                            {
+                                "label": "", 
+                                "name": "opencl_textureFormat"
+                            }, 
+                            {
+                                "name": "opencl_resizeTextures"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "gpu_bundle_size"
+                            }, 
+                            {
+                                "name": "gpu_samples_per_pixel"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "max_render_time"
+                    }, 
+                    {
+                        "name": "max_sample_level"
+                    }, 
+                    {
+                        "name": "noise_threshold"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "progressive_samples_per_pixel"
+                    }, 
+                    {
+                        "name": "coherent_tracing"
+                    }, 
+                    {
+                        "name": "undersampling"
+                    }, 
+                    {
+                        "name": "disable_render_elements"
+                    }, 
+                    {
+                        "name": "enable_mask"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "stereo_mode"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "active": {
+                    "prop": "stereo_mode"
+                }, 
+                "attrs": [
+                    {
+                        "name": "stereo_focus"
+                    }, 
+                    {
+                        "name": "stereo_eye_distance"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

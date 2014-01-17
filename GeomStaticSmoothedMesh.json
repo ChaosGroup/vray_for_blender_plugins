@@ -1,0 +1,361 @@
+{
+    "Desciption": "Subdivision surface settings", 
+    "ID": "GeomStaticSmoothedMesh", 
+    "Name": "Subdivision", 
+    "Parameters": [
+        {
+            "attr": "mesh", 
+            "default": "", 
+            "desc": "The triangle mesh that will be displaced", 
+            "type": "GEOMETRY"
+        }, 
+        {
+            "attr": "displacement_tex_color", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "The displacement texture", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "displacement_tex_float", 
+            "default": 1.0, 
+            "desc": "The displacement texture", 
+            "name": "Float", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "displacement_amount", 
+            "default": 0.25, 
+            "desc": "Determines the displacement amount for white areas in the displacement map; if use_globals is true this is multiplied by the global displacement amount option", 
+            "name": "Amount", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "displacement_shift", 
+            "default": 0, 
+            "desc": "This constant value is added to the displacement map", 
+            "name": "Shift", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "keep_continuity", 
+            "default": false, 
+            "desc": "If true, the plugin will attempt to keep the continuity of the displaced surface", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "water_level", 
+            "default": -1e+30, 
+            "desc": "Geometry below this displacement level will be clipped away", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "map_channel", 
+            "default": 0, 
+            "desc": "The mapping channel to use for vector displacement", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "image_width", 
+            "default": 0, 
+            "desc": "This parameter overrides the imgWidth paramter from VRayFrameData during the calculation of the subdivision depth", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cache_normals", 
+            "default": 0, 
+            "desc": "If this option is equal to 1 then the normals of the generated triangles are cached. It has effect only if the surface is displaced", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "use_globals", 
+            "default": true, 
+            "desc": "If true, the global displacement quality settings will be used", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "static_subdiv", 
+            "default": false, 
+            "desc": "True if the resulting triangles of the subdivision algorithm will be inserted into the rayserver as static geometry", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "view_dep", 
+            "default": 1, 
+            "desc": "If use_globals is false, this determines if view-dependent tesselation is used", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "edge_length", 
+            "default": 4, 
+            "desc": "If use_globals is false, this determines the approximate edge length for the sub-triangles", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "max_subdivs", 
+            "default": 256, 
+            "desc": "If use_globals is false, this determines the maximum subdivisions for a triangle of the original mesh", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "use_bounds", 
+            "default": false, 
+            "desc": "If true, the min/max values for the displacement texture are specified by the min_bound and max_bound parameters; if false, these are calculated automatically", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "min_bound", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The lowest value for the displacement texture", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "max_bound", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "The biggest value for the displacement texture", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "preserve_map_borders", 
+            "default": "-1", 
+            "desc": "The valid values", 
+            "items": [
+                [
+                    "-1", 
+                    "Not Set", 
+                    ""
+                ], 
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Internal", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "All", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "classic_catmark", 
+            "default": false, 
+            "desc": "If equal to 1 then the classical Catmull-Clark masks will be used for meshes which contain only quadrangles", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "vector_displacement", 
+            "default": "0", 
+            "desc": "Mode", 
+            "items": [
+                [
+                    "0", 
+                    "Normal", 
+                    "Normal displacement"
+                ], 
+                [
+                    "1", 
+                    "Vector", 
+                    "The red, green and blue channels of \"Texture (Color)\" will be used to perform vector displacement with base 0.5"
+                ], 
+                [
+                    "2", 
+                    "Absolute Tangent", 
+                    "Mudbox displacement maps in absolute tangent space"
+                ], 
+                [
+                    "3", 
+                    "Vector (Object Space)", 
+                    "Vector displacement in object space"
+                ]
+            ], 
+            "name": "Mode", 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "GEOMETRY", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "vector_displacement"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "displacement_amount"
+                            }, 
+                            {
+                                "name": "displacement_shift"
+                            }, 
+                            {
+                                "name": "water_level"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "keep_continuity"
+                            }, 
+                            {
+                                "name": "cache_normals"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "use_globals"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "active": {
+                    "prop": "use_globals"
+                }, 
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "edge_length"
+                            }, 
+                            {
+                                "name": "max_subdivs"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "view_dep"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "use_bounds"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "active": {
+                    "prop": "use_bounds"
+                }, 
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "min_bound"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "max_bound"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }
+        ]
+    }
+}

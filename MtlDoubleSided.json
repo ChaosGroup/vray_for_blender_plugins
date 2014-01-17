@@ -1,0 +1,17 @@
+{
+    "Desciption": "", 
+    "ID": "MtlDoubleSided", 
+    "Name": "Double Sided", 
+    "Parameters": [
+        {
+            "attr": "base_mtl", 
+            "default": "", 
+            "desc": "Base material", 
+            "type": "MATERIAL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

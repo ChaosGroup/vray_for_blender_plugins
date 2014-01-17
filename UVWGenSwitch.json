@@ -1,0 +1,29 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenSwitch", 
+    "Name": "Switch", 
+    "Parameters": [
+        {
+            "attr": "nodes", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "uvwgens", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "default", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

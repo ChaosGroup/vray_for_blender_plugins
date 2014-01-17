@@ -1,0 +1,162 @@
+{
+    "Desciption": "", 
+    "ID": "VolumeVRayToon", 
+    "Name": "Toon", 
+    "Parameters": [
+        {
+            "attr": "lineColor_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "lineWidth_tex", 
+            "default": 1.0, 
+            "desc": "", 
+            "name": "Width", 
+            "skip": true, 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "opacity_tex", 
+            "default": 1.0, 
+            "desc": "", 
+            "name": "Opacity", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "distortion_tex", 
+            "default": 0.0, 
+            "desc": "", 
+            "name": "Distortion", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "widthType", 
+            "default": "0", 
+            "desc": "", 
+            "items": [
+                [
+                    "0", 
+                    "Pixels", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "World", 
+                    ""
+                ]
+            ], 
+            "name": "Width Type", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "hideInnerEdges", 
+            "default": false, 
+            "desc": "true : show outlines and not interior edges, false : show all edges", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "normalThreshold", 
+            "default": 0.7, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "overlapThreshold", 
+            "default": 0.95, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "traceBias", 
+            "default": 0.2, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "doSecondaryRays", 
+            "default": false, 
+            "desc": "true : show toon lines in reflections", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "excludeType", 
+            "default": "0", 
+            "desc": "Exclude list behavior", 
+            "items": [
+                [
+                    "0", 
+                    "Exclude", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Include", 
+                    ""
+                ]
+            ], 
+            "name": "List Type", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "compensateExposure", 
+            "default": true, 
+            "desc": "Compensate VRay physical camera exposure", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "excludeList", 
+            "default": "", 
+            "desc": "", 
+            "name": "List", 
+            "skip": true, 
+            "type": "PLUGIN"
+        }
+    ], 
+    "Type": "EFFECT", 
+    "Widget": {
+        "widgets": []
+    }
+}

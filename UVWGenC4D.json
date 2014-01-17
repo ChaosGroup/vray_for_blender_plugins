@@ -1,0 +1,149 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenC4D", 
+    "Name": "C4D", 
+    "Parameters": [
+        {
+            "attr": "uvw_channel", 
+            "default": 1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "len_x", 
+            "default": 1, 
+            "desc": "X length of the texture", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "len_y", 
+            "default": 1, 
+            "desc": "Y length of the texture", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "proj_type", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "tex_transform", 
+            "default": null, 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "ox", 
+            "default": 0, 
+            "desc": "X offset of the texture", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "oy", 
+            "default": 0, 
+            "desc": "Y offset of the texture", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "texflag", 
+            "default": 1, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "repetitionx", 
+            "default": 0, 
+            "desc": "Repetition x", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "repetitiony", 
+            "default": 0, 
+            "desc": "Repetition y", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "pixel_aspect", 
+            "default": 1, 
+            "desc": "Pixel Aspect", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "film_aspect", 
+            "default": 1, 
+            "desc": "Film Aspect", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

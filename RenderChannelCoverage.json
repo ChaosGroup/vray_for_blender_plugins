@@ -1,0 +1,17 @@
+{
+    "Desciption": "", 
+    "ID": "RenderChannelCoverage", 
+    "Name": "Coverage", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "Coverage", 
+            "desc": "Channel name", 
+            "type": "STRING"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

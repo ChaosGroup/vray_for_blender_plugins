@@ -1,0 +1,612 @@
+{
+    "Desciption": "", 
+    "ID": "BRDFSSS2Complex", 
+    "Name": "SSS 2 Complex", 
+    "Parameters": [
+        {
+            "attr": "prepass_rate", 
+            "default": -1, 
+            "desc": "Sampling density for the illumination map", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "interpolation_accuracy", 
+            "default": 1, 
+            "desc": "Interpolation accuracy for the illumination map; normally 1.0 is fine", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "scale", 
+            "default": 1, 
+            "desc": "Values below 1.0 will make the object look as if it is bigger. Values above 1.0 will make it look as if it is smaller", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ior", 
+            "default": 1.5, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "overall_color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "diffuse_color", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "diffuse_amount", 
+            "default": 0, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "sub_surface_color", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "scatter_radius", 
+            "default": [
+                0.92, 
+                0.52, 
+                0.175
+            ], 
+            "desc": "This is measured in centimeters", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "scatter_radius_mult", 
+            "default": 2, 
+            "desc": "The scatter radius will be multiplied by this number", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "phase_function", 
+            "default": 0, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "legacy_mode", 
+            "default": false, 
+            "desc": "true to turn on the old method for calculating volume properties from the scatter_radius", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "specular_color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "specular_amount", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "specular_glossiness", 
+            "default": 0.6, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "specular_subdivs", 
+            "default": 8, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cutoff_threshold", 
+            "default": 0.01, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "trace_reflections", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflection_depth", 
+            "default": 5, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "single_scatter", 
+            "default": 1, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivs", 
+            "default": 8, 
+            "desc": "Single scatter subdivisions", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "refraction_depth", 
+            "default": 5, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "front_scatter", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "back_scatter", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "scatter_gi", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "prepass_blur", 
+            "default": 1.2, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "prepass_id", 
+            "default": 0, 
+            "desc": "0 to calculate a separate illuminataion map for this shader; otherwise all shaders with the same prepass ID will share the same illumination map", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "channels", 
+            "default": "", 
+            "desc": "Render channels the result of this BRDF will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "linear_workflow", 
+            "default": false, 
+            "desc": "Set to true to apply the inverse of gamma correction", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "prepass_mode", 
+            "default": "0", 
+            "desc": "Prepass mode", 
+            "items": [
+                [
+                    "0", 
+                    "New", 
+                    "Calculate new irradiance map for each frame (meaningless in RT)"
+                ], 
+                [
+                    "1", 
+                    "Save (Per-Frame)", 
+                    "Calculate and save map for each frame (meaningless in RT)"
+                ], 
+                [
+                    "2", 
+                    "Load (Per-Frame)", 
+                    "Load saved irradiance map for each frame"
+                ], 
+                [
+                    "3", 
+                    "Save (First Frame)", 
+                    "Calculate and save map only for the first rendered frame"
+                ], 
+                [
+                    "4", 
+                    "Load (First Frame)", 
+                    "Load saved irradiance map on the first rendered frame only"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "prepass_fileName", 
+            "default": "", 
+            "desc": "File path template for saved irradiance map files, frame number is appended for modes \"Save / Load (Per-Frame)\"", 
+            "subtype": "FILE_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "geometry_based_sampling", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "samples_per_unit_area", 
+            "default": 16, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "auto_density", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "surface_offset", 
+            "default": 0.001, 
+            "desc": "An offset along the geometric surface normal at which to perform shading in order to avoid surface acne", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "preview_samples", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "max_distance", 
+            "default": 0.1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "background_color", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "samples_color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "label": "Mode", 
+                        "name": "prepass_mode"
+                    }, 
+                    {
+                        "label": "Filepath", 
+                        "name": "prepass_fileName"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "phase_function"
+                            }, 
+                            {
+                                "name": "max_distance"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "scale"
+                            }, 
+                            {
+                                "name": "ior"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "subdivs"
+                            }, 
+                            {
+                                "name": "specular_subdivs"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "refraction_depth"
+                            }, 
+                            {
+                                "name": "reflection_depth"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "label": "Prepass", 
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "label": "Rate", 
+                                "name": "prepass_rate"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "label": "Blur", 
+                                "name": "prepass_blur"
+                            }, 
+                            {
+                                "label": "ID", 
+                                "name": "prepass_id"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "geometry_based_sampling"
+                            }, 
+                            {
+                                "name": "auto_density"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "samples_per_unit_area"
+                            }, 
+                            {
+                                "name": "surface_offset"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "scatter_gi"
+                            }, 
+                            {
+                                "name": "single_scatter"
+                            }, 
+                            {
+                                "name": "back_scatter"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "linear_workflow"
+                            }, 
+                            {
+                                "name": "legacy_mode"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "preview_samples"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "active": {
+                    "prop": "preview_samples"
+                }, 
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "background_color"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "samples_color"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }
+        ]
+    }
+}

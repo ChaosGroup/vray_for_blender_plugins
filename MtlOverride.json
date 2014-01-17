@@ -1,0 +1,77 @@
+{
+    "Desciption": "MtlOverride settings", 
+    "ID": "MtlOverride", 
+    "Name": "Override", 
+    "Parameters": [
+        {
+            "attr": "base_mtl", 
+            "default": "", 
+            "desc": "The normal material (visible to the camera)", 
+            "name": "Base", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "gi_mtl", 
+            "default": "", 
+            "desc": "The gi material", 
+            "name": "GI", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "reflect_mtl", 
+            "default": "", 
+            "desc": "The reflection material", 
+            "name": "Reflection", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "refract_mtl", 
+            "default": "", 
+            "desc": "The refraction material", 
+            "name": "Refraction", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "shadow_mtl", 
+            "default": "", 
+            "desc": "The shadow material", 
+            "name": "Shadow", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "environment_override", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "Environment override texture", 
+            "name": "Environment", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "environment_priority", 
+            "default": 0, 
+            "desc": "Environment override priority (used when several materials override it along a ray path)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "use", 
+            "default": false, 
+            "desc": "Use Override material", 
+            "name": "Use", 
+            "skip": true, 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

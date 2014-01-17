@@ -1,0 +1,311 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsVFB", 
+    "Name": "SettingsVFB", 
+    "Parameters": [
+        {
+            "attr": "bloom_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bloom_fill_edges", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bloom_weight", 
+            "default": 20, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_size", 
+            "default": 20, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_shape", 
+            "default": 4, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_mode", 
+            "default": 0, 
+            "desc": "0-image 1-image and buffer  2-buffer", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_mask_intensity_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bloom_mask_intensity", 
+            "default": 3, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_mask_objid_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bloom_mask_objid", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bloom_mask_mtlid_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bloom_mask_mtlid", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_fill_edges", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_weight", 
+            "default": 50, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_size", 
+            "default": 20, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_type", 
+            "default": 0, 
+            "desc": "0- from image  1 - from render camera  2 - from camera params", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_mode", 
+            "default": 0, 
+            "desc": "0-image 1-image and buffer  2-buffer", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_image_path", 
+            "default": "", 
+            "desc": "", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "glare_obstacle_image_path", 
+            "default": "", 
+            "desc": "", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "glare_diffraction_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_use_obstacle_image", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_cam_blades_on", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_cam_num_blades", 
+            "default": 6, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_cam_rotation", 
+            "default": 0, 
+            "desc": "Rotation in degrees from 0.0 - 360.0", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_cam_fnumber", 
+            "default": 8, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_mask_intensity_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_mask_intensity", 
+            "default": 3, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_mask_objid_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_mask_objid", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "glare_mask_mtlid_on", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "glare_mask_mtlid", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "interactive", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "Desciption": "", 
+    "ID": "RenderChannelZDepth", 
+    "Name": "Z-Depth", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "Z-Depth", 
+            "desc": "Channel name", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "depth_from_camera", 
+            "default": false, 
+            "desc": "From camera", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "depth_clamp", 
+            "default": true, 
+            "desc": "Clamp", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "filtering", 
+            "default": false, 
+            "desc": "Filtering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "depth_black", 
+            "default": 0.0, 
+            "desc": "Black distance", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "depth_white", 
+            "default": 1000.0, 
+            "desc": "White distance", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsCaustics", 
+    "Name": "Caustics", 
+    "Parameters": [
+        {
+            "attr": "on", 
+            "default": true, 
+            "desc": "Enable caustics computation", 
+            "name": "Use Caustics", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "max_photons", 
+            "default": 30, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "search_distance", 
+            "default": 1e+18, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "max_density", 
+            "default": 0, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "multiplier", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "mode", 
+            "default": "0", 
+            "desc": "", 
+            "items": [
+                [
+                    "0", 
+                    "New", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "From File", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "file", 
+            "default": "//lightmaps/caustics.vrmap", 
+            "desc": "File to take caustics map from when 'Mode' is 'From File'", 
+            "subtype": "FILE_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "dont_delete", 
+            "default": true, 
+            "desc": "Don't delete at render end", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "auto_save", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "auto_save_file", 
+            "default": "//lightmaps/caustics.vrmap", 
+            "desc": "Auto save filepath", 
+            "name": "File", 
+            "subtype": "FILE_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "show_calc_phase", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "mode"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "active": {
+                    "condition": "1", 
+                    "prop": "mode"
+                }, 
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "multiplier"
+                            }, 
+                            {
+                                "name": "search_distance"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "max_photons"
+                            }, 
+                            {
+                                "name": "max_density"
+                            }, 
+                            {
+                                "name": "show_calc_phase"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "active": {
+                            "condition": "1", 
+                            "prop": "mode"
+                        }, 
+                        "name": "file"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "auto_save"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "auto_save"
+                        }, 
+                        "name": "auto_save_file"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

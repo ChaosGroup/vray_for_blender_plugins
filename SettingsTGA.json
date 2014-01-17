@@ -1,0 +1,32 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsTGA", 
+    "Name": "SettingsTGA", 
+    "Parameters": [
+        {
+            "attr": "compression", 
+            "default": 2, 
+            "desc": "Compression type for TGA output", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "compression"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

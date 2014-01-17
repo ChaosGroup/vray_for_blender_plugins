@@ -1,0 +1,53 @@
+{
+    "Desciption": "Temperature to color", 
+    "ID": "TexTemperatureToColor", 
+    "Name": "Temperature To Color", 
+    "Parameters": [
+        {
+            "attr": "input", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0, 
+                1.0
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "temperature", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "color", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "", 
+            "type": "OUTPUT_TEXTURE"
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "temperature"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

@@ -1,0 +1,435 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsOutput", 
+    "Name": "Output", 
+    "Parameters": [
+        {
+            "attr": "img_width", 
+            "default": 640, 
+            "desc": "Output image width", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "img_height", 
+            "default": 480, 
+            "desc": "Output image height", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "img_pixelAspect", 
+            "default": 1, 
+            "desc": "Output image pixel aspect", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "img_file", 
+            "default": "%F_%C", 
+            "desc": "Render file name (Variables: %C - camera name; %S - scene name; %F - blendfile name)", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "img_dir", 
+            "default": "//render/%F/", 
+            "desc": "Render file directory (Variables: %C - camera name; %S - scene name; %F - blendfile name)", 
+            "subtype": "DIR_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "img_file_needFrameNumber", 
+            "default": false, 
+            "desc": "Add frame number to the image file name", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_separateAlpha", 
+            "default": false, 
+            "desc": "Write the alpha channel to a separate file", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_noAlpha", 
+            "default": false, 
+            "desc": "Don't write the alpha channel to the final image", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_dontSaveRgbChannel", 
+            "default": false, 
+            "desc": "If true, the RGB channel will not be saved to disk", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_deepFile", 
+            "default": false, 
+            "desc": "If true, V-Ray will will generate deep image file (valid for vrst and exr)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_rawFile", 
+            "default": false, 
+            "desc": "If true, V-Ray will render to a tiled file format (.vrimg or .exr). This is automatically turned on for file formats that only support tiled writing (like .vrimg)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "img_rawFileVFB", 
+            "default": 1, 
+            "desc": "If writing to a tiled file format, specifies whether a memory VFB window should be displayed (0 - no memory VFB, 1 - full memory VFB, 2 - preview)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_start", 
+            "default": 0, 
+            "desc": "Start of animation range in time units", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_end", 
+            "default": 1, 
+            "desc": "End of animation range in time units", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_frame_padding", 
+            "default": 4, 
+            "desc": "Animation Frame Name Padding", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_renumber_on", 
+            "default": false, 
+            "desc": "If true, frame renumbering is used", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "anim_renumber_start", 
+            "default": 0, 
+            "desc": "Start number for renumber frames", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_renumber_step", 
+            "default": 1, 
+            "desc": "Renumber frames step", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "anim_ren_frame_start", 
+            "default": 0, 
+            "desc": "First frame of animation range", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "frame_start", 
+            "default": 0, 
+            "desc": "The frame number at the start of the animation range", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "frames_per_second", 
+            "default": 1, 
+            "desc": "Number of frames per unit time", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "frames", 
+            "default": "", 
+            "desc": "List of frames to be rendered. May contain intervals in the form of lists with start and end frame", 
+            "type": "LIST"
+        }, 
+        {
+            "attr": "rgn_left", 
+            "default": 0, 
+            "desc": "Image output region left coord", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "rgn_width", 
+            "default": 640, 
+            "desc": "Image output region width", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "rgn_top", 
+            "default": 0, 
+            "desc": "Image output region top coord", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "rgn_height", 
+            "default": 480, 
+            "desc": "Image output region height", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bmp_width", 
+            "default": 640, 
+            "desc": "Output bitmap width", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bmp_height", 
+            "default": 480, 
+            "desc": "Output bitmap height", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "r_left", 
+            "default": 0, 
+            "desc": "Bitmap output region left coord", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "r_width", 
+            "default": 640, 
+            "desc": "Bitmap output region width", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "r_top", 
+            "default": 0, 
+            "desc": "Bitmap output region top coord", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "r_height", 
+            "default": 480, 
+            "desc": "Bitmap output region height", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "frame_stamp_enabled", 
+            "default": false, 
+            "desc": "true to enable the VFB frame stamp", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "frame_stamp_text", 
+            "default": "", 
+            "desc": "Frame stamp text", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "relements_separateFolders", 
+            "default": false, 
+            "desc": "Save render channels in separate folders", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "relements_separate_rgba", 
+            "default": false, 
+            "desc": "true to save the main RGBA elment in a separate folder too, if relements_separateFolders is specified", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "relements_divider", 
+            "default": "", 
+            "desc": "Render elements name separator", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "film_offset_x", 
+            "default": 0, 
+            "desc": "Horizontal film offset", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "film_offset_y", 
+            "default": 0, 
+            "desc": "Vertical film offset", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "img_format", 
+            "default": "SettingsJPEG", 
+            "desc": "Output image format", 
+            "items": [
+                [
+                    "SettingsPNG", 
+                    "PNG", 
+                    ""
+                ], 
+                [
+                    "SettingsJPEG", 
+                    "JPEG", 
+                    ""
+                ], 
+                [
+                    "SettingsTIFF", 
+                    "TIFF", 
+                    ""
+                ], 
+                [
+                    "SettingsTGA", 
+                    "TGA", 
+                    ""
+                ], 
+                [
+                    "SettingsSGI", 
+                    "SGI", 
+                    ""
+                ], 
+                [
+                    "SettingsEXR", 
+                    "OpenEXR", 
+                    ""
+                ], 
+                [
+                    "SettingsVRST", 
+                    "VRayImage", 
+                    "V-Ray Image Format"
+                ]
+            ], 
+            "name": "Image Format", 
+            "skip": true, 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "Desciption": "", 
+    "ID": "MtlObjBBox", 
+    "Name": "Object Bounding", 
+    "Parameters": [
+        {
+            "attr": "base_mtl", 
+            "default": "", 
+            "desc": "Base material", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "bbox_min", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "Min. coordinates for object bounding box", 
+            "type": "VECTOR"
+        }, 
+        {
+            "attr": "bbox_max", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "Max. coordinates for object bounding box", 
+            "type": "VECTOR"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

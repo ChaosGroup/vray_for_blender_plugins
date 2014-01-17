@@ -1,0 +1,252 @@
+{
+    "Desciption": "", 
+    "ID": "BRDFSampled", 
+    "Name": "Sampled", 
+    "Parameters": [
+        {
+            "attr": "color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "color_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "transparency", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "transparency_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "name": "Transparency", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "transparency_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cutoff", 
+            "default": 0.01, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivs", 
+            "default": 8, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "back_side", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "brdf_bitmap", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "brdf_nsamples_d_theta", 
+            "default": 0, 
+            "desc": "Number of d_theta samples", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "brdf_nsamples_d_phi", 
+            "default": 1, 
+            "desc": "Number of d_phi samples (1 means isotropic BRDF)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "brdf_importance_sampling_on", 
+            "default": true, 
+            "desc": "true to use importance sampling for the reflections", 
+            "name": "Importance Sampling", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "brdf_importance_sampling_resolution", 
+            "default": 32, 
+            "desc": "Resolution for the resampling of the BRDF used for importance sampling of reflections", 
+            "name": "Resolution", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "brdf_importance_sampling_view_terms", 
+            "default": 4, 
+            "desc": "Number of terms to decompose the view-dependent portion of the resampling matrix", 
+            "name": "View Terms", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "brdf_importance_sampling_half_terms", 
+            "default": 2, 
+            "desc": "Number of terms to decompose the half-angle portion of the resampling matrix", 
+            "name": "Half Terms", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "subdivs"
+                    }, 
+                    {
+                        "name": "cutoff"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "label": "\u0398 Samples", 
+                        "name": "brdf_nsamples_d_theta"
+                    }, 
+                    {
+                        "label": "\u03a6 Samples", 
+                        "name": "brdf_nsamples_d_phi"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "brdf_importance_sampling_on"
+                            }, 
+                            {
+                                "active": {
+                                    "prop": "brdf_importance_sampling_on"
+                                }, 
+                                "name": "brdf_importance_sampling_resolution"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "brdf_importance_sampling_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "brdf_importance_sampling_view_terms"
+                            }, 
+                            {
+                                "name": "brdf_importance_sampling_half_terms"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "back_side"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

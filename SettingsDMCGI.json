@@ -1,0 +1,41 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsDMCGI", 
+    "Name": "Brute Force", 
+    "Parameters": [
+        {
+            "attr": "subdivs", 
+            "default": 8, 
+            "desc": "The number of samples used to approximate GI", 
+            "type": "INT", 
+            "ui": {
+                "min": 1
+            }
+        }, 
+        {
+            "attr": "depth", 
+            "default": 3, 
+            "desc": "The number of light bounces that will be computed", 
+            "type": "INT", 
+            "ui": {
+                "min": 1
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "subdivs"
+                    }, 
+                    {
+                        "name": "depth"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

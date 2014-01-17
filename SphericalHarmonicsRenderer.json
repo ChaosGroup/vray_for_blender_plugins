@@ -1,0 +1,68 @@
+{
+    "Desciption": "Spherical harmonics renderer settings", 
+    "ID": "SphericalHarmonicsRenderer", 
+    "Name": "Spherical Harmonics Renderer", 
+    "Parameters": [
+        {
+            "attr": "file_name", 
+            "default": "//lightmaps/spherical_harmonics.vrsh", 
+            "desc": "This is the name of the *.vrsh file which contains the precomputed SH for this scene", 
+            "subtype": "FILE_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "use_single_vrsh", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "precalc_light_per_frame", 
+            "default": true, 
+            "desc": "Reasonable when rendering animations. Depending on this option V-Ray calculates the lighting either once at the beginning of the rendering or precalculates it before every frame", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "sample_environment", 
+            "default": true, 
+            "desc": "Turns on the environment sampling to add environment light contribution", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "is_hemispherical", 
+            "default": true, 
+            "desc": "Depending on this option V-Ray samples either the whole sphere or only the upper hemisphere of the environment", 
+            "name": "Upper hemisphere only", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivs", 
+            "default": 30, 
+            "desc": "The square of this parameter is proportional to the number of rays, sampled in the environment", 
+            "type": "INT", 
+            "ui": {
+                "min": 1
+            }
+        }, 
+        {
+            "attr": "apply_filtering", 
+            "default": false, 
+            "desc": "Turns on the filtering of the spherical harmonics. This is useful to reduce the ringing artifacts (known as Gibbs phenomena in signal processing) by suppressing the high frequencies. This produces blurred SH which result in a smoother image", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "filter_strength", 
+            "default": 0.5, 
+            "desc": "The strength of high frequencies' suppression. Values near 0.0 slightly change the image while values near 1.0 smooth it a lot", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1.0, 
+                "min": 0.0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

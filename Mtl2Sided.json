@@ -1,0 +1,49 @@
+{
+    "Desciption": "Mtl2Sided settings", 
+    "ID": "Mtl2Sided", 
+    "Name": "Two Sided", 
+    "Parameters": [
+        {
+            "attr": "front", 
+            "default": "", 
+            "desc": "The material for the surface on the same side as the normal", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "back", 
+            "default": "", 
+            "desc": "The material for the side that is opposite the surface normal", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "translucency_tex", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "Translucency texture", 
+            "name": "Translucency", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "force_1sided", 
+            "default": true, 
+            "desc": "True to make the sub-materials one-sided", 
+            "name": "Force Single Sided", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "use", 
+            "default": false, 
+            "desc": "Use Two Sided material", 
+            "name": "Use", 
+            "skip": true, 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

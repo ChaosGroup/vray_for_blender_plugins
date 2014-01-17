@@ -1,0 +1,59 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsRenderChannels", 
+    "Name": "SettingsRenderChannels", 
+    "Parameters": [
+        {
+            "attr": "unfiltered_fragment_method", 
+            "default": "0", 
+            "desc": "Determines which fragment to use for unfiltered render elements", 
+            "items": [
+                [
+                    "0", 
+                    "Best Coverage", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Closest To Camera", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "deep_merge_mode", 
+            "default": "0", 
+            "desc": "Determines how to blend fragments within a pixel", 
+            "items": [
+                [
+                    "0", 
+                    "By Render ID", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "By Z-Depth", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "deep_merge_coeff", 
+            "default": 1, 
+            "desc": "Determines the z-depth blending sensitivity when deep_merge_mode is '1'", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

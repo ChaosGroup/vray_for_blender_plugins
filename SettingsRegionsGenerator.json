@@ -1,0 +1,113 @@
+{
+    "Desciption": "Regions generator settings", 
+    "ID": "SettingsRegionsGenerator", 
+    "Name": "Regions Generator", 
+    "Parameters": [
+        {
+            "attr": "xc", 
+            "default": 48, 
+            "desc": "Determines the maximum region width in pixels (Bucket W/H is selected) or the number of regions in the horizontal direction (when Region Count is selected)", 
+            "name": "W", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "yc", 
+            "default": 48, 
+            "desc": "Determines the maximum region height in pixels (Bucket W/H is selected) or the number of regions in the vertical direction (when Region Count is selected)", 
+            "name": "H", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "xymeans", 
+            "default": "0", 
+            "desc": "Size in pixels or number of regions", 
+            "items": [
+                [
+                    "0", 
+                    "Region Count", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Bucket W/H", 
+                    ""
+                ]
+            ], 
+            "name": "XY Means", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "seqtype", 
+            "default": "4", 
+            "desc": "Determines the order in which the regions are rendered", 
+            "items": [
+                [
+                    "0", 
+                    "Top-Bottom", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Left-Right", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Checker", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Spiral", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Triangulation", 
+                    ""
+                ], 
+                [
+                    "5", 
+                    "Hilbert", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "reverse", 
+            "default": false, 
+            "desc": "Reverses the region sequence order", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dynbuckets", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "lock_size", 
+            "default": false, 
+            "desc": "Lock bucket size (X = Y)", 
+            "skip": true, 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

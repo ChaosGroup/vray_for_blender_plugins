@@ -1,0 +1,40 @@
+{
+    "Desciption": "MtlSingleBRDF settings", 
+    "ID": "MtlSingleBRDF", 
+    "Name": "Single", 
+    "Parameters": [
+        {
+            "attr": "filter", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "brdf", 
+            "default": "", 
+            "desc": "", 
+            "name": "BRDF", 
+            "type": "BRDF"
+        }, 
+        {
+            "attr": "double_sided", 
+            "default": true, 
+            "desc": "1 to make the material double-sided", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "allow_negative_colors", 
+            "default": false, 
+            "desc": "true to allow negative color components; otherwise they will be clamped to 0", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

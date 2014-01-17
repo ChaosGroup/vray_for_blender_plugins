@@ -1,0 +1,164 @@
+{
+    "Desciption": "", 
+    "ID": "MtlBump", 
+    "Name": "Bump", 
+    "Parameters": [
+        {
+            "attr": "base_mtl", 
+            "default": "", 
+            "desc": "Base material", 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "bump_tex_color", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "Bump texture", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "bump_tex_float", 
+            "default": 1.0, 
+            "desc": "Bump texture", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bump_tex_mult", 
+            "default": 1, 
+            "desc": "Bump amount", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bump_tex_mult_tex", 
+            "default": 1.0, 
+            "desc": "Bump amount texture", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "bump_shadows", 
+            "default": false, 
+            "desc": "true to offset the surface shading point, in addition to the normal", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bump_delta_scale", 
+            "default": 1, 
+            "desc": "Scale for sampling the bitmap when map_type is 0. Normally this is tied to the ray differentials, but can be changed if necessary", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "maya_compatible", 
+            "default": false, 
+            "desc": "When this is true the BRDFBump will try to match the Maya bump/normal mapping", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "map_type", 
+            "default": "0", 
+            "desc": "The type of the map", 
+            "items": [
+                [
+                    "0", 
+                    "Bump", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Normal (Tangent)", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Normal (Object)", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Normal (Camera)", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Normal (World)", 
+                    ""
+                ], 
+                [
+                    "5", 
+                    "From Bump", 
+                    ""
+                ], 
+                [
+                    "6", 
+                    "Explicit Normal", 
+                    ""
+                ]
+            ], 
+            "name": "Type", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "normal_uvwgen", 
+            "default": "", 
+            "desc": "The uvw generator for the normal map texture when \"Type\" is \"Normal (Tangent)\"", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "compute_bump_for_shadows", 
+            "default": true, 
+            "desc": "true to compute bump mapping for shadow rays in case the material is transparent; false to skip the bump map for shadow rays (faster rendering)", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": ""
+                    }, 
+                    {
+                        "name": "bump_delta_scale"
+                    }, 
+                    {
+                        "name": "bump_shadows"
+                    }, 
+                    {
+                        "name": "compute_bump_for_shadows"
+                    }, 
+                    {
+                        "name": "maya_compatible"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

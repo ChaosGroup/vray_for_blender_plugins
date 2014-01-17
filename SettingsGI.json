@@ -1,0 +1,199 @@
+{
+    "Desciption": "Global illumination settings", 
+    "ID": "SettingsGI", 
+    "Name": "Global Illumination", 
+    "Parameters": [
+        {
+            "attr": "on", 
+            "default": false, 
+            "desc": "Enable Global Illumination", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "refract_caustics", 
+            "default": true, 
+            "desc": "This allows indirect lighting to pass through transparent objects (glass etc)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflect_caustics", 
+            "default": false, 
+            "desc": "This allows indirect light to be reflected from specular objects (mirrors etc)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "saturation", 
+            "default": 1, 
+            "desc": "Controls the saturation of the GI", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "contrast", 
+            "default": 1, 
+            "desc": "This parameter determines the base for the contrast boost", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "contrast_base", 
+            "default": 0.5, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "primary_engine", 
+            "default": "0", 
+            "desc": "Primary diffuse bounces engines", 
+            "items": [
+                [
+                    "0", 
+                    "Irradiance Map", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Brute Force", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Light Cache", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Spherical Harmonics", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "primary_multiplier", 
+            "default": 1, 
+            "desc": "This value determines how much primary diffuse bounces contribute to the final image illumination", 
+            "type": "FLOAT", 
+            "ui": {
+                "min": 0.0
+            }
+        }, 
+        {
+            "attr": "secondary_engine", 
+            "default": "2", 
+            "desc": "Secondary diffuse bounces engines", 
+            "items": [
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Brute Force", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Light Cache", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "secondary_multiplier", 
+            "default": 1, 
+            "desc": "This determines the effect of secondary diffuse bounces on the scene illumination", 
+            "type": "FLOAT", 
+            "ui": {
+                "min": 0.0
+            }
+        }, 
+        {
+            "attr": "ray_distance_on", 
+            "default": false, 
+            "desc": "Limit ray distance", 
+            "name": "Limit Ray Distance", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "ray_distance", 
+            "default": 100000, 
+            "desc": "Maximum ray distance", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ao_on", 
+            "default": false, 
+            "desc": "Use ambient occlusion", 
+            "name": "Use Ambient Occlusion", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "ao_amount", 
+            "default": 0.8, 
+            "desc": "Ambient occlusion amount", 
+            "name": "AO Amount", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ao_radius", 
+            "default": 10, 
+            "desc": "Ambient occlusion radius", 
+            "name": "AO Radius", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ao_subdivs", 
+            "default": 8, 
+            "desc": "Ambient occlusion subdivs", 
+            "name": "AO Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

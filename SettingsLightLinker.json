@@ -1,0 +1,23 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsLightLinker", 
+    "Name": "Settings Light Linker", 
+    "Parameters": [
+        {
+            "attr": "ignored_lights", 
+            "default": "", 
+            "desc": "List containing lists of plugins. Every sub list contains a light plugin (always the first element) and some node plugins the light is not illuminating", 
+            "type": "LIST"
+        }, 
+        {
+            "attr": "ignored_shadow_lights", 
+            "default": "", 
+            "desc": "List containing list of plugins. Every sub list contains a light plugin (always the first element) and some node plugins, which do not cast shadows from this light", 
+            "type": "LIST"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

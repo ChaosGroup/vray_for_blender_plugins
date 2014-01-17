@@ -1,0 +1,24 @@
+{
+    "Desciption": "Float to texture", 
+    "ID": "FloatToTex", 
+    "Name": "FloatToTex", 
+    "Parameters": [
+        {
+            "attr": "input", 
+            "default": 1.0, 
+            "desc": "Input float", 
+            "name": "Input", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": []
+    }
+}

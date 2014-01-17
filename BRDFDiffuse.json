@@ -1,0 +1,108 @@
+{
+    "Desciption": "", 
+    "ID": "BRDFDiffuse", 
+    "Name": "Diffuse", 
+    "Parameters": [
+        {
+            "attr": "color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "skip": true, 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "color_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "skip": true, 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "transparency", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "", 
+            "skip": true, 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "transparency_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "name": "Transparency", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "transparency_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "skip": true, 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "roughness", 
+            "default": 1.0, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "use_irradiance_map", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "use_irradiance_map"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsCurrentFrame", 
+    "Name": "Current Frame", 
+    "Parameters": [
+        {
+            "attr": "current_frame", 
+            "default": 0, 
+            "desc": "current frame", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "Desciption": "", 
+    "ID": "RenderChannelLightSelect", 
+    "Name": "Light Select", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "Light Select", 
+            "desc": "Channel name", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "color_mapping", 
+            "default": false, 
+            "desc": "Color Mapping", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "consider_for_aa", 
+            "default": false, 
+            "desc": "Consider this render element for antialiasing (may slow down rendering)", 
+            "name": "Consider For AA", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "filtering", 
+            "default": false, 
+            "desc": "Filtering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "lights", 
+            "default": "", 
+            "desc": "Light list to appear in this channel", 
+            "skip": true, 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "type", 
+            "default": "RAW", 
+            "desc": "", 
+            "items": [
+                [
+                    "RAW", 
+                    "Raw", 
+                    ""
+                ], 
+                [
+                    "DIFFUSE", 
+                    "Diffuse", 
+                    ""
+                ], 
+                [
+                    "SPECULAR", 
+                    "Specular", 
+                    ""
+                ]
+            ], 
+            "name": "Type", 
+            "skip": true, 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

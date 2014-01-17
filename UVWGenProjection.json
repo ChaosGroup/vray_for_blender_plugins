@@ -1,0 +1,203 @@
+{
+    "Desciption": "Projection mapping", 
+    "ID": "UVWGenProjection", 
+    "Name": "Projection", 
+    "Parameters": [
+        {
+            "attr": "uvw_transform", 
+            "default": "", 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "uvw_transform_tex", 
+            "default": "", 
+            "desc": "", 
+            "type": "TRANSFORM_TEXTURE"
+        }, 
+        {
+            "attr": "tex_transform", 
+            "default": "", 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "camera_settings", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "camera_view", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "bitmap", 
+            "default": "", 
+            "desc": "If we are projecting a bitmap, this is the bitmap's buffer, we need it to implement vertical/horizontal fit", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "type", 
+            "default": "1", 
+            "desc": "Mapping type", 
+            "items": [
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Planar", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Spherical", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Cylindrical", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Ball", 
+                    ""
+                ], 
+                [
+                    "5", 
+                    "Cubic", 
+                    ""
+                ], 
+                [
+                    "6", 
+                    "Triplanar", 
+                    ""
+                ], 
+                [
+                    "8", 
+                    "Perspective", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "fitfill", 
+            "default": "0", 
+            "desc": "Fit fill", 
+            "items": [
+                [
+                    "0", 
+                    "Fit Fill", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Horizontal", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Vertical", 
+                    ""
+                ]
+            ], 
+            "name": "Fit Fill", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "fittype", 
+            "default": "0", 
+            "desc": "Fit type", 
+            "items": [
+                [
+                    "0", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Match camera film gate", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Match camera resolution", 
+                    ""
+                ]
+            ], 
+            "name": "Fit Type", 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "u_angle", 
+            "default": 3.14159, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "v_angle", 
+            "default": 1.5708, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "film_gate_w", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "film_gate_h", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "hide_backface", 
+            "default": false, 
+            "desc": "Determine whether to project on back faces of polygons when in perspective mode", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "hide_occluded", 
+            "default": false, 
+            "desc": "Determine whether to project on occluded points when in perspective mode", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

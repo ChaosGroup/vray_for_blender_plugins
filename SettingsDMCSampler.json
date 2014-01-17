@@ -1,0 +1,77 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsDMCSampler", 
+    "Name": "DMC Sampler", 
+    "Parameters": [
+        {
+            "attr": "time_dependent", 
+            "default": false, 
+            "desc": "This make the samping pattern change with time", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "adaptive_amount", 
+            "default": 0.85, 
+            "desc": "A value of 1.0 means full adaptation; a value of 0.0 means no adaptation", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "adaptive_threshold", 
+            "default": 0.01, 
+            "desc": "Controls V-Ray's judgement of when a blurry value is \"good enough\" to be used", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "adaptive_min_samples", 
+            "default": 8, 
+            "desc": "The minimum number of samples that must be made before the early termination algorithm is used", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivs_mult", 
+            "default": 1, 
+            "desc": "This will multiply all subdivs values everywhere during rendering", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "path_sampler_type", 
+            "default": 2, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

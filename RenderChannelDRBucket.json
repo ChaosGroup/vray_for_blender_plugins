@@ -1,0 +1,40 @@
+{
+    "Desciption": "", 
+    "ID": "RenderChannelDRBucket", 
+    "Name": "DR Bucket", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "DR", 
+            "desc": "", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "text_alignment", 
+            "default": "1", 
+            "desc": "", 
+            "items": [
+                [
+                    "0", 
+                    "Left", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Center", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Right", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,636 @@
+{
+    "Desciption": "", 
+    "ID": "LightRectangle", 
+    "Name": "Rectangle", 
+    "Parameters": [
+        {
+            "attr": "enabled", 
+            "default": true, 
+            "desc": "true if the light is casting light (turned on) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "transform", 
+            "default": null, 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "Color of the light", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "color_tex", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "A color texture that if present will override the color parameter", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "shadows", 
+            "default": true, 
+            "desc": "true if the light casts shadows and false otherwise", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "shadowColor", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The shadow color. Anything but black is not physically accurate", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "shadowColor_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "A color texture that if present will override the shadowColor parameter", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "shadowBias", 
+            "default": 0, 
+            "desc": "Shadow offset from the surface. Helps to prevent polygonal shadow artifacts on low-poly surfaces", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "photonSubdivs", 
+            "default": 500, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "causticSubdivs", 
+            "default": 1000, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "diffuseMult", 
+            "default": 1, 
+            "desc": "Multiplier for the diffuse photons", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "causticMult", 
+            "default": 1, 
+            "desc": "Multiplier for the caustic photons", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cutoffThreshold", 
+            "default": 0.001, 
+            "desc": "Light cut-off threshold (speed optimization). If the light intensity for a point is below this threshold, the light will not be computed", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "affectDiffuse", 
+            "default": true, 
+            "desc": "true if the light produces diffuse lighting and false otherwise", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affectSpecular", 
+            "default": true, 
+            "desc": "true if the light produces specular hilights and false otherwise", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "bumped_below_surface_check", 
+            "default": false, 
+            "desc": "true if the bumped normal should be used to check if the light dir is below the surface", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "nsamples", 
+            "default": 0, 
+            "desc": "Number of parameter samples for motion blur", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "diffuse_contribution", 
+            "default": 1, 
+            "desc": "Diffuse contribution for the light", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "specular_contribution", 
+            "default": 1, 
+            "desc": "Specular contribution for the light", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "channels", 
+            "default": "", 
+            "desc": "Render channels the result of this light will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "channels_raw", 
+            "default": "", 
+            "desc": "Render channels the raw diffuse result of this light will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "channels_diffuse", 
+            "default": "", 
+            "desc": "Render channels the diffuse result of this light will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "channels_specular", 
+            "default": "", 
+            "desc": "Render channels the specular result of this light will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "use_global_light_level", 
+            "default": true, 
+            "desc": "true if the light should use the global light level setting", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "units", 
+            "default": "0", 
+            "desc": "Units for the intensity (0 - default, 1 - lumens, 2 - lm/m/m/sr, 3 - watts, 4 - w/m/m/sr)", 
+            "items": [
+                [
+                    "0", 
+                    "Default", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Lumens", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Lm/m/m/sr", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Watts", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "W/m/m/sr", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "intensity", 
+            "default": 1, 
+            "desc": "Light intensity", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "intensity_tex", 
+            "default": 1.0, 
+            "desc": "A float texture that if present will override the intensity parameter", 
+            "name": "Intensity", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "min": 0.0, 
+                "soft_max": 1024.0, 
+                "soft_min": 0.0
+            }
+        }, 
+        {
+            "attr": "subdivs", 
+            "default": 8, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "storeWithIrradianceMap", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "invisible", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affectReflections", 
+            "default": true, 
+            "desc": "true if the light appears in reflections and false otherwise", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "noDecay", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "doubleSided", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "lightPortal", 
+            "default": "0", 
+            "desc": "Specifies if the light is a portal light", 
+            "items": [
+                [
+                    "0", 
+                    "Normal Light", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Portal", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Simple Portal", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "objectID", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "u_size", 
+            "default": 1, 
+            "desc": "The u dimension of the light (actually half-width)", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "v_size", 
+            "default": 1, 
+            "desc": "The v dimension of the light (actually half-height)", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "directional", 
+            "default": 0, 
+            "desc": "Narrow the spread of the lighting and make the light directional", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1.0, 
+                "min": 0.0
+            }
+        }, 
+        {
+            "attr": "ignoreLightNormals", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "rect_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "The light texture", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "use_rect_tex", 
+            "default": true, 
+            "desc": "true if the texture should be used", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "tex_resolution", 
+            "default": 512, 
+            "desc": "The texture presampling resolution", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "tex_adaptive", 
+            "default": 1, 
+            "desc": "The adaptivity of the sampling to the texture brightness (0.0 - no adaptivity; 1.0 - full adaptivity", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "LIGHT", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "enabled"
+                    }, 
+                    {
+                        "name": "invisible"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "label": "Mode", 
+                                "name": "lightPortal"
+                            }, 
+                            {
+                                "name": "units"
+                            }, 
+                            {
+                                "label": "", 
+                                "name": "color"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "intensity"
+                            }, 
+                            {
+                                "name": "subdivs"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": false, 
+                        "attrs": [
+                            {
+                                "name": "shadows"
+                            }, 
+                            {
+                                "name": "shadowBias"
+                            }, 
+                            {
+                                "label": "", 
+                                "name": "shadowColor"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "doubleSided"
+                            }, 
+                            {
+                                "name": "noDecay"
+                            }, 
+                            {
+                                "name": "directional"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "photonSubdivs"
+                            }, 
+                            {
+                                "name": "diffuseMult"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "causticSubdivs"
+                            }, 
+                            {
+                                "name": "causticMult"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "storeWithIrradianceMap"
+                            }, 
+                            {
+                                "name": "bumped_below_surface_check"
+                            }, 
+                            {
+                                "name": "ignoreLightNormals"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "cutoffThreshold"
+                            }, 
+                            {
+                                "name": "nsamples"
+                            }, 
+                            {
+                                "name": "use_global_light_level"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "diffuse_contribution"
+                            }, 
+                            {
+                                "name": "specular_contribution"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "affectSpecular"
+                            }, 
+                            {
+                                "name": "affectReflections"
+                            }, 
+                            {
+                                "name": "affectDiffuse"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "align": true, 
+                "attrs": [
+                    {
+                        "name": "tex_resolution"
+                    }, 
+                    {
+                        "name": "tex_adaptive"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "objectID"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

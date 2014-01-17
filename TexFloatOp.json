@@ -1,0 +1,92 @@
+{
+    "Desciption": "Float operations", 
+    "ID": "TexFloatOp", 
+    "Name": "Float Operations", 
+    "Parameters": [
+        {
+            "attr": "float_a", 
+            "default": 1.0, 
+            "desc": "Float operand A", 
+            "name": "A", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "float_b", 
+            "default": 1.0, 
+            "desc": "Float operand B", 
+            "name": "B", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "product", 
+            "default": 1.0, 
+            "desc": "A * B", 
+            "name": "Product", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "ratio", 
+            "default": 1.0, 
+            "desc": "A/B", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "sum", 
+            "default": 1.0, 
+            "desc": "A+B", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "difference", 
+            "default": 1.0, 
+            "desc": "A-B", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "power", 
+            "default": 1.0, 
+            "desc": "The first number raised to the power of the second number", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "sin", 
+            "default": 1.0, 
+            "desc": "sin(A*B)", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "cos", 
+            "default": 1.0, 
+            "desc": "cos(A*B)", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "min", 
+            "default": 1.0, 
+            "desc": "min(A, B)", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }, 
+        {
+            "attr": "max", 
+            "default": 1.0, 
+            "desc": "max(A, B)", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": []
+    }
+}

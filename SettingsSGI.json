@@ -1,0 +1,38 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsSGI", 
+    "Name": "SettingsSGI", 
+    "Parameters": [
+        {
+            "attr": "bits_per_channel", 
+            "default": "16", 
+            "desc": "Bits per channel (8 or 16)", 
+            "items": [
+                [
+                    "8", 
+                    "8", 
+                    ""
+                ], 
+                [
+                    "16", 
+                    "16", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "bits_per_channel"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

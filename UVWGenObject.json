@@ -1,0 +1,29 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenObject", 
+    "Name": "Object", 
+    "Parameters": [
+        {
+            "attr": "uvw_transform", 
+            "default": null, 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "duvw_scale", 
+            "default": 1, 
+            "desc": "Additional scale factor for the texture derivatives", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,570 @@
+{
+    "Desciption": "", 
+    "ID": "EnvironmentFog", 
+    "Name": "Fog", 
+    "Parameters": [
+        {
+            "attr": "enabled", 
+            "default": true, 
+            "desc": "If false, disable the rendering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "gizmos", 
+            "default": "", 
+            "desc": "List of gizmos", 
+            "name": "Gizmo", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "color", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "Fog color", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "color_mult", 
+            "default": 1, 
+            "desc": "Fog color multiplier", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "color_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "Fog texture", 
+            "name": "Color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "emission", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "Fog emission color", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "emission_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "Fog emission texture", 
+            "name": "Emission", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "emission_mult", 
+            "default": 1, 
+            "desc": "Fog emission multiplier", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "emission_mult_tex", 
+            "default": 1.0, 
+            "desc": "Fog emission texture multiplier", 
+            "name": "Emission Mult", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "distance", 
+            "default": 1.0, 
+            "desc": "Distance between fog particles", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "density", 
+            "default": 1, 
+            "desc": "Fog density", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "density_tex", 
+            "default": 1.0, 
+            "desc": "Texture for fog density", 
+            "name": "Density", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "opacity_mode", 
+            "default": false, 
+            "desc": "Treat density as opacity", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "use_height", 
+            "default": false, 
+            "desc": "Whether or not the height should be taken into account", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "height", 
+            "default": 100, 
+            "desc": "Fog starting point along the Z-axis", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivs", 
+            "default": 8, 
+            "desc": "Fog subdivision", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "yup", 
+            "default": false, 
+            "desc": "if true, y is the up axis, not z", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "solid_mode", 
+            "default": false, 
+            "desc": "If true, this will cause to disable randomization when sampling and take 1 sample at 0.5 density", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "solid_threshold", 
+            "default": 0.5, 
+            "desc": "Solid mode transparency threshold", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "jitter", 
+            "default": false, 
+            "desc": "If true, add a random offset when start sampling", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "shadow_opacity", 
+            "default": 1, 
+            "desc": "volume opacity scale for shadow rays", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "scale", 
+            "default": 1.0, 
+            "desc": "stretch aspect for the 3 axis, when the fog container must grow/shrink preserving its original density", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fade_out_mode", 
+            "default": "0", 
+            "desc": "Fade out mode", 
+            "items": [
+                [
+                    "0", 
+                    "Multiply", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Substract", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "fade_out_radius", 
+            "default": 0, 
+            "desc": "fade out effect for the edges", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "per_object_fade_out_radius", 
+            "default": false, 
+            "desc": "fade out effect for the edges per object", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "scatter_gi", 
+            "default": false, 
+            "desc": "Scatter global illumination", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "scatter_bounces", 
+            "default": 8, 
+            "desc": "Number of GI bounces calculated inside the fog", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "simplify_gi", 
+            "default": false, 
+            "desc": "Simplify global illumination", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "step_size", 
+            "default": 1, 
+            "desc": "Size of one step through the volume", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "max_steps", 
+            "default": 1000, 
+            "desc": "Maximum number of steps through the volume", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "tex_samples", 
+            "default": 4, 
+            "desc": "Number of texture samples for each step through the volume", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cutoff_threshold", 
+            "default": 0.001, 
+            "desc": "Controls when the raymarcher will stop traversing the volume", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "light_mode", 
+            "default": "1", 
+            "desc": "Light mode", 
+            "items": [
+                [
+                    "0", 
+                    "No Lights", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Per-Gizmo", 
+                    "Per-gizmo lights"
+                ], 
+                [
+                    "2", 
+                    "Override", 
+                    "Override Per-Gizmo Lights"
+                ], 
+                [
+                    "3", 
+                    "Intersect", 
+                    "Intersect with per-gizmo lights"
+                ], 
+                [
+                    "4", 
+                    "Add", 
+                    "Add to per-gizmo lights"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "lights", 
+            "default": "", 
+            "desc": "", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "use_shade_instance", 
+            "default": false, 
+            "desc": "True if the shade instance should be used when sampling textures", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_background", 
+            "default": true, 
+            "desc": "Affect background", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_reflections", 
+            "default": true, 
+            "desc": "true if the fog is visible to reflection rays", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_refractions", 
+            "default": true, 
+            "desc": "true if the fog is visible to refraction rays", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_shadows", 
+            "default": true, 
+            "desc": "true if the fog affects shadow rays", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_gi", 
+            "default": true, 
+            "desc": "true if the fog affects GI rays", 
+            "name": "Affect GI", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_camera", 
+            "default": true, 
+            "desc": "true if the fog affects primary camera rays", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "EFFECT", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "use_height"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "use_height"
+                        }, 
+                        "name": "height"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "subdivs"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "distance"
+                    }, 
+                    {
+                        "name": "density"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "simplify_gi"
+                    }, 
+                    {
+                        "name": "scatter_gi"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "active": {
+                            "prop": "scatter_gi"
+                        }, 
+                        "name": "scatter_bounces"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "light_mode"
+                    }, 
+                    {
+                        "name": "fade_out_mode"
+                    }, 
+                    {
+                        "name": "fade_out_radius"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "step_size"
+                            }, 
+                            {
+                                "name": "max_steps"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "tex_samples"
+                            }, 
+                            {
+                                "name": "cutoff_threshold"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "affect_background"
+                            }, 
+                            {
+                                "name": "affect_camera"
+                            }, 
+                            {
+                                "name": "affect_gi"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "affect_reflections"
+                            }, 
+                            {
+                                "name": "affect_refractions"
+                            }, 
+                            {
+                                "name": "affect_shadows"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "use_shade_instance"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

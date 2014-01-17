@@ -1,0 +1,231 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenMayaPlace2dTexture", 
+    "Name": "Channel (Named)", 
+    "Parameters": [
+        {
+            "attr": "uvw_channel", 
+            "default": 0, 
+            "desc": "Optional channel index, if uv_set_name is not found", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "uvwgen", 
+            "default": "", 
+            "desc": "Optional UVWGen from which the initial uvw coordinates will be taken, instead of the surface point", 
+            "type": "UVWGEN"
+        }, 
+        {
+            "attr": "coverage_u_tex", 
+            "default": 1, 
+            "desc": "", 
+            "name": "Coverage U", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "coverage_v_tex", 
+            "default": 1, 
+            "desc": "", 
+            "name": "Coverage V", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "translate_frame_u_tex", 
+            "default": 0, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "translate_frame_v_tex", 
+            "default": 0, 
+            "desc": "", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "rotate_frame_tex", 
+            "default": 0, 
+            "desc": "", 
+            "skip": true, 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "mirror_u", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "mirror_v", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "wrap_u", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "wrap_v", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "stagger", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "repeat_u_tex", 
+            "default": 1, 
+            "desc": "", 
+            "name": "Repeat U", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "repeat_v_tex", 
+            "default": 1, 
+            "desc": "", 
+            "name": "Repeat V", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "offset_u_tex", 
+            "default": 0, 
+            "desc": "", 
+            "name": "Offset U", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "offset_v_tex", 
+            "default": 0, 
+            "desc": "", 
+            "name": "Offset V", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "rotate_uv_tex", 
+            "default": 0, 
+            "desc": "", 
+            "name": "Rotate UV", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "noise_u_tex", 
+            "default": 0, 
+            "desc": "", 
+            "name": "Noise U", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "noise_v_tex", 
+            "default": 0, 
+            "desc": "", 
+            "name": "Noise V", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "nsamples", 
+            "default": 1, 
+            "desc": "The number of parameter samples to take for motion blur: 0 - means the global value; 1 - means motion blur should be disabled for this plugin", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "uv_set_name", 
+            "default": "", 
+            "desc": "The name of the uv channel that should be used", 
+            "type": "STRING"
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

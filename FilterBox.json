@@ -1,0 +1,32 @@
+{
+    "Desciption": "", 
+    "ID": "FilterBox", 
+    "Name": "Box", 
+    "Parameters": [
+        {
+            "attr": "size", 
+            "default": 1.5, 
+            "desc": "Filter width", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "size"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

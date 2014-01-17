@@ -1,0 +1,10 @@
+{
+    "Desciption": "Procedural infinite plane", 
+    "ID": "GeomPlane", 
+    "Name": "Infinite Plane", 
+    "Parameters": [], 
+    "Type": "GEOMETRY", 
+    "Widget": {
+        "widgets": []
+    }
+}

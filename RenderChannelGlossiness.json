@@ -1,0 +1,35 @@
+{
+    "Desciption": "", 
+    "ID": "RenderChannelGlossiness", 
+    "Name": "Glossiness", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "Glossiness", 
+            "desc": "", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "alias", 
+            "default": 1000, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "filtering", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

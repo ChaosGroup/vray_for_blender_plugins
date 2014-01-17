@@ -1,0 +1,101 @@
+{
+    "Desciption": "", 
+    "ID": "BRDFLight", 
+    "Name": "Light", 
+    "Parameters": [
+        {
+            "attr": "color", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "The self-illumination color", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "colorMultiplier", 
+            "default": 1, 
+            "desc": "Color Multiplier", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "transparency", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "Transparency of the BRDF", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "doubleSided", 
+            "default": false, 
+            "desc": "If false, the light color is black for back-facing surfaces", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "emitOnBackSide", 
+            "default": true, 
+            "desc": "Emit on back side", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "channels", 
+            "default": "", 
+            "desc": "Render channels the result of this BRDF will be written to", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "compensateExposure", 
+            "default": false, 
+            "desc": "Compensate camera exposure", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "multiplyByOpacity", 
+            "default": false, 
+            "desc": "When enabled the color of the light brdf is multiplied by the brdf's opacity (inverse of the brdf's transparency)", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "doubleSided"
+                            }, 
+                            {
+                                "name": "emitOnBackSide"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "attrs": [
+                            {
+                                "name": "compensateExposure"
+                            }, 
+                            {
+                                "name": "multiplyByOpacity"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }
+        ]
+    }
+}

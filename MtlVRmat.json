@@ -1,0 +1,43 @@
+{
+    "Desciption": "VRmat material", 
+    "ID": "MtlVRmat", 
+    "Name": "VRmat", 
+    "Parameters": [
+        {
+            "attr": "filename", 
+            "default": "", 
+            "desc": "Filepath", 
+            "name": "Filepath", 
+            "subtype": "FILE_PATH", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "mtlname", 
+            "default": "", 
+            "desc": "Material name", 
+            "name": "Name", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "expanded_material", 
+            "default": "", 
+            "desc": "Expanded material", 
+            "name": "Material", 
+            "skip": true, 
+            "type": "MATERIAL"
+        }, 
+        {
+            "attr": "expanded", 
+            "default": false, 
+            "desc": "Material is expanded to nodes", 
+            "name": "Expanded", 
+            "options": "HIDDEN", 
+            "skip": true, 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "MATERIAL", 
+    "Widget": {
+        "widgets": []
+    }
+}

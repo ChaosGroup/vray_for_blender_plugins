@@ -1,0 +1,251 @@
+{
+    "Desciption": "", 
+    "ID": "BRDFMirror", 
+    "Name": "Mirror", 
+    "Parameters": [
+        {
+            "attr": "color", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "color_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "color_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "transparency", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "transparency_tex", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "transparency_tex_mult", 
+            "default": 1, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "cutoff", 
+            "default": 0.01, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "back_side", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "trace_reflections", 
+            "default": true, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "trace_depth", 
+            "default": -1, 
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "affect_alpha", 
+            "default": "0", 
+            "desc": "Specifies how render channels are propagated through the BRDF", 
+            "items": [
+                [
+                    "0", 
+                    "Color Only", 
+                    "The transperency will affect only the RGB channel of the final render"
+                ], 
+                [
+                    "1", 
+                    "Color+Alpha", 
+                    "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
+                ], 
+                [
+                    "2", 
+                    "All Channels", 
+                    "All channels and render elements will be affected by the transperency of the material"
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "reflect_exit_color", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "The color to use when the maximum depth is reached", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "reflect_dim_distance", 
+            "default": 1e+18, 
+            "desc": "How much to dim reflection as length of rays increases", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "reflect_dim_distance_on", 
+            "default": false, 
+            "desc": "True to enable dim distance", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "reflect_dim_distance_falloff", 
+            "default": 0, 
+            "desc": "Fall off for the dim distance", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "BRDF", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "cutoff"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "trace_reflections"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "trace_reflections"
+                        }, 
+                        "name": "trace_depth"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "active": {
+                    "prop": "trace_reflections"
+                }, 
+                "layout": "SPLIT", 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Dim Distance", 
+                                "name": "reflect_dim_distance_on"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "active": {
+                            "prop": "reflect_dim_distance_on"
+                        }, 
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "label": "Distance", 
+                                "name": "reflect_dim_distance"
+                            }, 
+                            {
+                                "label": "Falloff", 
+                                "name": "reflect_dim_distance_falloff"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "reflect_exit_color"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "affect_alpha"
+                    }, 
+                    {
+                        "name": "back_side"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

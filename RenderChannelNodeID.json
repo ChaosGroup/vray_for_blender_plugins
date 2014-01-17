@@ -1,0 +1,17 @@
+{
+    "Desciption": "The object's \"Pass Index\" contributes the pixel value", 
+    "ID": "RenderChannelNodeID", 
+    "Name": "Node ID", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "Node ID", 
+            "desc": "Channel name", 
+            "type": "STRING"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

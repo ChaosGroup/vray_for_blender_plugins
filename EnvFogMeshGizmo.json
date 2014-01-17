@@ -1,0 +1,54 @@
+{
+    "Desciption": "Simulation domain", 
+    "ID": "EnvFogMeshGizmo", 
+    "Name": "Fog Gizmo", 
+    "Parameters": [
+        {
+            "attr": "transform", 
+            "default": null, 
+            "desc": "", 
+            "skip": true, 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "geometry", 
+            "default": "", 
+            "desc": "", 
+            "name": "Object", 
+            "skip": true, 
+            "type": "GEOMETRY"
+        }, 
+        {
+            "attr": "lights", 
+            "default": "", 
+            "desc": "", 
+            "skip": true, 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "fade_out_radius", 
+            "default": 0, 
+            "desc": "fade out effect for the edges", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "EFFECT", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "fade_out_radius"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

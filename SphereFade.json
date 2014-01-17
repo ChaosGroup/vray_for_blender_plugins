@@ -1,0 +1,46 @@
+{
+    "Desciption": "", 
+    "ID": "SphereFade", 
+    "Name": "Sphere Fade", 
+    "Parameters": [
+        {
+            "attr": "gizmos", 
+            "default": "", 
+            "desc": "List of gizmos", 
+            "skip": true, 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "empty_color", 
+            "default": [
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "desc": "", 
+            "type": "COLOR"
+        }, 
+        {
+            "attr": "affect_alpha", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "falloff", 
+            "default": 0.2, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "EFFECT", 
+    "Widget": {
+        "widgets": []
+    }
+}

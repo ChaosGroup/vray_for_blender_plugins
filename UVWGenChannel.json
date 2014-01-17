@@ -1,0 +1,175 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenChannel", 
+    "Name": "Channel", 
+    "Parameters": [
+        {
+            "attr": "uvw_transform", 
+            "default": null, 
+            "desc": "Initial transformation on the uvw coordinates, before mirror, crop etc", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "uvw_transform_tex", 
+            "default": null, 
+            "desc": "", 
+            "type": "TRANSFORM_TEXTURE"
+        }, 
+        {
+            "attr": "tex_transform", 
+            "default": null, 
+            "desc": "Final transformation on the resulting uvw coordinates, after mirror, crop etc", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "nsamples", 
+            "default": 0, 
+            "desc": "Number of uvw transform samples", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "wrap_u", 
+            "default": 0, 
+            "desc": "0 - no wrapping, 1 - wrap, 2 - mirror tile", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "wrap_v", 
+            "default": 0, 
+            "desc": "0 - no wrapping, 1 - wrap, 2 - mirror tile", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "wrap_w", 
+            "default": 0, 
+            "desc": "0 - no wrapping, 1 - wrap, 2 - mirror tile", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "crop_u", 
+            "default": 0, 
+            "desc": "1 to crop in the u-direction", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "crop_v", 
+            "default": 0, 
+            "desc": "1 to crop in the v-direction", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "crop_w", 
+            "default": 0, 
+            "desc": "1 to crop in the w-direction", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "coverage", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "Coverage", 
+            "type": "VECTOR"
+        }, 
+        {
+            "attr": "uvw_coords", 
+            "default": [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "desc": "The uvw coordinates for the specified channel at the current shading point", 
+            "type": "OUTPUT_VECTOR_TEXTURE"
+        }, 
+        {
+            "attr": "wrap_mode", 
+            "default": 0, 
+            "desc": "Wrap mode (0 - wrap on 0.5 boundary; 1 - wrap on integer boundary", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "duvw_scale", 
+            "default": 1, 
+            "desc": "Additional scale factor for the texture derivatives", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "uvw_channel", 
+            "default": 0, 
+            "desc": "", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "uvwgen", 
+            "default": "", 
+            "desc": "Optional UVWGen from which the initial uvw coordinates will be taken, instead of the surface point", 
+            "type": "UVWGEN"
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

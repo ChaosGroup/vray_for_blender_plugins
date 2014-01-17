@@ -1,0 +1,57 @@
+{
+    "Desciption": "", 
+    "ID": "UVWGenExplicit", 
+    "Name": "Explicit", 
+    "Parameters": [
+        {
+            "attr": "u", 
+            "default": 1.0, 
+            "desc": "the U input", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "v", 
+            "default": 1.0, 
+            "desc": "the V input", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "w", 
+            "default": 1.0, 
+            "desc": "the W input", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "uvw", 
+            "default": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }
+    ], 
+    "Type": "UVWGEN", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,230 @@
+{
+    "Desciption": "Bake settings", 
+    "ID": "BakeView", 
+    "Name": "Bake", 
+    "Parameters": [
+        {
+            "attr": "bake_node", 
+            "default": "", 
+            "desc": "The node to bake", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "target_nodes", 
+            "default": "", 
+            "desc": "The target objects for projection baking", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "bake_uvwgen", 
+            "default": "", 
+            "desc": "The uvw generator", 
+            "type": "PLUGIN"
+        }, 
+        {
+            "attr": "dilation", 
+            "default": 2, 
+            "desc": "Number of pixels to expand around geometry", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "flip_derivs", 
+            "default": false, 
+            "desc": "true to flip the texture direction derivatives (reverses bump mapping)", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "u_min", 
+            "default": 0, 
+            "desc": "The minimum u value to bake", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "v_min", 
+            "default": 0, 
+            "desc": "The minimum v value to bake", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "u_max", 
+            "default": 1, 
+            "desc": "The maximum u value to bake", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "v_max", 
+            "default": 1, 
+            "desc": "The maximum v value to bake", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "transform", 
+            "default": null, 
+            "desc": "", 
+            "type": "TRANSFORM"
+        }, 
+        {
+            "attr": "fov", 
+            "default": 0.785398, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "projection_baking", 
+            "default": "0", 
+            "desc": "Projection baking", 
+            "items": [
+                [
+                    "0", 
+                    "Normal", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Projection", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "mode", 
+            "default": "0", 
+            "desc": "Bake mode", 
+            "items": [
+                [
+                    "0", 
+                    "Outside", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Inside", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Outside - Inside", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Inside - Outside", 
+                    ""
+                ], 
+                [
+                    "4", 
+                    "Closest", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "normal", 
+            "default": "0", 
+            "desc": "Normal mode", 
+            "items": [
+                [
+                    "0", 
+                    "Smooth", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Geometry", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "max_depth", 
+            "default": 0, 
+            "desc": "Geometry that is intersected further than this value along the ray will be ignored. If the value is zero then no geometry will be ignored", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ray_offset", 
+            "default": 0, 
+            "desc": "The ray's beginning will be offseted this much along the normal", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "use", 
+            "default": false, 
+            "desc": "Use texture baking", 
+            "skip": true, 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "uv_channel", 
+            "default": false, 
+            "desc": "UV channel to use", 
+            "skip": true, 
+            "type": "INT", 
+            "ui": {
+                "min": 0
+            }
+        }, 
+        {
+            "attr": "bake_material", 
+            "default": "", 
+            "desc": "Material for \"Bake By Material\"", 
+            "skip": true, 
+            "type": "STRING"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "Desciption": "MultiMatte", 
+    "ID": "RenderChannelMultiMatte", 
+    "Name": "MultiMatte", 
+    "Parameters": [
+        {
+            "attr": "name", 
+            "default": "MultiMatte", 
+            "desc": "", 
+            "type": "STRING"
+        }, 
+        {
+            "attr": "red_id", 
+            "default": 0, 
+            "desc": "The object ID that will be written as the red channel (0 to disable the red channel)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "green_id", 
+            "default": 0, 
+            "desc": "The object ID that will be written as the green channel (0 to disable the green channel)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "blue_id", 
+            "default": 0, 
+            "desc": "The object ID that will be written as the blue channel (0 to disable the blue channel)", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "use_mtl_id", 
+            "default": false, 
+            "desc": "Use the material IDs instead of the object IDs", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "affect_matte_objects", 
+            "default": true, 
+            "desc": "Don't affect Matte Objects", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "consider_for_aa", 
+            "default": false, 
+            "desc": "Consider this render element for antialiasing (may slow down rendering)", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "RENDERCHANNEL", 
+    "Widget": {
+        "widgets": []
+    }
+}

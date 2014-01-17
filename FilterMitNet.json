@@ -1,0 +1,67 @@
+{
+    "Desciption": "", 
+    "ID": "FilterMitNet", 
+    "Name": "Mitchell-Netravali", 
+    "Parameters": [
+        {
+            "attr": "size", 
+            "default": 4, 
+            "desc": "Filter width", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "blur", 
+            "default": 0.333333, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "ringing", 
+            "default": 0.333333, 
+            "desc": "", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "size"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "blur"
+                    }, 
+                    {
+                        "name": "ringing"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}

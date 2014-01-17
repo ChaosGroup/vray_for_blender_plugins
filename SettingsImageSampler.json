@@ -1,0 +1,481 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsImageSampler", 
+    "Name": "Image Sampler", 
+    "Parameters": [
+        {
+            "attr": "type", 
+            "default": "0", 
+            "desc": "The type of the image sampler", 
+            "items": [
+                [
+                    "0", 
+                    "Fixed", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Adaptive DMC", 
+                    ""
+                ], 
+                [
+                    "2", 
+                    "Adaptive Subdivision", 
+                    ""
+                ], 
+                [
+                    "3", 
+                    "Progressive", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "fixed_subdivs", 
+            "default": 1, 
+            "desc": "Subdivs value for the fixed sampler", 
+            "name": "Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "fixed_per_pixel_filtering", 
+            "default": false, 
+            "desc": "true to enable per-pixel filtering for the fixed sampler", 
+            "name": "Per Pixel Filtering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dmc_minSubdivs", 
+            "default": 1, 
+            "desc": "Min. subdivs value for the adaptive DMC image sampler", 
+            "name": "Min. Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "dmc_maxSubdivs", 
+            "default": 4, 
+            "desc": "Max. subdivs value for the adaptive DMC image sampler", 
+            "name": "Max. Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "dmc_threshold", 
+            "default": 0.01, 
+            "desc": "Color threshold for the adaptive DMC image sampler", 
+            "name": "Threshold", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "dmc_show_samples", 
+            "default": false, 
+            "desc": "true to show the samples for the adaptive DMC image sampler", 
+            "name": "Show Samples", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "dmc_per_pixel_filtering", 
+            "default": false, 
+            "desc": "true to enable per-pixel filtering for the adaptive DMC image sampler", 
+            "name": "Per Pixel Filtering", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivision_minRate", 
+            "default": -1, 
+            "desc": "", 
+            "name": "Min. Rate", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivision_maxRate", 
+            "default": 2, 
+            "desc": "", 
+            "name": "Max. Rate", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivision_jitter", 
+            "default": true, 
+            "desc": "", 
+            "name": "Jitter", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivision_threshold", 
+            "default": 0.15, 
+            "desc": "", 
+            "name": "Threshold", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivision_edges", 
+            "default": false, 
+            "desc": "", 
+            "name": "Edges", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivision_normals", 
+            "default": false, 
+            "desc": "", 
+            "name": "Normals", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "subdivision_normals_threshold", 
+            "default": 0.1, 
+            "desc": "", 
+            "name": "Normals Threshold", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "subdivision_show_samples", 
+            "default": false, 
+            "desc": "", 
+            "name": "Show Samples", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "progressive_minSubdivs", 
+            "default": 1, 
+            "desc": "Min. subdivs value for the progressive image sampler", 
+            "name": "Min. Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "progressive_maxSubdivs", 
+            "default": 4, 
+            "desc": "Max. subdivs value for the progressive image sampler", 
+            "name": "Max. Subdivs", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "progressive_threshold", 
+            "default": 0.01, 
+            "desc": "Noise threshold for the progressive image sampler", 
+            "name": "Threshold", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "progressive_maxTime", 
+            "default": 0, 
+            "desc": "Max. render time for the progressive image sampler", 
+            "name": "Max. Time", 
+            "type": "FLOAT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "progressive_bundleSize", 
+            "default": 64, 
+            "desc": "Bundle size for the progressive image sampler", 
+            "name": "Bundle Size", 
+            "type": "INT", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "progressive_showMask", 
+            "default": false, 
+            "desc": "If true, the AA mask will be rendered", 
+            "name": "Show Mask", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "use_dmc_treshhold", 
+            "default": true, 
+            "desc": "Use threshold specified in the \"DMC sampler\"", 
+            "name": "Use DMC sampler threshold", 
+            "skip": true, 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "filter_type", 
+            "default": "NONE", 
+            "desc": "Antialiasing filter type", 
+            "items": [
+                [
+                    "NONE", 
+                    "None", 
+                    ""
+                ], 
+                [
+                    "FilterArea", 
+                    "Area", 
+                    ""
+                ], 
+                [
+                    "FilterBox", 
+                    "Box", 
+                    ""
+                ], 
+                [
+                    "FilterCatmullRom", 
+                    "Catmull-Rom", 
+                    ""
+                ], 
+                [
+                    "FilterCookVariable", 
+                    "Cook Variable", 
+                    ""
+                ], 
+                [
+                    "FilterGaussian", 
+                    "Gaussian", 
+                    ""
+                ], 
+                [
+                    "FilterLanczos", 
+                    "Lanczos", 
+                    ""
+                ], 
+                [
+                    "FilterMitNet", 
+                    "Mitchell-Netravali", 
+                    ""
+                ], 
+                [
+                    "FilterSinc", 
+                    "Sinc", 
+                    ""
+                ], 
+                [
+                    "FilterTriangle", 
+                    "Triangle", 
+                    ""
+                ]
+            ], 
+            "skip": true, 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "type"
+                    }
+                ], 
+                "layout": "ROW"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "fixed_subdivs"
+                    }, 
+                    {
+                        "name": "fixed_per_pixel_filtering"
+                    }
+                ], 
+                "layout": "COLUMN", 
+                "show": {
+                    "condition": "0", 
+                    "prop": "type"
+                }
+            }, 
+            {
+                "layout": "SPLIT", 
+                "show": {
+                    "condition": "1", 
+                    "prop": "type"
+                }, 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "dmc_minSubdivs"
+                            }, 
+                            {
+                                "name": "dmc_maxSubdivs"
+                            }, 
+                            {
+                                "name": "dmc_threshold"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "dmc_show_samples"
+                            }, 
+                            {
+                                "name": "dmc_per_pixel_filtering"
+                            }, 
+                            {
+                                "name": "use_dmc_treshhold"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "show": {
+                    "condition": "2", 
+                    "prop": "type"
+                }, 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "subdivision_minRate"
+                            }, 
+                            {
+                                "name": "subdivision_maxRate"
+                            }, 
+                            {
+                                "name": "subdivision_threshold"
+                            }, 
+                            {
+                                "name": "subdivision_normals_threshold"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "subdivision_show_samples"
+                            }, 
+                            {
+                                "name": "subdivision_jitter"
+                            }, 
+                            {
+                                "name": "subdivision_edges"
+                            }, 
+                            {
+                                "name": "subdivision_normals"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }, 
+            {
+                "layout": "SPLIT", 
+                "show": {
+                    "condition": "3", 
+                    "prop": "type"
+                }, 
+                "splits": [
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "progressive_minSubdivs"
+                            }, 
+                            {
+                                "name": "progressive_maxSubdivs"
+                            }, 
+                            {
+                                "name": "progressive_threshold"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }, 
+                    {
+                        "align": true, 
+                        "attrs": [
+                            {
+                                "name": "progressive_maxTime"
+                            }, 
+                            {
+                                "name": "progressive_bundleSize"
+                            }, 
+                            {
+                                "name": "progressive_showMask"
+                            }
+                        ], 
+                        "layout": "COLUMN"
+                    }
+                ]
+            }
+        ]
+    }
+}

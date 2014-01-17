@@ -1,0 +1,59 @@
+{
+    "Desciption": "", 
+    "ID": "SettingsVRST", 
+    "Name": "SettingsVRST", 
+    "Parameters": [
+        {
+            "attr": "compression", 
+            "default": "1", 
+            "desc": "Compression for VRST/VRSM output", 
+            "items": [
+                [
+                    "0", 
+                    "Default", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "ZIP", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "bits_per_channel", 
+            "default": "16", 
+            "desc": "Bits per channel", 
+            "items": [
+                [
+                    "16", 
+                    "16", 
+                    ""
+                ], 
+                [
+                    "32", 
+                    "32", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }
+    ], 
+    "Type": "SETTINGS", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "compression"
+                    }, 
+                    {
+                        "name": "bits_per_channel"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

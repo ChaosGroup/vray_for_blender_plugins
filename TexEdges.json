@@ -1,0 +1,106 @@
+{
+    "Desciption": "", 
+    "ID": "TexEdges", 
+    "Name": "Edges", 
+    "Parameters": [
+        {
+            "attr": "edges_tex", 
+            "default": [
+                1, 
+                1, 
+                1
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "bg_tex", 
+            "default": [
+                0, 
+                0, 
+                0
+            ], 
+            "desc": "", 
+            "type": "TEXTURE"
+        }, 
+        {
+            "attr": "width_type", 
+            "default": "1", 
+            "desc": "Width Type", 
+            "items": [
+                [
+                    "0", 
+                    "World", 
+                    ""
+                ], 
+                [
+                    "1", 
+                    "Pixels", 
+                    ""
+                ]
+            ], 
+            "type": "ENUM"
+        }, 
+        {
+            "attr": "pixel_width", 
+            "default": 1, 
+            "desc": "", 
+            "name": "Width", 
+            "type": "FLOAT_TEXTURE", 
+            "ui": {
+                "max": 1048576, 
+                "min": -1048576, 
+                "soft_max": 64, 
+                "soft_min": 0
+            }
+        }, 
+        {
+            "attr": "show_hidden_edges", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }, 
+        {
+            "attr": "show_subtriangles", 
+            "default": false, 
+            "desc": "", 
+            "type": "BOOL"
+        }
+    ], 
+    "Type": "TEXTURE", 
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "width_type"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "layout": "SEPARATOR"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "label": "Width", 
+                        "name": "pixel_width"
+                    }
+                ], 
+                "layout": "COLUMN"
+            }, 
+            {
+                "attrs": [
+                    {
+                        "name": "show_hidden_edges"
+                    }, 
+                    {
+                        "name": "show_subtriangles"
+                    }
+                ], 
+                "layout": "ROW"
+            }
+        ]
+    }
+}
