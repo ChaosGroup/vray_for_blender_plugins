@@ -121,15 +121,9 @@
         }, 
         {
             "attr": "view_dep", 
-            "default": 1, 
+            "default": true, 
             "desc": "If use_globals is false, this determines if view-dependent tesselation is used", 
-            "type": "INT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
+            "type": "BOOL", 
         }, 
         {
             "attr": "edge_length", 
