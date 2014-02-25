@@ -123,7 +123,7 @@
             "attr": "view_dep", 
             "default": true, 
             "desc": "If use_globals is false, this determines if view-dependent tesselation is used", 
-            "type": "BOOL", 
+            "type": "BOOL"
         }, 
         {
             "attr": "edge_length", 
