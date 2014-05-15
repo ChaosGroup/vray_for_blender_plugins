@@ -1,0 +1,160 @@
+{
+    "Desciption": "",
+    "ID": "TexLayered",
+    "Name": "Layered",
+    "Parameters": [
+        {
+            "attr": "compatibility_with",
+            "default": 0,
+            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ...",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "alpha_from_intensity",
+            "default": 0,
+            "desc": "If 2 - the alpha is forced to 1.0f; 1 - the resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1); 0 - the alpha is taken from the bitmap alpha",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "invert",
+            "default": false,
+            "desc": "If true, the resulting texture color will be inverted",
+            "type": "BOOL"
+        },
+        {
+            "attr": "invert_alpha",
+            "default": true,
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
+            "type": "BOOL"
+        },
+        {
+            "attr": "color_mult",
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "desc": "A multiplier for the texture color",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "color_offset",
+            "default": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "desc": "An additional offset for the texture color",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "alpha_mult",
+            "default": 1,
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "alpha_offset",
+            "default": 0,
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "nouvw_color",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1
+            ],
+            "desc": "The color when there are no valid uvw coordinates",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "color",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "The resulting color",
+            "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "out_transparency",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "The resulting transparency",
+            "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "out_alpha",
+            "default": 1.0,
+            "desc": "The resulting alpha",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "out_intensity",
+            "default": 1.0,
+            "desc": "The resulting intensity",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "textures",
+            "default": "",
+            "desc": "",
+            "type": "LIST"
+        },
+        {
+            "attr": "blend_modes",
+            "default": "",
+            "desc": "0:None, 1:Over, 2:In, 3:Out, 4:Add, 5:Subtract, 6:Multiply, 7:Difference, 8:Lighten, 9:Darken, 10:Saturate, 11:Desaturate, 12:Illuminate",
+            "type": "INT_LIST"
+        },
+        {
+            "attr": "alpha",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        }
+    ],
+    "Type": "SYSTEM",
+    "Widget": {
+        "widgets": []
+    }
+}

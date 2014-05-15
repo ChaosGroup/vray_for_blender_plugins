@@ -1,0 +1,61 @@
+{
+    "Desciption": "",
+    "ID": "TexCombineColor",
+    "Name": "Combine Color",
+    "Parameters": [
+        {
+            "attr": "color",
+            "default": [
+                0,
+                0,
+                0
+            ],
+            "desc": "The color value",
+            "type": "COLOR"
+        },
+        {
+            "attr": "texture",
+            "default": [
+                0,
+                0,
+                0
+            ],
+            "desc": "The texture",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "texture_multiplier",
+            "default": 1,
+            "desc": "The texture multiplier (blends between the value and the texture)",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "result_invert",
+            "default": false,
+            "desc": "true to invert the result",
+            "type": "BOOL"
+        },
+        {
+            "attr": "result_multiplier",
+            "default": 1,
+            "desc": "A multiplier for the resulit (after inversion, if result_invert is true)",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        }
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}

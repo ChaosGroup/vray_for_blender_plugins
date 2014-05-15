@@ -1,0 +1,492 @@
+{
+    "Desciption": "Skin shader",
+    "ID": "BRDFSkinComplex",
+    "Name": "Skin",
+    "Parameters": [
+        {
+            "attr": "scale",
+            "default": 1,
+            "desc": "Values below 1.0 will make the object look as if it is bigger. Values above 1.0 will make it look as if it is smaller",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "max_sss_amount",
+            "default": 1,
+            "desc": "The maximum summed weight of the SSS components",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "max_reflection_amount",
+            "default": 1,
+            "desc": "The maximum summed weight of the reflection components",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "opacity",
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "desc": "Opacity",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "diffuse_color",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "diffuse_amount",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "shallow_color",
+            "default": [
+                0.776471,
+                0.603922,
+                0.545098,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "shallow_amount",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "shallow_radius",
+            "default": 0.1,
+            "desc": "The radius for shallow scattering, in cm",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "medium_color",
+            "default": [
+                0.682353,
+                0.407843,
+                0.133333,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "medium_amount",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "medium_radius",
+            "default": 0.5,
+            "desc": "The radius for medium scattering, in cm",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "deep_color",
+            "default": [
+                0.929412,
+                0.0784314,
+                0.0392157,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "deep_amount",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "deep_radius",
+            "default": 2,
+            "desc": "The radius for deep scattering, in cm",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "primary_reflecton_color",
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "primary_reflection_amount",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "primary_reflection_glossiness",
+            "default": 0.6,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "primary_reflection_subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "primary_reflection_fresnel",
+            "default": true,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "primary_reflection_fresnel_ior",
+            "default": 1.33,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "secondary_reflecton_color",
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "desc": "",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "secondary_reflection_amount",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "secondary_reflection_glossiness",
+            "default": 0.6,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "secondary_reflection_subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "secondary_reflection_fresnel",
+            "default": true,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "secondary_reflection_fresnel_ior",
+            "default": 1.33,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "multiple_scattering",
+            "default": 2,
+            "desc": "The algorithm used to compute multiple scattering: 0 - pre-pass based illumination map; 1 - object space illumination map; 2 - raytraced",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "scatter_gi",
+            "default": false,
+            "desc": "true to enable scattering of GI rays",
+            "type": "BOOL"
+        },
+        {
+            "attr": "raytraced_scatter_textures",
+            "default": false,
+            "desc": "true to scatter SSS textures when using raytraced scattering",
+            "type": "BOOL"
+        },
+        {
+            "attr": "raytraced_subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "prepass_rate",
+            "default": -1,
+            "desc": "Sampling density for the illumination map",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "prepass_id",
+            "default": 0,
+            "desc": "0 to calculate a separate illuminataion map for this shader; otherwise all shaders with the same prepass ID will share the same illumination map",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "prepass_interpolation_accuracy",
+            "default": 1,
+            "desc": "Interpolation accuracy for the illumination map; normally 1.0 is fine",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "geom_samples_per_unit_area",
+            "default": 16,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "geom_auto_density",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "geom_surface_offset",
+            "default": 0.001,
+            "desc": "An offset along the geometric surface normal at which to perform shading in order to avoid surface acne",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "geom_preview_samples",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "geom_max_distance",
+            "default": 0.1,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "geom_background_color",
+            "default": [
+                0,
+                0,
+                0
+            ],
+            "desc": "",
+            "type": "COLOR"
+        },
+        {
+            "attr": "geom_samples_color",
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "desc": "",
+            "type": "COLOR"
+        },
+        {
+            "attr": "option_reflections_trace",
+            "default": true,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "option_reflections_maxDepth",
+            "default": 5,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "option_reflections_cutoff",
+            "default": 0.001,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "channels",
+            "default": "",
+            "desc": "Render channels the result of this BRDF will be written to",
+            "type": "LIST"
+        }
+    ],
+    "Type": "BRDF",
+    "Widget": {
+        "widgets": []
+    }
+}
