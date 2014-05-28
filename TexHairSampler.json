@@ -1,0 +1,58 @@
+{
+    "Desciption": "Hair Sampler",
+    "ID": "TexHairSampler",
+    "Name": "Hair Sampler",
+    "Parameters": [
+        {
+            "attr": "distance_along_strand",
+            "default": 1.0,
+            "desc": "Distance along the hair strand where the intersection occurred, in the [0,1] range",
+            "name": "Distance",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "hair_color",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "Color from hair primitive (if present)",
+            "name": "Color",
+            "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "hair_incandescence",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "Incandescence from hair primitive (if present)",
+            "name": "Incandescence",
+            "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "hair_transparency",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "Transparency from hair primitive (if present)",
+            "name": "Transparency",
+            "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "random_by_strand",
+            "default": 1.0,
+            "desc": "Random by the hair strand where the intersection occurred, in the [0,1] range",
+            "name": "Random Distance",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}
