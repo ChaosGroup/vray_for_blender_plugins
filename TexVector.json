@@ -1,0 +1,21 @@
+{
+    "Desciption": "Vector to vector texture",
+    "ID": "TexVector",
+    "Name": "Vector To Texture",
+    "Parameters": [
+        {
+            "attr": "vector",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "desc": "",
+            "type": "VECTOR"
+        }
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}
