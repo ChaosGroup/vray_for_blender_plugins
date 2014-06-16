@@ -307,7 +307,7 @@
         }, 
         {
             "attr": "use_blend_input", 
-            "default": true, 
+            "default": false, 
             "desc": "", 
             "type": "BOOL"
         }, 
