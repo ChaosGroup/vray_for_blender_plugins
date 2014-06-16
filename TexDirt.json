@@ -27,7 +27,6 @@
             "attr": "radius", 
             "default": 0.1, 
             "desc": "", 
-            "skip": true, 
             "type": "FLOAT_TEXTURE", 
             "ui": {
                 "max": 1048576, 
