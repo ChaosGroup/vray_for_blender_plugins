@@ -194,10 +194,51 @@
             "default": false, 
             "desc": "Determine whether to project on occluded points when in perspective mode", 
             "type": "BOOL"
+        },
+        {
+            "attr": "object_space", 
+            "default": true, 
+            "desc": "If true the projection will be applied in the object space of the currently shaded geometry", 
+            "type": "BOOL"
         }
     ], 
     "Type": "UVWGEN", 
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {   "layout" : "COLUMN",
+                "attrs" : [
+                    { "name" : "type" },
+                    { "name" : "fitfill" },
+                    { "name" : "fittype" }
+                ]
+            },
+            {   "layout" : "SEPARATOR" },
+            {   "layout" : "ROW",
+                "align" : true,
+                "attrs" : [
+                    { "name" : "u_angle" },
+                    { "name" : "v_angle" }
+                ]
+            },
+            {   "layout" : "ROW",
+                "align" : true,
+                "attrs" : [
+                    { "name" : "film_gate_w" },
+                    { "name" : "film_gate_h" }
+                ]
+            },
+            {   "layout" : "ROW",
+                "align" : true,
+                "attrs" : [
+                    { "name" : "hide_backface" },
+                    { "name" : "hide_occluded" }
+                ]
+            },
+            {   "layout" : "COLUMN",
+                "attrs" : [
+                    { "name" : "object_space" }
+                ]
+            }
+        ]
     }
 }
