@@ -1,0 +1,35 @@
+{
+    "Desciption": "User scalar",
+    "ID": "TexUserScalar",
+    "Name": "User Scalar",
+    "Parameters": [
+        {
+            "attr": "default_value",
+            "default": 1,
+            "desc": "Default value if the attribute is not found",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "user_attribute",
+            "default": "",
+            "desc": "User attribute name of type float or color",
+            "type": "STRING"
+        },
+        {
+            "attr": "scalar",
+            "default": 1.0,
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        }
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}
