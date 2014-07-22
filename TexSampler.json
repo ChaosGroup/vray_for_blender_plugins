@@ -246,6 +246,44 @@
             "default": 1.0, 
             "desc": "The path length", 
             "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+
+        {
+            "attr": "object_id", 
+            "default": 1.0, 
+            "desc": "The object ID of the hit object", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "parent_object_id", 
+            "default": 1.0, 
+            "desc": "The object ID of the parent object", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "velocity", 
+            "default": [1.0,1.0,1.0], 
+            "desc": "The velocity at the intersection point, in scene units per frame, in world space", 
+            "type": "OUTPUT_VECTOR_TEXTURE"
+        },
+        {
+            "attr": "speed", 
+            "default": 1.0, 
+            "desc": "The speed (the magnitude of the velocity) at the intersection point, in scene units per frame", 
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "random_by_renderID",
+            "name" : "Random By RenderID Seed",
+            "default": 0.0, 
+            "desc": "Random value based on Render ID",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "uv_set_name", 
+            "default": "", 
+            "desc": "The name of the uv channel that should be used", 
+            "type": "STRING"
         }
     ], 
     "Type": "TEXTURE", 
