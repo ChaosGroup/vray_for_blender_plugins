@@ -310,15 +310,26 @@
         },
         {
             "attr": "multiple_scattering",
-            "default": 2,
-            "desc": "The algorithm used to compute multiple scattering: 0 - pre-pass based illumination map; 1 - object space illumination map; 2 - raytraced",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "2",
+            "desc": "The algorithm used to compute multiple scattering",
+            "items": [
+                [
+                    "0",
+                    "Prepass - Based",
+                    "Prepass-based illumination map"
+                ],
+                [
+                    "1",
+                    "Object Space",
+                    "Object space illumination map"
+                ],
+                [
+                    "2",
+                    "Raytraced",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
         },
         {
             "attr": "scatter_gi",
@@ -487,6 +498,211 @@
     ],
     "Type": "BRDF",
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "label": "Scattering",
+                        "name": "multiple_scattering"
+                    }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "attrs": [
+                    {
+                        "name": "scale"
+                    }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "layout": "SEPARATOR"
+            },
+            {
+                "label": "Primary Reflection",
+                "layout": "SEPARATOR"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Subdivs",
+                        "name": "primary_reflection_subdivs"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Fresnel",
+                        "name": "primary_reflection_fresnel"
+                    },
+                    {
+                        "active": {
+                            "prop": "primary_reflection_fresnel"
+                        },
+                        "label": "IOR",
+                        "name": "primary_reflection_fresnel_ior"
+                    }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "label": "Secondary Reflection",
+                "layout": "SEPARATOR"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Subdivs",
+                        "name": "secondary_reflection_subdivs"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Fresnel",
+                        "name": "secondary_reflection_fresnel"
+                    },
+                    {
+                        "active": {
+                            "prop": "secondary_reflection_fresnel"
+                        },
+                        "label": "IOR",
+                        "name": "secondary_reflection_fresnel_ior"
+                    }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "layout": "SEPARATOR"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Scatter GI",
+                        "name": "scatter_gi"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "active": {
+                    "prop": "scatter_gi"
+                },
+                "layout": "SPLIT",
+                "splits": [
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "label": "Subdivs",
+                                "name": "raytraced_subdivs"
+                            },
+                            {
+                                "label": "Rate",
+                                "name": "prepass_rate"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    },
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "label": "ID",
+                                "name": "prepass_id"
+                            },
+                            {
+                                "label": "Accuracy",
+                                "name": "prepass_interpolation_accuracy"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    }
+                ]
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Auto. Density",
+                        "name": "geom_auto_density"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "active": {
+                    "condition": false,
+                    "prop": "geom_auto_density"
+                },
+                "attrs": [
+                    {
+                        "label": "Samples Per Unit",
+                        "name": "geom_samples_per_unit_area"
+                    },
+                    {
+                        "label": "Surface Offset",
+                        "name": "geom_surface_offset"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Preview Samples",
+                        "name": "geom_preview_samples"
+                    },
+                    {
+                        "active": {
+                            "prop": "geom_preview_samples"
+                        },
+                        "label": "Max. Distance",
+                        "name": "geom_max_distance"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    {
+                        "name": "geom_background_color"
+                    },
+                    {
+                        "name": "geom_samples_color"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    {
+                        "label": "Trace Reflections",
+                        "name": "option_reflections_trace"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "active": {
+                    "prop": "option_reflections_trace"
+                },
+                "attrs": [
+                    {
+                        "label": "Max. Depth",
+                        "name": "option_reflections_maxDepth"
+                    },
+                    {
+                        "label": "Cutoff",
+                        "name": "option_reflections_cutoff"
+                    }
+                ],
+                "layout": "COLUMN"
+            }
+        ]
     }
 }
