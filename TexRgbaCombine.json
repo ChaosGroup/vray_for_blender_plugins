@@ -1,0 +1,39 @@
+{
+    "ID": "TexRgbaCombine",
+    "Name": "RGBA Combine",
+    "Type": "TEXTURE",
+    "Desciption": "Color combine",
+    "Parameters": [
+        {
+            "attr": "red",
+            "name": "Red",
+            "desc": "Red channel",
+            "default": 1,
+            "type": "FLOAT_TEXTURE"
+        },
+        {
+            "attr": "green",
+            "name": "Green",
+            "desc": "Green channel",
+            "default": 1,
+            "type": "FLOAT_TEXTURE"
+        },
+        {
+            "attr": "blue",
+            "name": "Blue",
+            "desc": "Blue channel",
+            "default": 1,
+            "type": "FLOAT_TEXTURE"
+        },
+        {
+            "attr": "alpha",
+            "name": "Alpha",
+            "desc": "Alpha channel",
+            "default": 1,
+            "type": "FLOAT_TEXTURE"
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
