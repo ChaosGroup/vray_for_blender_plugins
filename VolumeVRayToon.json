@@ -19,7 +19,6 @@
             "default": 1.0, 
             "desc": "", 
             "name": "Width", 
-            "skip": true, 
             "type": "FLOAT_TEXTURE", 
             "ui": {
                 "max": 1048576, 
