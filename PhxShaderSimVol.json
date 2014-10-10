@@ -1,0 +1,18 @@
+{
+    "Desciption": "",
+    "ID": "PhxShaderSimVol",
+    "Name": "Phoenix Shader",
+    "Parameters": [
+        {
+            "attr": "phoenix_sim",
+            "default": "",
+            "desc": "",
+            "name": "Phoenix Data",
+            "type": "PLUGIN"
+        }
+    ],
+    "Type": "EFFECT",
+    "Widget": {
+        "widgets": []
+    }
+}
