@@ -1,0 +1,480 @@
+{
+    "Desciption": "Color correction",
+    "ID": "ColorCorrection",
+    "Name": "Color Correction",
+    "Parameters": [
+        {
+            "attr": "source_color",
+            "default": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "desc": "Source color",
+            "type": "ACOLOR"
+        },
+        {
+            "attr": "texture_map",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "desc": "The texture being color corrected",
+            "type": "TEXTURE"
+        },
+        {
+            "attr": "rewire_red",
+            "default": "0",
+            "desc": "",
+            "items": [
+                [
+                    "0",
+                    "Red",
+                    ""
+                ],
+                [
+                    "1",
+                    "Green",
+                    ""
+                ],
+                [
+                    "2",
+                    "Blue",
+                    ""
+                ],
+                [
+                    "3",
+                    "Alpha",
+                    ""
+                ],
+                [
+                    "4",
+                    "Redinv",
+                    ""
+                ],
+                [
+                    "5",
+                    "Greeninv",
+                    ""
+                ],
+                [
+                    "6",
+                    "Blueinv",
+                    ""
+                ],
+                [
+                    "7",
+                    "Alphainv",
+                    ""
+                ],
+                [
+                    "8",
+                    "Monochrome",
+                    ""
+                ],
+                [
+                    "9",
+                    "One",
+                    ""
+                ],
+                [
+                    "10",
+                    "Zero",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "rewire_green",
+            "default": "1",
+            "desc": "",
+            "items": [
+                [
+                    "0",
+                    "Red",
+                    ""
+                ],
+                [
+                    "1",
+                    "Green",
+                    ""
+                ],
+                [
+                    "2",
+                    "Blue",
+                    ""
+                ],
+                [
+                    "3",
+                    "Alpha",
+                    ""
+                ],
+                [
+                    "4",
+                    "Redinv",
+                    ""
+                ],
+                [
+                    "5",
+                    "Greeninv",
+                    ""
+                ],
+                [
+                    "6",
+                    "Blueinv",
+                    ""
+                ],
+                [
+                    "7",
+                    "Alphainv",
+                    ""
+                ],
+                [
+                    "8",
+                    "Monochrome",
+                    ""
+                ],
+                [
+                    "9",
+                    "One",
+                    ""
+                ],
+                [
+                    "10",
+                    "Zero",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "rewire_blue",
+            "default": "2",
+            "desc": "",
+            "items": [
+                [
+                    "0",
+                    "Red",
+                    ""
+                ],
+                [
+                    "1",
+                    "Green",
+                    ""
+                ],
+                [
+                    "2",
+                    "Blue",
+                    ""
+                ],
+                [
+                    "3",
+                    "Alpha",
+                    ""
+                ],
+                [
+                    "4",
+                    "Redinv",
+                    ""
+                ],
+                [
+                    "5",
+                    "Greeninv",
+                    ""
+                ],
+                [
+                    "6",
+                    "Blueinv",
+                    ""
+                ],
+                [
+                    "7",
+                    "Alphainv",
+                    ""
+                ],
+                [
+                    "8",
+                    "Monochrome",
+                    ""
+                ],
+                [
+                    "9",
+                    "One",
+                    ""
+                ],
+                [
+                    "10",
+                    "Zero",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "rewire_alpha",
+            "default": "3",
+            "desc": "",
+            "items": [
+                [
+                    "0",
+                    "Red",
+                    ""
+                ],
+                [
+                    "1",
+                    "Green",
+                    ""
+                ],
+                [
+                    "2",
+                    "Blue",
+                    ""
+                ],
+                [
+                    "3",
+                    "Alpha",
+                    ""
+                ],
+                [
+                    "4",
+                    "Redinv",
+                    ""
+                ],
+                [
+                    "5",
+                    "Greeninv",
+                    ""
+                ],
+                [
+                    "6",
+                    "Blueinv",
+                    ""
+                ],
+                [
+                    "7",
+                    "Alphainv",
+                    ""
+                ],
+                [
+                    "8",
+                    "Monochrome",
+                    ""
+                ],
+                [
+                    "9",
+                    "One",
+                    ""
+                ],
+                [
+                    "10",
+                    "Zero",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "hue_shift",
+            "default": 0,
+            "desc": "added to the color hue",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "saturation",
+            "default": 0,
+            "desc": "added to the color saturation",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "hue_tint",
+            "default": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "desc": "Hue tint",
+            "type": "ACOLOR"
+        },
+        {
+            "attr": "tint_strength",
+            "default": 0,
+            "desc": "default = 0",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "brightness",
+            "default": 0,
+            "desc": "default = 0.0 - value is added to the texture brightness",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "contrast",
+            "default": 1,
+            "desc": "default = 1.0f",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "lightness_mode",
+            "default": "0",
+            "desc": "Lightness mode",
+            "items": [
+                [
+                    "0",
+                    "Standard",
+                    ""
+                ],
+                [
+                    "1",
+                    "Advanced",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "adv_brightness",
+            "default": 1,
+            "desc": "Color multiplier",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "adv_contrast",
+            "default": 1,
+            "desc": "Color contrast",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "adv_base",
+            "default": 1,
+            "desc": "Contrast base",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "adv_offset",
+            "default": 0,
+            "desc": "Color offset",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0
+            }
+        },
+        {
+            "attr": "adv_use_red",
+            "default": false,
+            "desc": "true to use the red component ov the adv_rgb_* parameters",
+            "type": "BOOL"
+        },
+        {
+            "attr": "adv_use_green",
+            "default": false,
+            "desc": "true to use the green component ov the adv_rgb_* parameters",
+            "type": "BOOL"
+        },
+        {
+            "attr": "adv_use_blue",
+            "default": false,
+            "desc": "true to use the blue component ov the adv_rgb_* parameters",
+            "type": "BOOL"
+        },
+        {
+            "attr": "adv_rgb_brightness",
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "desc": "Color multiplier rgb",
+            "type": "COLOR"
+        },
+        {
+            "attr": "adv_rgb_contrast",
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "desc": "Color contrast rgb",
+            "type": "COLOR"
+        },
+        {
+            "attr": "adv_rgb_base",
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "desc": "Contrast base rgb",
+            "type": "COLOR"
+        },
+        {
+            "attr": "adv_rgb_offset",
+            "default": [
+                0,
+                0,
+                0
+            ],
+            "desc": "Color offset rgb",
+            "type": "COLOR"
+        }
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}
