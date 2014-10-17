@@ -1,0 +1,37 @@
+{
+    "Type": "TEXTURE",
+    "ID": "MayaGamma",
+    "Name": "Gamma",
+    "Desciption": "Gamma correction texture",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "The input color",
+            "type": "TEXTURE",
+            "default": [0,0,0]
+        },
+        {
+            "attr": "gamma",
+            "desc": "Gamma values",
+            "type": "FLOAT",
+            "default": 2.2
+        },
+        {
+            "attr": "color",
+            "desc": "The resulting color",
+            "type": "OUTPUT_COLOR",
+            "default": [0,0,0]
+        }
+    ],
+    "Widget": {
+        "widgets": [],
+        "node_widgets": [
+            {
+                "layout": "ROW",
+                "attrs": [
+                    { "label": "Gamma", "name": "gamma" }
+                ]
+            }
+        ]
+    }
+}
