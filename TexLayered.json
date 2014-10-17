@@ -6,7 +6,7 @@
         {
             "attr": "compatibility_with",
             "default": 0,
-            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ...",
+            "desc": "This is used to differentiate between textures exported from different applications",
             "type": "INT",
             "ui": {
                 "max": 1048576,
