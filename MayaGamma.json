@@ -24,7 +24,14 @@
         }
     ],
     "Widget": {
-        "widgets": [],
+        "widgets": [
+            {
+                "layout": "ROW",
+                "attrs": [
+                    { "label": "Gamma", "name": "gamma" }
+                ]
+            }
+        ],
         "node_widgets": [
             {
                 "layout": "ROW",
