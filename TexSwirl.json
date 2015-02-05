@@ -127,7 +127,7 @@
                 ], 
                 [
                     "1", 
-                    "\u0421ompatibility", 
+                    "Compatibility", 
                     "The resulting alpha is the color intensity (if \"Compatibility\" is \"3ds max\") or the color luminance (if \"Compatibility\" is \"Maya\")"
                 ], 
                 [
