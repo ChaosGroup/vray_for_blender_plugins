@@ -5,91 +5,91 @@
     "Parameters": [
         {
             "attr": "num_hair_vertices",
-            "desc": "A list of the number of hair vertices, one for each hair strand.",
+            "desc": "A list of the number of hair vertices, one for each hair strand",
             "type": "INT_LIST",
             "default": ""
         },
         {
             "attr": "hair_vertices",
-            "desc": "A list with the positions of the hair vertices in object space. The number of elements should be equal to the sum of the elements of the num_hair_vertices parameter.",
+            "desc": "A list with the positions of the hair vertices in object space. The number of elements should be equal to the sum of the elements of the num_hair_vertices parameter",
             "type": "VECTOR_LIST",
             "default": ""
         },
         {
             "attr": "widths",
-            "desc": "The width of the hair strands at each vertex.Should have the same number of elements as hair_vertices.",
+            "desc": "The width of the hair strands at each vertex.Should have the same number of elements as hair_vertices",
             "type": "FLOAT_LIST",
             "default": ""
         },
         {
             "attr": "colors",
-            "desc": "Color values for each hair vertex.Should have the same number of elements as hair_vertices.",
+            "desc": "Color values for each hair vertex.Should have the same number of elements as hair_vertices",
             "type": "COLOR_LIST",
             "default": ""
         },
         {
             "attr": "incandescence",
-            "desc": "Incandescence values for each hair vertex.Should have the same number of elements as hair_vertices.",
+            "desc": "Incandescence values for each hair vertex.Should have the same number of elements as hair_vertices",
             "type": "COLOR_LIST",
             "default": ""
         },
         {
             "attr": "transparency",
-            "desc": "Transparency values for each hair vertex.Should have the same number of elements as hair_vertices.",
+            "desc": "Transparency values for each hair vertex.Should have the same number of elements as hair_vertices",
             "type": "COLOR_LIST",
             "default": ""
         },
         {
             "attr": "opacity",
-            "desc": "The Maya hair shader does not allow for different transparency on each hair vertex. Instead it uses a single opacity parameter for all of them.",
+            "desc": "The Maya hair shader does not allow for different transparency on each hair vertex. Instead it uses a single opacity parameter for all of them",
             "type": "FLOAT",
             "default": 1.0
         },
         {
             "attr": "strand_uvw",
-            "desc": "UVW values for each hair strand.Should have the same number of elements as num_hair_vertices.",
+            "desc": "UVW values for each hair strand.Should have the same number of elements as num_hair_vertices",
             "type": "VECTOR_LIST",
             "default": ""
         },
         {
             "attr": "geom_splines",
-            "desc": "If true, hair strands geometry will be represented as splines, instead of line segments.",
+            "desc": "If true, hair strands geometry will be represented as splines, instead of line segments",
             "type": "BOOL",
             "default": false
         },
         {
             "attr": "use_global_hair_tree",
-            "desc": "If true, the hair will be added to the global static hair tree.",
+            "desc": "If true, the hair will be added to the global static hair tree",
             "type": "BOOL",
             "default": true
         },
         {
             "attr": "geom_tesselation_mult",
-            "desc": "Manual control over the number of subdivisions when intersecting the spline based hairs.",
+            "desc": "Manual control over the number of subdivisions when intersecting the spline based hairs",
             "type": "FLOAT",
             "default": 1
         },
         {
             "attr": "xgen_generated",
-            "desc": "If true, the hair is xgen generated.",
+            "desc": "If true, the hair is xgen generated",
             "type": "BOOL",
             "default": false
         },
         {
             "attr": "widths_in_pixels",
-            "desc": "If true, the widths parameter is in pixels, otherwise it is in world units.",
+            "desc": "If true, the widths parameter is in pixels, otherwise it is in world units",
             "type": "BOOL",
             "default": false
         },
         {
             "attr": "map_channels",
-            "desc": "A list of mapping channels; each channel itself is a list of 4 elements - the channel index, number of knots per strand, the knots array (vectors) and channel name.",
+            "desc": "A list of mapping channels; each channel itself is a list of 4 elements - the channel index, number of knots per strand, the knots array (vectors) and channel name",
             "type": "MAPCHANNEL_LIST",
             "default": ""
         },
         {
             "attr": "generate_w_coord",
-            "desc": "If true, V-Ray will generate a W mapping coordinate that represents the position of the shaded point along the hair strands.",
+            "desc": "If true, V-Ray will generate a W mapping coordinate that represents the position of the shaded point along the hair strands",
             "type": "BOOL",
             "default": false
         }
