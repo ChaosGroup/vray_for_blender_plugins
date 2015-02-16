@@ -1,6 +1,7 @@
 {
     "ID": "BRDFLayered",
     "Name": "Layered",
+    "Type": "BRDF",
     "Desciption": "Layered shader",
     "Parameters": [
         {
@@ -20,19 +21,19 @@
             "name": "Transparency",
             "desc": "",
             "type": "TEXTURE",
-            "default": "0, 0, 0"
+            "default": [0, 0, 0]
         },
         {
             "attr": "transparency_tex_mult",
             "desc": "",
             "type": "FLOAT",
-            "default": "1"
+            "default": 1.0
         },
         {
             "attr": "additive_mode",
             "desc": "",
             "type": "BOOL",
-            "default": "false"
+            "default": false
         }
     ]
 }
