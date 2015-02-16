@@ -27,6 +27,7 @@
         }, 
         {
             "attr": "color_tex_mult", 
+            "name": "Color. Tex. Mult.",
             "default": 1, 
             "desc": "", 
             "skip": true, 
@@ -62,6 +63,7 @@
         }, 
         {
             "attr": "transparency_tex_mult", 
+            "name": "Transp. Tex. Mult.",
             "default": 1, 
             "desc": "", 
             "skip": true, 
@@ -90,6 +92,13 @@
             "default": true, 
             "desc": "", 
             "type": "BOOL"
+        },
+        {
+            "attr": "color_tex_alpha_as_transparency",
+            "name": "Color Texture Alpha As Transparency",
+            "type": "BOOL",
+            "desc": "Use color texture alpha channel as transparency",
+            "default": false
         }
     ], 
     "Type": "BRDF", 

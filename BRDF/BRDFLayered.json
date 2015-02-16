@@ -1,0 +1,38 @@
+{
+    "ID": "BRDFLayered",
+    "Name": "Layered",
+    "Desciption": "Layered shader",
+    "Parameters": [
+        {
+            "attr": "brdfs",
+            "desc": "",
+            "type": "LIST",
+            "default": ""
+        },
+        {
+            "attr": "weights",
+            "desc": "",
+            "type": "LIST",
+            "default": ""
+        },
+        {
+            "attr": "transparency_tex",
+            "name": "Transparency",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": "0, 0, 0"
+        },
+        {
+            "attr": "transparency_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": "1"
+        },
+        {
+            "attr": "additive_mode",
+            "desc": "",
+            "type": "BOOL",
+            "default": "false"
+        }
+    ]
+}

@@ -310,7 +310,7 @@
             "attr": "positions", 
             "default": 0.0, 
             "desc": "positions of the given colors", 
-            "type": "FLOAT", 
+            "type": "LIST", 
             "ui": {
                 "max": 1048576, 
                 "min": -1048576, 
@@ -326,7 +326,7 @@
                 0.0
             ], 
             "desc": "the given colors", 
-            "type": "TEXTURE"
+            "type": "LIST"
         }, 
         {
             "attr": "gradient_position", 

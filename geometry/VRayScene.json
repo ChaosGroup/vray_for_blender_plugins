@@ -1,0 +1,106 @@
+{
+	"Name": "VRayScene",
+	"ID": "VRayScene",
+	"Type": "GEOMETRY",
+	"Description": "*.vrscene asset loader",
+	"Parameters": [
+		{
+			"attr": "filepath",
+			"default": "",
+			"desc": "Path to a *.vrscene file",
+			"subtype": "FILE_PATH",
+			"type": "STRING"
+		},
+		{
+			"attr": "mode",
+			"default": "0",
+			"desc": "Working mode",
+			"items": [
+				["0", "Objects", ""],
+				["1", "Camera", ""]
+			],
+			"type": "ENUM"
+		},
+		{
+			"attr": "transform",
+			"default": "",
+			"desc": "Additional transform",
+			"type": "TRANSFORM"
+		},
+		{
+			"attr": "use_transform",
+			"default": true,
+			"desc": "Use additional transform",
+			"type": "BOOL"
+		},
+		{
+			"attr": "add_nodes",
+			"default": true,
+			"desc": "Add nodes from the included files",
+			"type": "BOOL"
+		},
+		{
+			"attr": "add_lights",
+			"default": true,
+			"desc": "Add lights from the included files",
+			"type": "BOOL"
+		},
+		{
+			"attr": "anim_speed",
+			"default": 1.0,
+			"desc": "Animation playback speed",
+			"type": "FLOAT"
+		},
+		{
+			"attr": "anim_type",
+			"default": "0",
+			"desc": "Animated proxy playback type",
+			"items": [
+				["0", "Loop", ""],
+				["1", "Once", ""],
+				["2", "Ping-pong", ""],
+				["3", "Still", ""]
+			],
+			"type": "ENUM"
+		},
+		{
+			"attr": "anim_offset",
+			"default": 0,
+			"desc": "Animation initial frame offset",
+			"type": "FLOAT"
+		},
+		{
+			"attr": "anim_start",
+			"default": 0,
+			"desc": "Specifies the first frame of the animation sequence",
+			"type": "INT"
+		},
+		{
+			"attr": "anim_length",
+			"default": 0,
+			"desc": "Specifies the length of the animation sequence",
+			"type": "INT"
+		},
+		{
+			"attr": "material_override",
+			"default": "",
+			"desc": "Override material",
+			"type": "LIST"
+		},
+		{
+			"attr": "hidden_objects",
+			"default": "",
+			"desc": "Plugin names list to hide",
+			"type": "LIST"
+		},
+		{
+			"attr": "flip_axis",
+			"default": false,
+			"desc": "Flip axis",
+			"type": "BOOL"
+		}
+	],
+	"Widget": {
+		"widgets": []
+	}
+}

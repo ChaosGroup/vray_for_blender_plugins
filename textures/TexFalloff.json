@@ -328,6 +328,12 @@
             "default": 1.0, 
             "desc": "The blending amount, based on the parameters", 
             "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "use_blend_curve",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
         }
     ], 
     "Type": "TEXTURE", 

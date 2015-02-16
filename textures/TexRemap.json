@@ -169,13 +169,13 @@
                 1.0
             ], 
             "desc": "the given colors", 
-            "type": "TEXTURE"
+            "type": "LIST"
         }, 
         {
             "attr": "color_types", 
             "default": 0, 
             "desc": "interpolation types for the colors", 
-            "type": "INT", 
+            "type": "LIST", 
             "ui": {
                 "max": 1048576, 
                 "min": -1048576, 
