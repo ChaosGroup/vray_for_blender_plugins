@@ -65,7 +65,7 @@
         },
         {
             "attr": "loop_overlap",
-            "desc": "Number of overlapped frame in the looped animation mode.",
+            "desc": "Number of overlapped frame in the looped animation mode",
             "type": "INT",
             "default": 0
         },
@@ -101,7 +101,7 @@
         },
         {
             "attr": "t2f",
-            "desc": "Direct time to frame transformation.",
+            "desc": "Direct time to frame transformation",
             "type": "FLOAT",
             "default": 0
         },
@@ -113,7 +113,7 @@
         },
         {
             "attr": "flip_yz",
-            "desc": "If true, the yz axis of the cache will be flipped.",
+            "desc": "If true, the yz axis of the cache will be flipped",
             "type": "BOOL",
             "default": false
         },
