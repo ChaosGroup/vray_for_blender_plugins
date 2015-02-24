@@ -1,0 +1,160 @@
+{
+    "Type": "EFFECT",
+    "ID": "PhxShaderCache",
+    "Name": "Phoenix Cache",
+    "Desciption": "Phoenix simulation data cache",
+    "Parameters": [
+        {
+            "attr": "cache_path",
+            "desc": "simulator output cache path",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "grid_size_x",
+            "desc": "Number of cells in x dimension if no cache file is specified; internally truncated to the nearest integer",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "grid_size_y",
+            "desc": "Number of cells in y dimension if no cache file is specified; internally truncated to the nearest integer",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "grid_size_z",
+            "desc": "Number of cells in z dimension if no cache file is specified; internally truncated to the nearest integer",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "cell_size",
+            "desc": "Size of a single grid cell",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "velocities_from_uvw",
+            "desc": "Create velocity channel from uvw movement",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "anim_mode",
+            "default": "0",
+            "desc": "Animation mode",
+            "items": [
+                [
+                    "0",
+                    "Standard",
+                    ""
+                ],
+                [
+                    "1",
+                    "Direct Frame Index",
+                    ""
+                ],
+                [
+                    "2",
+                    "Loop",
+                    ""
+                ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "loop_overlap",
+            "desc": "Number of overlapped frame in the looped animation mode.",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "blend_method",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "read_offset",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "play_at",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "max_length",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "play_speed",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "t2f",
+            "desc": "Direct time to frame transformation.",
+            "type": "FLOAT",
+            "default": 0
+        },
+        {
+            "attr": "TPF",
+            "desc": "ticks per frame",
+            "type": "INT",
+            "default": 1000
+        },
+        {
+            "attr": "flip_yz",
+            "desc": "If true, the yz axis of the cache will be flipped.",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "load_flags",
+            "desc": "used in RT to determine the frame loading flags",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "smooth_mask",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "smooth_threshold",
+            "desc": "",
+            "type": "FLOAT_LIST",
+            "default": ""
+        },
+        {
+            "attr": "smooth_similarity",
+            "desc": "",
+            "type": "FLOAT_LIST",
+            "default": ""
+        },
+        {
+            "attr": "smooth_randomize",
+            "desc": "",
+            "type": "FLOAT_LIST",
+            "default": ""
+        },
+        {
+            "attr": "free_mem_detect",
+            "desc": "internally used",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
