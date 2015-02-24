@@ -13,7 +13,7 @@
             "attr": "bg_tex",
             "desc": "Environment map",
             "type": "TEXTURE",
-            "default": ""
+            "default": [0, 0, 0]
         },
         {
             "attr": "bg_tex_mult",
@@ -31,7 +31,7 @@
             "attr": "gi_tex",
             "desc": "GI (skylight) map",
             "type": "TEXTURE",
-            "default": ""
+            "default": [0, 0, 0]
         },
         {
             "attr": "gi_tex_mult",
@@ -49,7 +49,7 @@
             "attr": "reflect_tex",
             "desc": "Reflection map",
             "type": "TEXTURE",
-            "default": ""
+            "default": [0, 0, 0]
         },
         {
             "attr": "reflect_tex_mult",
@@ -67,7 +67,7 @@
             "attr": "refract_tex",
             "desc": "Refraction map",
             "type": "TEXTURE",
-            "default": ""
+            "default": [0, 0, 0]
         },
         {
             "attr": "refract_tex_mult",
@@ -85,7 +85,7 @@
             "attr": "secondary_matte_tex",
             "desc": "Secondary matte texture",
             "type": "TEXTURE",
-            "default": ""
+            "default": [0, 0, 0]
         },
         {
             "attr": "secondary_matte_tex_mult",
