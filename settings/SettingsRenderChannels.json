@@ -1,7 +1,7 @@
 {
     "Desciption": "", 
     "ID": "SettingsRenderChannels", 
-    "Name": "SettingsRenderChannels", 
+    "Name": "Render Channels", 
     "Parameters": [
         {
             "attr": "unfiltered_fragment_method", 
