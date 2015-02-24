@@ -1,0 +1,148 @@
+{
+    "ID": "SettingsEnvironment",
+    "Name": "Environment",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "bg_color",
+            "desc": "Environment color",
+            "type": "COLOR",
+            "default": [0, 0, 0]
+        },
+        {
+            "attr": "bg_tex",
+            "desc": "Environment map",
+            "type": "TEXTURE",
+            "default": ""
+        },
+        {
+            "attr": "bg_tex_mult",
+            "desc": "Environment map multiplier",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "gi_color",
+            "desc": "GI (skylight) color",
+            "type": "COLOR",
+            "default": [0, 0, 0]
+        },
+        {
+            "attr": "gi_tex",
+            "desc": "GI (skylight) map",
+            "type": "TEXTURE",
+            "default": ""
+        },
+        {
+            "attr": "gi_tex_mult",
+            "desc": "GI (skylight) map multiplier",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "reflect_color",
+            "desc": "Reflection color",
+            "type": "COLOR",
+            "default": [0, 0, 0]
+        },
+        {
+            "attr": "reflect_tex",
+            "desc": "Reflection map",
+            "type": "TEXTURE",
+            "default": ""
+        },
+        {
+            "attr": "reflect_tex_mult",
+            "desc": "Reflection map multiplier",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "refract_color",
+            "desc": "Refraction color",
+            "type": "COLOR",
+            "default": [0, 0, 0]
+        },
+        {
+            "attr": "refract_tex",
+            "desc": "Refraction map",
+            "type": "TEXTURE",
+            "default": ""
+        },
+        {
+            "attr": "refract_tex_mult",
+            "desc": "Refraction map multiplier",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "secondary_matte_color",
+            "desc": "Secondary matte color",
+            "type": "COLOR",
+            "default": [0, 0, 0]
+        },
+        {
+            "attr": "secondary_matte_tex",
+            "desc": "Secondary matte texture",
+            "type": "TEXTURE",
+            "default": ""
+        },
+        {
+            "attr": "secondary_matte_tex_mult",
+            "desc": "Secondary matte texture map multiplier",
+            "type": "FLOAT",
+            "default": 1
+        },
+        {
+            "attr": "environment_volume",
+            "desc": "A list of environment volumes for the scene",
+            "type": "LIST",
+            "default": ""
+        },
+        {
+            "attr": "num_environment_objects",
+            "desc": "Used for implementing image planes",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "global_light_level",
+            "desc": "A global light level multiplier for all lights",
+            "type": "COLOR",
+            "default": [1, 1, 1]
+        },
+        {
+            "attr": "use_bg",
+            "desc": "Whether to set the background color/map",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_gi",
+            "desc": "Whether to set the GI color/map",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_reflect",
+            "desc": "Whether to set the reflect color/map",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_refract",
+            "desc": "Whether to set the refract color/map",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_secondary_matte",
+            "desc": "Whether to use the secondary matte color/map",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
