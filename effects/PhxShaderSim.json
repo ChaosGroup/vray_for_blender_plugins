@@ -72,7 +72,7 @@
         },
         {
             "attr": "frame_duration",
-            "default": 0,
+            "default": 0.04166667,
             "desc": "Override the frame duration in the cache",
             "type": "FLOAT",
             "ui": {
@@ -84,15 +84,16 @@
         },
         {
             "attr": "sarg",
-            "default": 1,
-            "desc": "0-texture; 1-T; 2-Sm; 3-V; 10-fuel",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "1",
+            "desc": "0-texture; 1-T; 2-Sim; 3-V; 10-fuel",
+            "type": "ENUM",
+            "items": [
+                ["0", "Texture", ""],
+                ["1", "T", ""],
+                ["2", "Sim", ""],
+                ["3", "V", ""],
+                ["10", "Fuel", ""]
+            ]
         },
         {
             "attr": "stex",
@@ -107,7 +108,7 @@
         },
         {
             "attr": "surflevel",
-            "default": 1000,
+            "default": 0.001,
             "desc": "",
             "type": "FLOAT",
             "ui": {
@@ -224,7 +225,7 @@
         },
         {
             "attr": "lightcachesr",
-            "default": 0,
+            "default": 0.9,
             "desc": "",
             "type": "FLOAT",
             "ui": {
@@ -338,15 +339,14 @@
         },
         {
             "attr": "sampler",
-            "default": 2,
-            "desc": "0-trunc; 1-linear; 2-spherical",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "2",
+            "desc": "Sampler",
+            "type": "ENUM",
+            "items": [
+                ["0", "Trunc", ""],
+                ["1", "Linear", ""],
+                ["2", "Spherical", ""]
+            ]
         },
         {
             "attr": "smoketransp",
@@ -398,15 +398,15 @@
         },
         {
             "attr": "noscatter",
-            "default": 2,
-            "desc": "0-enabled; 1-disabled; 2-analytic; 3-analytic+shadows",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "2",
+            "desc": "No Scatter",
+            "type": "ENUM",
+            "items": [
+                ["0", "Enabled", ""],
+                ["1", "Disabled", ""],
+                ["2", "Analytic", ""],
+                ["3", "Analytic + Shadows", ""]
+            ]
         },
         {
             "attr": "transpmode",
@@ -470,8 +470,8 @@
         },
         {
             "attr": "bounces",
-            "default": 0,
-            "desc": "max GI bounces",
+            "default": 10,
+            "desc": "Max GI bounces",
             "type": "INT",
             "ui": {
                 "max": 1048576,
@@ -572,15 +572,17 @@
         },
         {
             "attr": "earg",
-            "default": 1,
-            "desc": "0-disabled; 1-T; 2-Sm; 3-V; 4-texture; 10-fuel",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "1",
+            "desc": "",
+            "type": "ENUM",
+            "items": [
+                ["0", "Disabled", ""],
+                ["1", "T", ""],
+                ["2", "Sim", ""],
+                ["3", "V", ""],
+                ["4", "Texture", ""],
+                ["10", "Fuel", ""]
+            ]
         },
         {
             "attr": "etex",
@@ -595,84 +597,40 @@
             "type": "TEXTURE"
         },
         {
-            "attr": "ecolor",
-            "default": [
-                0,
-                0,
-                0
-            ],
-            "desc": "raw emissive table",
-            "type": "COLOR"
-        },
-        {
             "attr": "ecolor_positions",
             "default": 1.0,
             "desc": "positions of the emission color ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "ecolor_colors",
-            "default": [
-                0,
-                0,
-                0
-            ],
+            "default": 0,
             "desc": "colors of the emission color ramp",
-            "type": "COLOR"
+            "type": "COLOR_LIST"
         },
         {
             "attr": "ecolor_interpolations",
             "default": 0,
             "desc": "0: none, 1: linear, 2: smooth, 3: spline",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "INT_LIST"
         },
         {
             "attr": "elum_positions",
             "default": 1.0,
             "desc": "positions of the luminance ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "elum_values",
             "default": 1.0,
             "desc": "values of the luminance ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "elum_interpolations",
             "default": 0,
             "desc": "0: none, 1: linear, 2: smooth, 3: spline",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "INT_LIST"
         },
         {
             "attr": "ecolor_offset",
@@ -736,15 +694,19 @@
         },
         {
             "attr": "darg",
-            "default": 5,
+            "default": "5",
             "desc": "0-disabled; 1-T; 2-Sm; 3-V; 4-texture; 5-simple color; 10-fuel",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "desc": "",
+            "type": "ENUM",
+            "items": [
+                ["0", "Disabled", ""],
+                ["1", "T", ""],
+                ["2", "Sim", ""],
+                ["3", "V", ""],
+                ["4", "Texture", ""],
+                ["5", "Color", ""],
+                ["10", "Fuel", ""]
+            ]
         },
         {
             "attr": "dtex",
@@ -759,26 +721,10 @@
             "type": "TEXTURE"
         },
         {
-            "attr": "dcolor",
-            "default": [
-                0,
-                0,
-                0
-            ],
-            "desc": "raw diffuse table",
-            "type": "COLOR"
-        },
-        {
             "attr": "dcolor_positions",
             "default": 1.0,
             "desc": "positions of the diffuse color ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "dcolor_colors",
@@ -788,19 +734,13 @@
                 0
             ],
             "desc": "colors of the diffuse color ramp",
-            "type": "COLOR"
+            "type": "COLOR_LIST"
         },
         {
             "attr": "dcolor_interpolations",
             "default": 0,
             "desc": "0: none, 1: linear, 2: smooth, 3: spline",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "INT_LIST"
         },
         {
             "attr": "dcolor_offset",
@@ -850,15 +790,17 @@
         },
         {
             "attr": "targ",
-            "default": 1,
+            "default": "1",
             "desc": "0-simple smoke; 1-T; 2-Sm; 3-V; 4-texture; 10-fuel",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "ENUM",
+            "items": [
+                ["0", "Smoke", ""],
+                ["1", "T", ""],
+                ["2", "Sim", ""],
+                ["3", "V", ""],
+                ["4", "Texture", ""],
+                ["10", "Fuel", ""]
+            ]
         },
         {
             "attr": "ttex",
@@ -873,52 +815,22 @@
             "type": "TEXTURE"
         },
         {
-            "attr": "transp",
-            "default": 0,
-            "desc": "raw transparency table",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
-        },
-        {
             "attr": "transp_positions",
             "default": 1.0,
             "desc": "positions of the transparency ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "transp_values",
             "default": 1.0,
             "desc": "values of the transparency ramp",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "FLOAT_LIST"
         },
         {
             "attr": "transp_interpolations",
             "default": 0,
             "desc": "0: none, 1: linear, 2: smooth, 3: spline",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "INT_LIST"
         },
         {
             "attr": "transp_offset",
@@ -982,15 +894,13 @@
         },
         {
             "attr": "varg",
-            "default": 0,
-            "desc": "0-normal velocity; 2-texture",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "default": "0",
+            "desc": "Velocity",
+            "type": "ENUM",
+            "items": [
+                ["0", "Normal Velocity", ""],
+                ["1", "Texture", ""]
+            ]
         },
         {
             "attr": "vtex",
@@ -1087,27 +997,23 @@
         },
         {
             "attr": "al_placing",
-            "default": 0,
+            "default": "0",
             "desc": "emissive lights placement type, 0-simple, 1-inside",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "ENUM",
+            "items": [
+                ["0", "Simple", ""],
+                ["1", "Inside", ""]
+            ]
         },
         {
             "attr": "al_sampling",
-            "default": 0,
+            "default": "0",
             "desc": "sampling type, 0-simple, 1-DMC",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "ENUM",
+            "items": [
+                ["0", "Simple", ""],
+                ["1", "DMC", ""]
+            ]
         },
         {
             "attr": "al_subdivs",
@@ -1387,6 +1293,51 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0
+            }
+        },
+
+        {
+            "attr": "dcolor_ramp",
+            "default": "",
+            "desc": "D Color",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"         : "dcolor_colors",
+                "positions"      : "dcolor_positions",
+                "interpolations" : "dcolor_interpolations"
+            }
+        },
+        {
+            "attr": "ecolor_ramp",
+            "default": "",
+            "desc": "E Color",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"         : "ecolor_colors",
+                "positions"      : "ecolor_positions",
+                "interpolations" : "ecolor_interpolations"
+            }
+        },
+        {
+            "attr": "elum_curve",
+            "default": "",
+            "desc": "E Curve",
+            "type": "WIDGET_CURVE",
+            "attrs": {
+                "values"         : "elum_values",
+                "positions"      : "elum_positions",
+                "interpolations" : "elum_interpolations"
+            }
+        },
+        {
+            "attr": "transp_curve",
+            "default": "",
+            "desc": "Transparency Curve",
+            "type": "WIDGET_CURVE",
+            "attrs": {
+                "values"         : "transp_values",
+                "positions"      : "transp_positions",
+                "interpolations" : "transp_interpolations"
             }
         }
     ],
