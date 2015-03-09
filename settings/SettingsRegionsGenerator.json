@@ -36,12 +36,12 @@
             "items": [
                 [
                     "0", 
-                    "Region Count", 
+                    "Bucket W/H", 
                     ""
                 ], 
                 [
                     "1", 
-                    "Bucket W/H", 
+                    "Region Count", 
                     ""
                 ]
             ], 
