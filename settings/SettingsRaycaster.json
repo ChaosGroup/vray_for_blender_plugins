@@ -59,25 +59,25 @@
         }, 
         {
             "attr": "embreeUseMB", 
-            "default": false, 
+            "default": true,
             "desc": "Enable/disable using the embree ray caster for motion blur", 
             "type": "BOOL"
         }, 
         {
-            "attr": "embreeHighPrec", 
-            "default": false, 
-            "desc": "Enable/disable high precision intersection", 
+            "attr": "embreeHair",
+            "default": true,
+            "desc": "Use the Embree ray caster for hair",
             "type": "BOOL"
         }, 
         {
             "attr": "embreeLowMemory", 
-            "default": false, 
+            "default": true,
             "desc": "Try to conserve memory, using potentially slower algorithms", 
             "type": "BOOL"
         }, 
         {
             "attr": "embreeRayPackets", 
-            "default": false, 
+            "default": true,
             "desc": "Turn on the packet ray casting", 
             "type": "BOOL"
         }
