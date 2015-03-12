@@ -294,7 +294,7 @@
                 ], 
                 [
                     "1", 
-                    "UvwGen", 
+                    "UVW Generator",
                     "The specified UVW generator"
                 ]
             ], 
@@ -302,15 +302,14 @@
         }, 
         {
             "attr": "anisotropy_axis", 
-            "default": 2, 
+            "default": "2",
             "desc": "Which local object axis to use when anisotropy_derivation is 0", 
-            "type": "INT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
+            "items": [
+                [ "0", "X", "X" ],
+                [ "1", "Y", "Y" ],
+                [ "2", "Z", "Z" ]
+            ],
+            "type": "ENUM"
         }, 
         {
             "attr": "anisotropy_uvwgen", 
@@ -330,6 +329,7 @@
         }, 
         {
             "attr": "refract_ior", 
+            "name": "Refract IOR",
             "default": 1.6, 
             "desc": "The IOR for refractions", 
             "type": "FLOAT_TEXTURE", 
@@ -848,18 +848,26 @@
                     }
                 ], 
                 "layout": "ROW"
-            }, 
+            },
             {
-                "align": true, 
-                "attrs": [
+                "layout": "SPLIT",
+                "splits": [
                     {
-                        "name": "fresnel"
+                        "align": true,
+                        "attrs": [
+                            { "name": "hilight_glossiness_lock" , "label" : "Hilight Gloss. Lock"}
+                        ],
+                        "layout": "COLUMN"
                     }, 
                     {
-                        "name": "fresnel_ior"
+                        "align": true,
+                        "attrs": [
+                            { "name": "fresnel" },
+                            { "name": "fresnel_ior_lock" }
+                        ], 
+                        "layout": "COLUMN"
                     }
-                ], 
-                "layout": "ROW"
+                ]
             }, 
             {
                 "attrs": [
@@ -869,7 +877,8 @@
                     }, 
                     {
                         "name": "anisotropy_derivation"
-                    }
+                    },
+                    { "name": "anisotropy_axis" }
                 ], 
                 "layout": "COLUMN"
             }, 
