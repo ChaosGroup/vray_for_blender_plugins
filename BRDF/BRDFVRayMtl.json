@@ -425,7 +425,7 @@
         }, 
         {
             "attr": "refract_affect_shadows", 
-            "default": false, 
+            "default": true, 
             "desc": "true to enable the refraction to affect the shadows cast by the material (as transparent shadows)", 
             "type": "BOOL"
         }, 
