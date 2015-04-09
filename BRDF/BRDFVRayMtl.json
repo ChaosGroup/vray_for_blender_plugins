@@ -101,6 +101,7 @@
             "default": 1, 
             "desc": "The glossiness of the reflections", 
             "type": "FLOAT_TEXTURE", 
+            "precision": 4, 
             "ui": {
                 "max": 1048576, 
                 "min": -1048576, 
@@ -673,6 +674,7 @@
                 1
             ], 
             "desc": "Environment override texture", 
+            "option": "LINKED_ONLY",
             "type": "TEXTURE"
         }, 
         {
