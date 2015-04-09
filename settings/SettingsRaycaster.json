@@ -52,31 +52,36 @@
             }
         }, 
         {
-            "attr": "embreeUse", 
+            "attr": "embreeUse",
+            "name" : "Use Embree",
             "default": false, 
             "desc": "Enable/Disable using the embree ray caster", 
             "type": "BOOL"
         }, 
         {
             "attr": "embreeUseMB", 
+            "name" : "Use Embree For Motion Blur",
             "default": true,
             "desc": "Enable/disable using the embree ray caster for motion blur", 
             "type": "BOOL"
         }, 
         {
             "attr": "embreeHair",
+            "name" : "Use Embree For Hair",
             "default": true,
             "desc": "Use the Embree ray caster for hair",
             "type": "BOOL"
         }, 
         {
             "attr": "embreeLowMemory", 
+            "name" : "Embree Low Memory",
             "default": true,
             "desc": "Try to conserve memory, using potentially slower algorithms", 
             "type": "BOOL"
         }, 
         {
             "attr": "embreeRayPackets", 
+            "name" : "Embree Ray Packets",
             "default": true,
             "desc": "Turn on the packet ray casting", 
             "type": "BOOL"
@@ -84,6 +89,23 @@
     ], 
     "Type": "SETTINGS", 
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "attrs": [
+                    { "name": "embreeUse" }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "active": { "prop": "embreeUse" },
+                "attrs": [
+                    { "name": "embreeHair" },
+                    { "name": "embreeUseMB" },
+                    { "name": "embreeRayPackets" },
+                    { "name": "embreeLowMemory" }
+                ],
+                "layout": "COLUMN"
+            }
+        ]
     }
 }
