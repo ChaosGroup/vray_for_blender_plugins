@@ -343,7 +343,7 @@
         }, 
         {
             "attr": "geometry_based_sampling", 
-            "default": "0", 
+            "default": "2", 
             "desc": "", 
             "type": "ENUM",
             "items": [
@@ -434,7 +434,7 @@
             },
             { "layout": "ROW",
                 "attrs": [
-                    { "name": "geometry_based_sampling" }
+                    { "name": "geometry_based_sampling", "label": "Multiple Scattering" }
                 ]
             },
             { "layout": "ROW",
