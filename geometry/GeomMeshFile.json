@@ -419,7 +419,7 @@
                     }, 
                     {
                         "active": {
-                            "condition": true, 
+                            "value": true, 
                             "prop": "anim_override"
                         }, 
                         "align": true, 

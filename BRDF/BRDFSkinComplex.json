@@ -636,7 +636,7 @@
             },
             {
                 "active": {
-                    "condition": false,
+                    "value": false,
                     "prop": "geom_auto_density"
                 },
                 "attrs": [

@@ -126,7 +126,7 @@
             }, 
             {
                 "active": {
-                    "condition": "1", 
+                    "value": 1,
                     "prop": "mode"
                 }, 
                 "layout": "SPLIT", 
@@ -164,7 +164,7 @@
                 "attrs": [
                     {
                         "active": {
-                            "condition": "1", 
+                            "value": 1,
                             "prop": "mode"
                         }, 
                         "name": "file"

@@ -349,14 +349,14 @@
                 ], 
                 "layout": "COLUMN", 
                 "show": {
-                    "condition": "0", 
+                    "value": 0, 
                     "prop": "type"
                 }
             }, 
             {
                 "layout": "SPLIT", 
                 "show": {
-                    "condition": "1", 
+                    "value": 1, 
                     "prop": "type"
                 }, 
                 "splits": [
@@ -395,7 +395,7 @@
             {
                 "layout": "SPLIT", 
                 "show": {
-                    "condition": "2", 
+                    "value": 2, 
                     "prop": "type"
                 }, 
                 "splits": [
@@ -440,7 +440,7 @@
             {
                 "layout": "SPLIT", 
                 "show": {
-                    "condition": "3", 
+                    "value": 3, 
                     "prop": "type"
                 }, 
                 "splits": [
