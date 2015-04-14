@@ -41,6 +41,7 @@
         }, 
         {
             "attr": "ior", 
+            "name": "IOR",
             "default": 1.5, 
             "desc": "", 
             "type": "FLOAT", 
@@ -211,9 +212,15 @@
         }, 
         {
             "attr": "single_scatter", 
-            "default": 1, 
+            "default": "1", 
             "desc": "", 
-            "type": "BOOL"
+            "type": "ENUM",
+            "items": [
+                ["0", "None", ""],
+                ["1", "Simple", ""],
+                ["2", "Raytraced (Solid)", ""],
+                ["3", "Raytraced (Refractive)", ""]
+            ]
         }, 
         {
             "attr": "subdivs", 
@@ -328,6 +335,7 @@
         }, 
         {
             "attr": "prepass_fileName", 
+            "name": "Prepass File",
             "default": "", 
             "desc": "File path template for saved irradiance map files, frame number is appended for modes \"Save / Load (Per-Frame)\"", 
             "subtype": "FILE_PATH", 
@@ -335,9 +343,15 @@
         }, 
         {
             "attr": "geometry_based_sampling", 
-            "default": false, 
+            "default": "0", 
             "desc": "", 
-            "type": "BOOL"
+            "type": "ENUM",
+            "items": [
+                ["0", "Prepass-Based Illumination Map", ""],
+                ["1", "Object-Based Illumination Map", ""],
+                ["2", "Raytraced", ""],
+                ["3", "None (Diffuse Approximation)", ""]
+            ]
         }, 
         {
             "attr": "samples_per_unit_area", 
@@ -411,200 +425,119 @@
     "Type": "BRDF", 
     "Widget": {
         "widgets": [
-            {
+            { "layout": "SEPARATOR", "label": "General Parameters" },
+            { "layout": "ROW",
                 "attrs": [
-                    {
-                        "label": "Mode", 
-                        "name": "prepass_mode"
-                    }, 
-                    {
-                        "label": "Filepath", 
-                        "name": "prepass_fileName"
-                    }
-                ], 
-                "layout": "COLUMN"
-            }, 
-            {
-                "layout": "SEPARATOR"
-            }, 
-            {
-                "layout": "SPLIT", 
-                "splits": [
-                    {
-                        "attrs": [
-                            {
-                                "name": "phase_function"
-                            }, 
-                            {
-                                "name": "max_distance"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
-                        "attrs": [
-                            {
-                                "name": "scale"
-                            }, 
-                            {
-                                "name": "ior"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }
+                    { "name": "scale" },
+                    { "name": "ior" }
                 ]
-            }, 
-            {
-                "layout": "SPLIT", 
-                "splits": [
-                    {
-                        "attrs": [
-                            {
-                                "name": "subdivs"
-                            }, 
-                            {
-                                "name": "specular_subdivs"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
-                        "attrs": [
-                            {
-                                "name": "refraction_depth"
-                            }, 
-                            {
-                                "name": "reflection_depth"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }
-                ]
-            }, 
-            {
-                "label": "Prepass", 
-                "layout": "SEPARATOR"
-            }, 
-            {
-                "layout": "SPLIT", 
-                "splits": [
-                    {
-                        "attrs": [
-                            {
-                                "label": "Rate", 
-                                "name": "prepass_rate"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
-                        "attrs": [
-                            {
-                                "label": "Blur", 
-                                "name": "prepass_blur"
-                            }, 
-                            {
-                                "label": "ID", 
-                                "name": "prepass_id"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }
-                ]
-            }, 
-            {
-                "layout": "SEPARATOR"
-            }, 
-            {
-                "layout": "SPLIT", 
-                "splits": [
-                    {
-                        "attrs": [
-                            {
-                                "name": "geometry_based_sampling"
-                            }, 
-                            {
-                                "name": "auto_density"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
-                        "attrs": [
-                            {
-                                "name": "samples_per_unit_area"
-                            }, 
-                            {
-                                "name": "surface_offset"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }
-                ]
-            }, 
-            {
-                "layout": "SEPARATOR"
-            }, 
-            {
-                "layout": "SPLIT", 
-                "splits": [
-                    {
-                        "attrs": [
-                            {
-                                "name": "scatter_gi"
-                            }, 
-                            {
-                                "name": "single_scatter"
-                            }, 
-                            {
-                                "name": "back_scatter"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
-                        "attrs": [
-                            {
-                                "name": "linear_workflow"
-                            }, 
-                            {
-                                "name": "legacy_mode"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }
-                ]
-            }, 
-            {
+            },
+            { "layout": "ROW",
                 "attrs": [
-                    {
-                        "name": "preview_samples"
-                    }
-                ], 
-                "layout": "COLUMN"
-            }, 
-            {
-                "active": {
-                    "prop": "preview_samples"
-                }, 
-                "layout": "SPLIT", 
+                    { "name": "geometry_based_sampling" }
+                ]
+            },
+            { "layout": "ROW",
+                "active" : {
+                    "prop": "geometry_based_sampling",
+                    "value": 0
+                },
+                "attrs": [
+                    { "name": "prepass_rate" },
+                    { "name": "prepass_id" }
+                ]
+            },
+            { "layout": "COLUMN",
+                "active" : {
+                    "prop": "geometry_based_sampling",
+                    "value": 1
+                },
+                "attrs": [
+                    { "name": "auto_density" },
+                    { "name": "samples_per_unit_area" },
+                    { "name": "surface_offset" }
+                ]
+            },
+            { "layout": "COLUMN",
+                "active" : {
+                    "prop": "geometry_based_sampling",
+                    "condition": "less",
+                    "value": 2
+                },
+                "attrs": [
+                    { "name": "prepass_mode" },
+                    { "name": "prepass_fileName" }
+                ]
+            },
+
+            { "layout": "SEPARATOR", "label": "Diffuse & SSS Layers" },
+            { "layout": "COLUMN",
+                "attrs": [
+                    { "name": "phase_function" }
+                ]
+            },
+
+            { "layout": "SEPARATOR", "label": "Specular Layer" },
+            { "layout": "SPLIT",
                 "splits": [
-                    {
+                    { "layout": "COLUMN",
                         "attrs": [
-                            {
-                                "name": "background_color"
-                            }
-                        ], 
-                        "layout": "COLUMN"
-                    }, 
-                    {
+                            { "name": "specular_subdivs" },
+                            { "name": "cutoff_threshold" }
+                        ]
+                    },
+                    { "layout": "COLUMN",
                         "attrs": [
-                            {
-                                "name": "samples_color"
-                            }
-                        ], 
-                        "layout": "COLUMN"
+                            { "name": "trace_reflections" },
+                            { "name": "reflection_depth" }
+                        ]
                     }
+                ]
+            },
+
+            { "layout": "SEPARATOR", "label": "Options" },
+            { "layout": "COLUMN",
+                "attrs": [
+                    { "name": "single_scatter" }
+                ]
+            },
+            { "layout": "SPLIT",
+                "splits": [
+                    { "layout": "COLUMN",
+                        "attrs": [
+                            { "name": "subdivs" },
+                            { "name": "refraction_depth" },
+                            { "name": "prepass_blur" },
+                            { "name": "interpolation_accuracy" }
+                        ]
+                    },
+                    { "layout": "COLUMN",
+                        "attrs": [
+                            { "name": "front_scatter" },
+                            { "name": "back_scatter" },
+                            { "name": "scatter_gi" }
+                        ]
+                    }
+                ]
+            },
+
+            { "layout": "SEPARATOR" },
+            { "layout": "COLUMN",
+                "attrs": [
+                    { "name": "preview_samples" }
+                ]
+            },
+            { "layout": "COLUMN",
+                "active" : { "prop": "preview_samples" },
+                "attrs": [
+                    { "name": "max_distance" }
+                ]
+            },
+            { "layout": "ROW",
+                "active" : { "prop": "preview_samples" },
+                "attrs": [
+                    { "name": "background_color", "label": "BG" },
+                    { "name": "samples_color", "label": "Samples" }
                 ]
             }
         ]
