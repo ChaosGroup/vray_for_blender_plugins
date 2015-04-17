@@ -49,6 +49,14 @@
                 ], 
                 "layout": "ROW"
             }
+        ],
+        "node_widgets": [
+            {
+                "layout": "ROW",
+                "attrs": [
+                    { "name": "fade_out_radius" }
+                ]
+            }
         ]
     }
 }
