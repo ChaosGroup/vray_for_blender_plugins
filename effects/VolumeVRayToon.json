@@ -6,7 +6,7 @@
         {
             "attr": "lineColor_tex", 
             "default": [
-                0.0, 
+                1.0, 
                 0.0, 
                 0.0
             ], 
@@ -156,6 +156,27 @@
     ], 
     "Type": "EFFECT", 
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "normalThreshold" },
+                    { "name": "overlapThreshold" },
+                    { "name": "traceBias" },
+                    { "name": "hideInnerEdges" },
+                    { "name": "doSecondaryRays" },
+                    { "name": "compensateExposure" }
+                ]
+            }
+        ],
+        "node_widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "widthType", "label": "Width" },
+                    { "name": "excludeType", "label": "List" }
+                ]
+            }
+        ]
     }
 }
