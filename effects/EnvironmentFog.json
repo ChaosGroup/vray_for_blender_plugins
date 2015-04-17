@@ -19,9 +19,9 @@
         {
             "attr": "color", 
             "default": [
-                0, 
-                0, 
-                0
+                1, 
+                1, 
+                1
             ], 
             "desc": "Fog color", 
             "type": "COLOR"
@@ -41,9 +41,9 @@
         {
             "attr": "color_tex", 
             "default": [
-                0.0, 
-                0.0, 
-                0.0
+                1.0, 
+                1.0, 
+                1.0
             ], 
             "desc": "Fog texture", 
             "name": "Color", 
@@ -52,9 +52,9 @@
         {
             "attr": "emission", 
             "default": [
-                0, 
-                0, 
-                0
+                1, 
+                1, 
+                1
             ], 
             "desc": "Fog emission color", 
             "type": "COLOR"
@@ -524,6 +524,23 @@
                     }
                 ]
             }, 
+            {   "layout" : "SEPARATOR" },
+            {   "layout" : "SPLIT",
+                "splits" : [
+                    {   "layout" : "COLUMN",
+                        "attrs" : [
+                            { "name" : "affect_shadows" },
+                            { "name" : "shadow_opacity" }
+                        ]
+                    },
+                    {   "layout" : "COLUMN",
+                        "attrs" : [
+                            { "name" : "solid_mode" },
+                            { "name" : "solid_threshold" }
+                        ]
+                    }
+                ]
+            },
             {
                 "layout": "SPLIT", 
                 "splits": [
@@ -548,9 +565,6 @@
                             }, 
                             {
                                 "name": "affect_refractions"
-                            }, 
-                            {
-                                "name": "affect_shadows"
                             }
                         ], 
                         "layout": "COLUMN"
