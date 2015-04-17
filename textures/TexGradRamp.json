@@ -572,6 +572,16 @@
                 "soft_max": 64, 
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "color_ramp",
+            "default": "",
+            "desc": "Color Ramp",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"    : "colors",
+                "positions" : "positions"
+            }
         }
     ], 
     "Type": "TEXTURE", 

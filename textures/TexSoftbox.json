@@ -827,6 +827,47 @@
             "desc": "Frame noise levels",
             "type": "INT",
             "default": 3
+        },
+
+        {
+            "attr": "ramp_grad_vert",
+            "default": "",
+            "desc": "Vertical gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"    : "grad_vert_col",
+                "positions" : "grad_vert_pos"
+            }
+        },
+        {
+            "attr": "ramp_grad_horiz",
+            "default": "",
+            "desc": "Horizontal gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"    : "grad_horiz_col",
+                "positions" : "grad_horiz_pos"
+            }
+        },
+        {
+            "attr": "grad_rad_on",
+            "default": "",
+            "desc": "Radial gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"    : "grad_rad_col",
+                "positions" : "grad_rad_pos"
+            }
+        },
+        {
+            "attr": "frame_on",
+            "default": "",
+            "desc": "Frame gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors"    : "frame_col",
+                "positions" : "frame_pos"
+            }
         }
     ]
 }
