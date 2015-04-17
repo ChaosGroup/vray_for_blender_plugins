@@ -1,0 +1,11 @@
+{
+    "Desciption": "Particle ID",
+    "ID": "TexParticleId",
+    "Name": "Particle ID",
+    "Parameters": [
+    ],
+    "Type": "TEXTURE",
+    "Widget": {
+        "widgets": []
+    }
+}
