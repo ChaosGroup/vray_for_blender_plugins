@@ -368,9 +368,6 @@
                             }, 
                             {
                                 "name": "dmc_maxSubdivs"
-                            }, 
-                            {
-                                "name": "dmc_threshold"
                             }
                         ], 
                         "layout": "COLUMN"
@@ -383,7 +380,33 @@
                             }, 
                             {
                                 "name": "dmc_per_pixel_filtering"
-                            }, 
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    }
+                ]
+            },
+             {
+                "layout": "SPLIT",
+                "show": {
+                    "value": 1,
+                    "prop": "type"
+                },
+                "splits": [
+                    {
+                        "attrs": [
+                            {
+                                "name": "dmc_threshold",
+                                "active": {
+                                    "prop" : "use_dmc_treshhold",
+                                    "value" : false
+                                }
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    },
+                    {
+                        "attrs": [
                             {
                                 "name": "use_dmc_treshhold"
                             }
