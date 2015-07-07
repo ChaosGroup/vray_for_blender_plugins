@@ -330,7 +330,7 @@
         }, 
         {
             "attr": "horizontal_count", 
-            "default": 1, 
+            "default": 5,
             "desc": "Tiles horizontal count", 
             "type": "FLOAT", 
             "ui": {
@@ -342,7 +342,7 @@
         }, 
         {
             "attr": "vertical_count", 
-            "default": 1, 
+            "default": 5,
             "desc": "Tiles vertical count", 
             "type": "FLOAT", 
             "ui": {
@@ -366,7 +366,7 @@
         }, 
         {
             "attr": "horizontal_gap", 
-            "default": 0, 
+            "default": 1.0,
             "desc": "Horizontal gap between tiles", 
             "type": "FLOAT", 
             "ui": {
@@ -378,7 +378,7 @@
         }, 
         {
             "attr": "vertical_gap", 
-            "default": 0, 
+            "default": 1.0,
             "desc": "Vertical gap between tiles", 
             "type": "FLOAT", 
             "ui": {
