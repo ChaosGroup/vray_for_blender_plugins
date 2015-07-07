@@ -309,9 +309,9 @@
         {
             "attr": "color_mortar", 
             "default": [
-                0.7, 
-                0.7, 
-                0.7, 
+                0.0,
+                0.0,
+                0.0,
                 1
             ], 
             "desc": "Mortar color", 
@@ -320,9 +320,9 @@
         {
             "attr": "color_tiles", 
             "default": [
-                0.6, 
-                0.5, 
-                0.4, 
+                1.0,
+                1.0,
+                1.0,
                 1
             ], 
             "desc": "Tiles color", 
