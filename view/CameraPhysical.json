@@ -346,6 +346,7 @@
             "attr": "lens_file", 
             "default": "", 
             "desc": "LENS file with camera lens-type image distortion description", 
+            "subtype": "FILE_PATH",
             "type": "STRING"
         }, 
         {
