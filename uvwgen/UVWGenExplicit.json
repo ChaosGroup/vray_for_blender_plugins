@@ -47,6 +47,7 @@
                 0.0
             ], 
             "desc": "", 
+            "option": "LINKED_ONLY",
             "type": "TEXTURE"
         }
     ], 
