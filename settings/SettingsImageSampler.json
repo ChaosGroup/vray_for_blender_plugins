@@ -30,7 +30,20 @@
                 ]
             ], 
             "type": "ENUM"
-        }, 
+        },
+        {
+            "attr": "min_shade_rate",
+            "default": 2,
+            "desc": "Control the number of rays shot for AA versus rays for other effects like glossy reflections, GI, area shadows etc. Higher values mean that less time will be spent on AA, and more effort will be put in the sampling of shading effects",
+            "name": "Min. Shading Rate",
+            "type": "INT",
+            "ui": {
+                "max": 1024,
+                "min": 0,
+                "soft_max": 64,
+                "soft_min": 2
+            }
+        },
         {
             "attr": "fixed_subdivs", 
             "default": 1, 
@@ -338,6 +351,14 @@
             {
                 "layout": "SEPARATOR"
             }, 
+            {
+                "attrs": [
+                    {
+                        "name": "min_shade_rate"
+                    }
+                ],
+                "layout": "ROW"
+            },
             {
                 "attrs": [
                     {
