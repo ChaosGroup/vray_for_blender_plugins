@@ -129,7 +129,7 @@
         }, 
         {
             "attr": "fresnel", 
-            "default": false, 
+            "default": true,
             "desc": "true to enable fresnel reflections", 
             "type": "BOOL"
         }, 
