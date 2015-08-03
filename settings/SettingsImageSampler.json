@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "type", 
-            "default": "0", 
+            "default": "1",
             "desc": "The type of the image sampler", 
             "items": [
                 [
@@ -33,7 +33,7 @@
         },
         {
             "attr": "min_shade_rate",
-            "default": 2,
+            "default": 6,
             "desc": "Control the number of rays shot for AA versus rays for other effects like glossy reflections, GI, area shadows etc. Higher values mean that less time will be spent on AA, and more effort will be put in the sampling of shading effects",
             "name": "Min. Shading Rate",
             "type": "INT",
@@ -79,7 +79,7 @@
         }, 
         {
             "attr": "dmc_maxSubdivs", 
-            "default": 4, 
+            "default": 4,
             "desc": "Max. subdivs value for the adaptive DMC image sampler", 
             "name": "Max. Subdivs", 
             "type": "INT", 
@@ -92,15 +92,15 @@
         }, 
         {
             "attr": "dmc_threshold", 
-            "default": 0.01, 
+            "default": 0.01,
             "desc": "Color threshold for the adaptive DMC image sampler", 
             "name": "Threshold", 
             "type": "FLOAT", 
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1.0,
+                "min": 0.0001,
+                "soft_max": 0.1,
+                "soft_min": 0.005
             }
         }, 
         {
@@ -212,7 +212,7 @@
         }, 
         {
             "attr": "progressive_maxSubdivs", 
-            "default": 4, 
+            "default": 100,
             "desc": "Max. subdivs value for the progressive image sampler", 
             "name": "Max. Subdivs", 
             "type": "INT", 
@@ -271,7 +271,7 @@
         }, 
         {
             "attr": "use_dmc_treshhold", 
-            "default": true, 
+            "default": false,
             "desc": "Use threshold specified in the \"DMC sampler\"", 
             "name": "Use DMC sampler threshold", 
             "skip": true, 
@@ -279,7 +279,7 @@
         }, 
         {
             "attr": "filter_type", 
-            "default": "NONE", 
+            "default": "FilterLanczos",
             "desc": "Antialiasing filter type", 
             "items": [
                 [
