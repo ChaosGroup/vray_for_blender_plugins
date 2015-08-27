@@ -335,6 +335,36 @@
             ], 
             "skip": true, 
             "type": "ENUM"
+        },
+        {
+            "attr": "render_mask_mode",
+            "name": "Render Mask",
+            "default": "0",
+            "desc": "Sets the mode for the render mask",
+            "items": [
+                [ "0", "Disable", "" ],
+                [ "2", "Objects", "" ],
+                [ "3", "Object ID", "" ]
+            ],
+            "type": "ENUM"
+        },
+        {
+            "attr": "render_mask_object_ids",
+            "name": "Object IDs",
+            "default": "",
+            "desc": "List of object ids, which will be used for render mask",
+            "skip": true,
+            "option": "EXPORT_AS_IS",
+            "type": "STRING"
+        },
+        {
+            "attr": "render_mask_objects",
+            "name": "Objects",
+            "default": "",
+            "desc": "List of objects, which will be used for render mask",
+            "skip": true,
+            "option": "EXPORT_AS_IS",
+            "type": "STRING"
         }
     ], 
     "Type": "SETTINGS", 
