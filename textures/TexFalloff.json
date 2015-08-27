@@ -427,6 +427,16 @@
                 ], 
                 "layout": "COLUMN"
             }
+        ],
+        "node_widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "type" },
+                    { "name": "direction_type" },
+                    { "name": "use_blend_input" }
+                ]
+            }
         ]
     }
 }
