@@ -365,6 +365,14 @@
             "skip": true,
             "option": "EXPORT_AS_IS",
             "type": "STRING"
+        },
+        {
+            "attr": "render_mask_objects_selected",
+            "name": "Use Selected Objects",
+            "default": false,
+            "desc": "Use selected object as render mask",
+            "skip": true,
+            "type": "BOOL"
         }
     ], 
     "Type": "SETTINGS", 
