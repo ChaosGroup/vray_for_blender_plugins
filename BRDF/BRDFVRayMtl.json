@@ -793,6 +793,13 @@
             }
         }, 
         {
+            "attr": "gtr_gamma",
+            "name": "GTR Falloff",
+            "default": 2.0,
+            "desc": "How much to increase/decrease the tail of the glossy highlight when using GGX reflection model",
+            "type": "FLOAT"
+        },
+        {
             "attr": "refr_imap_norm_thresh", 
             "default": 0.4, 
             "desc": "", 
@@ -866,6 +873,13 @@
                     }
                 ]
             }, 
+            {
+                "layout": "COLUMN",
+                "show": { "prop": "brdf_type", "value": "4" },
+                "attrs": [
+                    { "name": "gtr_gamma" }
+                ]
+            },
             {
                 "attrs": [
                     {
