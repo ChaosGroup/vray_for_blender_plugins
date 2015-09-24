@@ -278,19 +278,21 @@
         }, 
         {
             "attr": "ies_light_shape", 
-            "default": "-1", 
+            "default": "0", 
             "desc": "IES light shape", 
             "items": [
-                [
-                    "-1", 
-                    "From File", 
-                    ""
-                ], 
-                [
-                    "0", 
-                    "Custom", 
-                    ""
-                ]
+                ["0",  "From File", ""],
+                ["1",  "Point", ""],
+                ["2",  "Rectangular", ""],
+                ["3",  "Circular",    ""],
+                ["4",  "Sphere", ""],
+                ["5",  "Vertical cylinder", ""],
+                ["6",  "Horizontal Cylinder Oriented Along Lum. Length", ""],
+                ["7",  "Horizontal Cylinder Oriented Along Lum. Width", ""],
+                ["8",  "Ellipse Oriented Along Luminaire Length", ""],
+                ["9",  "Ellipse Oriented Along Luminaire Width", ""],
+                ["10", "Ellipsoid Oriented Along Luminaire Length", ""],
+                ["11", "Ellipsoid Oriented Along Luminaire Width", ""]
             ], 
             "type": "ENUM"
         }, 
@@ -431,19 +433,48 @@
                         "layout": "COLUMN"
                     }, 
                     {
-                        "align": true, 
+                        "align": true,
+                        "show": {
+                            "prop": "ies_light_shape",
+                            "condition": "not_in",
+                            "value": ["0", "1"]
+                        },
                         "attrs": [
                             {
-                                "name": "ies_light_width"
+                                "name": "ies_light_width",
+                                "label": "Width",
+                                "visible": {
+                                    "prop": "ies_light_shape",
+                                    "condition": "in",
+                                    "value": ["2", "7", "8", "9", "10", "11"]
+                                }
                             }, 
                             {
-                                "name": "ies_light_length"
+                                "name": "ies_light_length",
+                                "label": "Length",
+                                "visible": {
+                                    "prop": "ies_light_shape",
+                                    "condition": "in",
+                                    "value": ["2", "6", "8", "9", "10", "11"]
+                                }
                             }, 
                             {
-                                "name": "ies_light_height"
+                                "name": "ies_light_height",
+                                "label": "Height",
+                                "visible": {
+                                    "prop": "ies_light_shape",
+                                    "condition": "in",
+                                    "value": ["2", "5", "8", "9", "10", "11"]
+                                }
                             }, 
                             {
-                                "name": "ies_light_diameter"
+                                "name": "ies_light_diameter",
+                                "label": "Diameter",
+                                "visible": {
+                                    "prop": "ies_light_shape",
+                                    "condition": "in",
+                                    "value": ["3", "4", "5", "6", "7"]
+                                }
                             }
                         ], 
                         "layout": "COLUMN"
