@@ -277,23 +277,23 @@
             }
         }, 
         {
-            "attr": "ies_light_shape", 
-            "default": "0", 
-            "desc": "IES light shape", 
+            "attr": "ies_light_shape",
+            "default": "-1",
+            "desc": "IES light shape",
             "items": [
-                ["0",  "From File", ""],
-                ["1",  "Point", ""],
-                ["2",  "Rectangular", ""],
-                ["3",  "Circular",    ""],
-                ["4",  "Sphere", ""],
-                ["5",  "Vertical cylinder", ""],
-                ["6",  "Horizontal Cylinder Oriented Along Lum. Length", ""],
-                ["7",  "Horizontal Cylinder Oriented Along Lum. Width", ""],
-                ["8",  "Ellipse Oriented Along Luminaire Length", ""],
-                ["9",  "Ellipse Oriented Along Luminaire Width", ""],
-                ["10", "Ellipsoid Oriented Along Luminaire Length", ""],
-                ["11", "Ellipsoid Oriented Along Luminaire Width", ""]
-            ], 
+                ["-1",  "From File", ""],
+                ["0",  "Point", ""],
+                ["1",  "Rectangular", ""],
+                ["2",  "Circular",    ""],
+                ["3",  "Sphere", ""],
+                ["4",  "Vertical cylinder", ""],
+                ["5",  "Horizontal Cylinder Oriented Along Lum. Length", ""],
+                ["6",  "Horizontal Cylinder Oriented Along Lum. Width", ""],
+                ["7",  "Ellipse Oriented Along Luminaire Length", ""],
+                ["8",  "Ellipse Oriented Along Luminaire Width", ""],
+                ["9",  "Ellipsoid Oriented Along Luminaire Length", ""],
+                ["10", "Ellipsoid Oriented Along Luminaire Width", ""]
+            ],
             "type": "ENUM"
         }, 
         {
