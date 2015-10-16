@@ -28,9 +28,9 @@
         {
             "attr": "color_tex", 
             "default": [
-                0.0, 
-                0.0, 
-                0.0
+                1.0,
+                1.0,
+                1.0
             ], 
             "desc": "A color texture that if present will override the color parameter", 
             "type": "TEXTURE"
