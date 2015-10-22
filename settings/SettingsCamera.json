@@ -52,7 +52,9 @@
                     "8", 
                     "Pinhole", 
                     ""
-                ]
+                ],
+                [ "9",  "Spherical Panorama", "" ],
+                [ "10", "Cube 6x1", "" ]
             ], 
             "type": "ENUM"
         }, 
@@ -121,6 +123,13 @@
             "default": "", 
             "desc": "Used only to force a re-export of the image plane geometry in RT rendering", 
             "type": "PLUGIN"
+        },
+        {
+            "attr": "override_fov",
+            "default": false,
+            "skip": true,
+            "desc": "Override FOV",
+            "type": "BOOL"
         }
     ], 
     "Type": "SETTINGS", 
