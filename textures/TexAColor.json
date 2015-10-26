@@ -20,7 +20,7 @@
             "default": "", 
             "desc": "Mapping generator", 
             "name": "Mapping", 
-            "options": "HIDDEN", 
+            "options": ["HIDDEN"],
             "type": "UVWGEN"
         }
     ], 

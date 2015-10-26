@@ -35,7 +35,7 @@
             ], 
             "desc": "Fog texture", 
             "name": "Color", 
-            "option": "LINKED_ONLY",
+            "options": ["LINKED_ONLY"],
             "type": "TEXTURE"
         }, 
         {

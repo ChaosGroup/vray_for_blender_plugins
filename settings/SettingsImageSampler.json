@@ -354,7 +354,7 @@
             "default": "",
             "desc": "List of object ids, which will be used for render mask",
             "skip": true,
-            "option": "EXPORT_AS_IS",
+            "options": ["EXPORT_AS_IS"],
             "type": "STRING"
         },
         {
@@ -363,7 +363,7 @@
             "default": "",
             "desc": "List of objects, which will be used for render mask",
             "skip": true,
-            "option": "EXPORT_AS_IS",
+            "options": ["EXPORT_AS_IS"],
             "type": "STRING"
         },
         {

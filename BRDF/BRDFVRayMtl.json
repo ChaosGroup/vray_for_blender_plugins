@@ -669,7 +669,7 @@
                 1
             ], 
             "desc": "Environment override texture", 
-            "option": "LINKED_ONLY",
+            "options": ["LINKED_ONLY"],
             "type": "TEXTURE"
         }, 
         {

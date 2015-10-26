@@ -31,7 +31,7 @@
             "default": false, 
             "desc": "Material is expanded to nodes", 
             "name": "Expanded", 
-            "options": "HIDDEN", 
+            "options": ["HIDDEN"],
             "skip": true, 
             "type": "BOOL"
         }

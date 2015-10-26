@@ -347,7 +347,8 @@
                 0.0, 
                 0.0
             ], 
-            "desc": "The texture used for mapped gradient ramp", 
+            "desc": "The texture used for mapped gradient ramp",
+            "options": ["LINKED_ONLY"],
             "type": "TEXTURE"
         }, 
         {
