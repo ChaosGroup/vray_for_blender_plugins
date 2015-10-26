@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "eye_distance", 
-            "default": 6.5, 
+            "default": 0.065,
             "desc": "The eye distance for which the stereoscopic image will be rendered", 
             "type": "FLOAT", 
             "ui": {
