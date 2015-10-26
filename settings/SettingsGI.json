@@ -194,6 +194,67 @@
     ], 
     "Type": "SETTINGS", 
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "attrs": [
+                    { "name": "on" }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "layout": "COLUMN",
+                "active": { "prop": "on" },
+                "attrs": [
+                    { "name": "primary_engine" },
+                    { "name": "primary_multiplier" },
+                    { "name": "secondary_engine" },
+                    { "name": "secondary_multiplier" }
+                ]
+            },
+
+            {
+                "layout": "COLUMN",
+                "active": { "prop": "on" },
+                "attrs": [
+                    { "name": "ray_distance_on" },
+                    { "name": "ray_distance" }
+                ]
+            },
+
+            {
+                "layout": "COLUMN",
+                "active": { "prop": "on" },
+                "attrs": [
+                    { "name": "refract_caustics" },
+                    { "name": "reflect_caustics" },
+                    { "name": "saturation" },
+                    { "name": "contrast" },
+                    { "name": "contrast_base" }
+                ]
+            },
+
+            {
+                "attrs": [
+                    { "name": "ao_on" }
+                ],
+                "active": { "prop": "on" },
+                "layout": "ROW"
+            },
+            {
+                "layout": "SPLIT",
+                "active": { "prop": "on" },
+                "splits": [
+                    {
+                        "layout": "COLUMN",
+                        "active": { "prop": "ao_on" },
+                        "attrs": [
+                            { "name": "ao_amount" },
+                            { "name": "ao_subdivs" },
+                            { "name": "ao_radius" }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

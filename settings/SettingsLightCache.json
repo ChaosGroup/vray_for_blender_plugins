@@ -255,6 +255,37 @@
     ], 
     "Type": "SETTINGS", 
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "layout": "ROW",
+                "active": { "prop": "on", "at": "SettingsGI" },
+                "attrs": [
+                    { "name": "adaptive_sampling" },
+                    { "name": "auto_save" },
+                    { "name": "auto_save_file" },
+                    { "name": "depth" },
+                    { "name": "dont_delete" },
+                    { "name": "file" },
+                    { "name": "filter" },
+                    { "name": "filter_samples" },
+                    { "name": "filter_size" },
+                    { "name": "filter_type" },
+                    { "name": "mode" },
+                    { "name": "multiple_views" },
+                    { "name": "num_passes" },
+                    { "name": "num_passes_auto" },
+                    { "name": "prefilter" },
+                    { "name": "prefilter_samples" },
+                    { "name": "retrace_enabled" },
+                    { "name": "retrace_threshold" },
+                    { "name": "sample_size" },
+                    { "name": "show_calc_phase" },
+                    { "name": "store_direct_light" },
+                    { "name": "subdivs" },
+                    { "name": "use_for_glossy_rays" },
+                    { "name": "world_scale" }
+                ]
+            }
+        ]
     }
 }
