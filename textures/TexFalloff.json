@@ -332,6 +332,7 @@
         {
             "attr": "use_blend_curve",
             "default": false,
+            "skip": true,
             "desc": "",
             "type": "BOOL"
         }
