@@ -1,70 +1,70 @@
 {
-    "Desciption": "", 
-    "ID": "Node", 
-    "Name": "Node", 
+    "Desciption": "",
+    "ID": "Node",
+    "Name": "Node",
     "Parameters": [
         {
-            "attr" : "transform",
-            "desc" : "",
-            "type" : "TRANSFORM",
-            "default" : ""
+            "attr": "transform",
+            "desc": "",
+            "type": "TRANSFORM",
+            "default": ""
         },
         {
-            "attr" : "geometry",
-            "desc" : "",
-            "type" : "PLUGIN",
-            "default" : ""
+            "attr": "geometry",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": ""
         },
         {
-            "attr" : "material",
-            "desc" : "",
-            "type" : "PLUGIN",
-            "default" : ""
+            "attr": "material",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": ""
         },
         {
-            "attr" : "volume",
-            "desc" : "",
-            "type" : "PLUGIN",
-            "default" : ""
+            "attr": "volume",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": ""
         },
         {
-            "attr" : "nsamples",
-            "desc" : "Number of transform samples",
-            "type" : "INT",
-            "default" : 0
+            "attr": "nsamples",
+            "desc": "Number of transform samples",
+            "type": "INT",
+            "default": 0
         },
         {
-            "attr" : "lights",
-            "desc" : "",
-            "type" : "PLUGIN",
-            "default" : ""
+            "attr": "lights",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": ""
         },
         {
-            "attr" : "visible",
-            "desc" : "true if the object is renderable (visible) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered",
-            "type" : "BOOL",
-            "default" : true
+            "attr": "visible",
+            "desc": "true if the object is renderable (visible) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered",
+            "type": "BOOL",
+            "default": true
         },
         {
-            "attr" : "user_attributes",
-            "desc" : "A list of user defined attributes",
-            "type" : "STRING",
-            "default" : ""
+            "attr": "user_attributes",
+            "desc": "A list of user defined attributes",
+            "type": "STRING",
+            "default": ""
         },
         {
-            "attr" : "objectID",
-            "desc" : "Object ID for the rendering",
-            "type" : "INT",
-            "default" : 0
+            "attr": "objectID",
+            "desc": "Object ID for the rendering",
+            "type": "INT",
+            "default": 0
         },
         {
-            "attr" : "primary_visibility",
-            "desc" : "If off shading an intersection with this mesh will not generate a gbuffer.",
-            "type" : "BOOL",
-            "default" : true
+            "attr": "primary_visibility",
+            "desc": "If off shading an intersection with this mesh will not generate a gbuffer.",
+            "type": "BOOL",
+            "default": true
         }
-    ], 
-    "Type": "NODE", 
+    ],
+    "Type": "NODE",
     "Widget": {
         "widgets": []
     }

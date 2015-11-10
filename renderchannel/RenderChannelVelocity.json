@@ -1,58 +1,58 @@
 {
-    "Desciption": "", 
-    "ID": "RenderChannelVelocity", 
-    "Name": "Velocity", 
+    "Desciption": "",
+    "ID": "RenderChannelVelocity",
+    "Name": "Velocity",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "Velocity", 
-            "desc": "", 
+            "attr": "name",
+            "default": "Velocity",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "clamp_velocity", 
-            "default": true, 
-            "desc": "", 
+            "attr": "clamp_velocity",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "max_velocity", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "max_velocity",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "max_velocity_last_frame", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "max_velocity_last_frame",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ignore_z", 
-            "default": true, 
-            "desc": "", 
+            "attr": "ignore_z",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "filtering", 
-            "default": true, 
-            "desc": "", 
+            "attr": "filtering",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

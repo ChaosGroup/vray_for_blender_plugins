@@ -1,487 +1,487 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFCookTorrance", 
-    "Name": "Cook Torrance", 
+    "Desciption": "",
+    "ID": "BRDFCookTorrance",
+    "Name": "Cook Torrance",
     "Parameters": [
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "color_tex", 
+            "attr": "color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Color", 
+            ],
+            "desc": "",
+            "name": "Color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "color_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Transparency", 
+            ],
+            "desc": "",
+            "name": "Transparency",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff", 
-            "default": 0.01, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff",
+            "default": 0.01,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "back_side", 
-            "default": false, 
-            "desc": "", 
+            "attr": "back_side",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_reflections", 
-            "default": true, 
-            "desc": "", 
+            "attr": "trace_reflections",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_depth", 
-            "default": -1, 
-            "desc": "The maximum reflection depth (-1 is controlled by the global options)", 
-            "type": "INT", 
+            "attr": "trace_depth",
+            "default": -1,
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "affect_alpha", 
-            "default": "0", 
-            "desc": "Specifies how render channels are propagated through the BRDF", 
+            "attr": "affect_alpha",
+            "default": "0",
+            "desc": "Specifies how render channels are propagated through the BRDF",
             "items": [
                 [
-                    "0", 
-                    "Color Only", 
+                    "0",
+                    "Color Only",
                     "The transperency will affect only the RGB channel of the final render"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Color+Alpha", 
+                    "1",
+                    "Color+Alpha",
                     "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
-                ], 
+                ],
                 [
-                    "2", 
-                    "All Channels", 
+                    "2",
+                    "All Channels",
                     "All channels and render elements will be affected by the transperency of the material"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "reflect_exit_color", 
+            "attr": "reflect_exit_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The color to use when the maximum depth is reached", 
+            ],
+            "desc": "The color to use when the maximum depth is reached",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance", 
-            "default": 1e+18, 
-            "desc": "How much to dim reflection as length of rays increases", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance",
+            "default": 1000000000000000000.0,
+            "desc": "How much to dim reflection as length of rays increases",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_on", 
-            "default": false, 
-            "desc": "True to enable dim distance", 
+            "attr": "reflect_dim_distance_on",
+            "default": false,
+            "desc": "True to enable dim distance",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_falloff", 
-            "default": 0, 
-            "desc": "Fall off for the dim distance", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance_falloff",
+            "default": 0,
+            "desc": "Fall off for the dim distance",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hilightGlossiness", 
-            "default": 0.8, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "hilightGlossiness",
+            "default": 0.8,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hilightGlossiness_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "hilightGlossiness_tex",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hilightGlossiness_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "hilightGlossiness_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflectionGlossiness", 
-            "default": 0.8, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "reflectionGlossiness",
+            "default": 0.8,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflectionGlossiness_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "reflectionGlossiness_tex",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflectionGlossiness_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "reflectionGlossiness_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "glossyAsGI", 
-            "default": "1", 
-            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays", 
+            "attr": "glossyAsGI",
+            "default": "1",
+            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays",
             "items": [
                 [
-                    "0", 
-                    "Never", 
+                    "0",
+                    "Never",
                     "Never"
-                ], 
+                ],
                 [
-                    "1", 
-                    "GI", 
+                    "1",
+                    "GI",
                     "Only for rays that are already marked as GI"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Always", 
+                    "2",
+                    "Always",
                     ""
                 ]
-            ], 
-            "name": "Glossy As GI", 
+            ],
+            "name": "Glossy As GI",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "soften_edge", 
-            "default": 0, 
-            "desc": "Soften edge of the BRDF at light/shadow transition", 
-            "type": "FLOAT", 
+            "attr": "soften_edge",
+            "default": 0,
+            "desc": "Soften edge of the BRDF at light/shadow transition",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "interpolation_on", 
-            "default": false, 
-            "desc": "", 
+            "attr": "interpolation_on",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "imap_min_rate", 
-            "default": -1, 
-            "desc": "", 
-            "name": "Min Rate", 
-            "type": "INT", 
+            "attr": "imap_min_rate",
+            "default": -1,
+            "desc": "",
+            "name": "Min Rate",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "imap_max_rate", 
-            "default": 1, 
-            "desc": "", 
-            "name": "Max Rate", 
-            "type": "INT", 
+            "attr": "imap_max_rate",
+            "default": 1,
+            "desc": "",
+            "name": "Max Rate",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "imap_color_thresh", 
-            "default": 0.25, 
-            "desc": "", 
-            "name": "Color Thresh", 
-            "type": "FLOAT", 
+            "attr": "imap_color_thresh",
+            "default": 0.25,
+            "desc": "",
+            "name": "Color Thresh",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "imap_norm_thresh", 
-            "default": 0.4, 
-            "desc": "", 
-            "name": "Normal Thresh", 
-            "type": "FLOAT", 
+            "attr": "imap_norm_thresh",
+            "default": 0.4,
+            "desc": "",
+            "name": "Normal Thresh",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "imap_samples", 
-            "default": 20, 
-            "desc": "", 
-            "name": "Samples", 
-            "type": "INT", 
+            "attr": "imap_samples",
+            "default": 20,
+            "desc": "",
+            "name": "Samples",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anisotropy", 
-            "default": 1.0, 
-            "desc": "Reflection anisotropy in the range (-1, 1)", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "anisotropy",
+            "default": 1.0,
+            "desc": "Reflection anisotropy in the range (-1, 1)",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anisotropy_uvwgen", 
-            "default": "", 
-            "desc": "", 
+            "attr": "anisotropy_uvwgen",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "anisotropy_rotation", 
-            "default": 1.0, 
-            "desc": "Anisotropy rotation in the range [0, 1]", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "anisotropy_rotation",
+            "default": 1.0,
+            "desc": "Anisotropy rotation in the range [0, 1]",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "fix_dark_edges", 
-            "default": true, 
-            "desc": "true to fix dark edges with glossy reflections; only set this to false for compatibility with older versions", 
+            "attr": "fix_dark_edges",
+            "default": true,
+            "desc": "true to fix dark edges with glossy reflections; only set this to false for compatibility with older versions",
             "type": "BOOL"
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "subdivs"
-                    }, 
+                    },
                     {
                         "name": "cutoff"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "trace_reflections"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "trace_reflections"
-                        }, 
+                        },
                         "name": "trace_depth"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "active": {
                     "prop": "trace_reflections"
-                }, 
-                "layout": "SPLIT", 
+                },
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Dim Distance", 
+                                "label": "Dim Distance",
                                 "name": "reflect_dim_distance_on"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "reflect_dim_distance_on"
-                        }, 
-                        "align": true, 
+                        },
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Distance", 
+                                "label": "Distance",
                                 "name": "reflect_dim_distance"
-                            }, 
+                            },
                             {
-                                "label": "Falloff", 
+                                "label": "Falloff",
                                 "name": "reflect_dim_distance_falloff"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
                                 "name": "reflect_exit_color"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "attrs": [
                             {
                                 "name": "affect_alpha"
-                            }, 
+                            },
                             {
                                 "name": "glossyAsGI"
-                            }, 
+                            },
                             {
                                 "name": "back_side"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

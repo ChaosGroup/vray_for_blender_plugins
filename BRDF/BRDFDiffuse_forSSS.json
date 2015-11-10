@@ -1,102 +1,102 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFDiffuse_forSSS", 
-    "Name": "Diffuse For SSS", 
+    "Desciption": "",
+    "ID": "BRDFDiffuse_forSSS",
+    "Name": "Diffuse For SSS",
     "Parameters": [
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "color_tex", 
+            "attr": "color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "color_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "back_color", 
+            "attr": "back_color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "Color on the back sides of the material", 
+            ],
+            "desc": "Color on the back sides of the material",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "roughness", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "roughness",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_irradiance_map", 
-            "default": true, 
-            "desc": "", 
+            "attr": "use_irradiance_map",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
@@ -104,7 +104,7 @@
                     {
                         "name": "use_irradiance_map"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

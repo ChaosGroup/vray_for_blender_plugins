@@ -1,323 +1,323 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFFlakes", 
-    "Name": "Flakes", 
+    "Desciption": "",
+    "ID": "BRDFFlakes",
+    "Name": "Flakes",
     "Parameters": [
         {
-            "attr": "flake_color", 
+            "attr": "flake_color",
             "default": [
-                0.3, 
-                0.4, 
+                0.3,
+                0.4,
                 0.8
-            ], 
-            "desc": "", 
-            "name": "Color", 
+            ],
+            "desc": "",
+            "name": "Color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "flake_glossiness", 
-            "default": 0.8, 
-            "desc": "", 
-            "name": "Glossiness", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "flake_glossiness",
+            "default": 0.8,
+            "desc": "",
+            "name": "Glossiness",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_orientation", 
-            "default": 0.3, 
-            "desc": "", 
-            "name": "Orientation", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "flake_orientation",
+            "default": 0.3,
+            "desc": "",
+            "name": "Orientation",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_density", 
-            "default": 0.5, 
-            "desc": "", 
-            "name": "Density", 
-            "type": "FLOAT", 
+            "attr": "flake_density",
+            "default": 0.5,
+            "desc": "",
+            "name": "Density",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_scale", 
-            "default": 0.01, 
-            "desc": "", 
-            "name": "Scale", 
-            "type": "FLOAT", 
+            "attr": "flake_scale",
+            "default": 0.01,
+            "desc": "",
+            "name": "Scale",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_size", 
-            "default": 0.5, 
-            "desc": "", 
-            "name": "Size", 
-            "type": "FLOAT", 
+            "attr": "flake_size",
+            "default": 0.5,
+            "desc": "",
+            "name": "Size",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_map_size", 
-            "default": 1024, 
-            "desc": "The size of the internal flakes map", 
-            "name": "Map Size", 
-            "type": "INT", 
+            "attr": "flake_map_size",
+            "default": 1024,
+            "desc": "The size of the internal flakes map",
+            "name": "Map Size",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_filtering_mode", 
-            "default": "1", 
-            "desc": "Flake filtering mode", 
+            "attr": "flake_filtering_mode",
+            "default": "1",
+            "desc": "Flake filtering mode",
             "items": [
                 [
-                    "0", 
-                    "Simple", 
+                    "0",
+                    "Simple",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Directional", 
+                    "1",
+                    "Directional",
                     ""
                 ]
-            ], 
-            "name": "Filtering Mode", 
+            ],
+            "name": "Filtering Mode",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "flake_seed", 
-            "default": 1, 
-            "desc": "The random seed for the flakes", 
-            "name": "Seed", 
-            "type": "INT", 
+            "attr": "flake_seed",
+            "default": 1,
+            "desc": "The random seed for the flakes",
+            "name": "Seed",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_uvwgen", 
-            "default": "", 
-            "desc": "", 
-            "name": "Uvwgen", 
+            "attr": "flake_uvwgen",
+            "default": "",
+            "desc": "",
+            "name": "Uvwgen",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "traceReflections", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "traceReflections",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "doubleSided", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "doubleSided",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff_threshold", 
-            "default": 0.001, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff_threshold",
+            "default": 0.001,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mapping_type", 
-            "default": "0", 
-            "desc": "The mapping method for the flakes", 
+            "attr": "mapping_type",
+            "default": "0",
+            "desc": "The mapping method for the flakes",
             "items": [
                 [
-                    "0", 
-                    "Explicit", 
+                    "0",
+                    "Explicit",
                     "Explicit mapping channel"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Triplanar", 
+                    "1",
+                    "Triplanar",
                     "Triplanar projection in object space"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "mapping_channel", 
-            "default": 0, 
-            "desc": "The mapping channel when the mapping_type is 0", 
-            "type": "INT", 
+            "attr": "mapping_channel",
+            "default": 0,
+            "desc": "The mapping channel when the mapping_type is 0",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "environment_override", 
+            "attr": "environment_override",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Environment override texture", 
+            ],
+            "desc": "Environment override texture",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "environment_priority", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "environment_priority",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "flake_density"
-                            }, 
+                            },
                             {
                                 "name": "flake_scale"
-                            }, 
+                            },
                             {
                                 "name": "flake_size"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "flake_filtering_mode"
-                            }, 
+                            },
                             {
                                 "name": "flake_map_size"
-                            }, 
+                            },
                             {
                                 "name": "flake_seed"
-                            }, 
+                            },
                             {
                                 "name": "traceReflections"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "label": "Options", 
+                "label": "Options",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "subdivs"
-                            }, 
+                            },
                             {
-                                "label": "Cutoff", 
+                                "label": "Cutoff",
                                 "name": "cutoff_threshold"
-                            }, 
+                            },
                             {
                                 "name": "doubleSided"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "mapping_type"
-                            }, 
+                            },
                             {
                                 "name": "mapping_channel"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "environment_priority"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

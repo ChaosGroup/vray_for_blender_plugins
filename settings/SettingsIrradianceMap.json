@@ -1,338 +1,338 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsIrradianceMap", 
-    "Name": "SettingsIrradianceMap", 
+    "Desciption": "",
+    "ID": "SettingsIrradianceMap",
+    "Name": "SettingsIrradianceMap",
     "Parameters": [
         {
-            "attr": "min_rate", 
-            "default": -3, 
-            "desc": "This value determines the resolution for the first GI pass", 
-            "type": "INT", 
+            "attr": "min_rate",
+            "default": -3,
+            "desc": "This value determines the resolution for the first GI pass",
+            "type": "INT",
             "ui": {
                 "min": -8
             }
-        }, 
+        },
         {
-            "attr": "max_rate", 
-            "default": 0, 
-            "desc": "This value determines the resolution of the last GI pass", 
-            "type": "INT", 
+            "attr": "max_rate",
+            "default": 0,
+            "desc": "This value determines the resolution of the last GI pass",
+            "type": "INT",
             "ui": {
                 "min": -8
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 80, 
-            "desc": "This controls the quality of individual GI samples", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 80,
+            "desc": "This controls the quality of individual GI samples",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "interp_samples", 
-            "default": 20, 
-            "desc": "The number of GI samples that will be used to interpolate the indirect illumination at a given point", 
-            "name": "Interpolation Samples", 
-            "type": "INT", 
+            "attr": "interp_samples",
+            "default": 20,
+            "desc": "The number of GI samples that will be used to interpolate the indirect illumination at a given point",
+            "name": "Interpolation Samples",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "calc_interp_samples", 
-            "default": 15, 
-            "desc": "The number of already computed samples that will be used to guide the sampling algorithm", 
-            "name": "Calc. Pass Interpolation Samples", 
-            "type": "INT", 
+            "attr": "calc_interp_samples",
+            "default": 15,
+            "desc": "The number of already computed samples that will be used to guide the sampling algorithm",
+            "name": "Calc. Pass Interpolation Samples",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "interp_frames", 
-            "default": 2, 
-            "desc": "The number of frames that will be used to interpolate GI when the \"Mode\" is set to \"Animation (rendering)\"", 
-            "name": "Interpolation Frames", 
-            "type": "INT", 
+            "attr": "interp_frames",
+            "default": 2,
+            "desc": "The number of frames that will be used to interpolate GI when the \"Mode\" is set to \"Animation (rendering)\"",
+            "name": "Interpolation Frames",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "color_threshold", 
-            "default": 0.3, 
-            "desc": "This parameter controls how sensitive the irradiance map algorithm is to changes in indirect lighting", 
-            "type": "FLOAT", 
+            "attr": "color_threshold",
+            "default": 0.3,
+            "desc": "This parameter controls how sensitive the irradiance map algorithm is to changes in indirect lighting",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "normal_threshold", 
-            "default": 0.1, 
-            "desc": "This parameter controls how sensitive the irradiance map is to changes in surface normals and small surface details", 
-            "type": "FLOAT", 
+            "attr": "normal_threshold",
+            "default": 0.1,
+            "desc": "This parameter controls how sensitive the irradiance map is to changes in surface normals and small surface details",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distance_threshold", 
-            "default": 0.1, 
-            "desc": "This parameter controls how sensitive the irradiance map is to distance between surfaces", 
-            "type": "FLOAT", 
+            "attr": "distance_threshold",
+            "default": 0.1,
+            "desc": "This parameter controls how sensitive the irradiance map is to distance between surfaces",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "detail_enhancement", 
-            "default": false, 
-            "desc": "Detail enhancement is a method for bringing additional detail to the irradiance map in the case where there are small details in the image", 
-            "name": "Detail Enhancement", 
+            "attr": "detail_enhancement",
+            "default": false,
+            "desc": "Detail enhancement is a method for bringing additional detail to the irradiance map in the case where there are small details in the image",
+            "name": "Detail Enhancement",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "detail_radius", 
-            "default": 0.2, 
-            "desc": "This determines the radius for the detail enhancement effect", 
-            "name": "Detail Enhancement Radius", 
-            "type": "FLOAT", 
+            "attr": "detail_radius",
+            "default": 0.2,
+            "desc": "This determines the radius for the detail enhancement effect",
+            "name": "Detail Enhancement Radius",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "detail_subdivs_mult", 
-            "default": 60, 
-            "desc": "The number of samples taken for the high-precision sampling as a percentage of the irradiance map Hemispheric subdivs", 
-            "name": "Detail Enhancement Subdivs Mult", 
-            "type": "FLOAT", 
+            "attr": "detail_subdivs_mult",
+            "default": 60,
+            "desc": "The number of samples taken for the high-precision sampling as a percentage of the irradiance map Hemispheric subdivs",
+            "name": "Detail Enhancement Subdivs Mult",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "detail_scale", 
-            "default": "0", 
-            "desc": "Detail enhancement scale", 
+            "attr": "detail_scale",
+            "default": "0",
+            "desc": "Detail enhancement scale",
             "items": [
                 [
-                    "0", 
-                    "Screen", 
+                    "0",
+                    "Screen",
                     "Radius in pixels"
-                ], 
+                ],
                 [
-                    "1", 
-                    "World", 
+                    "1",
+                    "World",
                     "Radius in world units"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "randomize_samples", 
-            "default": true, 
-            "desc": "When it is checked, the image samples will be randomly jittered", 
+            "attr": "randomize_samples",
+            "default": true,
+            "desc": "When it is checked, the image samples will be randomly jittered",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "interpolation_mode", 
-            "default": "2", 
-            "desc": "Method for interpolating the GI value from the samples in the irradiance map", 
+            "attr": "interpolation_mode",
+            "default": "2",
+            "desc": "Method for interpolating the GI value from the samples in the irradiance map",
             "items": [
                 [
-                    "0", 
-                    "Least squares with Voronoi weights", 
+                    "0",
+                    "Least squares with Voronoi weights",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Delone triangulation", 
+                    "1",
+                    "Delone triangulation",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Least squares fit", 
+                    "2",
+                    "Least squares fit",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Weighted average", 
+                    "3",
+                    "Weighted average",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "lookup_mode", 
-            "default": "3", 
-            "desc": "Method of choosing suitable points from the irradiance map to be used as basis for the interpolation", 
+            "attr": "lookup_mode",
+            "default": "3",
+            "desc": "Method of choosing suitable points from the irradiance map to be used as basis for the interpolation",
             "items": [
                 [
-                    "0", 
-                    "Quad-Balanced", 
+                    "0",
+                    "Quad-Balanced",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Nearest", 
+                    "1",
+                    "Nearest",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Overlapping", 
+                    "2",
+                    "Overlapping",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Density-Based", 
+                    "3",
+                    "Density-Based",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "mode", 
-            "default": "0", 
-            "desc": "Irradiance map mode", 
+            "attr": "mode",
+            "default": "0",
+            "desc": "Irradiance map mode",
             "items": [
                 [
-                    "0", 
-                    "Single Frame", 
+                    "0",
+                    "Single Frame",
                     "A new irradiance map is created for each frame"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Multiframe Incremental", 
+                    "1",
+                    "Multiframe Incremental",
                     "At the start of the rendering, the irradiance map is deleted, and then each frame incrementally adds to the irradiance map in memory"
-                ], 
+                ],
                 [
-                    "2", 
-                    "From File", 
+                    "2",
+                    "From File",
                     "The irradiance map is loaded from a file"
-                ], 
+                ],
                 [
-                    "3", 
-                    "Add To Current Map", 
+                    "3",
+                    "Add To Current Map",
                     "A new irradiance map is created and added to the one in memory"
-                ], 
+                ],
                 [
-                    "4", 
-                    "Incremental Add To Current Map", 
+                    "4",
+                    "Incremental Add To Current Map",
                     "Each frame adds incrementally to the irradiance map in memory; the old map is not deleted"
-                ], 
+                ],
                 [
-                    "5", 
-                    "Bucket Mode", 
+                    "5",
+                    "Bucket Mode",
                     "Each render region (bucket) calculates its own irradiance map independently of the rest"
-                ], 
+                ],
                 [
-                    "6", 
-                    "Animation (Prepass)", 
+                    "6",
+                    "Animation (Prepass)",
                     "Separate irradiance map is rendered and saved with a different name for each frame; no final image is rendered"
-                ], 
+                ],
                 [
-                    "7", 
-                    "Animation (Rendering)", 
+                    "7",
+                    "Animation (Rendering)",
                     "Final rendering of animation using saved per-frame irradiance maps"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "dont_delete", 
-            "default": true, 
-            "desc": "", 
+            "attr": "dont_delete",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "file", 
-            "default": "//lightmaps/irradiance_map.vrmap", 
-            "desc": "Irradiance map file name", 
-            "subtype": "FILE_PATH", 
+            "attr": "file",
+            "default": "//lightmaps/irradiance_map.vrmap",
+            "desc": "Irradiance map file name",
+            "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "show_samples", 
-            "default": false, 
-            "desc": "Show Irradiance Map samples", 
+            "attr": "show_samples",
+            "default": false,
+            "desc": "Show Irradiance Map samples",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "show_calc_phase", 
-            "default": true, 
-            "desc": "Show Irradiance Map calculation process", 
+            "attr": "show_calc_phase",
+            "default": true,
+            "desc": "Show Irradiance Map calculation process",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "show_direct_light", 
-            "default": false, 
-            "desc": "Show direct light when showing calculation process", 
+            "attr": "show_direct_light",
+            "default": false,
+            "desc": "Show direct light when showing calculation process",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "multiple_views", 
-            "default": false, 
-            "desc": "When this option is on, V-Ray will calculate the irradiance map samples for the entire camera path, instead of just the current view", 
+            "attr": "multiple_views",
+            "default": false,
+            "desc": "When this option is on, V-Ray will calculate the irradiance map samples for the entire camera path, instead of just the current view",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "multipass", 
-            "default": true, 
-            "desc": "When checked, this will cause V-Ray to use all irradiance map samples computed so far", 
+            "attr": "multipass",
+            "default": true,
+            "desc": "When checked, this will cause V-Ray to use all irradiance map samples computed so far",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "check_sample_visibility", 
-            "default": false, 
-            "desc": "This will cause V-Ray to use only those samples from the irradiance map, which are directly visible from the interpolated point", 
+            "attr": "check_sample_visibility",
+            "default": false,
+            "desc": "This will cause V-Ray to use only those samples from the irradiance map, which are directly visible from the interpolated point",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "auto_save", 
-            "default": false, 
-            "desc": "Automatically save the irradiance map to the specified file at the end of the rendering", 
+            "attr": "auto_save",
+            "default": false,
+            "desc": "Automatically save the irradiance map to the specified file at the end of the rendering",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "auto_save_file", 
-            "default": "//lightmaps/irradiance_map.vrmap", 
-            "desc": "Irradiance map auto save file", 
-            "subtype": "FILE_PATH", 
+            "attr": "auto_save_file",
+            "default": "//lightmaps/irradiance_map.vrmap",
+            "desc": "Irradiance map auto save file",
+            "subtype": "FILE_PATH",
             "type": "STRING"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

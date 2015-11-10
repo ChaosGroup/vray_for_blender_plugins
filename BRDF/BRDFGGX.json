@@ -130,7 +130,7 @@
         },
         {
             "attr": "reflect_dim_distance",
-            "default": 1e+18,
+            "default": 1000000000000000000.0,
             "desc": "How much to dim reflection as length of rays increases",
             "type": "FLOAT",
             "ui": {

@@ -1,206 +1,206 @@
 {
-    "Desciption": "", 
-    "ID": "TexSky", 
-    "Name": "Sky", 
+    "Desciption": "",
+    "ID": "TexSky",
+    "Name": "Sky",
     "Parameters": [
         {
-            "attr": "transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "target_transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "target_transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "turbidity", 
-            "default": 3, 
-            "desc": "Determines the amount of dust in the air and affects the color of the sun and sky. Smaller values produce a clear/blue sky, larger values yellow and orange", 
-            "type": "FLOAT", 
+            "attr": "turbidity",
+            "default": 3,
+            "desc": "Determines the amount of dust in the air and affects the color of the sun and sky. Smaller values produce a clear/blue sky, larger values yellow and orange",
+            "type": "FLOAT",
             "ui": {
                 "min": 2.0
             }
-        }, 
+        },
         {
-            "attr": "ozone", 
-            "default": 0.35, 
-            "desc": "Affects the color of the sun light (between 0.0 and 1.0). Smaller values make the sunlight more yellow, larger values make it blue", 
-            "type": "FLOAT", 
+            "attr": "ozone",
+            "default": 0.35,
+            "desc": "Affects the color of the sun light (between 0.0 and 1.0). Smaller values make the sunlight more yellow, larger values make it blue",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "water_vapour", 
-            "default": 2, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "water_vapour",
+            "default": 2,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "intensity_multiplier", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "intensity_multiplier",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "size_multiplier", 
-            "default": 1, 
-            "desc": "Controls the visible size of the sun. Affects the appearance of the sun disc as seen by the camera and reflections, as well as the blurriness of the sun shadows", 
-            "type": "FLOAT", 
+            "attr": "size_multiplier",
+            "default": 1,
+            "desc": "Controls the visible size of the sun. Affects the appearance of the sun disc as seen by the camera and reflections, as well as the blurriness of the sun shadows",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "filter_color", 
+            "attr": "filter_color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "Sunlight color. Used to add user control to light color definition", 
+            ],
+            "desc": "Sunlight color. Used to add user control to light color definition",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "invisible", 
-            "default": false, 
-            "desc": "When on, this option makes the sun invisible, both to the camera and to reflections", 
+            "attr": "invisible",
+            "default": false,
+            "desc": "When on, this option makes the sun invisible, both to the camera and to reflections",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "horiz_illum", 
-            "default": 25000, 
-            "desc": "Specifies the intensity (in Lx) of the illumination on horizontal surfaces coming from the sky", 
-            "type": "FLOAT", 
+            "attr": "horiz_illum",
+            "default": 25000,
+            "desc": "Specifies the intensity (in Lx) of the illumination on horizontal surfaces coming from the sky",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "sky_model", 
-            "default": "0", 
-            "desc": "Selects the procedural model used to simulate the TexSky texture", 
+            "attr": "sky_model",
+            "default": "0",
+            "desc": "Selects the procedural model used to simulate the TexSky texture",
             "items": [
                 [
-                    "0", 
-                    "Preetham et al.", 
+                    "0",
+                    "Preetham et al.",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "CIE Clear", 
+                    "1",
+                    "CIE Clear",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "CIE Overcast", 
+                    "2",
+                    "CIE Overcast",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "sun_dir_only", 
-            "default": false, 
-            "desc": "Use only direction of the specified sun (don't inherit all other parameters)", 
+            "attr": "sun_dir_only",
+            "default": false,
+            "desc": "Use only direction of the specified sun (don't inherit all other parameters)",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "auto_sun", 
-            "default": true, 
-            "desc": "Attach Sun automatically and take settings from it", 
-            "name": "Find Sun Automatically", 
-            "skip": true, 
+            "attr": "auto_sun",
+            "default": true,
+            "desc": "Attach Sun automatically and take settings from it",
+            "name": "Find Sun Automatically",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "sun", 
-            "default": "", 
-            "desc": "If specified, all parameters are taken from the sun; otherwise, the sky parameters are used", 
-            "skip": true, 
+            "attr": "sun",
+            "default": "",
+            "desc": "If specified, all parameters are taken from the sun; otherwise, the sky parameters are used",
+            "skip": true,
             "type": "PLUGIN"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
-                "align": false, 
+                "align": false,
                 "attrs": [
                     {
                         "name": "auto_sun"
-                    }, 
+                    },
                     {
-                        "label": "Sun Invisible", 
+                        "label": "Sun Invisible",
                         "name": "invisible"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "align": false, 
+                "align": false,
                 "attrs": [
                     {
                         "name": "sky_model"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "turbidity"
-                            }, 
+                            },
                             {
                                 "name": "ozone"
-                            }, 
+                            },
                             {
                                 "name": "intensity_multiplier"
-                            }, 
+                            },
                             {
                                 "name": "size_multiplier"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "horiz_illum"
-                            }, 
+                            },
                             {
                                 "name": "water_vapour"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

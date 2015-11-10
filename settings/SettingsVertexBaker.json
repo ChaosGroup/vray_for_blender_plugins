@@ -1,46 +1,46 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsVertexBaker", 
-    "Name": "SettingsVertexBaker", 
+    "Desciption": "",
+    "ID": "SettingsVertexBaker",
+    "Name": "SettingsVertexBaker",
     "Parameters": [
         {
-            "attr": "objects", 
-            "default": "", 
-            "desc": "", 
+            "attr": "objects",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "color_set_name", 
-            "default": "(null)", 
-            "desc": "", 
+            "attr": "color_set_name",
+            "default": "(null)",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "bake_rgb_color", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "bake_rgb_color",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bake_alpha", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "bake_alpha",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

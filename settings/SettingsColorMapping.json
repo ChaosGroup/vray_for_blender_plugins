@@ -1,156 +1,156 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsColorMapping", 
-    "Name": "SettingsColorMapping", 
+    "Desciption": "",
+    "ID": "SettingsColorMapping",
+    "Name": "SettingsColorMapping",
     "Parameters": [
         {
-            "attr": "type", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "type",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Linear", 
+                    "0",
+                    "Linear",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Exponential", 
+                    "1",
+                    "Exponential",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "HSV Exponential", 
+                    "2",
+                    "HSV Exponential",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Intensity Exponential", 
+                    "3",
+                    "Intensity Exponential",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Gamma Correction", 
+                    "4",
+                    "Gamma Correction",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "Intensity Gamma", 
+                    "5",
+                    "Intensity Gamma",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Reinhard", 
+                    "6",
+                    "Reinhard",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "affect_background", 
-            "default": true, 
-            "desc": "Affect colors belonging to the background", 
+            "attr": "affect_background",
+            "default": true,
+            "desc": "Affect colors belonging to the background",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "dark_mult", 
-            "default": 1, 
-            "desc": "Multiplier for dark colors", 
-            "name": "Dark multiplier", 
-            "type": "FLOAT", 
+            "attr": "dark_mult",
+            "default": 1,
+            "desc": "Multiplier for dark colors",
+            "name": "Dark multiplier",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bright_mult", 
-            "default": 1, 
-            "desc": "Multiplier for bright colors", 
-            "name": "Bright multiplier", 
-            "type": "FLOAT", 
+            "attr": "bright_mult",
+            "default": 1,
+            "desc": "Multiplier for bright colors",
+            "name": "Bright multiplier",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "gamma", 
-            "default": 1, 
-            "desc": "Gamma correction for the output image regardless of the color mapping mode", 
-            "type": "FLOAT", 
+            "attr": "gamma",
+            "default": 1,
+            "desc": "Gamma correction for the output image regardless of the color mapping mode",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subpixel_mapping", 
-            "default": false, 
-            "desc": "This option controls whether color mapping will be applied to the final image pixels, or to the individual sub-pixel samples", 
+            "attr": "subpixel_mapping",
+            "default": false,
+            "desc": "This option controls whether color mapping will be applied to the final image pixels, or to the individual sub-pixel samples",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "clamp_output", 
-            "default": false, 
-            "desc": "Clamp colors", 
+            "attr": "clamp_output",
+            "default": false,
+            "desc": "Clamp colors",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "clamp_level", 
-            "default": 1, 
-            "desc": "The level at which colors will be clamped", 
-            "type": "FLOAT", 
+            "attr": "clamp_level",
+            "default": 1,
+            "desc": "The level at which colors will be clamped",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "adaptation_only", 
-            "default": false, 
-            "desc": "When this parameter is on, the color mapping will not be applied to the final image, however V-Ray will proceed with all its calculations as though color mapping is applied (e.g. the noise levels will be corrected accordingly)", 
+            "attr": "adaptation_only",
+            "default": false,
+            "desc": "When this parameter is on, the color mapping will not be applied to the final image, however V-Ray will proceed with all its calculations as though color mapping is applied (e.g. the noise levels will be corrected accordingly)",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "linearWorkflow", 
-            "default": false, 
-            "desc": "When this option is checked V-Ray will automatically apply the inverse of the Gamma correction that you have set in the Gamma field to all materials in scene", 
+            "attr": "linearWorkflow",
+            "default": false,
+            "desc": "When this option is checked V-Ray will automatically apply the inverse of the Gamma correction that you have set in the Gamma field to all materials in scene",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "exposure", 
+            "attr": "exposure",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "Additional image exposure", 
+            ],
+            "desc": "Additional image exposure",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "input_gamma", 
-            "default": 1, 
-            "desc": "Input gamma for textures", 
-            "skip": true, 
-            "type": "FLOAT", 
+            "attr": "input_gamma",
+            "default": 1,
+            "desc": "Input gamma for textures",
+            "skip": true,
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

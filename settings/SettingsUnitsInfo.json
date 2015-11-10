@@ -1,56 +1,56 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsUnitsInfo", 
-    "Name": "SettingsUnitsInfo", 
+    "Desciption": "",
+    "ID": "SettingsUnitsInfo",
+    "Name": "SettingsUnitsInfo",
     "Parameters": [
         {
-            "attr": "meters_scale", 
-            "default": 1, 
-            "desc": "The number by which a 3d distance must be multiplied to covert it into meters", 
-            "type": "FLOAT", 
+            "attr": "meters_scale",
+            "default": 1,
+            "desc": "The number by which a 3d distance must be multiplied to covert it into meters",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "photometric_scale", 
-            "default": 0.001, 
-            "desc": "The number by which the power of photometric lights should be scaled when rendering", 
-            "type": "FLOAT", 
+            "attr": "photometric_scale",
+            "default": 0.001,
+            "desc": "The number by which the power of photometric lights should be scaled when rendering",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "scene_upDir", 
+            "attr": "scene_upDir",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 1
-            ], 
-            "desc": "The 'up' direction for the scene", 
+            ],
+            "desc": "The 'up' direction for the scene",
             "type": "VECTOR"
-        }, 
+        },
         {
-            "attr": "seconds_scale", 
-            "default": 1, 
-            "desc": "The number by which a scene time unit must be multiplied to convert it to seconds", 
-            "type": "FLOAT", 
+            "attr": "seconds_scale",
+            "default": 1,
+            "desc": "The number by which a scene time unit must be multiplied to convert it to seconds",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

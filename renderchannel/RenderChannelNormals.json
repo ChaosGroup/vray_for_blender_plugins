@@ -1,22 +1,22 @@
 {
-    "Desciption": "Normals", 
-    "ID": "RenderChannelNormals", 
-    "Name": "Normals", 
+    "Desciption": "Normals",
+    "ID": "RenderChannelNormals",
+    "Name": "Normals",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "Normals", 
-            "desc": "Channel name", 
+            "attr": "name",
+            "default": "Normals",
+            "desc": "Channel name",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "filtering", 
-            "default": false, 
-            "desc": "Filtering", 
+            "attr": "filtering",
+            "default": false,
+            "desc": "Filtering",
             "type": "BOOL"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

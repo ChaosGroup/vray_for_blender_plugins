@@ -1,22 +1,22 @@
 {
-    "Desciption": "", 
-    "ID": "FilterCookVariable", 
-    "Name": "Cook Variable", 
+    "Desciption": "",
+    "ID": "FilterCookVariable",
+    "Name": "Cook Variable",
     "Parameters": [
         {
-            "attr": "size", 
-            "default": 3, 
-            "desc": "Filter width", 
-            "type": "FLOAT", 
+            "attr": "size",
+            "default": 3,
+            "desc": "Filter width",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
@@ -24,7 +24,7 @@
                     {
                         "name": "size"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

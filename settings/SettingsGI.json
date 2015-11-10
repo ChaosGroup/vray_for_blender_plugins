@@ -1,256 +1,297 @@
 {
-    "Desciption": "Global illumination settings", 
-    "ID": "SettingsGI", 
-    "Name": "Global Illumination", 
+    "Desciption": "Global illumination settings",
+    "ID": "SettingsGI",
+    "Name": "Global Illumination",
     "Parameters": [
         {
-            "attr": "on", 
-            "default": false, 
-            "desc": "Enable Global Illumination", 
+            "attr": "on",
+            "default": false,
+            "desc": "Enable Global Illumination",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "refract_caustics", 
-            "default": true, 
-            "desc": "This allows indirect lighting to pass through transparent objects (glass etc)", 
+            "attr": "refract_caustics",
+            "default": true,
+            "desc": "This allows indirect lighting to pass through transparent objects (glass etc)",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reflect_caustics", 
-            "default": false, 
-            "desc": "This allows indirect light to be reflected from specular objects (mirrors etc)", 
+            "attr": "reflect_caustics",
+            "default": false,
+            "desc": "This allows indirect light to be reflected from specular objects (mirrors etc)",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "saturation", 
-            "default": 1, 
-            "desc": "Controls the saturation of the GI", 
-            "type": "FLOAT", 
+            "attr": "saturation",
+            "default": 1,
+            "desc": "Controls the saturation of the GI",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "contrast", 
-            "default": 1, 
-            "desc": "This parameter determines the base for the contrast boost", 
-            "type": "FLOAT", 
+            "attr": "contrast",
+            "default": 1,
+            "desc": "This parameter determines the base for the contrast boost",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "contrast_base", 
-            "default": 0.5, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "contrast_base",
+            "default": 0.5,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "primary_engine", 
-            "default": "0", 
-            "desc": "Primary diffuse bounces engines", 
+            "attr": "primary_engine",
+            "default": "0",
+            "desc": "Primary diffuse bounces engines",
             "items": [
                 [
-                    "0", 
-                    "Irradiance Map", 
+                    "0",
+                    "Irradiance Map",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Brute Force", 
+                    "2",
+                    "Brute Force",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Light Cache", 
+                    "3",
+                    "Light Cache",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Spherical Harmonics", 
+                    "4",
+                    "Spherical Harmonics",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "primary_multiplier", 
-            "default": 1, 
-            "desc": "This value determines how much primary diffuse bounces contribute to the final image illumination", 
-            "type": "FLOAT", 
+            "attr": "primary_multiplier",
+            "default": 1,
+            "desc": "This value determines how much primary diffuse bounces contribute to the final image illumination",
+            "type": "FLOAT",
             "ui": {
                 "min": 0.0
             }
-        }, 
+        },
         {
-            "attr": "secondary_engine", 
-            "default": "2", 
-            "desc": "Secondary diffuse bounces engines", 
+            "attr": "secondary_engine",
+            "default": "2",
+            "desc": "Secondary diffuse bounces engines",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Brute Force", 
+                    "2",
+                    "Brute Force",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Light Cache", 
+                    "3",
+                    "Light Cache",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "secondary_multiplier", 
-            "default": 1, 
-            "desc": "This determines the effect of secondary diffuse bounces on the scene illumination", 
-            "type": "FLOAT", 
+            "attr": "secondary_multiplier",
+            "default": 1,
+            "desc": "This determines the effect of secondary diffuse bounces on the scene illumination",
+            "type": "FLOAT",
             "ui": {
                 "min": 0.0
             }
-        }, 
+        },
         {
-            "attr": "ray_distance_on", 
-            "default": false, 
-            "desc": "Limit ray distance", 
-            "name": "Limit Ray Distance", 
+            "attr": "ray_distance_on",
+            "default": false,
+            "desc": "Limit ray distance",
+            "name": "Limit Ray Distance",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "ray_distance", 
-            "default": 100000, 
-            "desc": "Maximum ray distance", 
-            "type": "FLOAT", 
+            "attr": "ray_distance",
+            "default": 100000,
+            "desc": "Maximum ray distance",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ao_on", 
-            "default": false, 
-            "desc": "Use ambient occlusion", 
-            "name": "Use Ambient Occlusion", 
+            "attr": "ao_on",
+            "default": false,
+            "desc": "Use ambient occlusion",
+            "name": "Use Ambient Occlusion",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "ao_amount", 
-            "default": 0.8, 
-            "desc": "Ambient occlusion amount", 
-            "name": "AO Amount", 
-            "type": "FLOAT", 
+            "attr": "ao_amount",
+            "default": 0.8,
+            "desc": "Ambient occlusion amount",
+            "name": "AO Amount",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ao_radius", 
-            "default": 10, 
-            "desc": "Ambient occlusion radius", 
-            "name": "AO Radius", 
-            "type": "FLOAT", 
+            "attr": "ao_radius",
+            "default": 10,
+            "desc": "Ambient occlusion radius",
+            "name": "AO Radius",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ao_subdivs", 
-            "default": 8, 
-            "desc": "Ambient occlusion subdivs", 
-            "name": "AO Subdivs", 
-            "type": "INT", 
+            "attr": "ao_subdivs",
+            "default": 8,
+            "desc": "Ambient occlusion subdivs",
+            "name": "AO Subdivs",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
-                    { "name": "on" }
+                    {
+                        "name": "on"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "layout": "COLUMN",
-                "active": { "prop": "on" },
+                "active": {
+                    "prop": "on"
+                },
                 "attrs": [
-                    { "name": "primary_engine" },
-                    { "name": "primary_multiplier" },
-                    { "name": "secondary_engine" },
-                    { "name": "secondary_multiplier" }
+                    {
+                        "name": "primary_engine"
+                    },
+                    {
+                        "name": "primary_multiplier"
+                    },
+                    {
+                        "name": "secondary_engine"
+                    },
+                    {
+                        "name": "secondary_multiplier"
+                    }
                 ]
             },
-
             {
                 "layout": "COLUMN",
-                "active": { "prop": "on" },
+                "active": {
+                    "prop": "on"
+                },
                 "attrs": [
-                    { "name": "ray_distance_on" },
-                    { "name": "ray_distance" }
+                    {
+                        "name": "ray_distance_on"
+                    },
+                    {
+                        "name": "ray_distance"
+                    }
                 ]
             },
-
             {
                 "layout": "COLUMN",
-                "active": { "prop": "on" },
+                "active": {
+                    "prop": "on"
+                },
                 "attrs": [
-                    { "name": "refract_caustics" },
-                    { "name": "reflect_caustics" },
-                    { "name": "saturation" },
-                    { "name": "contrast" },
-                    { "name": "contrast_base" }
+                    {
+                        "name": "refract_caustics"
+                    },
+                    {
+                        "name": "reflect_caustics"
+                    },
+                    {
+                        "name": "saturation"
+                    },
+                    {
+                        "name": "contrast"
+                    },
+                    {
+                        "name": "contrast_base"
+                    }
                 ]
             },
-
             {
                 "attrs": [
-                    { "name": "ao_on" }
+                    {
+                        "name": "ao_on"
+                    }
                 ],
-                "active": { "prop": "on" },
+                "active": {
+                    "prop": "on"
+                },
                 "layout": "ROW"
             },
             {
                 "layout": "SPLIT",
-                "active": { "prop": "on" },
+                "active": {
+                    "prop": "on"
+                },
                 "splits": [
                     {
                         "layout": "COLUMN",
-                        "active": { "prop": "ao_on" },
+                        "active": {
+                            "prop": "ao_on"
+                        },
                         "attrs": [
-                            { "name": "ao_amount" },
-                            { "name": "ao_subdivs" },
-                            { "name": "ao_radius" }
+                            {
+                                "name": "ao_amount"
+                            },
+                            {
+                                "name": "ao_subdivs"
+                            },
+                            {
+                                "name": "ao_radius"
+                            }
                         ]
                     }
                 ]

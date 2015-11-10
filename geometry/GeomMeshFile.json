@@ -1,391 +1,409 @@
 {
-    "Desciption": "VRayProxy geomtery", 
-    "ID": "GeomMeshFile", 
-    "Name": "VRayProxy", 
+    "Desciption": "VRayProxy geomtery",
+    "ID": "GeomMeshFile",
+    "Name": "VRayProxy",
     "Parameters": [
         {
-            "attr": "file", 
-            "default": "", 
-            "desc": "", 
-            "subtype": "FILE_PATH", 
+            "attr": "file",
+            "default": "",
+            "desc": "",
+            "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "anim_type", 
-            "default": "0", 
-            "desc": "Animated proxy playback type", 
+            "attr": "anim_type",
+            "default": "0",
+            "desc": "Animated proxy playback type",
             "items": [
                 [
-                    "0", 
-                    "Loop", 
+                    "0",
+                    "Loop",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Once", 
+                    "1",
+                    "Once",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Ping-pong", 
+                    "2",
+                    "Ping-pong",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Still", 
+                    "3",
+                    "Still",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "anim_override", 
-            "default": false, 
-            "desc": "Controls if anim_start and anim_length are taken in consideration. Useful only, when the file name contains frame filter", 
+            "attr": "anim_override",
+            "default": false,
+            "desc": "Controls if anim_start and anim_length are taken in consideration. Useful only, when the file name contains frame filter",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "anim_speed", 
-            "default": 1, 
-            "desc": "Animated proxy playback speed", 
-            "type": "FLOAT", 
+            "attr": "anim_speed",
+            "default": 1,
+            "desc": "Animated proxy playback speed",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anim_offset", 
-            "default": 0, 
-            "desc": "Animated proxy initial frame offset", 
-            "type": "FLOAT", 
+            "attr": "anim_offset",
+            "default": 0,
+            "desc": "Animated proxy initial frame offset",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anim_start", 
-            "default": 0, 
-            "desc": "Specifies the first frame of the animation sequence", 
-            "type": "INT", 
+            "attr": "anim_start",
+            "default": 0,
+            "desc": "Specifies the first frame of the animation sequence",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anim_length", 
-            "default": 0, 
-            "desc": "Specifies the length of the animation sequence", 
-            "type": "INT", 
+            "attr": "anim_length",
+            "default": 0,
+            "desc": "Specifies the length of the animation sequence",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "primary_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "primary_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "scale", 
-            "default": 1, 
-            "desc": "Size scaling factor", 
-            "type": "FLOAT", 
+            "attr": "scale",
+            "default": 1,
+            "desc": "Size scaling factor",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flip_axis", 
-            "default": false, 
-            "desc": "Transform the proxy from Y-up to Z-up (and vice versa) coordinate system", 
+            "attr": "flip_axis",
+            "default": false,
+            "desc": "Transform the proxy from Y-up to Z-up (and vice versa) coordinate system",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "smooth_uv_borders", 
-            "default": true, 
-            "desc": "true to smooth UVs at mesh borders when rendering this mesh as a subdivision surface", 
+            "attr": "smooth_uv_borders",
+            "default": true,
+            "desc": "true to smooth UVs at mesh borders when rendering this mesh as a subdivision surface",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "smooth_uv", 
-            "default": true, 
-            "desc": "true to smooth UVs when rendering this mesh as a subdivision surface", 
+            "attr": "smooth_uv",
+            "default": true,
+            "desc": "true to smooth UVs when rendering this mesh as a subdivision surface",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "compute_normals", 
-            "default": true, 
-            "desc": "true to calculate smooth normals", 
+            "attr": "compute_normals",
+            "default": true,
+            "desc": "true to calculate smooth normals",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "smooth_angle", 
-            "default": 30, 
-            "desc": "smooth angle in degrees", 
-            "type": "FLOAT", 
+            "attr": "smooth_angle",
+            "default": 30,
+            "desc": "smooth angle in degrees",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "compute_bbox", 
-            "default": false, 
-            "desc": "true to compute the bounding box, false to read it from the file", 
+            "attr": "compute_bbox",
+            "default": false,
+            "desc": "true to compute the bounding box, false to read it from the file",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "num_preview_faces", 
-            "default": 10000, 
-            "desc": "number of faces in preview", 
-            "type": "INT", 
+            "attr": "num_preview_faces",
+            "default": 10000,
+            "desc": "number of faces in preview",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_face_sets", 
-            "default": true, 
-            "desc": "turn on/off face sets", 
+            "attr": "use_face_sets",
+            "default": true,
+            "desc": "turn on/off face sets",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use_full_names", 
-            "default": false, 
-            "desc": "read the full path instead of only the name", 
+            "attr": "use_full_names",
+            "default": false,
+            "desc": "read the full path instead of only the name",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "object_path", 
-            "default": "", 
-            "desc": "", 
+            "attr": "object_path",
+            "default": "",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "hair_width_multiplier", 
-            "default": 1, 
-            "desc": "Hair width multiplier", 
-            "type": "FLOAT", 
+            "attr": "hair_width_multiplier",
+            "default": 1,
+            "desc": "Hair width multiplier",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "visibility_lists_type", 
-            "default": "0", 
-            "desc": "Specifies the type of both names and ids lists", 
+            "attr": "visibility_lists_type",
+            "default": "0",
+            "desc": "Specifies the type of both names and ids lists",
             "items": [
                 [
-                    "0", 
-                    "Exclude", 
+                    "0",
+                    "Exclude",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Include", 
+                    "1",
+                    "Include",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "visibility_list_names", 
-            "default": "", 
-            "desc": "Visibility list of mesh names. Either include or exclude", 
+            "attr": "visibility_list_names",
+            "default": "",
+            "desc": "Visibility list of mesh names. Either include or exclude",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "visibility_list_ids", 
-            "default": "", 
-            "desc": "Visibility list of mesh ids. Either include or exclude", 
+            "attr": "visibility_list_ids",
+            "default": "",
+            "desc": "Visibility list of mesh ids. Either include or exclude",
             "type": "INT_LIST"
-        }, 
+        },
         {
-            "attr": "hair_visibility_lists_type", 
-            "default": "0", 
-            "desc": "Specifies the type of both names and ids lists", 
+            "attr": "hair_visibility_lists_type",
+            "default": "0",
+            "desc": "Specifies the type of both names and ids lists",
             "items": [
                 [
-                    "0", 
-                    "Exclude", 
+                    "0",
+                    "Exclude",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Include", 
+                    "1",
+                    "Include",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "hair_visibility_list_names", 
-            "default": "", 
-            "desc": "Visibility list of hair names. Either include or exclude", 
+            "attr": "hair_visibility_list_names",
+            "default": "",
+            "desc": "Visibility list of hair names. Either include or exclude",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "hair_visibility_list_ids", 
-            "default": "", 
-            "desc": "Visibility list of hair ids. Either include or exclude", 
+            "attr": "hair_visibility_list_ids",
+            "default": "",
+            "desc": "Visibility list of hair ids. Either include or exclude",
             "type": "INT_LIST"
-        }, 
+        },
         {
-            "attr": "proxy_attach_mode", 
-            "default": "NONE", 
-            "desc": "Proxy attach mode", 
+            "attr": "proxy_attach_mode",
+            "default": "NONE",
+            "desc": "Proxy attach mode",
             "items": [
                 [
-                    "NONE", 
-                    "None", 
+                    "NONE",
+                    "None",
                     "Don't attach proxy"
-                ], 
+                ],
                 [
-                    "NEW", 
-                    "New object", 
+                    "NEW",
+                    "New object",
                     "Attach proxy to new object"
-                ], 
+                ],
                 [
-                    "THIS", 
-                    "This object", 
+                    "THIS",
+                    "This object",
                     "Attach proxy to this object"
-                ], 
+                ],
                 [
-                    "REPLACE", 
-                    "Replace", 
+                    "REPLACE",
+                    "Replace",
                     "Replace this object with proxy"
                 ]
-            ], 
-            "skip": true, 
-            "available": ["BLENDER"],
+            ],
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "apply_transforms", 
-            "default": false, 
-            "desc": "Apply rotation, location and scale", 
-            "skip": true, 
-            "available": ["BLENDER"],
+            "attr": "apply_transforms",
+            "default": false,
+            "desc": "Apply rotation, location and scale",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "add_suffix", 
-            "default": true, 
-            "desc": "Add \"_proxy\" suffix to object and mesh names", 
-            "name": "Add suffix", 
-            "skip": true, 
-            "available": ["BLENDER"],
+            "attr": "add_suffix",
+            "default": true,
+            "desc": "Add \"_proxy\" suffix to object and mesh names",
+            "name": "Add suffix",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "animation", 
-            "default": false, 
-            "desc": "Animated proxy", 
-            "name": "Animation", 
-            "skip": true, 
+            "attr": "animation",
+            "default": false,
+            "desc": "Animated proxy",
+            "name": "Animation",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "dirpath", 
-            "default": "//proxy", 
-            "desc": "Proxy generation directory", 
-            "name": "Path", 
-            "skip": true, 
-            "subtype": "DIR_PATH", 
-            "available": ["BLENDER"],
+            "attr": "dirpath",
+            "default": "//proxy",
+            "desc": "Proxy generation directory",
+            "name": "Path",
+            "skip": true,
+            "subtype": "DIR_PATH",
+            "available": [
+                "BLENDER"
+            ],
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "add_velocity", 
-            "default": false, 
-            "desc": "This makes it possible to add motion blur to the final animation. However exporting this extra information takes longer. If you are not going to need motion blur it makes sense to disable this option", 
-            "name": "Add velocity", 
-            "skip": true, 
-            "available": ["BLENDER"],
+            "attr": "add_velocity",
+            "default": false,
+            "desc": "This makes it possible to add motion blur to the final animation. However exporting this extra information takes longer. If you are not going to need motion blur it makes sense to disable this option",
+            "name": "Add velocity",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "filename", 
-            "default": "", 
-            "desc": "Proxy file name. If empty object's name is used", 
-            "name": "Name", 
-            "skip": true, 
-            "available": ["BLENDER"],
+            "attr": "filename",
+            "default": "",
+            "desc": "Proxy file name. If empty object's name is used",
+            "name": "Name",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "animation_range", 
-            "default": "SCENE", 
-            "desc": "Animation range type", 
+            "attr": "animation_range",
+            "default": "SCENE",
+            "desc": "Animation range type",
             "items": [
                 [
-                    "MANUAL", 
-                    "Manual", 
+                    "MANUAL",
+                    "Manual",
                     "Set manually"
-                ], 
+                ],
                 [
-                    "SCENE", 
-                    "Scene", 
+                    "SCENE",
+                    "Scene",
                     "Get from scene"
                 ]
-            ], 
-            "name": "Animation range", 
-            "available": ["BLENDER"],
-            "skip": true, 
+            ],
+            "name": "Animation range",
+            "available": [
+                "BLENDER"
+            ],
+            "skip": true,
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "frame_start", 
-            "default": 1, 
-            "desc": "Proxy generation start frame", 
-            "name": "Start Frame", 
-            "skip": true, 
-            "available": ["BLENDER"],
-            "type": "INT", 
+            "attr": "frame_start",
+            "default": 1,
+            "desc": "Proxy generation start frame",
+            "name": "Start Frame",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
+            "type": "INT",
             "ui": {
-                "min": 1, 
+                "min": 1,
                 "soft_min": 1
             }
-        }, 
+        },
         {
-            "attr": "frame_end", 
-            "default": 250, 
-            "desc": "Proxy generation end frame", 
-            "name": "End Frame", 
-            "skip": true, 
-            "available": ["BLENDER"],
-            "type": "INT", 
+            "attr": "frame_end",
+            "default": 250,
+            "desc": "Proxy generation end frame",
+            "name": "End Frame",
+            "skip": true,
+            "available": [
+                "BLENDER"
+            ],
+            "type": "INT",
             "ui": {
-                "min": 1, 
+                "min": 1,
                 "soft_min": 1
             }
         }
-    ], 
-    "Type": "GEOMETRY", 
+    ],
+    "Type": "GEOMETRY",
     "Widget": {
         "widgets": [
             {
@@ -393,111 +411,111 @@
                     {
                         "name": "file"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "scale"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
-                                "label": "Type", 
+                                "label": "Type",
                                 "name": "anim_type"
-                            }, 
+                            },
                             {
-                                "label": "Override", 
+                                "label": "Override",
                                 "name": "anim_override"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "active": {
-                            "value": true, 
+                            "value": true,
                             "prop": "anim_override"
-                        }, 
-                        "align": true, 
+                        },
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Speed", 
+                                "label": "Speed",
                                 "name": "anim_speed"
-                            }, 
+                            },
                             {
-                                "label": "Offset", 
+                                "label": "Offset",
                                 "name": "anim_offset"
-                            }, 
+                            },
                             {
-                                "label": "Start", 
+                                "label": "Start",
                                 "name": "anim_start"
-                            }, 
+                            },
                             {
-                                "label": "Length", 
+                                "label": "Length",
                                 "name": "anim_length"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
                                 "name": "flip_axis"
-                            }, 
+                            },
                             {
                                 "name": "compute_bbox"
-                            }, 
+                            },
                             {
                                 "name": "smooth_uv"
-                            }, 
+                            },
                             {
                                 "name": "smooth_uv_borders"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "compute_normals"
-                            }, 
+                            },
                             {
                                 "active": {
                                     "prop": "compute_normals"
-                                }, 
-                                "label": "Angle", 
+                                },
+                                "label": "Angle",
                                 "name": "smooth_angle"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "primary_visibility"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

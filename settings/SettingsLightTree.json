@@ -1,40 +1,40 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsLightTree", 
-    "Name": "Light Tree", 
+    "Desciption": "",
+    "ID": "SettingsLightTree",
+    "Name": "Light Tree",
     "Parameters": [
         {
-            "attr": "on", 
-            "default": false, 
-            "desc": "", 
+            "attr": "on",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "solids_enabled", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "solids_enabled",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "build_quality", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "build_quality",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

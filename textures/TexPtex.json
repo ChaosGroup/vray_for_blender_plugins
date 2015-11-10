@@ -1,314 +1,314 @@
 {
-    "Desciption": "", 
-    "ID": "TexPtex", 
-    "Name": "Ptex", 
+    "Desciption": "",
+    "ID": "TexPtex",
+    "Name": "Ptex",
     "Parameters": [
         {
-            "attr": "ptex_file", 
-            "default": "", 
-            "desc": "The Ptex texture file", 
-            "subtype": "FILE_PATH", 
+            "attr": "ptex_file",
+            "default": "",
+            "desc": "The Ptex texture file",
+            "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "use_image_sequence", 
-            "default": false, 
-            "desc": "", 
+            "attr": "use_image_sequence",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "image_number", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "image_number",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "image_offset", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "image_offset",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ifl_start_frame", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "ifl_start_frame",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ifl_playback_rate", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "ifl_playback_rate",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ifl_end_condition", 
-            "default": "0", 
-            "desc": "Image file list (IFL) end condition", 
+            "attr": "ifl_end_condition",
+            "default": "0",
+            "desc": "Image file list (IFL) end condition",
             "items": [
                 [
-                    "0", 
-                    "Loop", 
+                    "0",
+                    "Loop",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Ping Pong", 
+                    "1",
+                    "Ping Pong",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Hold", 
+                    "2",
+                    "Hold",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "filter_type", 
-            "default": 0, 
-            "desc": "Type of filter used for the texture", 
-            "type": "INT", 
+            "attr": "filter_type",
+            "default": 0,
+            "desc": "Type of filter used for the texture",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "width", 
-            "default": 1, 
-            "desc": "width parameter used for filtering", 
-            "type": "FLOAT", 
+            "attr": "width",
+            "default": 1,
+            "desc": "width parameter used for filtering",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "blur", 
-            "default": 0, 
-            "desc": "blur parameter used for filtering", 
-            "type": "FLOAT", 
+            "attr": "blur",
+            "default": 0,
+            "desc": "blur parameter used for filtering",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "sharpness", 
-            "default": 0, 
-            "desc": "Sharpness parameter for the general bicubic filter", 
-            "type": "FLOAT", 
+            "attr": "sharpness",
+            "default": 0,
+            "desc": "Sharpness parameter for the general bicubic filter",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "lerp", 
-            "default": false, 
-            "desc": "Interpolation between mipmap levels", 
+            "attr": "lerp",
+            "default": false,
+            "desc": "Interpolation between mipmap levels",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reverse_vertices", 
-            "default": false, 
-            "desc": "Reverses the order of vertices", 
+            "attr": "reverse_vertices",
+            "default": false,
+            "desc": "Reverses the order of vertices",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "cache_size", 
-            "default": 50, 
-            "desc": "The size of the texture cache(in MB)", 
-            "type": "INT", 
+            "attr": "cache_size",
+            "default": 50,
+            "desc": "The size of the texture cache(in MB)",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "r_channel", 
-            "default": 0, 
-            "desc": "The index of the channel which will be used as a red channel", 
-            "type": "INT", 
+            "attr": "r_channel",
+            "default": 0,
+            "desc": "The index of the channel which will be used as a red channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "g_channel", 
-            "default": 1, 
-            "desc": "The index of the channel which will be used as a green channel", 
-            "type": "INT", 
+            "attr": "g_channel",
+            "default": 1,
+            "desc": "The index of the channel which will be used as a green channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "b_channel", 
-            "default": 2, 
-            "desc": "The index of the channel which will be used as a blue channel", 
-            "type": "INT", 
+            "attr": "b_channel",
+            "default": 2,
+            "desc": "The index of the channel which will be used as a blue channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "a_channel", 
-            "default": -1, 
-            "desc": "The index of the channel which will be used as a alpha channel", 
-            "type": "INT", 
+            "attr": "a_channel",
+            "default": -1,
+            "desc": "The index of the channel which will be used as a alpha channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "auto_color", 
-            "default": true, 
-            "desc": "Use automatic color channel selection", 
+            "attr": "auto_color",
+            "default": true,
+            "desc": "Use automatic color channel selection",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "auto_alpha", 
-            "default": true, 
-            "desc": "Use automatic alpha channel selection", 
+            "attr": "auto_alpha",
+            "default": true,
+            "desc": "Use automatic alpha channel selection",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "alpha_type", 
-            "default": "-1", 
-            "desc": "Where to take the alpha from", 
+            "attr": "alpha_type",
+            "default": "-1",
+            "desc": "Where to take the alpha from",
             "items": [
                 [
-                    "-1", 
-                    "-1", 
+                    "-1",
+                    "-1",
                     ""
-                ], 
+                ],
                 [
-                    "0", 
-                    "0", 
+                    "0",
+                    "0",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "1", 
+                    "1",
+                    "1",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "color_space", 
-            "default": "1", 
-            "desc": "Color space", 
+            "attr": "color_space",
+            "default": "1",
+            "desc": "Color space",
             "items": [
                 [
-                    "0", 
-                    "Linear", 
+                    "0",
+                    "Linear",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Gamma Corrected", 
+                    "1",
+                    "Gamma Corrected",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "sRGB", 
+                    "2",
+                    "sRGB",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "gamma", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "gamma",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "color_gain", 
+            "attr": "color_gain",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "A multiplier for the texture color", 
+            ],
+            "desc": "A multiplier for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_offset", 
+            "attr": "color_offset",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "An additional offset for the texture color", 
+            ],
+            "desc": "An additional offset for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "The final texture color", 
+            ],
+            "desc": "The final texture color",
             "type": "OUTPUT_TEXTURE"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": []
     }

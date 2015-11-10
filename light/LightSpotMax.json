@@ -1,536 +1,536 @@
 {
-    "Desciption": "", 
-    "ID": "LightSpotMax", 
-    "Name": "Spot (3ds max)", 
+    "Desciption": "",
+    "ID": "LightSpotMax",
+    "Name": "Spot (3ds max)",
     "Parameters": [
         {
-            "attr": "enabled", 
-            "default": true, 
-            "desc": "true if the light is casting light (turned on) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered", 
+            "attr": "enabled",
+            "default": true,
+            "desc": "true if the light is casting light (turned on) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "Color of the light", 
+            ],
+            "desc": "Color of the light",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "color_tex", 
+            "attr": "color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "A color texture that if present will override the color parameter", 
+            ],
+            "desc": "A color texture that if present will override the color parameter",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "shadows", 
-            "default": true, 
-            "desc": "true if the light casts shadows and false otherwise", 
+            "attr": "shadows",
+            "default": true,
+            "desc": "true if the light casts shadows and false otherwise",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "shadowColor", 
+            "attr": "shadowColor",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The shadow color. Anything but black is not physically accurate", 
+            ],
+            "desc": "The shadow color. Anything but black is not physically accurate",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "shadowColor_tex", 
+            "attr": "shadowColor_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "A color texture that if present will override the shadowColor parameter", 
+            ],
+            "desc": "A color texture that if present will override the shadowColor parameter",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "shadowBias", 
-            "default": 0, 
-            "desc": "Shadow offset from the surface. Helps to prevent polygonal shadow artifacts on low-poly surfaces", 
-            "type": "FLOAT", 
+            "attr": "shadowBias",
+            "default": 0,
+            "desc": "Shadow offset from the surface. Helps to prevent polygonal shadow artifacts on low-poly surfaces",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "photonSubdivs", 
-            "default": 500, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "photonSubdivs",
+            "default": 500,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "causticSubdivs", 
-            "default": 1000, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "causticSubdivs",
+            "default": 1000,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "diffuseMult", 
-            "default": 1, 
-            "desc": "Multiplier for the diffuse photons", 
-            "type": "FLOAT", 
+            "attr": "diffuseMult",
+            "default": 1,
+            "desc": "Multiplier for the diffuse photons",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "causticMult", 
-            "default": 1, 
-            "desc": "Multiplier for the caustic photons", 
-            "type": "FLOAT", 
+            "attr": "causticMult",
+            "default": 1,
+            "desc": "Multiplier for the caustic photons",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoffThreshold", 
-            "default": 0.001, 
-            "desc": "Light cut-off threshold (speed optimization). If the light intensity for a point is below this threshold, the light will not be computed", 
-            "type": "FLOAT", 
+            "attr": "cutoffThreshold",
+            "default": 0.001,
+            "desc": "Light cut-off threshold (speed optimization). If the light intensity for a point is below this threshold, the light will not be computed",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "affectDiffuse", 
-            "default": true, 
-            "desc": "true if the light produces diffuse lighting and false otherwise", 
+            "attr": "affectDiffuse",
+            "default": true,
+            "desc": "true if the light produces diffuse lighting and false otherwise",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "affectSpecular", 
-            "default": true, 
-            "desc": "true if the light produces specular hilights and false otherwise", 
+            "attr": "affectSpecular",
+            "default": true,
+            "desc": "true if the light produces specular hilights and false otherwise",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "bumped_below_surface_check", 
-            "default": false, 
-            "desc": "true if the bumped normal should be used to check if the light dir is below the surface", 
+            "attr": "bumped_below_surface_check",
+            "default": false,
+            "desc": "true if the bumped normal should be used to check if the light dir is below the surface",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "nsamples", 
-            "default": 0, 
-            "desc": "Number of parameter samples for motion blur", 
-            "type": "INT", 
+            "attr": "nsamples",
+            "default": 0,
+            "desc": "Number of parameter samples for motion blur",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "diffuse_contribution", 
-            "default": 1, 
-            "desc": "Diffuse contribution for the light", 
-            "type": "FLOAT", 
+            "attr": "diffuse_contribution",
+            "default": 1,
+            "desc": "Diffuse contribution for the light",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "specular_contribution", 
-            "default": 1, 
-            "desc": "Specular contribution for the light", 
-            "type": "FLOAT", 
+            "attr": "specular_contribution",
+            "default": 1,
+            "desc": "Specular contribution for the light",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "channels", 
-            "default": "", 
-            "desc": "Render channels the result of this light will be written to", 
+            "attr": "channels",
+            "default": "",
+            "desc": "Render channels the result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_raw", 
-            "default": "", 
-            "desc": "Render channels the raw diffuse result of this light will be written to", 
+            "attr": "channels_raw",
+            "default": "",
+            "desc": "Render channels the raw diffuse result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_diffuse", 
-            "default": "", 
-            "desc": "Render channels the diffuse result of this light will be written to", 
+            "attr": "channels_diffuse",
+            "default": "",
+            "desc": "Render channels the diffuse result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_specular", 
-            "default": "", 
-            "desc": "Render channels the specular result of this light will be written to", 
+            "attr": "channels_specular",
+            "default": "",
+            "desc": "Render channels the specular result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "use_global_light_level", 
-            "default": true, 
-            "desc": "true if the light should use the global light level setting", 
+            "attr": "use_global_light_level",
+            "default": true,
+            "desc": "true if the light should use the global light level setting",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "units", 
-            "default": "0", 
-            "desc": "Units for the intensity (0 - default, 1 - lumens, 2 - lm/m/m/sr, 3 - watts, 4 - w/m/m/sr)", 
+            "attr": "units",
+            "default": "0",
+            "desc": "Units for the intensity (0 - default, 1 - lumens, 2 - lm/m/m/sr, 3 - watts, 4 - w/m/m/sr)",
             "items": [
                 [
-                    "0", 
-                    "Default", 
+                    "0",
+                    "Default",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Lumens", 
+                    "1",
+                    "Lumens",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Lm/m/m/sr", 
+                    "2",
+                    "Lm/m/m/sr",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Watts", 
+                    "3",
+                    "Watts",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "W/m/m/sr", 
+                    "4",
+                    "W/m/m/sr",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "intensity", 
-            "default": 1, 
-            "desc": "Light intensity", 
-            "type": "FLOAT", 
+            "attr": "intensity",
+            "default": 1,
+            "desc": "Light intensity",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "intensity_tex", 
-            "default": 1.0, 
-            "desc": "A float texture that if present will override the intensity parameter", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "intensity_tex",
+            "default": 1.0,
+            "desc": "A float texture that if present will override the intensity parameter",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shadowRadius", 
-            "default": 0, 
-            "desc": "The size of the light; 0.0 is a point light, larger values produces soft (area) shadows", 
-            "type": "FLOAT", 
+            "attr": "shadowRadius",
+            "default": 0,
+            "desc": "The size of the light; 0.0 is a point light, larger values produces soft (area) shadows",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shadowRadius_tex", 
-            "default": 1.0, 
-            "desc": "A float texture that if present will override the shadows radius parameter", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "shadowRadius_tex",
+            "default": 1.0,
+            "desc": "A float texture that if present will override the shadows radius parameter",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "areaSpeculars", 
-            "default": false, 
-            "desc": "If true, the hilights will match the shape of the light; if false, hilights will always be calculated as from a point light", 
+            "attr": "areaSpeculars",
+            "default": false,
+            "desc": "If true, the hilights will match the shape of the light; if false, hilights will always be calculated as from a point light",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "shadowSubdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "shadowSubdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "storeWithIrradianceMap", 
-            "default": false, 
-            "desc": "", 
+            "attr": "storeWithIrradianceMap",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "projector_map", 
+            "attr": "projector_map",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "decay_type", 
-            "default": "0", 
-            "desc": "Decay type", 
+            "attr": "decay_type",
+            "default": "0",
+            "desc": "Decay type",
             "items": [
                 [
-                    "0", 
-                    "No Decay", 
+                    "0",
+                    "No Decay",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Linear", 
+                    "1",
+                    "Linear",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Square", 
+                    "2",
+                    "Square",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "decay_start", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "decay_start",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "near_attenuation", 
-            "default": false, 
-            "desc": "true to use near attenuation", 
+            "attr": "near_attenuation",
+            "default": false,
+            "desc": "true to use near attenuation",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "near_attenuation_start", 
-            "default": 0, 
-            "desc": "Near attenuation start", 
-            "type": "FLOAT", 
+            "attr": "near_attenuation_start",
+            "default": 0,
+            "desc": "Near attenuation start",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "near_attenuation_end", 
-            "default": 0, 
-            "desc": "Near attenuation end", 
-            "type": "FLOAT", 
+            "attr": "near_attenuation_end",
+            "default": 0,
+            "desc": "Near attenuation end",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "far_attenuation", 
-            "default": false, 
-            "desc": "true to use far attenuation", 
+            "attr": "far_attenuation",
+            "default": false,
+            "desc": "true to use far attenuation",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "far_attenuation_start", 
-            "default": 0, 
-            "desc": "far attenuation start", 
-            "type": "FLOAT", 
+            "attr": "far_attenuation_start",
+            "default": 0,
+            "desc": "far attenuation start",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "far_attenuation_end", 
-            "default": 0, 
-            "desc": "far attenuation end", 
-            "type": "FLOAT", 
+            "attr": "far_attenuation_end",
+            "default": 0,
+            "desc": "far attenuation end",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shadowShape", 
-            "default": "0", 
-            "desc": "Shape for soft shadows", 
+            "attr": "shadowShape",
+            "default": "0",
+            "desc": "Shape for soft shadows",
             "items": [
                 [
-                    "0", 
-                    "Box", 
+                    "0",
+                    "Box",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Sphere", 
+                    "1",
+                    "Sphere",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "shadowRadius1", 
-            "default": 0, 
-            "desc": "V-size for box shadows", 
-            "type": "FLOAT", 
+            "attr": "shadowRadius1",
+            "default": 0,
+            "desc": "V-size for box shadows",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shadowRadius2", 
-            "default": 0, 
-            "desc": "W-size for box shadows", 
-            "type": "FLOAT", 
+            "attr": "shadowRadius2",
+            "default": 0,
+            "desc": "W-size for box shadows",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "fallsize", 
-            "default": 1, 
-            "desc": "The entire spot cone, in radians", 
-            "type": "FLOAT", 
+            "attr": "fallsize",
+            "default": 1,
+            "desc": "The entire spot cone, in radians",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hotspot", 
-            "default": 0, 
-            "desc": "The hotspot", 
-            "type": "FLOAT", 
+            "attr": "hotspot",
+            "default": 0,
+            "desc": "The hotspot",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shape_type", 
-            "default": "0", 
-            "desc": "The shape of the beam", 
+            "attr": "shape_type",
+            "default": "0",
+            "desc": "The shape of the beam",
             "items": [
                 [
-                    "0", 
-                    "Circular", 
+                    "0",
+                    "Circular",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Rectangular", 
+                    "1",
+                    "Rectangular",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "rect_aspect", 
-            "default": 1, 
-            "desc": "Aspect for the rectangle shape", 
-            "type": "FLOAT", 
+            "attr": "rect_aspect",
+            "default": 1,
+            "desc": "Aspect for the rectangle shape",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "overshoot", 
-            "default": false, 
-            "desc": "true if the light is not limited in the beam", 
+            "attr": "overshoot",
+            "default": false,
+            "desc": "true if the light is not limited in the beam",
             "type": "BOOL"
         }
-    ], 
-    "Type": "LIGHT", 
+    ],
+    "Type": "LIGHT",
     "Widget": {
         "widgets": [
             {
@@ -538,243 +538,243 @@
                     {
                         "name": "enabled"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
                                 "name": "units"
-                            }, 
+                            },
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "color"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "attrs": [
                             {
                                 "name": "intensity"
-                            }, 
+                            },
                             {
                                 "name": "shadowSubdivs"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
                                 "name": "shape_type"
-                            }, 
+                            },
                             {
                                 "name": "rect_aspect"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Radius", 
+                                "label": "Radius",
                                 "name": "fallsize"
-                            }, 
+                            },
                             {
                                 "name": "hotspot"
-                            }, 
+                            },
                             {
                                 "name": "overshoot"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "shadows"
-                            }, 
+                            },
                             {
                                 "name": "shadowBias"
-                            }, 
+                            },
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "shadowColor"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "shadowShape"
-                            }, 
+                            },
                             {
-                                "label": "R U", 
+                                "label": "R U",
                                 "name": "shadowRadius1"
-                            }, 
+                            },
                             {
-                                "label": "R V", 
+                                "label": "R V",
                                 "name": "shadowRadius2"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "decay_type"
-                            }, 
+                            },
                             {
                                 "name": "decay_start"
-                            }, 
+                            },
                             {
                                 "name": "near_attenuation"
-                            }, 
+                            },
                             {
                                 "name": "far_attenuation"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Near Att. Start", 
+                                "label": "Near Att. Start",
                                 "name": "near_attenuation_start"
-                            }, 
+                            },
                             {
-                                "label": "Near Att. End", 
+                                "label": "Near Att. End",
                                 "name": "near_attenuation_end"
-                            }, 
+                            },
                             {
-                                "label": "Far Att. Start", 
+                                "label": "Far Att. Start",
                                 "name": "far_attenuation_start"
-                            }, 
+                            },
                             {
-                                "label": "Far Att. End", 
+                                "label": "Far Att. End",
                                 "name": "far_attenuation_end"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "photonSubdivs"
-                            }, 
+                            },
                             {
                                 "name": "diffuseMult"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "causticSubdivs"
-                            }, 
+                            },
                             {
                                 "name": "causticMult"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "storeWithIrradianceMap"
-                            }, 
+                            },
                             {
                                 "name": "bumped_below_surface_check"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "cutoffThreshold"
-                            }, 
+                            },
                             {
                                 "name": "nsamples"
-                            }, 
+                            },
                             {
                                 "name": "use_global_light_level"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "diffuse_contribution"
-                            }, 
+                            },
                             {
                                 "name": "specular_contribution"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "areaSpeculars"
-                            }, 
+                            },
                             {
                                 "name": "affectSpecular"
-                            }, 
+                            },
                             {
                                 "name": "affectDiffuse"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

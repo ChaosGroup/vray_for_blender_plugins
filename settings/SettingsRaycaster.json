@@ -1,108 +1,120 @@
 {
-    "Desciption": "Raycaster options", 
-    "ID": "SettingsRaycaster", 
-    "Name": "Raycaster", 
+    "Desciption": "Raycaster options",
+    "ID": "SettingsRaycaster",
+    "Name": "Raycaster",
     "Parameters": [
         {
-            "attr": "maxLevels", 
-            "default": 60, 
-            "desc": "Max. tree depth", 
-            "type": "INT", 
+            "attr": "maxLevels",
+            "default": 60,
+            "desc": "Max. tree depth",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "minLeafSize", 
-            "default": 0, 
-            "desc": "Min. voxel size", 
-            "type": "FLOAT", 
+            "attr": "minLeafSize",
+            "default": 0,
+            "desc": "Min. voxel size",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "faceLevelCoef", 
-            "default": 2, 
-            "desc": "Balance coefficient between depth and faces per voxel", 
-            "type": "FLOAT", 
+            "attr": "faceLevelCoef",
+            "default": 2,
+            "desc": "Balance coefficient between depth and faces per voxel",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dynMemLimit", 
-            "default": 4000, 
-            "desc": "Limit for dynamic geometry, in megabytes", 
-            "type": "INT", 
+            "attr": "dynMemLimit",
+            "default": 4000,
+            "desc": "Limit for dynamic geometry, in megabytes",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
             "attr": "embreeUse",
-            "name" : "Use Embree",
-            "default": false, 
-            "desc": "Enable/Disable using the embree ray caster", 
+            "name": "Use Embree",
+            "default": false,
+            "desc": "Enable/Disable using the embree ray caster",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "embreeUseMB", 
-            "name" : "Use Embree For Motion Blur",
+            "attr": "embreeUseMB",
+            "name": "Use Embree For Motion Blur",
             "default": true,
-            "desc": "Enable/disable using the embree ray caster for motion blur", 
+            "desc": "Enable/disable using the embree ray caster for motion blur",
             "type": "BOOL"
-        }, 
+        },
         {
             "attr": "embreeHair",
-            "name" : "Use Embree For Hair",
+            "name": "Use Embree For Hair",
             "default": true,
             "desc": "Use the Embree ray caster for hair",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "embreeLowMemory", 
-            "name" : "Embree Low Memory",
+            "attr": "embreeLowMemory",
+            "name": "Embree Low Memory",
             "default": true,
-            "desc": "Try to conserve memory, using potentially slower algorithms", 
+            "desc": "Try to conserve memory, using potentially slower algorithms",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "embreeRayPackets", 
-            "name" : "Embree Ray Packets",
+            "attr": "embreeRayPackets",
+            "name": "Embree Ray Packets",
             "default": true,
-            "desc": "Turn on the packet ray casting", 
+            "desc": "Turn on the packet ray casting",
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
-                    { "name": "embreeUse" }
+                    {
+                        "name": "embreeUse"
+                    }
                 ],
                 "layout": "COLUMN"
             },
             {
-                "active": { "prop": "embreeUse" },
+                "active": {
+                    "prop": "embreeUse"
+                },
                 "attrs": [
-                    { "name": "embreeHair" },
-                    { "name": "embreeUseMB" },
-                    { "name": "embreeRayPackets" },
-                    { "name": "embreeLowMemory" }
+                    {
+                        "name": "embreeHair"
+                    },
+                    {
+                        "name": "embreeUseMB"
+                    },
+                    {
+                        "name": "embreeRayPackets"
+                    },
+                    {
+                        "name": "embreeLowMemory"
+                    }
                 ],
                 "layout": "COLUMN"
             }

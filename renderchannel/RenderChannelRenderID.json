@@ -1,16 +1,16 @@
 {
-    "Desciption": "The object's render ID contributes the pixel value", 
-    "ID": "RenderChannelRenderID", 
-    "Name": "Render ID", 
+    "Desciption": "The object's render ID contributes the pixel value",
+    "ID": "RenderChannelRenderID",
+    "Name": "Render ID",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "Render ID", 
-            "desc": "Channel name", 
+            "attr": "name",
+            "default": "Render ID",
+            "desc": "Channel name",
             "type": "STRING"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

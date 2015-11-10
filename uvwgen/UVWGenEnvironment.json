@@ -1,198 +1,198 @@
 {
-    "Desciption": "", 
-    "ID": "UVWGenEnvironment", 
-    "Name": "Environment", 
+    "Desciption": "",
+    "ID": "UVWGenEnvironment",
+    "Name": "Environment",
     "Parameters": [
         {
-            "attr": "uvw_matrix", 
-            "default": null, 
-            "desc": "Transformation of the input directions", 
+            "attr": "uvw_matrix",
+            "default": null,
+            "desc": "Transformation of the input directions",
             "type": "MATRIX"
-        }, 
+        },
         {
-            "attr": "uvw_transform", 
-            "default": null, 
-            "desc": "Transformation of the resulting UVW coordinates", 
+            "attr": "uvw_transform",
+            "default": null,
+            "desc": "Transformation of the resulting UVW coordinates",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "mapping_type", 
-            "default": "spherical", 
-            "desc": "Mapping type", 
+            "attr": "mapping_type",
+            "default": "spherical",
+            "desc": "Mapping type",
             "items": [
                 [
-                    "angular", 
-                    "Angular", 
+                    "angular",
+                    "Angular",
                     ""
-                ], 
+                ],
                 [
-                    "cubic", 
-                    "Cubic", 
+                    "cubic",
+                    "Cubic",
                     ""
-                ], 
+                ],
                 [
-                    "spherical", 
-                    "Spherical", 
+                    "spherical",
+                    "Spherical",
                     ""
-                ], 
+                ],
                 [
-                    "mirror_ball", 
-                    "Mirror Ball", 
+                    "mirror_ball",
+                    "Mirror Ball",
                     ""
-                ], 
+                ],
                 [
-                    "screen", 
-                    "Screen", 
+                    "screen",
+                    "Screen",
                     ""
-                ], 
+                ],
                 [
-                    "max_spherical", 
-                    "Spherical (3ds max)", 
+                    "max_spherical",
+                    "Spherical (3ds max)",
                     ""
-                ], 
+                ],
                 [
-                    "spherical_vray", 
-                    "Spherical (V-Ray)", 
+                    "spherical_vray",
+                    "Spherical (V-Ray)",
                     ""
-                ], 
+                ],
                 [
-                    "max_cylindrical", 
-                    "Cylindrical (3ds max)", 
+                    "max_cylindrical",
+                    "Cylindrical (3ds max)",
                     ""
-                ], 
+                ],
                 [
-                    "max_shrink_wrap", 
-                    "Shrink Wrap (3ds max)", 
+                    "max_shrink_wrap",
+                    "Shrink Wrap (3ds max)",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "wrap_u", 
-            "default": "0", 
-            "desc": "Wrap U", 
+            "attr": "wrap_u",
+            "default": "0",
+            "desc": "Wrap U",
             "items": [
                 [
-                    "0", 
-                    "No Wrapping", 
+                    "0",
+                    "No Wrapping",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Wrap", 
+                    "1",
+                    "Wrap",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Mirror Tile", 
+                    "2",
+                    "Mirror Tile",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "wrap_v", 
-            "default": "0", 
-            "desc": "Wrap V", 
+            "attr": "wrap_v",
+            "default": "0",
+            "desc": "Wrap V",
             "items": [
                 [
-                    "0", 
-                    "No Wrapping", 
+                    "0",
+                    "No Wrapping",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Wrap", 
+                    "1",
+                    "Wrap",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Mirror Tile", 
+                    "2",
+                    "Mirror Tile",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "wrap_w", 
-            "default": "0", 
-            "desc": "Wrap W", 
+            "attr": "wrap_w",
+            "default": "0",
+            "desc": "Wrap W",
             "items": [
                 [
-                    "0", 
-                    "No Wrapping", 
+                    "0",
+                    "No Wrapping",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Wrap", 
+                    "1",
+                    "Wrap",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Mirror Tile", 
+                    "2",
+                    "Mirror Tile",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "crop_u", 
-            "default": false, 
-            "desc": "Crop in the u-direction", 
+            "attr": "crop_u",
+            "default": false,
+            "desc": "Crop in the u-direction",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "crop_v", 
-            "default": false, 
-            "desc": "Crop in the v-direction", 
+            "attr": "crop_v",
+            "default": false,
+            "desc": "Crop in the v-direction",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "crop_w", 
-            "default": false, 
-            "desc": "Crop in the w-direction", 
+            "attr": "crop_w",
+            "default": false,
+            "desc": "Crop in the w-direction",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "duvw_scale", 
-            "default": 1, 
-            "desc": "Additional scale factor for the texture derivatives", 
-            "type": "FLOAT", 
+            "attr": "duvw_scale",
+            "default": 1,
+            "desc": "Additional scale factor for the texture derivatives",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ground_on", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "ground_on",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ground_radius", 
-            "default": 1000, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "ground_radius",
+            "default": 1000,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "UVWGEN", 
+    ],
+    "Type": "UVWGEN",
     "Widget": {
         "widgets": []
     }

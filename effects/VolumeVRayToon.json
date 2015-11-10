@@ -1,171 +1,183 @@
 {
-    "Desciption": "", 
-    "ID": "VolumeVRayToon", 
-    "Name": "Toon", 
+    "Desciption": "",
+    "ID": "VolumeVRayToon",
+    "Name": "Toon",
     "Parameters": [
         {
-            "attr": "lineColor_tex", 
+            "attr": "lineColor_tex",
             "default": [
-                1.0, 
-                0.0, 
+                1.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Color", 
+            ],
+            "desc": "",
+            "name": "Color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "lineWidth_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "name": "Width", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "lineWidth_tex",
+            "default": 1.0,
+            "desc": "",
+            "name": "Width",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "opacity_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "name": "Opacity", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "opacity_tex",
+            "default": 1.0,
+            "desc": "",
+            "name": "Opacity",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distortion_tex", 
-            "default": 0.0, 
-            "desc": "", 
-            "name": "Distortion", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "distortion_tex",
+            "default": 0.0,
+            "desc": "",
+            "name": "Distortion",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "widthType", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "widthType",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Pixels", 
+                    "0",
+                    "Pixels",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "World", 
+                    "1",
+                    "World",
                     ""
                 ]
-            ], 
-            "name": "Width Type", 
+            ],
+            "name": "Width Type",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "hideInnerEdges", 
-            "default": false, 
-            "desc": "true : show outlines and not interior edges, false : show all edges", 
+            "attr": "hideInnerEdges",
+            "default": false,
+            "desc": "true : show outlines and not interior edges, false : show all edges",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "normalThreshold", 
-            "default": 0.7, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "normalThreshold",
+            "default": 0.7,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "overlapThreshold", 
-            "default": 0.95, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "overlapThreshold",
+            "default": 0.95,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "traceBias", 
-            "default": 0.2, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "traceBias",
+            "default": 0.2,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "doSecondaryRays", 
-            "default": false, 
-            "desc": "true : show toon lines in reflections", 
+            "attr": "doSecondaryRays",
+            "default": false,
+            "desc": "true : show toon lines in reflections",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "excludeType", 
-            "default": "0", 
-            "desc": "Exclude list behavior", 
+            "attr": "excludeType",
+            "default": "0",
+            "desc": "Exclude list behavior",
             "items": [
                 [
-                    "0", 
-                    "Exclude", 
+                    "0",
+                    "Exclude",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Include", 
+                    "1",
+                    "Include",
                     ""
                 ]
-            ], 
-            "name": "List Type", 
+            ],
+            "name": "List Type",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "compensateExposure", 
-            "default": true, 
-            "desc": "Compensate VRay physical camera exposure", 
+            "attr": "compensateExposure",
+            "default": true,
+            "desc": "Compensate VRay physical camera exposure",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "excludeList", 
-            "default": "", 
-            "desc": "", 
-            "name": "List", 
-            "skip": true, 
+            "attr": "excludeList",
+            "default": "",
+            "desc": "",
+            "name": "List",
+            "skip": true,
             "type": "PLUGIN"
         }
-    ], 
-    "Type": "EFFECT", 
+    ],
+    "Type": "EFFECT",
     "Widget": {
         "widgets": [
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "normalThreshold" },
-                    { "name": "overlapThreshold" },
-                    { "name": "traceBias" },
-                    { "name": "hideInnerEdges" },
-                    { "name": "doSecondaryRays" },
-                    { "name": "compensateExposure" }
+                    {
+                        "name": "normalThreshold"
+                    },
+                    {
+                        "name": "overlapThreshold"
+                    },
+                    {
+                        "name": "traceBias"
+                    },
+                    {
+                        "name": "hideInnerEdges"
+                    },
+                    {
+                        "name": "doSecondaryRays"
+                    },
+                    {
+                        "name": "compensateExposure"
+                    }
                 ]
             }
         ],
@@ -173,8 +185,14 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "widthType", "label": "Width" },
-                    { "name": "excludeType", "label": "List" }
+                    {
+                        "name": "widthType",
+                        "label": "Width"
+                    },
+                    {
+                        "name": "excludeType",
+                        "label": "List"
+                    }
                 ]
             }
         ]

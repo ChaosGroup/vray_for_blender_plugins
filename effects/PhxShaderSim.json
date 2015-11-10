@@ -88,11 +88,31 @@
             "desc": "0-texture; 1-T; 2-Sim; 3-V; 10-fuel",
             "type": "ENUM",
             "items": [
-                ["0", "Texture", ""],
-                ["1", "T", ""],
-                ["2", "Sim", ""],
-                ["3", "V", ""],
-                ["10", "Fuel", ""]
+                [
+                    "0",
+                    "Texture",
+                    ""
+                ],
+                [
+                    "1",
+                    "T",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sim",
+                    ""
+                ],
+                [
+                    "3",
+                    "V",
+                    ""
+                ],
+                [
+                    "10",
+                    "Fuel",
+                    ""
+                ]
             ]
         },
         {
@@ -343,9 +363,21 @@
             "desc": "Sampler",
             "type": "ENUM",
             "items": [
-                ["0", "Trunc", ""],
-                ["1", "Linear", ""],
-                ["2", "Spherical", ""]
+                [
+                    "0",
+                    "Trunc",
+                    ""
+                ],
+                [
+                    "1",
+                    "Linear",
+                    ""
+                ],
+                [
+                    "2",
+                    "Spherical",
+                    ""
+                ]
             ]
         },
         {
@@ -402,10 +434,26 @@
             "desc": "No Scatter",
             "type": "ENUM",
             "items": [
-                ["0", "Enabled", ""],
-                ["1", "Disabled", ""],
-                ["2", "Analytic", ""],
-                ["3", "Analytic + Shadows", ""]
+                [
+                    "0",
+                    "Enabled",
+                    ""
+                ],
+                [
+                    "1",
+                    "Disabled",
+                    ""
+                ],
+                [
+                    "2",
+                    "Analytic",
+                    ""
+                ],
+                [
+                    "3",
+                    "Analytic + Shadows",
+                    ""
+                ]
             ]
         },
         {
@@ -576,12 +624,36 @@
             "desc": "",
             "type": "ENUM",
             "items": [
-                ["0", "Disabled", ""],
-                ["1", "T", ""],
-                ["2", "Sim", ""],
-                ["3", "V", ""],
-                ["4", "Texture", ""],
-                ["10", "Fuel", ""]
+                [
+                    "0",
+                    "Disabled",
+                    ""
+                ],
+                [
+                    "1",
+                    "T",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sim",
+                    ""
+                ],
+                [
+                    "3",
+                    "V",
+                    ""
+                ],
+                [
+                    "4",
+                    "Texture",
+                    ""
+                ],
+                [
+                    "10",
+                    "Fuel",
+                    ""
+                ]
             ]
         },
         {
@@ -699,13 +771,41 @@
             "desc": "",
             "type": "ENUM",
             "items": [
-                ["0", "Disabled", ""],
-                ["1", "T", ""],
-                ["2", "Sim", ""],
-                ["3", "V", ""],
-                ["4", "Texture", ""],
-                ["5", "Color", ""],
-                ["10", "Fuel", ""]
+                [
+                    "0",
+                    "Disabled",
+                    ""
+                ],
+                [
+                    "1",
+                    "T",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sim",
+                    ""
+                ],
+                [
+                    "3",
+                    "V",
+                    ""
+                ],
+                [
+                    "4",
+                    "Texture",
+                    ""
+                ],
+                [
+                    "5",
+                    "Color",
+                    ""
+                ],
+                [
+                    "10",
+                    "Fuel",
+                    ""
+                ]
             ]
         },
         {
@@ -794,12 +894,36 @@
             "desc": "0-simple smoke; 1-T; 2-Sm; 3-V; 4-texture; 10-fuel",
             "type": "ENUM",
             "items": [
-                ["0", "Smoke", ""],
-                ["1", "T", ""],
-                ["2", "Sim", ""],
-                ["3", "V", ""],
-                ["4", "Texture", ""],
-                ["10", "Fuel", ""]
+                [
+                    "0",
+                    "Smoke",
+                    ""
+                ],
+                [
+                    "1",
+                    "T",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sim",
+                    ""
+                ],
+                [
+                    "3",
+                    "V",
+                    ""
+                ],
+                [
+                    "4",
+                    "Texture",
+                    ""
+                ],
+                [
+                    "10",
+                    "Fuel",
+                    ""
+                ]
             ]
         },
         {
@@ -898,8 +1022,16 @@
             "desc": "Velocity",
             "type": "ENUM",
             "items": [
-                ["0", "Normal Velocity", ""],
-                ["1", "Texture", ""]
+                [
+                    "0",
+                    "Normal Velocity",
+                    ""
+                ],
+                [
+                    "1",
+                    "Texture",
+                    ""
+                ]
             ]
         },
         {
@@ -1001,8 +1133,16 @@
             "desc": "emissive lights placement type, 0-simple, 1-inside",
             "type": "ENUM",
             "items": [
-                ["0", "Simple", ""],
-                ["1", "Inside", ""]
+                [
+                    "0",
+                    "Simple",
+                    ""
+                ],
+                [
+                    "1",
+                    "Inside",
+                    ""
+                ]
             ]
         },
         {
@@ -1011,8 +1151,16 @@
             "desc": "sampling type, 0-simple, 1-DMC",
             "type": "ENUM",
             "items": [
-                ["0", "Simple", ""],
-                ["1", "DMC", ""]
+                [
+                    "0",
+                    "Simple",
+                    ""
+                ],
+                [
+                    "1",
+                    "DMC",
+                    ""
+                ]
             ]
         },
         {
@@ -1295,16 +1443,15 @@
                 "soft_min": 0
             }
         },
-
         {
             "attr": "dcolor_ramp",
             "default": "",
             "desc": "D Color",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"         : "dcolor_colors",
-                "positions"      : "dcolor_positions",
-                "interpolations" : "dcolor_interpolations"
+                "colors": "dcolor_colors",
+                "positions": "dcolor_positions",
+                "interpolations": "dcolor_interpolations"
             }
         },
         {
@@ -1313,9 +1460,9 @@
             "desc": "E Color",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"         : "ecolor_colors",
-                "positions"      : "ecolor_positions",
-                "interpolations" : "ecolor_interpolations"
+                "colors": "ecolor_colors",
+                "positions": "ecolor_positions",
+                "interpolations": "ecolor_interpolations"
             }
         },
         {
@@ -1324,9 +1471,9 @@
             "desc": "E Curve",
             "type": "WIDGET_CURVE",
             "attrs": {
-                "values"         : "elum_values",
-                "positions"      : "elum_positions",
-                "interpolations" : "elum_interpolations"
+                "values": "elum_values",
+                "positions": "elum_positions",
+                "interpolations": "elum_interpolations"
             }
         },
         {
@@ -1335,9 +1482,9 @@
             "desc": "Transparency Curve",
             "type": "WIDGET_CURVE",
             "attrs": {
-                "values"         : "transp_values",
-                "positions"      : "transp_positions",
-                "interpolations" : "transp_interpolations"
+                "values": "transp_values",
+                "positions": "transp_positions",
+                "interpolations": "transp_interpolations"
             }
         }
     ],

@@ -1,242 +1,269 @@
 {
-    "Desciption": "Projection mapping", 
-    "ID": "UVWGenProjection", 
-    "Name": "Projection", 
+    "Desciption": "Projection mapping",
+    "ID": "UVWGenProjection",
+    "Name": "Projection",
     "Parameters": [
         {
-            "attr": "uvw_transform", 
-            "default": "", 
-            "desc": "", 
+            "attr": "uvw_transform",
+            "default": "",
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "uvw_transform_tex", 
-            "default": "", 
-            "desc": "", 
+            "attr": "uvw_transform_tex",
+            "default": "",
+            "desc": "",
             "type": "TRANSFORM_TEXTURE"
-        }, 
+        },
         {
-            "attr": "tex_transform", 
-            "default": "", 
-            "desc": "", 
+            "attr": "tex_transform",
+            "default": "",
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "camera_settings", 
-            "default": "", 
-            "desc": "", 
+            "attr": "camera_settings",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "camera_view", 
-            "default": "", 
-            "desc": "", 
+            "attr": "camera_view",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "bitmap", 
-            "default": "", 
-            "desc": "If we are projecting a bitmap, this is the bitmap's buffer, we need it to implement vertical/horizontal fit", 
+            "attr": "bitmap",
+            "default": "",
+            "desc": "If we are projecting a bitmap, this is the bitmap's buffer, we need it to implement vertical/horizontal fit",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "type", 
-            "default": "1", 
-            "desc": "Mapping type", 
+            "attr": "type",
+            "default": "1",
+            "desc": "Mapping type",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Planar", 
+                    "1",
+                    "Planar",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Spherical", 
+                    "2",
+                    "Spherical",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Cylindrical", 
+                    "3",
+                    "Cylindrical",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Ball", 
+                    "4",
+                    "Ball",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "Cubic", 
+                    "5",
+                    "Cubic",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Triplanar", 
+                    "6",
+                    "Triplanar",
                     ""
-                ], 
+                ],
                 [
-                    "8", 
-                    "Perspective", 
+                    "8",
+                    "Perspective",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "fitfill", 
-            "default": "0", 
-            "desc": "Fit fill", 
+            "attr": "fitfill",
+            "default": "0",
+            "desc": "Fit fill",
             "items": [
                 [
-                    "0", 
-                    "Fit Fill", 
+                    "0",
+                    "Fit Fill",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Horizontal", 
+                    "1",
+                    "Horizontal",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Vertical", 
+                    "2",
+                    "Vertical",
                     ""
                 ]
-            ], 
-            "name": "Fit Fill", 
+            ],
+            "name": "Fit Fill",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "fittype", 
-            "default": "0", 
-            "desc": "Fit type", 
+            "attr": "fittype",
+            "default": "0",
+            "desc": "Fit type",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Match camera film gate", 
+                    "1",
+                    "Match camera film gate",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Match camera resolution", 
+                    "2",
+                    "Match camera resolution",
                     ""
                 ]
-            ], 
-            "name": "Fit Type", 
+            ],
+            "name": "Fit Type",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "u_angle", 
-            "default": 3.14159, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "u_angle",
+            "default": 3.14159,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "v_angle", 
-            "default": 1.5708, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "v_angle",
+            "default": 1.5708,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "film_gate_w", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "film_gate_w",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "film_gate_h", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "film_gate_h",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hide_backface", 
-            "default": false, 
-            "desc": "Determine whether to project on back faces of polygons when in perspective mode", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "hide_occluded", 
-            "default": false, 
-            "desc": "Determine whether to project on occluded points when in perspective mode", 
+            "attr": "hide_backface",
+            "default": false,
+            "desc": "Determine whether to project on back faces of polygons when in perspective mode",
             "type": "BOOL"
         },
         {
-            "attr": "object_space", 
-            "default": true, 
-            "desc": "If true the projection will be applied in the object space of the currently shaded geometry", 
+            "attr": "hide_occluded",
+            "default": false,
+            "desc": "Determine whether to project on occluded points when in perspective mode",
+            "type": "BOOL"
+        },
+        {
+            "attr": "object_space",
+            "default": true,
+            "desc": "If true the projection will be applied in the object space of the currently shaded geometry",
             "type": "BOOL"
         }
-    ], 
-    "Type": "UVWGEN", 
+    ],
+    "Type": "UVWGEN",
     "Widget": {
         "widgets": [
-            {   "layout" : "COLUMN",
-                "attrs" : [
-                    { "name" : "type" },
-                    { "name" : "fitfill" },
-                    { "name" : "fittype" }
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    {
+                        "name": "type"
+                    },
+                    {
+                        "name": "fitfill"
+                    },
+                    {
+                        "name": "fittype"
+                    }
                 ]
             },
-            {   "layout" : "SEPARATOR" },
-            {   "layout" : "ROW",
-                "align" : true,
-                "attrs" : [
-                    { "name" : "u_angle" },
-                    { "name" : "v_angle" }
+            {
+                "layout": "SEPARATOR"
+            },
+            {
+                "layout": "ROW",
+                "align": true,
+                "attrs": [
+                    {
+                        "name": "u_angle"
+                    },
+                    {
+                        "name": "v_angle"
+                    }
                 ]
             },
-            {   "layout" : "ROW",
-                "align" : true,
-                "attrs" : [
-                    { "name" : "film_gate_w" },
-                    { "name" : "film_gate_h" }
+            {
+                "layout": "ROW",
+                "align": true,
+                "attrs": [
+                    {
+                        "name": "film_gate_w"
+                    },
+                    {
+                        "name": "film_gate_h"
+                    }
                 ]
             },
-            {   "layout" : "ROW",
-                "align" : true,
-                "attrs" : [
-                    { "name" : "hide_backface" },
-                    { "name" : "hide_occluded" }
+            {
+                "layout": "ROW",
+                "align": true,
+                "attrs": [
+                    {
+                        "name": "hide_backface"
+                    },
+                    {
+                        "name": "hide_occluded"
+                    }
                 ]
             },
-            {   "layout" : "COLUMN",
-                "attrs" : [
-                    { "name" : "object_space" }
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    {
+                        "name": "object_space"
+                    }
                 ]
             }
         ]

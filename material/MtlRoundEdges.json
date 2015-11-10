@@ -1,28 +1,28 @@
 {
-    "Desciption": "", 
-    "ID": "MtlRoundEdges", 
-    "Name": "Round Edges", 
+    "Desciption": "",
+    "ID": "MtlRoundEdges",
+    "Name": "Round Edges",
     "Parameters": [
         {
-            "attr": "base_mtl", 
-            "default": "", 
-            "desc": "Base material", 
+            "attr": "base_mtl",
+            "default": "",
+            "desc": "Base material",
             "type": "MATERIAL"
-        }, 
+        },
         {
-            "attr": "radius", 
-            "default": 1.0, 
-            "desc": "Rounding radius", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "radius",
+            "default": 1.0,
+            "desc": "Rounding radius",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

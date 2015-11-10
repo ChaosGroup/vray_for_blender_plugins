@@ -1,39 +1,39 @@
 {
-    "Desciption": "", 
-    "ID": "RenderChannelDRBucket", 
-    "Name": "DR Bucket", 
+    "Desciption": "",
+    "ID": "RenderChannelDRBucket",
+    "Name": "DR Bucket",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "DR", 
-            "desc": "", 
+            "attr": "name",
+            "default": "DR",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "text_alignment", 
-            "default": "1", 
-            "desc": "", 
+            "attr": "text_alignment",
+            "default": "1",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Left", 
+                    "0",
+                    "Left",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Center", 
+                    "1",
+                    "Center",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Right", 
+                    "2",
+                    "Right",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

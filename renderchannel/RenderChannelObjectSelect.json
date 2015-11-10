@@ -1,47 +1,47 @@
 {
-    "Desciption": "", 
-    "ID": "RenderChannelObjectSelect", 
-    "Name": "Object Select", 
+    "Desciption": "",
+    "ID": "RenderChannelObjectSelect",
+    "Name": "Object Select",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "Object Select", 
-            "desc": "", 
+            "attr": "name",
+            "default": "Object Select",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "id", 
-            "default": 0, 
-            "desc": "The object/material ID that will be extracted", 
-            "type": "INT", 
+            "attr": "id",
+            "default": 0,
+            "desc": "The object/material ID that will be extracted",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_mtl_id", 
-            "default": false, 
-            "desc": "Use the material IDs instead of the object IDs", 
+            "attr": "use_mtl_id",
+            "default": false,
+            "desc": "Use the material IDs instead of the object IDs",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "affect_matte_objects", 
-            "default": true, 
-            "desc": "Affect Matte Objects", 
+            "attr": "affect_matte_objects",
+            "default": true,
+            "desc": "Affect Matte Objects",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "consider_for_aa", 
-            "default": false, 
-            "desc": "Consider this render element for antialiasing (may slow down rendering)", 
-            "name": "Consider For AA", 
+            "attr": "consider_for_aa",
+            "default": false,
+            "desc": "Consider this render element for antialiasing (may slow down rendering)",
+            "name": "Consider For AA",
             "type": "BOOL"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

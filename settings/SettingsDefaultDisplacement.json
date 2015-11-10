@@ -1,70 +1,70 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsDefaultDisplacement", 
-    "Name": "Default Displacement", 
+    "Desciption": "",
+    "ID": "SettingsDefaultDisplacement",
+    "Name": "Default Displacement",
     "Parameters": [
         {
-            "attr": "override_on", 
-            "default": false, 
-            "desc": "Override settings globally", 
+            "attr": "override_on",
+            "default": false,
+            "desc": "Override settings globally",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "edgeLength", 
-            "default": 4, 
-            "desc": "Max. height", 
-            "type": "FLOAT", 
+            "attr": "edgeLength",
+            "default": 4,
+            "desc": "Max. height",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "viewDependent", 
-            "default": true, 
-            "desc": "Determines if view-dependent tesselation is used", 
+            "attr": "viewDependent",
+            "default": true,
+            "desc": "Determines if view-dependent tesselation is used",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "maxSubdivs", 
-            "default": 256, 
-            "desc": "Determines the maximum subdivisions for a triangle of the original mesh", 
-            "type": "INT", 
+            "attr": "maxSubdivs",
+            "default": 256,
+            "desc": "Determines the maximum subdivisions for a triangle of the original mesh",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "tightBounds", 
-            "default": true, 
-            "desc": "When this is on, initialization will be slower, but tighter bounds will be computed for the displaced triangles making rendering faster", 
+            "attr": "tightBounds",
+            "default": true,
+            "desc": "When this is on, initialization will be slower, but tighter bounds will be computed for the displaced triangles making rendering faster",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "amount", 
-            "default": 1, 
-            "desc": "Determines the displacement amount for white areas in the displacement map", 
-            "type": "FLOAT", 
+            "attr": "amount",
+            "default": 1,
+            "desc": "Determines the displacement amount for white areas in the displacement map",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "relative", 
-            "default": false, 
-            "desc": "", 
+            "attr": "relative",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

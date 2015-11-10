@@ -1,127 +1,135 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsCamera", 
-    "Name": "Camera", 
+    "Desciption": "",
+    "ID": "SettingsCamera",
+    "Name": "Camera",
     "Parameters": [
         {
-            "attr": "type", 
-            "default": "0", 
-            "desc": "Camera typ", 
+            "attr": "type",
+            "default": "0",
+            "desc": "Camera typ",
             "items": [
                 [
-                    "0", 
-                    "Default", 
-                    ""
-                ], 
-                [
-                    "1", 
-                    "Spherifical", 
-                    ""
-                ], 
-                [
-                    "2", 
-                    "Cylindrical (Point)", 
-                    ""
-                ], 
-                [
-                    "3", 
-                    "Cylindrical (Ortho)", 
-                    ""
-                ], 
-                [
-                    "4", 
-                    "Box", 
-                    ""
-                ], 
-                [
-                    "5", 
-                    "Fish-Eye", 
-                    ""
-                ], 
-                [
-                    "6", 
-                    "Warped Spherical", 
-                    ""
-                ], 
-                [
-                    "7", 
-                    "Orthogonal", 
-                    ""
-                ], 
-                [
-                    "8", 
-                    "Pinhole", 
+                    "0",
+                    "Default",
                     ""
                 ],
-                [ "9",  "Spherical Panorama", "" ],
-                [ "10", "Cube 6x1", "" ]
-            ], 
+                [
+                    "1",
+                    "Spherifical",
+                    ""
+                ],
+                [
+                    "2",
+                    "Cylindrical (Point)",
+                    ""
+                ],
+                [
+                    "3",
+                    "Cylindrical (Ortho)",
+                    ""
+                ],
+                [
+                    "4",
+                    "Box",
+                    ""
+                ],
+                [
+                    "5",
+                    "Fish-Eye",
+                    ""
+                ],
+                [
+                    "6",
+                    "Warped Spherical",
+                    ""
+                ],
+                [
+                    "7",
+                    "Orthogonal",
+                    ""
+                ],
+                [
+                    "8",
+                    "Pinhole",
+                    ""
+                ],
+                [
+                    "9",
+                    "Spherical Panorama",
+                    ""
+                ],
+                [
+                    "10",
+                    "Cube 6x1",
+                    ""
+                ]
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "height", 
-            "default": 400, 
-            "desc": "Height of the cylindrical (ortho) camera", 
-            "type": "FLOAT", 
+            "attr": "height",
+            "default": 400,
+            "desc": "Height of the cylindrical (ortho) camera",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dist", 
-            "default": 2, 
-            "desc": "Applies only to fish-eye camera. Controls distance to the sphere center", 
-            "type": "FLOAT", 
+            "attr": "dist",
+            "default": 2,
+            "desc": "Applies only to fish-eye camera. Controls distance to the sphere center",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "fov", 
-            "default": 0.785398, 
-            "desc": "Field of view; if negative, the field of view will not be modified", 
-            "type": "FLOAT", 
+            "attr": "fov",
+            "default": 0.785398,
+            "desc": "Field of view; if negative, the field of view will not be modified",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "auto_fit", 
-            "default": true, 
-            "desc": "The auto-fit option of the fish-eye camera", 
+            "attr": "auto_fit",
+            "default": true,
+            "desc": "The auto-fit option of the fish-eye camera",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "curve", 
-            "default": 1, 
-            "desc": "Controls the way the rendered images is warped. Applies only to fish-eye camera", 
-            "type": "FLOAT", 
+            "attr": "curve",
+            "default": 1,
+            "desc": "Controls the way the rendered images is warped. Applies only to fish-eye camera",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dont_affect_settings", 
-            "default": false, 
-            "desc": "This is here so we can suppress a SettingsCamera node from affecting the main VRayRenderer sequence and frame data", 
+            "attr": "dont_affect_settings",
+            "default": false,
+            "desc": "This is here so we can suppress a SettingsCamera node from affecting the main VRayRenderer sequence and frame data",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "image_planes", 
-            "default": "", 
-            "desc": "Used only to force a re-export of the image plane geometry in RT rendering", 
+            "attr": "image_planes",
+            "default": "",
+            "desc": "Used only to force a re-export of the image plane geometry in RT rendering",
             "type": "PLUGIN"
         },
         {
@@ -131,8 +139,8 @@
             "desc": "Override FOV",
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

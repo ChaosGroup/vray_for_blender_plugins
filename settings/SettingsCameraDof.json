@@ -1,107 +1,107 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsCameraDof", 
-    "Name": "SettingsCameraDof", 
+    "Desciption": "",
+    "ID": "SettingsCameraDof",
+    "Name": "SettingsCameraDof",
     "Parameters": [
         {
-            "attr": "on", 
-            "default": false, 
-            "desc": "Use depth of field", 
-            "name": "Use Depth Of Field", 
+            "attr": "on",
+            "default": false,
+            "desc": "Use depth of field",
+            "name": "Use Depth Of Field",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "aperture", 
-            "default": 5, 
-            "desc": "The size of the virtual camera aperture, in world units", 
-            "type": "FLOAT", 
+            "attr": "aperture",
+            "default": 5,
+            "desc": "The size of the virtual camera aperture, in world units",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "center_bias", 
-            "default": 0, 
-            "desc": "This determines the uniformity of the DOF effect", 
-            "type": "FLOAT", 
+            "attr": "center_bias",
+            "default": 0,
+            "desc": "This determines the uniformity of the DOF effect",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "focal_dist", 
-            "default": 200, 
-            "desc": "Determines the distance from the camera at which objects will be in perfect focus", 
-            "type": "FLOAT", 
+            "attr": "focal_dist",
+            "default": 200,
+            "desc": "Determines the distance from the camera at which objects will be in perfect focus",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "sides_on", 
-            "default": false, 
-            "desc": "This option allows you to simulate the polygonal shape of the aperture of real-world cameras", 
+            "attr": "sides_on",
+            "default": false,
+            "desc": "This option allows you to simulate the polygonal shape of the aperture of real-world cameras",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "sides_num", 
-            "default": 5, 
-            "desc": "Number of sides", 
-            "type": "INT", 
+            "attr": "sides_num",
+            "default": 5,
+            "desc": "Number of sides",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "rotation", 
-            "default": 0, 
-            "desc": "Specifies the orientation of the aperture shape", 
-            "type": "FLOAT", 
+            "attr": "rotation",
+            "default": 0,
+            "desc": "Specifies the orientation of the aperture shape",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anisotropy", 
-            "default": 0, 
-            "desc": "This allows the stretching of the bokeh effect horizontally or vertically", 
-            "type": "FLOAT", 
+            "attr": "anisotropy",
+            "default": 0,
+            "desc": "This allows the stretching of the bokeh effect horizontally or vertically",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "Controls the quality of the DOF effect", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "Controls the quality of the DOF effect",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

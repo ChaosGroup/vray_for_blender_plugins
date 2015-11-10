@@ -1,423 +1,423 @@
 {
-    "Desciption": "Remap values", 
-    "ID": "TexRemap", 
-    "Name": "Remap", 
+    "Desciption": "Remap values",
+    "ID": "TexRemap",
+    "Name": "Remap",
     "Parameters": [
         {
-            "attr": "input_value", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "input_value",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "input_color", 
+            "attr": "input_color",
             "default": [
-                0.0, 
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
+                0.0,
                 1.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_value", 
-            "default": 1.0, 
-            "desc": "the output value, depending on input_value and color params", 
+            "attr": "out_value",
+            "default": 1.0,
+            "desc": "the output value, depending on input_value and color params",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_color", 
+            "attr": "out_color",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "the output color, depending on input_value/input_color and float params", 
+            ],
+            "desc": "the output color, depending on input_value/input_color and float params",
             "type": "OUTPUT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "type", 
-            "default": "0", 
-            "desc": "type of conversion: 0:RemapValue, 1:RemapColor, 2:RemapHSV", 
+            "attr": "type",
+            "default": "0",
+            "desc": "type of conversion: 0:RemapValue, 1:RemapColor, 2:RemapHSV",
             "items": [
                 [
-                    "0", 
-                    "Value", 
+                    "0",
+                    "Value",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Color", 
+                    "1",
+                    "Color",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "HSV", 
+                    "2",
+                    "HSV",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "input_bias", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "input_bias",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "input_min", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "input_min",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "input_max", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "input_max",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "output_min", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "output_min",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "output_max", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "output_max",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "float_positions", 
-            "default": null, 
-            "desc": "positions of the given float values", 
+            "attr": "float_positions",
+            "default": null,
+            "desc": "positions of the given float values",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "float_values", 
-            "default": 1.0, 
-            "desc": "the given float values", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "float_values",
+            "default": 1.0,
+            "desc": "the given float values",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "float_types", 
-            "default": 1, 
-            "desc": "interpolation types for the floats", 
-            "type": "INT", 
+            "attr": "float_types",
+            "default": 1,
+            "desc": "interpolation types for the floats",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "color_positions", 
-            "default": null, 
-            "desc": "the given float values", 
+            "attr": "color_positions",
+            "default": null,
+            "desc": "the given float values",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "color_colors", 
+            "attr": "color_colors",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "the given colors", 
+            ],
+            "desc": "the given colors",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "color_types", 
-            "default": 0, 
-            "desc": "interpolation types for the colors", 
-            "type": "LIST", 
+            "attr": "color_types",
+            "default": 0,
+            "desc": "interpolation types for the colors",
+            "type": "LIST",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "red_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the red channel", 
+            "attr": "red_positions",
+            "default": null,
+            "desc": "positions of the given values for the red channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "red_values", 
-            "default": 0, 
-            "desc": "the given values for the red channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "red_values",
+            "default": 0,
+            "desc": "the given values for the red channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "red_types", 
-            "default": 0, 
-            "desc": "interpolation types for the red channel", 
-            "type": "INT", 
+            "attr": "red_types",
+            "default": 0,
+            "desc": "interpolation types for the red channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "green_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the green channel", 
+            "attr": "green_positions",
+            "default": null,
+            "desc": "positions of the given values for the green channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "green_values", 
-            "default": 0, 
-            "desc": "the given values for the green channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "green_values",
+            "default": 0,
+            "desc": "the given values for the green channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "green_types", 
-            "default": 0, 
-            "desc": "interpolation types for the green channel", 
-            "type": "INT", 
+            "attr": "green_types",
+            "default": 0,
+            "desc": "interpolation types for the green channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "blue_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the blue channel", 
+            "attr": "blue_positions",
+            "default": null,
+            "desc": "positions of the given values for the blue channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "blue_values", 
-            "default": 0, 
-            "desc": "the given values for the blue channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "blue_values",
+            "default": 0,
+            "desc": "the given values for the blue channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "blue_types", 
-            "default": 0, 
-            "desc": "interpolation types for the blue channel", 
-            "type": "INT", 
+            "attr": "blue_types",
+            "default": 0,
+            "desc": "interpolation types for the blue channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hue_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the hue channel", 
+            "attr": "hue_positions",
+            "default": null,
+            "desc": "positions of the given values for the hue channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "hue_values", 
-            "default": 0, 
-            "desc": "the given values for the hue channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "hue_values",
+            "default": 0,
+            "desc": "the given values for the hue channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "hue_types", 
-            "default": 0, 
-            "desc": "interpolation types for the hue channel", 
-            "type": "INT", 
+            "attr": "hue_types",
+            "default": 0,
+            "desc": "interpolation types for the hue channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "saturation_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the saturation channel", 
+            "attr": "saturation_positions",
+            "default": null,
+            "desc": "positions of the given values for the saturation channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "saturation_values", 
-            "default": 0, 
-            "desc": "the given values for the saturation channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "saturation_values",
+            "default": 0,
+            "desc": "the given values for the saturation channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "saturation_types", 
-            "default": 0, 
-            "desc": "interpolation types for the saturation channel", 
-            "type": "INT", 
+            "attr": "saturation_types",
+            "default": 0,
+            "desc": "interpolation types for the saturation channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "value_positions", 
-            "default": null, 
-            "desc": "positions of the given values for the value channel", 
+            "attr": "value_positions",
+            "default": null,
+            "desc": "positions of the given values for the value channel",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "value_values", 
-            "default": 0, 
-            "desc": "the given values for the value channel", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "value_values",
+            "default": 0,
+            "desc": "the given values for the value channel",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "value_types", 
-            "default": 0, 
-            "desc": "interpolation types for the value channel", 
-            "type": "INT", 
+            "attr": "value_types",
+            "default": 0,
+            "desc": "interpolation types for the value channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "alpha_from_intensity", 
-            "default": false, 
-            "desc": "If true, the resulting alpha is the color intensity; otherwise the alpha is taken from the colors", 
+            "attr": "alpha_from_intensity",
+            "default": false,
+            "desc": "If true, the resulting alpha is the color intensity; otherwise the alpha is taken from the colors",
             "type": "BOOL"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
-                        "expand": true, 
+                        "expand": true,
                         "name": "type"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "input_bias"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "input_min"
-                    }, 
+                    },
                     {
                         "name": "input_max"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "output_min"
-                    }, 
+                    },
                     {
                         "name": "output_max"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "alpha_from_intensity"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

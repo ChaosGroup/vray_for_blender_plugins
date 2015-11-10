@@ -1,225 +1,225 @@
 {
-    "Desciption": "Spherical harmonics exporter settings", 
-    "ID": "SphericalHarmonicsExporter", 
-    "Name": "Spherical Harmonics Exporter", 
+    "Desciption": "Spherical harmonics exporter settings",
+    "ID": "SphericalHarmonicsExporter",
+    "Name": "Spherical Harmonics Exporter",
     "Parameters": [
         {
-            "attr": "anim_on", 
-            "default": false, 
-            "desc": "", 
+            "attr": "anim_on",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "mode", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "mode",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Occlusion (Selected)", 
+                    "0",
+                    "Occlusion (Selected)",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Occlusion", 
+                    "1",
+                    "Occlusion",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Interreflection (Selected)", 
+                    "2",
+                    "Interreflection (Selected)",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Interreflection", 
+                    "3",
+                    "Interreflection",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "bands", 
-            "default": 4, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "bands",
+            "default": 4,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 50, 
-            "desc": "Controls the number of samples taken in order to create the spherical harmonics. Higher values produce better results but take longer to render", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 50,
+            "desc": "Controls the number of samples taken in order to create the spherical harmonics. Higher values produce better results but take longer to render",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bounces", 
-            "default": 1, 
-            "desc": "This option is only available when one of the interreflection methods is selected. It controls the number of secondary bounces that are going to be traced", 
-            "type": "INT", 
+            "attr": "bounces",
+            "default": 1,
+            "desc": "This option is only available when one of the interreflection methods is selected. It controls the number of secondary bounces that are going to be traced",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ray_bias", 
-            "default": 0.001, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "ray_bias",
+            "default": 0.001,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "file_name", 
-            "default": "//lightmaps/spherical_harmonics.vrsh", 
-            "desc": "This is the name of the *.vrsh file which contains the precomputed SH for this scene", 
-            "subtype": "FILE_PATH", 
+            "attr": "file_name",
+            "default": "//lightmaps/spherical_harmonics.vrsh",
+            "desc": "This is the name of the *.vrsh file which contains the precomputed SH for this scene",
+            "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "file_format", 
-            "default": "vrsh", 
-            "desc": "This is the output file format. It could be *.xml for general purposes, V-Ray internal format *.vrsh designed to be used in \"Spherical Harmoics\" GI engine or both of them", 
+            "attr": "file_format",
+            "default": "vrsh",
+            "desc": "This is the output file format. It could be *.xml for general purposes, V-Ray internal format *.vrsh designed to be used in \"Spherical Harmoics\" GI engine or both of them",
             "items": [
                 [
-                    "xml", 
-                    "*.xml", 
+                    "xml",
+                    "*.xml",
                     ""
-                ], 
+                ],
                 [
-                    "vrsh", 
-                    "*.vrsh", 
+                    "vrsh",
+                    "*.vrsh",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "per_normal", 
-            "default": "0", 
-            "desc": "Spherical harmonics can be created either for each vertex of the geometry or for each normal, this option allows you to choose between those two modes. For round objects it is better to use per Vertex mode while for objects with large flat surfaces the per Normal mode is better and faster", 
+            "attr": "per_normal",
+            "default": "0",
+            "desc": "Spherical harmonics can be created either for each vertex of the geometry or for each normal, this option allows you to choose between those two modes. For round objects it is better to use per Vertex mode while for objects with large flat surfaces the per Normal mode is better and faster",
             "items": [
                 [
-                    "0", 
-                    "Per normal", 
+                    "0",
+                    "Per normal",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Per vertex", 
+                    "1",
+                    "Per vertex",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "hit_recording", 
-            "default": false, 
-            "desc": "Enabling it speeds up the calculations by storing a lot of information in the RAM", 
+            "attr": "hit_recording",
+            "default": false,
+            "desc": "Enabling it speeds up the calculations by storing a lot of information in the RAM",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "max_mem_usage", 
-            "default": 2000, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "max_mem_usage",
+            "default": 2000,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "object_space", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "object_space",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "World Space", 
+                    "0",
+                    "World Space",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Object Space", 
+                    "1",
+                    "Object Space",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "adaptive_on", 
-            "default": false, 
-            "desc": "", 
+            "attr": "adaptive_on",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "adaptive_thresh", 
-            "default": 0.1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "adaptive_thresh",
+            "default": 0.1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "adaptive_depth", 
-            "default": 3, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "adaptive_depth",
+            "default": 3,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "adaptive_edge", 
-            "default": 0.1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "adaptive_edge",
+            "default": 0.1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "save_obj", 
-            "default": false, 
-            "desc": "", 
+            "attr": "save_obj",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "node", 
-            "default": "", 
-            "desc": "Node of the mesh", 
+            "attr": "node",
+            "default": "",
+            "desc": "Node of the mesh",
             "type": "PLUGIN"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

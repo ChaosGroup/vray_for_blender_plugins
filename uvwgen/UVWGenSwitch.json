@@ -1,28 +1,28 @@
 {
-    "Desciption": "", 
-    "ID": "UVWGenSwitch", 
-    "Name": "Switch", 
+    "Desciption": "",
+    "ID": "UVWGenSwitch",
+    "Name": "Switch",
     "Parameters": [
         {
-            "attr": "nodes", 
-            "default": "", 
-            "desc": "", 
+            "attr": "nodes",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "uvwgens", 
-            "default": "", 
-            "desc": "", 
+            "attr": "uvwgens",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "default", 
-            "default": "", 
-            "desc": "", 
+            "attr": "default",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
         }
-    ], 
-    "Type": "UVWGEN", 
+    ],
+    "Type": "UVWGEN",
     "Widget": {
         "widgets": []
     }

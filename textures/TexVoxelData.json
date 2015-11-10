@@ -1,54 +1,54 @@
 {
-    "Desciption": "Voxel data texture", 
-    "ID": "TexVoxelData", 
-    "Name": "Voxel Data", 
+    "Desciption": "Voxel data texture",
+    "ID": "TexVoxelData",
+    "Name": "Voxel Data",
     "Parameters": [
         {
-            "attr": "interpolation", 
-            "default": "0", 
-            "desc": "Interpolation type", 
+            "attr": "interpolation",
+            "default": "0",
+            "desc": "Interpolation type",
             "items": [
                 [
-                    "0", 
-                    "Linear", 
+                    "0",
+                    "Linear",
                     "Linear interpolation"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Quadratic", 
+                    "1",
+                    "Quadratic",
                     "Quadratic interpolation"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "out_flame", 
-            "default": 1.0, 
-            "desc": "Flame", 
+            "attr": "out_flame",
+            "default": 1.0,
+            "desc": "Flame",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_fuel", 
-            "default": 1.0, 
-            "desc": "Fuel", 
+            "attr": "out_fuel",
+            "default": 1.0,
+            "desc": "Fuel",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_density", 
-            "default": 1.0, 
-            "desc": "Density", 
+            "attr": "out_density",
+            "default": 1.0,
+            "desc": "Density",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "domain", 
-            "default": "", 
-            "desc": "Simulation domain", 
-            "name": "Domain", 
-            "skip": true, 
+            "attr": "domain",
+            "default": "",
+            "desc": "Simulation domain",
+            "name": "Domain",
+            "skip": true,
             "type": "GEOMETRY"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": []
     }

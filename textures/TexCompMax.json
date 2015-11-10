@@ -1,214 +1,214 @@
 {
-    "Desciption": "", 
-    "ID": "TexCompMax", 
-    "Name": "Comp Max", 
+    "Desciption": "",
+    "ID": "TexCompMax",
+    "Name": "Comp Max",
     "Parameters": [
         {
-            "attr": "compatibility_with", 
-            "default": "0", 
-            "desc": "This is used to differentiate between textures exported from different applications", 
+            "attr": "compatibility_with",
+            "default": "0",
+            "desc": "This is used to differentiate between textures exported from different applications",
             "items": [
                 [
-                    "0", 
-                    "3ds Max", 
+                    "0",
+                    "3ds Max",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Maya", 
+                    "1",
+                    "Maya",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "alpha_from_intensity", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "alpha_from_intensity",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Self", 
+                    "0",
+                    "Self",
                     "The alpha is taken from the alpha"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Maya", 
+                    "1",
+                    "Maya",
                     "The resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1)"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Force 1.0", 
+                    "2",
+                    "Force 1.0",
                     "The alpha is forced to 1.0f"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "invert", 
-            "default": false, 
-            "desc": "If true, the resulting texture color will be inverted", 
+            "attr": "invert",
+            "default": false,
+            "desc": "If true, the resulting texture color will be inverted",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "invert_alpha", 
-            "default": true, 
-            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted", 
+            "attr": "invert_alpha",
+            "default": true,
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "color_mult", 
+            "attr": "color_mult",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "A multiplier for the texture color", 
+            ],
+            "desc": "A multiplier for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_offset", 
+            "attr": "color_offset",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "An additional offset for the texture color", 
+            ],
+            "desc": "An additional offset for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "alpha_mult", 
-            "default": 1, 
-            "desc": "A multiplier for the texture alpha", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "alpha_mult",
+            "default": 1,
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "alpha_offset", 
-            "default": 0, 
-            "desc": "An additional offset for the texture alpha", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "alpha_offset",
+            "default": 0,
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "nouvw_color", 
+            "attr": "nouvw_color",
             "default": [
-                0.5, 
-                0.5, 
+                0.5,
+                0.5,
                 0.5
-            ], 
-            "desc": "The color when there are no valid uvw coordinates", 
+            ],
+            "desc": "The color when there are no valid uvw coordinates",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "The resulting color", 
+            ],
+            "desc": "The resulting color",
             "type": "OUTPUT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_transparency", 
+            "attr": "out_transparency",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "The resulting transparency", 
+            ],
+            "desc": "The resulting transparency",
             "type": "OUTPUT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_alpha", 
-            "default": 1.0, 
-            "desc": "The resulting alpha", 
+            "attr": "out_alpha",
+            "default": 1.0,
+            "desc": "The resulting alpha",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_intensity", 
-            "default": 1.0, 
-            "desc": "The resulting intensity", 
+            "attr": "out_intensity",
+            "default": 1.0,
+            "desc": "The resulting intensity",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "sourceA", 
+            "attr": "sourceA",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Left hand side texture", 
-            "name": "Source A", 
+            ],
+            "desc": "Left hand side texture",
+            "name": "Source A",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "sourceB", 
+            "attr": "sourceB",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Right hand side texture", 
-            "name": "Source B", 
+            ],
+            "desc": "Right hand side texture",
+            "name": "Source B",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "operator", 
-            "default": "0", 
-            "desc": "Operator", 
+            "attr": "operator",
+            "default": "0",
+            "desc": "Operator",
             "items": [
                 [
-                    "0", 
-                    "Add", 
+                    "0",
+                    "Add",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Subtract", 
+                    "1",
+                    "Subtract",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Difference", 
+                    "2",
+                    "Difference",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Multiply", 
+                    "3",
+                    "Multiply",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Divide", 
+                    "4",
+                    "Divide",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "Minimum", 
+                    "5",
+                    "Minimum",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Maximum", 
+                    "6",
+                    "Maximum",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -216,52 +216,52 @@
                     {
                         "name": "operator"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "label": "Common Properties", 
+                "label": "Common Properties",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Compatibility", 
+                        "label": "Compatibility",
                         "name": "compatibility_with"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "label": "Color", 
+                "label": "Color",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "invert"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "label": "Alpha", 
+                "label": "Alpha",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
-                        "label": "Alpha From", 
+                        "label": "Alpha From",
                         "name": "alpha_from_intensity"
-                    }, 
+                    },
                     {
                         "name": "invert_alpha"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

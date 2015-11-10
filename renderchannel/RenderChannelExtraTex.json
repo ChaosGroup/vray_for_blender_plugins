@@ -1,46 +1,46 @@
 {
-    "Desciption": "", 
-    "ID": "RenderChannelExtraTex", 
-    "Name": "ExtraTex", 
+    "Desciption": "",
+    "ID": "RenderChannelExtraTex",
+    "Name": "ExtraTex",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "ExtraTex", 
-            "desc": "", 
+            "attr": "name",
+            "default": "ExtraTex",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "consider_for_aa", 
-            "default": false, 
-            "desc": "Consider this render element for antialiasing (may slow down rendering)", 
-            "name": "Consider For AA", 
+            "attr": "consider_for_aa",
+            "default": false,
+            "desc": "Consider this render element for antialiasing (may slow down rendering)",
+            "name": "Consider For AA",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "affect_matte_objects", 
-            "default": true, 
-            "desc": "Affect Matte Objects", 
+            "attr": "affect_matte_objects",
+            "default": true,
+            "desc": "Affect Matte Objects",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "texmap", 
+            "attr": "texmap",
             "default": [
-                0, 
-                0, 
-                0, 
+                0,
+                0,
+                0,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "filtering", 
-            "default": true, 
-            "desc": "Filtering", 
+            "attr": "filtering",
+            "default": true,
+            "desc": "Filtering",
             "type": "BOOL"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

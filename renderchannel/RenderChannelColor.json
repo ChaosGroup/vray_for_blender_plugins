@@ -1,189 +1,189 @@
 {
-    "Desciption": "Generic render element", 
-    "ID": "RenderChannelColor", 
-    "Name": "Color Channel", 
+    "Desciption": "Generic render element",
+    "ID": "RenderChannelColor",
+    "Name": "Color Channel",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "", 
-            "desc": "Channel name", 
+            "attr": "name",
+            "default": "",
+            "desc": "Channel name",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "color_mapping", 
-            "default": false, 
-            "desc": "Color Mapping", 
+            "attr": "color_mapping",
+            "default": false,
+            "desc": "Color Mapping",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "consider_for_aa", 
-            "default": false, 
-            "desc": "Consider this render element for antialiasing (may slow down rendering)", 
-            "name": "Consider For AA", 
+            "attr": "consider_for_aa",
+            "default": false,
+            "desc": "Consider this render element for antialiasing (may slow down rendering)",
+            "name": "Consider For AA",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "filtering", 
-            "default": false, 
-            "desc": "Filtering", 
+            "attr": "filtering",
+            "default": false,
+            "desc": "Filtering",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "alias", 
-            "default": "1", 
-            "desc": "", 
+            "attr": "alias",
+            "default": "1",
+            "desc": "",
             "items": [
                 [
-                    "130", 
-                    "Raw Total Lightning", 
+                    "130",
+                    "Raw Total Lightning",
                     ""
-                ], 
+                ],
                 [
-                    "124", 
-                    "Background", 
+                    "124",
+                    "Background",
                     ""
-                ], 
+                ],
                 [
-                    "131", 
-                    "Bump Normal", 
+                    "131",
+                    "Bump Normal",
                     ""
-                ], 
+                ],
                 [
-                    "129", 
-                    "Total Lightning", 
+                    "129",
+                    "Total Lightning",
                     ""
-                ], 
+                ],
                 [
-                    "132", 
-                    "Samplerate", 
+                    "132",
+                    "Samplerate",
                     ""
-                ], 
+                ],
                 [
-                    "120", 
-                    "Refraction Filter", 
+                    "120",
+                    "Refraction Filter",
                     ""
-                ], 
+                ],
                 [
-                    "122", 
-                    "Real Color", 
+                    "122",
+                    "Real Color",
                     ""
-                ], 
+                ],
                 [
-                    "133", 
-                    "SSS", 
+                    "133",
+                    "SSS",
                     ""
-                ], 
+                ],
                 [
-                    "121", 
-                    "Raw Refraction", 
+                    "121",
+                    "Raw Refraction",
                     ""
-                ], 
+                ],
                 [
-                    "112", 
-                    "Raw Shadow", 
+                    "112",
+                    "Raw Shadow",
                     ""
-                ], 
+                ],
                 [
-                    "119", 
-                    "Raw Reflection", 
+                    "119",
+                    "Raw Reflection",
                     ""
-                ], 
+                ],
                 [
-                    "128", 
-                    "Matte Shadow", 
+                    "128",
+                    "Matte Shadow",
                     ""
-                ], 
+                ],
                 [
-                    "113", 
-                    "Velocity", 
+                    "113",
+                    "Velocity",
                     ""
-                ], 
+                ],
                 [
-                    "105", 
-                    "Shadow", 
+                    "105",
+                    "Shadow",
                     ""
-                ], 
+                ],
                 [
-                    "104", 
-                    "Self Illumination", 
+                    "104",
+                    "Self Illumination",
                     ""
-                ], 
+                ],
                 [
-                    "107", 
-                    "Lightning", 
+                    "107",
+                    "Lightning",
                     ""
-                ], 
+                ],
                 [
-                    "106", 
-                    "Specular", 
+                    "106",
+                    "Specular",
                     ""
-                ], 
+                ],
                 [
-                    "101", 
-                    "Diffuse", 
+                    "101",
+                    "Diffuse",
                     ""
-                ], 
+                ],
                 [
-                    "103", 
-                    "Refraction", 
+                    "103",
+                    "Refraction",
                     ""
-                ], 
+                ],
                 [
-                    "110", 
-                    "Raw GI", 
+                    "110",
+                    "Raw GI",
                     ""
-                ], 
+                ],
                 [
-                    "102", 
-                    "Reflection", 
+                    "102",
+                    "Reflection",
                     ""
-                ], 
+                ],
                 [
-                    "127", 
-                    "Wire Color", 
+                    "127",
+                    "Wire Color",
                     ""
-                ], 
+                ],
                 [
-                    "126", 
-                    "Color", 
+                    "126",
+                    "Color",
                     ""
-                ], 
+                ],
                 [
-                    "125", 
-                    "Alpha", 
+                    "125",
+                    "Alpha",
                     ""
-                ], 
+                ],
                 [
-                    "111", 
-                    "Raw Lightning", 
+                    "111",
+                    "Raw Lightning",
                     ""
-                ], 
+                ],
                 [
-                    "109", 
-                    "Caustics", 
+                    "109",
+                    "Caustics",
                     ""
-                ], 
+                ],
                 [
-                    "108", 
-                    "GI", 
+                    "108",
+                    "GI",
                     ""
-                ], 
+                ],
                 [
-                    "118", 
-                    "Reflection Filter", 
+                    "118",
+                    "Reflection Filter",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "RGB", 
+                    "1",
+                    "RGB",
                     ""
                 ]
-            ], 
-            "name": "Type", 
+            ],
+            "name": "Type",
             "type": "ENUM"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

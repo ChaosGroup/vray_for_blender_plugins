@@ -1,36 +1,36 @@
 {
-    "Desciption": "", 
-    "ID": "TexMaskMax", 
-    "Name": "MaskMax", 
+    "Desciption": "",
+    "ID": "TexMaskMax",
+    "Name": "MaskMax",
     "Parameters": [
         {
-            "attr": "texture", 
+            "attr": "texture",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "The base texture", 
+            ],
+            "desc": "The base texture",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "mask", 
+            "attr": "mask",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "The mask texture", 
+            ],
+            "desc": "The mask texture",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "invert_mask", 
-            "default": false, 
-            "desc": "true to invert the mask", 
+            "attr": "invert_mask",
+            "default": false,
+            "desc": "true to invert the mask",
             "type": "BOOL"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -38,7 +38,7 @@
                     {
                         "name": "invert_mask"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

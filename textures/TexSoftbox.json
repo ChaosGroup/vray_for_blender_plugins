@@ -11,8 +11,14 @@
             },
             {
                 "attrs": [
-                    { "name": "base_mult", "label": "Mult." },
-                    { "name": "base_gamma", "label": "Gamma" }
+                    {
+                        "name": "base_mult",
+                        "label": "Mult."
+                    },
+                    {
+                        "name": "base_gamma",
+                        "label": "Gamma"
+                    }
                 ],
                 "align": true,
                 "layout": "ROW"
@@ -22,54 +28,85 @@
             },
             {
                 "attrs": [
-                    { "name": "base_tint_on", "label": "Base Tint" }
+                    {
+                        "name": "base_tint_on",
+                        "label": "Base Tint"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "base_tint", "label": "" },
-                    { "name": "base_tint_strength", "label": "Strength" }
+                    {
+                        "name": "base_tint",
+                        "label": ""
+                    },
+                    {
+                        "name": "base_tint_strength",
+                        "label": "Strength"
+                    }
                 ],
-                "active": { "prop": "base_tint_on" },
+                "active": {
+                    "prop": "base_tint_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
-
             {
                 "layout": "SEPARATOR"
             },
             {
                 "attrs": [
-                    { "name": "spots_on", "label": "Hot / Dark Spot" }
+                    {
+                        "name": "spots_on",
+                        "label": "Hot / Dark Spot"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_mult", "label": "Mult." },
-                    { "name": "spots_mode", "label": "Mode." }
+                    {
+                        "name": "spots_mult",
+                        "label": "Mult."
+                    },
+                    {
+                        "name": "spots_mode",
+                        "label": "Mode."
+                    }
                 ],
-                "active": { "prop": "spots_on" },
+                "active": {
+                    "prop": "spots_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_tint_on", "label": "Spots Tint" }
+                    {
+                        "name": "spots_tint_on",
+                        "label": "Spots Tint"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_tint", "label": "" },
-                    { "name": "spots_tint_strength", "label": "Strength" }
+                    {
+                        "name": "spots_tint",
+                        "label": ""
+                    },
+                    {
+                        "name": "spots_tint_strength",
+                        "label": "Strength"
+                    }
                 ],
-                "active": { "prop": "spots_tint_on" },
+                "active": {
+                    "prop": "spots_tint_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
-
             {
                 "layout": "SEPARATOR"
             },
@@ -78,17 +115,27 @@
                 "splits": [
                     {
                         "attrs": [
-                            { "name": "u_offset" },
-                            { "name": "v_offset" }
+                            {
+                                "name": "u_offset"
+                            },
+                            {
+                                "name": "v_offset"
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     },
                     {
                         "attrs": [
-                            { "name": "spots_oradius" },
-                            { "name": "spots_iradius" },
-                            { "name": "spots_exp" }
+                            {
+                                "name": "spots_oradius"
+                            },
+                            {
+                                "name": "spots_iradius"
+                            },
+                            {
+                                "name": "spots_exp"
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
@@ -100,24 +147,36 @@
                 "splits": [
                     {
                         "attrs": [
-                            { "name": "u_tiling_on" },
-                            { "name": "u_tiling", "active": { "prop": "u_tiling_on" } }
-
+                            {
+                                "name": "u_tiling_on"
+                            },
+                            {
+                                "name": "u_tiling",
+                                "active": {
+                                    "prop": "u_tiling_on"
+                                }
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     },
                     {
                         "attrs": [
-                            { "name": "v_tiling_on" },
-                            { "name": "v_tiling", "active": { "prop": "v_tiling_on" } }
+                            {
+                                "name": "v_tiling_on"
+                            },
+                            {
+                                "name": "v_tiling",
+                                "active": {
+                                    "prop": "v_tiling_on"
+                                }
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     }
                 ]
             },
-
             {
                 "label": "Common Properties",
                 "layout": "SEPARATOR"
@@ -537,15 +596,24 @@
             "name": "Base Color",
             "desc": "Base color",
             "type": "COLOR",
-            "skip" : true,
-            "default": [1, 1, 1]
+            "skip": true,
+            "default": [
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "base_tex",
             "name": "Base Color",
             "desc": "Base texture",
             "type": "TEXTURE",
-            "default": [1, 1, 1, 1]
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "base_tex_on",
@@ -557,7 +625,11 @@
             "attr": "base_tint",
             "desc": "Base tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "base_tint_strength",
@@ -599,9 +671,17 @@
             "attr": "spots_mode",
             "desc": "Spots mode",
             "type": "ENUM",
-            "items" : [
-                ["0", "Hot Spot", "Hot spot (Add)"],
-                ["1", "Dark Spot", "Dark spot (Substract)"]
+            "items": [
+                [
+                    "0",
+                    "Hot Spot",
+                    "Hot spot (Add)"
+                ],
+                [
+                    "1",
+                    "Dark Spot",
+                    "Dark spot (Substract)"
+                ]
             ],
             "default": "0"
         },
@@ -666,7 +746,11 @@
             "attr": "spots_tint",
             "desc": "Spots tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "spots_tint_strength",
@@ -784,7 +868,11 @@
             "attr": "frame_tint",
             "desc": "Frame tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "frame_tint_strength",
@@ -828,15 +916,14 @@
             "type": "INT",
             "default": 3
         },
-
         {
             "attr": "ramp_grad_vert",
             "default": "",
             "desc": "Vertical gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_vert_col",
-                "positions" : "grad_vert_pos"
+                "colors": "grad_vert_col",
+                "positions": "grad_vert_pos"
             }
         },
         {
@@ -845,8 +932,8 @@
             "desc": "Horizontal gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_horiz_col",
-                "positions" : "grad_horiz_pos"
+                "colors": "grad_horiz_col",
+                "positions": "grad_horiz_pos"
             }
         },
         {
@@ -855,8 +942,8 @@
             "desc": "Radial gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_rad_col",
-                "positions" : "grad_rad_pos"
+                "colors": "grad_rad_col",
+                "positions": "grad_rad_pos"
             }
         },
         {
@@ -865,10 +952,9 @@
             "desc": "Frame gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "frame_col",
-                "positions" : "frame_pos"
+                "colors": "frame_col",
+                "positions": "frame_pos"
             }
         }
     ]
 }
-

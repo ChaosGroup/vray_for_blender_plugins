@@ -1,186 +1,186 @@
 {
-    "Desciption": "Render view settings", 
-    "ID": "RenderView", 
-    "Name": "Render view", 
+    "Desciption": "Render view settings",
+    "ID": "RenderView",
+    "Name": "Render view",
     "Parameters": [
         {
-            "attr": "transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "fov", 
-            "default": 0.785398, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "fov",
+            "default": 0.785398,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "focalDistance", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "focalDistance",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "aperture", 
-            "default": 0.1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "aperture",
+            "default": 0.1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "lens_rotation", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "lens_rotation",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "frame_samples", 
-            "default": 2, 
-            "desc": "Number of samples per frame for the transformation", 
-            "type": "INT", 
+            "attr": "frame_samples",
+            "default": 2,
+            "desc": "Number of samples per frame for the transformation",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "clipping", 
-            "default": true, 
-            "desc": "true to enable clipping planes", 
+            "attr": "clipping",
+            "default": true,
+            "desc": "true to enable clipping planes",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "clipping_near", 
-            "default": 0, 
-            "desc": "The near clipping plane", 
-            "type": "FLOAT", 
+            "attr": "clipping_near",
+            "default": 0,
+            "desc": "The near clipping plane",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "clipping_far", 
-            "default": 1e+18, 
-            "desc": "The far clipping plane", 
-            "type": "FLOAT", 
+            "attr": "clipping_far",
+            "default": 1000000000000000000.0,
+            "desc": "The far clipping plane",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "zoom", 
-            "default": 1, 
-            "desc": "Zoom factor", 
-            "type": "FLOAT", 
+            "attr": "zoom",
+            "default": 1,
+            "desc": "Zoom factor",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "orthographic", 
-            "default": false, 
-            "desc": "", 
+            "attr": "orthographic",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "orthographicWidth", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "orthographicWidth",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dont_affect_settings", 
-            "default": false, 
-            "desc": "This is here so we can suppress a RenderView node from affecting the main VRayRenderer sequence and frame data", 
+            "attr": "dont_affect_settings",
+            "default": false,
+            "desc": "This is here so we can suppress a RenderView node from affecting the main VRayRenderer sequence and frame data",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use_scene_offset", 
-            "default": true, 
-            "desc": "If true, the scene will be internally translated relative to the render view", 
+            "attr": "use_scene_offset",
+            "default": true,
+            "desc": "If true, the scene will be internally translated relative to the render view",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "mayaFocalLength", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mayaFocalLength",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mayaApperture", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mayaApperture",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "clip_near", 
-            "default": false, 
-            "desc": "Clip near", 
-            "skip": true, 
+            "attr": "clip_near",
+            "default": false,
+            "desc": "Clip near",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "clip_far", 
-            "default": false, 
-            "desc": "Clip far", 
-            "skip": true, 
+            "attr": "clip_far",
+            "default": false,
+            "desc": "Clip far",
+            "skip": true,
             "type": "BOOL"
         }
-    ], 
-    "Type": "CAMERA", 
+    ],
+    "Type": "CAMERA",
     "Widget": {
         "widgets": []
     }

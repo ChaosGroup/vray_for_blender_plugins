@@ -1,166 +1,166 @@
 {
-    "Desciption": "Mesh settings", 
-    "ID": "GeomStaticMesh", 
-    "Name": "Mesh", 
+    "Desciption": "Mesh settings",
+    "ID": "GeomStaticMesh",
+    "Name": "Mesh",
     "Parameters": [
         {
-            "attr": "weld_threshold", 
-            "default": -1, 
-            "desc": "If this parameter is present, the vertices of the mesh which are within the given threshold of one another will be welded. If absent or negative, no welding is performed", 
-            "type": "FLOAT", 
+            "attr": "weld_threshold",
+            "default": -1,
+            "desc": "If this parameter is present, the vertices of the mesh which are within the given threshold of one another will be welded. If absent or negative, no welding is performed",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "primary_visibility", 
-            "default": true, 
-            "desc": "If off shading an intersection with this mesh will not generate a gbuffer", 
+            "attr": "primary_visibility",
+            "default": true,
+            "desc": "If off shading an intersection with this mesh will not generate a gbuffer",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "dynamic_geometry", 
-            "default": false, 
-            "desc": "When this flag is true V-Ray will use dynamic geometry for this mesh(instead of copying the mesh many times in the BSP tree, only the bounding box will be present many times and ray intersections will occur in a separate object space BSP tree)", 
+            "attr": "dynamic_geometry",
+            "default": false,
+            "desc": "When this flag is true V-Ray will use dynamic geometry for this mesh(instead of copying the mesh many times in the BSP tree, only the bounding box will be present many times and ray intersections will occur in a separate object space BSP tree)",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "environment_geometry", 
-            "default": false, 
-            "desc": "When this flag is true V-Ray will use this geometry as part of the background(for example, this will be included in matte objects", 
+            "attr": "environment_geometry",
+            "default": false,
+            "desc": "When this flag is true V-Ray will use this geometry as part of the background(for example, this will be included in matte objects",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "smooth_uv_borders", 
-            "default": true, 
-            "desc": "true to smooth UVs at mesh borders when rendering this mesh as a subdivision surface", 
+            "attr": "smooth_uv_borders",
+            "default": true,
+            "desc": "true to smooth UVs at mesh borders when rendering this mesh as a subdivision surface",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "smooth_uv", 
-            "default": true, 
-            "desc": "true to smooth UVs when rendering this mesh as a subdivision surface", 
+            "attr": "smooth_uv",
+            "default": true,
+            "desc": "true to smooth UVs when rendering this mesh as a subdivision surface",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "osd_subdiv_level", 
-            "default": 0, 
-            "desc": "Level of OpenSubdiv subdivision", 
-            "name": "Subdiv. Level", 
-            "type": "INT", 
+            "attr": "osd_subdiv_level",
+            "default": 0,
+            "desc": "Level of OpenSubdiv subdivision",
+            "name": "Subdiv. Level",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "osd_subdiv_type", 
-            "default": "0", 
-            "desc": "Type of OpenSubdiv subdivision", 
+            "attr": "osd_subdiv_type",
+            "default": "0",
+            "desc": "Type of OpenSubdiv subdivision",
             "items": [
                 [
-                    "0", 
-                    "Catmull-Clark", 
+                    "0",
+                    "Catmull-Clark",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Loop", 
+                    "1",
+                    "Loop",
                     ""
                 ]
-            ], 
-            "name": "Subdiv. Type", 
+            ],
+            "name": "Subdiv. Type",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "osd_preserve_map_borders", 
-            "default": "1", 
-            "desc": "Different modes for subdividing the uv boundaries with OpenSubdiv", 
+            "attr": "osd_preserve_map_borders",
+            "default": "1",
+            "desc": "Different modes for subdividing the uv boundaries with OpenSubdiv",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Internal", 
+                    "1",
+                    "Internal",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "All", 
+                    "1",
+                    "All",
                     ""
                 ]
-            ], 
-            "name": "Preserve Map Borders", 
+            ],
+            "name": "Preserve Map Borders",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "osd_preserve_geometry_borders", 
-            "default": false, 
-            "desc": "Keep the geometry boundaries in place while subdividing the mesh with OpenSubdiv", 
-            "name": "Preserve Geometry Borders", 
+            "attr": "osd_preserve_geometry_borders",
+            "default": false,
+            "desc": "Keep the geometry boundaries in place while subdividing the mesh with OpenSubdiv",
+            "name": "Preserve Geometry Borders",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "osd_subdiv_uvs", 
-            "default": true, 
-            "desc": "Smooth UVs when applying subdivision with OpenSubdiv", 
-            "name": "Subdivide UV", 
+            "attr": "osd_subdiv_uvs",
+            "default": true,
+            "desc": "Smooth UVs when applying subdivision with OpenSubdiv",
+            "name": "Subdivide UV",
             "type": "BOOL"
         }
-    ], 
-    "Type": "GEOMETRY", 
+    ],
+    "Type": "GEOMETRY",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "primary_visibility"
-                    }, 
+                    },
                     {
                         "name": "dynamic_geometry"
-                    }, 
+                    },
                     {
                         "name": "environment_geometry"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "label": "OpenSubdiv", 
+                "label": "OpenSubdiv",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "osd_subdiv_type"
-                    }, 
+                    },
                     {
-                        "label": "Level", 
+                        "label": "Level",
                         "name": "osd_subdiv_level"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "osd_preserve_map_borders"
-                    }, 
+                    },
                     {
                         "name": "osd_preserve_geometry_borders"
-                    }, 
+                    },
                     {
                         "name": "osd_subdiv_uvs"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

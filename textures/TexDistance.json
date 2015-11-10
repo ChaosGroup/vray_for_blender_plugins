@@ -294,73 +294,81 @@
             "type": "PLUGIN"
         }
     ],
-    "Type": "TEXTURE", 
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
-                            { "name": "inside_separate" },
-                            { "name": "inside_solid"    }
-                        ], 
+                            {
+                                "name": "inside_separate"
+                            },
+                            {
+                                "name": "inside_solid"
+                            }
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
-                            { "name": "outside_separate" },
-                            { "name": "outside_solid"    }
-                        ], 
+                            {
+                                "name": "outside_separate"
+                            },
+                            {
+                                "name": "outside_solid"
+                            }
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "label": "Common Properties", 
+                "label": "Common Properties",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Compatibility", 
+                        "label": "Compatibility",
                         "name": "compatibility_with"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "label": "Color", 
+                "label": "Color",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "invert"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "label": "Alpha", 
+                "label": "Alpha",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
-                        "label": "Alpha From", 
+                        "label": "Alpha From",
                         "name": "alpha_from_intensity"
-                    }, 
+                    },
                     {
                         "name": "invert_alpha"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

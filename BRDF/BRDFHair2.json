@@ -1,293 +1,293 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFHair2", 
-    "Name": "Hair 2", 
+    "Desciption": "",
+    "ID": "BRDFHair2",
+    "Name": "Hair 2",
     "Parameters": [
         {
-            "attr": "diffuse_color_tex", 
+            "attr": "diffuse_color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "refraction_index", 
-            "default": 1.55, 
-            "desc": "Index of refraction for the hair", 
-            "type": "FLOAT", 
+            "attr": "refraction_index",
+            "default": 1.55,
+            "desc": "Index of refraction for the hair",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "absorption", 
+            "attr": "absorption",
             "default": [
-                0.2, 
-                0.2, 
+                0.2,
+                0.2,
                 0.2
-            ], 
-            "desc": "Absorption coeficient, controls the color of the hair", 
+            ],
+            "desc": "Absorption coeficient, controls the color of the hair",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "r_long_shift", 
-            "default": -10, 
-            "desc": "Longitudinal shift for the R lobe", 
-            "type": "FLOAT", 
+            "attr": "r_long_shift",
+            "default": -10,
+            "desc": "Longitudinal shift for the R lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "tt_long_shift", 
-            "default": 5, 
-            "desc": "Longitudinal shift for the TT lobe", 
-            "type": "FLOAT", 
+            "attr": "tt_long_shift",
+            "default": 5,
+            "desc": "Longitudinal shift for the TT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "trt_long_shift", 
-            "default": 15, 
-            "desc": "Longitudinal shift for the TRT lobe", 
-            "type": "FLOAT", 
+            "attr": "trt_long_shift",
+            "default": 15,
+            "desc": "Longitudinal shift for the TRT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "r_long_width", 
-            "default": 5, 
-            "desc": "Longitudinal width (stddev.) for the R lobe", 
-            "type": "FLOAT", 
+            "attr": "r_long_width",
+            "default": 5,
+            "desc": "Longitudinal width (stddev.) for the R lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "tt_long_width", 
-            "default": 2.5, 
-            "desc": "Longitudinal width (stddev.) for the TT lobe", 
-            "type": "FLOAT", 
+            "attr": "tt_long_width",
+            "default": 2.5,
+            "desc": "Longitudinal width (stddev.) for the TT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "trt_long_width", 
-            "default": 10, 
-            "desc": "Longitudinal width (stddev.) for the TRT lobe", 
-            "type": "FLOAT", 
+            "attr": "trt_long_width",
+            "default": 10,
+            "desc": "Longitudinal width (stddev.) for the TRT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "glint_scale", 
-            "default": 0.5, 
-            "desc": "Glint scale factor 0.5 to 5.0", 
-            "type": "FLOAT", 
+            "attr": "glint_scale",
+            "default": 0.5,
+            "desc": "Glint scale factor 0.5 to 5.0",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "azimuthal_width", 
-            "default": 10, 
-            "desc": "Azimuthal width of the caustic from 10 to 25 degrees", 
-            "type": "FLOAT", 
+            "attr": "azimuthal_width",
+            "default": 10,
+            "desc": "Azimuthal width of the caustic from 10 to 25 degrees",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "fade_range", 
-            "default": 0.2, 
-            "desc": "Fade range for caustic merge (0.2 to 0.4)", 
-            "type": "FLOAT", 
+            "attr": "fade_range",
+            "default": 0.2,
+            "desc": "Fade range for caustic merge (0.2 to 0.4)",
+            "type": "FLOAT",
             "ui": {
-                "max": 0.4, 
+                "max": 0.4,
                 "min": 0.2
             }
-        }, 
+        },
         {
-            "attr": "caustic_limit", 
-            "default": 0.5, 
-            "desc": "Caustic intensity limit", 
-            "type": "FLOAT", 
+            "attr": "caustic_limit",
+            "default": 0.5,
+            "desc": "Caustic intensity limit",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "r_mult", 
-            "default": 1, 
-            "desc": "Multiplier for the R lobe", 
-            "type": "FLOAT", 
+            "attr": "r_mult",
+            "default": 1,
+            "desc": "Multiplier for the R lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "tt_mult", 
-            "default": 1, 
-            "desc": "Multiplier for the TT lobe", 
-            "type": "FLOAT", 
+            "attr": "tt_mult",
+            "default": 1,
+            "desc": "Multiplier for the TT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "trt_mult", 
-            "default": 1, 
-            "desc": "Multiplier for the TRT lobe", 
-            "type": "FLOAT", 
+            "attr": "trt_mult",
+            "default": 1,
+            "desc": "Multiplier for the TRT lobe",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "diffuse_mult", 
-            "default": 1, 
-            "desc": "Multiplier for the Diffuse component", 
-            "type": "FLOAT", 
+            "attr": "diffuse_mult",
+            "default": 1,
+            "desc": "Multiplier for the Diffuse component",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "refraction_index"
-                    }, 
+                    },
                     {
                         "name": "absorption"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "r_long_shift"
-                            }, 
+                            },
                             {
                                 "name": "tt_long_shift"
-                            }, 
+                            },
                             {
                                 "name": "trt_long_shift"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "r_long_width"
-                            }, 
+                            },
                             {
                                 "name": "tt_long_width"
-                            }, 
+                            },
                             {
                                 "name": "trt_long_width"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "glint_scale"
-                            }, 
+                            },
                             {
                                 "name": "azimuthal_width"
-                            }, 
+                            },
                             {
                                 "name": "fade_range"
-                            }, 
+                            },
                             {
                                 "name": "caustic_limit"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "r_mult"
-                            }, 
+                            },
                             {
                                 "name": "tt_mult"
-                            }, 
+                            },
                             {
                                 "name": "trt_mult"
-                            }, 
+                            },
                             {
                                 "name": "diffuse_mult"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

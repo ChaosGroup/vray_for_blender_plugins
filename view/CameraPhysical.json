@@ -1,464 +1,464 @@
 {
-    "Desciption": "V-Ray physical camera settings", 
-    "ID": "CameraPhysical", 
-    "Name": "Physical Camera", 
+    "Desciption": "V-Ray physical camera settings",
+    "ID": "CameraPhysical",
+    "Name": "Physical Camera",
     "Parameters": [
         {
-            "attr": "type", 
-            "default": "0", 
-            "desc": "Camera type", 
+            "attr": "type",
+            "default": "0",
+            "desc": "Camera type",
             "items": [
                 [
-                    "0", 
-                    "Still", 
+                    "0",
+                    "Still",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Cinematic", 
+                    "1",
+                    "Cinematic",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Video", 
+                    "2",
+                    "Video",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "film_width", 
-            "default": 36, 
-            "desc": "Specifies the horizontal size of the film gate in milimeters", 
-            "type": "FLOAT", 
+            "attr": "film_width",
+            "default": 36,
+            "desc": "Specifies the horizontal size of the film gate in milimeters",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "focal_length", 
-            "default": 40, 
-            "desc": "Specifies the equivalen focal length of the camera lens", 
-            "type": "FLOAT", 
+            "attr": "focal_length",
+            "default": 40,
+            "desc": "Specifies the equivalen focal length of the camera lens",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "zoom_factor", 
-            "default": 1, 
-            "desc": "Zoom factor", 
-            "type": "FLOAT", 
+            "attr": "zoom_factor",
+            "default": 1,
+            "desc": "Zoom factor",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distortion", 
-            "default": 0, 
-            "desc": "Specifies the distortion coefficient for the camera lens", 
-            "type": "FLOAT", 
+            "attr": "distortion",
+            "default": 0,
+            "desc": "Specifies the distortion coefficient for the camera lens",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distortion_type", 
-            "default": "0", 
-            "desc": "Distortion type", 
+            "attr": "distortion_type",
+            "default": "0",
+            "desc": "Distortion type",
             "items": [
                 [
-                    "0", 
-                    "Quadratic", 
+                    "0",
+                    "Quadratic",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Cubic", 
+                    "1",
+                    "Cubic",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Lens File", 
+                    "2",
+                    "Lens File",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "f_number", 
-            "default": 8, 
-            "desc": "Determines the width of the camera aperture and, indirectly, exposure", 
-            "name": "F-Number", 
-            "type": "FLOAT", 
+            "attr": "f_number",
+            "default": 8,
+            "desc": "Determines the width of the camera aperture and, indirectly, exposure",
+            "name": "F-Number",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "lens_shift", 
-            "default": 0, 
-            "desc": "Shift lenses for 2-point perspective", 
-            "type": "FLOAT", 
+            "attr": "lens_shift",
+            "default": 0,
+            "desc": "Shift lenses for 2-point perspective",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shutter_speed", 
-            "default": 300, 
-            "desc": "The shutter speed, in inverse seconds", 
-            "type": "FLOAT", 
+            "attr": "shutter_speed",
+            "default": 300,
+            "desc": "The shutter speed, in inverse seconds",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shutter_angle", 
-            "default": 180, 
-            "desc": "Shutter angle (in degrees)", 
-            "type": "FLOAT", 
+            "attr": "shutter_angle",
+            "default": 180,
+            "desc": "Shutter angle (in degrees)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "shutter_offset", 
-            "default": 0, 
-            "desc": "Shutter offset (in degress)", 
-            "type": "FLOAT", 
+            "attr": "shutter_offset",
+            "default": 0,
+            "desc": "Shutter offset (in degress)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "latency", 
-            "default": 0, 
-            "desc": "CCD matrix latency, in seconds", 
-            "type": "FLOAT", 
+            "attr": "latency",
+            "default": 0,
+            "desc": "CCD matrix latency, in seconds",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ISO", 
-            "default": 200, 
-            "desc": "The film power (i.e. sensitivity)", 
-            "name": "ISO", 
-            "type": "FLOAT", 
+            "attr": "ISO",
+            "default": 200,
+            "desc": "The film power (i.e. sensitivity)",
+            "name": "ISO",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "specify_focus", 
-            "default": false, 
-            "desc": "", 
+            "attr": "specify_focus",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "focus_distance", 
-            "default": 200, 
-            "desc": "focus distance in mm", 
-            "type": "FLOAT", 
+            "attr": "focus_distance",
+            "default": 200,
+            "desc": "focus distance in mm",
+            "type": "FLOAT",
             "ui": {
-                "min": 0, 
-                "max": 1048576, 
-                "soft_max": 64, 
+                "min": 0,
+                "max": 1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "targeted", 
-            "default": true, 
-            "desc": "1-specify a target distance; 0-target distance not specified", 
+            "attr": "targeted",
+            "default": true,
+            "desc": "1-specify a target distance; 0-target distance not specified",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "target_distance", 
-            "default": 200, 
-            "desc": "target distance", 
-            "type": "FLOAT", 
+            "attr": "target_distance",
+            "default": 200,
+            "desc": "target distance",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dof_display_threshold", 
-            "default": 0.001, 
-            "desc": "Display threshold for depth-of-field", 
-            "type": "FLOAT", 
+            "attr": "dof_display_threshold",
+            "default": 0.001,
+            "desc": "Display threshold for depth-of-field",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "exposure", 
-            "default": true, 
-            "desc": "When this option is on, the F-Number, Shutter Speed and ISO settings will affect the image brightness", 
+            "attr": "exposure",
+            "default": true,
+            "desc": "When this option is on, the F-Number, Shutter Speed and ISO settings will affect the image brightness",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "white_balance", 
+            "attr": "white_balance",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "White balance", 
+            ],
+            "desc": "White balance",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "vignetting", 
-            "default": 1, 
-            "desc": "Strength of vignetting effect", 
-            "type": "FLOAT", 
+            "attr": "vignetting",
+            "default": 1,
+            "desc": "Strength of vignetting effect",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "blades_enable", 
-            "default": false, 
-            "desc": "Enable Bokeh effects", 
+            "attr": "blades_enable",
+            "default": false,
+            "desc": "Enable Bokeh effects",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "blades_num", 
-            "default": 5, 
-            "desc": "Number of blades (0 means its disabled)", 
-            "type": "INT", 
+            "attr": "blades_num",
+            "default": 5,
+            "desc": "Number of blades (0 means its disabled)",
+            "type": "INT",
             "ui": {
                 "min": 0
             }
-        }, 
+        },
         {
-            "attr": "blades_rotation", 
-            "default": 0, 
-            "desc": "Defines the rotation of the blades (in radians)", 
-            "type": "FLOAT", 
+            "attr": "blades_rotation",
+            "default": 0,
+            "desc": "Defines the rotation of the blades (in radians)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "center_bias", 
-            "default": 0, 
-            "desc": "Defines a bias shape for the bokeh effects", 
-            "type": "FLOAT", 
+            "attr": "center_bias",
+            "default": 0,
+            "desc": "Defines a bias shape for the bokeh effects",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "anisotropy", 
-            "default": 0, 
-            "desc": "Allows stretching of the bokeh effect horizontally or vertically to simulate anamorphic lenses", 
-            "type": "FLOAT", 
+            "attr": "anisotropy",
+            "default": 0,
+            "desc": "Allows stretching of the bokeh effect horizontally or vertically to simulate anamorphic lenses",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_dof", 
-            "default": false, 
-            "desc": "Turns on depth of field sampling", 
-            "name": "Use DOF", 
+            "attr": "use_dof",
+            "default": false,
+            "desc": "Turns on depth of field sampling",
+            "name": "Use DOF",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use_moblur", 
-            "default": false, 
-            "desc": "Turns on motion blur sampling", 
-            "name": "Use Motion Blur", 
+            "attr": "use_moblur",
+            "default": false,
+            "desc": "Turns on motion blur sampling",
+            "name": "Use Motion Blur",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 6, 
-            "desc": "The number of samples for calculating depth of field and/or motion blur", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 6,
+            "desc": "The number of samples for calculating depth of field and/or motion blur",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "dont_affect_settings", 
-            "default": false, 
-            "desc": "This is here so we can suppress a PhysicalCamera node from affecting the main VRayRenderer sequence and frame data", 
+            "attr": "dont_affect_settings",
+            "default": false,
+            "desc": "This is here so we can suppress a PhysicalCamera node from affecting the main VRayRenderer sequence and frame data",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "lens_file", 
-            "default": "", 
-            "desc": "LENS file with camera lens-type image distortion description", 
+            "attr": "lens_file",
+            "default": "",
+            "desc": "LENS file with camera lens-type image distortion description",
             "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "specify_fov", 
-            "default": false, 
-            "desc": "Use field of view instead of use the focal length, film width, scale etc", 
+            "attr": "specify_fov",
+            "default": false,
+            "desc": "Use field of view instead of use the focal length, film width, scale etc",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "horizontal_shift", 
-            "default": 0, 
-            "desc": "the horizontal lens shift", 
-            "type": "FLOAT", 
+            "attr": "horizontal_shift",
+            "default": 0,
+            "desc": "the horizontal lens shift",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "horizontal_offset", 
-            "default": 0, 
-            "desc": "The horizontal offset", 
-            "type": "FLOAT", 
+            "attr": "horizontal_offset",
+            "default": 0,
+            "desc": "The horizontal offset",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "vertical_offset", 
-            "default": 0, 
-            "desc": "The vertical offset", 
-            "type": "FLOAT", 
+            "attr": "vertical_offset",
+            "default": 0,
+            "desc": "The vertical offset",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distortion_tex", 
+            "attr": "distortion_tex",
             "default": [
-                0.0, 
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
+                0.0,
                 1.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "bmpaperture_enable", 
-            "default": false, 
-            "desc": "1- enable the use of bitmap aperture; 0- disable bitmap aperture", 
+            "attr": "bmpaperture_enable",
+            "default": false,
+            "desc": "1- enable the use of bitmap aperture; 0- disable bitmap aperture",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "bmpaperture_resolution", 
-            "default": 512, 
-            "desc": "texture sampling resolution for the importance sampling", 
-            "type": "INT", 
+            "attr": "bmpaperture_resolution",
+            "default": 512,
+            "desc": "texture sampling resolution for the importance sampling",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bmpaperture_tex", 
+            "attr": "bmpaperture_tex",
             "default": [
-                0.0, 
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
+                0.0,
                 1.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "optical_vignetting", 
-            "default": 0, 
-            "desc": "Optical vignetting (\"Cat's Eye Bokeh\") amount", 
-            "type": "FLOAT", 
+            "attr": "optical_vignetting",
+            "default": 0,
+            "desc": "Optical vignetting (\"Cat's Eye Bokeh\") amount",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "auto_lens_shift", 
-            "default": false, 
-            "desc": "Calculate lens shift automatically", 
-            "skip": true, 
+            "attr": "auto_lens_shift",
+            "default": false,
+            "desc": "Calculate lens shift automatically",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use", 
-            "default": false, 
-            "desc": "Use Physical Camera", 
-            "skip": true, 
+            "attr": "use",
+            "default": false,
+            "desc": "Use Physical Camera",
+            "skip": true,
             "type": "BOOL"
         }
-    ], 
-    "Type": "CAMERA", 
+    ],
+    "Type": "CAMERA",
     "Widget": {
         "widgets": []
     }

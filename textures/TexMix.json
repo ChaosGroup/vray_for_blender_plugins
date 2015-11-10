@@ -175,10 +175,10 @@
             "type": "TEXTURE"
         },
         {
-            "attr" : "mix_amount",
-            "desc" : "Mix amount",
-            "type" : "FLOAT",
-            "default" : 0.5
+            "attr": "mix_amount",
+            "desc": "Mix amount",
+            "type": "FLOAT",
+            "default": 0.5
         },
         {
             "attr": "transition_upper",

@@ -38,10 +38,18 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "sample_spread" },
-                    { "name": "subdivs" },
-                    { "name": "out_color_min" },
-                    { "name": "out_color_max" }
+                    {
+                        "name": "sample_spread"
+                    },
+                    {
+                        "name": "subdivs"
+                    },
+                    {
+                        "name": "out_color_min"
+                    },
+                    {
+                        "name": "out_color_max"
+                    }
                 ]
             }
         ]
