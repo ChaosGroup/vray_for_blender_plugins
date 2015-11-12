@@ -1486,6 +1486,134 @@
                 "positions": "transp_positions",
                 "interpolations": "transp_interpolations"
             }
+        },
+        {
+            "attr": "rendshadstep",
+            "desc": "",
+            "type": "INT",
+            "default": 200
+        },
+        {
+            "attr": "pmprimary",
+            "desc": "enable/disable particle mode of primary rays",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "mbself",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "transfown",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "transfext",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "shad_strength",
+            "desc": "The strength of the shadow",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "coord_method",
+            "desc": "The texture coordinates generation method",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "gamma_mult",
+            "desc": "Gamma multiplier for Phoenix's render output",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "mbsmooth",
+            "desc": "Number of gaussian passes to smooth out the motion blur",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "normalized_positions",
+            "desc": "If true, ecolor_position, dcolor_positions and transp_positions are normalized between offset and scale",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "ecolor",
+            "desc": "raw emissive table",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "etmult",
+            "desc": "multiplier for the emission alpha if fire_opacity_mode > 0 is true",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "blackbody",
+            "desc": "Implicitly multiply the emissive diagram with a black body exponent",
+            "type": "FLOAT",
+            "default": -1.0
+        },
+        {
+            "attr": "fire_opacity_mode",
+            "desc": "if true, the emission will be multiplied by a constant alpha factor",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "dcolor",
+            "desc": "raw diffuse table",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transp",
+            "desc": "raw transparency table",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "tmult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "al_cmult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "al_decay",
+            "desc": "0-none, 1-inverse, 2-inverse square",
+            "type": "INT",
+            "default": 2
+        },
+        {
+            "attr": "lightsmultself",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
         }
     ],
     "Type": "EFFECT",

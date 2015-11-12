@@ -178,6 +178,48 @@
             "desc": "Clip far",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "stereo_on",
+            "desc": "Enable stereo rendering",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "stereo_eye_distance",
+            "desc": "The distance between the two stereo views",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "stereo_interocular_method",
+            "desc": "Specifies the camera position relative to the left and right views: 0 - center, 1 - keep left view, 2 - keep right view",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "stereo_specify_focus",
+            "desc": "true to specify a separate distance for the stereo focus",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "stereo_focus_distance",
+            "desc": "The focus distance if specify_focus is enabled",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "stereo_focus_method",
+            "desc": "The focus method: 0 - parallel, 1 - rotate, 2 - shift",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "stereo_view",
+            "desc": "Specifies which view to render: 0 - both views, 1 - left view, 2 - right view",
+            "type": "INT",
+            "default": 0
         }
     ],
     "Type": "CAMERA",

@@ -12,7 +12,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image width"
             }
         },
         {
@@ -24,7 +25,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image height"
             }
         },
         {
@@ -36,21 +38,28 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Pixel aspect"
             }
         },
         {
             "attr": "img_file",
             "default": "%F_%C",
             "desc": "Render file name (Variables: %C - camera name; %S - scene name; %F - blendfile name)",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "File name"
+            }
         },
         {
             "attr": "img_dir",
             "default": "//render/%F/",
             "desc": "Render file directory (Variables: %C - camera name; %S - scene name; %F - blendfile name)",
             "subtype": "DIR_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "Dir name"
+            }
         },
         {
             "attr": "img_file_needFrameNumber",
@@ -109,7 +118,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Start animation"
             }
         },
         {
@@ -121,7 +131,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "End animation"
             }
         },
         {
@@ -133,7 +144,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frame Padding"
             }
         },
         {
@@ -151,7 +163,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Renumber start number"
             }
         },
         {
@@ -163,7 +176,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Renumber frames step"
             }
         },
         {
@@ -175,7 +189,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "First frame of animation range"
             }
         },
         {
@@ -187,7 +202,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frame start"
             }
         },
         {
@@ -199,7 +215,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frames per unit time"
             }
         },
         {
@@ -217,7 +234,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image output region left coord"
             }
         },
         {
@@ -229,7 +247,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image output region width"
             }
         },
         {
@@ -241,7 +260,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image output region top coord"
             }
         },
         {
@@ -253,7 +273,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Image output region height"
             }
         },
         {
@@ -265,7 +286,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap width"
             }
         },
         {
@@ -277,7 +299,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap height"
             }
         },
         {
@@ -289,7 +312,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap output region left coord"
             }
         },
         {
@@ -301,7 +325,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap output region width"
             }
         },
         {
@@ -313,7 +338,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap output region top coord"
             }
         },
         {
@@ -325,7 +351,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap output region height"
             }
         },
         {
@@ -426,6 +453,12 @@
             "name": "Image Format",
             "skip": true,
             "type": "ENUM"
+        },
+        {
+            "attr": "img_saveVelocityZeroBase",
+            "desc": "If true, Velocity channel will be saved zero base instead of the default 0.5 based",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "SETTINGS",

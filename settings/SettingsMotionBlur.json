@@ -8,7 +8,10 @@
             "default": false,
             "desc": "Use motion blur",
             "name": "Use Motion Blur",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Enable motion blur"
+            }
         },
         {
             "attr": "geom_samples",
@@ -19,7 +22,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Geometry samples"
             }
         },
         {
@@ -31,7 +35,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Prepass samples"
             }
         },
         {
@@ -43,7 +48,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Duration (frames)",
+                "enabled": true
             }
         },
         {
@@ -55,7 +62,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivs",
+                "enabled": true
             }
         },
         {
@@ -67,7 +76,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bias",
+                "enabled": true
             }
         },
         {
@@ -79,7 +90,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Shutter Efficiency",
+                "enabled": true
             }
         },
         {
@@ -91,14 +104,47 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Interval center",
+                "enabled": true
             }
         },
         {
             "attr": "camera_motion_blur",
             "default": true,
             "desc": "Use camera motion blur",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Camera motion blur",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "sampling_type",
+            "desc": "Type of sampling: 0 - normal, 1 - sample only shutter open, 2 - sample only shutter middle",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Normal",
+                    ""
+                ],
+                [
+                    "1",
+                    "Sample only shutter open",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sample only shutter middle",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Sampling type",
+                "enabled": true
+            }
         }
     ],
     "Type": "SETTINGS",

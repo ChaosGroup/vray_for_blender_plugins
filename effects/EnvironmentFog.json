@@ -7,7 +7,11 @@
             "attr": "enabled",
             "default": true,
             "desc": "If false, disable the rendering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "tab": "V-Ray Environment Fog",
+                "rollout": "Basic Parameters"
+            }
         },
         {
             "attr": "gizmos",
@@ -24,7 +28,10 @@
                 1
             ],
             "desc": "Fog color",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Fog Color"
+            }
         },
         {
             "attr": "color_tex",
@@ -38,7 +45,10 @@
             "options": [
                 "LINKED_ONLY"
             ],
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Fog Color (map)"
+            }
         },
         {
             "attr": "color_mult",
@@ -49,7 +59,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog Color Multiplier"
             }
         },
         {
@@ -60,7 +71,10 @@
                 1
             ],
             "desc": "Fog emission color",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Emission Color"
+            }
         },
         {
             "attr": "emission_tex",
@@ -71,7 +85,10 @@
             ],
             "desc": "Fog emission texture",
             "name": "Emission",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Emission Color (map)"
+            }
         },
         {
             "attr": "emission_mult",
@@ -82,7 +99,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Emission Multiplier"
             }
         },
         {
@@ -95,7 +113,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Emission Multiplier (map)"
             }
         },
         {
@@ -107,7 +126,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog Distance"
             }
         },
         {
@@ -119,7 +139,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog Density"
             }
         },
         {
@@ -132,7 +153,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog Density (map)"
             }
         },
         {
@@ -145,7 +167,10 @@
             "attr": "use_height",
             "default": false,
             "desc": "Whether or not the height should be taken into account",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "height",
@@ -156,7 +181,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -175,13 +201,20 @@
             "attr": "yup",
             "default": false,
             "desc": "if true, y is the up axis, not z",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Y is up",
+                "enabled": true
+            }
         },
         {
             "attr": "solid_mode",
             "default": false,
             "desc": "If true, this will cause to disable randomization when sampling and take 1 sample at 0.5 density",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Advanced Parameters"
+            }
         },
         {
             "attr": "solid_threshold",
@@ -192,7 +225,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -241,7 +275,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Fade Out"
+            }
         },
         {
             "attr": "fade_out_radius",
@@ -265,7 +302,11 @@
             "attr": "scatter_gi",
             "default": false,
             "desc": "Scatter global illumination",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "GI",
+                "display_name": "Scatter GI"
+            }
         },
         {
             "attr": "scatter_bounces",
@@ -276,14 +317,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "simplify_gi",
             "default": false,
             "desc": "Simplify global illumination",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Raymarching",
+                "display_name": "Simplify Textures for GI"
+            }
         },
         {
             "attr": "step_size",
@@ -318,7 +364,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Texture Samples"
             }
         },
         {
@@ -364,13 +411,24 @@
                     "Add to per-gizmo lights"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Lights"
+            }
         },
         {
             "attr": "lights",
             "default": "",
             "desc": "",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "attributes": [
+                    [
+                        "lightSet",
+                        4
+                    ]
+                ]
+            }
         },
         {
             "attr": "use_shade_instance",
@@ -382,7 +440,10 @@
             "attr": "affect_background",
             "default": true,
             "desc": "Affect background",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Ray Filter"
+            }
         },
         {
             "attr": "affect_reflections",
@@ -407,13 +468,39 @@
             "default": true,
             "desc": "true if the fog affects GI rays",
             "name": "Affect GI",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect GI"
+            }
         },
         {
             "attr": "affect_camera",
             "default": true,
             "desc": "true if the fog affects primary camera rays",
             "type": "BOOL"
+        },
+        {
+            "attr": "deep_output",
+            "desc": "Toggle the deep image output. Note that enabling this option will force ray marching even for simple volumetrics, which can cause slower rendering",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "ior",
+            "desc": "Index of refraction for the volume, which describes the way light bends when crossing the material surface. A value of 1.0 means the light will not change direction",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "IOR",
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "use_shade_data",
+            "desc": "True if the shade data should be used when sampling textures. The light mode will be ignored if this is true and the shader is not global!",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Type": "EFFECT",

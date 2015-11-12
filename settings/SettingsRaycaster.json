@@ -12,7 +12,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max tree depth"
             }
         },
         {
@@ -24,7 +25,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min leaf size"
             }
         },
         {
@@ -36,7 +38,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Face/level coeff"
             }
         },
         {
@@ -48,7 +51,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Dyn. memory limit(MBs)"
             }
         },
         {
@@ -56,35 +60,80 @@
             "name": "Use Embree",
             "default": false,
             "desc": "Enable/Disable using the embree ray caster",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree"
+            }
         },
         {
             "attr": "embreeUseMB",
             "name": "Use Embree For Motion Blur",
             "default": true,
             "desc": "Enable/disable using the embree ray caster for motion blur",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree for Motion Blur",
+                "enabled": true
+            }
         },
         {
             "attr": "embreeHair",
             "name": "Use Embree For Hair",
             "default": true,
             "desc": "Use the Embree ray caster for hair",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree for hair",
+                "enabled": true
+            }
         },
         {
             "attr": "embreeLowMemory",
             "name": "Embree Low Memory",
             "default": true,
             "desc": "Try to conserve memory, using potentially slower algorithms",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Conserve Memory",
+                "enabled": true
+            }
         },
         {
             "attr": "embreeRayPackets",
             "name": "Embree Ray Packets",
             "default": true,
             "desc": "Turn on the packet ray casting",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Ray Packets",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "optLevel",
+            "desc": "Optimization level (must be 0)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Low",
+                    ""
+                ],
+                [
+                    "2",
+                    "Average",
+                    ""
+                ],
+                [
+                    "4",
+                    "High",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Tree build quality"
+            }
         }
     ],
     "Type": "SETTINGS",

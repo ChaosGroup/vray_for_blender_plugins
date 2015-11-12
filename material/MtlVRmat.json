@@ -9,14 +9,27 @@
             "desc": "Filepath",
             "name": "Filepath",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "tab": "V-Ray VRmat",
+                "rollout": "Parameters",
+                "display_name": "Material file",
+                "file_extensions": [
+                    "vrmat",
+                    "vismat",
+                    "vrscene"
+                ]
+            }
         },
         {
             "attr": "mtlname",
             "default": "",
             "desc": "Material name",
             "name": "Name",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "Material name"
+            }
         },
         {
             "attr": "expanded_material",

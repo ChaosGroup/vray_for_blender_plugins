@@ -90,7 +90,13 @@
             "default": "//lightmaps/spherical_harmonics.vrsh",
             "desc": "This is the name of the *.vrsh file which contains the precomputed SH for this scene",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "vrsh",
+                    "xml"
+                ]
+            }
         },
         {
             "attr": "file_format",

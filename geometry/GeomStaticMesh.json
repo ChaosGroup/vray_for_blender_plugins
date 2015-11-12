@@ -43,7 +43,10 @@
             "attr": "smooth_uv",
             "default": true,
             "desc": "true to smooth UVs when rendering this mesh as a subdivision surface",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Smooth UVs"
+            }
         },
         {
             "attr": "osd_subdiv_level",
@@ -55,7 +58,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivision level",
+                "enabled": true
             }
         },
         {
@@ -75,7 +80,11 @@
                 ]
             ],
             "name": "Subdiv. Type",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Type",
+                "enabled": true
+            }
         },
         {
             "attr": "osd_preserve_map_borders",
@@ -99,21 +108,185 @@
                 ]
             ],
             "name": "Preserve Map Borders",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Preserve map borders",
+                "enabled": true
+            }
         },
         {
             "attr": "osd_preserve_geometry_borders",
             "default": false,
             "desc": "Keep the geometry boundaries in place while subdividing the mesh with OpenSubdiv",
             "name": "Preserve Geometry Borders",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Preserve geometry borders",
+                "enabled": true
+            }
         },
         {
             "attr": "osd_subdiv_uvs",
             "default": true,
             "desc": "Smooth UVs when applying subdivision with OpenSubdiv",
             "name": "Subdivide UV",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Subdivide UVs",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "vertices",
+            "desc": "",
+            "type": "VECTOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "faces",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "normals",
+            "desc": "",
+            "type": "VECTOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "faceNormals",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "map_channels",
+            "desc": "A list of mapping channels; each channel itself is a list of 3 elements - the channel index, the channel vertices and the channel faces",
+            "type": "LIST_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "map_channels_names",
+            "desc": "A list containing the names of the mapping channels",
+            "type": "STRING_LIST",
+            "elements_count": 0,
+            "default": ""
+        },
+        {
+            "attr": "edge_visibility",
+            "desc": "A list of edge visibility flags, each integer in the list has edge visibility information for 10 consecutive faces",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "face_mtlIDs",
+            "desc": "Material IDs for each face",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "smooth_derivs",
+            "desc": "A list of mapping channels with smooth derivs; this can also be a single boolean value to specify whether all channels are smooth",
+            "type": "LIST_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "reference_mesh",
+            "desc": "The reference mesh which is used to calculate the uvw coordinates when a 3d placement is used",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "reference_transform",
+            "desc": "The transform of the reference mesh",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "velocities",
+            "desc": "Per vertex velocities, taken from a ColorSet in Maya",
+            "type": "VECTOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "first_poly_vertices",
+            "desc": "A list of indices of the first vertices of the polygons of degree greater than 4",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "osd_subdiv_enable",
+            "desc": "True to enable OpenSubdiv subdivision",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "OpenSubdiv (static subdivision)",
+                "display_name": "Enable OpenSubdiv"
+            }
+        },
+        {
+            "attr": "edge_creases_vertices",
+            "desc": "The indices of the vertices of the creased edges. Contains two indices per edge",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "edge_creases_sharpness",
+            "desc": "Sharpness values for each creased edge",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "vertex_creases_vertices",
+            "desc": "A list of creased vertices",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "vertex_creases_sharpness",
+            "desc": "The sharpness values of the creased vertices",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
         }
     ],
     "Type": "GEOMETRY",

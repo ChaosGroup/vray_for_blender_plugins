@@ -278,6 +278,18 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "visibility_test_rays",
+            "desc": "Number of rays shoot to test if sample is actually visible or not. Speeds up shading in the case when parts of the model are occluded. Set to 0 to disable",
+            "type": "INT",
+            "default": 32
+        },
+        {
+            "attr": "visibility_test_ray_max_length_factor",
+            "desc": "Maximum length of visibility test ray. It is adjusted by the sample size. If the ray travels at least this length before hitting another object, the sample is considered visible and is shaded, otherwise it's filled with black when baking to Ptex or entirely ommitted when baking to vrmesh point cloud",
+            "type": "FLOAT",
+            "default": 16.0
         }
     ],
     "Type": "SETTINGS",

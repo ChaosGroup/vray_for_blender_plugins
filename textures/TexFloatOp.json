@@ -83,6 +83,213 @@
             "default": 1.0,
             "desc": "max(A, B)",
             "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "asin",
+            "desc": "asin(float_a*float_b)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "acos",
+            "desc": "acos(float_a*float_b)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "atan",
+            "desc": "atan(float_a*float_b)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "atan2",
+            "desc": "atan2(float_b, float_a), computes the arctangent of float_b/float_a",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "abs",
+            "desc": "abs(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "ceil",
+            "desc": "ceil(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "exp",
+            "desc": "exp(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "floor",
+            "desc": "floor(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "log",
+            "desc": "log(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "log10",
+            "desc": "log10(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "sqrt",
+            "desc": "square root of float_a",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "fmod",
+            "desc": "fmod(float_a, float_b)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "average",
+            "desc": "(float_a+float_b)*0.5",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "tan",
+            "desc": "tan(float_a)",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "mode",
+            "desc": "Determines what output to use when no output parameter is specified. Useful if the type of the operation needs to be animatable",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Product",
+                    ""
+                ],
+                [
+                    "1",
+                    "Ratio",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sum",
+                    ""
+                ],
+                [
+                    "3",
+                    "Difference",
+                    ""
+                ],
+                [
+                    "4",
+                    "Power",
+                    ""
+                ],
+                [
+                    "5",
+                    "Sin",
+                    ""
+                ],
+                [
+                    "6",
+                    "Cos",
+                    ""
+                ],
+                [
+                    "7",
+                    "Min",
+                    ""
+                ],
+                [
+                    "8",
+                    "Max",
+                    ""
+                ],
+                [
+                    "9",
+                    "abs",
+                    ""
+                ],
+                [
+                    "10",
+                    "ceil",
+                    ""
+                ],
+                [
+                    "11",
+                    "exp",
+                    ""
+                ],
+                [
+                    "12",
+                    "floor",
+                    ""
+                ],
+                [
+                    "13",
+                    "log",
+                    ""
+                ],
+                [
+                    "14",
+                    "log10",
+                    ""
+                ],
+                [
+                    "15",
+                    "sqrt",
+                    ""
+                ],
+                [
+                    "16",
+                    "fmod",
+                    ""
+                ],
+                [
+                    "17",
+                    "average",
+                    ""
+                ],
+                [
+                    "18",
+                    "tan",
+                    ""
+                ],
+                [
+                    "19",
+                    "asin",
+                    ""
+                ],
+                [
+                    "20",
+                    "acos",
+                    ""
+                ],
+                [
+                    "21",
+                    "atan",
+                    ""
+                ],
+                [
+                    "22",
+                    "atan2",
+                    ""
+                ]
+            ],
+            "default": "2"
         }
     ],
     "Type": "TEXTURE",

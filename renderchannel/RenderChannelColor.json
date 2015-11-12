@@ -181,6 +181,18 @@
             ],
             "name": "Type",
             "type": "ENUM"
+        },
+        {
+            "attr": "derive_raw_channels",
+            "desc": "true if raw channels should be derived from the respective color and filter channel",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "vfb_color_corrections",
+            "desc": "False to disable ALL VFB color corrections(sRGB, curves, white balance, etc...) when saving the channel data to a file or showing it on a display. True to apply VFB color corrections when saving the channel data to a file or showing it on a display. If true some color corrections might still be disabled, based on the type of file being saved",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Type": "RENDERCHANNEL",

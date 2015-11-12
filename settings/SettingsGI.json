@@ -7,19 +7,30 @@
             "attr": "on",
             "default": false,
             "desc": "Enable Global Illumination",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "On"
+            }
         },
         {
             "attr": "refract_caustics",
             "default": true,
             "desc": "This allows indirect lighting to pass through transparent objects (glass etc)",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Refractive Caustics",
+                "enabled": true
+            }
         },
         {
             "attr": "reflect_caustics",
             "default": false,
             "desc": "This allows indirect light to be reflected from specular objects (mirrors etc)",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Reflective Caustics",
+                "enabled": true
+            }
         },
         {
             "attr": "saturation",
@@ -30,7 +41,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Saturation",
+                "enabled": true
             }
         },
         {
@@ -42,7 +55,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Contrast",
+                "enabled": true
             }
         },
         {
@@ -54,7 +69,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Contrast Base",
+                "enabled": true
             }
         },
         {
@@ -83,7 +100,11 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Primary Engine",
+                "enabled": true
+            }
         },
         {
             "attr": "primary_multiplier",
@@ -91,7 +112,11 @@
             "desc": "This value determines how much primary diffuse bounces contribute to the final image illumination",
             "type": "FLOAT",
             "ui": {
-                "min": 0.0
+                "min": 0.0,
+                "display_name": "Primary Multiplier",
+                "enabled": true,
+                "max": 1000000.0,
+                "spin_step": 0.05000000074505806
             }
         },
         {
@@ -115,7 +140,11 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Secondary Engine",
+                "enabled": true
+            }
         },
         {
             "attr": "secondary_multiplier",
@@ -123,7 +152,11 @@
             "desc": "This determines the effect of secondary diffuse bounces on the scene illumination",
             "type": "FLOAT",
             "ui": {
-                "min": 0.0
+                "min": 0.0,
+                "display_name": "Secondary Multiplier",
+                "enabled": true,
+                "max": 1.0,
+                "spin_step": 0.05000000074505806
             }
         },
         {
@@ -131,7 +164,11 @@
             "default": false,
             "desc": "Limit ray distance",
             "name": "Limit Ray Distance",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Ray Distance On",
+                "enabled": true
+            }
         },
         {
             "attr": "ray_distance",
@@ -142,7 +179,10 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Ray Distance",
+                "enabled": true,
+                "spin_step": 1.0
             }
         },
         {
@@ -150,7 +190,11 @@
             "default": false,
             "desc": "Use ambient occlusion",
             "name": "Use Ambient Occlusion",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Ambient Occlusion On",
+                "enabled": true
+            }
         },
         {
             "attr": "ao_amount",
@@ -162,7 +206,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "AO Multiplier",
+                "enabled": true
             }
         },
         {
@@ -175,7 +221,10 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "AO Radius",
+                "enabled": true,
+                "spin_step": 0.10000000149011612
             }
         },
         {
@@ -188,7 +237,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "AO Subdivs",
+                "enabled": true
             }
         }
     ],

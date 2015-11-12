@@ -379,6 +379,23 @@
             "default": true,
             "desc": "true to fix dark edges with glossy reflections; only set this to false for compatibility with older versions",
             "type": "BOOL"
+        },
+        {
+            "attr": "gtr_gamma",
+            "desc": "How much to increase/decrease the tail of the glossy highlight when using GGX reflection model",
+            "type": "FLOAT",
+            "default": 2.0,
+            "ui": {
+                "display_name": "GTR gamma",
+                "min": 0.0010000000474974514,
+                "max": 1000.0
+            }
+        },
+        {
+            "attr": "gtr_oldGamma",
+            "desc": "true to use the old (and incorrect) method for computing shadow masking when GTR gamma is different from 2.0",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "BRDF",

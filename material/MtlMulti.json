@@ -32,6 +32,27 @@
             "default": false,
             "desc": "Wrap the material ID's to the largest specified ID for the material",
             "type": "BOOL"
+        },
+        {
+            "attr": "mtls",
+            "desc": "(Deprecated; use mtls_list/ids_list instead). A list of two-element lists with the material id and the material plugin",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "mtls_list",
+            "desc": "A list of the materials",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "ids_list",
+            "desc": "A list of material IDs",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
         }
     ],
     "Type": "MATERIAL",

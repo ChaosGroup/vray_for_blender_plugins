@@ -35,7 +35,10 @@
                 0.0
             ],
             "desc": "Refraction (front) color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Front Color"
+            }
         },
         {
             "attr": "black_color",
@@ -45,7 +48,10 @@
                 0.0
             ],
             "desc": "Reflection (side) color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Side Color"
+            }
         },
         {
             "attr": "fresnel_ior_tex",

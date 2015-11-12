@@ -11,7 +11,11 @@
                 0.5
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "tab": "V-Ray Car Paint",
+                "rollout": "Base layer parameters"
+            }
         },
         {
             "attr": "base_reflection",
@@ -46,7 +50,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": ""
             }
         },
         {
@@ -118,7 +123,10 @@
             "attr": "base_traceReflections",
             "default": true,
             "desc": "Toggle reflections for base layer",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Base trace reflections"
+            }
         },
         {
             "attr": "flake_color",
@@ -128,7 +136,10 @@
                 0.8
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Flake layer parameters"
+            }
         },
         {
             "attr": "flake_glossiness",
@@ -242,7 +253,10 @@
             "attr": "flake_traceReflections",
             "default": true,
             "desc": "Toggle reflections for flake layer",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Flake trace reflections"
+            }
         },
         {
             "attr": "coat_color",
@@ -252,7 +266,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Coat layer parameters"
+            }
         },
         {
             "attr": "coat_strength",
@@ -287,7 +304,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": ""
             }
         },
         {
@@ -359,20 +377,30 @@
             "attr": "coat_traceReflections",
             "default": true,
             "desc": "Toggle reflections for coat layer",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Coat trace reflections"
+            }
         },
         {
             "attr": "traceReflections",
             "default": true,
             "desc": "",
             "name": "Trace Reflections",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Options",
+                "display_name": "Trace reflections"
+            }
         },
         {
             "attr": "doubleSided",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Double sided"
+            }
         },
         {
             "attr": "subdivs",
@@ -436,7 +464,10 @@
                 1.0
             ],
             "desc": "Environment override texture",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "environment_priority",
@@ -447,7 +478,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "trace_depth",
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
+            "default": -1,
+            "ui": {
+                "min": 1,
+                "max": 1000
+            }
+        },
+        {
+            "attr": "use_environment_override",
+            "desc": "True to use the 'environment override' texture",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Environment override"
             }
         }
     ],

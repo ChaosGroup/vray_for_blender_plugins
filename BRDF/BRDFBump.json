@@ -138,6 +138,35 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "bump_tex",
+            "desc": "Bump texture; this is deprecated, use bump_tex_color or bump_tex_float",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "normal_map_mult",
+            "desc": "Multiplier applied to the normal map",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "additional_bump",
+            "desc": "Texture for additional bump effect",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bump_map_mult",
+            "desc": "Multiplier applied to the bump map",
+            "type": "FLOAT",
+            "default": 1.0
         }
     ],
     "Type": "BRDF",

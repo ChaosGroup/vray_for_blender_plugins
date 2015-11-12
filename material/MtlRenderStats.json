@@ -52,6 +52,12 @@
             "name": "Use",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "shadows_receive",
+            "desc": "Whether the object receives shadows",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Type": "MATERIAL",

@@ -39,6 +39,12 @@
             "desc": "Consider this render element for antialiasing (may slow down rendering)",
             "name": "Consider For AA",
             "type": "BOOL"
+        },
+        {
+            "attr": "invert_selection",
+            "desc": "true to use object/material IDs different from the specified by id",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "RENDERCHANNEL",

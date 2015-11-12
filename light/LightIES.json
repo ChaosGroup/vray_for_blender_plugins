@@ -70,7 +70,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Shadow bias"
             }
         },
         {
@@ -82,7 +83,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Photon subdivs"
             }
         },
         {
@@ -94,7 +96,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Caustics subdivs"
             }
         },
         {
@@ -106,7 +109,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Diffuse multiplier"
             }
         },
         {
@@ -118,7 +122,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Caustics multiplier"
             }
         },
         {
@@ -130,26 +135,36 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Cut-off threshold"
             }
         },
         {
             "attr": "affectDiffuse",
             "default": true,
             "desc": "true if the light produces diffuse lighting and false otherwise",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect diffuse"
+            }
         },
         {
             "attr": "affectSpecular",
             "default": true,
             "desc": "true if the light produces specular hilights and false otherwise",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect specular"
+            }
         },
         {
             "attr": "bumped_below_surface_check",
             "default": false,
             "desc": "true if the bumped normal should be used to check if the light dir is below the surface",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Bumped normal check"
+            }
         },
         {
             "attr": "nsamples",
@@ -233,14 +248,22 @@
             "attr": "storeWithIrradianceMap",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Store with irradiance map"
+            }
         },
         {
             "attr": "ies_file",
             "default": "",
             "desc": "IES file with luminaire description",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "ies"
+                ]
+            }
         },
         {
             "attr": "filter_color",
@@ -340,6 +363,21 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0
+            }
+        },
+        {
+            "attr": "rescale_max_intensty",
+            "desc": "If this is true, the intensity values of the IES file will be scaled, so the new maximum value is new_max_intensity",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "new_max_intensity",
+            "desc": "The new maximum intensity after rescaling the intensities in the IES file, when rescale_max_intensty is true. This value is in cd(candelas)",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
             }
         }
     ],

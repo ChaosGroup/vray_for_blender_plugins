@@ -9,7 +9,9 @@
             "desc": "The number of samples used to approximate GI",
             "type": "INT",
             "ui": {
-                "min": 1
+                "min": 1,
+                "display_name": "Subdivs",
+                "max": 5000
             }
         },
         {
@@ -18,7 +20,9 @@
             "desc": "The number of light bounces that will be computed",
             "type": "INT",
             "ui": {
-                "min": 1
+                "min": 1,
+                "display_name": "Depth",
+                "max": 500
             }
         }
     ],

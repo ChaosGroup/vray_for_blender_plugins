@@ -71,7 +71,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Shadow bias"
             }
         },
         {
@@ -83,7 +84,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Photon subdivs"
             }
         },
         {
@@ -95,7 +97,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Caustics subdivs"
             }
         },
         {
@@ -107,7 +110,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Diffuse multiplier"
             }
         },
         {
@@ -119,7 +123,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Caustics multiplier"
             }
         },
         {
@@ -131,26 +136,36 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Cut-off threshold"
             }
         },
         {
             "attr": "affectDiffuse",
             "default": true,
             "desc": "true if the light produces diffuse lighting and false otherwise",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect diffuse"
+            }
         },
         {
             "attr": "affectSpecular",
             "default": true,
             "desc": "true if the light produces specular hilights and false otherwise",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect specular"
+            }
         },
         {
             "attr": "bumped_below_surface_check",
             "default": false,
             "desc": "true if the bumped normal should be used to check if the light dir is below the surface",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Bumped normal check"
+            }
         },
         {
             "attr": "nsamples",
@@ -291,7 +306,10 @@
             "attr": "storeWithIrradianceMap",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Store with irradiance map"
+            }
         },
         {
             "attr": "invisible",
@@ -303,7 +321,10 @@
             "attr": "affectReflections",
             "default": true,
             "desc": "true if the light appears in reflections and false otherwise",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect reflections"
+            }
         },
         {
             "attr": "noDecay",
@@ -406,7 +427,10 @@
             "attr": "use_rect_tex",
             "default": true,
             "desc": "true if the texture should be used",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use texture"
+            }
         },
         {
             "attr": "tex_resolution",
@@ -417,7 +441,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Texture resolution",
+                "enabled": true
             }
         },
         {
@@ -429,8 +455,25 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Texture adaptivity",
+                "enabled": true
             }
+        },
+        {
+            "attr": "useMIS",
+            "desc": "This parameter is for debugging only. It should always be set to true in user scenes. When set to false, rendering quality is not optimal",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Use multiple importance sampling"
+            }
+        },
+        {
+            "attr": "is_disc",
+            "desc": "The light is disc shaped",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "LIGHT",

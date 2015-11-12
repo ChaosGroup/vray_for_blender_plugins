@@ -29,7 +29,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Sampler Type"
+            }
         },
         {
             "attr": "min_shade_rate",
@@ -41,7 +44,8 @@
                 "max": 1024,
                 "min": 0,
                 "soft_max": 64,
-                "soft_min": 2
+                "soft_min": 2,
+                "display_name": "Min shading rate"
             }
         },
         {
@@ -54,7 +58,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivs",
+                "enabled": true
             }
         },
         {
@@ -62,7 +68,11 @@
             "default": false,
             "desc": "true to enable per-pixel filtering for the fixed sampler",
             "name": "Per Pixel Filtering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Per-pixel filtering",
+                "enabled": true
+            }
         },
         {
             "attr": "dmc_minSubdivs",
@@ -74,7 +84,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min subdivs",
+                "enabled": true
             }
         },
         {
@@ -87,7 +99,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max subdivs",
+                "enabled": true
             }
         },
         {
@@ -100,7 +114,9 @@
                 "max": 1.0,
                 "min": 0.0001,
                 "soft_max": 0.1,
-                "soft_min": 0.005
+                "soft_min": 0.005,
+                "display_name": "Threshold",
+                "enabled": true
             }
         },
         {
@@ -115,7 +131,11 @@
             "default": false,
             "desc": "true to enable per-pixel filtering for the adaptive DMC image sampler",
             "name": "Per Pixel Filtering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Per-pixel filtering",
+                "enabled": true
+            }
         },
         {
             "attr": "subdivision_minRate",
@@ -127,7 +147,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min rate",
+                "enabled": true
             }
         },
         {
@@ -140,7 +162,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max rate",
+                "enabled": true
             }
         },
         {
@@ -148,7 +172,11 @@
             "default": true,
             "desc": "",
             "name": "Jitter",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Jitter",
+                "enabled": true
+            }
         },
         {
             "attr": "subdivision_threshold",
@@ -160,7 +188,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Threshold",
+                "enabled": true
             }
         },
         {
@@ -168,14 +198,22 @@
             "default": false,
             "desc": "",
             "name": "Edges",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Edges",
+                "enabled": true
+            }
         },
         {
             "attr": "subdivision_normals",
             "default": false,
             "desc": "",
             "name": "Normals",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Normals",
+                "enabled": true
+            }
         },
         {
             "attr": "subdivision_normals_threshold",
@@ -187,7 +225,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Normals threshold",
+                "enabled": true
             }
         },
         {
@@ -207,7 +247,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min subdivs",
+                "enabled": true
             }
         },
         {
@@ -220,7 +262,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max subdivs",
+                "enabled": true
             }
         },
         {
@@ -233,7 +277,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Noise threshold",
+                "enabled": true
             }
         },
         {
@@ -246,7 +292,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max. render time in min",
+                "enabled": true
             }
         },
         {
@@ -259,7 +307,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Ray bundle size",
+                "enabled": true
             }
         },
         {
@@ -267,7 +317,11 @@
             "default": false,
             "desc": "If true, the AA mask will be rendered",
             "name": "Show Mask",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show AA mask",
+                "enabled": true
+            }
         },
         {
             "attr": "use_dmc_treshhold",
@@ -389,6 +443,46 @@
             "desc": "Use selected object as render mask",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "dmc_adaptive_method",
+            "desc": "Switches between legacy and new adaptive sampling",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Legacy",
+                    ""
+                ],
+                [
+                    "1",
+                    "Default",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Adaptive method",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "progressive_progNoiseThreshold",
+            "desc": "Progressive noise threshold active pixels percent at which the threshold is reduced",
+            "type": "INT",
+            "default": 30,
+            "ui": {
+                "display_name": "Progressive noise threshold",
+                "enabled": true,
+                "min": 0,
+                "max": 100
+            }
+        },
+        {
+            "attr": "render_mask_texture",
+            "desc": "Texture used for render mask when render_mask_mode=Texture.This accepts float textures, where a value of <=1e-6, means that V-Ray won't render in this pixel",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
         }
     ],
     "Type": "SETTINGS",

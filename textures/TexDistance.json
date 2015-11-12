@@ -19,7 +19,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Common"
+            }
         },
         {
             "attr": "alpha_from_intensity",
@@ -54,7 +57,10 @@
             "attr": "invert_alpha",
             "default": true,
             "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "color_mult",
@@ -173,7 +179,10 @@
                 0.5
             ],
             "desc": "The color when there are no valid uvw coordinates",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
         },
         {
             "attr": "color",
@@ -205,7 +214,10 @@
             "attr": "out_intensity",
             "default": 1.0,
             "desc": "The resulting intensity",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
         },
         {
             "attr": "distance",
@@ -228,7 +240,11 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Far color",
+                "enabled": true
+            }
         },
         {
             "attr": "near_tex",
@@ -239,19 +255,29 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Near color",
+                "enabled": true
+            }
         },
         {
             "attr": "inside_separate",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "inside_solid",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "inside_tex",
@@ -262,19 +288,29 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Inside color",
+                "enabled": true
+            }
         },
         {
             "attr": "outside_separate",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "outside_solid",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "outside_tex",
@@ -285,13 +321,26 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Outside color",
+                "enabled": true
+            }
         },
         {
             "attr": "objects",
             "default": "",
             "desc": "List of nodes to measure distance",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         }
     ],
     "Type": "TEXTURE",

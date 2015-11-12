@@ -368,6 +368,24 @@
             "default": false,
             "desc": "If true, the resulting alpha is the color intensity; otherwise the alpha is taken from the colors",
             "type": "BOOL"
+        },
+        {
+            "attr": "input_bias_tex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "input_min_tex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "input_max_tex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
         }
     ],
     "Type": "TEXTURE",

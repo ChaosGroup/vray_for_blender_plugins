@@ -14,6 +14,20 @@
             "default": "",
             "desc": "List containing list of plugins. Every sub list contains a light plugin (always the first element) and some node plugins, which do not cast shadows from this light",
             "type": "LIST"
+        },
+        {
+            "attr": "include_exclude_light_flags",
+            "desc": "List containing a flag for every light in the ignored_lights list. 0 - the list is an exclude list (default). 1 - the list is an include list. 2 - ignored_lights is ignored and the light illuminates all objects in the scene, useful for animating the light linking",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "include_exclude_shadow_flags",
+            "desc": "List containing a flag for every light in the ignored_shadow_lights list. 0 - the list is an exclude list (default). 1 - the list is an include list. 2 - ignored_shadow_lights is ignored and the light casts shadows from all objects in the scene, useful for animating the light linking",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
         }
     ],
     "Type": "SETTINGS",

@@ -7,7 +7,10 @@
             "attr": "time_dependent",
             "default": false,
             "desc": "This make the samping pattern change with time",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Animated noise pattern"
+            }
         },
         {
             "attr": "adaptive_amount",
@@ -18,7 +21,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Adaptive amount"
             }
         },
         {
@@ -30,7 +34,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Adaptive threshold"
             }
         },
         {
@@ -42,7 +47,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Adaptive min samples"
             }
         },
         {
@@ -54,7 +60,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivs multiplier"
             }
         },
         {
@@ -66,8 +73,30 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Path sampler type"
             }
+        },
+        {
+            "attr": "div_shade_subdivs",
+            "desc": "Allow VRay to divide the number of samples for lights, materials etc by the number of AA samples in order to achieve roughly the same quality and number of rays when changing AA settings",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Divide shading subdivs"
+            }
+        },
+        {
+            "attr": "random_seed",
+            "desc": "If non-zero, a random seed for the DMC sampler",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "use_local_subdivs",
+            "desc": "true if shading subdivs in materials/lights/GI should be used, and false to determine subdivs automatically",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Type": "SETTINGS",

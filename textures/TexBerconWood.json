@@ -33,7 +33,10 @@
             "attr": "out_intensity",
             "default": 1.0,
             "desc": "The resulting intensity",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
         },
         {
             "attr": "color_mult",
@@ -88,14 +91,20 @@
             ],
             "desc": "The color when there are no valid uvw coordinates",
             "name": "No UV Color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
         },
         {
             "attr": "uvwgen",
             "default": "",
             "desc": "The uvw generator for the texture",
             "name": "Mapping",
-            "type": "UVWGEN"
+            "type": "UVWGEN",
+            "ui": {
+                "rollout": "Mapped"
+            }
         },
         {
             "attr": "compatibility_with",
@@ -113,7 +122,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Common"
+            }
         },
         {
             "attr": "alpha_from_intensity",
@@ -148,7 +160,10 @@
             "attr": "invert_alpha",
             "default": true,
             "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "placement_type",
@@ -182,7 +197,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -194,7 +210,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -206,7 +223,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -218,7 +236,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -230,32 +249,46 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "tile_u",
             "default": true,
             "desc": "If true there is horizontal tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "tile_v",
             "default": true,
             "desc": "If true there is vertical tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_on",
             "default": false,
             "desc": "If true the noise is enabled",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "UV noise on"
+            }
         },
         {
             "attr": "uv_noise_animate",
             "default": true,
             "desc": "If true the noise is animated",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Animate UV noise",
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_amount",
@@ -266,7 +299,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise amount",
+                "enabled": true
             }
         },
         {
@@ -278,7 +313,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise levels",
+                "enabled": true
             }
         },
         {
@@ -290,7 +327,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise size",
+                "enabled": true
             }
         },
         {
@@ -303,7 +342,10 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "<EndRollout>",
+                "display_name": "UV noise phase",
+                "enabled": true
             }
         },
         {
@@ -314,7 +356,10 @@
                 0.25
             ],
             "desc": "noise map 1",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Color 1 (map)"
+            }
         },
         {
             "attr": "noise_map2",
@@ -324,7 +369,10 @@
                 0
             ],
             "desc": "noise map 2",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Color 2 (map)"
+            }
         },
         {
             "attr": "noise_map3",
@@ -334,7 +382,11 @@
                 0
             ],
             "desc": "noise map 3",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Grain Color (map)",
+                "enabled": true
+            }
         },
         {
             "attr": "wood_size",
@@ -345,7 +397,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Size"
             }
         },
         {
@@ -357,7 +410,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Low"
             }
         },
         {
@@ -369,7 +423,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "High"
             }
         },
         {
@@ -398,7 +453,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Wood type"
+            }
         },
         {
             "attr": "trunk_str",
@@ -409,7 +467,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Trunk wobble",
+                "display_name": "Strength"
             }
         },
         {
@@ -421,7 +481,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frequency"
             }
         },
         {
@@ -433,7 +494,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Radial noise",
+                "display_name": "Strength"
             }
         },
         {
@@ -445,7 +508,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frequency"
             }
         },
         {
@@ -457,7 +521,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Z Frequency"
             }
         },
         {
@@ -469,7 +534,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Angular noise",
+                "display_name": "Strength"
             }
         },
         {
@@ -481,7 +548,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frequency"
             }
         },
         {
@@ -493,7 +561,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Radius"
             }
         },
         {
@@ -505,7 +574,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Grain",
+                "display_name": "Amount"
             }
         },
         {
@@ -517,14 +588,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Frequency"
             }
         },
         {
             "attr": "grain_lock",
             "default": false,
             "desc": "grain lock",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Grain Color same as Color 2"
+            }
         },
         {
             "attr": "width_var",
@@ -535,7 +610,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Width Variation"
             }
         },
         {
@@ -547,7 +623,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Gain Variation"
             }
         },
         {
@@ -559,7 +636,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "General",
+                "display_name": "Seed"
             }
         },
         {
@@ -571,7 +650,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Skew"
             }
         },
         {
@@ -583,7 +663,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Super Sampling",
+                "display_name": "Samples"
             }
         },
         {
@@ -594,7 +676,17 @@
                 0
             ],
             "desc": "distortion map",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Distortion (map)",
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "dist_map2",
@@ -604,7 +696,17 @@
                 0
             ],
             "desc": "distortion map 2",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Distortion Strength (map)",
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "dist_str",
@@ -615,14 +717,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Strength",
+                "enabled": true
             }
         },
         {
             "attr": "use_dist",
             "default": false,
             "desc": "use distortion",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Distortion",
+                "display_name": "Use distortion"
+            }
         },
         {
             "attr": "tex_size",
@@ -632,7 +740,17 @@
                 0.0
             ],
             "desc": "texture for the size",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Map parameters",
+                "display_name": "Size (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_low",
@@ -642,7 +760,16 @@
                 0.0
             ],
             "desc": "texture for low treshhold",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Threshold low (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_high",
@@ -652,7 +779,16 @@
                 0.0
             ],
             "desc": "texture for high greshhold",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Threshold high (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_skew",
@@ -662,7 +798,16 @@
                 0.0
             ],
             "desc": "texture for skew",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Skew (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_width_var",
@@ -672,7 +817,16 @@
                 0.0
             ],
             "desc": "texture for width variation",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Width variation (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_gain_var",
@@ -682,7 +836,16 @@
                 0.0
             ],
             "desc": "texture for gain variation",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Gain variation (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_trunk_str",
@@ -692,7 +855,16 @@
                 0.0
             ],
             "desc": "texture for trunk strength",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Trunk strength (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_trunk_freq",
@@ -702,7 +874,16 @@
                 0.0
             ],
             "desc": "texture for trunk frequency",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Trunk frequency (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_radial_str",
@@ -712,7 +893,16 @@
                 0.0
             ],
             "desc": "texture for radial strength",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Radial strength (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_radial_freq",
@@ -722,7 +912,16 @@
                 0.0
             ],
             "desc": "texture for radial frequency",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Radial frequency (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_z_str",
@@ -732,7 +931,16 @@
                 0.0
             ],
             "desc": "texture for radial z strength",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Radial Z frequency (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_ang_str",
@@ -742,7 +950,16 @@
                 0.0
             ],
             "desc": "texture for angular strength",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Angular strength (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_ang_freq",
@@ -752,7 +969,16 @@
                 0.0
             ],
             "desc": "texture for angular frequency",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Angular frequency (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_ang_rad",
@@ -762,7 +988,16 @@
                 0.0
             ],
             "desc": "texture for angular radius",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Angular radius (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_grain_str",
@@ -772,7 +1007,16 @@
                 0.0
             ],
             "desc": "texture for grain strength",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Grain strength (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
         },
         {
             "attr": "tex_grain_freq",
@@ -782,7 +1026,74 @@
                 0.0
             ],
             "desc": "texture for grain frequency",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Grain frequency (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "noise_color1",
+            "desc": "noise color 1",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Color 1"
+            }
+        },
+        {
+            "attr": "noise_color2",
+            "desc": "noise color 2",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Color 2"
+            }
+        },
+        {
+            "attr": "noise_color3",
+            "desc": "noise color 3",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Grain Color",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "use_curve_input",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "curve_output",
+            "desc": "Calculated blend amount to be tranformed by the bezier curve!",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "curve_input",
+            "desc": "If curve is used the output value will be taken from this texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.5
         }
     ],
     "Type": "TEXTURE",

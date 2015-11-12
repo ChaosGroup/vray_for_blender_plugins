@@ -287,6 +287,12 @@
             "default": "",
             "desc": "The name of the uv channel that should be used",
             "type": "STRING"
+        },
+        {
+            "attr": "uv_index",
+            "desc": "The index of the uv channel that should be used in case there is no uv set name",
+            "type": "INT",
+            "default": -1
         }
     ],
     "Type": "TEXTURE",

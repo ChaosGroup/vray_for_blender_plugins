@@ -12,7 +12,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Common"
             }
         },
         {
@@ -37,7 +38,10 @@
             "attr": "invert_alpha",
             "default": true,
             "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "color_mult",
@@ -94,7 +98,10 @@
                 1
             ],
             "desc": "The color when there are no valid uvw coordinates",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
         },
         {
             "attr": "color",
@@ -126,7 +133,10 @@
             "attr": "out_intensity",
             "default": 1.0,
             "desc": "The resulting intensity",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
         },
         {
             "attr": "texmap",
@@ -150,6 +160,23 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "output_mult",
+            "desc": "A multiplier for the output AColor",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "output_clamp",
+            "desc": "Clamp the output in [0.0,1.0] range",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "TEXTURE",

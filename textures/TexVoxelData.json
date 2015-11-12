@@ -46,6 +46,43 @@
             "name": "Domain",
             "skip": true,
             "type": "GEOMETRY"
+        },
+        {
+            "attr": "resolution",
+            "desc": "Resolution",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "density",
+            "desc": "Fluid density",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "flame",
+            "desc": "Fluid flame",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "fuel",
+            "desc": "Fluid fuel",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "The UVW generator for the texture",
+            "type": "PLUGIN",
+            "default": null
         }
     ],
     "Type": "TEXTURE",

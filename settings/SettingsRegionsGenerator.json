@@ -46,7 +46,10 @@
                 ]
             ],
             "name": "XY Means",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Size in pixels or number of regions"
+            }
         },
         {
             "attr": "seqtype",

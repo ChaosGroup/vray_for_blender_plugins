@@ -176,7 +176,12 @@
             "default": "",
             "desc": "",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "csv"
+                ]
+            }
         },
         {
             "attr": "csv_color_filter",

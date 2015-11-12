@@ -307,6 +307,29 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "file",
+            "desc": "",
+            "type": "STRING",
+            "default": "",
+            "ui": {
+                "file_extensions": [
+                    "vrscan"
+                ]
+            }
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "param_block",
+            "desc": "All parameters serialized to a binary param block",
+            "type": "INT",
+            "default": 0
         }
     ],
     "Type": "BRDF",

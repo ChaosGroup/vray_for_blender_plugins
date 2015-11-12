@@ -66,13 +66,20 @@
             "attr": "use_globals",
             "default": true,
             "desc": "If true, the global displacement quality settings will be used",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use global settings"
+            }
         },
         {
             "attr": "view_dep",
             "default": true,
             "desc": "If use_globals is false, this determines if view-dependent tesselation is used",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "View dependent",
+                "enabled": true
+            }
         },
         {
             "attr": "edge_length",
@@ -83,7 +90,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Edge length",
+                "enabled": true
             }
         },
         {
@@ -95,7 +104,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max subdivisions",
+                "enabled": true
             }
         },
         {
@@ -166,7 +177,10 @@
                 0
             ],
             "desc": "The lowest value for the displacement texture",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "max_bound",
@@ -176,7 +190,10 @@
                 1
             ],
             "desc": "The biggest value for the displacement texture",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "resolution",
@@ -187,7 +204,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -199,20 +217,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "tight_bounds",
             "default": true,
             "desc": "When this is on, initialization will be slower, but tighter bounds will be computed for the displaced triangles making rendering faster",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "filter_texture",
             "default": false,
             "desc": "Filter the texture for 2d displacement",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "filter_blur",
@@ -223,7 +248,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -250,6 +276,36 @@
             "name": "Mode",
             "skip": true,
             "type": "ENUM"
+        },
+        {
+            "attr": "vector_displacement",
+            "desc": "When this is 1, the red, green and blue channels of displacement_tex_color will be used to perform vector displacement with base 0.5; if this is 2, then the map matches the Mudbox displacement maps",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "object_space_displacement",
+            "desc": "If true, the parent transformation will affect the amount of displacement. Used only when doing 3D displacement",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "displace_2d",
+            "desc": "Use to enable 2d displacement. Overrides the vector_displacement flag",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "2D Displacement"
+            }
+        },
+        {
+            "attr": "displace_2d_multi_tile",
+            "desc": "Enable or disable support for tiled textures (UDIM/UVTILE) when generating 2d displacement",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
         }
     ],
     "Type": "GEOMETRY",

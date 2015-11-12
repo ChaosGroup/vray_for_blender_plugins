@@ -12,7 +12,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "CPU Ray bundle size"
             }
         },
         {
@@ -24,7 +25,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "CPU Rays per pixel"
             }
         },
         {
@@ -36,7 +38,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GPU Ray bundle size"
             }
         },
         {
@@ -48,7 +51,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GPU Rays per pixel"
             }
         },
         {
@@ -60,7 +64,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Trace depth"
             }
         },
         {
@@ -73,20 +78,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GI depth"
             }
         },
         {
             "attr": "coherent_tracing",
             "default": false,
             "desc": "true to enable coherent tracing of gi/reflections/refractions etc",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Coherent tracing"
+            }
         },
         {
             "attr": "stereo_mode",
             "default": false,
             "desc": "Enable side-by-side stereo rendering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Enable stereo"
+            }
         },
         {
             "attr": "stereo_eye_distance",
@@ -98,7 +110,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Stereo eye distance"
             }
         },
         {
@@ -122,7 +135,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Stereo focus mode"
+            }
         },
         {
             "attr": "opencl_texsize",
@@ -134,14 +150,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GPU Texture Size"
             }
         },
         {
             "attr": "opencl_resizeTextures",
             "default": true,
             "desc": "true to resize textures for the GPU based on opencl_texsize; false to use full resolution textures",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "GPU Resize textures"
+            }
         },
         {
             "attr": "opencl_textureFormat",
@@ -159,7 +179,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "GPU Texture Format"
+            }
         },
         {
             "attr": "progressive_samples_per_pixel",
@@ -167,20 +190,27 @@
             "desc": "Progressive increase for samples_per_pixel (from 1 to real value). Use this for faster feadback",
             "type": "INT",
             "ui": {
-                "min": 0
+                "min": 0,
+                "display_name": "Progressive rays per pixel"
             }
         },
         {
             "attr": "undersampling",
             "default": true,
             "desc": "Use undersampling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Undersampling"
+            }
         },
         {
             "attr": "disable_render_elements",
             "default": true,
             "desc": "Produce only RGBA",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Disable render elements"
+            }
         },
         {
             "attr": "max_render_time",
@@ -191,7 +221,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max. render time (min)"
             }
         },
         {
@@ -203,7 +234,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max. paths per pixel"
             }
         },
         {
@@ -215,14 +247,30 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max. noise"
             }
         },
         {
             "attr": "enable_mask",
             "default": false,
             "desc": "Show AA mask",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show AA mask"
+            }
+        },
+        {
+            "attr": "max_draw_interval",
+            "desc": "Max time, in milliseconds, between (partial) image updates (0=disable partial image updates)",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "min_draw_interval",
+            "desc": "Min time, in milliseconds, between image updates (0=show all frames)",
+            "type": "INT",
+            "default": 0
         }
     ],
     "Type": "SETTINGS",

@@ -26,6 +26,12 @@
             "default": false,
             "desc": "",
             "type": "BOOL"
+        },
+        {
+            "attr": "shape",
+            "desc": "",
+            "type": "INT",
+            "default": 0
         }
     ],
     "Type": "EFFECT",

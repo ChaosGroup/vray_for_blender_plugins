@@ -166,6 +166,12 @@
             "default": "",
             "desc": "Optional UVWGen from which the initial uvw coordinates will be taken, instead of the surface point",
             "type": "UVWGEN"
+        },
+        {
+            "attr": "use_double_sided_mode",
+            "desc": "If this is true then we will use uvw_channel for front-side and uvw_channel + 1 for back-side contexts. This is primarily for V-Ray for SketchUp",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "UVWGEN",

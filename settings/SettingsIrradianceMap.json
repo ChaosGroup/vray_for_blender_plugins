@@ -9,7 +9,9 @@
             "desc": "This value determines the resolution for the first GI pass",
             "type": "INT",
             "ui": {
-                "min": -8
+                "min": -8,
+                "display_name": "Min rate",
+                "max": 100
             }
         },
         {
@@ -18,7 +20,9 @@
             "desc": "This value determines the resolution of the last GI pass",
             "type": "INT",
             "ui": {
-                "min": -8
+                "min": -8,
+                "display_name": "Max rate",
+                "max": 100
             }
         },
         {
@@ -30,7 +34,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivs"
             }
         },
         {
@@ -43,7 +48,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Interp. samples"
             }
         },
         {
@@ -56,7 +62,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Calc. interp. samples"
             }
         },
         {
@@ -69,7 +76,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Interp. frames"
             }
         },
         {
@@ -81,7 +89,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Color threshold"
             }
         },
         {
@@ -93,7 +102,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Normal threshold"
             }
         },
         {
@@ -105,7 +115,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Distance threshold"
             }
         },
         {
@@ -113,7 +124,10 @@
             "default": false,
             "desc": "Detail enhancement is a method for bringing additional detail to the irradiance map in the case where there are small details in the image",
             "name": "Detail Enhancement",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Detail enhancement"
+            }
         },
         {
             "attr": "detail_radius",
@@ -125,7 +139,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Detail radius [px]",
+                "enabled": true
             }
         },
         {
@@ -138,7 +154,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Detail subdivs mult",
+                "enabled": true
             }
         },
         {
@@ -157,13 +175,20 @@
                     "Radius in world units"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Detail scale",
+                "enabled": true
+            }
         },
         {
             "attr": "randomize_samples",
             "default": true,
             "desc": "When it is checked, the image samples will be randomly jittered",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Randomize samples"
+            }
         },
         {
             "attr": "interpolation_mode",
@@ -191,7 +216,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Interpolation mode"
+            }
         },
         {
             "attr": "lookup_mode",
@@ -219,7 +247,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Lookup mode"
+            }
         },
         {
             "attr": "mode",
@@ -267,69 +298,119 @@
                     "Final rendering of animation using saved per-frame irradiance maps"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Mode"
+            }
         },
         {
             "attr": "dont_delete",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Don't delete"
+            }
         },
         {
             "attr": "file",
             "default": "//lightmaps/irradiance_map.vrmap",
             "desc": "Irradiance map file name",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "File",
+                "enabled": true,
+                "file_extensions": [
+                    "vrmap"
+                ],
+                "file_names": [
+                    "V-Ray Irradiance map"
+                ]
+            }
         },
         {
             "attr": "show_samples",
             "default": false,
             "desc": "Show Irradiance Map samples",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show samples"
+            }
         },
         {
             "attr": "show_calc_phase",
             "default": true,
             "desc": "Show Irradiance Map calculation process",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show calc phase"
+            }
         },
         {
             "attr": "show_direct_light",
             "default": false,
             "desc": "Show direct light when showing calculation process",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show direct light",
+                "enabled": true
+            }
         },
         {
             "attr": "multiple_views",
             "default": false,
             "desc": "When this option is on, V-Ray will calculate the irradiance map samples for the entire camera path, instead of just the current view",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use camera path"
+            }
         },
         {
             "attr": "multipass",
             "default": true,
             "desc": "When checked, this will cause V-Ray to use all irradiance map samples computed so far",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Multipass"
+            }
         },
         {
             "attr": "check_sample_visibility",
             "default": false,
             "desc": "This will cause V-Ray to use only those samples from the irradiance map, which are directly visible from the interpolated point",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Check sample visibility"
+            }
         },
         {
             "attr": "auto_save",
             "default": false,
             "desc": "Automatically save the irradiance map to the specified file at the end of the rendering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto save",
+                "enabled": true
+            }
         },
         {
             "attr": "auto_save_file",
             "default": "//lightmaps/irradiance_map.vrmap",
             "desc": "Irradiance map auto save file",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "Auto save file",
+                "enabled": true,
+                "file_extensions": [
+                    "vrmap"
+                ],
+                "file_names": [
+                    "V-Ray Irradiance map"
+                ],
+                "file_op": "save"
+            }
         }
     ],
     "Type": "SETTINGS",

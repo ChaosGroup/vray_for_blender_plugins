@@ -190,6 +190,16 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "ground_position",
+            "desc": "",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
         }
     ],
     "Type": "UVWGEN",

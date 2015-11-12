@@ -21,7 +21,8 @@
             "desc": "Determines the amount of dust in the air and affects the color of the sun and sky. Smaller values produce a clear/blue sky, larger values yellow and orange",
             "type": "FLOAT",
             "ui": {
-                "min": 2.0
+                "min": 2.0,
+                "max": 20.0
             }
         },
         {
@@ -97,7 +98,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -143,6 +145,32 @@
             "desc": "If specified, all parameters are taken from the sun; otherwise, the sky parameters are used",
             "skip": true,
             "type": "PLUGIN"
+        },
+        {
+            "attr": "ground_albedo",
+            "desc": "Reflective property of the \"ground\". Affects sky-dome brightness and color",
+            "type": "COLOR",
+            "default": [
+                0.20000000298023225,
+                0.20000000298023225,
+                0.20000000298023225
+            ]
+        },
+        {
+            "attr": "color_mode",
+            "desc": "This option affects the way the color in the Filter color parameter affects the color of the sun",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "up_vector",
+            "desc": "",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                1.0
+            ]
         }
     ],
     "Type": "TEXTURE",

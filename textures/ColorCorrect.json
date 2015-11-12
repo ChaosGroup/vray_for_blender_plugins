@@ -28,7 +28,11 @@
             "attr": "preprocess",
             "default": false,
             "desc": "true to enable preprocessing",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "RGB Pre-process",
+                "display_name": "Pre-process On"
+            }
         },
         {
             "attr": "pre_brightness",
@@ -39,7 +43,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -51,7 +56,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -63,32 +69,45 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "pre_mono",
             "default": false,
             "desc": "true to convert to grayscale",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "pre_invert",
             "default": false,
             "desc": "true to invert the input color",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "pre_unmult_alpha",
             "default": false,
             "desc": "true to unmultiply alpha",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "pre_clamp",
             "default": false,
             "desc": "true to clamp the input color",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "pre_clamp_min",
@@ -99,7 +118,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -111,20 +131,28 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "pre_clamp_normalize",
             "default": false,
             "desc": "true to normalize the clamped input to 0.0-1.0",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "hsl_on",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "HSL",
+                "display_name": "HSL On"
+            }
         },
         {
             "attr": "hsl_hue_offset",
@@ -135,7 +163,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -147,7 +176,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -159,7 +189,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -171,7 +202,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -183,7 +215,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -195,14 +228,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "hsv_on",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "HSV",
+                "display_name": "HSV On"
+            }
         },
         {
             "attr": "hsv_hue_offset",
@@ -213,7 +251,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -225,7 +264,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -237,7 +277,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -249,7 +290,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -261,7 +303,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -273,14 +316,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "rgba_on",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "RGBA Channel Mapping",
+                "display_name": "RGBA Channel Mapping On"
+            }
         },
         {
             "attr": "red_channel",
@@ -368,7 +416,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "red_offset",
@@ -379,7 +430,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -391,7 +443,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -480,7 +533,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "green_offset",
@@ -491,7 +547,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -503,7 +560,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -592,7 +650,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "blue_offset",
@@ -603,7 +664,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -615,7 +677,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -704,7 +767,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "alpha_offset",
@@ -715,7 +781,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -727,38 +794,55 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "premultiply_new_alpha",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "postprocess",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "RGB Post-process",
+                "display_name": "Post-process On"
+            }
         },
         {
             "attr": "post_mono",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "post_invert",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "post_clamp",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "post_clamp_min",
@@ -769,7 +853,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -781,14 +866,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "post_clamp_normalize",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         }
     ],
     "Type": "TEXTURE",

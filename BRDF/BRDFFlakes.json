@@ -12,7 +12,11 @@
             ],
             "desc": "",
             "name": "Color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "tab": "V-Ray Flakes",
+                "rollout": "Flakes parameters"
+            }
         },
         {
             "attr": "flake_glossiness",
@@ -140,7 +144,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Options",
+                "display_name": "Trace reflections"
             }
         },
         {
@@ -152,7 +158,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Double sided"
             }
         },
         {
@@ -217,7 +224,10 @@
                 0.0
             ],
             "desc": "Environment override texture",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "environment_priority",
@@ -228,7 +238,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "trace_depth",
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
+            "default": -1,
+            "ui": {
+                "min": 1,
+                "max": 1000
+            }
+        },
+        {
+            "attr": "use_environment_override",
+            "desc": "True to use the 'environment override' texture",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Environment override"
             }
         }
     ],

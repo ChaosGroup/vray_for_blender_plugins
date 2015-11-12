@@ -12,7 +12,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "tab": "V-Ray Skin",
+                "rollout": "General parameters"
             }
         },
         {
@@ -24,7 +26,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max SSS amount"
             }
         },
         {
@@ -36,7 +39,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max refl amount"
             }
         },
         {
@@ -59,7 +63,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "diffuse_amount",
@@ -82,7 +89,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "shallow_amount",
@@ -117,7 +127,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "medium_amount",
@@ -152,7 +165,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": ""
+            }
         },
         {
             "attr": "deep_amount",
@@ -187,7 +203,11 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Primary reflection",
+                "display_name": "Prim. refl. color"
+            }
         },
         {
             "attr": "primary_reflection_amount",
@@ -198,7 +218,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Prim. refl. amount"
             }
         },
         {
@@ -210,7 +231,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Prim. refl. glossiness"
             }
         },
         {
@@ -222,14 +244,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Prim. refl. subdivs"
             }
         },
         {
             "attr": "primary_reflection_fresnel",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Prim. refl. fresnel"
+            }
         },
         {
             "attr": "primary_reflection_fresnel_ior",
@@ -240,7 +266,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Prim. refl. fresnel IOR",
+                "enabled": true
             }
         },
         {
@@ -252,7 +280,11 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Secondary reflection",
+                "display_name": "Sec. refl. color"
+            }
         },
         {
             "attr": "secondary_reflection_amount",
@@ -263,7 +295,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sec. refl. amount"
             }
         },
         {
@@ -275,7 +308,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sec. refl. glossiness"
             }
         },
         {
@@ -287,14 +321,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sec. refl. subdivs"
             }
         },
         {
             "attr": "secondary_reflection_fresnel",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Sec. refl. fresnel"
+            }
         },
         {
             "attr": "secondary_reflection_fresnel_ior",
@@ -305,7 +343,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sec. refl. fresnel IOR",
+                "enabled": true
             }
         },
         {
@@ -329,19 +369,28 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Multiple scattering options"
+            }
         },
         {
             "attr": "scatter_gi",
             "default": false,
             "desc": "true to enable scattering of GI rays",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Scatter GI"
+            }
         },
         {
             "attr": "raytraced_scatter_textures",
             "default": false,
             "desc": "true to scatter SSS textures when using raytraced scattering",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "raytraced_subdivs",
@@ -352,7 +401,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -364,7 +414,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -376,7 +427,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -388,7 +440,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -400,14 +453,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Samples per unit area",
+                "enabled": true
             }
         },
         {
             "attr": "geom_auto_density",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto density",
+                "enabled": true
+            }
         },
         {
             "attr": "geom_surface_offset",
@@ -418,14 +477,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Surface offset",
+                "enabled": true
             }
         },
         {
             "attr": "geom_preview_samples",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Preview samples",
+                "enabled": true
+            }
         },
         {
             "attr": "geom_max_distance",
@@ -436,7 +501,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max distance",
+                "enabled": true
             }
         },
         {
@@ -447,7 +514,11 @@
                 0
             ],
             "desc": "",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Background color",
+                "enabled": true
+            }
         },
         {
             "attr": "geom_samples_color",
@@ -457,13 +528,21 @@
                 1
             ],
             "desc": "",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Samples color",
+                "enabled": true
+            }
         },
         {
             "attr": "option_reflections_trace",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Options",
+                "display_name": "Trace reflections"
+            }
         },
         {
             "attr": "option_reflections_maxDepth",
@@ -474,7 +553,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Reflection max depth"
             }
         },
         {
@@ -486,7 +566,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Reflection cutoff"
             }
         },
         {

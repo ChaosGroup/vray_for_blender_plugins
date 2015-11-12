@@ -12,7 +12,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "tab": "V-Ray Material Basic",
+                "rollout": "Basic"
             }
         },
         {
@@ -23,7 +25,10 @@
                 0.5
             ],
             "desc": "The diffuse color of the material",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Diffuse color"
+            }
         },
         {
             "attr": "roughness",
@@ -34,7 +39,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Diffuse roughness"
             }
         },
         {
@@ -45,13 +51,19 @@
                 0
             ],
             "desc": "The self-illumination color of the material",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Self-Illumination color"
+            }
         },
         {
             "attr": "self_illumination_gi",
             "default": true,
             "desc": "true if the self-illumination should affect GI",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Self-Illumination affects GI"
+            }
         },
         {
             "attr": "brdf_type",
@@ -79,7 +91,11 @@
                     "GGX"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Reflection layer",
+                "display_name": "BRDF Type"
+            }
         },
         {
             "attr": "reflect",
@@ -89,7 +105,10 @@
                 0
             ],
             "desc": "The reflection color of the material",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Reflection color"
+            }
         },
         {
             "attr": "reflect_glossiness",
@@ -101,7 +120,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Reflection glossiness"
             }
         },
         {
@@ -113,20 +133,29 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Hilight glossiness",
+                "enabled": true
             }
         },
         {
             "attr": "hilight_glossiness_lock",
             "default": true,
             "desc": "true to use the reflection glossiness also for hilights (hilight_glossiness is ignored)",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Lock hilight glossiness"
+            }
         },
         {
             "attr": "fresnel",
             "default": true,
             "desc": "true to enable fresnel reflections",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "",
+                "display_name": "Fresnel reflections"
+            }
         },
         {
             "attr": "fresnel_ior",
@@ -138,7 +167,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fresnel IOR",
+                "enabled": true
             }
         },
         {
@@ -146,7 +177,11 @@
             "default": true,
             "desc": "true to use the refraction ior also for the Fresnel term (fresnel_ior is ignored)",
             "name": "Fresnel IOR Lock",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Lock fresnel IOR",
+                "enabled": true
+            }
         },
         {
             "attr": "reflect_subdivs",
@@ -157,14 +192,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "",
+                "display_name": "Subdivs"
             }
         },
         {
             "attr": "reflect_trace",
             "default": true,
             "desc": "true to trace reflections and false to only do hilights",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Trace reflections"
+            }
         },
         {
             "attr": "reflect_depth",
@@ -175,7 +215,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max depth"
             }
         },
         {
@@ -186,7 +227,10 @@
                 0
             ],
             "desc": "The color to use when the maximum depth is reached",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Exit color"
+            }
         },
         {
             "attr": "hilight_soften",
@@ -197,7 +241,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Soften"
             }
         },
         {
@@ -209,14 +254,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Dim distance",
+                "enabled": true
             }
         },
         {
             "attr": "reflect_dim_distance_on",
             "default": false,
             "desc": "True to enable dim distance",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "",
+                "display_name": "Enable dim distance"
+            }
         },
         {
             "attr": "reflect_dim_distance_falloff",
@@ -227,7 +278,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Dim fall-off",
+                "enabled": true
             }
         },
         {
@@ -252,7 +305,10 @@
                 ]
             ],
             "name": "Affect Alpha",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Affect Channels"
+            }
         },
         {
             "attr": "anisotropy",
@@ -263,7 +319,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "",
+                "display_name": "Anisotropy(-1..1)"
             }
         },
         {
@@ -275,7 +333,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Anisotropy rotation"
             }
         },
         {
@@ -294,7 +353,10 @@
                     "The specified UVW generator"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "UV Vectors Derivation"
+            }
         },
         {
             "attr": "anisotropy_axis",
@@ -317,7 +379,11 @@
                     "Z"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Anisotropy Axis",
+                "enabled": true
+            }
         },
         {
             "attr": "anisotropy_uvwgen",
@@ -333,7 +399,11 @@
                 0
             ],
             "desc": "The refraction color of the material",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Refraction layer",
+                "display_name": "Refraction color"
+            }
         },
         {
             "attr": "refract_ior",
@@ -345,7 +415,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Refraction IOR"
             }
         },
         {
@@ -357,7 +428,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Refraction glossiness"
             }
         },
         {
@@ -369,14 +441,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "",
+                "display_name": "Subdivs"
             }
         },
         {
             "attr": "refract_trace",
             "default": true,
             "desc": "1 to trace refractions; 0 to disable them",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Trace refractions"
+            }
         },
         {
             "attr": "refract_depth",
@@ -387,7 +464,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max depth"
             }
         },
         {
@@ -398,13 +476,20 @@
                 0
             ],
             "desc": "The color to use when maximum depth is reached when refract_exit_color_on is true",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Exit color",
+                "enabled": true
+            }
         },
         {
             "attr": "refract_exit_color_on",
             "default": false,
             "desc": "If false, when the maximum refraction depth is reached, the material is assumed transparent, instead of terminating the ray",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use exit color"
+            }
         },
         {
             "attr": "refract_affect_alpha",
@@ -428,19 +513,29 @@
                 ]
             ],
             "name": "Affect Alpha",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Affect alpha"
+            }
         },
         {
             "attr": "refract_affect_shadows",
             "default": true,
             "desc": "true to enable the refraction to affect the shadows cast by the material (as transparent shadows)",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect shadows"
+            }
         },
         {
             "attr": "dispersion_on",
             "default": false,
             "desc": "true to enable dispersion",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "",
+                "display_name": "Enable dispersion"
+            }
         },
         {
             "attr": "dispersion",
@@ -451,7 +546,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Abberation",
+                "enabled": true
             }
         },
         {
@@ -462,7 +559,12 @@
                 1
             ],
             "desc": "The absorption (fog) color",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "tab": "V-Ray Material Advanced",
+                "rollout": "Fog",
+                "display_name": "Fog color"
+            }
         },
         {
             "attr": "fog_color_tex",
@@ -472,7 +574,10 @@
                 1
             ],
             "desc": "The absorption (fog) color texture",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Fog color"
+            }
         },
         {
             "attr": "fog_mult",
@@ -483,7 +588,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog multiplier"
             }
         },
         {
@@ -495,14 +601,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fog bias"
             }
         },
         {
             "attr": "fog_unit_scale_on",
             "default": true,
             "desc": "Enable unit scale multiplication, when calculating absorption",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Fog system units scaling"
+            }
         },
         {
             "attr": "translucency",
@@ -530,7 +640,11 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Translucency (SSS)",
+                "display_name": "Translucency type"
+            }
         },
         {
             "attr": "translucency_color",
@@ -540,7 +654,11 @@
                 1
             ],
             "desc": "Filter color for the translucency effect",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Translucency color",
+                "enabled": true
+            }
         },
         {
             "attr": "translucency_light_mult",
@@ -551,7 +669,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Light multiplier",
+                "enabled": true
             }
         },
         {
@@ -563,7 +683,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Scatter direction",
+                "enabled": true
             }
         },
         {
@@ -575,7 +697,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Scatter coeff",
+                "enabled": true
             }
         },
         {
@@ -587,20 +711,29 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Thickness",
+                "enabled": true
             }
         },
         {
             "attr": "option_double_sided",
             "default": true,
             "desc": "true if the material is double-sided",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Options",
+                "display_name": "Double-sided"
+            }
         },
         {
             "attr": "option_reflect_on_back",
             "default": false,
             "desc": "true to compute reflections for back sides of objects",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Reflect on back side"
+            }
         },
         {
             "attr": "option_glossy_rays_as_gi",
@@ -623,7 +756,10 @@
                     "Always"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Glossy rays as GI"
+            }
         },
         {
             "attr": "option_cutoff",
@@ -634,14 +770,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Cutoff"
             }
         },
         {
             "attr": "option_use_irradiance_map",
             "default": true,
             "desc": "false to perform local brute-force GI calculatons and true to use the current GI engine",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use irradiance map"
+            }
         },
         {
             "attr": "option_energy_mode",
@@ -659,7 +799,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Energy preservation"
+            }
         },
         {
             "attr": "option_fix_dark_edges",
@@ -670,7 +813,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Fix dark edges"
             }
         },
         {
@@ -684,7 +828,10 @@
             "options": [
                 "LINKED_ONLY"
             ],
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "environment_priority",
@@ -695,14 +842,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "refl_interpolation_on",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Reflection interpolation",
+                "display_name": "Use reflection interpolation"
+            }
         },
         {
             "attr": "refl_imap_min_rate",
@@ -713,7 +865,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min rate",
+                "enabled": true
             }
         },
         {
@@ -725,7 +879,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max rate",
+                "enabled": true
             }
         },
         {
@@ -737,7 +893,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Color threshold",
+                "enabled": true
             }
         },
         {
@@ -749,7 +907,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Normal threshold",
+                "enabled": true
             }
         },
         {
@@ -761,14 +921,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Interpolation samples",
+                "enabled": true
             }
         },
         {
             "attr": "refr_interpolation_on",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Refraction interpolation",
+                "display_name": "Use refraction interpolation"
+            }
         },
         {
             "attr": "refr_imap_min_rate",
@@ -779,7 +945,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Min rate",
+                "enabled": true
             }
         },
         {
@@ -791,7 +959,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max rate",
+                "enabled": true
             }
         },
         {
@@ -803,7 +973,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Color threshold",
+                "enabled": true
             }
         },
         {
@@ -811,7 +983,15 @@
             "name": "GTR Falloff",
             "default": 2.0,
             "desc": "How much to increase/decrease the tail of the glossy highlight when using GGX reflection model",
-            "type": "FLOAT"
+            "type": "FLOAT",
+            "ui": {
+                "display_name": "GGX tail falloff",
+                "enabled": true,
+                "min": 0.0010000000474974514,
+                "max": 1000.0,
+                "soft_min": 2.0,
+                "soft_max": 10.0
+            }
         },
         {
             "attr": "refr_imap_norm_thresh",
@@ -822,7 +1002,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Normal threshold",
+                "enabled": true
             }
         },
         {
@@ -834,7 +1016,24 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Interpolation samples",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "gtr_oldGamma",
+            "desc": "true to use the old (and incorrect) shadow masking function when gtr_gamma is different from 2.0",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "use_environment_override",
+            "desc": "True to use the 'environment override' texture",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Environment override"
             }
         }
     ],

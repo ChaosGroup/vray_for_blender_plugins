@@ -218,7 +218,26 @@
             "attr": "file",
             "default": "",
             "desc": "The file name; can contain <UDIM> or <UVTILE> tags for Mari or Mudbox tiles respectively,or $nU and $nV for explicit tiles; lower-case tags consider the tiles as starting from 0 whereas upper-case tags start from 1",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "exr",
+                    "png",
+                    "bmp",
+                    "tga",
+                    "hdr",
+                    "jpg",
+                    "jpeg",
+                    "pic",
+                    "tif",
+                    "tiff",
+                    "psd",
+                    "vrimg",
+                    "sgi",
+                    "rgb",
+                    "rgba"
+                ]
+            }
         },
         {
             "attr": "bitmap",

@@ -11,7 +11,10 @@
                 1.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Unoccluded Color"
+            }
         },
         {
             "attr": "black_color",
@@ -21,7 +24,10 @@
                 0.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Occluded Color"
+            }
         },
         {
             "attr": "radius",
@@ -44,7 +50,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -147,25 +154,51 @@
             "attr": "render_nodes",
             "default": "",
             "desc": "",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "display_name": "Exclude",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         },
         {
             "attr": "render_nodes_inclusive",
             "default": false,
             "desc": "if true the render_nodes list is inclusive",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "As Inclusive list"
+            }
         },
         {
             "attr": "affect_result_nodes",
             "default": "",
             "desc": "",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "display_name": "Result Affect",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         },
         {
             "attr": "affect_result_nodes_inclusive",
             "default": false,
             "desc": "if true the affect_result_nodes list is inclusive",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "As Inclusive list"
+            }
         },
         {
             "attr": "mode",
@@ -205,7 +238,10 @@
             "attr": "affect_reflection_elements",
             "default": false,
             "desc": "true to add the occlusion to relection render elements when mode>0",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "glossiness",
@@ -216,8 +252,15 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
+        },
+        {
+            "attr": "use_texture_for_excluded",
+            "desc": "True to return the unoccluded color texture, if the object is excluded. Otherwise return (0,0,0,0)",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Type": "TEXTURE",

@@ -12,7 +12,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -24,7 +25,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -36,7 +38,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "tab": "V-Ray Fast SSS2",
+                "rollout": "General parameters"
             }
         },
         {
@@ -49,7 +53,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Index of refraction"
             }
         },
         {
@@ -60,7 +65,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Diffuse and sub-surface scattering layers"
+            }
         },
         {
             "attr": "diffuse_color",
@@ -102,7 +110,10 @@
                 0.175
             ],
             "desc": "This is measured in centimeters",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Scatter Color"
+            }
         },
         {
             "attr": "scatter_radius_mult",
@@ -113,7 +124,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Scatter Radius (in cm)"
             }
         },
         {
@@ -142,7 +154,10 @@
                 1
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "rollout": "Specular layer"
+            }
         },
         {
             "attr": "specular_amount",
@@ -236,7 +251,10 @@
                     "Raytraced (Refractive)",
                     ""
                 ]
-            ]
+            ],
+            "ui": {
+                "rollout": "Options"
+            }
         },
         {
             "attr": "subdivs",
@@ -247,7 +265,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Single scatter subdivs"
             }
         },
         {
@@ -266,19 +285,30 @@
             "attr": "front_scatter",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Front lighting",
+                "enabled": true
+            }
         },
         {
             "attr": "back_scatter",
             "default": true,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Back lighting",
+                "enabled": true
+            }
         },
         {
             "attr": "scatter_gi",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Scatter GI"
+            }
         },
         {
             "attr": "prepass_blur",
@@ -289,7 +319,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -301,7 +332,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -347,7 +379,10 @@
                     "Load saved irradiance map on the first rendered frame only"
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "prepass_fileName",
@@ -355,7 +390,16 @@
             "default": "",
             "desc": "File path template for saved irradiance map files, frame number is appended for modes \"Save / Load (Per-Frame)\"",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "enabled": true,
+                "file_extensions": [
+                    "vrsssmap"
+                ],
+                "file_names": [
+                    "VRayFastSSS2 illumination map"
+                ]
+            }
         },
         {
             "attr": "geometry_based_sampling",
@@ -383,7 +427,11 @@
                     "None (Diffuse Approximation)",
                     ""
                 ]
-            ]
+            ],
+            "ui": {
+                "rollout": "Multiple scattering",
+                "display_name": "Multiple scattering"
+            }
         },
         {
             "attr": "samples_per_unit_area",
@@ -394,14 +442,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "auto_density",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "surface_offset",
@@ -412,14 +464,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "preview_samples",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "max_distance",
@@ -430,7 +486,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -441,7 +498,10 @@
                 0
             ],
             "desc": "",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "samples_color",
@@ -451,7 +511,38 @@
                 1
             ],
             "desc": "",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "opacity",
+            "desc": "Opacity texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "color_mode",
+            "desc": "Determines the meaning of the two colors: 0 - diffuse surface reflectance and scatter radius; 1 - scatter coefficient and fog color",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Diffuse surface reflectance and scatter radius",
+                    ""
+                ],
+                [
+                    "1",
+                    "Scatter coefficient and fog color",
+                    ""
+                ]
+            ],
+            "default": "0"
         }
     ],
     "Type": "BRDF",

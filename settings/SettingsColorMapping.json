@@ -44,13 +44,19 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Type"
+            }
         },
         {
             "attr": "affect_background",
             "default": true,
             "desc": "Affect colors belonging to the background",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect background"
+            }
         },
         {
             "attr": "dark_mult",
@@ -62,7 +68,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Dark multiplier"
             }
         },
         {
@@ -75,7 +82,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bright multiplier"
             }
         },
         {
@@ -87,20 +95,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Gamma"
             }
         },
         {
             "attr": "subpixel_mapping",
             "default": false,
             "desc": "This option controls whether color mapping will be applied to the final image pixels, or to the individual sub-pixel samples",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Subpixel mapping"
+            }
         },
         {
             "attr": "clamp_output",
             "default": false,
             "desc": "Clamp colors",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Clamp output"
+            }
         },
         {
             "attr": "clamp_level",
@@ -111,20 +126,28 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Clamp level",
+                "enabled": true
             }
         },
         {
             "attr": "adaptation_only",
             "default": false,
             "desc": "When this parameter is on, the color mapping will not be applied to the final image, however V-Ray will proceed with all its calculations as though color mapping is applied (e.g. the noise levels will be corrected accordingly)",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Mode"
+            }
         },
         {
             "attr": "linearWorkflow",
             "default": false,
             "desc": "When this option is checked V-Ray will automatically apply the inverse of the Gamma correction that you have set in the Gamma field to all materials in scene",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Linear workflow"
+            }
         },
         {
             "attr": "exposure",
@@ -134,7 +157,10 @@
                 1
             ],
             "desc": "Additional image exposure",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "display_name": "Image exposure"
+            }
         },
         {
             "attr": "input_gamma",

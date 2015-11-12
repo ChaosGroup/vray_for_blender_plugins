@@ -8,7 +8,12 @@
             "default": "",
             "desc": "The Ptex texture file",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "ptx"
+                ]
+            }
         },
         {
             "attr": "use_image_sequence",
@@ -25,7 +30,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -37,7 +43,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -108,7 +115,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -120,7 +128,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -132,20 +141,28 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "lerp",
             "default": false,
             "desc": "Interpolation between mipmap levels",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Interpolation between mipmap levels",
+                "enabled": true
+            }
         },
         {
             "attr": "reverse_vertices",
             "default": false,
             "desc": "Reverses the order of vertices",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Reverse vertex order"
+            }
         },
         {
             "attr": "cache_size",
@@ -156,7 +173,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Cache size(MBs)"
             }
         },
         {
@@ -168,7 +186,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -180,7 +199,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -192,7 +212,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -204,20 +225,27 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "auto_color",
             "default": true,
             "desc": "Use automatic color channel selection",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto select color channels"
+            }
         },
         {
             "attr": "auto_alpha",
             "default": true,
             "desc": "Use automatic alpha channel selection",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto select alpha channel"
+            }
         },
         {
             "attr": "alpha_type",
@@ -274,7 +302,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -306,6 +335,47 @@
             ],
             "desc": "The final texture color",
             "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "anisotropic_filtering",
+            "desc": "Allow anisotropic texture filtering",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "vertices",
+            "desc": "",
+            "type": "VECTOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "origFaces",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "faces",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "origFacesDegree",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
         }
     ],
     "Type": "TEXTURE",

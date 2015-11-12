@@ -81,6 +81,35 @@
             "default": false,
             "desc": "true to write integer elemnt ids when using Image Format exr",
             "type": "BOOL"
+        },
+        {
+            "attr": "multipart",
+            "desc": "true to create multi-part exr file",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "deep_alpha_colors",
+            "desc": "Deep alpha colors (0 - monochrome, 1 - RGB, 2 - monochrome+RGB)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Monochrome",
+                    ""
+                ],
+                [
+                    "1",
+                    "RGB",
+                    ""
+                ],
+                [
+                    "2",
+                    "Monochrome+RGB",
+                    ""
+                ]
+            ],
+            "default": "0"
         }
     ],
     "Type": "SETTINGS",

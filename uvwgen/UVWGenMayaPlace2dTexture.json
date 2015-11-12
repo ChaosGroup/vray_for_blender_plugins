@@ -222,6 +222,90 @@
             "default": "",
             "desc": "The name of the uv channel that should be used",
             "type": "STRING"
+        },
+        {
+            "attr": "uvw_channel_tex",
+            "desc": "Used when more than one mesh has UV linking specified for this 2d placement. If present will override uvw_channel",
+            "type": "INT_TEXTURE",
+            "default": 0
+        },
+        {
+            "attr": "coverage_u",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "coverage_v",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "translate_frame_u",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "translate_frame_v",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rotate_frame",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "units": "radians"
+            }
+        },
+        {
+            "attr": "repeat_u",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "repeat_v",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "offset_u",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "offset_v",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rotate_uv",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "units": "radians"
+            }
+        },
+        {
+            "attr": "noise_u",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "noise_v",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
         }
     ],
     "Type": "UVWGEN",

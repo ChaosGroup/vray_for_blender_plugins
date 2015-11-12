@@ -33,7 +33,10 @@
             "attr": "out_intensity",
             "default": 1.0,
             "desc": "The resulting intensity",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
         },
         {
             "attr": "color_mult",
@@ -88,14 +91,20 @@
             ],
             "desc": "The color when there are no valid uvw coordinates",
             "name": "No UV Color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
         },
         {
             "attr": "uvwgen",
             "default": "",
             "desc": "The uvw generator for the texture",
             "name": "Mapping",
-            "type": "UVWGEN"
+            "type": "UVWGEN",
+            "ui": {
+                "rollout": "Mapped"
+            }
         },
         {
             "attr": "compatibility_with",
@@ -113,7 +122,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Common"
+            }
         },
         {
             "attr": "alpha_from_intensity",
@@ -148,7 +160,10 @@
             "attr": "invert_alpha",
             "default": true,
             "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "placement_type",
@@ -182,7 +197,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -194,7 +210,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -206,7 +223,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -218,7 +236,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -230,32 +249,46 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "tile_u",
             "default": true,
             "desc": "If true there is horizontal tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "tile_v",
             "default": true,
             "desc": "If true there is vertical tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_on",
             "default": false,
             "desc": "If true the noise is enabled",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "UV noise on"
+            }
         },
         {
             "attr": "uv_noise_animate",
             "default": true,
             "desc": "If true the noise is animated",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Animate UV noise",
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_amount",
@@ -266,7 +299,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise amount",
+                "enabled": true
             }
         },
         {
@@ -278,7 +313,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise levels",
+                "enabled": true
             }
         },
         {
@@ -290,7 +327,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise size",
+                "enabled": true
             }
         },
         {
@@ -303,7 +342,10 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "<EndRollout>",
+                "display_name": "UV noise phase",
+                "enabled": true
             }
         },
         {
@@ -334,7 +376,10 @@
                 0.5
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Background Color"
+            }
         },
         {
             "attr": "size",
@@ -414,7 +459,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -426,7 +472,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -438,14 +485,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "fractal",
             "default": false,
             "desc": "",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "fractal_iterations",
@@ -456,7 +507,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -468,7 +520,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -480,6 +533,12 @@
             ],
             "desc": "Outputs (F(1), F(2), F(3)) (the distances to the three closest points in the cellular context) as a Vector",
             "type": "OUTPUT_VECTOR_TEXTURE"
+        },
+        {
+            "attr": "use_3d_mapping",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "TEXTURE",

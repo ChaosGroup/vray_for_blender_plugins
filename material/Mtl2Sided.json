@@ -7,7 +7,11 @@
             "attr": "front",
             "default": "",
             "desc": "The material for the surface on the same side as the normal",
-            "type": "MATERIAL"
+            "type": "MATERIAL",
+            "ui": {
+                "tab": "V-Ray 2-Sided Material",
+                "rollout": "Parameters"
+            }
         },
         {
             "attr": "back",
@@ -24,14 +28,20 @@
             ],
             "desc": "Translucency texture",
             "name": "Translucency",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Translucency texture"
+            }
         },
         {
             "attr": "force_1sided",
             "default": true,
             "desc": "True to make the sub-materials one-sided",
             "name": "Force Single Sided",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Force single-sided sub-materials"
+            }
         },
         {
             "attr": "use",
@@ -40,6 +50,43 @@
             "name": "Use",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "translucency",
+            "desc": "Translucency between front and back",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "translucency_tex_mult",
+            "desc": "Multiplier for the translucency texture",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Translucency texture multiplier",
+                "min": 0.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "mult_by_front_diffuse",
+            "desc": "True to multiply the back side color by the cached diffuse color of the front BRDF",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Multiply by front diffuse"
+            }
+        },
+        {
+            "attr": "channels",
+            "desc": "Render channels the result of this BRDF will be written to",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
         }
     ],
     "Type": "MATERIAL",

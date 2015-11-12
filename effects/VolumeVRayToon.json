@@ -12,7 +12,10 @@
             ],
             "desc": "",
             "name": "Color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Line Color (map)"
+            }
         },
         {
             "attr": "lineWidth_tex",
@@ -24,7 +27,14 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Line Width (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
             }
         },
         {
@@ -37,7 +47,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Opacity (map)"
             }
         },
         {
@@ -50,7 +61,14 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Distortion (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
             }
         },
         {
@@ -70,13 +88,19 @@
                 ]
             ],
             "name": "Width Type",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Width units"
+            }
         },
         {
             "attr": "hideInnerEdges",
             "default": false,
             "desc": "true : show outlines and not interior edges, false : show all edges",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Hide Inner Edges"
+            }
         },
         {
             "attr": "normalThreshold",
@@ -87,7 +111,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Normal Threshold"
             }
         },
         {
@@ -99,7 +124,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Overlap Threshold"
             }
         },
         {
@@ -111,14 +137,18 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Trace bias"
             }
         },
         {
             "attr": "doSecondaryRays",
             "default": false,
             "desc": "true : show toon lines in reflections",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Visible in Reflection/Refraction"
+            }
         },
         {
             "attr": "excludeType",
@@ -137,13 +167,20 @@
                 ]
             ],
             "name": "List Type",
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "As Inclusive List"
+            }
         },
         {
             "attr": "compensateExposure",
             "default": true,
             "desc": "Compensate VRay physical camera exposure",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "rollout": "",
+                "display_name": "Compensate Exposure"
+            }
         },
         {
             "attr": "excludeList",
@@ -151,7 +188,53 @@
             "desc": "",
             "name": "List",
             "skip": true,
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "display_name": "Exclude List",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "lineColor",
+            "desc": "The color of the cartoon line",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "tab": "V-Ray Toon",
+                "rollout": "V-Ray Toon",
+                "display_name": "Line Color"
+            }
+        },
+        {
+            "attr": "lineWidth",
+            "desc": "Cartoon line width",
+            "type": "FLOAT",
+            "default": 1.5,
+            "ui": {
+                "display_name": "Line Width",
+                "min": 0.0
+            }
+        },
+        {
+            "attr": "opacity",
+            "desc": "Opacity of the cartoon line",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Opacity",
+                "min": 0.0,
+                "max": 1.0
+            }
         }
     ],
     "Type": "EFFECT",

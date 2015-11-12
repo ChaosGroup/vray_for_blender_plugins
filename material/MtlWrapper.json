@@ -18,7 +18,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Generated GI mult."
             }
         },
         {
@@ -30,7 +31,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Received GI mult."
             }
         },
         {
@@ -42,7 +44,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Generated caustics mult."
             }
         },
         {
@@ -54,7 +57,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Received caustics mult."
             }
         },
         {
@@ -66,7 +70,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Matte properties"
             }
         },
         {
@@ -79,13 +84,19 @@
             "attr": "shadows",
             "default": false,
             "desc": "Turn this on to make shadow visible on the matter surface",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "affect_alpha",
             "default": false,
             "desc": "Turn this on to make shadows affect the alpha contribution of the matte surface",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "shadow_tint_color",
@@ -95,7 +106,10 @@
                 0
             ],
             "desc": "Tint for the shadows on the matte surface",
-            "type": "COLOR"
+            "type": "COLOR",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "shadow_brightness",
@@ -106,7 +120,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -118,7 +133,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -130,7 +146,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -142,14 +159,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GI amount",
+                "enabled": true
             }
         },
         {
             "attr": "no_gi_on_other_mattes",
             "default": true,
             "desc": "This will cause the material to appear as a matte object in reflections, refractions, GI etc for other matte objects",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "No GI on other mattes",
+                "enabled": true
+            }
         },
         {
             "attr": "matte_for_secondary_rays",
@@ -160,7 +183,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Matte for sec. rays",
+                "enabled": true
             }
         },
         {
@@ -172,7 +197,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "Miscellaneous",
+                "display_name": "GI surface ID"
             }
         },
         {
@@ -184,7 +211,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "GI quality mult."
             }
         },
         {
@@ -255,13 +283,31 @@
             "attr": "reflection_exclude",
             "default": "",
             "desc": "A list of plugins that will be excluded from reflections",
-            "type": "LIST"
+            "type": "LIST",
+            "ui": {
+                "rollout": "",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         },
         {
             "attr": "refraction_exclude",
             "default": "",
             "desc": "A list of plugins that will be excluded from refractions",
-            "type": "LIST"
+            "type": "LIST",
+            "ui": {
+                "rollout": "",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         },
         {
             "attr": "use",
@@ -270,6 +316,28 @@
             "name": "Use",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "use_irrad_map",
+            "desc": "Allow enable/disable of irradiance map per surface",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Additional surface properties",
+                "display_name": "Use irradiance map"
+            }
+        },
+        {
+            "attr": "reflection_list_is_inclusive",
+            "desc": "Setting this to true will turn the reflection exclude list into inclusive (inverted)",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "refraction_list_is_inclusive",
+            "desc": "Setting this to true will turn the refraction exclude list into inclusive (inverted)",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "MATERIAL",

@@ -13,7 +13,15 @@
             "attr": "target_nodes",
             "default": "",
             "desc": "The target objects for projection baking",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "ui": {
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
         },
         {
             "attr": "bake_uvwgen",

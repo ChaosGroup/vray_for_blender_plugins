@@ -8,7 +8,10 @@
             "default": false,
             "desc": "Use depth of field",
             "name": "Use Depth Of Field",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Enable depth-of-field"
+            }
         },
         {
             "attr": "aperture",
@@ -19,7 +22,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Aperture",
+                "enabled": true
             }
         },
         {
@@ -31,7 +36,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Center bias",
+                "enabled": true
             }
         },
         {
@@ -43,14 +50,20 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Focus distance",
+                "enabled": true
             }
         },
         {
             "attr": "sides_on",
             "default": false,
             "desc": "This option allows you to simulate the polygonal shape of the aperture of real-world cameras",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Sides",
+                "enabled": true
+            }
         },
         {
             "attr": "sides_num",
@@ -61,7 +74,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Number of sides",
+                "enabled": true
             }
         },
         {
@@ -73,7 +88,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Rotation",
+                "enabled": true
             }
         },
         {
@@ -85,7 +102,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Anisotropy",
+                "enabled": true
             }
         },
         {
@@ -97,7 +116,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Subdivs",
+                "enabled": true
             }
         }
     ],

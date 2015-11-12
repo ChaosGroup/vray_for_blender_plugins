@@ -147,7 +147,12 @@
             "attr": "shademap_file",
             "default": "",
             "desc": "The name of the file in which the shade map information is stored",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "vrst"
+                ]
+            }
         },
         {
             "attr": "float_colors_mode",
@@ -220,6 +225,48 @@
             "desc": "Use Stereoscopic",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "top_merge_angle",
+            "desc": "Panoramic pole merging: from what angle near the top does the stereo effect start to fade when rendering with a spherical panorama camera",
+            "type": "FLOAT",
+            "default": 1.0471975803375245
+        },
+        {
+            "attr": "bottom_merge_angle",
+            "desc": "Panoramic pole merging: from what angle near the bottom does the stereo effect start to fade when rendering with a spherical panorama camera",
+            "type": "FLOAT",
+            "default": 1.0471975803375245
+        },
+        {
+            "attr": "exclude_list_inclusive",
+            "desc": "When on the exclude_list is considered as an \"Include list\" and when off the the Result Affect is considered as \"Exclude list\"",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "film_offset_x_left",
+            "desc": "Horizontal film offset for the left camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "film_offset_x_right",
+            "desc": "Horizontal film offset for the right camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "film_offset_y_left",
+            "desc": "Vertical film offset for the left camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "film_offset_y_right",
+            "desc": "Vertical film offset for the right camera",
+            "type": "FLOAT",
+            "default": 0.0
         }
     ],
     "Type": "SETTINGS",

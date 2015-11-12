@@ -134,6 +134,12 @@
             "default": true,
             "desc": "true to compute bump mapping for shadow rays in case the material is transparent; false to skip the bump map for shadow rays (faster rendering)",
             "type": "BOOL"
+        },
+        {
+            "attr": "bump_tex",
+            "desc": "Bump texture; this is deprecated, use bump_tex_color or bump_tex_float instead",
+            "type": "PLUGIN",
+            "default": null
         }
     ],
     "Type": "MATERIAL",

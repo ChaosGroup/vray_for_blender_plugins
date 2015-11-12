@@ -111,19 +111,29 @@
             "attr": "use_globals",
             "default": true,
             "desc": "If true, the global displacement quality settings will be used",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use global settings"
+            }
         },
         {
             "attr": "static_subdiv",
             "default": false,
             "desc": "True if the resulting triangles of the subdivision algorithm will be inserted into the rayserver as static geometry",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Static subdivision"
+            }
         },
         {
             "attr": "view_dep",
             "default": true,
             "desc": "If use_globals is false, this determines if view-dependent tesselation is used",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "View dependent",
+                "enabled": true
+            }
         },
         {
             "attr": "edge_length",
@@ -134,7 +144,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Edge length",
+                "enabled": true
             }
         },
         {
@@ -146,7 +158,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Max subdivisions",
+                "enabled": true
             }
         },
         {
@@ -201,13 +215,19 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Preserve map borders"
+            }
         },
         {
             "attr": "classic_catmark",
             "default": false,
             "desc": "If equal to 1 then the classical Catmull-Clark masks will be used for meshes which contain only quadrangles",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Classic Catmull-Clark"
+            }
         },
         {
             "attr": "vector_displacement",
@@ -237,6 +257,12 @@
             ],
             "name": "Mode",
             "type": "ENUM"
+        },
+        {
+            "attr": "object_space_displacement",
+            "desc": "If true, the parent transformation will affect the amount of displacement. Used only when doing 3D displacement",
+            "type": "BOOL",
+            "default": false
         }
     ],
     "Type": "GEOMETRY",

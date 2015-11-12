@@ -24,7 +24,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "min": 0
+            }
         },
         {
             "attr": "film_width",
@@ -71,7 +74,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -107,7 +111,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "F-stop"
             }
         },
         {
@@ -119,7 +124,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Vertical tilt"
             }
         },
         {
@@ -131,7 +137,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -143,7 +150,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -155,7 +163,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -167,7 +176,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -198,7 +208,8 @@
                 "min": 0,
                 "max": 1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -271,7 +282,9 @@
             "desc": "Number of blades (0 means its disabled)",
             "type": "INT",
             "ui": {
-                "min": 0
+                "min": 0,
+                "enabled": true,
+                "max": 20
             }
         },
         {
@@ -315,14 +328,20 @@
             "default": false,
             "desc": "Turns on depth of field sampling",
             "name": "Use DOF",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Enable DOF"
+            }
         },
         {
             "attr": "use_moblur",
             "default": false,
             "desc": "Turns on motion blur sampling",
             "name": "Use Motion Blur",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Enable Motion Blur"
+            }
         },
         {
             "attr": "subdivs",
@@ -347,7 +366,13 @@
             "default": "",
             "desc": "LENS file with camera lens-type image distortion description",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "enabled": true,
+                "file_extensions": [
+                    "vrlens"
+                ]
+            }
         },
         {
             "attr": "specify_fov",
@@ -364,7 +389,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Horizontal tilt"
             }
         },
         {
@@ -376,7 +402,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Horizontal shift"
             }
         },
         {
@@ -388,7 +415,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Vertical shift"
             }
         },
         {
@@ -400,13 +428,22 @@
                 1.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Distortion texture",
+                "enabled": true
+            }
         },
         {
             "attr": "bmpaperture_enable",
             "default": false,
             "desc": "1- enable the use of bitmap aperture; 0- disable bitmap aperture",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Bitmap aperture",
+                "min": 1.0,
+                "max": 2048.0
+            }
         },
         {
             "attr": "bmpaperture_resolution",
@@ -417,7 +454,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Bitmap resolution",
+                "enabled": true
             }
         },
         {
@@ -429,7 +468,11 @@
                 1.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Bitmap aperture texture",
+                "enabled": true
+            }
         },
         {
             "attr": "optical_vignetting",
@@ -456,6 +499,25 @@
             "desc": "Use Physical Camera",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "fov",
+            "desc": "the FOV value (in radians) to use when specify_fov is true",
+            "type": "FLOAT",
+            "default": 1.5707963705062867,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "bmpaperture_affects_exposure",
+            "desc": "This will make the Bitmap Aperture's size and shape affect the exposure",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Bitmap affects exposure",
+                "enabled": true
+            }
         }
     ],
     "Type": "CAMERA",

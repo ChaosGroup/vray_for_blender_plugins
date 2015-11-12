@@ -8,7 +8,19 @@
             "default": "",
             "desc": "",
             "subtype": "FILE_PATH",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "File name",
+                "file_extensions": [
+                    "vrmesh",
+                    "abc"
+                ],
+                "file_names": [
+                    "V-Ray Mesh",
+                    "Alembic"
+                ],
+                "file_op": "load"
+            }
         },
         {
             "attr": "anim_type",
@@ -36,13 +48,19 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Playback type"
+            }
         },
         {
             "attr": "anim_override",
             "default": false,
             "desc": "Controls if anim_start and anim_length are taken in consideration. Useful only, when the file name contains frame filter",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Sequence override"
+            }
         },
         {
             "attr": "anim_speed",
@@ -53,7 +71,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Playback speed"
             }
         },
         {
@@ -65,7 +84,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Start offset"
             }
         },
         {
@@ -77,7 +97,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sequence start",
+                "enabled": true
             }
         },
         {
@@ -89,7 +111,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Sequence length",
+                "enabled": true
             }
         },
         {
@@ -132,7 +156,10 @@
             "attr": "compute_normals",
             "default": true,
             "desc": "true to calculate smooth normals",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Compute normals"
+            }
         },
         {
             "attr": "smooth_angle",
@@ -143,14 +170,19 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Smooth angle",
+                "enabled": true
             }
         },
         {
             "attr": "compute_bbox",
             "default": false,
             "desc": "true to compute the bounding box, false to read it from the file",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Recompute bounding box"
+            }
         },
         {
             "attr": "num_preview_faces",
@@ -161,7 +193,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Preview faces"
             }
         },
         {
@@ -174,13 +207,19 @@
             "attr": "use_full_names",
             "default": false,
             "desc": "read the full path instead of only the name",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use full names"
+            }
         },
         {
             "attr": "object_path",
             "default": "",
             "desc": "",
-            "type": "STRING"
+            "type": "STRING",
+            "ui": {
+                "display_name": "Starting object path"
+            }
         },
         {
             "attr": "hair_width_multiplier",
@@ -191,7 +230,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Hair width multiplier"
             }
         },
         {
@@ -401,6 +441,198 @@
                 "min": 1,
                 "soft_min": 1
             }
+        },
+        {
+            "attr": "flip_normals",
+            "desc": "True to flip the vertex normals",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Flip normals"
+            }
+        },
+        {
+            "attr": "particle_width_multiplier",
+            "desc": "Particle width multiplier",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Particle width multiplier",
+                "min": 0.0
+            }
+        },
+        {
+            "attr": "velocity_multiplier",
+            "desc": "Alembic velocity multiplier",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Velocity multiplier"
+            }
+        },
+        {
+            "attr": "particle_visibility_lists_type",
+            "desc": "Specifies the type of both names and ids lists. 0 - exclude; 1 - include",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Exclude",
+                    ""
+                ],
+                [
+                    "1",
+                    "Include",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "particle_visibility_list_names",
+            "desc": "Visibility list of particle system names. Either include or exclude",
+            "type": "STRING_LIST",
+            "elements_count": 0,
+            "default": ""
+        },
+        {
+            "attr": "particle_visibility_list_ids",
+            "desc": "Visibility list of particle system ids. Either include or exclude",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "sort_voxels",
+            "desc": "Sort Alembic voxels after reading by their names. 0 - skip sorting; 1 - sort",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "first_map_channel",
+            "desc": "Specifies how to remap the mapping channels: -1 - no remapping; 0 - channel 0, 1 - channel 1",
+            "type": "INT",
+            "default": -1
+        },
+        {
+            "attr": "particle_render_mode",
+            "desc": "Set to 0 to render particles as spheres. Set it to 1 to render them as points",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Spheres",
+                    ""
+                ],
+                [
+                    "1",
+                    "Points",
+                    ""
+                ]
+            ],
+            "default": "1",
+            "ui": {
+                "display_name": "Particle render mode"
+            }
+        },
+        {
+            "attr": "use_alembic_offset",
+            "desc": "True to use alembic animation frame offset",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "velocity_color_set",
+            "desc": "Optional name for the color set where the velocity is written",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "instancing",
+            "desc": "Turns on/off the instancing of alembic duplicated objects",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "subdiv_all_meshes",
+            "desc": "True to subdivide alembic PolyMesh and SubD objects; false to subdivide only SubD objects",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Subdivide all meshes"
+            }
+        },
+        {
+            "attr": "subdiv_type",
+            "desc": "0 for Catmull-Clark subdivision and 1 for Loop subdivision",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "subdiv_level",
+            "desc": "The subdivision level",
+            "type": "INT",
+            "default": 1,
+            "ui": {
+                "display_name": "Subdivision level",
+                "min": 0
+            }
+        },
+        {
+            "attr": "subdiv_uvs",
+            "desc": "Subdivide or skip mapping channels",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Subdivide UVs"
+            }
+        },
+        {
+            "attr": "subdiv_preserve_geom_borders",
+            "desc": "If true, the borders won't be subdivided",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Preserve geometry borders"
+            }
+        },
+        {
+            "attr": "subdiv_preserve_map_borders",
+            "desc": "Determines the smoothing mode of the mapping channels' borders. 0-None, 1-Internal and 2-All",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    ""
+                ],
+                [
+                    "1",
+                    "Internal",
+                    ""
+                ],
+                [
+                    "2",
+                    "All",
+                    ""
+                ]
+            ],
+            "default": "1",
+            "ui": {
+                "display_name": "Preserve map borders"
+            }
+        },
+        {
+            "attr": "use_point_cloud",
+            "desc": "If true, use the point cloud inside the vrmesh if available",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "point_cloud_mult",
+            "desc": "A LOD multiplier. A value smaller than 1.0 means that the level will be of greater detail than required by distance to the object",
+            "type": "FLOAT",
+            "default": 1.0
         }
     ],
     "Type": "GEOMETRY",

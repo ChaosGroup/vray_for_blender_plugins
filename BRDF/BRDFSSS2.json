@@ -252,6 +252,12 @@
             ],
             "desc": "",
             "type": "COLOR"
+        },
+        {
+            "attr": "color_mode",
+            "desc": "Determines the meaning of the two colors: 0 - diffuse surface reflectance and scatter radius; 1 - scatter coefficient and fog color",
+            "type": "INT",
+            "default": 0
         }
     ],
     "Type": "BRDF",
