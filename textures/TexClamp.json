@@ -1,0 +1,44 @@
+{
+    "ID": "TexClamp",
+    "Name": "Clamp",
+    "Desciption": "TexClamp",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "min_color",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "max_color",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

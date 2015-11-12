@@ -1,0 +1,88 @@
+{
+    "ID": "TexPlusMinusAverage",
+    "Name": "Plus Minus Average",
+    "Desciption": "TexPlusMinusAverage",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "operation",
+            "desc": "0 - No operation; 1 - Sum; 2 - Subtract from first; 3 - Average",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "No operation",
+                    ""
+                ],
+                [
+                    "1",
+                    "Sum",
+                    ""
+                ],
+                [
+                    "2",
+                    "Subtract from first",
+                    ""
+                ],
+                [
+                    "3",
+                    "Average",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "input1D",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "input2D",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "input3D",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "output1D",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "output2D",
+            "desc": "",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "output3D",
+            "desc": "",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

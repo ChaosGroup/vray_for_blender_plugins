@@ -1,0 +1,31 @@
+{
+    "ID": "GeomInfinitePlane",
+    "Name": "Geom Infinite Plane",
+    "Desciption": "GeomInfinitePlane",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "origin",
+            "desc": "origin for plane",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "normal",
+            "desc": "normal for plane",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

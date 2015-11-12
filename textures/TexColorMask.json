@@ -1,0 +1,57 @@
+{
+    "ID": "TexColorMask",
+    "Name": "Color Mask",
+    "Desciption": "TexColorMask",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "in_color",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "in_alpha",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "preserve_color",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "mask",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "mask_alpha",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "mask_alpha_is_luminance",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

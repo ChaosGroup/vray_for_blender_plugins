@@ -1,0 +1,22 @@
+{
+    "ID": "TexModoExtractAlpha",
+    "Name": "Modo Extract Alpha",
+    "Desciption": "TexModoExtractAlpha",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

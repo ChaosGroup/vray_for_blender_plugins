@@ -1,0 +1,107 @@
+{
+    "ID": "TexMultiX",
+    "Name": "Multi X",
+    "Desciption": "TexMultiX",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "textures_list",
+            "desc": "A list of the sub-textures",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "probs_list",
+            "desc": "A list of probabilities for the sub-textures",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "rnd_by",
+            "desc": "Type of randomization",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "rnd_seed",
+            "desc": "Seed for the randomization",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "use_color",
+            "desc": "Whether to use textures list or the flat color",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "all_gamma",
+            "desc": "Inverse of gamma, applied in all points",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "all_hue",
+            "desc": "Hue applied in all points",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "all_sat",
+            "desc": "Saturation applied in all points",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rnd_gamma",
+            "desc": "Inverse of gamma, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rnd_hue",
+            "desc": "Hue, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rnd_sat",
+            "desc": "Saturation, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "occ_gamma",
+            "desc": "Inverse of gamma, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "occ_hue",
+            "desc": "Hue, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "occ_sat",
+            "desc": "Saturation, applied randomly",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "def_color",
+            "desc": "Color used for variations instead of textures",
+            "type": "COLOR",
+            "default": [
+                340320323633152.0,
+                0.0,
+                1.406936052805589e25
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,146 @@
+{
+    "ID": "MtlToon",
+    "Name": "Mtl Toon",
+    "Desciption": "MtlToon",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "base_mtl",
+            "desc": "The material that should have toon lines added to it",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "lineWidth",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "lineWidthTex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "lineWidthTexMult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "opacity",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "opacityTex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "opacityTexMult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "distort",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "distortTex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "distortTexMult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "lineColor",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "lineColorTex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "lineColorTexMult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "zThreshold",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "traceBias",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "normalThreshold",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "doSecondary",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "divideByDist",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "doSilhouetteMult",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "silhouetteMult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.5
+        },
+        {
+            "attr": "compensateExposure",
+            "desc": "Compensate for V-Ray physical camera exposure",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

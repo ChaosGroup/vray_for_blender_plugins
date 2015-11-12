@@ -1,0 +1,17 @@
+{
+    "ID": "TexIntToFloat",
+    "Name": "Int To Float",
+    "Desciption": "TexIntToFloat",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "The integer value",
+            "type": "INT_TEXTURE",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "ID": "CustomGlsl",
+    "Name": "Custom Glsl",
+    "Desciption": "CustomGlsl",
+    "Type": "SETTINGS",
+    "Parameters": [],
+    "Widget": {
+        "widgets": []
+    }
+}

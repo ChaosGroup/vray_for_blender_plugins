@@ -1,0 +1,17 @@
+{
+    "ID": "TexModoDiffuseRoughness",
+    "Name": "Modo Diffuse Roughness",
+    "Desciption": "TexModoDiffuseRoughness",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "modo_diffuse_roughness",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

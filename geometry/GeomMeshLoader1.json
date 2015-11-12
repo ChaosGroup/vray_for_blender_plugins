@@ -1,0 +1,41 @@
+{
+    "ID": "GeomMeshLoader1",
+    "Name": "Geom Mesh Loader 1",
+    "Desciption": "GeomMeshLoader1",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "sphere_size",
+            "desc": "Sphere size",
+            "type": "FLOAT",
+            "default": 3.0
+        },
+        {
+            "attr": "sphere_segments",
+            "desc": "Sphere segments",
+            "type": "INT",
+            "default": 10
+        },
+        {
+            "attr": "num_spheres",
+            "desc": "Number of spheres",
+            "type": "INT",
+            "default": 100
+        },
+        {
+            "attr": "bbox_size",
+            "desc": "Box size to fill with spheres",
+            "type": "FLOAT",
+            "default": 30.0
+        },
+        {
+            "attr": "use_displacement",
+            "desc": "true to enable noise displacement texture",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

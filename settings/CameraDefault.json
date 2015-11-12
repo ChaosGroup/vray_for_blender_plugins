@@ -1,0 +1,17 @@
+{
+    "ID": "CameraDefault",
+    "Name": "Camera Default",
+    "Desciption": "CameraDefault",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "orthographic",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

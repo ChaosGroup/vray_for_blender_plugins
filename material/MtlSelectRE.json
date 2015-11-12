@@ -1,0 +1,24 @@
+{
+    "ID": "MtlSelectRE",
+    "Name": "Mtl Select RE",
+    "Desciption": "MtlSelectRE",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "base_mtl",
+            "desc": "The base material. The alpha result of this material will be written to all alpha channels specified in the 'alpha_elements' parameter",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "alpha_elements",
+            "desc": "A list of alpha render elements",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

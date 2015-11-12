@@ -1,0 +1,263 @@
+{
+    "ID": "BRDFMultiBump",
+    "Name": "Multi Bump",
+    "Desciption": "BRDFMultiBump",
+    "Type": "BRDF",
+    "Parameters": [
+        {
+            "attr": "base_brdf",
+            "desc": "Base BRDF",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "bump_tex_0",
+            "desc": "Bump texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bump_mult_0",
+            "desc": "Bump multipler 0",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "map_type_0",
+            "desc": "A list with the type of the maps (0 - from regular texture output, 1 - normal map in tangent space, 2 - normal map in object space, 3 - normal map in camera space, 4 - normal map in world space, 5 - from texture bump output, 6 - explicit normal)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bump Map",
+                    ""
+                ],
+                [
+                    "1",
+                    "Normal map in tangent space",
+                    ""
+                ],
+                [
+                    "2",
+                    "Normal map in object space",
+                    ""
+                ],
+                [
+                    "3",
+                    "Normal map in screen space",
+                    ""
+                ],
+                [
+                    "4",
+                    "Normal map in world space",
+                    ""
+                ],
+                [
+                    "5",
+                    "From texture bump output",
+                    ""
+                ],
+                [
+                    "6",
+                    "Explicit normal",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "bump_tex_1",
+            "desc": "Bump texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bump_mult_1",
+            "desc": "Bump multipler 0",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "map_type_1",
+            "desc": "A list with the type of the maps (0 - from regular texture output, 1 - normal map in tangent space, 2 - normal map in object space, 3 - normal map in camera space, 4 - normal map in world space, 5 - from texture bump output, 6 - explicit normal)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bump Map",
+                    ""
+                ],
+                [
+                    "1",
+                    "Normal map in tangent space",
+                    ""
+                ],
+                [
+                    "2",
+                    "Normal map in object space",
+                    ""
+                ],
+                [
+                    "3",
+                    "Normal map in screen space",
+                    ""
+                ],
+                [
+                    "4",
+                    "Normal map in world space",
+                    ""
+                ],
+                [
+                    "5",
+                    "From texture bump output",
+                    ""
+                ],
+                [
+                    "6",
+                    "Explicit normal",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "bump_tex_2",
+            "desc": "Bump texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bump_mult_2",
+            "desc": "Bump multipler 0",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "map_type_2",
+            "desc": "A list with the type of the maps (0 - from regular texture output, 1 - normal map in tangent space, 2 - normal map in object space, 3 - normal map in camera space, 4 - normal map in world space, 5 - from texture bump output, 6 - explicit normal)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bump Map",
+                    ""
+                ],
+                [
+                    "1",
+                    "Normal map in tangent space",
+                    ""
+                ],
+                [
+                    "2",
+                    "Normal map in object space",
+                    ""
+                ],
+                [
+                    "3",
+                    "Normal map in screen space",
+                    ""
+                ],
+                [
+                    "4",
+                    "Normal map in world space",
+                    ""
+                ],
+                [
+                    "5",
+                    "From texture bump output",
+                    ""
+                ],
+                [
+                    "6",
+                    "Explicit normal",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "bump_tex_3",
+            "desc": "Bump texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bump_mult_3",
+            "desc": "Bump multipler 0",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "map_type_3",
+            "desc": "A list with the type of the maps (0 - from regular texture output, 1 - normal map in tangent space, 2 - normal map in object space, 3 - normal map in camera space, 4 - normal map in world space, 5 - from texture bump output, 6 - explicit normal)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bump Map",
+                    ""
+                ],
+                [
+                    "1",
+                    "Normal map in tangent space",
+                    ""
+                ],
+                [
+                    "2",
+                    "Normal map in object space",
+                    ""
+                ],
+                [
+                    "3",
+                    "Normal map in screen space",
+                    ""
+                ],
+                [
+                    "4",
+                    "Normal map in world space",
+                    ""
+                ],
+                [
+                    "5",
+                    "From texture bump output",
+                    ""
+                ],
+                [
+                    "6",
+                    "Explicit normal",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "normal_uvwgen",
+            "desc": "The uvw generator for the normal map texture when map_type is 1",
+            "type": "PLUGIN",
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

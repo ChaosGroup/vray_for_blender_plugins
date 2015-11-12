@@ -1,0 +1,17 @@
+{
+    "ID": "TexXSIScalarInvert",
+    "Name": "XSI Scalar Invert",
+    "Desciption": "TexXSIScalarInvert",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "Specifies the input value to be inverted",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

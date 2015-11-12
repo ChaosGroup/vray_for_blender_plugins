@@ -1,0 +1,59 @@
+{
+    "ID": "CameraFilmTransform",
+    "Name": "Camera Film Transform",
+    "Desciption": "CameraFilmTransform",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "prescale",
+            "desc": "The prescale that will be applied to the camera",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "postscale",
+            "desc": "The postScale that will be applied to the camera",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "transx",
+            "desc": "The normalized translation along x axis that will be applied to the camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "transy",
+            "desc": "The normalized translation along y axis that will be applied to the camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "pivotx",
+            "desc": "The rotation pivot y coordinate",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "pivoty",
+            "desc": "The rotation pivot x coordinate",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rotation",
+            "desc": "The rotation around the pivot that will be applied to the camera",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "rot_before_trans",
+            "desc": "If true, the rotation will be applied before the translation",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

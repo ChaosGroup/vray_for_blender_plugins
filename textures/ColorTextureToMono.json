@@ -1,0 +1,28 @@
+{
+    "ID": "ColorTextureToMono",
+    "Name": "Color Texture To Mono",
+    "Desciption": "ColorTextureToMono",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "value",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "color_texture",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

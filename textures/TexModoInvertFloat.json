@@ -1,0 +1,23 @@
+{
+    "ID": "TexModoInvertFloat",
+    "Name": "Modo Invert Float",
+    "Desciption": "TexModoInvertFloat",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture",
+            "desc": "The texture to be inverted",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "invert",
+            "desc": "Parameter that enables the inverting to be animated",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "ID": "SettingsImageFilter",
+    "Name": "Settings Image Filter",
+    "Desciption": "SettingsImageFilter",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "on",
+            "desc": "Enable/disable image filter",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "type",
+            "desc": "0 - Sinc, 1 - Lanczos, 2 - Catmull Rom, 3 - Triangle, 4 - Box, 5- Area",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "size",
+            "desc": "Image filter size (where applicable)",
+            "type": "FLOAT",
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

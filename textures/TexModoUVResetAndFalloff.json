@@ -1,0 +1,40 @@
+{
+    "ID": "TexModoUVResetAndFalloff",
+    "Name": "Modo UV Reset And Falloff",
+    "Desciption": "TexModoUVResetAndFalloff",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "This must be the same uvw generator used by 'texture'",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "reset_u",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "reset_v",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

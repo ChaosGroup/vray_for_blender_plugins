@@ -1,0 +1,308 @@
+{
+    "ID": "TexColorSwitch",
+    "Name": "Color Switch",
+    "Desciption": "TexColorSwitch",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "compatibility_with",
+            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ..",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Max",
+                    ""
+                ],
+                [
+                    "1",
+                    "Maya",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "rollout": "Common"
+            }
+        },
+        {
+            "attr": "alpha_from_intensity",
+            "desc": "If 2 - the alpha is forced to 1.0f; 1 - the resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1); 0 - the alpha is taken from the bitmap alpha",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bitmap alpha",
+                    ""
+                ],
+                [
+                    "1",
+                    "Color intensity/luminance",
+                    ""
+                ],
+                [
+                    "2",
+                    "Force opaque",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "invert",
+            "desc": "If true, the resulting texture color will be inverted",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "invert_alpha",
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "color_mult",
+            "desc": "A multiplier for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_offset",
+            "desc": "An additional offset for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha_mult",
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "alpha_offset",
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "nouvw_color",
+            "desc": "The color when there are no valid uvw coordinates",
+            "type": "TEXTURE",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "ui": {
+                "display_name": "No UVs Color"
+            }
+        },
+        {
+            "attr": "color",
+            "desc": "The resulting color",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_transparency",
+            "desc": "The resulting transparency",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_alpha",
+            "desc": "The resulting alpha",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "out_intensity",
+            "desc": "The resulting intensity",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
+        },
+        {
+            "attr": "default_color",
+            "desc": "Default color to be used when the Switch value does not match the Value of any of the Cases",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "switch_value",
+            "desc": "Accepts a varying set of integer values that control which Case's Input gets evaluated",
+            "type": "INT_TEXTURE",
+            "default": 0
+        },
+        {
+            "attr": "color0",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value0",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "color1",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value1",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "color2",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value2",
+            "desc": "",
+            "type": "INT",
+            "default": 2
+        },
+        {
+            "attr": "color3",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value3",
+            "desc": "",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "color4",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value4",
+            "desc": "",
+            "type": "INT",
+            "default": 4
+        },
+        {
+            "attr": "color5",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value5",
+            "desc": "",
+            "type": "INT",
+            "default": 5
+        },
+        {
+            "attr": "color6",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value6",
+            "desc": "",
+            "type": "INT",
+            "default": 6
+        },
+        {
+            "attr": "color7",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "value7",
+            "desc": "",
+            "type": "INT",
+            "default": 7
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "ID": "MtlAngleBlend",
+    "Name": "Mtl Angle Blend",
+    "Desciption": "MtlAngleBlend",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "mtl_one",
+            "desc": "the first material to be blended",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "mtl_two",
+            "desc": "the second material to be blended",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "start_angle",
+            "desc": "angle where blending begins ( degrees ) - anything before this will be material one only",
+            "type": "FLOAT",
+            "default": 25.0
+        },
+        {
+            "attr": "stop_angle",
+            "desc": "angle where blending ends ( degrees ) - anything after this will be material two only",
+            "type": "FLOAT",
+            "default": 75.0
+        },
+        {
+            "attr": "blend_function",
+            "desc": "The function to use to blend the materials. 0:Linear 1:Normal Distribution 2:Sigmoid 3:Gompertz 4:Cube Root 5:Cubic 6: Cubic Polynomial",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "flip_view_dir",
+            "desc": "If this is true we will flip the view direction prior to doing calculations on it",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "ID": "TrimmingRegion",
+    "Name": "Trimming Region",
+    "Desciption": "TrimmingRegion",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "innerCurves",
+            "desc": "List of NURBSCurve objects - the inner curves for the trimming region",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "outerCurve",
+            "desc": "A NURBSCurve object - the outer curve for the trimming region",
+            "type": "PLUGIN",
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

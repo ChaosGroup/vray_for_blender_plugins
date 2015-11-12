@@ -1,0 +1,67 @@
+{
+    "ID": "MayaMultiplyDivide",
+    "Name": "Maya Multiply Divide",
+    "Desciption": "MayaMultiplyDivide",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color1",
+            "desc": "First color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color2",
+            "desc": "Second color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "operation",
+            "desc": "Operation (1 - multiply, 2 - divide, 3 - power)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "1",
+                    "Multiply",
+                    ""
+                ],
+                [
+                    "2",
+                    "Divide",
+                    ""
+                ],
+                [
+                    "3",
+                    "Power",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "color",
+            "desc": "The resulting color",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

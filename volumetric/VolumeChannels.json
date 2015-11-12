@@ -1,0 +1,24 @@
+{
+    "ID": "VolumeChannels",
+    "Name": "Volume Channels",
+    "Desciption": "VolumeChannels",
+    "Type": "VOLUMETRIC",
+    "Parameters": [
+        {
+            "attr": "base_volume",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "channels",
+            "desc": "Render channels the result of this volume will be written to",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

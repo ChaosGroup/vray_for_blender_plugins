@@ -1,0 +1,310 @@
+{
+    "ID": "TexXSILayered",
+    "Name": "XSI Layered",
+    "Desciption": "TexXSILayered",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "compatibility_with",
+            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ..",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Max",
+                    ""
+                ],
+                [
+                    "1",
+                    "Maya",
+                    ""
+                ]
+            ],
+            "default": "1",
+            "ui": {
+                "rollout": "Common"
+            }
+        },
+        {
+            "attr": "alpha_from_intensity",
+            "desc": "If 2 - the alpha is forced to 1.0f; 1 - the resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1); 0 - the alpha is taken from the bitmap alpha",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bitmap alpha",
+                    ""
+                ],
+                [
+                    "1",
+                    "Color intensity/luminance",
+                    ""
+                ],
+                [
+                    "2",
+                    "Force opaque",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "invert",
+            "desc": "If true, the resulting texture color will be inverted",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "invert_alpha",
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "color_mult",
+            "desc": "A multiplier for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_offset",
+            "desc": "An additional offset for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha_mult",
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "alpha_offset",
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "nouvw_color",
+            "desc": "The color when there are no valid uvw coordinates",
+            "type": "TEXTURE",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "ui": {
+                "display_name": "No UVs Color"
+            }
+        },
+        {
+            "attr": "color",
+            "desc": "The resulting color",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_transparency",
+            "desc": "The resulting transparency",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_alpha",
+            "desc": "The resulting alpha",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "out_intensity",
+            "desc": "The resulting intensity",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
+        },
+        {
+            "attr": "textures",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "mask_textures",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "mask_modes",
+            "desc": "Combination of following 0:NoMask, 1:InvertMask, 2:MaskConnectionPoint,\t\t\t\t\t\t\t\t\t\t  4:InputAlphaMask, 8:IntensityMask, 16:ThresholdMask",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "NoMask",
+                    ""
+                ],
+                [
+                    "1",
+                    "InvertMask",
+                    ""
+                ],
+                [
+                    "2",
+                    "MaskConnectionPoint",
+                    ""
+                ],
+                [
+                    "4",
+                    "InputAlphaMask",
+                    ""
+                ],
+                [
+                    "8",
+                    "IntensityMask",
+                    ""
+                ],
+                [
+                    "16",
+                    "ThresholdMask",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "blend_modes",
+            "desc": "0:Over, 1:In, 2:Out, 3:Plus, 4:BoundedPlus, 5:Hide-Reveal(Multiply),\t\t\t\t\t\t\t\t\t\t  6:Hide-Reveal Bonded, 7:Difference, 8:Darken, 9:Lighten, 10:Hard Light,\t\t\t\t\t\t\t\t\t\t  11:Soft Light, 12:Screen, 13:Overlay, 14:Blend",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Over",
+                    ""
+                ],
+                [
+                    "1",
+                    "In",
+                    ""
+                ],
+                [
+                    "2",
+                    "Out",
+                    ""
+                ],
+                [
+                    "3",
+                    "Plus",
+                    ""
+                ],
+                [
+                    "4",
+                    "BoundedPlus",
+                    ""
+                ],
+                [
+                    "5",
+                    "Hide-Reveal(Multiply)",
+                    ""
+                ],
+                [
+                    "6",
+                    "Hide-Reveal Bonded",
+                    ""
+                ],
+                [
+                    "7",
+                    "Difference",
+                    ""
+                ],
+                [
+                    "8",
+                    "Darken",
+                    ""
+                ],
+                [
+                    "9",
+                    "Lighten",
+                    ""
+                ],
+                [
+                    "10",
+                    "Hard Light",
+                    ""
+                ],
+                [
+                    "11",
+                    "Soft Light",
+                    ""
+                ],
+                [
+                    "12",
+                    "Screen",
+                    ""
+                ],
+                [
+                    "13",
+                    "Overlay",
+                    ""
+                ],
+                [
+                    "14",
+                    "Blend",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "alpha",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "weights",
+            "desc": "Weight list",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 1.0
+        },
+        {
+            "attr": "maskthresholds",
+            "desc": "Layer threshold list",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

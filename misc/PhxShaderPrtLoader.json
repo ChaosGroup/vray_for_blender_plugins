@@ -1,0 +1,29 @@
+{
+    "ID": "PhxShaderPrtLoader",
+    "Name": "Phx Shader Prt Loader",
+    "Desciption": "PhxShaderPrtLoader",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "filesrc",
+            "desc": "Path to the prt cache file",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "usetm",
+            "desc": "The particles are transformed relative to the position of the prt loader icon",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "velmult",
+            "desc": "Velocity multiplier for the particles",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

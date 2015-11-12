@@ -1,0 +1,17 @@
+{
+    "ID": "TexModoRefractionRoughness",
+    "Name": "Modo Refraction Roughness",
+    "Desciption": "TexModoRefractionRoughness",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "modo_refraction_roughness",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

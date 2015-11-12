@@ -1,0 +1,143 @@
+{
+    "ID": "TexNoiseASGVIS",
+    "Name": "Noise ASGVIS",
+    "Desciption": "TexNoiseASGVIS",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "uvwgen",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "persistence",
+            "desc": "amplitude(i+1) = amplitude(i) / persistence",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "amplitude_ratio",
+            "desc": "amplitude(i+1) = amplitude(i) * amplitude_ratio",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "frequency_ratio",
+            "desc": "frequency(i+1) = frequency(i) * frequency_ratio",
+            "type": "FLOAT",
+            "default": 2.0
+        },
+        {
+            "attr": "frequency1",
+            "desc": "The starting frequency (just like size)",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "amplitude1",
+            "desc": "The starting amplitude",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "octaves",
+            "desc": "",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "noiseType",
+            "desc": "0: just noise(), 1: Perlin noise, 2: inflected Perlin noise, 3: marble (with Perlin)",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "size",
+            "desc": "scale",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "inflection",
+            "desc": "1: inflected, 0: not inflected",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "mix_ratio",
+            "desc": "0: color1 only, 1: color2 only, 0.5(def.): 50%-50%",
+            "type": "FLOAT",
+            "default": 0.5
+        },
+        {
+            "attr": "bias",
+            "desc": "similiar to contrast",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "color1",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color2",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color1_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color2_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color1_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "color2_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "use_3d_mapping",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

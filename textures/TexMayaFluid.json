@@ -1,0 +1,124 @@
+{
+    "ID": "TexMayaFluid",
+    "Name": "Maya Fluid",
+    "Desciption": "TexMayaFluid",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "size_x",
+            "desc": "The number of voxels in the x dimension",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "size_y",
+            "desc": "The number of voxels in the y dimension",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "size_z",
+            "desc": "The number of voxels in the z dimension",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "values",
+            "desc": "The float grid data, an index into this is computed as follows : idx = size_x*size_y*zidx + size_x*yidx + xidx",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 1.0
+        },
+        {
+            "attr": "color_values",
+            "desc": "The color grid data, an index into this is computed as follows : idx = size_x*size_y*zidx + size_x*yidx + xidx",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "interpolation_type",
+            "desc": "0 : linear(8 samples, faster, but voxel borders may be visible),1 : quadratic(27 samples, slower, but voxel borders are much less likely to be visible",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "velocity",
+            "desc": "Velocity texture for the first frame. Used to calculate the motion blur. ",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "dynamic_offset_x",
+            "desc": "The x dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "dynamic_offset_y",
+            "desc": "The y dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "dynamic_offset_z",
+            "desc": "The z dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "cell_size",
+            "desc": "Cell size in the 3 axis",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 1.0
+        },
+        {
+            "attr": "mb_type",
+            "desc": "Motion blur type, 0-Disabled, 1-Blend, 2-Velocity, 3-Velocity+Blend",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Disabled",
+                    ""
+                ],
+                [
+                    "1",
+                    "Blend",
+                    ""
+                ],
+                [
+                    "2",
+                    "Velocity",
+                    ""
+                ],
+                [
+                    "3",
+                    "Velocity+Blend",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "frame_duration",
+            "desc": "The frame duration in sec",
+            "type": "FLOAT",
+            "default": 0.0416666679084301
+        },
+        {
+            "attr": "cache_frame",
+            "desc": "Converts the current frame number to cache frame number",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

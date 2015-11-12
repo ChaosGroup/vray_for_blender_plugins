@@ -1,0 +1,45 @@
+{
+    "ID": "TexUVW",
+    "Name": "UVW",
+    "Desciption": "TexUVW",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "uvwgen",
+            "desc": "The uvw space that will be displayed as RGB",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "component",
+            "desc": "Specifies which component to show (0 - all, 1 - u, 2 - v, 3 - w)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "All",
+                    ""
+                ],
+                [
+                    "1",
+                    "U",
+                    ""
+                ],
+                [
+                    "2",
+                    "V",
+                    ""
+                ],
+                [
+                    "3",
+                    "W",
+                    ""
+                ]
+            ],
+            "default": "0"
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

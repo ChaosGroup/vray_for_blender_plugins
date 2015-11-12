@@ -1,0 +1,113 @@
+{
+    "ID": "TexBlendBumpNormal",
+    "Name": "Blend Bump Normal",
+    "Desciption": "TexBlendBumpNormal",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "normalMap1",
+            "desc": "First tangent space normal map",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Normal map 1"
+            }
+        },
+        {
+            "attr": "normalMapWeight1",
+            "desc": "Weight of first tangent space normal map",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Normal map 1 weight"
+            }
+        },
+        {
+            "attr": "normalMap2",
+            "desc": "Second tangent space normal map",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Normal map 2"
+            }
+        },
+        {
+            "attr": "normalMapWeight2",
+            "desc": "Weight of second tangent space normal map",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Normal map 2 weight"
+            }
+        },
+        {
+            "attr": "bumpMap1",
+            "desc": "First bump map",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "rollout": "",
+                "display_name": "Bump map 1"
+            }
+        },
+        {
+            "attr": "bumpMapWeight1",
+            "desc": "Weight of first bump map",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Bump map 1 weight"
+            }
+        },
+        {
+            "attr": "bumpMap2",
+            "desc": "Second bump map",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Bump map 2"
+            }
+        },
+        {
+            "attr": "bumpMapWeight2",
+            "desc": "Weight of second bump map",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Bump map 2 weight"
+            }
+        },
+        {
+            "attr": "sharpen",
+            "desc": "",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": ""
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

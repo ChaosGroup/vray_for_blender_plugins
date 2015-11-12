@@ -1,0 +1,28 @@
+{
+    "ID": "TexColorAndAlpha",
+    "Name": "Color And Alpha",
+    "Desciption": "TexColorAndAlpha",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color_input",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha_input",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

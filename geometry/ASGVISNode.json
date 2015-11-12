@@ -1,0 +1,73 @@
+{
+    "ID": "ASGVISNode",
+    "Name": "ASGVIS Node",
+    "Desciption": "ASGVISNode",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "transform",
+            "desc": "",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "geometry",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "material",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "volume",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "nsamples",
+            "desc": "Number of transform samples",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "lights",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "visible",
+            "desc": "true if the object is renderable (visible) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "objectID",
+            "desc": "This can be used to give instances of nodes an identifier - if -1 is provided then a unique runtime render id will be calculated",
+            "type": "INT",
+            "default": -1
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

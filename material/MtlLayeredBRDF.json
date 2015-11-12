@@ -1,0 +1,24 @@
+{
+    "ID": "MtlLayeredBRDF",
+    "Name": "Mtl Layered BRDF",
+    "Desciption": "MtlLayeredBRDF",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "brdfs",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "double_sided",
+            "desc": "1 to make the material double-sided",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

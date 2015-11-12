@@ -1,0 +1,59 @@
+{
+    "ID": "TexBezierCurve",
+    "Name": "Bezier Curve",
+    "Desciption": "TexBezierCurve",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input_float",
+            "desc": "The input texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "points",
+            "desc": "The control points; 6 floats for each point: 2D coords of the point itself, and 2D coords of the left and right tangent",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "types",
+            "desc": "The type of the control points: 0 - free, 1 - bezier, 2- bezier smooth",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Free",
+                    ""
+                ],
+                [
+                    "1",
+                    "Bezier",
+                    ""
+                ],
+                [
+                    "2",
+                    "Bezier smooth",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "num_bezier_points",
+            "desc": "The number of precisely calculated points from bezier curves: default 256",
+            "type": "INT",
+            "default": 256
+        },
+        {
+            "attr": "use_end_tangents",
+            "desc": "true to extrapolate beyound the control points",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

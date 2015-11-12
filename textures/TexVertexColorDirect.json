@@ -1,0 +1,28 @@
+{
+    "ID": "TexVertexColorDirect",
+    "Name": "Vertex Color Direct",
+    "Desciption": "TexVertexColorDirect",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color_set_name",
+            "desc": "",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "default_color",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

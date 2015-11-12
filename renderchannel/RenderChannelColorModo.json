@@ -1,0 +1,65 @@
+{
+    "ID": "RenderChannelColorModo",
+    "Name": "Render Channel Color Modo",
+    "Desciption": "RenderChannelColorModo",
+    "Type": "RENDERCHANNEL",
+    "Parameters": [
+        {
+            "attr": "name",
+            "desc": "",
+            "type": "STRING",
+            "default": "ColorChannel"
+        },
+        {
+            "attr": "alias",
+            "desc": "",
+            "type": "INT",
+            "default": 1000
+        },
+        {
+            "attr": "color_mapping",
+            "desc": "true to apply color mapping to the channel; false otherwise",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "consider_for_aa",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "filtering",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "derive_raw_channels",
+            "desc": "true if raw channels should be derived from the respective color and filter channel",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "vfb_color_corrections",
+            "desc": "False to disable ALL VFB color corrections(sRGB, curves, white balance, etc...) when saving the channel data to a file or showing it on a display. True to apply VFB color corrections when saving the channel data to a file or showing it on a display. If true some color corrections might still be disabled, based on the type of file being saved",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "aa_override_foreground_intensity",
+            "desc": "USE WITH CAUTION - setting this to true can increase render times significantly ! Used only when consider_for_aa is true",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "aa_foreground_intensity",
+            "desc": "This should be setup by the exporter. It should have a unique value for each render element that has it enabled. And the minimum difference between these values should be big enough to achieve good AA on black/white edges",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

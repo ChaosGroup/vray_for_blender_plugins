@@ -1,0 +1,18 @@
+{
+    "ID": "TexScalarHairRootSampler",
+    "Name": "Scalar Hair Root Sampler",
+    "Desciption": "TexScalarHairRootSampler",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "root_values",
+            "desc": "The scalars at the root of each hair strand",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

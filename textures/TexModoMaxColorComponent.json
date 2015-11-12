@@ -1,0 +1,33 @@
+{
+    "ID": "TexModoMaxColorComponent",
+    "Name": "Modo Max Color Component",
+    "Desciption": "TexModoMaxColorComponent",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color1",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color2",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

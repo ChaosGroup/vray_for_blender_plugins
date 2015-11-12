@@ -1,0 +1,129 @@
+{
+    "ID": "VRayClipper",
+    "Name": "V Ray Clipper",
+    "Desciption": "VRayClipper",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "enabled",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "affect_light",
+            "desc": "If enabled, the clipper will affect area light sources as well",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "only_camera_rays",
+            "desc": "If enabled, the clipper will affect objects as they are directly seen by the camera, but they will appear unchanged to reflection/refraction/GI rays",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "clip_lights",
+            "desc": "Enables or disables the clipping of lights geometry (for example a mesh light)",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Clip Lights Geometry"
+            }
+        },
+        {
+            "attr": "use_obj_mtl",
+            "desc": "When enabled, the clipper will use the material of each clipped object to fill in the resulting holes. When this is off, the material applied to the clipper object itself will be used",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Use Object Material"
+            }
+        },
+        {
+            "attr": "set_material_id",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "material_id",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "exclusion_nodes",
+            "desc": "List of node plugins to consider for inclusion/exclusion",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null,
+            "ui": {
+                "rollout": "",
+                "display_name": "Exclude",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "exclusion_mode",
+            "desc": "false to include the nodes listed, true to exclude the nodes listed",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "As Exclusive list"
+            }
+        },
+        {
+            "attr": "transform",
+            "desc": "",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "material",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "object_id",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "clip_mesh",
+            "desc": "Mesh plugin to use as a clipping mesh instead of the simple plane",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "invert_inside",
+            "desc": "Specifies the boolean operation to perform: 0 - intersection, 1 - substraction(scene - clip_mesh)",
+            "type": "INT",
+            "default": 1
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "ID": "TexColorConstant",
+    "Name": "Color Constant",
+    "Desciption": "TexColorConstant",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "alpha",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

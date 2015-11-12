@@ -1,0 +1,35 @@
+{
+    "ID": "PhxShaderSimGeom",
+    "Name": "Phx Shader Sim Geom",
+    "Desciption": "PhxShaderSimGeom",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "phoenix_sim",
+            "desc": "A plugin that supports PhoenixSimInterface and can be used to load a phoenix frame",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "gpu_di_mode",
+            "desc": "Mode for DI computations on the GPU",
+            "type": "INT",
+            "default": 2
+        },
+        {
+            "attr": "gpu_gi_mode",
+            "desc": "Mode for GI computations on the GPU",
+            "type": "INT",
+            "default": 2
+        },
+        {
+            "attr": "gpu_samples_count",
+            "desc": "Samples count for cache computation on the GPU",
+            "type": "INT",
+            "default": 1
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

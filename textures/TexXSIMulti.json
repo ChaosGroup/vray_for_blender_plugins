@@ -1,0 +1,25 @@
+{
+    "ID": "TexXSIMulti",
+    "Name": "XSI Multi",
+    "Desciption": "TexXSIMulti",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "textures",
+            "desc": "A list of float textures",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "ids_list",
+            "desc": "A list of material IDs",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 1
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

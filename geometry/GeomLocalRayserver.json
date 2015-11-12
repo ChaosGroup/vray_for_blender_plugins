@@ -1,0 +1,17 @@
+{
+    "ID": "GeomLocalRayserver",
+    "Name": "Geom Local Rayserver",
+    "Desciption": "GeomLocalRayserver",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "source_geometry",
+            "desc": "The source geometry",
+            "type": "PLUGIN",
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

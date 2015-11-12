@@ -1,0 +1,83 @@
+{
+    "ID": "BRDFDiffuseASGVIS",
+    "Name": "Diffuse ASGVIS",
+    "Desciption": "BRDFDiffuseASGVIS",
+    "Type": "BRDF",
+    "Parameters": [
+        {
+            "attr": "color",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "transparency",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transparency_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transparency_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "roughness",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "use_irradiance_map",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_color_tex_alpha_as_transparency",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

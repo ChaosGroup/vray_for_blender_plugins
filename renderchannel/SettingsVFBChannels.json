@@ -1,0 +1,36 @@
+{
+    "ID": "SettingsVFBChannels",
+    "Name": "Settings VFB Channels",
+    "Desciption": "SettingsVFBChannels",
+    "Type": "RENDERCHANNEL",
+    "Parameters": [
+        {
+            "attr": "channel_names",
+            "desc": "A list of strings that represent render channel names. There are too many to list here - see pixelbuffer.h for the list of RegionChannelAlias items that are available for the vfb",
+            "type": "STRING_LIST",
+            "elements_count": 0,
+            "default": ""
+        },
+        {
+            "attr": "zdepth_black",
+            "desc": "Where the black color starts in zdepth",
+            "type": "FLOAT",
+            "default": 0.0010000000474974514
+        },
+        {
+            "attr": "zdepth_white",
+            "desc": "Where the white color starts in zdepth",
+            "type": "FLOAT",
+            "default": 1500.0
+        },
+        {
+            "attr": "zdepth_clamp",
+            "desc": "whether we should clamp between near and far or allow outliers",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

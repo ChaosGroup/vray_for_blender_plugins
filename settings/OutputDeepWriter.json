@@ -1,0 +1,69 @@
+{
+    "ID": "OutputDeepWriter",
+    "Name": "Output Deep Writer",
+    "Desciption": "OutputDeepWriter",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "file",
+            "desc": "The name of the file in which the shade map information is stored",
+            "type": "STRING",
+            "default": "",
+            "ui": {
+                "file_extensions": [
+                    "vrst"
+                ]
+            }
+        },
+        {
+            "attr": "float_colors_mode",
+            "desc": "Store 32 bit (single precision) color channels in the shade map. When off 16 bit (half precision) values are stored",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "vrst_compression",
+            "desc": "Compression type for the .vrst files (0 - no compression, 1 - ZLIB compression)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    ""
+                ],
+                [
+                    "1",
+                    "ZLIB",
+                    ""
+                ]
+            ],
+            "default": "2"
+        },
+        {
+            "attr": "exr_compression",
+            "desc": "Compression type for the .exr files (0 - no compression, 1 - RLE compression, 2 - ZIPS compression)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    ""
+                ],
+                [
+                    "1",
+                    "RLE",
+                    ""
+                ],
+                [
+                    "2",
+                    "ZIPS",
+                    ""
+                ]
+            ],
+            "default": "2"
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

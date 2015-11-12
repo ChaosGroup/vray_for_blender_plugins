@@ -1,0 +1,968 @@
+{
+    "ID": "TexBerconTile",
+    "Name": "Bercon Tile",
+    "Desciption": "TexBerconTile",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "compatibility_with",
+            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ..",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Max",
+                    ""
+                ],
+                [
+                    "1",
+                    "Maya",
+                    ""
+                ]
+            ],
+            "default": "2",
+            "ui": {
+                "rollout": "Common"
+            }
+        },
+        {
+            "attr": "alpha_from_intensity",
+            "desc": "If 2 - the alpha is forced to 1.0f; 1 - the resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1); 0 - the alpha is taken from the bitmap alpha",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bitmap alpha",
+                    ""
+                ],
+                [
+                    "1",
+                    "Color intensity/luminance",
+                    ""
+                ],
+                [
+                    "2",
+                    "Force opaque",
+                    ""
+                ]
+            ],
+            "default": "2"
+        },
+        {
+            "attr": "invert",
+            "desc": "If true, the resulting texture color will be inverted",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "invert_alpha",
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "color_mult",
+            "desc": "A multiplier for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_offset",
+            "desc": "An additional offset for the texture color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha_mult",
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "alpha_offset",
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "nouvw_color",
+            "desc": "The color when there are no valid uvw coordinates",
+            "type": "TEXTURE",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "ui": {
+                "display_name": "No UVs Color"
+            }
+        },
+        {
+            "attr": "color",
+            "desc": "The resulting color",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_transparency",
+            "desc": "The resulting transparency",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "out_alpha",
+            "desc": "The resulting alpha",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "out_intensity",
+            "desc": "The resulting intensity",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "The uvw generator for the texture",
+            "type": "PLUGIN",
+            "default": null,
+            "ui": {
+                "rollout": "Mapped"
+            }
+        },
+        {
+            "attr": "placement_type",
+            "desc": "The way the valid portion of the texture is applied: 0 - the whole texture is valid, 1 - crop, 2 -place",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Whole texture is valid",
+                    ""
+                ],
+                [
+                    "1",
+                    "Crop",
+                    ""
+                ],
+                [
+                    "2",
+                    "Place",
+                    ""
+                ]
+            ],
+            "default": "2"
+        },
+        {
+            "attr": "u",
+            "desc": "U coordinate of the valid texture sector",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "v",
+            "desc": "V coordinate of the valid texture sector",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "w",
+            "desc": "Width of the valid texture sector",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "h",
+            "desc": "Height of the valid texture sector",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "jitter",
+            "desc": "Amount of random placement variation",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "tile_u",
+            "desc": "If true there is horizontal tiling",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "tile_v",
+            "desc": "If true there is vertical tiling",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_on",
+            "desc": "If true the noise is enabled",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "UV noise on"
+            }
+        },
+        {
+            "attr": "uv_noise_animate",
+            "desc": "If true the noise is animated. Use \"UV noise phase\" to animate the noise",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Animate UV noise",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_amount",
+            "desc": "UV noise amount",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "UV noise amount",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_levels",
+            "desc": "UV noise iterations",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "UV noise levels",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_size",
+            "desc": "UV noise size",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "UV noise size",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "un_noise_phase",
+            "desc": "UV noise phase",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "rollout": "<EndRollout>",
+                "display_name": "UV noise phase",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "noise_color1",
+            "desc": "noise color 1",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "noise_color2",
+            "desc": "noise color 2",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "noise_color3",
+            "desc": "noise color 3",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "noise_map1",
+            "desc": "noise map 1",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Color #1 (map)"
+            }
+        },
+        {
+            "attr": "noise_map2",
+            "desc": "noise map 2",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Edge color (map)"
+            }
+        },
+        {
+            "attr": "lock_edge",
+            "desc": "lock edge",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Color 2 same as Edge color"
+            }
+        },
+        {
+            "attr": "noise_map3",
+            "desc": "noise map 3",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Color #2 (map)",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "tile_size",
+            "desc": "tile size",
+            "type": "FLOAT",
+            "default": 25.0,
+            "ui": {
+                "rollout": "Tiling",
+                "display_name": "Size",
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "tile_style",
+            "desc": "tile style",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Custom",
+                    ""
+                ],
+                [
+                    "1",
+                    "Herringbone",
+                    ""
+                ],
+                [
+                    "2",
+                    "Stack Bond",
+                    ""
+                ],
+                [
+                    "3",
+                    "Stretcher Bond",
+                    ""
+                ],
+                [
+                    "4",
+                    "Flemish Stretcher Bond",
+                    ""
+                ],
+                [
+                    "5",
+                    "Common Bond",
+                    ""
+                ],
+                [
+                    "6",
+                    "Flemish Bond",
+                    ""
+                ],
+                [
+                    "7",
+                    "Monk Bond",
+                    ""
+                ],
+                [
+                    "8",
+                    "Flemish Garden Wall Bond",
+                    ""
+                ],
+                [
+                    "9",
+                    "English Bond",
+                    ""
+                ],
+                [
+                    "10",
+                    "English Cross Bond",
+                    ""
+                ],
+                [
+                    "11",
+                    "Double English Cross Bond",
+                    ""
+                ]
+            ],
+            "default": "2",
+            "ui": {
+                "display_name": "Style"
+            }
+        },
+        {
+            "attr": "tile_width",
+            "desc": "tile width",
+            "type": "FLOAT",
+            "default": 4.0,
+            "ui": {
+                "display_name": "Tile Width",
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "tile_height",
+            "desc": "tile height",
+            "type": "FLOAT",
+            "default": 2.0,
+            "ui": {
+                "display_name": "Tile Height",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "edge_width",
+            "desc": "edge width",
+            "type": "FLOAT",
+            "default": 0.10000000149011612,
+            "ui": {
+                "display_name": "Edge Width",
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "edge_height",
+            "desc": "edge height",
+            "type": "FLOAT",
+            "default": 0.10000000149011612,
+            "ui": {
+                "display_name": "Edge Height",
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "tile_width2",
+            "desc": "tile width 2",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "rollout": "",
+                "display_name": "Tile Width Variation %",
+                "enabled": true,
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "tile_height2",
+            "desc": "tile height 2",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Tile Height Variation %",
+                "enabled": true,
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "edge_width2",
+            "desc": "edge width 2",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Edge Width Variation %",
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "edge_height2",
+            "desc": "edge height 2",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Edge Height Variation %",
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "soften",
+            "desc": "tile soften",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    ""
+                ],
+                [
+                    "1",
+                    "Linear",
+                    ""
+                ],
+                [
+                    "2",
+                    "Round",
+                    ""
+                ],
+                [
+                    "3",
+                    "Smooth",
+                    ""
+                ]
+            ],
+            "default": "2",
+            "ui": {
+                "rollout": "",
+                "display_name": "Soften"
+            }
+        },
+        {
+            "attr": "soften_rad",
+            "desc": "soften radius",
+            "type": "FLOAT",
+            "default": 0.10000000149011612,
+            "ui": {
+                "display_name": "Soften Radius",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "round",
+            "desc": "round",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Round corners"
+            }
+        },
+        {
+            "attr": "round_rad",
+            "desc": "round radius",
+            "type": "FLOAT",
+            "default": 0.30000001192092898,
+            "ui": {
+                "display_name": "Round Radius",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "map_uv",
+            "desc": "map uv",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Tile UV Mapping",
+                "display_name": "Enable Tile Mapping"
+            }
+        },
+        {
+            "attr": "uv_channel",
+            "desc": "uv channel",
+            "type": "INT",
+            "default": 1,
+            "ui": {
+                "display_name": "Tile UV Channel",
+                "enabled": true,
+                "min": 1,
+                "max": 99
+            }
+        },
+        {
+            "attr": "auto",
+            "desc": "auto scaling",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "No auto scale",
+                    ""
+                ],
+                [
+                    "1",
+                    "UV",
+                    ""
+                ],
+                [
+                    "2",
+                    "UV Fit",
+                    ""
+                ],
+                [
+                    "3",
+                    "UV Fit Keep aspect",
+                    ""
+                ],
+                [
+                    "4",
+                    "UV Normalized",
+                    ""
+                ],
+                [
+                    "5",
+                    "UV Normalized Keep aspect",
+                    ""
+                ]
+            ],
+            "default": "2",
+            "ui": {
+                "display_name": "Auto Scaling",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "rand_X",
+            "desc": "random X",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Random X Offset",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "rand_Y",
+            "desc": "random Y",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Random Y Offset",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "rand_SX",
+            "desc": "random SX",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Random X Scale",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "rand_SY",
+            "desc": "random SY",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Random Y Scale",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000000.0
+            }
+        },
+        {
+            "attr": "lock",
+            "desc": "lock",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Uniform Scale",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "rot_uv",
+            "desc": "rotate uv",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    ""
+                ],
+                [
+                    "1",
+                    "180 Degrees",
+                    ""
+                ],
+                [
+                    "2",
+                    "90 Degrees",
+                    ""
+                ],
+                [
+                    "3",
+                    "Random",
+                    ""
+                ]
+            ],
+            "default": "2",
+            "ui": {
+                "display_name": "Random Rotation",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "rand_rot",
+            "desc": "random rotation",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Degrees",
+                "enabled": true,
+                "min": 0.0,
+                "max": 180.0
+            }
+        },
+        {
+            "attr": "flip_X",
+            "desc": "flip X",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Random flip X-axis",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "flip_Y",
+            "desc": "flip Y",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Random flip Y-axis",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "center",
+            "desc": "center",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "",
+                "display_name": "Center UV Mapping"
+            }
+        },
+        {
+            "attr": "center_channel",
+            "desc": "center channel",
+            "type": "INT",
+            "default": 1,
+            "ui": {
+                "display_name": "Center UV Channel",
+                "enabled": true,
+                "min": 1,
+                "max": 99
+            }
+        },
+        {
+            "attr": "rand_Z",
+            "desc": "random Z",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "",
+                "display_name": "Randomize MultiTexture and BerconGradient"
+            }
+        },
+        {
+            "attr": "pattern",
+            "desc": "offset, height, width1, width2, ... / offset, height, width1 ... Negative offset will be multiplied by row number try: -.25,1,1",
+            "type": "STRING",
+            "default": "0,1,1/.5,.5,1",
+            "ui": {
+                "rollout": "Custom Bond",
+                "display_name": "Pattern"
+            }
+        },
+        {
+            "attr": "use_dist",
+            "desc": "use distortion",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "rollout": "Distortion",
+                "display_name": "Use Distortion"
+            }
+        },
+        {
+            "attr": "dist_str",
+            "desc": "distortion strength",
+            "type": "FLOAT",
+            "default": 0.10000000149011612,
+            "ui": {
+                "display_name": "Strength",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1000.0
+            }
+        },
+        {
+            "attr": "dist_map",
+            "desc": "distortion map - works similarly to a bump map, solid colors have no effect",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Distortion (map)",
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "dist_map2",
+            "desc": "texture for distortion strength",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Distortion Strength (map)",
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "tex_soften_rad",
+            "desc": "texture for soften radius",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "rollout": "Map parameters",
+                "display_name": "Soften Radius (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "tex_round_rad",
+            "desc": "texture for round radius",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Round Radius (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

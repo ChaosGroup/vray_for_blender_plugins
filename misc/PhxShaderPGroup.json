@@ -1,0 +1,47 @@
+{
+    "ID": "PhxShaderPGroup",
+    "Name": "Phx Shader P Group",
+    "Desciption": "PhxShaderPGroup",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "phoenix_sim",
+            "desc": "The phoenix simulator that exports the particle group",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "pgroup",
+            "desc": "the name of the particle group that will be used as a source",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "lifespan_mode",
+            "desc": "lifespan mode: 0-default, 1-constant, 2-random",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "lifespan_seed",
+            "desc": "lifespan randomization seed",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "lifespan",
+            "desc": "lifespan base",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "lifespan_random",
+            "desc": "lifespan randomization",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

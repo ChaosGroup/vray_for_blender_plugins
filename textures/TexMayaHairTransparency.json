@@ -1,0 +1,10 @@
+{
+    "ID": "TexMayaHairTransparency",
+    "Name": "Maya Hair Transparency",
+    "Desciption": "TexMayaHairTransparency",
+    "Type": "TEXTURE",
+    "Parameters": [],
+    "Widget": {
+        "widgets": []
+    }
+}

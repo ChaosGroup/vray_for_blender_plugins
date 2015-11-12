@@ -1,0 +1,23 @@
+{
+    "ID": "TexVRayFurSampler",
+    "Name": "V Ray Fur Sampler",
+    "Desciption": "TexVRayFurSampler",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "distance_along_strand",
+            "desc": "Distance along the hair strand where the intersection occurred, in the [0,1] range",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "random_by_strand",
+            "desc": "Random by the hair strand where the intersection occurred, in the [0,1] range",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

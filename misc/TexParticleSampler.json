@@ -1,0 +1,158 @@
+{
+    "ID": "TexParticleSampler",
+    "Name": "Particle Sampler",
+    "Desciption": "TexParticleSampler",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "rgbPP",
+            "desc": "Per-particle color",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "incandescencePP",
+            "desc": "Per-particle emission/incandescence",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "acceleration",
+            "desc": "Per-particle acceleration",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "userVector1PP",
+            "desc": "Per-particle user color 1",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "userVector2PP",
+            "desc": "Per-particle user color 2",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "userVector3PP",
+            "desc": "Per-particle user color 3",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "userVector4PP",
+            "desc": "Per-particle user color 4",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "userVector5PP",
+            "desc": "Per-particle user color 5",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "age",
+            "desc": "Per-particle age",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "lifespanPP",
+            "desc": "Per-particle lifespan",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "opacityPP",
+            "desc": "Per-particle opacity",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "userScalar1PP",
+            "desc": "Per-particle user scalar 1",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "userScalar2PP",
+            "desc": "Per-particle user scalar 2",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "userScalar3PP",
+            "desc": "Per-particle user scalar 3",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "userScalar4PP",
+            "desc": "Per-particle user scalar 4",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "userScalar5PP",
+            "desc": "Per-particle user scalar 5",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "def_color_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

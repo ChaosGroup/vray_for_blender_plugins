@@ -1,0 +1,18 @@
+{
+    "ID": "VolumeMulti",
+    "Name": "Volume Multi",
+    "Desciption": "VolumeMulti",
+    "Type": "VOLUMETRIC",
+    "Parameters": [
+        {
+            "attr": "volumes",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "ID": "TexSwitchTransform",
+    "Name": "Switch Transform",
+    "Desciption": "TexSwitchTransform",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "nodes",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "textures",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "default_texture",
+            "desc": "",
+            "type": "TRANSFORM_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

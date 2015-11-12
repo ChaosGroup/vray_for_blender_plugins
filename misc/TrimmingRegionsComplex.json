@@ -1,0 +1,32 @@
+{
+    "ID": "TrimmingRegionsComplex",
+    "Name": "Trimming Regions Complex",
+    "Desciption": "TrimmingRegionsComplex",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "count",
+            "desc": "List containing information about the number of regions, number of boundaries within them, number of curves for a boundary, the curves' number of cvs, knots and degree",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "cvs",
+            "desc": "List containg pairs of (u, v) coordinates of control vertices for all the curves",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "knots",
+            "desc": "List containing the knot values for all the curves",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
