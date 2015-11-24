@@ -117,7 +117,7 @@
             "items": [
                 [
                     "0", 
-                    "Preetham et al.", 
+                    "Preetham et al", 
                     ""
                 ], 
                 [
@@ -129,7 +129,8 @@
                     "2", 
                     "CIE Overcast", 
                     ""
-                ]
+                ],
+                [ "3", "Hosek et al", "" ]
             ], 
             "type": "ENUM"
         }, 
