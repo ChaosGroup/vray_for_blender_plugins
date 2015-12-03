@@ -34,7 +34,10 @@
             ], 
             "desc": "A color texture that if present will override the color parameter", 
             "name": "Color", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadows", 
@@ -60,7 +63,10 @@
                 0.0
             ], 
             "desc": "A color texture that if present will override the shadowColor parameter", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadowBias", 
@@ -273,7 +279,10 @@
                 "min": 0.0, 
                 "soft_max": 1024.0, 
                 "soft_min": 0.0
-            }
+            },
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "subdivs", 
@@ -400,7 +409,10 @@
                 0.0
             ], 
             "desc": "The light texture", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "use_rect_tex", 

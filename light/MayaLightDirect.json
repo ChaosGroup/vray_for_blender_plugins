@@ -21,7 +21,10 @@
                 0.0
             ], 
             "desc": "A color texture that if present will override the color parameter", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "intensity", 
@@ -45,7 +48,10 @@
                 "min": -1048576, 
                 "soft_max": 64, 
                 "soft_min": 0
-            }
+            },
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "transform", 
@@ -135,7 +141,10 @@
                 "min": -1048576, 
                 "soft_max": 64, 
                 "soft_min": 0
-            }
+            },
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadowSubdivs", 
@@ -173,7 +182,10 @@
                 0.0
             ], 
             "desc": "A color texture that if present will override the shadowColor parameter", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "enabled", 

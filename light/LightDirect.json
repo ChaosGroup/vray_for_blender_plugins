@@ -33,7 +33,10 @@
                 0.0
             ], 
             "desc": "A color texture that if present will override the color parameter", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadows", 
@@ -59,7 +62,10 @@
                 0.0
             ], 
             "desc": "A color texture that if present will override the shadowColor parameter", 
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadowBias", 
@@ -272,7 +278,10 @@
                 "min": -1048576, 
                 "soft_max": 64, 
                 "soft_min": 0
-            }
+            },
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "shadowRadius", 
@@ -296,7 +305,10 @@
                 "min": -1048576, 
                 "soft_max": 64, 
                 "soft_min": 0
-            }
+            },
+            "options": [
+                "LINKED_ONLY"
+            ]
         }, 
         {
             "attr": "areaSpeculars", 
