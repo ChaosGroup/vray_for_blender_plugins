@@ -65,6 +65,50 @@
             "default": false, 
             "desc": "", 
             "type": "BOOL"
+        },
+        {
+            "attr": "raytraced",
+            "desc": "true to use raytracing to compute the rounded corners and false to use static mesh analysis",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "raytraced_consider_same_object_only",
+            "name": "Consider Same Object Only",
+            "desc": "true to consider only corners on the same object, and false to consider other intersecting objects",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Consider same object only",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "raytraced_mode",
+            "desc": "Which corners to smooth: 0 - both convex and concave; 1 - convex only; 2 - concave only",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Convex and Concave",
+                    ""
+                ],
+                [
+                    "1",
+                    "Convex only",
+                    ""
+                ],
+                [
+                    "2",
+                    "Concave only",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Mode",
+                "enabled": true
+            }
         }
     ], 
     "Type": "TEXTURE", 
@@ -100,6 +144,14 @@
                     }
                 ], 
                 "layout": "ROW"
+            },
+            {
+                "attrs": [
+                    { "name": "raytraced" },
+                    { "name": "raytraced_mode" },
+                    { "name": "raytraced_consider_same_object_only" }
+                ],
+                "layout": "COLUMN"
             }
         ]
     }
