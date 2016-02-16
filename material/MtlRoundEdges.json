@@ -91,6 +91,8 @@
                     { "name": "raytraced_consider_same_object_only", "label" : "Same Object Only" }
                 ]
             }
+        ],
+        "widgets": [
         ]
     }
 }
