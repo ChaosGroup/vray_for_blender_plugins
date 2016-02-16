@@ -11,12 +11,12 @@
             "items": [
                 [
                     "0",
-                    "Same texture on all axes",
+                    "Same Texture On All Axes",
                     ""
                 ],
                 [
                     "1",
-                    "Different texture on each axis",
+                    "Different Texture On Each Axis",
                     ""
                 ]
             ],
@@ -202,6 +202,14 @@
         }
     ],
     "Widget": {
+        "node_widgets": [
+            {
+                "attrs": [
+                    { "name": "texture_mode", "label" : "" }
+                ],
+                "layout": "COLUMN"
+            }
+        ],
         "widgets": [
             {
                 "attrs": [
