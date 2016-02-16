@@ -64,12 +64,12 @@
                 ],
                 [
                     "1",
-                    "Convex only",
+                    "Convex Only",
                     ""
                 ],
                 [
                     "2",
-                    "Concave only",
+                    "Concave Only",
                     ""
                 ]
             ],
@@ -85,18 +85,11 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "radius_mode", "label": "Mode" },
-                    { "name": "raytraced" }
+                    { "name": "radius_mode", "label": "Space" },
+                    { "name": "raytraced" },
+                    { "name": "raytraced_mode", "label": "Mode" },
+                    { "name": "raytraced_consider_same_object_only", "label" : "Same Object Only" }
                 ]
-            }
-        ],
-        "widgets": [
-            {
-                "attrs": [
-                    { "name": "raytraced_mode" },
-                    { "name": "raytraced_consider_same_object_only" }
-                ],
-                "layout": "COLUMN"
             }
         ]
     }
