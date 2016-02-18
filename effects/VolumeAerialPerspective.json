@@ -1,0 +1,60 @@
+{
+    "ID": "VolumeAerialPerspective",
+    "Name": "Aerial Perspective",
+    "Desciption": "Aerial perspective",
+    "Type": "EFFECT",
+    "Parameters": [
+        {
+            "attr": "sun",
+            "desc": "If specified, all parameters are taken from the sun; otherwise, the sky parameters are used",
+            "type": "PLUGIN",
+            "default": "NULL"
+        },
+        {
+            "attr": "enabled",
+            "desc": "If 0, disable the rendering",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "distance",
+            "desc": "View distance inside the fog (until it becomes less than 10% see through)",
+            "type": "FLOAT",
+            "default": 600000.0
+        },
+        {
+            "attr": "atm_height",
+            "name": "Height",
+            "desc": "Height of the atmospheric layer",
+            "type": "FLOAT",
+            "default": 600000.0
+        },
+        {
+            "attr": "inscat_mult",
+            "name": "Inscattered Light",
+            "desc": "Multiplyer for the \"inscattered light\" component of the aerial persective",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "affect_env",
+            "name": "Affect Environment Rays",
+            "desc": "Specify whether aerial perspective is applied to environment rays",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": [
+            {
+                "attrs": [
+                    { "name": "distance" },
+                    { "name": "atm_height" },
+                    { "name": "inscat_mult" },
+                    { "name": "affect_env" }
+                ],
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}
