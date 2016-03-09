@@ -1,172 +1,227 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsPhotonMap", 
-    "Name": "Photon Map", 
+    "Desciption": "",
+    "ID": "SettingsPhotonMap",
+    "Name": "Photon Map",
     "Parameters": [
         {
-            "attr": "bounces", 
-            "default": 10, 
-            "desc": "The number of light bounces approximated by the photon map", 
-            "type": "INT", 
+            "attr": "bounces",
+            "default": 10,
+            "desc": "The number of light bounces approximated by the photon map",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Bounces"
             }
-        }, 
+        },
         {
-            "attr": "max_photons", 
-            "default": 30, 
-            "desc": "This option specifies how many photons will be taken into consideration when approximating the irradiance at the shaded point", 
-            "type": "INT", 
+            "attr": "max_photons",
+            "default": 30,
+            "desc": "This option specifies how many photons will be taken into consideration when approximating the irradiance at the shaded point",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max photons"
             }
-        }, 
+        },
         {
-            "attr": "prefilter", 
-            "default": false, 
-            "desc": "This will cause V-Ray to precompute the irradiance at the photon hit points stored in the photon map", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "prefilter_samples", 
-            "default": 10, 
-            "desc": "This controls how many irradiance samples will be taken from the photon map once it is converted to an irradiance map", 
-            "type": "INT", 
+            "attr": "prefilter",
+            "default": false,
+            "desc": "This will cause V-Ray to precompute the irradiance at the photon hit points stored in the photon map",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Prefilter"
             }
-        }, 
+        },
         {
-            "attr": "mode", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "prefilter_samples",
+            "default": 10,
+            "desc": "This controls how many irradiance samples will be taken from the photon map once it is converted to an irradiance map",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Prefilter samples",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "file", 
-            "default": "", 
-            "desc": "", 
-            "type": "STRING"
-        }, 
-        {
-            "attr": "auto_search_distance", 
-            "default": true, 
-            "desc": "Try to compute a suitable distance within which to search for photons", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "search_distance", 
-            "default": 1e+18, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mode",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Mode"
             }
-        }, 
+        },
         {
-            "attr": "convex_hull_estimate", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "dont_delete", 
-            "default": true, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "auto_save", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "auto_save_file", 
-            "default": "", 
-            "desc": "", 
-            "type": "STRING"
-        }, 
-        {
-            "attr": "store_direct_light", 
-            "default": true, 
-            "desc": "Store direct illumination in the photon map as well", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "multiplier", 
-            "default": 1, 
-            "desc": "This allows you to control the brightness of the photon map", 
-            "type": "FLOAT", 
+            "attr": "file",
+            "default": "",
+            "desc": "",
+            "type": "STRING",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "File",
+                "enabled": true,
+                "file_extensions": [
+                    "vrpmap"
+                ],
+                "file_names": [
+                    "V-Ray Photon map"
+                ]
             }
-        }, 
+        },
         {
-            "attr": "max_density", 
-            "default": 0, 
-            "desc": "This parameter allows you to limit the resolution (and thus the memory) of the photon map", 
-            "type": "FLOAT", 
+            "attr": "auto_search_distance",
+            "default": true,
+            "desc": "Try to compute a suitable distance within which to search for photons",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Auto search distance"
             }
-        }, 
+        },
         {
-            "attr": "retrace_corners", 
-            "default": 0, 
-            "desc": "When this is greater than 0.0, V-Ray will use brute force GI near corners, instead of the photon map, in order to obtain a more accurate result and to avoid splotches in these areas", 
-            "type": "FLOAT", 
+            "attr": "search_distance",
+            "default": 1000000000000000000.0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Search distance",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "retrace_bounces", 
-            "default": 10, 
-            "desc": "Controls how many bounces will be made when retracing corners", 
-            "type": "INT", 
+            "attr": "convex_hull_estimate",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Convex hull estimate"
             }
-        }, 
+        },
         {
-            "attr": "show_calc_phase", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
+            "attr": "dont_delete",
+            "default": true,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Don't delete"
+            }
+        },
+        {
+            "attr": "auto_save",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto save",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "auto_save_file",
+            "default": "",
+            "desc": "",
+            "type": "STRING",
+            "ui": {
+                "display_name": "Auto save file",
+                "enabled": true,
+                "file_extensions": [
+                    "vrpmap"
+                ],
+                "file_names": [
+                    "V-Ray Photon map"
+                ],
+                "file_op": "save"
+            }
+        },
+        {
+            "attr": "store_direct_light",
+            "default": true,
+            "desc": "Store direct illumination in the photon map as well",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Store direct light"
+            }
+        },
+        {
+            "attr": "multiplier",
+            "default": 1,
+            "desc": "This allows you to control the brightness of the photon map",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Multiplier"
+            }
+        },
+        {
+            "attr": "max_density",
+            "default": 0,
+            "desc": "This parameter allows you to limit the resolution (and thus the memory) of the photon map",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max density"
+            }
+        },
+        {
+            "attr": "retrace_corners",
+            "default": 0,
+            "desc": "When this is greater than 0.0, V-Ray will use brute force GI near corners, instead of the photon map, in order to obtain a more accurate result and to avoid splotches in these areas",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Retrace threshold"
+            }
+        },
+        {
+            "attr": "retrace_bounces",
+            "default": 10,
+            "desc": "Controls how many bounces will be made when retracing corners",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Retrace bounces",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "show_calc_phase",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show calculation phase"
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

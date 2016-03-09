@@ -1,58 +1,58 @@
 {
-    "Desciption": "Remap float value", 
-    "ID": "TexRemapFloat", 
-    "Name": "Remap Float", 
+    "Desciption": "Remap float value",
+    "ID": "TexRemapFloat",
+    "Name": "Remap Float",
     "Parameters": [
         {
-            "attr": "value", 
-            "default": 0, 
-            "desc": "Value to remap", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "value",
+            "default": 0,
+            "desc": "Value to remap",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "low", 
-            "default": 0, 
-            "desc": "Low boundary", 
-            "type": "FLOAT", 
+            "attr": "low",
+            "default": 0,
+            "desc": "Low boundary",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "high", 
-            "default": 1, 
-            "desc": "High boundary", 
-            "type": "FLOAT", 
+            "attr": "high",
+            "default": 1,
+            "desc": "High boundary",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
                         "name": "low"
-                    }, 
+                    },
                     {
                         "name": "high"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

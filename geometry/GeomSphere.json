@@ -1,0 +1,23 @@
+{
+    "ID": "GeomSphere",
+    "Name": "Geom Sphere",
+    "Desciption": "GeomSphere",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "radius",
+            "desc": "Desired radius for the sphere",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "subdivs",
+            "desc": "Number of subdivisions when generating sphere triangle mesh",
+            "type": "INT",
+            "default": 8
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

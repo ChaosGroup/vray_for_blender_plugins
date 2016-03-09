@@ -1,50 +1,50 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsTIFF", 
-    "Name": "SettingsTIFF", 
+    "Desciption": "",
+    "ID": "SettingsTIFF",
+    "Name": "SettingsTIFF",
     "Parameters": [
         {
-            "attr": "bits_per_channel", 
-            "default": "16", 
-            "desc": "Bits per channel", 
+            "attr": "bits_per_channel",
+            "default": "16",
+            "desc": "Bits per channel",
             "items": [
                 [
-                    "8", 
-                    "8", 
+                    "8",
+                    "8",
                     ""
-                ], 
+                ],
                 [
-                    "16", 
-                    "16", 
+                    "16",
+                    "16",
                     ""
-                ], 
+                ],
                 [
-                    "32", 
-                    "32", 
+                    "32",
+                    "32",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "interleaved", 
-            "default": false, 
-            "desc": "If true, the TIFF color channels will be written interleaved (RGBRGB instead of RRGGBB)", 
+            "attr": "interleaved",
+            "default": false,
+            "desc": "If true, the TIFF color channels will be written interleaved (RGBRGB instead of RRGGBB)",
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "bits_per_channel"
-                    }, 
+                    },
                     {
                         "name": "interleaved"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

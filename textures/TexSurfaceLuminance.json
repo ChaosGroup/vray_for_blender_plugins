@@ -1,0 +1,68 @@
+{
+    "ID": "TexSurfaceLuminance",
+    "Name": "Surface Luminance",
+    "Desciption": "TexSurfaceLuminance",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "luminance_mode",
+            "desc": "0: no luminance, 1: direct light, 2: diffuse light, 3: direct+diffuse light",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "No luminance",
+                    ""
+                ],
+                [
+                    "1",
+                    "Direct light",
+                    ""
+                ],
+                [
+                    "2",
+                    "Diffuse light",
+                    ""
+                ],
+                [
+                    "3",
+                    "Direct+diffuse light",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "samples",
+            "desc": "Samples for diffuse lighting",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "contribute_to_gi",
+            "desc": "If true, the direct light will contribute to the GI calculations. This have visual effect only if the texture is used for diffuse calculation",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "luminance",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "color",
+            "desc": "",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

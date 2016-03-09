@@ -1,0 +1,24 @@
+{
+    "ID": "SettingsDR",
+    "Name": "Settings DR",
+    "Desciption": "SettingsDR",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "host_list",
+            "desc": "Strings that represent either an ip address or a hostname for machines to be used as DR Nodes",
+            "type": "STRING_LIST",
+            "elements_count": 0,
+            "default": ""
+        },
+        {
+            "attr": "on",
+            "desc": "Whether DR should be utilized for this render",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

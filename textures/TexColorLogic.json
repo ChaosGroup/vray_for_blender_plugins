@@ -1,0 +1,39 @@
+{
+    "ID": "TexColorLogic",
+    "Name": "Color Logic",
+    "Desciption": "TexColorLogic",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color_a",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_b",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "operation",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

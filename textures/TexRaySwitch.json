@@ -1,0 +1,81 @@
+{
+    "ID": "TexRaySwitch",
+    "Name": "Ray Switch",
+    "Desciption": "TexRaySwitch",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "default_texture",
+            "desc": "This texture is used if texture is not set for specific ray type or if the ray type is unknown",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "ui": {
+                "display_name": "Default tex"
+            }
+        },
+        {
+            "attr": "shadow_ray_texture",
+            "desc": "This texture is used for shadow rays",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Shadow rays tex"
+            }
+        },
+        {
+            "attr": "gi_ray_texture",
+            "desc": "This texture is used for GI rays",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "GI rays tex"
+            }
+        },
+        {
+            "attr": "reflect_ray_texture",
+            "desc": "This texture is used for reflection rays",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Reflection rays tex"
+            }
+        },
+        {
+            "attr": "refract_ray_texture",
+            "desc": "This texture is used for refraction rays",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "display_name": "Refraction rays tex"
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

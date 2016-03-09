@@ -1,0 +1,249 @@
+{
+    "ID": "EffectLens",
+    "Name": "Effect Lens",
+    "Desciption": "EffectLens",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "bloomWeight",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 20.0
+        },
+        {
+            "attr": "bloomSize",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 20.0
+        },
+        {
+            "attr": "bloomShape",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 4.0
+        },
+        {
+            "attr": "bloomFillEdges",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "bloomBuffer",
+            "desc": "0-image 1-image and buffer  2-buffer",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Image",
+                    ""
+                ],
+                [
+                    "1",
+                    "Image and buffer",
+                    ""
+                ],
+                [
+                    "2",
+                    "Buffer",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "bloomOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bloomMaskIntensityOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bloomMaskIntensity",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 3.0
+        },
+        {
+            "attr": "bloomMaskObjIDOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bloomMaskObjID",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "bloomMaskMtlIDOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bloomMaskMtlID",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "glareWeight",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 50.0
+        },
+        {
+            "attr": "glareSize",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 20.0
+        },
+        {
+            "attr": "glareOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareBitmap",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "glareObstacleImage",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "glareType",
+            "desc": "0- from image  1 - from Lens Effect settings",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Image",
+                    ""
+                ],
+                [
+                    "1",
+                    "Lens Effect settings",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "glareDiffractionOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareUseObstacleImage",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareFillEdges",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "glareCamSidesOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "glareNumSides",
+            "desc": "",
+            "type": "INT",
+            "default": 6
+        },
+        {
+            "attr": "glareCamRotation",
+            "desc": "Rotation in degrees from 0.0 - 360.0",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "glareFNumber",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 8.0
+        },
+        {
+            "attr": "glareBuffer",
+            "desc": "0-image 1-image and buffer  2-buffer",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Image",
+                    ""
+                ],
+                [
+                    "1",
+                    "Image and buffer",
+                    ""
+                ],
+                [
+                    "2",
+                    "Buffer",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "glareMaskIntensityOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareMaskIntensity",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 3.0
+        },
+        {
+            "attr": "glareMaskObjIDOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareMaskObjID",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "glareMaskMtlIDOn",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "glareMaskMtlID",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

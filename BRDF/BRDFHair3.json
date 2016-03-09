@@ -1,216 +1,266 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFHair3", 
-    "Name": "Hair 3", 
+    "Desciption": "",
+    "ID": "BRDFHair3",
+    "Name": "Hair 3",
     "Parameters": [
         {
-            "attr": "overall_color", 
+            "attr": "overall_color",
             "default": [
-                0.9, 
-                0.9, 
+                0.9,
+                0.9,
                 0.9
-            ], 
-            "desc": "Overall color multiplier", 
-            "type": "TEXTURE"
-        }, 
+            ],
+            "desc": "Overall color multiplier",
+            "type": "TEXTURE",
+            "ui": {
+                "tab": "V-Ray Hair 3",
+                "rollout": "General parameters"
+            }
+        },
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "Transparency", 
+            ],
+            "desc": "Transparency",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "diffuse_color", 
+            "attr": "diffuse_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "Diffuse hair color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "diffuse_amount", 
-            "default": 1, 
-            "desc": "Multiplier for the diffuse color", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "Diffuse hair color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "rollout": "Diffuse"
+            }
+        },
+        {
+            "attr": "diffuse_amount",
+            "default": 1,
+            "desc": "Multiplier for the diffuse color",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "primary_specular", 
+            "attr": "primary_specular",
             "default": [
-                0.2, 
-                0.2, 
+                0.2,
+                0.2,
                 0.2
-            ], 
-            "desc": "Primary specular color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "primary_specular_amount", 
-            "default": 1, 
-            "desc": "Multiplier for the primary specular color", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "Primary specular color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "rollout": "Primary specular",
+                "display_name": "Prim. specular"
             }
-        }, 
+        },
         {
-            "attr": "primary_glossiness", 
-            "default": 0.8, 
-            "desc": "Primary glossiness", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "primary_specular_amount",
+            "default": 1,
+            "desc": "Multiplier for the primary specular color",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Prim. specular amount"
             }
-        }, 
+        },
         {
-            "attr": "secondary_specular", 
+            "attr": "primary_glossiness",
+            "default": 0.8,
+            "desc": "Primary glossiness",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Prim. glossiness"
+            }
+        },
+        {
+            "attr": "secondary_specular",
             "default": [
-                0.2, 
-                0.2, 
+                0.2,
+                0.2,
                 0.2
-            ], 
-            "desc": "Secondary specular color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "secondary_specular_amount", 
-            "default": 1, 
-            "desc": "Multiplier for the secondary specular color", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "Secondary specular color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Sec. specular",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "secondary_glossiness", 
-            "default": 0.5, 
-            "desc": "Secondary glossiness", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "secondary_specular_amount",
+            "default": 1,
+            "desc": "Multiplier for the secondary specular color",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Sec. specular amount",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "secondary_lock_to_transmission", 
-            "default": true, 
-            "desc": "true to derive the secondary specular color from the transmission color", 
-            "type": "BOOL"
-        }, 
+            "attr": "secondary_glossiness",
+            "default": 0.5,
+            "desc": "Secondary glossiness",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Sec. glossiness"
+            }
+        },
         {
-            "attr": "transmission", 
+            "attr": "secondary_lock_to_transmission",
+            "default": true,
+            "desc": "true to derive the secondary specular color from the transmission color",
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Secondary specular",
+                "display_name": "Sec. lock to transmission"
+            }
+        },
+        {
+            "attr": "transmission",
             "default": [
-                0.2, 
-                0.2, 
+                0.2,
+                0.2,
                 0.2
-            ], 
-            "desc": "Transmission color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "transmission_amount", 
-            "default": 1, 
-            "desc": "Multiplier for the transmission color", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "Transmission color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "rollout": "Transmission"
+            }
+        },
+        {
+            "attr": "transmission_amount",
+            "default": 1,
+            "desc": "Multiplier for the transmission color",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "transmission_glossiness_length", 
-            "default": 0.8, 
-            "desc": "Transmission glossiness along strand length", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "transmission_glossiness_length",
+            "default": 0.8,
+            "desc": "Transmission glossiness along strand length",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Trans. gloss. length"
             }
-        }, 
+        },
         {
-            "attr": "transmission_glossiness_width", 
-            "default": 0.8, 
-            "desc": "Transmission glossiness across strand width", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "transmission_glossiness_width",
+            "default": 0.8,
+            "desc": "Transmission glossiness across strand width",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Trans. gloss. width"
             }
-        }, 
+        },
         {
-            "attr": "opaque_for_shadows", 
-            "default": false, 
-            "desc": "true to always compute the material as opaque for shadow rays", 
-            "type": "BOOL"
-        }, 
+            "attr": "opaque_for_shadows",
+            "default": false,
+            "desc": "true to always compute the material as opaque for shadow rays",
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Options"
+            }
+        },
         {
-            "attr": "opaque_for_gi", 
-            "default": false, 
-            "desc": "true to always compute the material as opaque for GI rays", 
-            "type": "BOOL"
-        }, 
+            "attr": "opaque_for_gi",
+            "default": false,
+            "desc": "true to always compute the material as opaque for GI rays",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Opaque for GI"
+            }
+        },
         {
-            "attr": "simplify_for_gi", 
-            "default": true, 
-            "desc": "true to use a simpler and less precise representation of the BRDF for GI rays", 
-            "type": "BOOL"
-        }, 
+            "attr": "simplify_for_gi",
+            "default": true,
+            "desc": "true to use a simpler and less precise representation of the BRDF for GI rays",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Simplify for GI"
+            }
+        },
         {
-            "attr": "use_cached_gi", 
-            "default": true, 
-            "desc": "true to use the light cache/irradiance map; false to always use brute force GI for the hair", 
-            "type": "BOOL"
+            "attr": "use_cached_gi",
+            "default": true,
+            "desc": "true to use the light cache/irradiance map; false to always use brute force GI for the hair",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use cached GI"
+            }
+        },
+        {
+            "attr": "light_multiplier",
+            "desc": "A multiplier for the direct lighting of the hair; could be useful to brighten up the result when not using GI",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "rollout": "Advanced"
+            }
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "secondary_lock_to_transmission"
-                    }, 
+                    },
                     {
                         "name": "opaque_for_shadows"
-                    }, 
+                    },
                     {
                         "name": "opaque_for_gi"
-                    }, 
+                    },
                     {
                         "name": "simplify_for_gi"
-                    }, 
+                    },
                     {
                         "name": "use_cached_gi"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

@@ -1,58 +1,58 @@
 {
-    "Desciption": "", 
-    "ID": "TexMeshVertexColorChannel", 
-    "Name": "Mesh Vertex Channel", 
+    "Desciption": "",
+    "ID": "TexMeshVertexColorChannel",
+    "Name": "Mesh Vertex Channel",
     "Parameters": [
         {
-            "attr": "channelIndex", 
-            "default": 0, 
-            "desc": "", 
-            "name": "Channel Index", 
-            "type": "INT", 
+            "attr": "channelIndex",
+            "default": 0,
+            "desc": "",
+            "name": "Channel Index",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "channel_name", 
-            "default": "", 
-            "desc": "Name of the channel to use", 
+            "attr": "channel_name",
+            "default": "",
+            "desc": "Name of the channel to use",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "default_color", 
+            "attr": "default_color",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "data_select", 
-            "default": "1", 
-            "desc": "Use UV", 
+            "attr": "data_select",
+            "default": "1",
+            "desc": "Use UV",
             "items": [
                 [
-                    "0", 
-                    "UV", 
+                    "0",
+                    "UV",
                     "Use UV channels"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Color", 
+                    "1",
+                    "Color",
                     "Use Color channels"
                 ]
-            ], 
-            "skip": true, 
+            ],
+            "skip": true,
             "type": "ENUM"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -60,26 +60,26 @@
                     {
                         "name": "data_select"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "channelIndex"
-                    }, 
+                    },
                     {
                         "name": "channel_name"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "default_color"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

@@ -1,36 +1,36 @@
 {
-    "Desciption": "", 
-    "ID": "TexInvert", 
-    "Name": "Invert", 
+    "Desciption": "",
+    "ID": "TexInvert",
+    "Name": "Invert",
     "Parameters": [
         {
-            "attr": "texture", 
+            "attr": "texture",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "The texture to be inverted", 
+            ],
+            "desc": "The texture to be inverted",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "invert_alpha", 
-            "default": false, 
-            "desc": "", 
+            "attr": "invert_alpha",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "The inverted texture color", 
+            ],
+            "desc": "The inverted texture color",
             "type": "OUTPUT_TEXTURE"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -38,7 +38,7 @@
                     {
                         "name": "invert_alpha"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

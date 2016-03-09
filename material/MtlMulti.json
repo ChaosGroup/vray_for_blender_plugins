@@ -1,40 +1,61 @@
 {
-    "Desciption": "", 
-    "ID": "MtlMulti", 
-    "Name": "Multi ID", 
+    "Desciption": "",
+    "ID": "MtlMulti",
+    "Name": "Multi ID",
     "Parameters": [
         {
-            "attr": "mtlid_gen", 
-            "default": 1, 
-            "desc": "An integer texture that generates material ids; if not present, neither mtlid_gen_float is present then surface material id will be used", 
-            "type": "INT_TEXTURE", 
+            "attr": "mtlid_gen",
+            "default": 1,
+            "desc": "An integer texture that generates material ids; if not present, neither mtlid_gen_float is present then surface material id will be used",
+            "type": "INT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mtlid_gen_float", 
-            "default": 1.0, 
-            "desc": "A float texture that generates material ids; if not present, neither mtlid_gen is present then surface material id will be used", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "mtlid_gen_float",
+            "default": 1.0,
+            "desc": "A float texture that generates material ids; if not present, neither mtlid_gen is present then surface material id will be used",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "wrap_id", 
-            "default": false, 
-            "desc": "Wrap the material ID's to the largest specified ID for the material", 
+            "attr": "wrap_id",
+            "default": false,
+            "desc": "Wrap the material ID's to the largest specified ID for the material",
             "type": "BOOL"
+        },
+        {
+            "attr": "mtls",
+            "desc": "(Deprecated; use mtls_list/ids_list instead). A list of two-element lists with the material id and the material plugin",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "mtls_list",
+            "desc": "A list of the materials",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "ids_list",
+            "desc": "A list of material IDs",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

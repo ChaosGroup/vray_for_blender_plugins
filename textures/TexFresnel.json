@@ -1,89 +1,95 @@
 {
-    "Desciption": "", 
-    "ID": "TexFresnel", 
-    "Name": "Fresnel", 
+    "Desciption": "",
+    "ID": "TexFresnel",
+    "Name": "Fresnel",
     "Parameters": [
         {
-            "attr": "fresnel_ior", 
-            "default": 1.55, 
-            "desc": "Fresnel ior", 
-            "type": "FLOAT", 
+            "attr": "fresnel_ior",
+            "default": 1.55,
+            "desc": "Fresnel ior",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "refract_ior", 
-            "default": 1.55, 
-            "desc": "Refraction ior of the underlying surface; this is ignored if the surface has a volume shader (the volume IOR is used)", 
-            "type": "FLOAT", 
+            "attr": "refract_ior",
+            "default": 1.55,
+            "desc": "Refraction ior of the underlying surface; this is ignored if the surface has a volume shader (the volume IOR is used)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "white_color", 
+            "attr": "white_color",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Refraction (front) color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "black_color", 
-            "default": [
-                0.0, 
-                0.0, 
-                0.0
-            ], 
-            "desc": "Reflection (side) color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "fresnel_ior_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "Refraction (front) color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "display_name": "Front Color"
+            }
+        },
+        {
+            "attr": "black_color",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "desc": "Reflection (side) color",
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Side Color"
+            }
+        },
+        {
+            "attr": "fresnel_ior_tex",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "refract_ior_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "refract_ior_tex",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "fresnel_ior"
-                    }, 
+                    },
                     {
                         "name": "refract_ior"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

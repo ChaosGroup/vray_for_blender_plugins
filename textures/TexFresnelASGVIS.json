@@ -1,0 +1,121 @@
+{
+    "ID": "TexFresnelASGVIS",
+    "Name": "Fresnel ASGVIS",
+    "Desciption": "TexFresnelASGVIS",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "fresnel_ior",
+            "desc": "Fresnel ior",
+            "type": "FLOAT",
+            "default": 1.5499999523162842
+        },
+        {
+            "attr": "fresnel_ior_tex",
+            "desc": "Fresnel ior texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "fresnel_ior_tex_mult",
+            "desc": "Fresnel ior texture mult",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "refract_ior",
+            "desc": "Refraction ior of the underlying surface; this is ignored if the surface has a volume shader (the volume IOR is used)",
+            "type": "FLOAT",
+            "default": 1.5499999523162842
+        },
+        {
+            "attr": "refract_ior_tex",
+            "desc": "Refraction ior texture for the underlying surface; this is ignored if the surface has a volume shader (the volume IOR is used)",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "refract_ior_tex_mult",
+            "desc": "Refract ior texture mult",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "white_color",
+            "desc": "Refraction color",
+            "type": "ACOLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "white_color_tex",
+            "desc": "Refraction color texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "white_color_tex_mult",
+            "desc": "Refraction color texture mult",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "black_color",
+            "desc": "Reflection color",
+            "type": "ACOLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "black_color_tex",
+            "desc": "Reflection color texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "black_color_tex_mult",
+            "desc": "Reflection color texture mult",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "use_multiplier_as_exponent",
+            "desc": "In some cases we wanted to use the multiplier as an exponent ( final_color = pow( color, tex_mult ) ) - in other cases we just want a scalar multiplier ( final_color = color * tex_mult )",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "old_way",
+            "desc": "Process the fresnel texture in the old way",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "invert",
+            "desc": "If true, the resulting texture color will be inverted",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

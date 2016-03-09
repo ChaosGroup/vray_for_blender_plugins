@@ -1,0 +1,93 @@
+{
+    "ID": "TexMultiFloat",
+    "Name": "Multi Float",
+    "Desciption": "TexMultiFloat",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "textures_list",
+            "desc": "A list of the sub-float-textures",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "ids_list",
+            "desc": "A list of material/object IDs",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "mode",
+            "desc": "The mode for the texture (0 - use face material ID, 1 - use object ID, 2 - random by node handle, 3 - random by render id, 4 - random by node name, 6 - random by instance ID, 30 - the ID is taken from the ID generator texture(id_gen_tex))",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Face material ID",
+                    ""
+                ],
+                [
+                    "1",
+                    "Object ID",
+                    ""
+                ],
+                [
+                    "2",
+                    "Random by node handle",
+                    ""
+                ],
+                [
+                    "3",
+                    "Random by render ID",
+                    ""
+                ],
+                [
+                    "4",
+                    "Random by node name",
+                    ""
+                ],
+                [
+                    "6",
+                    "Random by instance ID",
+                    ""
+                ],
+                [
+                    "30",
+                    " Use ID Generator texture",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "default_texture",
+            "desc": "The default float texture color",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "id_gen_tex",
+            "desc": "Used when mode is \"Use ID Generator texture\"(30)",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "display_name": "ID Generator texture",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "interpolate",
+            "desc": "Used when mode is \"Use ID Generator texture\"(30)",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

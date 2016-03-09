@@ -1,22 +1,22 @@
 {
-    "Desciption": "", 
-    "ID": "RenderChannelBumpNormals", 
-    "Name": "Bump Normals", 
+    "Desciption": "",
+    "ID": "RenderChannelBumpNormals",
+    "Name": "Bump Normals",
     "Parameters": [
         {
-            "attr": "name", 
-            "default": "Bump Normals", 
-            "desc": "", 
+            "attr": "name",
+            "default": "Bump Normals",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "filtering", 
-            "default": true, 
-            "desc": "", 
+            "attr": "filtering",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
         }
-    ], 
-    "Type": "RENDERCHANNEL", 
+    ],
+    "Type": "RENDERCHANNEL",
     "Widget": {
         "widgets": []
     }

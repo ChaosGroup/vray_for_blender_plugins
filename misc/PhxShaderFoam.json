@@ -1,0 +1,447 @@
+{
+    "ID": "PhxShaderFoam",
+    "Name": "Phx Shader Foam",
+    "Desciption": "PhxShaderFoam",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "enabled",
+            "desc": "enable rendeirng",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "geommode",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "particle_source",
+            "desc": "A list of particles source",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "particle_tm",
+            "desc": "A list of transformations per particles source",
+            "type": "LIST",
+            "default": null
+        },
+        {
+            "attr": "color",
+            "desc": "foam color",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "bounces",
+            "desc": "max bounces",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "minw",
+            "desc": "reflection cut off",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "ri",
+            "desc": "refraction index",
+            "type": "FLOAT",
+            "default": 2.0
+        },
+        {
+            "attr": "difmul",
+            "desc": "diffuse multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "hlwidth",
+            "desc": "highlights width",
+            "type": "FLOAT",
+            "default": 0.5
+        },
+        {
+            "attr": "hlmult",
+            "desc": "highlights multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "reduction",
+            "desc": "particle reduction",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "pvar",
+            "desc": "pressure variation",
+            "type": "FLOAT",
+            "default": 0.5
+        },
+        {
+            "attr": "szmul",
+            "desc": "size multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "szadd",
+            "desc": "size addend",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "szvar",
+            "desc": "size variation",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "szdist",
+            "desc": "size distribution",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "scattering",
+            "desc": "scattering method - 0:enabled, 1:disabled, 2:analytic, 3:analytic+shadows",
+            "type": "INT",
+            "default": 2
+        },
+        {
+            "attr": "mode",
+            "desc": "rendering mode - 0:bubble, 1:cellular, 2:splashes",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "optimize",
+            "desc": "optimize bad systems",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "moblur",
+            "desc": "motion blur - 0:from V-Ray, 1:force on, 2:force off",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "mbstep",
+            "desc": "motion blur step",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "mblimit",
+            "desc": "maximum point expansion with motion blur",
+            "type": "INT",
+            "default": 100
+        },
+        {
+            "attr": "velmult",
+            "desc": "particle velocity multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "subgroup",
+            "desc": "render subgroup - 0:all, 1:under water, 2:above water, 3:above the size limit, 4:below the size limit",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "nolqshadows",
+            "desc": "disable liquid shadows",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "ignoresize",
+            "desc": "ignores the particle size",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "szlimit",
+            "desc": "size limit. Particle below/above this limit will not be shaded",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "fogres",
+            "desc": "fog resolution",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "fogmult",
+            "desc": "fog multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "rendstep",
+            "desc": "",
+            "type": "INT",
+            "default": 80
+        },
+        {
+            "attr": "rendshadstep",
+            "desc": "",
+            "type": "INT",
+            "default": 200
+        },
+        {
+            "attr": "usereflmap",
+            "desc": "enable the reflection map",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "useenvmap",
+            "desc": "enable the environment map",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "reflmap",
+            "desc": "reflection texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "envmap",
+            "desc": "environment texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "usegizmo",
+            "desc": "enable using of gizmos",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "invgizmo",
+            "desc": "invert meaning of gizmos",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "gizmo",
+            "desc": "geometry to define the rendering volume",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "gizmo_transform",
+            "desc": "world transformation of the gizmo",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "useliquid",
+            "desc": "enable the liquid_sim",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "liquid_sim",
+            "desc": "liquid phoenix simulator used to determine above/under water flag",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "useglass",
+            "desc": "enable using of glass geometry",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "glass",
+            "desc": "glass geometry",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "glass_transform",
+            "desc": "world transformation of the glass",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "lightlinks",
+            "desc": "light linking list used in volumetric mode",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "lightcache",
+            "desc": "if true, a light cache will be used for diffuse lighting",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "pmprimary",
+            "desc": "enable/disable particle mode of primary rays",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "oceanlevel",
+            "desc": "Mesh 'ocean' level",
+            "type": "FLOAT",
+            "default": 50.0
+        },
+        {
+            "attr": "generate_gi",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "receive_gi",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "gen_gi_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "rec_gi_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "generate_caust",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "receive_caust",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "caust_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "camera_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "reflections_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "refractions_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "gi_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "shadows_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "probabilistic",
+            "desc": "Use probabilistic sampling {0: disabled; 1:Only RT; 2:Always}",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "material_id",
+            "desc": "Material ID",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "volzdepth",
+            "desc": "if true, write to the z-depth render element",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "part_age",
+            "desc": "if true, write to the particle age render element",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

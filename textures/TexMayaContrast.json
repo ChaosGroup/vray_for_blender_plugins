@@ -1,41 +1,41 @@
 {
-    "Desciption": "", 
-    "ID": "TexMayaContrast", 
-    "Name": "MayaContrast", 
+    "Desciption": "",
+    "ID": "TexMayaContrast",
+    "Name": "MayaContrast",
     "Parameters": [
         {
-            "attr": "value", 
+            "attr": "value",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "contrast", 
+            "attr": "contrast",
             "default": [
-                2, 
-                2, 
-                2, 
+                2,
+                2,
+                2,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "bias", 
+            "attr": "bias",
             "default": [
-                0.5, 
-                0.5, 
+                0.5,
+                0.5,
                 0.5
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": []
     }

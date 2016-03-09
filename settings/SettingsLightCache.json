@@ -1,289 +1,425 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsLightCache", 
-    "Name": "SettingsLightCache", 
+    "Desciption": "",
+    "ID": "SettingsLightCache",
+    "Name": "SettingsLightCache",
     "Parameters": [
         {
-            "attr": "subdivs", 
-            "default": 1000, 
-            "desc": "This determines how many paths are traced from the camera. The actual number of paths is the square of the subdivs", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 1000,
+            "desc": "This determines how many paths are traced from the camera. The actual number of paths is the square of the subdivs",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Subdivs"
             }
-        }, 
+        },
         {
-            "attr": "sample_size", 
-            "default": 0.03, 
-            "desc": "This determines the spacing of the samples in the light cache", 
-            "type": "FLOAT", 
+            "attr": "sample_size",
+            "default": 0.03,
+            "desc": "This determines the spacing of the samples in the light cache",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Sample size"
             }
-        }, 
+        },
         {
-            "attr": "filter_type", 
-            "default": "1", 
-            "desc": "The filter determines how irradiance is interpolated from the samples in the light cache", 
+            "attr": "filter_type",
+            "default": "1",
+            "desc": "The filter determines how irradiance is interpolated from the samples in the light cache",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Nearest", 
+                    "1",
+                    "Nearest",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Fixed", 
+                    "2",
+                    "Fixed",
                     ""
                 ]
-            ], 
-            "type": "ENUM"
-        }, 
-        {
-            "attr": "filter_samples", 
-            "default": 5, 
-            "desc": "How many of the nearest samples to look up from the light cache", 
-            "type": "INT", 
+            ],
+            "type": "ENUM",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Filter type",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "filter_size", 
-            "default": 0.06, 
-            "desc": "The size of the filter", 
-            "type": "FLOAT", 
+            "attr": "filter_samples",
+            "default": 5,
+            "desc": "How many of the nearest samples to look up from the light cache",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Filter samples",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "prefilter", 
-            "default": false, 
-            "desc": "Filter light cache sampler before rendering", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "prefilter_samples", 
-            "default": 10, 
-            "desc": "Number of prefilter samples", 
-            "type": "INT", 
+            "attr": "filter_size",
+            "default": 0.06,
+            "desc": "The size of the filter",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Filter size",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "depth", 
-            "default": 100, 
-            "desc": "Light cache trace depth", 
-            "type": "INT", 
+            "attr": "prefilter",
+            "default": false,
+            "desc": "Filter light cache sampler before rendering",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Prefilter",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "show_calc_phase", 
-            "default": true, 
-            "desc": "Turning this option on will show the paths that are traced", 
-            "type": "BOOL"
-        }, 
+            "attr": "prefilter_samples",
+            "default": 10,
+            "desc": "Number of prefilter samples",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Prefilter samples",
+                "enabled": true
+            }
+        },
         {
-            "attr": "store_direct_light", 
-            "default": true, 
-            "desc": "With this option, the light cache will also store and interpolate direct light", 
-            "type": "BOOL"
-        }, 
+            "attr": "depth",
+            "default": 100,
+            "desc": "Light cache trace depth",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Depth"
+            }
+        },
         {
-            "attr": "world_scale", 
-            "default": "0", 
-            "desc": "This parameter determines the units of the \"Sample size\" and the \"Filter size\"", 
+            "attr": "show_calc_phase",
+            "default": true,
+            "desc": "Turning this option on will show the paths that are traced",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show calc. phase",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "store_direct_light",
+            "default": true,
+            "desc": "With this option, the light cache will also store and interpolate direct light",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Store direct light"
+            }
+        },
+        {
+            "attr": "world_scale",
+            "default": "0",
+            "desc": "This parameter determines the units of the \"Sample size\" and the \"Filter size\"",
             "items": [
                 [
-                    "0", 
-                    "Screen", 
+                    "0",
+                    "Screen",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "World", 
+                    "1",
+                    "World",
                     ""
                 ]
-            ], 
-            "type": "ENUM"
-        }, 
+            ],
+            "type": "ENUM",
+            "ui": {
+                "display_name": "World scale"
+            }
+        },
         {
-            "attr": "mode", 
-            "default": "0", 
-            "desc": "Light cache mode", 
+            "attr": "mode",
+            "default": "0",
+            "desc": "Light cache mode",
             "items": [
                 [
-                    "0", 
-                    "Single Frame", 
+                    "0",
+                    "Single Frame",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "From File", 
+                    "1",
+                    "From File",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Fly-Through", 
+                    "2",
+                    "Fly-Through",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Progressive Path Tracing", 
+                    "3",
+                    "Progressive Path Tracing",
                     ""
                 ]
-            ], 
-            "type": "ENUM"
-        }, 
-        {
-            "attr": "file", 
-            "default": "//lightmaps/light_cache.vrmap", 
-            "desc": "Light cache file", 
-            "subtype": "FILE_PATH", 
-            "type": "STRING"
-        }, 
-        {
-            "attr": "dont_delete", 
-            "default": true, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "auto_save", 
-            "default": false, 
-            "desc": "Auto save Light Cache", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "auto_save_file", 
-            "default": "//lightmaps/light_cache.vrmap", 
-            "desc": "Light cache auto save file name", 
-            "subtype": "FILE_PATH", 
-            "type": "STRING"
-        }, 
-        {
-            "attr": "num_passes", 
-            "default": 4, 
-            "desc": "The light cache is computed in several passes, which are then combined into the final light cache", 
-            "type": "INT", 
+            ],
+            "type": "ENUM",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Mode"
             }
-        }, 
+        },
         {
-            "attr": "use_for_glossy_rays", 
-            "default": false, 
-            "desc": "If this option is on, the light cache will be used to compute lighting for glossy rays as well, in addition to normal GI rays", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "adaptive_sampling", 
-            "default": false, 
-            "desc": "When this option is on, V-Ray will store additional information about the incoming light for each light cache sample, and try to put more samples into the directions from which more light coming", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "multiple_views", 
-            "default": false, 
-            "desc": "When this option is on, V-Ray will calculate the light cache samples for the entire camera path, instead of just the current view, in the same way as this is done for the Fly-through mode", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "retrace_enabled", 
-            "default": false, 
-            "desc": "Enable retrace of light cache", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "retrace_threshold", 
-            "default": 1, 
-            "desc": "Retrace treshold, relative to the light cache sample size", 
-            "type": "FLOAT", 
+            "attr": "file",
+            "default": "//lightmaps/light_cache.vrmap",
+            "desc": "Light cache file",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "File",
+                "enabled": true,
+                "file_extensions": [
+                    "vrlmap"
+                ],
+                "file_names": [
+                    "V-Ray Light Cache map"
+                ]
             }
-        }, 
+        },
         {
-            "attr": "num_passes_auto", 
-            "default": true, 
-            "desc": "Set number of passes to threads number", 
-            "name": "Auto Num. Passes", 
-            "skip": true, 
-            "type": "BOOL"
-        }, 
+            "attr": "dont_delete",
+            "default": true,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Don't delete"
+            }
+        },
         {
-            "attr": "filter", 
-            "default": true, 
-            "desc": "", 
-            "name": "Filter", 
-            "skip": true, 
+            "attr": "auto_save",
+            "default": false,
+            "desc": "Auto save Light Cache",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto save",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "auto_save_file",
+            "default": "//lightmaps/light_cache.vrmap",
+            "desc": "Light cache auto save file name",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
+            "ui": {
+                "display_name": "Auto save file",
+                "enabled": true,
+                "file_extensions": [
+                    "vrlmap"
+                ],
+                "file_names": [
+                    "V-Ray Light Cache map"
+                ],
+                "file_op": "save"
+            }
+        },
+        {
+            "attr": "num_passes",
+            "default": 4,
+            "desc": "The light cache is computed in several passes, which are then combined into the final light cache",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Number of passes"
+            }
+        },
+        {
+            "attr": "use_for_glossy_rays",
+            "default": false,
+            "desc": "If this option is on, the light cache will be used to compute lighting for glossy rays as well, in addition to normal GI rays",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use for glossy rays"
+            }
+        },
+        {
+            "attr": "adaptive_sampling",
+            "default": false,
+            "desc": "When this option is on, V-Ray will store additional information about the incoming light for each light cache sample, and try to put more samples into the directions from which more light coming",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Adaptive sampling"
+            }
+        },
+        {
+            "attr": "multiple_views",
+            "default": false,
+            "desc": "When this option is on, V-Ray will calculate the light cache samples for the entire camera path, instead of just the current view, in the same way as this is done for the Fly-through mode",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use camera path"
+            }
+        },
+        {
+            "attr": "retrace_enabled",
+            "default": false,
+            "desc": "Enable retrace of light cache",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use retrace threshold"
+            }
+        },
+        {
+            "attr": "retrace_threshold",
+            "default": 1,
+            "desc": "Retrace treshold, relative to the light cache sample size",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Retrace threshold",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "num_passes_auto",
+            "default": true,
+            "desc": "Set number of passes to threads number",
+            "name": "Auto Num. Passes",
+            "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "filter",
+            "default": true,
+            "desc": "",
+            "name": "Filter",
+            "skip": true,
+            "type": "BOOL"
+        },
+        {
+            "attr": "retrace_leak_prevention",
+            "desc": "Enables additional checks to mimize light leaks; 0.0 means no checks",
+            "type": "FLOAT",
+            "default": 0.0,
+            "ui": {
+                "display_name": "Leak prevention",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "layout": "ROW",
-                "active": { "prop": "on", "at": "SettingsGI" },
+                "active": {
+                    "prop": "on",
+                    "at": "SettingsGI"
+                },
                 "attrs": [
-                    { "name": "adaptive_sampling" },
-                    { "name": "auto_save" },
-                    { "name": "auto_save_file" },
-                    { "name": "depth" },
-                    { "name": "dont_delete" },
-                    { "name": "file" },
-                    { "name": "filter" },
-                    { "name": "filter_samples" },
-                    { "name": "filter_size" },
-                    { "name": "filter_type" },
-                    { "name": "mode" },
-                    { "name": "multiple_views" },
-                    { "name": "num_passes" },
-                    { "name": "num_passes_auto" },
-                    { "name": "prefilter" },
-                    { "name": "prefilter_samples" },
-                    { "name": "retrace_enabled" },
-                    { "name": "retrace_threshold" },
-                    { "name": "sample_size" },
-                    { "name": "show_calc_phase" },
-                    { "name": "store_direct_light" },
-                    { "name": "subdivs" },
-                    { "name": "use_for_glossy_rays" },
-                    { "name": "world_scale" }
+                    {
+                        "name": "adaptive_sampling"
+                    },
+                    {
+                        "name": "auto_save"
+                    },
+                    {
+                        "name": "auto_save_file"
+                    },
+                    {
+                        "name": "depth"
+                    },
+                    {
+                        "name": "dont_delete"
+                    },
+                    {
+                        "name": "file"
+                    },
+                    {
+                        "name": "filter"
+                    },
+                    {
+                        "name": "filter_samples"
+                    },
+                    {
+                        "name": "filter_size"
+                    },
+                    {
+                        "name": "filter_type"
+                    },
+                    {
+                        "name": "mode"
+                    },
+                    {
+                        "name": "multiple_views"
+                    },
+                    {
+                        "name": "num_passes"
+                    },
+                    {
+                        "name": "num_passes_auto"
+                    },
+                    {
+                        "name": "prefilter"
+                    },
+                    {
+                        "name": "prefilter_samples"
+                    },
+                    {
+                        "name": "retrace_enabled"
+                    },
+                    {
+                        "name": "retrace_threshold"
+                    },
+                    {
+                        "name": "sample_size"
+                    },
+                    {
+                        "name": "show_calc_phase"
+                    },
+                    {
+                        "name": "store_direct_light"
+                    },
+                    {
+                        "name": "subdivs"
+                    },
+                    {
+                        "name": "use_for_glossy_rays"
+                    },
+                    {
+                        "name": "world_scale"
+                    }
                 ]
             }
         ]

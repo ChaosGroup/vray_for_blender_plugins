@@ -1,0 +1,52 @@
+{
+    "ID": "TexRGBTintMax",
+    "Name": "RGB Tint Max",
+    "Desciption": "TexRGBTintMax",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture",
+            "desc": "The texture",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "red",
+            "desc": "The red color",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "green",
+            "desc": "The green color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                1.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "blue",
+            "desc": "The blue color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

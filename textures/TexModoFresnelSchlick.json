@@ -1,0 +1,41 @@
+{
+    "ID": "TexModoFresnelSchlick",
+    "Name": "Modo Fresnel Schlick",
+    "Desciption": "TexModoFresnelSchlick",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "reflectivity_at_normal",
+            "desc": "Amount of reflection when the viewing and normal vectors are the same",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "fresnel_power",
+            "desc": "How much the Schlick fresnel approximation affects the result. At 0.0, reflectivity_at_normal will be returned for all viewing directions",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "use_ior",
+            "desc": "If true, the ior paameter will be used to determine the reflectivity when the viewing and normal vectors are the same. In this case the reflectivity_at_normal parameter is ignored",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "ior",
+            "desc": "Used to compute the reflectivity when use_ior is enabled",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

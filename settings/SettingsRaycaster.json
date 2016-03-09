@@ -1,108 +1,169 @@
 {
-    "Desciption": "Raycaster options", 
-    "ID": "SettingsRaycaster", 
-    "Name": "Raycaster", 
+    "Desciption": "Raycaster options",
+    "ID": "SettingsRaycaster",
+    "Name": "Raycaster",
     "Parameters": [
         {
-            "attr": "maxLevels", 
-            "default": 60, 
-            "desc": "Max. tree depth", 
-            "type": "INT", 
+            "attr": "maxLevels",
+            "default": 60,
+            "desc": "Max. tree depth",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max tree depth"
             }
-        }, 
+        },
         {
-            "attr": "minLeafSize", 
-            "default": 0, 
-            "desc": "Min. voxel size", 
-            "type": "FLOAT", 
+            "attr": "minLeafSize",
+            "default": 0,
+            "desc": "Min. voxel size",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Min leaf size"
             }
-        }, 
+        },
         {
-            "attr": "faceLevelCoef", 
-            "default": 2, 
-            "desc": "Balance coefficient between depth and faces per voxel", 
-            "type": "FLOAT", 
+            "attr": "faceLevelCoef",
+            "default": 2,
+            "desc": "Balance coefficient between depth and faces per voxel",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Face/level coeff"
             }
-        }, 
+        },
         {
-            "attr": "dynMemLimit", 
-            "default": 4000, 
-            "desc": "Limit for dynamic geometry, in megabytes", 
-            "type": "INT", 
+            "attr": "dynMemLimit",
+            "default": 4000,
+            "desc": "Limit for dynamic geometry, in megabytes",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Dyn. memory limit(MBs)"
             }
-        }, 
+        },
         {
             "attr": "embreeUse",
-            "name" : "Use Embree",
-            "default": false, 
-            "desc": "Enable/Disable using the embree ray caster", 
-            "type": "BOOL"
-        }, 
+            "name": "Use Embree",
+            "default": false,
+            "desc": "Enable/Disable using the embree ray caster",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree"
+            }
+        },
         {
-            "attr": "embreeUseMB", 
-            "name" : "Use Embree For Motion Blur",
+            "attr": "embreeUseMB",
+            "name": "Use Embree For Motion Blur",
             "default": true,
-            "desc": "Enable/disable using the embree ray caster for motion blur", 
-            "type": "BOOL"
-        }, 
+            "desc": "Enable/disable using the embree ray caster for motion blur",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree for Motion Blur",
+                "enabled": true
+            }
+        },
         {
             "attr": "embreeHair",
-            "name" : "Use Embree For Hair",
+            "name": "Use Embree For Hair",
             "default": true,
             "desc": "Use the Embree ray caster for hair",
-            "type": "BOOL"
-        }, 
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Embree for hair",
+                "enabled": true
+            }
+        },
         {
-            "attr": "embreeLowMemory", 
-            "name" : "Embree Low Memory",
+            "attr": "embreeLowMemory",
+            "name": "Embree Low Memory",
             "default": true,
-            "desc": "Try to conserve memory, using potentially slower algorithms", 
-            "type": "BOOL"
-        }, 
+            "desc": "Try to conserve memory, using potentially slower algorithms",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Conserve Memory",
+                "enabled": true
+            }
+        },
         {
-            "attr": "embreeRayPackets", 
-            "name" : "Embree Ray Packets",
+            "attr": "embreeRayPackets",
+            "name": "Embree Ray Packets",
             "default": true,
-            "desc": "Turn on the packet ray casting", 
-            "type": "BOOL"
+            "desc": "Turn on the packet ray casting",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use Ray Packets",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "optLevel",
+            "desc": "Optimization level (must be 0)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Low",
+                    ""
+                ],
+                [
+                    "2",
+                    "Average",
+                    ""
+                ],
+                [
+                    "4",
+                    "High",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Tree build quality"
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
-                    { "name": "embreeUse" }
+                    {
+                        "name": "embreeUse"
+                    }
                 ],
                 "layout": "COLUMN"
             },
             {
-                "active": { "prop": "embreeUse" },
+                "active": {
+                    "prop": "embreeUse"
+                },
                 "attrs": [
-                    { "name": "embreeHair" },
-                    { "name": "embreeUseMB" },
-                    { "name": "embreeRayPackets" },
-                    { "name": "embreeLowMemory" }
+                    {
+                        "name": "embreeHair"
+                    },
+                    {
+                        "name": "embreeUseMB"
+                    },
+                    {
+                        "name": "embreeRayPackets"
+                    },
+                    {
+                        "name": "embreeLowMemory"
+                    }
                 ],
                 "layout": "COLUMN"
             }

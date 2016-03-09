@@ -1,315 +1,338 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFScanned", 
-    "Name": "Scanned", 
+    "Desciption": "",
+    "ID": "BRDFScanned",
+    "Name": "Scanned",
     "Parameters": [
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
-            "name": "Transparency", 
+            ],
+            "desc": "",
+            "name": "Transparency",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff", 
-            "default": 0.01, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff",
+            "default": 0.01,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "back_side", 
-            "default": false, 
-            "desc": "", 
+            "attr": "back_side",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_reflections", 
-            "default": true, 
-            "desc": "", 
+            "attr": "trace_reflections",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_depth", 
-            "default": -1, 
-            "desc": "The maximum reflection depth (-1 is controlled by the global options)", 
-            "type": "INT", 
+            "attr": "trace_depth",
+            "default": -1,
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "affect_alpha", 
-            "default": "0", 
-            "desc": "Specifies how render channels are propagated through the BRDF", 
+            "attr": "affect_alpha",
+            "default": "0",
+            "desc": "Specifies how render channels are propagated through the BRDF",
             "items": [
                 [
-                    "0", 
-                    "Color Only", 
+                    "0",
+                    "Color Only",
                     "The transperency will affect only the RGB channel of the final render"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Color+Alpha", 
+                    "1",
+                    "Color+Alpha",
                     "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
-                ], 
+                ],
                 [
-                    "2", 
-                    "All Channels", 
+                    "2",
+                    "All Channels",
                     "All channels and render elements will be affected by the transperency of the material"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "reflect_exit_color", 
+            "attr": "reflect_exit_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The color to use when the maximum depth is reached", 
+            ],
+            "desc": "The color to use when the maximum depth is reached",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance", 
-            "default": 1e+18, 
-            "desc": "How much to dim reflection as length of rays increases", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance",
+            "default": 1000000000000000000.0,
+            "desc": "How much to dim reflection as length of rays increases",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_on", 
-            "default": false, 
-            "desc": "True to enable dim distance", 
+            "attr": "reflect_dim_distance_on",
+            "default": false,
+            "desc": "True to enable dim distance",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_falloff", 
-            "default": 0, 
-            "desc": "Fall off for the dim distance", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance_falloff",
+            "default": 0,
+            "desc": "Fall off for the dim distance",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "glossyAsGI", 
-            "default": "1", 
-            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays", 
+            "attr": "glossyAsGI",
+            "default": "1",
+            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays",
             "items": [
                 [
-                    "0", 
-                    "Never", 
+                    "0",
+                    "Never",
                     "Never"
-                ], 
+                ],
                 [
-                    "1", 
-                    "GI", 
+                    "1",
+                    "GI",
                     "Only for rays that are already marked as GI"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Always", 
+                    "2",
+                    "Always",
                     ""
                 ]
-            ], 
-            "name": "Glossy As GI", 
+            ],
+            "name": "Glossy As GI",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mtsc_file_path", 
-            "default": "", 
-            "desc": "", 
-            "subtype": "FILE_PATH", 
+            "attr": "mtsc_file_path",
+            "default": "",
+            "desc": "",
+            "subtype": "FILE_PATH",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "material_color_filter", 
+            "attr": "material_color_filter",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "tiling_factor", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "tiling_factor",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "gamma_correction", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "gamma_correction",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "saturation", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "saturation",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "exposure_correction", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "exposure_correction",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "map_channel", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "map_channel",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "disable_wmap", 
-            "default": false, 
-            "desc": "", 
+            "attr": "disable_wmap",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "coarse_indirect", 
-            "default": true, 
-            "desc": "", 
+            "attr": "coarse_indirect",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "mult_depth", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mult_depth",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mult_gi", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mult_gi",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mult_direct", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mult_direct",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mult_reflections", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "mult_reflections",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "file",
+            "desc": "",
+            "type": "STRING",
+            "default": "",
+            "ui": {
+                "file_extensions": [
+                    "vrscan"
+                ]
+            }
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "param_block",
+            "desc": "All parameters serialized to a binary param block",
+            "type": "INT",
+            "default": 0
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
@@ -317,163 +340,163 @@
                     {
                         "name": "mtsc_file_path"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "saturation"
-                            }, 
+                            },
                             {
                                 "name": "gamma_correction"
-                            }, 
+                            },
                             {
                                 "name": "exposure_correction"
-                            }, 
+                            },
                             {
                                 "name": "disable_wmap"
-                            }, 
+                            },
                             {
                                 "name": "coarse_indirect"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "mult_depth"
-                            }, 
+                            },
                             {
                                 "name": "mult_gi"
-                            }, 
+                            },
                             {
                                 "name": "mult_direct"
-                            }, 
+                            },
                             {
                                 "name": "mult_reflections"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "map_channel"
-                    }, 
+                    },
                     {
                         "name": "tiling_factor"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "subdivs"
-                    }, 
+                    },
                     {
                         "name": "cutoff"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "trace_reflections"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "trace_reflections"
-                        }, 
+                        },
                         "name": "trace_depth"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "active": {
                     "prop": "trace_reflections"
-                }, 
-                "layout": "SPLIT", 
+                },
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Dim Distance", 
+                                "label": "Dim Distance",
                                 "name": "reflect_dim_distance_on"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "reflect_dim_distance_on"
-                        }, 
-                        "align": true, 
+                        },
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Distance", 
+                                "label": "Distance",
                                 "name": "reflect_dim_distance"
-                            }, 
+                            },
                             {
-                                "label": "Falloff", 
+                                "label": "Falloff",
                                 "name": "reflect_dim_distance_falloff"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
                                 "name": "material_color_filter"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "attrs": [
                             {
                                 "name": "reflect_exit_color"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "affect_alpha"
-                    }, 
+                    },
                     {
                         "name": "glossyAsGI"
-                    }, 
+                    },
                     {
                         "name": "back_side"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

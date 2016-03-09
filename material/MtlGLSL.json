@@ -1,109 +1,114 @@
 {
-    "Desciption": "", 
-    "ID": "MtlGLSL", 
-    "Name": "GLSL", 
+    "Desciption": "",
+    "ID": "MtlGLSL",
+    "Name": "GLSL",
     "Parameters": [
         {
-            "attr": "shader_file", 
-            "default": "", 
-            "desc": "", 
-            "subtype": "FILE_PATH", 
+            "attr": "shader_file",
+            "default": "",
+            "desc": "",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "glsl"
+                ]
+            }
+        },
+        {
+            "attr": "shader_node",
+            "default": "",
+            "desc": "Name of the target graph node if XMSL file is specified",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "shader_node", 
-            "default": "", 
-            "desc": "Name of the target graph node if XMSL file is specified", 
-            "type": "STRING"
-        }, 
-        {
-            "attr": "textures", 
-            "default": "", 
-            "desc": "", 
+            "attr": "textures",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "uvw_generators", 
-            "default": "", 
-            "desc": "", 
+            "attr": "uvw_generators",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_shader_alpha", 
-            "default": false, 
-            "desc": "Switch for using either the transparency parameteres or the shader alpha result", 
+            "attr": "use_shader_alpha",
+            "default": false,
+            "desc": "Switch for using either the transparency parameteres or the shader alpha result",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "uniforms", 
-            "default": null, 
-            "desc": "Non-varying state variables referenced by the shader", 
+            "attr": "uniforms",
+            "default": null,
+            "desc": "Non-varying state variables referenced by the shader",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "max_ray_depth", 
-            "default": -1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "max_ray_depth",
+            "default": -1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "clamp_result", 
-            "default": true, 
-            "desc": "Flag that shows whether to clamp final result or not", 
+            "attr": "clamp_result",
+            "default": true,
+            "desc": "Flag that shows whether to clamp final result or not",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "clamp_value", 
-            "default": 1, 
-            "desc": "The upper clamp limit for the result color should the clamp_result flag is true", 
-            "type": "FLOAT", 
+            "attr": "clamp_value",
+            "default": 1,
+            "desc": "The upper clamp limit for the result color should the clamp_result flag is true",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

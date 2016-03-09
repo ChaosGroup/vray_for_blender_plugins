@@ -1,9 +1,9 @@
 {
-    "Desciption": "", 
-    "ID": "FilterCatmullRom", 
-    "Name": "Catmull-Rom", 
-    "Parameters": [], 
-    "Type": "SETTINGS", 
+    "Desciption": "",
+    "ID": "FilterCatmullRom",
+    "Name": "Catmull-Rom",
+    "Parameters": [],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

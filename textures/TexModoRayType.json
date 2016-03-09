@@ -1,0 +1,53 @@
+{
+    "ID": "TexModoRayType",
+    "Name": "Modo Ray Type",
+    "Desciption": "TexModoRayType",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "cameraRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "shadowRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "reflectRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "refractRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "indirectRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "causticRay",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "bounceCount",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

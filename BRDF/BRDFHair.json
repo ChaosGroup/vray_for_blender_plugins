@@ -11,7 +11,12 @@
                 0.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "tab": "V-Ray Simple Hair",
+                "rollout": "V-Ray Simple Hair",
+                "display_name": "Specular color"
+            }
         },
         {
             "attr": "specular_power",
@@ -22,7 +27,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "Specular power"
             }
         },
         {
@@ -33,7 +39,10 @@
                 0.0
             ],
             "desc": "",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Diffuse color"
+            }
         }
     ],
     "Type": "BRDF",

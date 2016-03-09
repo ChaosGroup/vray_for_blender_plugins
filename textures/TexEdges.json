@@ -1,73 +1,119 @@
 {
-    "Desciption": "", 
-    "ID": "TexEdges", 
-    "Name": "Edges", 
+    "Desciption": "",
+    "ID": "TexEdges",
+    "Name": "Edges",
     "Parameters": [
         {
-            "attr": "edges_tex", 
+            "attr": "edges_tex",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Edges color"
+            }
+        },
         {
-            "attr": "bg_tex", 
+            "attr": "bg_tex",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Background color"
+            }
+        },
         {
-            "attr": "width_type", 
-            "default": "1", 
-            "desc": "Width Type", 
+            "attr": "width_type",
+            "default": "1",
+            "desc": "Width Type",
             "items": [
                 [
-                    "0", 
-                    "World", 
+                    "0",
+                    "World",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Pixels", 
+                    "1",
+                    "Pixels",
                     ""
                 ]
-            ], 
-            "type": "ENUM"
-        }, 
-        {
-            "attr": "pixel_width", 
-            "default": 1, 
-            "desc": "", 
-            "name": "Width", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "type": "ENUM",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Width type"
             }
-        }, 
+        },
         {
-            "attr": "show_hidden_edges", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
+            "attr": "pixel_width",
+            "default": 1,
+            "desc": "",
+            "name": "Width",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Pixel width",
+                "enabled": true
+            }
+        },
         {
-            "attr": "show_subtriangles", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
+            "attr": "show_hidden_edges",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show hidden edges"
+            }
+        },
+        {
+            "attr": "show_subtriangles",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show sub-triangles"
+            }
+        },
+        {
+            "attr": "world_width",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0,
+            "ui": {
+                "display_name": "World width",
+                "enabled": true,
+                "min": 0.0
+            }
+        },
+        {
+            "attr": "raytraced",
+            "desc": "true to use raytracing to compute the rounded corners and false to use static mesh analysis",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "raytraced_consider_same_object_only",
+            "desc": "true to consider only corners on the same object, and false to consider other intersecting objects",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "raytraced_mode",
+            "desc": "Which corners to smooth: 0 - both convex and concave; 1 - convex only; 2 - concave only",
+            "type": "INT",
+            "default": 0
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -75,30 +121,30 @@
                     {
                         "name": "width_type"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Width", 
+                        "label": "Width",
                         "name": "pixel_width"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "show_hidden_edges"
-                    }, 
+                    },
                     {
                         "name": "show_subtriangles"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

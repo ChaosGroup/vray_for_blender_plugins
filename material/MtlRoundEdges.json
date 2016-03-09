@@ -1,28 +1,52 @@
 {
-    "Desciption": "", 
-    "ID": "MtlRoundEdges", 
-    "Name": "Round Edges", 
+    "Desciption": "",
+    "ID": "MtlRoundEdges",
+    "Name": "Round Edges",
     "Parameters": [
         {
-            "attr": "base_mtl", 
-            "default": "", 
-            "desc": "Base material", 
+            "attr": "base_mtl",
+            "default": "",
+            "desc": "Base material",
             "type": "MATERIAL"
-        }, 
+        },
         {
-            "attr": "radius", 
-            "default": 1.0, 
-            "desc": "Rounding radius", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "radius",
+            "default": 1.0,
+            "desc": "Rounding radius",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr": "radius_mode",
+            "desc": "0 - the radius parameter is in object space, 1 - the radius parameter is in world space",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "raytraced",
+            "desc": "true to use raytracing to compute the rounded corners and false to use static mesh analysis",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "raytraced_consider_same_object_only",
+            "desc": "true to consider only corners on the same object, and false to consider other intersecting objects",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "raytraced_mode",
+            "desc": "Which corners to smooth: 0 - both convex and concave; 1 - convex only; 2 - concave only",
+            "type": "INT",
+            "default": 0
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

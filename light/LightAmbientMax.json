@@ -1,67 +1,67 @@
 {
-    "Desciption": "", 
-    "ID": "LightAmbientMax", 
-    "Name": "Ambient (3ds max)", 
+    "Desciption": "",
+    "ID": "LightAmbientMax",
+    "Name": "Ambient (3ds max)",
     "Parameters": [
         {
-            "attr": "enabled", 
-            "default": true, 
-            "desc": "true if the light is enabled", 
+            "attr": "enabled",
+            "default": true,
+            "desc": "true if the light is enabled",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "mode", 
-            "default": "0", 
-            "desc": "light mode", 
+            "attr": "mode",
+            "default": "0",
+            "desc": "light mode",
             "items": [
                 [
-                    "0", 
-                    "Color", 
+                    "0",
+                    "Color",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Direct", 
+                    "1",
+                    "Direct",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Indirect", 
+                    "2",
+                    "Indirect",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "gi_min_distance", 
-            "default": 0, 
-            "desc": "minimal distance for gi rays", 
-            "type": "FLOAT", 
+            "attr": "gi_min_distance",
+            "default": 0,
+            "desc": "minimal distance for gi rays",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                0.5, 
-                0.5, 
+                0.5,
+                0.5,
                 0.5
-            ], 
-            "desc": "The ambient color", 
+            ],
+            "desc": "The ambient color",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "compensate_exposure", 
-            "default": true, 
-            "desc": "true to compensate for camera exposure", 
+            "attr": "compensate_exposure",
+            "default": true,
+            "desc": "true to compensate for camera exposure",
             "type": "BOOL"
         }
-    ], 
-    "Type": "LIGHT", 
+    ],
+    "Type": "LIGHT",
     "Widget": {
         "widgets": [
             {
@@ -69,30 +69,30 @@
                     {
                         "name": "enabled"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "", 
+                        "label": "",
                         "name": "color"
-                    }, 
+                    },
                     {
                         "name": "mode"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "gi_min_distance"
-                    }, 
+                    },
                     {
                         "name": "compensate_exposure"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

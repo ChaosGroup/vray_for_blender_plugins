@@ -1,76 +1,105 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsDMCSampler", 
-    "Name": "DMC Sampler", 
+    "Desciption": "",
+    "ID": "SettingsDMCSampler",
+    "Name": "DMC Sampler",
     "Parameters": [
         {
-            "attr": "time_dependent", 
-            "default": false, 
-            "desc": "This make the samping pattern change with time", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "adaptive_amount", 
-            "default": 0.85, 
-            "desc": "A value of 1.0 means full adaptation; a value of 0.0 means no adaptation", 
-            "type": "FLOAT", 
+            "attr": "time_dependent",
+            "default": false,
+            "desc": "This make the samping pattern change with time",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Animated noise pattern"
             }
-        }, 
+        },
         {
-            "attr": "adaptive_threshold", 
-            "default": 0.01, 
-            "desc": "Controls V-Ray's judgement of when a blurry value is \"good enough\" to be used", 
-            "type": "FLOAT", 
+            "attr": "adaptive_amount",
+            "default": 0.85,
+            "desc": "A value of 1.0 means full adaptation; a value of 0.0 means no adaptation",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Adaptive amount"
             }
-        }, 
+        },
         {
-            "attr": "adaptive_min_samples", 
-            "default": 8, 
-            "desc": "The minimum number of samples that must be made before the early termination algorithm is used", 
-            "type": "INT", 
+            "attr": "adaptive_threshold",
+            "default": 0.01,
+            "desc": "Controls V-Ray's judgement of when a blurry value is \"good enough\" to be used",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Adaptive threshold"
             }
-        }, 
+        },
         {
-            "attr": "subdivs_mult", 
-            "default": 1, 
-            "desc": "This will multiply all subdivs values everywhere during rendering", 
-            "type": "FLOAT", 
+            "attr": "adaptive_min_samples",
+            "default": 8,
+            "desc": "The minimum number of samples that must be made before the early termination algorithm is used",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Adaptive min samples"
             }
-        }, 
+        },
         {
-            "attr": "path_sampler_type", 
-            "default": 2, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs_mult",
+            "default": 1,
+            "desc": "This will multiply all subdivs values everywhere during rendering",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Subdivs multiplier"
             }
+        },
+        {
+            "attr": "path_sampler_type",
+            "default": 2,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Path sampler type"
+            }
+        },
+        {
+            "attr": "div_shade_subdivs",
+            "desc": "Allow VRay to divide the number of samples for lights, materials etc by the number of AA samples in order to achieve roughly the same quality and number of rays when changing AA settings",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Divide shading subdivs"
+            }
+        },
+        {
+            "attr": "random_seed",
+            "desc": "If non-zero, a random seed for the DMC sampler",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "use_local_subdivs",
+            "desc": "true if shading subdivs in materials/lights/GI should be used, and false to determine subdivs automatically",
+            "type": "BOOL",
+            "default": true
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

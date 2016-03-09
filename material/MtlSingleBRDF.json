@@ -1,39 +1,39 @@
 {
-    "Desciption": "MtlSingleBRDF settings", 
-    "ID": "MtlSingleBRDF", 
-    "Name": "Single", 
+    "Desciption": "MtlSingleBRDF settings",
+    "ID": "MtlSingleBRDF",
+    "Name": "Single",
     "Parameters": [
         {
-            "attr": "filter", 
+            "attr": "filter",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "brdf", 
-            "default": "", 
-            "desc": "", 
-            "name": "BRDF", 
+            "attr": "brdf",
+            "default": "",
+            "desc": "",
+            "name": "BRDF",
             "type": "BRDF"
-        }, 
+        },
         {
-            "attr": "double_sided", 
-            "default": true, 
-            "desc": "1 to make the material double-sided", 
+            "attr": "double_sided",
+            "default": true,
+            "desc": "1 to make the material double-sided",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "allow_negative_colors", 
-            "default": false, 
-            "desc": "true to allow negative color components; otherwise they will be clamped to 0", 
+            "attr": "allow_negative_colors",
+            "default": false,
+            "desc": "true to allow negative color components; otherwise they will be clamped to 0",
             "type": "BOOL"
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

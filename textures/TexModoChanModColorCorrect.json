@@ -1,0 +1,75 @@
+{
+    "ID": "TexModoChanModColorCorrect",
+    "Name": "Modo Chan Mod Color Correct",
+    "Desciption": "TexModoChanModColorCorrect",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input_color",
+            "desc": "The input color",
+            "type": "TEXTURE",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ]
+        },
+        {
+            "attr": "invert",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "hue",
+            "desc": "The hue adjustment. This is in degrees",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "min": -180.0,
+                "max": 180.0
+            }
+        },
+        {
+            "attr": "saturation",
+            "desc": "The saturation adjustment",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "min": -1.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "value",
+            "desc": "The value adjustment",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0,
+            "ui": {
+                "min": -1.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "color_balance",
+            "desc": "The color balance adjustment",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "curve",
+            "desc": "The curve adjustment - must support the EXT_REMAP_FLOAT_TO_FLOAT interface",
+            "type": "PLUGIN",
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

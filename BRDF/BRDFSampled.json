@@ -1,250 +1,250 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFSampled", 
-    "Name": "Sampled", 
+    "Desciption": "",
+    "ID": "BRDFSampled",
+    "Name": "Sampled",
     "Parameters": [
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "color_tex", 
+            "attr": "color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Color", 
+            ],
+            "desc": "",
+            "name": "Color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "color_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Transparency", 
+            ],
+            "desc": "",
+            "name": "Transparency",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff", 
-            "default": 0.01, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff",
+            "default": 0.01,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "back_side", 
-            "default": false, 
-            "desc": "", 
+            "attr": "back_side",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "brdf_bitmap", 
-            "default": "", 
-            "desc": "", 
+            "attr": "brdf_bitmap",
+            "default": "",
+            "desc": "",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "brdf_nsamples_d_theta", 
-            "default": 0, 
-            "desc": "Number of d_theta samples", 
-            "type": "INT", 
+            "attr": "brdf_nsamples_d_theta",
+            "default": 0,
+            "desc": "Number of d_theta samples",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "brdf_nsamples_d_phi", 
-            "default": 1, 
-            "desc": "Number of d_phi samples (1 means isotropic BRDF)", 
-            "type": "INT", 
+            "attr": "brdf_nsamples_d_phi",
+            "default": 1,
+            "desc": "Number of d_phi samples (1 means isotropic BRDF)",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "brdf_importance_sampling_on", 
-            "default": true, 
-            "desc": "true to use importance sampling for the reflections", 
-            "name": "Importance Sampling", 
+            "attr": "brdf_importance_sampling_on",
+            "default": true,
+            "desc": "true to use importance sampling for the reflections",
+            "name": "Importance Sampling",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "brdf_importance_sampling_resolution", 
-            "default": 32, 
-            "desc": "Resolution for the resampling of the BRDF used for importance sampling of reflections", 
-            "name": "Resolution", 
-            "type": "INT", 
+            "attr": "brdf_importance_sampling_resolution",
+            "default": 32,
+            "desc": "Resolution for the resampling of the BRDF used for importance sampling of reflections",
+            "name": "Resolution",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "brdf_importance_sampling_view_terms", 
-            "default": 4, 
-            "desc": "Number of terms to decompose the view-dependent portion of the resampling matrix", 
-            "name": "View Terms", 
-            "type": "INT", 
+            "attr": "brdf_importance_sampling_view_terms",
+            "default": 4,
+            "desc": "Number of terms to decompose the view-dependent portion of the resampling matrix",
+            "name": "View Terms",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "brdf_importance_sampling_half_terms", 
-            "default": 2, 
-            "desc": "Number of terms to decompose the half-angle portion of the resampling matrix", 
-            "name": "Half Terms", 
-            "type": "INT", 
+            "attr": "brdf_importance_sampling_half_terms",
+            "default": 2,
+            "desc": "Number of terms to decompose the half-angle portion of the resampling matrix",
+            "name": "Half Terms",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "subdivs"
-                    }, 
+                    },
                     {
                         "name": "cutoff"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
-                        "label": "\u0398 Samples", 
+                        "label": "Θ Samples",
                         "name": "brdf_nsamples_d_theta"
-                    }, 
+                    },
                     {
-                        "label": "\u03a6 Samples", 
+                        "label": "Φ Samples",
                         "name": "brdf_nsamples_d_phi"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "brdf_importance_sampling_on"
-                            }, 
+                            },
                             {
                                 "active": {
                                     "prop": "brdf_importance_sampling_on"
-                                }, 
+                                },
                                 "name": "brdf_importance_sampling_resolution"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "brdf_importance_sampling_on"
-                        }, 
-                        "align": true, 
+                        },
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "brdf_importance_sampling_view_terms"
-                            }, 
+                            },
                             {
                                 "name": "brdf_importance_sampling_half_terms"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "back_side"
                     }
-                ], 
+                ],
                 "layout": "ROW"
             }
         ]

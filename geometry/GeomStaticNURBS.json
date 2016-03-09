@@ -1,0 +1,156 @@
+{
+    "ID": "GeomStaticNURBS",
+    "Name": "Geom Static NURBS",
+    "Desciption": "GeomStaticNURBS",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "cvs",
+            "desc": "List of lists with the CVs of the NURBS",
+            "type": "LIST_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "weights",
+            "desc": "List of lists with the weights for the NURBS's CVs",
+            "type": "LIST_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "trims",
+            "desc": "List of TrimmingRegion objects. The orientation is used to determine whether the trim will generate geometry inside of it or outside of it",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "listTrimCurves",
+            "desc": "List of NURBSCurve objects - the trimming curves",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "trimsComplex",
+            "desc": "A single plug-in containing all the trim information",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "uKnots",
+            "desc": "U direction knot values",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "vKnots",
+            "desc": "V direction knot values",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "maxSubdivDepth",
+            "desc": "",
+            "type": "INT",
+            "default": 5
+        },
+        {
+            "attr": "flatnessCoef",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "regularSubdiv",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "regularUSteps",
+            "desc": "",
+            "type": "INT",
+            "default": 20
+        },
+        {
+            "attr": "regularVSteps",
+            "desc": "",
+            "type": "INT",
+            "default": 20
+        },
+        {
+            "attr": "uDirectionType",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "vDirectionType",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "uDegree",
+            "desc": "",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "vDegree",
+            "desc": "",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "flipNormals",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "generateStatic",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "primary_visibility",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "reference_nurbs",
+            "desc": "The reference nurbs object which is used to calculate the uvw coordinates when a 3d placement is used",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "reference_transform",
+            "desc": "The transform of the reference nurbs object",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

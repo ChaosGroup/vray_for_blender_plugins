@@ -1,576 +1,620 @@
 {
-    "Desciption": "Gradient Ramp texture", 
-    "ID": "TexGradRamp", 
-    "Name": "Gradient Ramp", 
+    "Desciption": "Gradient Ramp texture",
+    "ID": "TexGradRamp",
+    "Name": "Gradient Ramp",
     "Parameters": [
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The resulting color", 
+            ],
+            "desc": "The resulting color",
             "type": "OUTPUT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_transparency", 
+            "attr": "out_transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The resulting transparency", 
+            ],
+            "desc": "The resulting transparency",
             "type": "OUTPUT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_alpha", 
-            "default": 1.0, 
-            "desc": "The resulting alpha", 
+            "attr": "out_alpha",
+            "default": 1.0,
+            "desc": "The resulting alpha",
             "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+        },
         {
-            "attr": "out_intensity", 
-            "default": 1.0, 
-            "desc": "The resulting intensity", 
-            "type": "OUTPUT_FLOAT_TEXTURE"
-        }, 
+            "attr": "out_intensity",
+            "default": 1.0,
+            "desc": "The resulting intensity",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
+        },
         {
-            "attr": "color_mult", 
+            "attr": "color_mult",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "A multiplier for the texture color", 
+            ],
+            "desc": "A multiplier for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "color_offset", 
+            "attr": "color_offset",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "An additional offset for the texture color", 
+            ],
+            "desc": "An additional offset for the texture color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "alpha_mult", 
-            "default": 1, 
-            "desc": "A multiplier for the texture alpha", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "alpha_mult",
+            "default": 1,
+            "desc": "A multiplier for the texture alpha",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "alpha_offset", 
-            "default": 0, 
-            "desc": "An additional offset for the texture alpha", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "alpha_offset",
+            "default": 0,
+            "desc": "An additional offset for the texture alpha",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "nouvw_color", 
+            "attr": "nouvw_color",
             "default": [
-                0.5, 
-                0.5, 
+                0.5,
+                0.5,
                 0.5
-            ], 
-            "desc": "The color when there are no valid uvw coordinates", 
-            "name": "No UV Color", 
-            "type": "TEXTURE"
-        }, 
+            ],
+            "desc": "The color when there are no valid uvw coordinates",
+            "name": "No UV Color",
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
+        },
         {
-            "attr": "uvwgen", 
-            "default": "", 
-            "desc": "The uvw generator for the texture", 
-            "name": "Mapping", 
-            "type": "UVWGEN"
-        }, 
+            "attr": "uvwgen",
+            "default": "",
+            "desc": "The uvw generator for the texture",
+            "name": "Mapping",
+            "type": "UVWGEN",
+            "ui": {
+                "rollout": "Mapped"
+            }
+        },
         {
-            "attr": "compatibility_with", 
-            "default": "0", 
-            "desc": "This is used to differentiate between textures exported from different applications", 
+            "attr": "compatibility_with",
+            "default": "0",
+            "desc": "This is used to differentiate between textures exported from different applications",
             "items": [
                 [
-                    "0", 
-                    "3ds Max", 
+                    "0",
+                    "3ds Max",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Maya", 
+                    "1",
+                    "Maya",
                     ""
                 ]
-            ], 
-            "type": "ENUM"
-        }, 
+            ],
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Common"
+            }
+        },
         {
-            "attr": "alpha_from_intensity", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "alpha_from_intensity",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Self", 
+                    "0",
+                    "Self",
                     "The alpha is taken from the alpha"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Compatibility", 
+                    "1",
+                    "Compatibility",
                     "The resulting alpha is the color intensity (if \"Compatibility\" is \"3ds max\") or the color luminance (if \"Compatibility\" is \"Maya\")"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Force 1.0", 
+                    "2",
+                    "Force 1.0",
                     "The alpha is forced to 1.0f"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "invert", 
-            "default": false, 
-            "desc": "If true, the resulting texture color will be inverted", 
+            "attr": "invert",
+            "default": false,
+            "desc": "If true, the resulting texture color will be inverted",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "invert_alpha", 
-            "default": true, 
-            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted", 
-            "type": "BOOL"
-        }, 
+            "attr": "invert_alpha",
+            "default": true,
+            "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
+        },
         {
-            "attr": "placement_type", 
-            "default": "0", 
-            "desc": "The way the valid portion of the texture is applied", 
+            "attr": "placement_type",
+            "default": "0",
+            "desc": "The way the valid portion of the texture is applied",
             "items": [
                 [
-                    "0", 
-                    "Full", 
+                    "0",
+                    "Full",
                     "The whole texture is valid."
-                ], 
+                ],
                 [
-                    "1", 
-                    "Crop", 
+                    "1",
+                    "Crop",
                     "Crop texture."
-                ], 
+                ],
                 [
-                    "2", 
-                    "Place", 
+                    "2",
+                    "Place",
                     "Place texture."
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "u", 
-            "default": 0, 
-            "desc": "U coordinate of the valid texture sector", 
-            "type": "FLOAT", 
+            "attr": "u",
+            "default": 0,
+            "desc": "U coordinate of the valid texture sector",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "v",
+            "default": 0,
+            "desc": "V coordinate of the valid texture sector",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "w",
+            "default": 1,
+            "desc": "Width of the valid texture sector",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "h",
+            "default": 1,
+            "desc": "Height of the valid texture sector",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "jitter",
+            "default": 0,
+            "desc": "Amount of random placement variation",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "tile_u",
+            "default": true,
+            "desc": "If true there is horizontal tiling",
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "tile_v",
+            "default": true,
+            "desc": "If true there is vertical tiling",
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_on",
+            "default": false,
+            "desc": "If true the noise is enabled",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "UV noise on"
+            }
+        },
+        {
+            "attr": "uv_noise_animate",
+            "default": true,
+            "desc": "If true the noise is animated",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Animate UV noise",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_amount",
+            "default": 1,
+            "desc": "UV noise amount",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "UV noise amount",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_levels",
+            "default": 1,
+            "desc": "UV noise iterations",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "UV noise levels",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "uv_noise_size",
+            "default": 1,
+            "desc": "UV noise size",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "UV noise size",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "un_noise_phase",
+            "default": 0,
+            "desc": "UV noise phase",
+            "name": "UV Noise Phase",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "rollout": "<EndRollout>",
+                "display_name": "UV noise phase",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "positions",
+            "default": 0.0,
+            "desc": "positions of the given colors",
+            "type": "LIST",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "v", 
-            "default": 0, 
-            "desc": "V coordinate of the valid texture sector", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "w", 
-            "default": 1, 
-            "desc": "Width of the valid texture sector", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "h", 
-            "default": 1, 
-            "desc": "Height of the valid texture sector", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "jitter", 
-            "default": 0, 
-            "desc": "Amount of random placement variation", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "tile_u", 
-            "default": true, 
-            "desc": "If true there is horizontal tiling", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "tile_v", 
-            "default": true, 
-            "desc": "If true there is vertical tiling", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "uv_noise_on", 
-            "default": false, 
-            "desc": "If true the noise is enabled", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "uv_noise_animate", 
-            "default": true, 
-            "desc": "If true the noise is animated", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "uv_noise_amount", 
-            "default": 1, 
-            "desc": "UV noise amount", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "uv_noise_levels", 
-            "default": 1, 
-            "desc": "UV noise iterations", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "uv_noise_size", 
-            "default": 1, 
-            "desc": "UV noise size", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "un_noise_phase", 
-            "default": 0, 
-            "desc": "UV noise phase", 
-            "name": "UV Noise Phase", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "positions", 
-            "default": 0.0, 
-            "desc": "positions of the given colors", 
-            "type": "LIST", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "colors", 
+            "attr": "colors",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "the given colors", 
+            ],
+            "desc": "the given colors",
             "type": "LIST"
-        }, 
+        },
         {
-            "attr": "gradient_position", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "gradient_position",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "texture_map", 
+            "attr": "texture_map",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
+            ],
             "desc": "The texture used for mapped gradient ramp",
-            "options": ["LINKED_ONLY"],
+            "options": [
+                "LINKED_ONLY"
+            ],
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "gradient_type", 
-            "default": "0", 
-            "desc": "Gradient type", 
+            "attr": "gradient_type",
+            "default": "0",
+            "desc": "Gradient type",
             "items": [
                 [
-                    "0", 
-                    "Four corner", 
+                    "0",
+                    "Four corner",
                     "Four corner"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Box", 
+                    "1",
+                    "Box",
                     "Box"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Diagonal", 
+                    "2",
+                    "Diagonal",
                     "Diagonal"
-                ], 
+                ],
                 [
-                    "3", 
-                    "Lighting", 
+                    "3",
+                    "Lighting",
                     "Lighting"
-                ], 
+                ],
                 [
-                    "4", 
-                    "Linear", 
+                    "4",
+                    "Linear",
                     "Linear"
-                ], 
+                ],
                 [
-                    "5", 
-                    "Mapped", 
+                    "5",
+                    "Mapped",
                     "Mapped"
-                ], 
+                ],
                 [
-                    "6", 
-                    "Normal", 
+                    "6",
+                    "Normal",
                     "normal"
-                ], 
+                ],
                 [
-                    "7", 
-                    "Pong", 
+                    "7",
+                    "Pong",
                     "Pong"
-                ], 
+                ],
                 [
-                    "8", 
-                    "Radial", 
+                    "8",
+                    "Radial",
                     "Radial"
-                ], 
+                ],
                 [
-                    "9", 
-                    "Spiral", 
+                    "9",
+                    "Spiral",
                     "Spiral"
-                ], 
+                ],
                 [
-                    "10", 
-                    "Sweep", 
+                    "10",
+                    "Sweep",
                     "Sweep"
-                ], 
+                ],
                 [
-                    "11", 
-                    "Tartan", 
+                    "11",
+                    "Tartan",
                     "Tartan"
-                ], 
+                ],
                 [
-                    "12", 
-                    "Position", 
+                    "12",
+                    "Position",
                     "Return value in position"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "interpolation", 
-            "default": "1", 
-            "desc": "Interpolation", 
+            "attr": "interpolation",
+            "default": "1",
+            "desc": "Interpolation",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     "None"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Linear", 
+                    "1",
+                    "Linear",
                     "Linear"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Exponent Up", 
+                    "2",
+                    "Exponent Up",
                     "Exponent Up"
-                ], 
+                ],
                 [
-                    "3", 
-                    "Exponent Down", 
+                    "3",
+                    "Exponent Down",
                     "Exponent Down"
-                ], 
+                ],
                 [
-                    "4", 
-                    "Smooth", 
+                    "4",
+                    "Smooth",
                     "Smooth"
-                ], 
+                ],
                 [
-                    "5", 
-                    "Bump", 
+                    "5",
+                    "Bump",
                     "Bump"
-                ], 
+                ],
                 [
-                    "6", 
-                    "Spike", 
+                    "6",
+                    "Spike",
                     "Spike"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "noise_type", 
-            "default": "0", 
-            "desc": "0:regular, 1:fractal, 2:turbulence", 
+            "attr": "noise_type",
+            "default": "0",
+            "desc": "0:regular, 1:fractal, 2:turbulence",
             "items": [
                 [
-                    "0", 
-                    "Regular", 
+                    "0",
+                    "Regular",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Fractal", 
+                    "1",
+                    "Fractal",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Turbulence", 
+                    "2",
+                    "Turbulence",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "noise_amount", 
-            "default": 0, 
-            "desc": "Distortion noise amount", 
-            "type": "FLOAT", 
+            "attr": "noise_amount",
+            "default": 0,
+            "desc": "Distortion noise amount",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_size", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_size",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_phase", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_phase",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_levels", 
-            "default": 4, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_levels",
+            "default": 4,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_treshold_low", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_treshold_low",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_treshold_high", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_treshold_high",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "noise_smooth", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "noise_smooth",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         },
@@ -580,177 +624,177 @@
             "desc": "Color Ramp",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "colors",
-                "positions" : "positions"
+                "colors": "colors",
+                "positions": "positions"
             }
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "gradient_type"
-                    }, 
+                    },
                     {
                         "name": "interpolation"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "noise_type"
-                            }, 
+                            },
                             {
                                 "name": "noise_amount"
-                            }, 
+                            },
                             {
                                 "name": "noise_size"
-                            }, 
+                            },
                             {
                                 "name": "noise_levels"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "noise_phase"
-                            }, 
+                            },
                             {
                                 "name": "noise_treshold_low"
-                            }, 
+                            },
                             {
                                 "name": "noise_treshold_high"
-                            }, 
+                            },
                             {
                                 "name": "noise_smooth"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "label": "Common Properties", 
+                "label": "Common Properties",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Compatibility", 
+                        "label": "Compatibility",
                         "name": "compatibility_with"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "label": "Color", 
+                "label": "Color",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "invert"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "label": "Alpha", 
+                "label": "Alpha",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
-                        "label": "Alpha From", 
+                        "label": "Alpha From",
                         "name": "alpha_from_intensity"
-                    }, 
+                    },
                     {
                         "name": "invert_alpha"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "label": "UV", 
+                "label": "UV",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Placement", 
+                        "label": "Placement",
                         "name": "placement_type"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "u"
-                            }, 
+                            },
                             {
                                 "name": "v"
-                            }, 
+                            },
                             {
                                 "name": "w"
-                            }, 
+                            },
                             {
                                 "name": "h"
-                            }, 
+                            },
                             {
                                 "name": "tile_u"
-                            }, 
+                            },
                             {
                                 "name": "tile_v"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "uv_noise_on"
-                            }, 
+                            },
                             {
                                 "name": "uv_noise_amount"
-                            }, 
+                            },
                             {
                                 "name": "uv_noise_levels"
-                            }, 
+                            },
                             {
                                 "name": "uv_noise_size"
-                            }, 
+                            },
                             {
                                 "name": "un_noise_phase"
-                            }, 
+                            },
                             {
                                 "name": "uv_noise_animate"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

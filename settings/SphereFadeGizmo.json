@@ -1,34 +1,40 @@
 {
-    "Desciption": "", 
-    "ID": "SphereFadeGizmo", 
-    "Name": "Sphere Fade Gizmo", 
+    "Desciption": "",
+    "ID": "SphereFadeGizmo",
+    "Name": "Sphere Fade Gizmo",
     "Parameters": [
         {
-            "attr": "transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "radius", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "radius",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "invert", 
-            "default": false, 
-            "desc": "", 
+            "attr": "invert",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
+        },
+        {
+            "attr": "shape",
+            "desc": "",
+            "type": "INT",
+            "default": 0
         }
-    ], 
-    "Type": "EFFECT", 
+    ],
+    "Type": "EFFECT",
     "Widget": {
         "widgets": []
     }

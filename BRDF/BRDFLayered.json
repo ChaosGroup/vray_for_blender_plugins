@@ -21,7 +21,11 @@
             "name": "Transparency",
             "desc": "",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "transparency_tex_mult",
@@ -34,6 +38,26 @@
             "desc": "",
             "type": "BOOL",
             "default": false
+        },
+        {
+            "attr": "transparency",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "channels",
+            "desc": "Render channels the result of this BRDF will be written to",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
         }
-    ]
+    ],
+    "Widget": {
+        "widgets": []
+    }
 }

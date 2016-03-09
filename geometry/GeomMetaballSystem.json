@@ -1,0 +1,216 @@
+{
+    "ID": "GeomMetaballSystem",
+    "Name": "Geom Metaball System",
+    "Desciption": "GeomMetaballSystem",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "useParticleSize",
+            "desc": "true : use particle size; false : use particleRadius for size",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Use particle size",
+                    ""
+                ],
+                [
+                    "1",
+                    "Use particleRadius for size",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "particleRadius",
+            "desc": "Size of partiles when useParticleSize is false",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "threshold",
+            "desc": "Field threshold value",
+            "type": "FLOAT",
+            "default": 0.5
+        },
+        {
+            "attr": "stepLength",
+            "desc": "Ray marching step length",
+            "type": "FLOAT",
+            "default": 0.10000000149011612
+        },
+        {
+            "attr": "mbSamples",
+            "desc": "Number of samples for motion blur. 0 - Use global settings",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "distanceFunction",
+            "desc": "Distance function - 0: Power of two; 1: Power of three; 2: Power of four; 3: Power of five; 4: Hermit in power of two; 5: Hermit in power of three; 6: Hermit in power of five; 7: Wyvill;",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Power of two",
+                    ""
+                ],
+                [
+                    "1",
+                    "Power of three",
+                    ""
+                ],
+                [
+                    "2",
+                    "Power of four",
+                    ""
+                ],
+                [
+                    "3",
+                    "Power of five",
+                    ""
+                ],
+                [
+                    "4",
+                    "Hermit in power of two",
+                    ""
+                ],
+                [
+                    "5",
+                    "Hermit in power of three",
+                    ""
+                ],
+                [
+                    "6",
+                    "Hermit in power of five",
+                    ""
+                ],
+                [
+                    "7",
+                    "Wyvill",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "smoothingBumps",
+            "desc": "If true - smoothing of the field bump will be performed",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "smoothRadius",
+            "desc": "Radius of the smoothing filter",
+            "type": "FLOAT",
+            "default": 0.5
+        },
+        {
+            "attr": "smoothExpansion",
+            "desc": "Correction coefficient for surface expansion: from 0.0 to 1.0",
+            "type": "FLOAT",
+            "default": 0.25
+        },
+        {
+            "attr": "positiveParticles",
+            "desc": "List with positive particle systems",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "negativeParticles",
+            "desc": "List with negative particle systems",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "useTexture",
+            "desc": "If true - texture will be applied on field",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "fieldTexture",
+            "desc": "Field texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "textureFunction",
+            "desc": "0 - Multiplication; 1 - Addition;",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Multiplication",
+                    ""
+                ],
+                [
+                    "1",
+                    "Addition",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "textureMultiplier",
+            "desc": "Multiplier of the texture",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "clampField",
+            "desc": "If true - the field will be clamped before texturing",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "clampThreshold",
+            "desc": "Field clamping level",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "useCache",
+            "desc": "If true - voxel cache will be used for intersection speed-up",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "cacheRecursiveBuild",
+            "desc": "If true - voxel cache will be build recursively",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "cacheSize",
+            "desc": "Cache size: from 1 to 5",
+            "type": "INT",
+            "default": 3
+        },
+        {
+            "attr": "cacheBlockSize",
+            "desc": "Cache consolidation block size: from 1 to 8",
+            "type": "INT",
+            "default": 4
+        },
+        {
+            "attr": "primary_visibility",
+            "desc": "If off shading an intersection with this geometry will not generate a gbuffer",
+            "type": "BOOL",
+            "default": true
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -152,6 +152,24 @@
             "desc": "internally used",
             "type": "INT",
             "default": 0
+        },
+        {
+            "attr": "cache_load",
+            "desc": "Whether to actually load the cache or use it just to figure out the grid and cell size",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "load_nearest",
+            "desc": "If there is no cache file with the desired frame number, the nearest cache is found and loaded",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "usrchmap",
+            "desc": "3rd party caches channels mappings",
+            "type": "STRING",
+            "default": ""
         }
     ],
     "Widget": {
@@ -159,7 +177,9 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "cache_path" }
+                    {
+                        "name": "cache_path"
+                    }
                 ]
             }
         ]

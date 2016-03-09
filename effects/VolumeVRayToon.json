@@ -1,171 +1,266 @@
 {
-    "Desciption": "", 
-    "ID": "VolumeVRayToon", 
-    "Name": "Toon", 
+    "Desciption": "",
+    "ID": "VolumeVRayToon",
+    "Name": "Toon",
     "Parameters": [
         {
-            "attr": "lineColor_tex", 
+            "attr": "lineColor_tex",
             "default": [
-                1.0, 
-                0.0, 
+                1.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "name": "Color", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "lineWidth_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "name": "Width", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "",
+            "name": "Color",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Line Color (map)"
             }
-        }, 
+        },
         {
-            "attr": "opacity_tex", 
-            "default": 1.0, 
-            "desc": "", 
-            "name": "Opacity", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "lineWidth_tex",
+            "default": 1.0,
+            "desc": "",
+            "name": "Width",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Line Width (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
             }
-        }, 
+        },
         {
-            "attr": "distortion_tex", 
-            "default": 0.0, 
-            "desc": "", 
-            "name": "Distortion", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "opacity_tex",
+            "default": 1.0,
+            "desc": "",
+            "name": "Opacity",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Opacity (map)"
             }
-        }, 
+        },
         {
-            "attr": "widthType", 
-            "default": "0", 
-            "desc": "", 
+            "attr": "distortion_tex",
+            "default": 0.0,
+            "desc": "",
+            "name": "Distortion",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Distortion (map)",
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "widthType",
+            "default": "0",
+            "desc": "",
             "items": [
                 [
-                    "0", 
-                    "Pixels", 
+                    "0",
+                    "Pixels",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "World", 
+                    "1",
+                    "World",
                     ""
                 ]
-            ], 
-            "name": "Width Type", 
-            "type": "ENUM"
-        }, 
-        {
-            "attr": "hideInnerEdges", 
-            "default": false, 
-            "desc": "true : show outlines and not interior edges, false : show all edges", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "normalThreshold", 
-            "default": 0.7, 
-            "desc": "", 
-            "type": "FLOAT", 
+            ],
+            "name": "Width Type",
+            "type": "ENUM",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Width units"
             }
-        }, 
+        },
         {
-            "attr": "overlapThreshold", 
-            "default": 0.95, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "hideInnerEdges",
+            "default": false,
+            "desc": "true : show outlines and not interior edges, false : show all edges",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Hide Inner Edges"
             }
-        }, 
+        },
         {
-            "attr": "traceBias", 
-            "default": 0.2, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "normalThreshold",
+            "default": 0.7,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Normal Threshold"
             }
-        }, 
+        },
         {
-            "attr": "doSecondaryRays", 
-            "default": false, 
-            "desc": "true : show toon lines in reflections", 
-            "type": "BOOL"
-        }, 
+            "attr": "overlapThreshold",
+            "default": 0.95,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Overlap Threshold"
+            }
+        },
         {
-            "attr": "excludeType", 
-            "default": "0", 
-            "desc": "Exclude list behavior", 
+            "attr": "traceBias",
+            "default": 0.2,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Trace bias"
+            }
+        },
+        {
+            "attr": "doSecondaryRays",
+            "default": false,
+            "desc": "true : show toon lines in reflections",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Visible in Reflection/Refraction"
+            }
+        },
+        {
+            "attr": "excludeType",
+            "default": "0",
+            "desc": "Exclude list behavior",
             "items": [
                 [
-                    "0", 
-                    "Exclude", 
+                    "0",
+                    "Exclude",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Include", 
+                    "1",
+                    "Include",
                     ""
                 ]
-            ], 
-            "name": "List Type", 
-            "type": "ENUM"
-        }, 
+            ],
+            "name": "List Type",
+            "type": "ENUM",
+            "ui": {
+                "display_name": "As Inclusive List"
+            }
+        },
         {
-            "attr": "compensateExposure", 
-            "default": true, 
-            "desc": "Compensate VRay physical camera exposure", 
-            "type": "BOOL"
-        }, 
+            "attr": "compensateExposure",
+            "default": true,
+            "desc": "Compensate VRay physical camera exposure",
+            "type": "BOOL",
+            "ui": {
+                "rollout": "",
+                "display_name": "Compensate Exposure"
+            }
+        },
         {
-            "attr": "excludeList", 
-            "default": "", 
-            "desc": "", 
-            "name": "List", 
-            "skip": true, 
-            "type": "PLUGIN"
+            "attr": "excludeList",
+            "default": "",
+            "desc": "",
+            "name": "List",
+            "skip": true,
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "display_name": "Exclude List",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "lineColor",
+            "desc": "The color of the cartoon line",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "tab": "V-Ray Toon",
+                "rollout": "V-Ray Toon",
+                "display_name": "Line Color"
+            }
+        },
+        {
+            "attr": "lineWidth",
+            "desc": "Cartoon line width",
+            "type": "FLOAT",
+            "default": 1.5,
+            "ui": {
+                "display_name": "Line Width",
+                "min": 0.0
+            }
+        },
+        {
+            "attr": "opacity",
+            "desc": "Opacity of the cartoon line",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Opacity",
+                "min": 0.0,
+                "max": 1.0
+            }
         }
-    ], 
-    "Type": "EFFECT", 
+    ],
+    "Type": "EFFECT",
     "Widget": {
         "widgets": [
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "normalThreshold" },
-                    { "name": "overlapThreshold" },
-                    { "name": "traceBias" },
-                    { "name": "hideInnerEdges" },
-                    { "name": "doSecondaryRays" },
-                    { "name": "compensateExposure" }
+                    {
+                        "name": "normalThreshold"
+                    },
+                    {
+                        "name": "overlapThreshold"
+                    },
+                    {
+                        "name": "traceBias"
+                    },
+                    {
+                        "name": "hideInnerEdges"
+                    },
+                    {
+                        "name": "doSecondaryRays"
+                    },
+                    {
+                        "name": "compensateExposure"
+                    }
                 ]
             }
         ],
@@ -173,8 +268,14 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "widthType", "label": "Width" },
-                    { "name": "excludeType", "label": "List" }
+                    {
+                        "name": "widthType",
+                        "label": "Width"
+                    },
+                    {
+                        "name": "excludeType",
+                        "label": "List"
+                    }
                 ]
             }
         ]

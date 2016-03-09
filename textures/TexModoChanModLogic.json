@@ -1,0 +1,135 @@
+{
+    "ID": "TexModoChanModLogic",
+    "Name": "Modo Chan Mod Logic",
+    "Desciption": "TexModoChanModLogic",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "op",
+            "desc": "",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Equal",
+                    ""
+                ],
+                [
+                    "1",
+                    "Not equal",
+                    ""
+                ],
+                [
+                    "2",
+                    "Greater than",
+                    ""
+                ],
+                [
+                    "3",
+                    "Less than",
+                    ""
+                ],
+                [
+                    "4",
+                    "Greater than or equal",
+                    ""
+                ],
+                [
+                    "5",
+                    "Less than or equal",
+                    ""
+                ],
+                [
+                    "6",
+                    "And",
+                    ""
+                ],
+                [
+                    "7",
+                    "Or",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "option_true",
+            "desc": "Determines what value to return when the result of the operation is 'true'",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "input1",
+                    ""
+                ],
+                [
+                    "1",
+                    "intpu2",
+                    ""
+                ],
+                [
+                    "3",
+                    "value_true",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "option_false",
+            "desc": "Determines what value to return when the result of the operation is 'false'",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "input1",
+                    ""
+                ],
+                [
+                    "1",
+                    "intpu2",
+                    ""
+                ],
+                [
+                    "3",
+                    "value_false",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "input1",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "input2",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "value_true",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "value_false",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "result",
+            "desc": "The result of the logical operation as a float, either 0.0 or 1.0",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

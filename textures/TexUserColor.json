@@ -30,6 +30,17 @@
             ],
             "desc": "",
             "type": "OUTPUT_TEXTURE"
+        },
+        {
+            "attr": "default_color",
+            "desc": "Default color when the attribute is not found",
+            "type": "TEXTURE",
+            "default": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ]
         }
     ],
     "Type": "TEXTURE",

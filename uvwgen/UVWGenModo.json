@@ -1,0 +1,148 @@
+{
+    "ID": "UVWGenModo",
+    "Name": "UVW Gen Modo",
+    "Desciption": "UVWGenModo",
+    "Type": "UVWGEN",
+    "Parameters": [
+        {
+            "attr": "uv_set_name",
+            "desc": "The name of the uv channel that should be used",
+            "type": "STRING",
+            "default": ""
+        },
+        {
+            "attr": "uvwgen",
+            "desc": "Optional UVWGen from which the initial uvw coordinates will be taken, instead of using 'uv_set_name'",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "uvwgen_has_local_tm",
+            "desc": "When set to false uvwgen->getLocalUVWTransform must not be used, instead uvwgen->getUVW must be used",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "tile_mode_u",
+            "desc": "Horizontal tiling mode",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Reset",
+                    ""
+                ],
+                [
+                    "1",
+                    "Repeat",
+                    ""
+                ],
+                [
+                    "2",
+                    "Mirror",
+                    ""
+                ],
+                [
+                    "3",
+                    "Edge",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "tile_mode_v",
+            "desc": "Vertical tiling mode",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Reset",
+                    ""
+                ],
+                [
+                    "1",
+                    "Repeat",
+                    ""
+                ],
+                [
+                    "2",
+                    "Mirror",
+                    ""
+                ],
+                [
+                    "3",
+                    "Edge",
+                    ""
+                ]
+            ],
+            "default": "1"
+        },
+        {
+            "attr": "repeat_u",
+            "desc": "How many times to repeat the UV space horizontally",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "repeat_v",
+            "desc": "How many times to repeat the UV space vertically",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "rotation",
+            "desc": "Rotation of the UV space in radians",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "texture_offset_tex",
+            "desc": "The color value of this texture is added to the generated UVW coordinates",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "texture_offset_amplitude",
+            "desc": "Multiplier for the values in the 'texture_offset' texture",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "uv_matrix",
+            "desc": "These are the m00...m22 channels from MODO. The matrix is in row-major order",
+            "type": "MATRIX",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "cylindrical_base_uvwgen",
+            "desc": "The cylindrical projection applies the repeat_u/repeat_v options a little differently",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "legacy_uv_rotation",
+            "desc": "Changes the pivot used to apply the repeat_u/repeat_v and uv_matrix transformations. Only used when uvwgen is NULL  i.e. the UV coordinates come from an UV map and not from a projection",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

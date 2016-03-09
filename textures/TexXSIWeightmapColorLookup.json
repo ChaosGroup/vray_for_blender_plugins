@@ -1,0 +1,35 @@
+{
+    "ID": "TexXSIWeightmapColorLookup",
+    "Name": "XSI Weightmap Color Lookup",
+    "Desciption": "TexXSIWeightmapColorLookup",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "channel",
+            "desc": "The channel number * 3 + a number indicating which of the x,y or z values are used",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "factor",
+            "desc": "Weight multiplication factor",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "weight_min",
+            "desc": "Minimum weight (w/o factor)",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "weight_max",
+            "desc": "Minimum weight (w/o factor)",
+            "type": "FLOAT",
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

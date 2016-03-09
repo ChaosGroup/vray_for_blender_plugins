@@ -1,0 +1,30 @@
+{
+    "ID": "TransformToTex",
+    "Name": "Transform To Tex",
+    "Desciption": "TransformToTex",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "",
+            "type": "TRANSFORM_TEXTURE",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

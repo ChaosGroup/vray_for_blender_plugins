@@ -1,0 +1,161 @@
+{
+    "ID": "RawBitmapBuffer",
+    "Name": "Raw Bitmap Buffer",
+    "Desciption": "RawBitmapBuffer",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "filter_type",
+            "desc": "-1 - nearest; 0 - no filtering; 1 - mip-map filtering; 2 - summed area table filtering",
+            "type": "ENUM",
+            "items": [
+                [
+                    "-1",
+                    "Nearest",
+                    ""
+                ],
+                [
+                    "0",
+                    "No filtering",
+                    ""
+                ],
+                [
+                    "1",
+                    "Mip-map filtering",
+                    ""
+                ],
+                [
+                    "2",
+                    "Summed are table filtering",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "filter_blur",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "color_space",
+            "desc": "0 - linear, 1 - gamma corrected, 2 - sRGB",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Linear",
+                    ""
+                ],
+                [
+                    "1",
+                    "Gamma corrected",
+                    ""
+                ],
+                [
+                    "2",
+                    "sRGB",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "gamma",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "maya_compatible",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "allow_negative_colors",
+            "desc": "if false negative colors will be clamped",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "interpolation",
+            "desc": "Interpolation method for the mip-map filtering (0 - bilinear, 1 - bicubic, 2 - biquadratic)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Bilinear",
+                    ""
+                ],
+                [
+                    "1",
+                    "Bicubic",
+                    ""
+                ],
+                [
+                    "2",
+                    "Biquadratic",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "pixels",
+            "desc": "The raw pixels used in the bitmap",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "pixels_type",
+            "desc": "0: 8-bit RGBA, 1: float RGBA, 2: 8-bit RGBE, 3: 16-bit RGBA, 4: float RGBA",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "8-bit RBGA",
+                    ""
+                ],
+                [
+                    "1",
+                    "Float RGBA",
+                    ""
+                ],
+                [
+                    "2",
+                    "8-bit RBGE",
+                    ""
+                ],
+                [
+                    "3",
+                    "16-bit RBGA",
+                    ""
+                ],
+                [
+                    "4",
+                    "Float RGBA",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "width",
+            "desc": "The width of the raw bitmap",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "height",
+            "desc": "The height of the raw bitmap",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

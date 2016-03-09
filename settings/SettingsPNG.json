@@ -1,49 +1,49 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsPNG", 
-    "Name": "PNG", 
+    "Desciption": "",
+    "ID": "SettingsPNG",
+    "Name": "PNG",
     "Parameters": [
         {
-            "attr": "compression", 
-            "default": 9, 
-            "desc": "Compression for PNG output (0-9)", 
-            "type": "INT", 
+            "attr": "compression",
+            "default": 9,
+            "desc": "Compression for PNG output (0-9)",
+            "type": "INT",
             "ui": {
-                "max": 9, 
+                "max": 9,
                 "min": 0
             }
-        }, 
+        },
         {
-            "attr": "bits_per_channel", 
-            "default": "16", 
-            "desc": "Bits per channel (8 or 16)", 
+            "attr": "bits_per_channel",
+            "default": "16",
+            "desc": "Bits per channel (8 or 16)",
             "items": [
                 [
-                    "8", 
-                    "8", 
+                    "8",
+                    "8",
                     ""
-                ], 
+                ],
                 [
-                    "16", 
-                    "16", 
+                    "16",
+                    "16",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "compression"
-                    }, 
+                    },
                     {
                         "name": "bits_per_channel"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

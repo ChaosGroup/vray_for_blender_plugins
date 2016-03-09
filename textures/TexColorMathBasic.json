@@ -1,0 +1,45 @@
+{
+    "ID": "TexColorMathBasic",
+    "Name": "Color Math Basic",
+    "Desciption": "TexColorMathBasic",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "op",
+            "desc": "Operation: Add(), Subtract(), Multiply(), Divide(), Minimum(), Maximum()",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "alpha",
+            "desc": "Use alpha in the calculations",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "input1",
+            "desc": "The first color input",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "input2",
+            "desc": "The second color input",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

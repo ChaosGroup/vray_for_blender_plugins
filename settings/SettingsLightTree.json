@@ -1,40 +1,47 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsLightTree", 
-    "Name": "Light Tree", 
+    "Desciption": "",
+    "ID": "SettingsLightTree",
+    "Name": "Light Tree",
     "Parameters": [
         {
-            "attr": "on", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "solids_enabled", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "on",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "On"
             }
-        }, 
+        },
         {
-            "attr": "build_quality", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "solids_enabled",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Use solids",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "build_quality",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Tree quality",
+                "enabled": true
             }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

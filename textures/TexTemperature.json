@@ -1,85 +1,85 @@
 {
-    "Desciption": "Temperature", 
-    "ID": "TexTemperature", 
-    "Name": "Temperature", 
+    "Desciption": "Temperature",
+    "ID": "TexTemperature",
+    "Name": "Temperature",
     "Parameters": [
         {
-            "attr": "color_mode", 
-            "default": "1", 
-            "desc": "Choose color or temperature mode", 
+            "attr": "color_mode",
+            "default": "1",
+            "desc": "Choose color or temperature mode",
             "items": [
                 [
-                    "0", 
-                    "Color", 
+                    "0",
+                    "Color",
                     "Use color"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Temperature", 
+                    "1",
+                    "Temperature",
                     "Use temperature"
                 ]
-            ], 
-            "name": "Mode", 
+            ],
+            "name": "Mode",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "temperature", 
-            "default": 6500, 
-            "desc": "Material temperature in kelvins", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "temperature",
+            "default": 6500,
+            "desc": "Material temperature in kelvins",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 100000, 
+                "max": 100000,
                 "min": 0.0
             }
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                0.5, 
-                0.5, 
+                0.5,
+                0.5,
                 0.5
-            ], 
-            "desc": "Texture color", 
+            ],
+            "desc": "Texture color",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "rgb_multiplier", 
-            "default": 1, 
-            "desc": "Color multiplier", 
-            "type": "FLOAT", 
+            "attr": "rgb_multiplier",
+            "default": 1,
+            "desc": "Color multiplier",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "alpha", 
-            "default": 1, 
-            "desc": "Alpha color channel", 
-            "type": "FLOAT", 
+            "attr": "alpha",
+            "default": 1,
+            "desc": "Alpha color channel",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "gamma_correction", 
-            "default": 1, 
-            "desc": "Gamma correction value", 
-            "type": "FLOAT", 
+            "attr": "gamma_correction",
+            "default": 1,
+            "desc": "Gamma correction value",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
@@ -87,22 +87,22 @@
                     {
                         "name": "color_mode"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
-                "align": false, 
+                "align": false,
                 "attrs": [
                     {
                         "name": "rgb_multiplier"
-                    }, 
+                    },
                     {
                         "name": "gamma_correction"
-                    }, 
+                    },
                     {
                         "name": "alpha"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

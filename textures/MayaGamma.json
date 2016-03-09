@@ -8,7 +8,11 @@
             "attr": "input",
             "desc": "The input color",
             "type": "TEXTURE",
-            "default": [0,0,0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "gamma",
@@ -20,7 +24,11 @@
             "attr": "color",
             "desc": "The resulting color",
             "type": "OUTPUT_COLOR",
-            "default": [0,0,0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         }
     ],
     "Widget": {
@@ -28,7 +36,10 @@
             {
                 "layout": "ROW",
                 "attrs": [
-                    { "label": "Gamma", "name": "gamma" }
+                    {
+                        "label": "Gamma",
+                        "name": "gamma"
+                    }
                 ]
             }
         ],
@@ -36,7 +47,10 @@
             {
                 "layout": "ROW",
                 "attrs": [
-                    { "label": "Gamma", "name": "gamma" }
+                    {
+                        "label": "Gamma",
+                        "name": "gamma"
+                    }
                 ]
             }
         ]

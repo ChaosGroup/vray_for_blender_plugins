@@ -1,0 +1,313 @@
+{
+    "ID": "MtlASGVIS",
+    "Name": "Mtl ASGVIS",
+    "Desciption": "MtlASGVIS",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "brdfs",
+            "desc": "",
+            "type": "PLUGIN_LIST",
+            "elements_count": 0,
+            "default": null
+        },
+        {
+            "attr": "double_sided",
+            "desc": "1 to make the material double-sided",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "disable_volume_fog",
+            "desc": "Set this flag to disable any volumetric effects that sub-brdfs might need",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bump_on",
+            "desc": "true if we want to turn on bump mapping",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bump_tex",
+            "desc": "Bump texture, can be float or color",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "bump_tex_mult",
+            "desc": "Bump amount",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "bump_shadows",
+            "desc": "true to offset the surface shading point, in addition to the normal",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bump_tex_mult_tex",
+            "desc": "Bump amount texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "bump_delta_scale",
+            "desc": "Scale for sampling the bitmap when map_type is 0. Normally this is tied to the ray differentials, but can be changed if necessary",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "map_type",
+            "desc": "The type of the map (0 - from regular texture output, 1 - normal map in tangent space, 2 - normal map in object space, 3 - normal map in camera space, 4 - normal map in world space, 5 - from texture bump output, 6 - explicit normal)",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "normal_uvwgen",
+            "desc": "The uvw generator for the normal map texture when map_type is 1",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "compute_bump_for_shadows",
+            "desc": "true to compute bump mapping for shadow rays in case the material is transparent; false to skip the bump map for shadow rays (faster rendering)",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "alpha_tex",
+            "desc": "a float or color texture to be used to determine contribution multiplier",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha_tex_mult",
+            "desc": "multiplier to be applied to alpha texture, if present",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "alpha",
+            "desc": "the alpha multiplier to be used if no texture is provided",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "displace_on",
+            "desc": "true if we want displacement turned on",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "displace_tex",
+            "desc": "displacement texture, can be float or color",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "displace_tex_mult",
+            "desc": "displacement multiplier ( displace amount )",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "displace_shift",
+            "desc": "a constant value added to the displacement",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "displace_water_level",
+            "desc": "A cutoff point for displacement - can be used for a clipping effect",
+            "type": "FLOAT",
+            "default": 1.0000000150474662e30
+        },
+        {
+            "attr": "displace_view_dependent",
+            "desc": "Whether or not to use view-dependant tesselation",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "displace_use_globals",
+            "desc": "Whether to use the global settings for our displacement",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "displace_max_subdivs",
+            "desc": "The maximum number of subdivisions to use",
+            "type": "INT",
+            "default": 256
+        },
+        {
+            "attr": "displace_edge_length",
+            "desc": "The approximate edge length",
+            "type": "FLOAT",
+            "default": 4.0
+        },
+        {
+            "attr": "displace_continuity",
+            "desc": "enable continuity feature of displacement",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "override_gi",
+            "desc": "whether the global gi environment should be overridden",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "gi_color",
+            "desc": "the gi color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "gi_tex",
+            "desc": "the texture to use for the gi environment",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "gi_tex_mult",
+            "desc": "the multiplier for the gi environment texture",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "override_bg",
+            "desc": "whether the global bg environment should be overridden",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "bg_color",
+            "desc": "the bg color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "bg_tex",
+            "desc": "the texture to use for the bg environment",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "bg_tex_mult",
+            "desc": "the multiplier for the bg environment texture",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "override_reflect",
+            "desc": "whether the global reflection environment should be overridden",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "reflect_color",
+            "desc": "reflect color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "reflect_tex",
+            "desc": "the reflection environment",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "reflect_tex_mult",
+            "desc": "the reflection environment texture multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "override_refract",
+            "desc": "whether the global refraction environment should be overridden",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "refract_color",
+            "desc": "refract color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "refract_tex",
+            "desc": "the refraction environment",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "refract_tex_mult",
+            "desc": "the refraction environment texture multiplier",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "ignore_objects",
+            "desc": "Whether we should ignore all objects in the scene when tracing ourself",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "short_circuit",
+            "desc": "Whether we should do the cheating version of object exclusion-  may cause artifacts",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "material_id_color",
+            "desc": "This will be used to represent the material in the material id channel if specified",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "cast_shadow",
+            "desc": "Whether or not we want objects with this material to cast a shadow",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "only_visible_in_secondary",
+            "desc": "Whether or not this object should only be visible in reflects/refractions",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

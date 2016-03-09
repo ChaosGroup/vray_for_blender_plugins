@@ -1,107 +1,153 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsMotionBlur", 
-    "Name": "Motion Blur", 
+    "Desciption": "",
+    "ID": "SettingsMotionBlur",
+    "Name": "Motion Blur",
     "Parameters": [
         {
-            "attr": "on", 
-            "default": false, 
-            "desc": "Use motion blur", 
-            "name": "Use Motion Blur", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "geom_samples", 
-            "default": 2, 
-            "desc": "This determines the number of geometry segments used to approximate motion blur", 
-            "type": "INT", 
+            "attr": "on",
+            "default": false,
+            "desc": "Use motion blur",
+            "name": "Use Motion Blur",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Enable motion blur"
             }
-        }, 
+        },
         {
-            "attr": "low_samples", 
-            "default": 1, 
-            "desc": "This controls how many samples in time will be computed during irradiance map calculations", 
-            "type": "INT", 
+            "attr": "geom_samples",
+            "default": 2,
+            "desc": "This determines the number of geometry segments used to approximate motion blur",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Geometry samples"
             }
-        }, 
+        },
         {
-            "attr": "duration", 
-            "default": 1, 
-            "desc": "Specifies the duration, in frames, during which the camera shutter is open", 
-            "type": "FLOAT", 
+            "attr": "low_samples",
+            "default": 1,
+            "desc": "This controls how many samples in time will be computed during irradiance map calculations",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Prepass samples"
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 6, 
-            "desc": "Determines the quality of the motion blur", 
-            "type": "INT", 
+            "attr": "duration",
+            "default": 1,
+            "desc": "Specifies the duration, in frames, during which the camera shutter is open",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Duration (frames)",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "bias", 
-            "default": 0, 
-            "desc": "This controls the bias of the motion blur effect", 
-            "type": "FLOAT", 
+            "attr": "subdivs",
+            "default": 6,
+            "desc": "Determines the quality of the motion blur",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Subdivs",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "shutter_efficiency", 
-            "default": 1, 
-            "desc": "Shutter efficiency", 
-            "type": "FLOAT", 
+            "attr": "bias",
+            "default": 0,
+            "desc": "This controls the bias of the motion blur effect",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Bias",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "interval_center", 
-            "default": 0.5, 
-            "desc": "Specifies the middle of the motion blur interval with respect to the frame", 
-            "type": "FLOAT", 
+            "attr": "shutter_efficiency",
+            "default": 1,
+            "desc": "Shutter efficiency",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Shutter Efficiency",
+                "enabled": true
             }
-        }, 
+        },
         {
-            "attr": "camera_motion_blur", 
-            "default": true, 
-            "desc": "Use camera motion blur", 
-            "type": "BOOL"
+            "attr": "interval_center",
+            "default": 0.5,
+            "desc": "Specifies the middle of the motion blur interval with respect to the frame",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Interval center",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "camera_motion_blur",
+            "default": true,
+            "desc": "Use camera motion blur",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Camera motion blur",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "sampling_type",
+            "desc": "Type of sampling: 0 - normal, 1 - sample only shutter open, 2 - sample only shutter middle",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Normal",
+                    ""
+                ],
+                [
+                    "1",
+                    "Sample only shutter open",
+                    ""
+                ],
+                [
+                    "2",
+                    "Sample only shutter middle",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Sampling type",
+                "enabled": true
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

@@ -1,30 +1,32 @@
 {
-    "Desciption": "Just a color", 
-    "ID": "TexAColor", 
-    "Name": "Color", 
+    "Desciption": "Just a color",
+    "ID": "TexAColor",
+    "Name": "Color",
     "Parameters": [
         {
-            "attr": "texture", 
+            "attr": "texture",
             "default": [
-                1, 
-                1, 
-                1, 
+                1,
+                1,
+                1,
                 1
-            ], 
-            "desc": "Color", 
-            "name": "Color", 
+            ],
+            "desc": "Color",
+            "name": "Color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "uvwgen", 
-            "default": "", 
-            "desc": "Mapping generator", 
-            "name": "Mapping", 
-            "options": ["HIDDEN"],
+            "attr": "uvwgen",
+            "default": "",
+            "desc": "Mapping generator",
+            "name": "Mapping",
+            "options": [
+                "HIDDEN"
+            ],
             "type": "UVWGEN"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": []
     }

@@ -1,0 +1,29 @@
+{
+    "ID": "MtlSkp2Sided",
+    "Name": "Mtl Skp 2 Sided",
+    "Desciption": "MtlSkp2Sided",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "front",
+            "desc": "the material for the surface on the same side as the normal",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "back",
+            "desc": "the material for the side that is opposite the surface normal",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "force_1sided",
+            "desc": "1 to make the sub-materials one-sided",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

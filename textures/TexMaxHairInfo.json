@@ -1,0 +1,83 @@
+{
+    "ID": "TexMaxHairInfo",
+    "Name": "Max Hair Info",
+    "Desciption": "TexMaxHairInfo",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "output",
+            "desc": "Specifies the way of blending between the two input color textures. The value means : 0 - position along strand, 1 - random by strand id,2 - Hair color, 3 - Hair opacity, 4 - Hair transparency, 5 - Hair incandescence",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Position along strand",
+                    ""
+                ],
+                [
+                    "1",
+                    "Random by strand index",
+                    ""
+                ],
+                [
+                    "2",
+                    "Hair Color",
+                    ""
+                ],
+                [
+                    "3",
+                    "Hair opacity",
+                    ""
+                ],
+                [
+                    "4",
+                    "Hair transparency",
+                    ""
+                ],
+                [
+                    "5",
+                    "Hair incandescence",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "seed_offset",
+            "desc": "Seed offset",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "color_a",
+            "desc": "Color A",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color_b",
+            "desc": "Color B",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "bias",
+            "desc": "Bias",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.5
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

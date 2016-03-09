@@ -7,28 +7,54 @@
             "attr": "subdivs",
             "default": 8,
             "desc": "Number of samples to take when sampling normals around intersection (subdivs*subdivs)",
-            "type": "INT"
+            "type": "INT",
+            "ui": {
+                "min": 1,
+                "max": 128
+            }
         },
         {
             "attr": "sample_spread",
             "name": "Radius",
             "default": 0.1,
             "desc": "Sampling radius",
-            "type": "FLOAT"
+            "type": "FLOAT",
+            "ui": {
+                "min": 0.0,
+                "max": 1000.0
+            }
         },
         {
             "attr": "out_color_min",
             "name": "Min",
             "default": 0.0,
             "desc": "Output color min value",
-            "type": "FLOAT"
+            "type": "FLOAT",
+            "ui": {
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "out_color_max",
             "name": "Max",
             "default": 1.0,
             "desc": "Output color max value",
-            "type": "FLOAT"
+            "type": "FLOAT",
+            "ui": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "scale",
+            "desc": "The scale relative to which the curvature is computed",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "min": 9.999999974752428e-7,
+                "max": 1000000.0
+            }
         }
     ],
     "Type": "TEXTURE",
@@ -38,10 +64,18 @@
             {
                 "layout": "COLUMN",
                 "attrs": [
-                    { "name": "sample_spread" },
-                    { "name": "subdivs" },
-                    { "name": "out_color_min" },
-                    { "name": "out_color_max" }
+                    {
+                        "name": "sample_spread"
+                    },
+                    {
+                        "name": "subdivs"
+                    },
+                    {
+                        "name": "out_color_min"
+                    },
+                    {
+                        "name": "out_color_max"
+                    }
                 ]
             }
         ]

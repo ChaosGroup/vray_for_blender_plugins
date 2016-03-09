@@ -1,0 +1,34 @@
+{
+    "ID": "TexColor2Scalar",
+    "Name": "Color 2 Scalar",
+    "Desciption": "TexColor2Scalar",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "clr_txt",
+            "desc": "Color texture, which intensity will be used",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "mult",
+            "desc": "intensity multiplier",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "use_alpha",
+            "desc": "add alpha in the average calculation",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

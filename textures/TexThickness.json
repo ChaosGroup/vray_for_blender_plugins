@@ -1,0 +1,17 @@
+{
+    "ID": "TexThickness",
+    "Name": "Thickness",
+    "Desciption": "TexThickness",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "thickness_mult",
+            "desc": "The object thickness is multiplied by this value to get the texture color",
+            "type": "FLOAT",
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

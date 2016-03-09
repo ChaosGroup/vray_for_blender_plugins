@@ -1,0 +1,29 @@
+{
+    "ID": "TexMayaConversion",
+    "Name": "Maya Conversion",
+    "Desciption": "TexMayaConversion",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "conversion_factor",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "output",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

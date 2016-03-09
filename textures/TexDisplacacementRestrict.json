@@ -1,0 +1,23 @@
+{
+    "ID": "TexDisplacacementRestrict",
+    "Name": "Displacacement Restrict",
+    "Desciption": "TexDisplacacementRestrict",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "input_tex",
+            "desc": "Input Float Texture",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "max_displacement",
+            "desc": "Specifies the maximum displacement value.  If an input value is higher than the Max Displacement value, it will be clipped",
+            "type": "FLOAT",
+            "default": -1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

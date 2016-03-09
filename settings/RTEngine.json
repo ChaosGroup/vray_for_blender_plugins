@@ -1,41 +1,41 @@
 {
-    "Desciption": "V-Ray Realtime Engine", 
-    "ID": "RTEngine", 
-    "Name": "Realtime Engine", 
+    "Desciption": "V-Ray Realtime Engine",
+    "ID": "RTEngine",
+    "Name": "Realtime Engine",
     "Parameters": [
         {
-            "attr": "enabled", 
-            "default": false, 
-            "desc": "Enable Realtime Engine", 
+            "attr": "enabled",
+            "default": false,
+            "desc": "Enable Realtime Engine",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use_opencl", 
-            "default": "0", 
-            "desc": "Device type", 
+            "attr": "use_opencl",
+            "default": "0",
+            "desc": "Device type",
             "items": [
                 [
-                    "0", 
-                    "CPU", 
+                    "0",
+                    "CPU",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "GPU (CUDA)", 
+                    "4",
+                    "GPU (CUDA)",
                     ""
                 ]
-            ], 
-            "name": "Device", 
+            ],
+            "name": "Device",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "separate_window", 
-            "default": false, 
-            "desc": "Use a separate window for the Realtime Engine", 
+            "attr": "separate_window",
+            "default": false,
+            "desc": "Use a separate window for the Realtime Engine",
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": [
             {
@@ -43,7 +43,7 @@
                     {
                         "name": "use_opencl"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

@@ -1,302 +1,447 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsOptions", 
-    "Name": "Options", 
+    "Desciption": "",
+    "ID": "SettingsOptions",
+    "Name": "Options",
     "Parameters": [
         {
-            "attr": "geom_displacement", 
-            "default": true, 
-            "desc": "Render displacement", 
-            "name": "Use Displacement", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "geom_doHidden", 
-            "default": false, 
-            "desc": "Render hidden geometry", 
-            "name": "Render Hidden", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_doLights", 
-            "default": true, 
-            "desc": "Use lights", 
-            "name": "Use Lights", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_doDefaultLights", 
-            "default": true, 
-            "desc": "Use default lights (when no lights are presented in a scene)", 
-            "name": "Default Lights", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_doHiddenLights", 
-            "default": false, 
-            "desc": "Render hidden lights", 
-            "name": "Hidden Lights", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_doShadows", 
-            "default": true, 
-            "desc": "Render shadows", 
-            "name": "Shadows", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_onlyGI", 
-            "default": false, 
-            "desc": "Use only GI from lights", 
-            "name": "Produce GI Only", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "light_disableSelfIllumination", 
-            "default": true, 
-            "desc": "self-Illumination", 
-            "name": "Self Illumination", 
-            "type": "BOOL", 
+            "attr": "geom_displacement",
+            "default": true,
+            "desc": "Render displacement",
+            "name": "Use Displacement",
+            "type": "BOOL",
             "ui": {
-                "inverted": true
+                "display_name": "Enable displacement"
             }
-        }, 
+        },
         {
-            "attr": "gi_dontRenderImage", 
-            "default": false, 
-            "desc": "Don't render final image", 
-            "name": "Calculate GI Only", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_reflectionRefraction", 
-            "default": true, 
-            "desc": "Render reflections / refractions", 
-            "name": "Render Reflection / Refraction", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_limitDepth", 
-            "default": false, 
-            "desc": "Limit max depth", 
-            "name": "Limit Depth", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_maxDepth", 
-            "default": 5, 
-            "desc": "Max. ray depth for reflections and refractions", 
-            "name": "Max Ray Depth", 
-            "type": "INT", 
+            "attr": "geom_doHidden",
+            "default": false,
+            "desc": "Render hidden geometry",
+            "name": "Render Hidden",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Render hidden geometry"
             }
-        }, 
+        },
         {
-            "attr": "mtl_doMaps", 
-            "default": true, 
-            "desc": "Render textures", 
-            "name": "Use Textures", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_filterMaps", 
-            "default": true, 
-            "desc": "Filter textures", 
-            "name": "Filter Textures", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_filterMapsForSecondaryRays", 
-            "default": true, 
-            "desc": "false to turn off filtering for glossy and GI rays", 
-            "name": "Filter Textures For GI", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_transpMaxLevels", 
-            "default": 50, 
-            "desc": "Max. transparency levels", 
-            "name": "Max Transp. Levels", 
-            "type": "INT", 
+            "attr": "light_doLights",
+            "default": true,
+            "desc": "Use lights",
+            "name": "Use Lights",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Use lights"
             }
-        }, 
+        },
         {
-            "attr": "mtl_transpCutoff", 
-            "default": 0.001, 
-            "desc": "Transparency cutoff", 
-            "name": "Transp. Cutoff", 
-            "type": "FLOAT", 
+            "attr": "light_doDefaultLights",
+            "default": true,
+            "desc": "Use default lights (when no lights are presented in a scene)",
+            "name": "Default Lights",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Use default lights"
             }
-        }, 
+        },
         {
-            "attr": "mtl_override_on", 
-            "default": false, 
-            "desc": "Override material", 
-            "name": "Override Material", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_glossy", 
-            "default": true, 
-            "desc": "Render glossy", 
-            "name": "Render Glossy", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mtl_uninvertedNormalBump", 
-            "default": false, 
-            "desc": "If true the normal bump in tangent space will not be inverted on flipped UVs", 
-            "name": "Uninverted Normal Bump", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "geom_backfaceCull", 
-            "default": false, 
-            "desc": "If true, back faces will be invisible to camera and shadow rays", 
-            "name": "Force Back Face Culling", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "ray_bias", 
-            "default": 0, 
-            "desc": "Secondary ray bias", 
-            "name": "Sec. Ray Bias", 
-            "type": "FLOAT", 
+            "attr": "light_doHiddenLights",
+            "default": false,
+            "desc": "Render hidden lights",
+            "name": "Hidden Lights",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Use hidden lights"
             }
-        }, 
+        },
         {
-            "attr": "misc_lowThreadPriority", 
-            "default": false, 
-            "desc": "Low thread priority", 
-            "name": "Low Thread Priority", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "gi_texFilteringMultiplier", 
-            "default": 1, 
-            "desc": "GI texturing multiplier", 
-            "type": "FLOAT", 
+            "attr": "light_doShadows",
+            "default": true,
+            "desc": "Render shadows",
+            "name": "Shadows",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Shadows"
             }
-        }, 
+        },
         {
-            "attr": "misc_abortOnMissingAsset", 
-            "default": false, 
-            "desc": "", 
-            "name": "Abort On Missing Asset", 
-            "type": "BOOL"
-        }, 
+            "attr": "light_onlyGI",
+            "default": false,
+            "desc": "Use only GI from lights",
+            "name": "Produce GI Only",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Show GI only"
+            }
+        },
         {
-            "attr": "misc_transferAssets", 
-            "default": false, 
-            "desc": "Transfer missing assets on DR", 
-            "name": "Transfer Assets", 
-            "type": "BOOL"
-        }, 
+            "attr": "light_disableSelfIllumination",
+            "default": true,
+            "desc": "self-Illumination",
+            "name": "Self Illumination",
+            "type": "BOOL",
+            "ui": {
+                "inverted": true,
+                "display_name": "Disable self-illumination"
+            }
+        },
         {
-            "attr": "misc_useCachedAssets", 
-            "default": true, 
-            "desc": "Use cached assets on DR", 
-            "name": "Use Cached Assets", 
-            "type": "BOOL"
-        }, 
+            "attr": "gi_dontRenderImage",
+            "default": false,
+            "desc": "Don't render final image",
+            "name": "Calculate GI Only",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Don't render final image"
+            }
+        },
         {
-            "attr": "dr_assetsCacheLimitType", 
-            "default": "0", 
-            "desc": "Type of the assets cache limit", 
+            "attr": "mtl_reflectionRefraction",
+            "default": true,
+            "desc": "Render reflections / refractions",
+            "name": "Render Reflection / Refraction",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Reflection / Refraction"
+            }
+        },
+        {
+            "attr": "mtl_limitDepth",
+            "default": false,
+            "desc": "Limit max depth",
+            "name": "Limit Depth",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use global max depth"
+            }
+        },
+        {
+            "attr": "mtl_maxDepth",
+            "default": 5,
+            "desc": "Max. ray depth for reflections and refractions",
+            "name": "Max Ray Depth",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Global max depth",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "mtl_doMaps",
+            "default": true,
+            "desc": "Render textures",
+            "name": "Use Textures",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Maps"
+            }
+        },
+        {
+            "attr": "mtl_filterMaps",
+            "default": true,
+            "desc": "Filter textures",
+            "name": "Filter Textures",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Filter maps"
+            }
+        },
+        {
+            "attr": "mtl_filterMapsForSecondaryRays",
+            "default": true,
+            "desc": "false to turn off filtering for glossy and GI rays",
+            "name": "Filter Textures For GI",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Filter maps for glossy/GI rays"
+            }
+        },
+        {
+            "attr": "mtl_transpMaxLevels",
+            "default": 50,
+            "desc": "Max. transparency levels",
+            "name": "Max Transp. Levels",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max. transparency levels"
+            }
+        },
+        {
+            "attr": "mtl_transpCutoff",
+            "default": 0.001,
+            "desc": "Transparency cutoff",
+            "name": "Transp. Cutoff",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Transparency cutoff"
+            }
+        },
+        {
+            "attr": "mtl_override_on",
+            "default": false,
+            "desc": "Override material",
+            "name": "Override Material",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Override material"
+            }
+        },
+        {
+            "attr": "mtl_glossy",
+            "default": true,
+            "desc": "Render glossy",
+            "name": "Render Glossy",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Glossy effects"
+            }
+        },
+        {
+            "attr": "mtl_uninvertedNormalBump",
+            "default": false,
+            "desc": "If true the normal bump in tangent space will not be inverted on flipped UVs",
+            "name": "Uninverted Normal Bump",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Uninverted normal bump"
+            }
+        },
+        {
+            "attr": "geom_backfaceCull",
+            "default": false,
+            "desc": "If true, back faces will be invisible to camera and shadow rays",
+            "name": "Force Back Face Culling",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Force back face culling"
+            }
+        },
+        {
+            "attr": "ray_bias",
+            "default": 0,
+            "desc": "Secondary ray bias",
+            "name": "Sec. Ray Bias",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Secondary ray bias"
+            }
+        },
+        {
+            "attr": "misc_lowThreadPriority",
+            "default": false,
+            "desc": "Low thread priority",
+            "name": "Low Thread Priority",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Low thread priority"
+            }
+        },
+        {
+            "attr": "gi_texFilteringMultiplier",
+            "default": 1,
+            "desc": "GI texturing multiplier",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "GI texture filtering multiplier"
+            }
+        },
+        {
+            "attr": "misc_abortOnMissingAsset",
+            "default": false,
+            "desc": "",
+            "name": "Abort On Missing Asset",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Abort rendering on missing asset"
+            }
+        },
+        {
+            "attr": "misc_transferAssets",
+            "default": false,
+            "desc": "Transfer missing assets on DR",
+            "name": "Transfer Assets",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Transfer missing assets on DR"
+            }
+        },
+        {
+            "attr": "misc_useCachedAssets",
+            "default": true,
+            "desc": "Use cached assets on DR",
+            "name": "Use Cached Assets",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Use cached assets on DR"
+            }
+        },
+        {
+            "attr": "dr_assetsCacheLimitType",
+            "default": "0",
+            "desc": "Type of the assets cache limit",
             "items": [
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     "Assets are never deleted from the cache folder"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Age (Hours)", 
+                    "1",
+                    "Age (Hours)",
                     "Assets that have been transferred before the specified period of time are deleted; the specified value is in hours"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Size (GB)", 
+                    "2",
+                    "Size (GB)",
                     "Assets are deleted from oldest to freshly received until the cache folder is below the specified size in gigabytes"
                 ]
-            ], 
-            "name": "Cache Limit Type", 
-            "type": "ENUM"
-        }, 
-        {
-            "attr": "dr_assetsCacheLimitValue", 
-            "default": 0, 
-            "desc": "Value of the assets cache limit", 
-            "name": "Cache Limit", 
-            "type": "FLOAT", 
+            ],
+            "name": "Cache Limit Type",
+            "type": "ENUM",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Cache limit type"
             }
-        }, 
+        },
         {
-            "attr": "dr_overwriteLocalCacheSettings", 
-            "default": false, 
-            "desc": "If is true the client's cache settings will overwrite server settings", 
-            "name": "Overwrite Cache Settings", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "ray_max_intensity_on", 
-            "default": false, 
-            "desc": "Enable clamping of secondary rays", 
-            "name": "Limit Ray Intensity", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "ray_max_intensity", 
-            "default": 20, 
-            "desc": "The max secondary ray intensity when ray_max_intensity_on is enabled", 
-            "name": "Max Ray Intensity", 
-            "type": "FLOAT", 
+            "attr": "dr_assetsCacheLimitValue",
+            "default": 0,
+            "desc": "Value of the assets cache limit",
+            "name": "Cache Limit",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Cache limit value"
             }
-        }, 
+        },
         {
-            "attr": "mtl_override", 
-            "default": "", 
-            "desc": "Override material", 
-            "skip": true, 
+            "attr": "dr_overwriteLocalCacheSettings",
+            "default": false,
+            "desc": "If is true the client's cache settings will overwrite server settings",
+            "name": "Overwrite Cache Settings",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Overwrite local cache settings"
+            }
+        },
+        {
+            "attr": "ray_max_intensity_on",
+            "default": false,
+            "desc": "Enable clamping of secondary rays",
+            "name": "Limit Ray Intensity",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Clamp max ray intensity"
+            }
+        },
+        {
+            "attr": "ray_max_intensity",
+            "default": 20,
+            "desc": "The max secondary ray intensity when ray_max_intensity_on is enabled",
+            "name": "Max Ray Intensity",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max ray intensity",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "mtl_override",
+            "default": "",
+            "desc": "Override material",
+            "skip": true,
             "type": "STRING"
+        },
+        {
+            "attr": "mtl_SSSEnabled",
+            "desc": "",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "SSS enabled"
+            }
+        },
+        {
+            "attr": "probabilistic_lights_on",
+            "desc": "Enable probabilistic lights",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Enable probabilistic lights"
+            }
+        },
+        {
+            "attr": "num_probabilistic_lights",
+            "desc": "The number of probabilistic lights to use when probabilistic_lights_on is true",
+            "type": "INT",
+            "default": 8,
+            "ui": {
+                "display_name": "Number of probabilistic lights",
+                "enabled": true,
+                "min": 1,
+                "max": 1000000
+            }
+        },
+        {
+            "attr": "probabilistic_vol_on",
+            "desc": "Enable probabilistic volumetric sampling",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Enable probabilistic volumetrics"
+            }
+        },
+        {
+            "attr": "probabilistic_vol_samples",
+            "desc": "The number of probabilistic samples to shade for primary/shadow rays when probabilistic_vol_on is true",
+            "type": "INT",
+            "default": 5,
+            "ui": {
+                "display_name": "Number of probabilistic samples",
+                "enabled": true,
+                "min": 1,
+                "max": 1000000
+            }
+        },
+        {
+            "attr": "probabilistic_vol_gi_samples",
+            "desc": "The number of probabilistic samples to shade for gi/glossy when probabilistic_vol_on is true",
+            "type": "INT",
+            "default": 5,
+            "ui": {
+                "display_name": "Number of probabilistic samples",
+                "enabled": true,
+                "min": 1,
+                "max": 1000000
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

@@ -1,646 +1,656 @@
 {
-    "Desciption": "", 
-    "ID": "BRDFHOPS", 
-    "Name": "HOPS", 
+    "Desciption": "",
+    "ID": "BRDFHOPS",
+    "Name": "HOPS",
     "Parameters": [
         {
-            "attr": "transparency", 
+            "attr": "transparency",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "transparency_tex", 
+            "attr": "transparency_tex",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "transparency_tex_mult", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "transparency_tex_mult",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff", 
-            "default": 0.01, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff",
+            "default": 0.01,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "back_side", 
-            "default": false, 
-            "desc": "", 
+            "attr": "back_side",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_reflections", 
-            "default": true, 
-            "desc": "", 
+            "attr": "trace_reflections",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "trace_depth", 
-            "default": -1, 
-            "desc": "The maximum reflection depth (-1 is controlled by the global options)", 
-            "type": "INT", 
+            "attr": "trace_depth",
+            "default": -1,
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "affect_alpha", 
-            "default": "0", 
-            "desc": "Specifies how render channels are propagated through the BRDF", 
+            "attr": "affect_alpha",
+            "default": "0",
+            "desc": "Specifies how render channels are propagated through the BRDF",
             "items": [
                 [
-                    "0", 
-                    "Color Only", 
+                    "0",
+                    "Color Only",
                     "The transperency will affect only the RGB channel of the final render"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Color+Alpha", 
+                    "1",
+                    "Color+Alpha",
                     "This will cause the material to transmit the alpha of the reflected objects, instead of displaying an opaque alpha"
-                ], 
+                ],
                 [
-                    "2", 
-                    "All Channels", 
+                    "2",
+                    "All Channels",
                     "All channels and render elements will be affected by the transperency of the material"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "reflect_exit_color", 
+            "attr": "reflect_exit_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The color to use when the maximum depth is reached", 
+            ],
+            "desc": "The color to use when the maximum depth is reached",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance", 
-            "default": 1e+18, 
-            "desc": "How much to dim reflection as length of rays increases", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance",
+            "default": 1000000000000000000.0,
+            "desc": "How much to dim reflection as length of rays increases",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_on", 
-            "default": false, 
-            "desc": "True to enable dim distance", 
+            "attr": "reflect_dim_distance_on",
+            "default": false,
+            "desc": "True to enable dim distance",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reflect_dim_distance_falloff", 
-            "default": 0, 
-            "desc": "Fall off for the dim distance", 
-            "type": "FLOAT", 
+            "attr": "reflect_dim_distance_falloff",
+            "default": 0,
+            "desc": "Fall off for the dim distance",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "glossyAsGI", 
-            "default": "1", 
-            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays", 
+            "attr": "glossyAsGI",
+            "default": "1",
+            "desc": "Determines if the glossy rays are treated by V-Ray as GI rays",
             "items": [
                 [
-                    "0", 
-                    "Never", 
+                    "0",
+                    "Never",
                     "Never"
-                ], 
+                ],
                 [
-                    "1", 
-                    "GI", 
+                    "1",
+                    "GI",
                     "Only for rays that are already marked as GI"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Always", 
+                    "2",
+                    "Always",
                     ""
                 ]
-            ], 
-            "name": "Glossy As GI", 
+            ],
+            "name": "Glossy As GI",
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "csv_path", 
-            "default": "", 
-            "desc": "", 
-            "subtype": "FILE_PATH", 
-            "type": "STRING"
-        }, 
+            "attr": "csv_path",
+            "default": "",
+            "desc": "",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "csv"
+                ]
+            }
+        },
         {
-            "attr": "csv_color_filter", 
+            "attr": "csv_color_filter",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "flakes_csv_path", 
-            "default": "", 
-            "desc": "", 
-            "subtype": "FILE_PATH", 
-            "type": "STRING"
-        }, 
+            "attr": "flakes_csv_path",
+            "default": "",
+            "desc": "",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "flakecsv"
+                ]
+            }
+        },
         {
-            "attr": "coat_color", 
+            "attr": "coat_color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "coat_strength", 
-            "default": 0.05, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_strength",
+            "default": 0.05,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_glossiness", 
-            "default": 1, 
-            "desc": "The glossiness of the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_glossiness",
+            "default": 1,
+            "desc": "The glossiness of the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_float", 
-            "default": 1.0, 
-            "desc": "Bump texture for the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_bump_float",
+            "default": 1.0,
+            "desc": "Bump texture for the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_color", 
+            "attr": "coat_bump_color",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Bump texture for the coat layer (color version)", 
+            ],
+            "desc": "Bump texture for the coat layer (color version)",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "coat_bump_amount", 
-            "default": 1.0, 
-            "desc": "Bump amount for the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_bump_amount",
+            "default": 1.0,
+            "desc": "Bump amount for the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_type", 
-            "default": "0", 
-            "desc": "The type of bump mapping", 
+            "attr": "coat_bump_type",
+            "default": "0",
+            "desc": "The type of bump mapping",
             "items": [
                 [
-                    "0", 
-                    "Bump", 
+                    "0",
+                    "Bump",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Normal (Tangent)", 
+                    "1",
+                    "Normal (Tangent)",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Normal (Object)", 
+                    "2",
+                    "Normal (Object)",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Normal (Camera)", 
+                    "3",
+                    "Normal (Camera)",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Normal (World)", 
+                    "4",
+                    "Normal (World)",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "From Bump Output", 
+                    "5",
+                    "From Bump Output",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Explicit Normal", 
+                    "6",
+                    "Explicit Normal",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "coat_traceReflections", 
-            "default": false, 
-            "desc": "Toggle reflections for coat layer", 
+            "attr": "coat_traceReflections",
+            "default": false,
+            "desc": "Toggle reflections for coat layer",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "coat_subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "coat_subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_scale", 
-            "default": 0.005, 
-            "desc": "Flake scale - aparent flakes size in the real world", 
-            "type": "FLOAT", 
+            "attr": "flake_scale",
+            "default": 0.005,
+            "desc": "Flake scale - aparent flakes size in the real world",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_size", 
-            "default": 0.125, 
-            "desc": "Flake size multiplier (larger values = more flake overlap)", 
-            "type": "FLOAT", 
+            "attr": "flake_size",
+            "default": 0.125,
+            "desc": "Flake size multiplier (larger values = more flake overlap)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_traceReflections", 
-            "default": false, 
-            "desc": "Toggle reflections for flake layer", 
+            "attr": "flake_traceReflections",
+            "default": false,
+            "desc": "Toggle reflections for flake layer",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "doubleSided", 
-            "default": 1, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "doubleSided",
+            "default": 1,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_glossiness", 
-            "default": 0.8, 
-            "desc": "Flake glossiness (only if reflections are enabled)", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "flake_glossiness",
+            "default": 0.8,
+            "desc": "Flake glossiness (only if reflections are enabled)",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "environment_override", 
+            "attr": "environment_override",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Environment override texture", 
+            ],
+            "desc": "Environment override texture",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "environment_priority", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "environment_priority",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "enabled_layers", 
-            "default": 7, 
-            "desc": "Enabled layers OR mask (1 - base, 2 - flakes, 4 - coat)", 
-            "skip": true, 
-            "type": "INT", 
+            "attr": "enabled_layers",
+            "default": 7,
+            "desc": "Enabled layers OR mask (1 - base, 2 - flakes, 4 - coat)",
+            "skip": true,
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "enabled_layers_base", 
-            "default": true, 
-            "desc": "Enabled Base layer", 
-            "name": "Base", 
-            "skip": true, 
+            "attr": "enabled_layers_base",
+            "default": true,
+            "desc": "Enabled Base layer",
+            "name": "Base",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "enabled_layers_flakes", 
-            "default": true, 
-            "desc": "Enabled Flakes layer", 
-            "name": "Flakes", 
-            "skip": true, 
+            "attr": "enabled_layers_flakes",
+            "default": true,
+            "desc": "Enabled Flakes layer",
+            "name": "Flakes",
+            "skip": true,
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "enabled_layers_coat", 
-            "default": true, 
-            "desc": "Enabled Coat layer", 
-            "name": "Coat", 
-            "skip": true, 
+            "attr": "enabled_layers_coat",
+            "default": true,
+            "desc": "Enabled Coat layer",
+            "name": "Coat",
+            "skip": true,
             "type": "BOOL"
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
                 "attrs": [
                     {
                         "name": "csv_path"
-                    }, 
+                    },
                     {
                         "name": "flakes_csv_path"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "enabled_layers_base"
-                    }, 
+                    },
                     {
                         "name": "enabled_layers_flakes"
-                    }, 
+                    },
                     {
                         "name": "enabled_layers_coat"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "label": "Coat Layer", 
+                "label": "Coat Layer",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "active": {
                     "prop": "enabled_layers_base"
-                }, 
+                },
                 "attrs": [
                     {
-                        "label": "Bump Type", 
+                        "label": "Bump Type",
                         "name": "coat_bump_type"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "active": {
                     "prop": "enabled_layers_base"
-                }, 
+                },
                 "attrs": [
                     {
-                        "label": "Subdivs", 
+                        "label": "Subdivs",
                         "name": "coat_subdivs"
-                    }, 
+                    },
                     {
-                        "label": "Trace Reflections", 
+                        "label": "Trace Reflections",
                         "name": "coat_traceReflections"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "label": "Flake Layer", 
+                "label": "Flake Layer",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "active": {
                     "prop": "enabled_layers_flakes"
-                }, 
-                "layout": "SPLIT", 
+                },
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Scale", 
+                                "label": "Scale",
                                 "name": "flake_scale"
-                            }, 
+                            },
                             {
-                                "label": "Size", 
+                                "label": "Size",
                                 "name": "flake_size"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Glossiness", 
+                                "label": "Glossiness",
                                 "name": "flake_glossiness"
-                            }, 
+                            },
                             {
-                                "label": "Trace Reflections", 
+                                "label": "Trace Reflections",
                                 "name": "flake_traceReflections"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "subdivs"
-                    }, 
+                    },
                     {
                         "name": "cutoff"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "trace_reflections"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "trace_reflections"
-                        }, 
+                        },
                         "name": "trace_depth"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "active": {
                     "prop": "trace_reflections"
-                }, 
-                "layout": "SPLIT", 
+                },
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Dim Distance", 
+                                "label": "Dim Distance",
                                 "name": "reflect_dim_distance_on"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "active": {
                             "prop": "reflect_dim_distance_on"
-                        }, 
-                        "align": true, 
+                        },
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Distance", 
+                                "label": "Distance",
                                 "name": "reflect_dim_distance"
-                            }, 
+                            },
                             {
-                                "label": "Falloff", 
+                                "label": "Falloff",
                                 "name": "reflect_dim_distance_falloff"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "reflect_exit_color"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "csv_color_filter"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "affect_alpha"
-                    }, 
+                    },
                     {
                         "name": "glossyAsGI"
-                    }, 
+                    },
                     {
                         "name": "back_side"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

@@ -1,351 +1,394 @@
 {
-    "Desciption": "", 
-    "ID": "TexDirt", 
-    "Name": "Dirt", 
+    "Desciption": "",
+    "ID": "TexDirt",
+    "Name": "Dirt",
     "Parameters": [
         {
-            "attr": "white_color", 
+            "attr": "white_color",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "Unoccluded Color"
+            }
+        },
         {
-            "attr": "black_color", 
+            "attr": "black_color",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "radius", 
-            "default": 0.1, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "display_name": "Occluded Color"
+            }
+        },
+        {
+            "attr": "radius",
+            "default": 0.1,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "distribution", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "distribution",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "falloff",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "falloff", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "bias_x",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bias_x", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "bias_y",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bias_y", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "bias_z",
+            "default": 0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "bias_z", 
-            "default": 0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "ignore_for_gi",
+            "default": true,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "consider_same_object_only",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "invert_normal",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "double_sided",
+            "default": false,
+            "desc": "if true, the occlusion on both sides of the surface will be calculated",
+            "type": "BOOL"
+        },
+        {
+            "attr": "work_with_transparency",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "ignore_self_occlusion",
+            "default": false,
+            "desc": "",
+            "type": "BOOL"
+        },
+        {
+            "attr": "render_nodes",
+            "default": "",
+            "desc": "",
+            "type": "PLUGIN",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "rollout": "",
+                "display_name": "Exclude",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
             }
-        }, 
+        },
         {
-            "attr": "ignore_for_gi", 
-            "default": true, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
+            "attr": "render_nodes_inclusive",
+            "default": false,
+            "desc": "if true the render_nodes list is inclusive",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "As Inclusive list"
+            }
+        },
         {
-            "attr": "consider_same_object_only", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
+            "attr": "affect_result_nodes",
+            "default": "",
+            "desc": "",
+            "type": "PLUGIN",
+            "ui": {
+                "rollout": "",
+                "display_name": "Result Affect",
+                "attributes": [
+                    [
+                        "objectSet",
+                        1
+                    ]
+                ]
+            }
+        },
         {
-            "attr": "invert_normal", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
+            "attr": "affect_result_nodes_inclusive",
+            "default": false,
+            "desc": "if true the affect_result_nodes list is inclusive",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "As Inclusive list"
+            }
+        },
         {
-            "attr": "double_sided", 
-            "default": false, 
-            "desc": "if true, the occlusion on both sides of the surface will be calculated", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "work_with_transparency", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "ignore_self_occlusion", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "render_nodes", 
-            "default": "", 
-            "desc": "", 
-            "type": "PLUGIN"
-        }, 
-        {
-            "attr": "render_nodes_inclusive", 
-            "default": false, 
-            "desc": "if true the render_nodes list is inclusive", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "affect_result_nodes", 
-            "default": "", 
-            "desc": "", 
-            "type": "PLUGIN"
-        }, 
-        {
-            "attr": "affect_result_nodes_inclusive", 
-            "default": false, 
-            "desc": "if true the affect_result_nodes list is inclusive", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "mode", 
-            "default": "0", 
-            "desc": "Mode", 
+            "attr": "mode",
+            "default": "0",
+            "desc": "Mode",
             "items": [
                 [
-                    "0", 
-                    "Ambient Occlusion", 
+                    "0",
+                    "Ambient Occlusion",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Phong Reflection Occlusion", 
+                    "1",
+                    "Phong Reflection Occlusion",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Blinn Reflection Occlusion", 
+                    "2",
+                    "Blinn Reflection Occlusion",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Ward Reflection Occlusion", 
+                    "3",
+                    "Ward Reflection Occlusion",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "environment_occlusion", 
-            "default": false, 
-            "desc": "true to compute the environment for unoccluded samples", 
+            "attr": "environment_occlusion",
+            "default": false,
+            "desc": "true to compute the environment for unoccluded samples",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "affect_reflection_elements", 
-            "default": false, 
-            "desc": "true to add the occlusion to relection render elements when mode>0", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "glossiness", 
-            "default": 1.0, 
-            "desc": "A texture for the glossiness when mode>0", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "affect_reflection_elements",
+            "default": false,
+            "desc": "true to add the occlusion to relection render elements when mode>0",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "enabled": true
             }
+        },
+        {
+            "attr": "glossiness",
+            "default": 1.0,
+            "desc": "A texture for the glossiness when mode>0",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "use_texture_for_excluded",
+            "desc": "True to return the unoccluded color texture, if the object is excluded. Otherwise return (0,0,0,0)",
+            "type": "BOOL",
+            "default": true
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {
-                "align": false, 
+                "align": false,
                 "attrs": [
                     {
-                        "expand": false, 
+                        "expand": false,
                         "name": "mode"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "distribution"
-                            }, 
+                            },
                             {
                                 "name": "glossiness"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "falloff"
-                            }, 
+                            },
                             {
                                 "name": "subdivs"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "align": true, 
+                "align": true,
                 "attrs": [
                     {
-                        "label": "X", 
+                        "label": "X",
                         "name": "bias_x"
-                    }, 
+                    },
                     {
-                        "label": "Y", 
+                        "label": "Y",
                         "name": "bias_y"
-                    }, 
+                    },
                     {
-                        "label": "Z", 
+                        "label": "Z",
                         "name": "bias_z"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "invert_normal"
-                            }, 
+                            },
                             {
                                 "name": "ignore_for_gi"
-                            }, 
+                            },
                             {
                                 "name": "ignore_self_occlusion"
-                            }, 
+                            },
                             {
                                 "name": "consider_same_object_only"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "affect_reflection_elements"
-                            }, 
+                            },
                             {
                                 "name": "work_with_transparency"
-                            }, 
+                            },
                             {
                                 "name": "environment_occlusion"
-                            }, 
+                            },
                             {
                                 "name": "double_sided"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "render_nodes_inclusive"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "affect_result_nodes_inclusive"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

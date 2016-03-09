@@ -1,0 +1,10 @@
+{
+    "ID": "FilterPoint",
+    "Name": "Filter Point",
+    "Desciption": "FilterPoint",
+    "Type": "SETTINGS",
+    "Parameters": [],
+    "Widget": {
+        "widgets": []
+    }
+}

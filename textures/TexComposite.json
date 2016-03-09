@@ -1,0 +1,57 @@
+{
+    "ID": "TexComposite",
+    "Name": "Composite",
+    "Desciption": "TexComposite",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color_a",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "alpha_a",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "color_b",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "alpha_b",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 1.0
+        },
+        {
+            "attr": "operation",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "factor",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

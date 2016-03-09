@@ -1,0 +1,66 @@
+{
+    "ID": "VolumeFog",
+    "Name": "Volume Fog",
+    "Desciption": "VolumeFog",
+    "Type": "VOLUMETRIC",
+    "Parameters": [
+        {
+            "attr": "emission",
+            "desc": "Fog emission color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color",
+            "desc": "Fog color",
+            "type": "COLOR",
+            "default": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        {
+            "attr": "color_tex",
+            "desc": "Fog color texture map",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color_mult",
+            "desc": "Fog color multiplier",
+            "type": "FLOAT",
+            "default": 0.10000000149011612
+        },
+        {
+            "attr": "ior",
+            "desc": "The IOR for the volume",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "bias",
+            "desc": "Bias for the fogging distance",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "closed_volume",
+            "desc": "If true, the fog will shade only closed volumes",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

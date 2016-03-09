@@ -7,13 +7,21 @@
             "attr": "bg_color",
             "desc": "Environment color",
             "type": "COLOR",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "bg_tex",
             "desc": "Environment map",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "bg_tex_mult",
@@ -25,13 +33,21 @@
             "attr": "gi_color",
             "desc": "GI (skylight) color",
             "type": "COLOR",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "gi_tex",
             "desc": "GI (skylight) map",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "gi_tex_mult",
@@ -43,13 +59,21 @@
             "attr": "reflect_color",
             "desc": "Reflection color",
             "type": "COLOR",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "reflect_tex",
             "desc": "Reflection map",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "reflect_tex_mult",
@@ -61,13 +85,21 @@
             "attr": "refract_color",
             "desc": "Refraction color",
             "type": "COLOR",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "refract_tex",
             "desc": "Refraction map",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "refract_tex_mult",
@@ -79,13 +111,21 @@
             "attr": "secondary_matte_color",
             "desc": "Secondary matte color",
             "type": "COLOR",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "secondary_matte_tex",
             "desc": "Secondary matte texture",
             "type": "TEXTURE",
-            "default": [0, 0, 0]
+            "default": [
+                0,
+                0,
+                0
+            ]
         },
         {
             "attr": "secondary_matte_tex_mult",
@@ -109,7 +149,11 @@
             "attr": "global_light_level",
             "desc": "A global light level multiplier for all lights",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ]
         },
         {
             "attr": "use_bg",

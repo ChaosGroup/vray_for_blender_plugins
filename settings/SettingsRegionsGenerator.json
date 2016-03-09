@@ -1,112 +1,115 @@
 {
-    "Desciption": "Regions generator settings", 
-    "ID": "SettingsRegionsGenerator", 
-    "Name": "Regions Generator", 
+    "Desciption": "Regions generator settings",
+    "ID": "SettingsRegionsGenerator",
+    "Name": "Regions Generator",
     "Parameters": [
         {
-            "attr": "xc", 
-            "default": 48, 
-            "desc": "Determines the maximum region width in pixels (Bucket W/H is selected) or the number of regions in the horizontal direction (when Region Count is selected)", 
-            "name": "W", 
-            "type": "INT", 
+            "attr": "xc",
+            "default": 48,
+            "desc": "Determines the maximum region width in pixels (Bucket W/H is selected) or the number of regions in the horizontal direction (when Region Count is selected)",
+            "name": "W",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "yc", 
-            "default": 48, 
-            "desc": "Determines the maximum region height in pixels (Bucket W/H is selected) or the number of regions in the vertical direction (when Region Count is selected)", 
-            "name": "H", 
-            "type": "INT", 
+            "attr": "yc",
+            "default": 48,
+            "desc": "Determines the maximum region height in pixels (Bucket W/H is selected) or the number of regions in the vertical direction (when Region Count is selected)",
+            "name": "H",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "xymeans", 
-            "default": "0", 
-            "desc": "Size in pixels or number of regions", 
+            "attr": "xymeans",
+            "default": "0",
+            "desc": "Size in pixels or number of regions",
             "items": [
                 [
-                    "0", 
-                    "Bucket W/H", 
+                    "0",
+                    "Bucket W/H",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Region Count", 
+                    "1",
+                    "Region Count",
                     ""
                 ]
-            ], 
-            "name": "XY Means", 
-            "type": "ENUM"
-        }, 
+            ],
+            "name": "XY Means",
+            "type": "ENUM",
+            "ui": {
+                "display_name": "Size in pixels or number of regions"
+            }
+        },
         {
-            "attr": "seqtype", 
-            "default": "4", 
-            "desc": "Determines the order in which the regions are rendered", 
+            "attr": "seqtype",
+            "default": "4",
+            "desc": "Determines the order in which the regions are rendered",
             "items": [
                 [
-                    "0", 
-                    "Top-Bottom", 
+                    "0",
+                    "Top-Bottom",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Left-Right", 
+                    "1",
+                    "Left-Right",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Checker", 
+                    "2",
+                    "Checker",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Spiral", 
+                    "3",
+                    "Spiral",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Triangulation", 
+                    "4",
+                    "Triangulation",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "Hilbert", 
+                    "5",
+                    "Hilbert",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "reverse", 
-            "default": false, 
-            "desc": "Reverses the region sequence order", 
+            "attr": "reverse",
+            "default": false,
+            "desc": "Reverses the region sequence order",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "dynbuckets", 
-            "default": true, 
-            "desc": "", 
+            "attr": "dynbuckets",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "lock_size", 
-            "default": false, 
-            "desc": "Lock bucket size (X = Y)", 
-            "skip": true, 
+            "attr": "lock_size",
+            "default": false,
+            "desc": "Lock bucket size (X = Y)",
+            "skip": true,
             "type": "BOOL"
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

@@ -1,0 +1,77 @@
+{
+    "ID": "TexDistanceBetween",
+    "Name": "Distance Between",
+    "Desciption": "TexDistanceBetween",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "point1",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "point2",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transform1",
+            "desc": "",
+            "type": "TRANSFORM_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transform2",
+            "desc": "",
+            "type": "TRANSFORM_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "distance",
+            "desc": "",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

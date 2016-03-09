@@ -11,8 +11,14 @@
             },
             {
                 "attrs": [
-                    { "name": "base_mult", "label": "Mult." },
-                    { "name": "base_gamma", "label": "Gamma" }
+                    {
+                        "name": "base_mult",
+                        "label": "Mult."
+                    },
+                    {
+                        "name": "base_gamma",
+                        "label": "Gamma"
+                    }
                 ],
                 "align": true,
                 "layout": "ROW"
@@ -22,54 +28,85 @@
             },
             {
                 "attrs": [
-                    { "name": "base_tint_on", "label": "Base Tint" }
+                    {
+                        "name": "base_tint_on",
+                        "label": "Base Tint"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "base_tint", "label": "" },
-                    { "name": "base_tint_strength", "label": "Strength" }
+                    {
+                        "name": "base_tint",
+                        "label": ""
+                    },
+                    {
+                        "name": "base_tint_strength",
+                        "label": "Strength"
+                    }
                 ],
-                "active": { "prop": "base_tint_on" },
+                "active": {
+                    "prop": "base_tint_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
-
             {
                 "layout": "SEPARATOR"
             },
             {
                 "attrs": [
-                    { "name": "spots_on", "label": "Hot / Dark Spot" }
+                    {
+                        "name": "spots_on",
+                        "label": "Hot / Dark Spot"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_mult", "label": "Mult." },
-                    { "name": "spots_mode", "label": "Mode." }
+                    {
+                        "name": "spots_mult",
+                        "label": "Mult."
+                    },
+                    {
+                        "name": "spots_mode",
+                        "label": "Mode."
+                    }
                 ],
-                "active": { "prop": "spots_on" },
+                "active": {
+                    "prop": "spots_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_tint_on", "label": "Spots Tint" }
+                    {
+                        "name": "spots_tint_on",
+                        "label": "Spots Tint"
+                    }
                 ],
                 "layout": "ROW"
             },
             {
                 "attrs": [
-                    { "name": "spots_tint", "label": "" },
-                    { "name": "spots_tint_strength", "label": "Strength" }
+                    {
+                        "name": "spots_tint",
+                        "label": ""
+                    },
+                    {
+                        "name": "spots_tint_strength",
+                        "label": "Strength"
+                    }
                 ],
-                "active": { "prop": "spots_tint_on" },
+                "active": {
+                    "prop": "spots_tint_on"
+                },
                 "align": true,
                 "layout": "ROW"
             },
-
             {
                 "layout": "SEPARATOR"
             },
@@ -78,17 +115,27 @@
                 "splits": [
                     {
                         "attrs": [
-                            { "name": "u_offset" },
-                            { "name": "v_offset" }
+                            {
+                                "name": "u_offset"
+                            },
+                            {
+                                "name": "v_offset"
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     },
                     {
                         "attrs": [
-                            { "name": "spots_oradius" },
-                            { "name": "spots_iradius" },
-                            { "name": "spots_exp" }
+                            {
+                                "name": "spots_oradius"
+                            },
+                            {
+                                "name": "spots_iradius"
+                            },
+                            {
+                                "name": "spots_exp"
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
@@ -100,24 +147,36 @@
                 "splits": [
                     {
                         "attrs": [
-                            { "name": "u_tiling_on" },
-                            { "name": "u_tiling", "active": { "prop": "u_tiling_on" } }
-
+                            {
+                                "name": "u_tiling_on"
+                            },
+                            {
+                                "name": "u_tiling",
+                                "active": {
+                                    "prop": "u_tiling_on"
+                                }
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     },
                     {
                         "attrs": [
-                            { "name": "v_tiling_on" },
-                            { "name": "v_tiling", "active": { "prop": "v_tiling_on" } }
+                            {
+                                "name": "v_tiling_on"
+                            },
+                            {
+                                "name": "v_tiling",
+                                "active": {
+                                    "prop": "v_tiling_on"
+                                }
+                            }
                         ],
                         "align": true,
                         "layout": "COLUMN"
                     }
                 ]
             },
-
             {
                 "label": "Common Properties",
                 "layout": "SEPARATOR"
@@ -245,7 +304,10 @@
                     ""
                 ]
             ],
-            "type": "ENUM"
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Common"
+            }
         },
         {
             "attr": "alpha_from_intensity",
@@ -280,7 +342,10 @@
             "attr": "invert_alpha",
             "default": true,
             "desc": "If true and invert is on, the resulting texture alpha will be inverted too. If false, just the color will be inverted",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "color_mult",
@@ -335,7 +400,10 @@
             ],
             "desc": "The color when there are no valid uvw coordinates",
             "name": "No UV Color",
-            "type": "TEXTURE"
+            "type": "TEXTURE",
+            "ui": {
+                "display_name": "No UVs Color"
+            }
         },
         {
             "attr": "color",
@@ -367,14 +435,20 @@
             "attr": "out_intensity",
             "default": 1.0,
             "desc": "The resulting intensity",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "ui": {
+                "rollout": "<EndRollout>"
+            }
         },
         {
             "attr": "uvwgen",
             "default": "",
             "desc": "The uvw generator for the texture",
             "name": "Mapping",
-            "type": "UVWGEN"
+            "type": "UVWGEN",
+            "ui": {
+                "rollout": "Mapped"
+            }
         },
         {
             "attr": "placement_type",
@@ -408,7 +482,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -420,7 +495,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -432,7 +508,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -444,7 +521,8 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
@@ -456,32 +534,46 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "enabled": true
             }
         },
         {
             "attr": "tile_u",
             "default": true,
             "desc": "If true there is horizontal tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "tile_v",
             "default": true,
             "desc": "If true there is vertical tiling",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_on",
             "default": false,
             "desc": "If true the noise is enabled",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "UV noise on"
+            }
         },
         {
             "attr": "uv_noise_animate",
             "default": true,
             "desc": "If true the noise is animated",
-            "type": "BOOL"
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Animate UV noise",
+                "enabled": true
+            }
         },
         {
             "attr": "uv_noise_amount",
@@ -492,7 +584,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise amount",
+                "enabled": true
             }
         },
         {
@@ -504,7 +598,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise levels",
+                "enabled": true
             }
         },
         {
@@ -516,7 +612,9 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "display_name": "UV noise size",
+                "enabled": true
             }
         },
         {
@@ -529,7 +627,10 @@
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
-                "soft_min": 0
+                "soft_min": 0,
+                "rollout": "<EndRollout>",
+                "display_name": "UV noise phase",
+                "enabled": true
             }
         },
         {
@@ -537,161 +638,296 @@
             "name": "Base Color",
             "desc": "Base color",
             "type": "COLOR",
-            "skip" : true,
-            "default": [1, 1, 1]
+            "skip": true,
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "ui": {
+                "display_name": "Base Color"
+            }
         },
         {
             "attr": "base_tex",
             "name": "Base Color",
             "desc": "Base texture",
             "type": "TEXTURE",
-            "default": [1, 1, 1, 1]
+            "default": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "ui": {
+                "display_name": "Base Texture",
+                "enabled": true
+            }
         },
         {
             "attr": "base_tex_on",
             "desc": "Turn on base texture",
             "type": "BOOL",
-            "default": true
+            "default": true,
+            "ui": {
+                "display_name": "Use Base Texture"
+            }
         },
         {
             "attr": "base_tint",
             "desc": "Base tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "ui": {
+                "display_name": "Base Tint Color",
+                "enabled": true
+            }
         },
         {
             "attr": "base_tint_strength",
             "desc": "Base tint strength",
             "type": "FLOAT",
-            "default": 0.5
+            "default": 0.5,
+            "ui": {
+                "display_name": "Base Tint Strength",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "base_tint_on",
             "desc": "Turn on base tint",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "rollout": "",
+                "display_name": "Base Tint On"
+            }
         },
         {
             "attr": "base_mult",
             "desc": "Base multiplier",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "rollout": "",
+                "display_name": "Base Multiplier"
+            }
         },
         {
             "attr": "base_gamma",
             "desc": "Base gamma",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "display_name": "Base Gamma",
+                "min": 0.0,
+                "max": 100.0
+            }
         },
         {
             "attr": "spots_on",
             "desc": "Turn on hot/dark spots",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "rollout": "Hot Spot / Dark Spot",
+                "display_name": "Spots On"
+            }
         },
         {
             "attr": "spots_mult",
             "desc": "Spots multiplier",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "display_name": "Spots Multiplier",
+                "enabled": true,
+                "min": 0.0
+            }
         },
         {
             "attr": "spots_mode",
             "desc": "Spots mode",
             "type": "ENUM",
-            "items" : [
-                ["0", "Hot Spot", "Hot spot (Add)"],
-                ["1", "Dark Spot", "Dark spot (Substract)"]
+            "items": [
+                [
+                    "0",
+                    "Hot Spot",
+                    "Hot spot (Add)"
+                ],
+                [
+                    "1",
+                    "Dark Spot",
+                    "Dark spot (Substract)"
+                ]
             ],
-            "default": "0"
+            "default": "0",
+            "ui": {
+                "display_name": "Spots Mode",
+                "enabled": true
+            }
         },
         {
             "attr": "u_offset",
             "desc": "Spots u offset",
             "type": "FLOAT",
-            "default": 0
+            "default": 0,
+            "ui": {
+                "rollout": "",
+                "enabled": true,
+                "min": -100.0,
+                "max": 100.0
+            }
         },
         {
             "attr": "u_tiling",
             "desc": "Spots u tiling",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "u_tiling_on",
             "desc": "Turn on spots u tiling",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "v_offset",
             "desc": "Spots v offset",
             "type": "FLOAT",
-            "default": 0
+            "default": 0,
+            "ui": {
+                "enabled": true,
+                "min": -100.0,
+                "max": 100.0
+            }
         },
         {
             "attr": "v_tiling",
             "desc": "Spots v tiling",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "v_tiling_on",
             "desc": "Turn on v tiling",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "enabled": true
+            }
         },
         {
             "attr": "spots_oradius",
             "name": "Outer Radius",
             "desc": "Fading outer radius",
             "type": "FLOAT",
-            "default": 0.5
+            "default": 0.5,
+            "ui": {
+                "rollout": "",
+                "display_name": "Outer Radius",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "spots_iradius",
             "name": "Inner Radius",
             "desc": "Fading inner radius",
             "type": "FLOAT",
-            "default": 0.4
+            "default": 0.4,
+            "ui": {
+                "display_name": "Inner Radius",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "spots_exp",
             "name": "Softness",
             "desc": "Fading softness",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "display_name": "Softness",
+                "enabled": true,
+                "min": 0.0,
+                "max": 20.0
+            }
         },
         {
             "attr": "spots_tint",
             "desc": "Spots tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "ui": {
+                "display_name": "Spots Tint Color",
+                "enabled": true
+            }
         },
         {
             "attr": "spots_tint_strength",
             "desc": "Spots tint strength",
             "type": "FLOAT",
-            "default": 0.5
+            "default": 0.5,
+            "ui": {
+                "display_name": "Spots Tint Strength",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "spots_tint_on",
             "desc": "Turn on spots tint",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "Spots Tint On",
+                "enabled": true
+            }
         },
         {
             "attr": "grad_vert_on",
             "desc": "Turn on vertical gradient",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "rollout": "Gradients",
+                "display_name": "V Vignette On"
+            }
         },
         {
             "attr": "grad_vert_flip",
             "name": "Flip",
             "desc": "Flip vertical gradient",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "V Vignette Flip",
+                "enabled": true
+            }
         },
         {
             "attr": "grad_vert_pos",
@@ -709,14 +945,22 @@
             "attr": "grad_horiz_on",
             "desc": "Turn on horizontal gradient",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "rollout": "",
+                "display_name": "U Vignette On"
+            }
         },
         {
             "attr": "grad_horiz_flip",
             "name": "Flip",
             "desc": "Flip horizontal gradient",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "U Vignette Flip",
+                "enabled": true
+            }
         },
         {
             "attr": "grad_horiz_pos",
@@ -741,7 +985,11 @@
             "name": "Flip",
             "desc": "Flip radial gradient",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "Radial Vignette Flip",
+                "enabled": true
+            }
         },
         {
             "attr": "grad_rad_pos",
@@ -766,7 +1014,11 @@
             "name": "Flip",
             "desc": "Flip frame",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "Frame Vignette Flip",
+                "enabled": true
+            }
         },
         {
             "attr": "frame_pos",
@@ -784,59 +1036,104 @@
             "attr": "frame_tint",
             "desc": "Frame tint color",
             "type": "COLOR",
-            "default": [1, 1, 1]
+            "default": [
+                1,
+                1,
+                1
+            ],
+            "ui": {
+                "display_name": "Frame Tint On",
+                "enabled": true
+            }
         },
         {
             "attr": "frame_tint_strength",
             "desc": "Frame tint strength",
             "type": "FLOAT",
-            "default": 0.5
+            "default": 0.5,
+            "ui": {
+                "display_name": "Frame Tint Strength",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "frame_tint_on",
             "desc": "Turn on frame tint",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "Frame Tint On",
+                "enabled": true
+            }
         },
         {
             "attr": "noise_amount",
             "desc": "Frame noise amount",
             "type": "FLOAT",
-            "default": 0
+            "default": 0,
+            "ui": {
+                "rollout": "",
+                "display_name": "Frame Noise Amount",
+                "enabled": true,
+                "min": 0.0,
+                "max": 1.0
+            }
         },
         {
             "attr": "noise_size",
             "desc": "Frame noise size",
             "type": "FLOAT",
-            "default": 1
+            "default": 1,
+            "ui": {
+                "display_name": "Frame Noise Size",
+                "enabled": true,
+                "min": 0.00009999999747378751
+            }
         },
         {
             "attr": "noise_phase",
             "desc": "Frame noise phase",
             "type": "FLOAT",
-            "default": 0
+            "default": 0,
+            "ui": {
+                "display_name": "Frame Noise Phase",
+                "enabled": true,
+                "min": -1000.0,
+                "max": 1000.0
+            }
         },
         {
             "attr": "noise_fractal",
             "desc": "Turn on frame fractal noise",
             "type": "BOOL",
-            "default": false
+            "default": false,
+            "ui": {
+                "display_name": "Fractal Noise",
+                "enabled": true
+            }
         },
         {
             "attr": "noise_levels",
             "desc": "Frame noise levels",
             "type": "INT",
-            "default": 3
+            "default": 3,
+            "ui": {
+                "display_name": "Fractal Levels",
+                "enabled": true,
+                "min": 1,
+                "max": 10
+            }
         },
-
         {
             "attr": "ramp_grad_vert",
             "default": "",
             "desc": "Vertical gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_vert_col",
-                "positions" : "grad_vert_pos"
+                "colors": "grad_vert_col",
+                "positions": "grad_vert_pos"
             }
         },
         {
@@ -845,8 +1142,8 @@
             "desc": "Horizontal gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_horiz_col",
-                "positions" : "grad_horiz_pos"
+                "colors": "grad_horiz_col",
+                "positions": "grad_horiz_pos"
             }
         },
         {
@@ -855,8 +1152,12 @@
             "desc": "Radial gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "grad_rad_col",
-                "positions" : "grad_rad_pos"
+                "colors": "grad_rad_col",
+                "positions": "grad_rad_pos"
+            },
+            "ui": {
+                "rollout": "",
+                "display_name": "Radial Vignette On"
             }
         },
         {
@@ -865,10 +1166,53 @@
             "desc": "Frame gradient",
             "type": "WIDGET_RAMP",
             "attrs": {
-                "colors"    : "frame_col",
-                "positions" : "frame_pos"
+                "colors": "frame_col",
+                "positions": "frame_pos"
+            },
+            "ui": {
+                "rollout": "",
+                "display_name": "Frame Vignette On"
+            }
+        },
+        {
+            "attr": "grad_vert",
+            "desc": "The V Vignette gradient",
+            "type": "PLUGIN",
+            "default": null,
+            "ui": {
+                "display_name": "V Vignette Gradient",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "grad_horiz",
+            "desc": "The U Vignette gradient",
+            "type": "PLUGIN",
+            "default": null,
+            "ui": {
+                "display_name": "U Vignette Gradient",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "grad_rad",
+            "desc": "The Radial Vignette gradient",
+            "type": "PLUGIN",
+            "default": null,
+            "ui": {
+                "display_name": "Radial Vignette Gradient",
+                "enabled": true
+            }
+        },
+        {
+            "attr": "grad_frame",
+            "desc": "The Frame Vignette gradient",
+            "type": "PLUGIN",
+            "default": null,
+            "ui": {
+                "display_name": "Frame Vignette Gradient",
+                "enabled": true
             }
         }
     ]
 }
-

@@ -1,586 +1,637 @@
 {
-    "Desciption": "Car paint imitation", 
-    "ID": "BRDFCarPaint", 
-    "Name": "Car Paint", 
+    "Desciption": "Car paint imitation",
+    "ID": "BRDFCarPaint",
+    "Name": "Car Paint",
     "Parameters": [
         {
-            "attr": "base_color", 
+            "attr": "base_color",
             "default": [
-                0.3, 
-                0.4, 
+                0.3,
+                0.4,
                 0.5
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "base_reflection", 
-            "default": 0.5, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "tab": "V-Ray Car Paint",
+                "rollout": "Base layer parameters"
+            }
+        },
+        {
+            "attr": "base_reflection",
+            "default": 0.5,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "base_glossiness", 
-            "default": 0.6, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "base_glossiness",
+            "default": 0.6,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "base_bump_float", 
-            "default": 0.0, 
-            "desc": "Bump texture for the base layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "base_bump_float",
+            "default": 0.0,
+            "desc": "Bump texture for the base layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "rollout": ""
             }
-        }, 
+        },
         {
-            "attr": "base_bump_color", 
+            "attr": "base_bump_color",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "Bump texture for the base layer (color version)", 
+            ],
+            "desc": "Bump texture for the base layer (color version)",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "base_bump_amount", 
-            "default": 0.0, 
-            "desc": "Bump amount for the base layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "base_bump_amount",
+            "default": 0.0,
+            "desc": "Bump amount for the base layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "base_bump_type", 
-            "default": "0", 
-            "desc": "The type of bump mapping (see BRDFBump for more details)", 
+            "attr": "base_bump_type",
+            "default": "0",
+            "desc": "The type of bump mapping (see BRDFBump for more details)",
             "items": [
                 [
-                    "0", 
-                    "Bump", 
+                    "0",
+                    "Bump",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Normal (Tangent)", 
+                    "1",
+                    "Normal (Tangent)",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Normal (Object)", 
+                    "2",
+                    "Normal (Object)",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Normal (Camera)", 
+                    "3",
+                    "Normal (Camera)",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Normal (World)", 
+                    "4",
+                    "Normal (World)",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "From Bump Output", 
+                    "5",
+                    "From Bump Output",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Explicit Normal", 
+                    "6",
+                    "Explicit Normal",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "base_traceReflections", 
-            "default": true, 
-            "desc": "Toggle reflections for base layer", 
-            "type": "BOOL"
-        }, 
+            "attr": "base_traceReflections",
+            "default": true,
+            "desc": "Toggle reflections for base layer",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Base trace reflections"
+            }
+        },
         {
-            "attr": "flake_color", 
+            "attr": "flake_color",
             "default": [
-                0.3, 
-                0.4, 
+                0.3,
+                0.4,
                 0.8
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "flake_glossiness", 
-            "default": 0.8, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "rollout": "Flake layer parameters"
+            }
+        },
+        {
+            "attr": "flake_glossiness",
+            "default": 0.8,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_orientation", 
-            "default": 0.3, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "flake_orientation",
+            "default": 0.3,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_density", 
-            "default": 0.5, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "flake_density",
+            "default": 0.5,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_scale", 
-            "default": 0.01, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "flake_scale",
+            "default": 0.01,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_size", 
-            "default": 0.5, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "flake_size",
+            "default": 0.5,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_map_size", 
-            "default": 1024, 
-            "desc": "The size of the internal flakes map", 
-            "type": "INT", 
+            "attr": "flake_map_size",
+            "default": 1024,
+            "desc": "The size of the internal flakes map",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_filtering_mode", 
-            "default": "1", 
-            "desc": "Flake filtering mode", 
+            "attr": "flake_filtering_mode",
+            "default": "1",
+            "desc": "Flake filtering mode",
             "items": [
                 [
-                    "0", 
-                    "Simple", 
+                    "0",
+                    "Simple",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Directional", 
+                    "1",
+                    "Directional",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "flake_seed", 
-            "default": 1, 
-            "desc": "The random seed for the flakes", 
-            "type": "INT", 
+            "attr": "flake_seed",
+            "default": 1,
+            "desc": "The random seed for the flakes",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "flake_uvwgen", 
-            "default": "", 
-            "desc": "", 
+            "attr": "flake_uvwgen",
+            "default": "",
+            "desc": "",
             "type": "UVWGEN"
-        }, 
+        },
         {
-            "attr": "flake_traceReflections", 
-            "default": true, 
-            "desc": "Toggle reflections for flake layer", 
-            "type": "BOOL"
-        }, 
+            "attr": "flake_traceReflections",
+            "default": true,
+            "desc": "Toggle reflections for flake layer",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Flake trace reflections"
+            }
+        },
         {
-            "attr": "coat_color", 
+            "attr": "coat_color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "coat_strength", 
-            "default": 0.05, 
-            "desc": "", 
-            "type": "FLOAT_TEXTURE", 
+            ],
+            "desc": "",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "rollout": "Coat layer parameters"
+            }
+        },
+        {
+            "attr": "coat_strength",
+            "default": 0.05,
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_glossiness", 
-            "default": 1, 
-            "desc": "The glossiness of the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_glossiness",
+            "default": 1,
+            "desc": "The glossiness of the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_float", 
-            "default": 0.0, 
-            "desc": "Bump texture for the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_bump_float",
+            "default": 0.0,
+            "desc": "Bump texture for the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "rollout": ""
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_color", 
+            "attr": "coat_bump_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "Bump texture for the coat layer (color version)", 
+            ],
+            "desc": "Bump texture for the coat layer (color version)",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "coat_bump_amount", 
-            "default": 0.0, 
-            "desc": "Bump amount for the coat layer", 
-            "type": "FLOAT_TEXTURE", 
+            "attr": "coat_bump_amount",
+            "default": 0.0,
+            "desc": "Bump amount for the coat layer",
+            "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "coat_bump_type", 
-            "default": "0", 
-            "desc": "The type of bump mapping", 
+            "attr": "coat_bump_type",
+            "default": "0",
+            "desc": "The type of bump mapping",
             "items": [
                 [
-                    "0", 
-                    "Bump", 
+                    "0",
+                    "Bump",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Normal (Tangent)", 
+                    "1",
+                    "Normal (Tangent)",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Normal (Object)", 
+                    "2",
+                    "Normal (Object)",
                     ""
-                ], 
+                ],
                 [
-                    "3", 
-                    "Normal (Camera)", 
+                    "3",
+                    "Normal (Camera)",
                     ""
-                ], 
+                ],
                 [
-                    "4", 
-                    "Normal (World)", 
+                    "4",
+                    "Normal (World)",
                     ""
-                ], 
+                ],
                 [
-                    "5", 
-                    "From Bump Output", 
+                    "5",
+                    "From Bump Output",
                     ""
-                ], 
+                ],
                 [
-                    "6", 
-                    "Explicit Normal", 
+                    "6",
+                    "Explicit Normal",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "coat_traceReflections", 
-            "default": true, 
-            "desc": "Toggle reflections for coat layer", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "traceReflections", 
-            "default": true, 
-            "desc": "", 
-            "name": "Trace Reflections", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "doubleSided", 
-            "default": true, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "subdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "coat_traceReflections",
+            "default": true,
+            "desc": "Toggle reflections for coat layer",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "display_name": "Coat trace reflections"
+            }
+        },
+        {
+            "attr": "traceReflections",
+            "default": true,
+            "desc": "",
+            "name": "Trace Reflections",
+            "type": "BOOL",
+            "ui": {
+                "rollout": "Options",
+                "display_name": "Trace reflections"
+            }
+        },
+        {
+            "attr": "doubleSided",
+            "default": true,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Double sided"
+            }
+        },
+        {
+            "attr": "subdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "cutoff_threshold", 
-            "default": 0.001, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "cutoff_threshold",
+            "default": 0.001,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "mapping_type", 
-            "default": "0", 
-            "desc": "The mapping method for the flakes", 
+            "attr": "mapping_type",
+            "default": "0",
+            "desc": "The mapping method for the flakes",
             "items": [
                 [
-                    "0", 
-                    "Explicit", 
+                    "0",
+                    "Explicit",
                     "Explicit mapping channel"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Triplanar", 
+                    "1",
+                    "Triplanar",
                     "Triplanar projection in object space"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "mapping_channel", 
-            "default": 0, 
-            "desc": "The mapping channel", 
-            "type": "INT", 
+            "attr": "mapping_channel",
+            "default": 0,
+            "desc": "The mapping channel",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "environment_override", 
+            "attr": "environment_override",
             "default": [
-                1.0, 
-                1.0, 
+                1.0,
+                1.0,
                 1.0
-            ], 
-            "desc": "Environment override texture", 
-            "type": "TEXTURE"
-        }, 
-        {
-            "attr": "environment_priority", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            ],
+            "desc": "Environment override texture",
+            "type": "TEXTURE",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "enabled": true
+            }
+        },
+        {
+            "attr": "environment_priority",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "enabled": true
+            }
+        },
+        {
+            "attr": "trace_depth",
+            "desc": "The maximum reflection depth (-1 is controlled by the global options)",
+            "type": "INT",
+            "default": -1,
+            "ui": {
+                "min": 1,
+                "max": 1000
+            }
+        },
+        {
+            "attr": "use_environment_override",
+            "desc": "True to use the 'environment override' texture",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "rollout": "Environment override"
             }
         }
-    ], 
-    "Type": "BRDF", 
+    ],
+    "Type": "BRDF",
     "Widget": {
         "widgets": [
             {
-                "label": "Coat Layer", 
+                "label": "Coat Layer",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Bump Type", 
+                        "label": "Bump Type",
                         "name": "coat_bump_type"
-                    }, 
+                    },
                     {
-                        "label": "Trace Reflections", 
+                        "label": "Trace Reflections",
                         "name": "coat_traceReflections"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "label": "Flake Layer", 
+                "label": "Flake Layer",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Density", 
+                                "label": "Density",
                                 "name": "flake_density"
-                            }, 
+                            },
                             {
-                                "label": "Scale", 
+                                "label": "Scale",
                                 "name": "flake_scale"
-                            }, 
+                            },
                             {
-                                "label": "Size", 
+                                "label": "Size",
                                 "name": "flake_size"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "flake_filtering_mode"
-                            }, 
+                            },
                             {
-                                "label": "Map Size", 
+                                "label": "Map Size",
                                 "name": "flake_map_size"
-                            }, 
+                            },
                             {
-                                "label": "Seed", 
+                                "label": "Seed",
                                 "name": "flake_seed"
-                            }, 
+                            },
                             {
-                                "label": "Trace Reflections", 
+                                "label": "Trace Reflections",
                                 "name": "flake_traceReflections"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "label": "Base Layer", 
+                "label": "Base Layer",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
                 "attrs": [
                     {
-                        "label": "Bump Type", 
+                        "label": "Bump Type",
                         "name": "base_bump_type"
-                    }, 
+                    },
                     {
-                        "label": "Trace Reflections", 
+                        "label": "Trace Reflections",
                         "name": "base_traceReflections"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "label": "Options", 
+                "label": "Options",
                 "layout": "SEPARATOR"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "subdivs"
-                            }, 
+                            },
                             {
-                                "label": "Cutoff", 
+                                "label": "Cutoff",
                                 "name": "cutoff_threshold"
-                            }, 
+                            },
                             {
                                 "name": "doubleSided"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "mapping_type"
-                            }, 
+                            },
                             {
                                 "name": "mapping_channel"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "environment_priority"
                     }
-                ], 
+                ],
                 "layout": "COLUMN"
             }
         ]

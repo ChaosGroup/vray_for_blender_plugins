@@ -1,0 +1,29 @@
+{
+    "ID": "CameraDome",
+    "Name": "Camera Dome",
+    "Desciption": "CameraDome",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "flip_x",
+            "desc": "Flip in the horizontal image direction",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "flip_y",
+            "desc": "Flip in the vertical image direction",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "fov",
+            "desc": "Field of view (radians)",
+            "type": "FLOAT",
+            "default": 0.7853981852531433
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

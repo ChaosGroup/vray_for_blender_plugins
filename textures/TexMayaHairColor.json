@@ -1,0 +1,10 @@
+{
+    "ID": "TexMayaHairColor",
+    "Name": "Maya Hair Color",
+    "Desciption": "TexMayaHairColor",
+    "Type": "TEXTURE",
+    "Parameters": [],
+    "Widget": {
+        "widgets": []
+    }
+}

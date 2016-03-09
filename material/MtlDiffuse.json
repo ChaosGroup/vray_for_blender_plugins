@@ -1,0 +1,70 @@
+{
+    "ID": "MtlDiffuse",
+    "Name": "Mtl Diffuse",
+    "Desciption": "MtlDiffuse",
+    "Type": "MATERIAL",
+    "Parameters": [
+        {
+            "attr": "diffuse",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        {
+            "attr": "diffuse_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "diffuse_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "reflection",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transparency",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "render_channel_color",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "render_channel_alpha",
+            "desc": "",
+            "type": "PLUGIN",
+            "default": null
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

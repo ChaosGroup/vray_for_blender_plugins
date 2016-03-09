@@ -1,0 +1,213 @@
+{
+    "ID": "SettingsColorMappingModo",
+    "Name": "Settings Color Mapping Modo",
+    "Desciption": "SettingsColorMappingModo",
+    "Type": "SETTINGS",
+    "Parameters": [
+        {
+            "attr": "type",
+            "desc": "Type of color mapping",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Linear",
+                    ""
+                ],
+                [
+                    "1",
+                    "Exponential",
+                    ""
+                ],
+                [
+                    "2",
+                    "HSV exponential",
+                    ""
+                ],
+                [
+                    "3",
+                    "Intensity exponential",
+                    ""
+                ],
+                [
+                    "4",
+                    "Gamma correction",
+                    ""
+                ],
+                [
+                    "5",
+                    "Intensity gamma",
+                    ""
+                ],
+                [
+                    "6",
+                    "Reinhard",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Type"
+            }
+        },
+        {
+            "attr": "affect_background",
+            "desc": "True if color mapping should affect the background",
+            "type": "BOOL",
+            "default": true,
+            "ui": {
+                "display_name": "Affect background"
+            }
+        },
+        {
+            "attr": "dark_mult",
+            "desc": "Multiplier for dark colors",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Dark multiplier",
+                "min": -1000.0,
+                "max": 1000.0
+            }
+        },
+        {
+            "attr": "bright_mult",
+            "desc": "Multiplier for bright colors",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Bright multiplier",
+                "min": -1000.0,
+                "max": 1000.0
+            }
+        },
+        {
+            "attr": "gamma",
+            "desc": "Additional gamma correction",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Gamma",
+                "min": 0.05000000074505806,
+                "max": 20.0
+            }
+        },
+        {
+            "attr": "subpixel_mapping",
+            "desc": "True if the color mapping should be applied on a subpixel level",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Subpixel mapping"
+            }
+        },
+        {
+            "attr": "clamp_output",
+            "desc": "True if colors should be clamped after color mapping",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Clamp output"
+            }
+        },
+        {
+            "attr": "clamp_level",
+            "desc": "The level at which colors will be clamped if clamping is on",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Clamp level",
+                "enabled": true,
+                "min": 0.0,
+                "max": 100.0
+            }
+        },
+        {
+            "attr": "adaptation_only",
+            "desc": "Specifies whether color mapping and gamma are applied to the image: 0 - both color mapping and gamma are applied; 1 - nothing is applied; 2 - only color mapping is applied",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Color mapping and gamma",
+                    ""
+                ],
+                [
+                    "1",
+                    "None (don't apply anything)",
+                    ""
+                ],
+                [
+                    "2",
+                    "Color mapping only (no gamma)",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Mode"
+            }
+        },
+        {
+            "attr": "linearWorkflow",
+            "desc": "True to enforce linear workflow",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "display_name": "Linear workflow"
+            }
+        },
+        {
+            "attr": "exposure",
+            "desc": "Additional image exposure",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "ui": {
+                "display_name": "Image exposure"
+            }
+        },
+        {
+            "attr": "multiplier",
+            "desc": "Multiplier for the \"Gamma correction\", \"Intensity gamma\" and \"Reinhard\" modes",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Multiplier",
+                "enabled": true,
+                "min": -1000.0,
+                "max": 1000.0
+            }
+        },
+        {
+            "attr": "inverse_gamma",
+            "desc": "Inverse gamma for the the \"Gamma correction\" and \"Intensity gamma\" modes",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Inverse gamma",
+                "enabled": true,
+                "min": 0.05000000074505806,
+                "max": 20.0
+            }
+        },
+        {
+            "attr": "reinhard_burn_value",
+            "desc": "Burn value for the Reinhard color mapping",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "display_name": "Burn value",
+                "enabled": true,
+                "min": -1000.0,
+                "max": 1000.0
+            }
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

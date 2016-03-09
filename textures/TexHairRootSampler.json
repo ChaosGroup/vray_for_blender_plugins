@@ -1,0 +1,22 @@
+{
+    "ID": "TexHairRootSampler",
+    "Name": "Hair Root Sampler",
+    "Desciption": "TexHairRootSampler",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "root_values",
+            "desc": "The colors at the root of each hair strand",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

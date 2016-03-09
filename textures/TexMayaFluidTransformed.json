@@ -1,0 +1,90 @@
+{
+    "ID": "TexMayaFluidTransformed",
+    "Name": "Maya Fluid Transformed",
+    "Desciption": "TexMayaFluidTransformed",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "object_to_world",
+            "desc": "The transformation from object(texture) space to world space",
+            "type": "TRANSFORM",
+            "default": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "fluid_tex",
+            "desc": "The base texture. Should support the EXT_MAYA_FLUID_TEXTURE interface",
+            "type": "PLUGIN",
+            "default": null
+        },
+        {
+            "attr": "fluid_value_scale",
+            "desc": "Multiplier for the value taken from fluid_tex",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "noise_tex_on",
+            "desc": "Is the built-in noise enabled ?",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "noise_tex",
+            "desc": "The fluid's built-in noise",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "noise_gain",
+            "desc": "Tells how much of the noise should be blended with the grid/gradient values",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "noise_size",
+            "desc": "The size of the fluid container used for noise calculation. In Maya it's the real size scaled by 0.2",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 1.0
+        },
+        {
+            "attr": "dynamic_offset_x",
+            "desc": "The x dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "dynamic_offset_y",
+            "desc": "The y dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "dynamic_offset_z",
+            "desc": "The z dynamic offset of the fluid container",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

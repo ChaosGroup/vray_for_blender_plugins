@@ -1,60 +1,66 @@
 {
-    "Desciption": "", 
-    "ID": "MtlRenderStats", 
-    "Name": "Render Stats", 
+    "Desciption": "",
+    "ID": "MtlRenderStats",
+    "Name": "Render Stats",
     "Parameters": [
         {
-            "attr": "base_mtl", 
-            "default": "", 
-            "desc": "Base material", 
+            "attr": "base_mtl",
+            "default": "",
+            "desc": "Base material",
             "type": "MATERIAL"
-        }, 
+        },
         {
-            "attr": "camera_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "camera_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "reflections_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "reflections_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "refractions_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "refractions_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "gi_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "gi_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "shadows_visibility", 
-            "default": true, 
-            "desc": "", 
+            "attr": "shadows_visibility",
+            "default": true,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "visibility", 
-            "default": true, 
-            "desc": "Overall visibility", 
+            "attr": "visibility",
+            "default": true,
+            "desc": "Overall visibility",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "use", 
-            "default": false, 
-            "desc": "Use Render Stats material", 
-            "name": "Use", 
-            "skip": true, 
+            "attr": "use",
+            "default": false,
+            "desc": "Use Render Stats material",
+            "name": "Use",
+            "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "shadows_receive",
+            "desc": "Whether the object receives shadows",
+            "type": "BOOL",
+            "default": true
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

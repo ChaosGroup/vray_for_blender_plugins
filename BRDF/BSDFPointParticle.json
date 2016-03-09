@@ -1,0 +1,34 @@
+{
+    "ID": "BSDFPointParticle",
+    "Name": "Point Particle",
+    "Desciption": "BSDFPointParticle",
+    "Type": "BRDF",
+    "Parameters": [
+        {
+            "attr": "diffuse_color",
+            "desc": "Diffuse color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "use_particle_color",
+            "desc": "true to render the particle colors instead of using the diffuse color",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "phase_function",
+            "desc": "Parameter used to determine the phase function of the brdf",
+            "type": "FLOAT",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

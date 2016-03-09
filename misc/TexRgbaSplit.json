@@ -1,0 +1,50 @@
+{
+    "ID": "TexRgbaSplit",
+    "Name": "Rgba Split",
+    "Desciption": "TexRgbaSplit",
+    "Type": "MISC",
+    "Parameters": [
+        {
+            "attr": "input",
+            "desc": "Color RGBA input texture",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "rgb",
+            "desc": "The RGB values with alpha set to 1.0",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "combined",
+            "desc": "The combined RGB and alpha",
+            "type": "OUTPUT_TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "alpha",
+            "desc": "The input's alpha only",
+            "type": "OUTPUT_FLOAT_TEXTURE",
+            "default": 0.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

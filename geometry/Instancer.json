@@ -1,0 +1,191 @@
+{
+    "ID": "Instancer",
+    "Name": "Instancer",
+    "Desciption": "Instancer",
+    "Type": "GEOMETRY",
+    "Parameters": [
+        {
+            "attr": "acceleration_pp",
+            "desc": "Per-particle acceleration",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "colors",
+            "desc": "Per-particle diffuse color",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "emission_pp",
+            "desc": "Per-particle emission color",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "user_color_pp_1",
+            "desc": "Corresponds to Maya's userVector1PP",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "user_color_pp_2",
+            "desc": "Corresponds to Maya's userVector2PP",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "user_color_pp_3",
+            "desc": "Corresponds to Maya's userVector3PP",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "user_color_pp_4",
+            "desc": "Corresponds to Maya's userVector4PP",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "user_color_pp_5",
+            "desc": "Corresponds to Maya's userVector5PP",
+            "type": "COLOR_LIST",
+            "elements_count": 0,
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "age_pp",
+            "desc": "Per-particle age",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "lifespan_pp",
+            "desc": "Per-particle lifespan",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "opacity_pp",
+            "desc": "Per-particle opacity",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "user_float_pp_1",
+            "desc": "Corresponds to Maya's userScalar1PP",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "user_float_pp_2",
+            "desc": "Corresponds to Maya's userScalar2PP",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "user_float_pp_3",
+            "desc": "Corresponds to Maya's userScalar3PP",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "user_float_pp_4",
+            "desc": "Corresponds to Maya's userScalar4PP",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "user_float_pp_5",
+            "desc": "Corresponds to Maya's userScalar5PP",
+            "type": "FLOAT_LIST",
+            "elements_count": 0,
+            "default": 0.0
+        },
+        {
+            "attr": "instances",
+            "desc": "A list of N+1 elements where N is the number of instances; the first element is a time value, the rest are lists with elements: particle id, transform, velocity transform, hasInstanceTime, instanceTime, additional_params_flags, additional_param_1, ..., additional_param_N, node, node, node, ..",
+            "type": "LIST",
+            "default": null
+        },
+        {
+            "attr": "nsamples",
+            "desc": "Number of transform samples",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "visible",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "shading_needs_ids",
+            "desc": "Set to true if the particle shade data sent to the instanced geometry needs to include the particle ID",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "use_time_instancing",
+            "desc": "If this is set to 'false' the 'instances' parameter has the same format as in the Instancer plug-in",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "use_additional_params",
+            "desc": "If this is set to 'true' the lists in the 'instances' parameter have additional parameters before the nodes - an int with flags indicating what parameters follow and after that the parameters that follow. Their types depend on the flags in the int and are in a strictly defined order. New flags may be added and additional parameters for them can be added at the end of the chain. The flags are defined in HierarchicalParameterizedNodeParameters in an enum",
+            "type": "BOOL",
+            "default": false
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

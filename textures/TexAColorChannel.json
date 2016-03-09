@@ -1,0 +1,61 @@
+{
+    "ID": "TexAColorChannel",
+    "Name": "AColor Channel",
+    "Desciption": "TexAColorChannel",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "color_a",
+            "desc": "The first color",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "mult_a",
+            "desc": "Multiplier for the first color",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "mode",
+            "desc": "which component of the color should be returned - 0:red;1:green;2:blue;3:alpha;4:intensity",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "red",
+                    ""
+                ],
+                [
+                    "1",
+                    "green",
+                    ""
+                ],
+                [
+                    "2",
+                    "blue",
+                    ""
+                ],
+                [
+                    "3",
+                    "alpha",
+                    ""
+                ],
+                [
+                    "4",
+                    "intensity",
+                    ""
+                ]
+            ],
+            "default": "0"
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

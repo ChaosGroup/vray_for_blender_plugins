@@ -1,39 +1,39 @@
 {
-    "Desciption": "", 
-    "ID": "MtlMaterialID", 
-    "Name": "Material ID", 
+    "Desciption": "",
+    "ID": "MtlMaterialID",
+    "Name": "Material ID",
     "Parameters": [
         {
-            "attr": "base_mtl", 
-            "default": "", 
-            "desc": "The base material", 
+            "attr": "base_mtl",
+            "default": "",
+            "desc": "The base material",
             "type": "MATERIAL"
-        }, 
+        },
         {
-            "attr": "material_id_color", 
+            "attr": "material_id_color",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The material id color", 
+            ],
+            "desc": "The material id color",
             "type": "TEXTURE"
-        }, 
+        },
         {
-            "attr": "material_id_number", 
-            "default": 0, 
-            "desc": "", 
-            "name": "ID", 
-            "type": "INT", 
+            "attr": "material_id_number",
+            "default": 0,
+            "desc": "",
+            "name": "ID",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
         }
-    ], 
-    "Type": "MATERIAL", 
+    ],
+    "Type": "MATERIAL",
     "Widget": {
         "widgets": []
     }

@@ -1,70 +1,85 @@
 {
-    "Desciption": "", 
-    "ID": "SettingsDefaultDisplacement", 
-    "Name": "Default Displacement", 
+    "Desciption": "",
+    "ID": "SettingsDefaultDisplacement",
+    "Name": "Default Displacement",
     "Parameters": [
         {
-            "attr": "override_on", 
-            "default": false, 
-            "desc": "Override settings globally", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "edgeLength", 
-            "default": 4, 
-            "desc": "Max. height", 
-            "type": "FLOAT", 
+            "attr": "override_on",
+            "default": false,
+            "desc": "Override settings globally",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "Override Max"
             }
-        }, 
+        },
         {
-            "attr": "viewDependent", 
-            "default": true, 
-            "desc": "Determines if view-dependent tesselation is used", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "maxSubdivs", 
-            "default": 256, 
-            "desc": "Determines the maximum subdivisions for a triangle of the original mesh", 
-            "type": "INT", 
+            "attr": "edgeLength",
+            "default": 4,
+            "desc": "Max. height",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Edge length"
             }
-        }, 
+        },
         {
-            "attr": "tightBounds", 
-            "default": true, 
-            "desc": "When this is on, initialization will be slower, but tighter bounds will be computed for the displaced triangles making rendering faster", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "amount", 
-            "default": 1, 
-            "desc": "Determines the displacement amount for white areas in the displacement map", 
-            "type": "FLOAT", 
+            "attr": "viewDependent",
+            "default": true,
+            "desc": "Determines if view-dependent tesselation is used",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
+                "display_name": "View dependent"
             }
-        }, 
+        },
         {
-            "attr": "relative", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
+            "attr": "maxSubdivs",
+            "default": 256,
+            "desc": "Determines the maximum subdivisions for a triangle of the original mesh",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Max subdivs"
+            }
+        },
+        {
+            "attr": "tightBounds",
+            "default": true,
+            "desc": "When this is on, initialization will be slower, but tighter bounds will be computed for the displaced triangles making rendering faster",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Tight bounds"
+            }
+        },
+        {
+            "attr": "amount",
+            "default": 1,
+            "desc": "Determines the displacement amount for white areas in the displacement map",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Amount"
+            }
+        },
+        {
+            "attr": "relative",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Relative"
+            }
         }
-    ], 
-    "Type": "SETTINGS", 
+    ],
+    "Type": "SETTINGS",
     "Widget": {
         "widgets": []
     }

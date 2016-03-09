@@ -1,357 +1,443 @@
 {
-    "Desciption": "", 
-    "ID": "LightIESMax", 
-    "Name": "IES (3ds max)", 
+    "Desciption": "",
+    "ID": "LightIESMax",
+    "Name": "IES (3ds max)",
     "Parameters": [
         {
-            "attr": "enabled", 
-            "default": true, 
-            "desc": "true if the light is casting light (turned on) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered", 
+            "attr": "enabled",
+            "default": true,
+            "desc": "true if the light is casting light (turned on) and false otherwise; it only makes sense to use this parameter if it is animated, or if another object depends on this node but it must not be rendered",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "transform", 
-            "default": null, 
-            "desc": "", 
+            "attr": "transform",
+            "default": null,
+            "desc": "",
             "type": "TRANSFORM"
-        }, 
+        },
         {
-            "attr": "color", 
+            "attr": "color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "Color of the light", 
+            ],
+            "desc": "Color of the light",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "color_tex", 
+            "attr": "color_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "A color texture that if present will override the color parameter", 
+            ],
+            "desc": "A color texture that if present will override the color parameter",
             "type": "TEXTURE",
             "options": [
                 "LINKED_ONLY"
             ]
-        }, 
+        },
         {
-            "attr": "shadows", 
-            "default": true, 
-            "desc": "true if the light casts shadows and false otherwise", 
+            "attr": "shadows",
+            "default": true,
+            "desc": "true if the light casts shadows and false otherwise",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "shadowColor", 
+            "attr": "shadowColor",
             "default": [
-                0, 
-                0, 
+                0,
+                0,
                 0
-            ], 
-            "desc": "The shadow color. Anything but black is not physically accurate", 
+            ],
+            "desc": "The shadow color. Anything but black is not physically accurate",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "shadowColor_tex", 
+            "attr": "shadowColor_tex",
             "default": [
-                0.0, 
-                0.0, 
+                0.0,
+                0.0,
                 0.0
-            ], 
-            "desc": "A color texture that if present will override the shadowColor parameter", 
+            ],
+            "desc": "A color texture that if present will override the shadowColor parameter",
             "type": "TEXTURE",
             "options": [
                 "LINKED_ONLY"
             ]
-        }, 
+        },
         {
-            "attr": "shadowBias", 
-            "default": 0, 
-            "desc": "Shadow offset from the surface. Helps to prevent polygonal shadow artifacts on low-poly surfaces", 
-            "type": "FLOAT", 
+            "attr": "shadowBias",
+            "default": 0,
+            "desc": "Shadow offset from the surface. Helps to prevent polygonal shadow artifacts on low-poly surfaces",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Shadow bias"
+            }
+        },
+        {
+            "attr": "photonSubdivs",
+            "default": 500,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Photon subdivs"
+            }
+        },
+        {
+            "attr": "causticSubdivs",
+            "default": 1000,
+            "desc": "",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Caustics subdivs"
+            }
+        },
+        {
+            "attr": "diffuseMult",
+            "default": 1,
+            "desc": "Multiplier for the diffuse photons",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Diffuse multiplier"
+            }
+        },
+        {
+            "attr": "causticMult",
+            "default": 1,
+            "desc": "Multiplier for the caustic photons",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Caustics multiplier"
+            }
+        },
+        {
+            "attr": "cutoffThreshold",
+            "default": 0.001,
+            "desc": "Light cut-off threshold (speed optimization). If the light intensity for a point is below this threshold, the light will not be computed",
+            "type": "FLOAT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
+                "soft_min": 0,
+                "display_name": "Cut-off threshold"
+            }
+        },
+        {
+            "attr": "affectDiffuse",
+            "default": true,
+            "desc": "true if the light produces diffuse lighting and false otherwise",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect diffuse"
+            }
+        },
+        {
+            "attr": "affectSpecular",
+            "default": true,
+            "desc": "true if the light produces specular hilights and false otherwise",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Affect specular"
+            }
+        },
+        {
+            "attr": "bumped_below_surface_check",
+            "default": false,
+            "desc": "true if the bumped normal should be used to check if the light dir is below the surface",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Bumped normal check"
+            }
+        },
+        {
+            "attr": "nsamples",
+            "default": 0,
+            "desc": "Number of parameter samples for motion blur",
+            "type": "INT",
+            "ui": {
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "photonSubdivs", 
-            "default": 500, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "diffuse_contribution",
+            "default": 1,
+            "desc": "Diffuse contribution for the light",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "causticSubdivs", 
-            "default": 1000, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "specular_contribution",
+            "default": 1,
+            "desc": "Specular contribution for the light",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "diffuseMult", 
-            "default": 1, 
-            "desc": "Multiplier for the diffuse photons", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "causticMult", 
-            "default": 1, 
-            "desc": "Multiplier for the caustic photons", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "cutoffThreshold", 
-            "default": 0.001, 
-            "desc": "Light cut-off threshold (speed optimization). If the light intensity for a point is below this threshold, the light will not be computed", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "affectDiffuse", 
-            "default": true, 
-            "desc": "true if the light produces diffuse lighting and false otherwise", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "affectSpecular", 
-            "default": true, 
-            "desc": "true if the light produces specular hilights and false otherwise", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "bumped_below_surface_check", 
-            "default": false, 
-            "desc": "true if the bumped normal should be used to check if the light dir is below the surface", 
-            "type": "BOOL"
-        }, 
-        {
-            "attr": "nsamples", 
-            "default": 0, 
-            "desc": "Number of parameter samples for motion blur", 
-            "type": "INT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "diffuse_contribution", 
-            "default": 1, 
-            "desc": "Diffuse contribution for the light", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "specular_contribution", 
-            "default": 1, 
-            "desc": "Specular contribution for the light", 
-            "type": "FLOAT", 
-            "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
-                "soft_min": 0
-            }
-        }, 
-        {
-            "attr": "channels", 
-            "default": "", 
-            "desc": "Render channels the result of this light will be written to", 
+            "attr": "channels",
+            "default": "",
+            "desc": "Render channels the result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_raw", 
-            "default": "", 
-            "desc": "Render channels the raw diffuse result of this light will be written to", 
+            "attr": "channels_raw",
+            "default": "",
+            "desc": "Render channels the raw diffuse result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_diffuse", 
-            "default": "", 
-            "desc": "Render channels the diffuse result of this light will be written to", 
+            "attr": "channels_diffuse",
+            "default": "",
+            "desc": "Render channels the diffuse result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "channels_specular", 
-            "default": "", 
-            "desc": "Render channels the specular result of this light will be written to", 
+            "attr": "channels_specular",
+            "default": "",
+            "desc": "Render channels the specular result of this light will be written to",
             "type": "PLUGIN"
-        }, 
+        },
         {
-            "attr": "use_global_light_level", 
-            "default": true, 
-            "desc": "true if the light should use the global light level setting", 
+            "attr": "use_global_light_level",
+            "default": true,
+            "desc": "true if the light should use the global light level setting",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "shadowSubdivs", 
-            "default": 8, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "shadowSubdivs",
+            "default": 8,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "storeWithIrradianceMap", 
-            "default": false, 
-            "desc": "", 
-            "type": "BOOL"
-        }, 
+            "attr": "storeWithIrradianceMap",
+            "default": false,
+            "desc": "",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Store with irradiance map"
+            }
+        },
         {
-            "attr": "ies_file", 
-            "default": "", 
-            "desc": "IES file with luminaire description", 
-            "subtype": "FILE_PATH", 
-            "type": "STRING"
-        }, 
+            "attr": "ies_file",
+            "default": "",
+            "desc": "IES file with luminaire description",
+            "subtype": "FILE_PATH",
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "ies"
+                ]
+            }
+        },
         {
-            "attr": "filter_color", 
+            "attr": "filter_color",
             "default": [
-                1, 
-                1, 
+                1,
+                1,
                 1
-            ], 
-            "desc": "", 
+            ],
+            "desc": "",
             "type": "COLOR"
-        }, 
+        },
         {
-            "attr": "soft_shadows", 
-            "default": false, 
-            "desc": "true to use the shape of the light as described in the IES profile", 
+            "attr": "soft_shadows",
+            "default": false,
+            "desc": "true to use the shape of the light as described in the IES profile",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "area_speculars", 
-            "default": true, 
-            "desc": "true to cause specular highlights produced by the light to match the light shape; false to always produce speculars as a point light", 
+            "attr": "area_speculars",
+            "default": true,
+            "desc": "true to cause specular highlights produced by the light to match the light shape; false to always produce speculars as a point light",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "power", 
-            "default": 0, 
-            "desc": "Limuous power (in lm); if zero, the default lumious power from the IES profile is used", 
-            "type": "FLOAT", 
+            "attr": "power",
+            "default": 0,
+            "desc": "Limuous power (in lm); if zero, the default lumious power from the IES profile is used",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
             "attr": "ies_light_shape",
             "default": "-1",
             "desc": "IES light shape",
             "items": [
-                ["-1",  "From File", ""],
-                ["0",  "Point", ""],
-                ["1",  "Rectangular", ""],
-                ["2",  "Circular",    ""],
-                ["3",  "Sphere", ""],
-                ["4",  "Vertical cylinder", ""],
-                ["5",  "Horizontal Cylinder Oriented Along Lum. Length", ""],
-                ["6",  "Horizontal Cylinder Oriented Along Lum. Width", ""],
-                ["7",  "Ellipse Oriented Along Luminaire Length", ""],
-                ["8",  "Ellipse Oriented Along Luminaire Width", ""],
-                ["9",  "Ellipsoid Oriented Along Luminaire Length", ""],
-                ["10", "Ellipsoid Oriented Along Luminaire Width", ""]
+                [
+                    "-1",
+                    "From File",
+                    ""
+                ],
+                [
+                    "0",
+                    "Point",
+                    ""
+                ],
+                [
+                    "1",
+                    "Rectangular",
+                    ""
+                ],
+                [
+                    "2",
+                    "Circular",
+                    ""
+                ],
+                [
+                    "3",
+                    "Sphere",
+                    ""
+                ],
+                [
+                    "4",
+                    "Vertical cylinder",
+                    ""
+                ],
+                [
+                    "5",
+                    "Horizontal Cylinder Oriented Along Lum. Length",
+                    ""
+                ],
+                [
+                    "6",
+                    "Horizontal Cylinder Oriented Along Lum. Width",
+                    ""
+                ],
+                [
+                    "7",
+                    "Ellipse Oriented Along Luminaire Length",
+                    ""
+                ],
+                [
+                    "8",
+                    "Ellipse Oriented Along Luminaire Width",
+                    ""
+                ],
+                [
+                    "9",
+                    "Ellipsoid Oriented Along Luminaire Length",
+                    ""
+                ],
+                [
+                    "10",
+                    "Ellipsoid Oriented Along Luminaire Width",
+                    ""
+                ]
             ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "ies_light_width", 
-            "default": 0, 
-            "desc": "Light shape width (in metres)", 
-            "type": "FLOAT", 
+            "attr": "ies_light_width",
+            "default": 0,
+            "desc": "Light shape width (in metres)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ies_light_length", 
-            "default": 0, 
-            "desc": "Light shape length (in metres)", 
-            "type": "FLOAT", 
+            "attr": "ies_light_length",
+            "default": 0,
+            "desc": "Light shape length (in metres)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ies_light_height", 
-            "default": 0, 
-            "desc": "Light shape height (in metres)", 
-            "type": "FLOAT", 
+            "attr": "ies_light_height",
+            "default": 0,
+            "desc": "Light shape height (in metres)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ies_light_diameter", 
-            "default": 0, 
-            "desc": "Light shape diameter (in metres)", 
-            "type": "FLOAT", 
+            "attr": "ies_light_diameter",
+            "default": 0,
+            "desc": "Light shape diameter (in metres)",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
+            }
+        },
+        {
+            "attr": "rescale_max_intensty",
+            "desc": "If this is true, the intensity values of the IES file will be scaled, so the new maximum value is new_max_intensity",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "new_max_intensity",
+            "desc": "The new maximum intensity after rescaling the intensities in the IES file, when rescale_max_intensty is true. This value is in cd(candelas)",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "enabled": true
             }
         }
-    ], 
-    "Type": "LIGHT", 
+    ],
+    "Type": "LIGHT",
     "Widget": {
         "widgets": [
             {
@@ -359,91 +445,94 @@
                     {
                         "name": "enabled"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
                 "attrs": [
                     {
                         "name": "ies_file"
                     }
-                ], 
+                ],
                 "layout": "ROW"
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
                         "attrs": [
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "color"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "attrs": [
                             {
                                 "name": "power"
-                            }, 
+                            },
                             {
                                 "name": "shadowSubdivs"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": false, 
+                        "align": false,
                         "attrs": [
                             {
                                 "name": "shadows"
-                            }, 
+                            },
                             {
                                 "name": "shadowBias"
-                            }, 
+                            },
                             {
-                                "label": "", 
+                                "label": "",
                                 "name": "shadowColor"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "soft_shadows"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
-                                "label": "Shape", 
+                                "label": "Shape",
                                 "name": "ies_light_shape"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
                         "align": true,
                         "show": {
                             "prop": "ies_light_shape",
                             "condition": "not_in",
-                            "value": ["-1", "0"]
+                            "value": [
+                                "-1",
+                                "0"
+                            ]
                         },
                         "attrs": [
                             {
@@ -452,130 +541,157 @@
                                 "visible": {
                                     "prop": "ies_light_shape",
                                     "condition": "in",
-                                    "value": ["1", "6", "7", "8", "9", "10"]
+                                    "value": [
+                                        "1",
+                                        "6",
+                                        "7",
+                                        "8",
+                                        "9",
+                                        "10"
+                                    ]
                                 }
-                            }, 
+                            },
                             {
                                 "name": "ies_light_length",
                                 "label": "Length",
                                 "visible": {
                                     "prop": "ies_light_shape",
                                     "condition": "in",
-                                    "value": ["1", "5", "7", "8", "9", "10"]
+                                    "value": [
+                                        "1",
+                                        "5",
+                                        "7",
+                                        "8",
+                                        "9",
+                                        "10"
+                                    ]
                                 }
-                            }, 
+                            },
                             {
                                 "name": "ies_light_height",
                                 "label": "Height",
                                 "visible": {
                                     "prop": "ies_light_shape",
                                     "condition": "in",
-                                    "value": ["1", "6", "7", "8", "9", "10"]
+                                    "value": [
+                                        "1",
+                                        "6",
+                                        "7",
+                                        "8",
+                                        "9",
+                                        "10"
+                                    ]
                                 }
-                            }, 
+                            },
                             {
                                 "name": "ies_light_diameter",
                                 "label": "Diameter",
                                 "visible": {
                                     "prop": "ies_light_shape",
                                     "condition": "in",
-                                    "value": ["2", "3", "4", "5", "6"]
+                                    "value": [
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5",
+                                        "6"
+                                    ]
                                 }
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "photonSubdivs"
-                            }, 
+                            },
                             {
                                 "name": "diffuseMult"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "causticSubdivs"
-                            }, 
+                            },
                             {
                                 "name": "causticMult"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "storeWithIrradianceMap"
-                            }, 
+                            },
                             {
                                 "name": "bumped_below_surface_check"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "cutoffThreshold"
-                            }, 
+                            },
                             {
                                 "name": "nsamples"
-                            }, 
+                            },
                             {
                                 "name": "use_global_light_level"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]
-            }, 
+            },
             {
-                "layout": "SPLIT", 
+                "layout": "SPLIT",
                 "splits": [
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "diffuse_contribution"
-                            }, 
+                            },
                             {
                                 "name": "specular_contribution"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
-                    }, 
+                    },
                     {
-                        "align": true, 
+                        "align": true,
                         "attrs": [
                             {
                                 "name": "area_speculars"
-                            }, 
+                            },
                             {
                                 "name": "affectSpecular"
-                            }, 
+                            },
                             {
                                 "name": "affectDiffuse"
                             }
-                        ], 
+                        ],
                         "layout": "COLUMN"
                     }
                 ]

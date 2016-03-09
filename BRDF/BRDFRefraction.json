@@ -1,0 +1,294 @@
+{
+    "ID": "BRDFRefraction",
+    "Name": "Refraction",
+    "Desciption": "BRDFRefraction",
+    "Type": "BRDF",
+    "Parameters": [
+        {
+            "attr": "color",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "color_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "color_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "transparency",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transparency_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "transparency_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "ior",
+            "desc": "IOR for the glass; this is ignored if the surface has a volume shader (the volume IOR is used)",
+            "type": "FLOAT",
+            "default": 1.5499999523162842
+        },
+        {
+            "attr": "ior_tex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "ior_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "cutoff",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.009999999776482582
+        },
+        {
+            "attr": "affect_shadows",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "affect_alpha",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "trace_refractions",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "trace_depth",
+            "desc": "The maximum refraction bounces (-1 is controlled by the global options)",
+            "type": "INT",
+            "default": -1
+        },
+        {
+            "attr": "exit_color_on",
+            "desc": "",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "reflect_exit_color",
+            "desc": "The color to use when the maximum depth is reached",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "refract_exit_color",
+            "desc": "The color to use when maximum depth is reached when exit_color_on is true",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "fog_color",
+            "desc": "A fog color",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "fog_color_mult",
+            "desc": "A multiplier for the fog plugin",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "fog_emission",
+            "desc": "Fog emission color",
+            "type": "COLOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "fog_bias",
+            "desc": "Bias for the fogging distance",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "glossiness",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.800000011920929
+        },
+        {
+            "attr": "glossiness_tex",
+            "desc": "",
+            "type": "FLOAT_TEXTURE",
+            "default": 0.0
+        },
+        {
+            "attr": "glossiness_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "subdivs",
+            "desc": "",
+            "type": "INT",
+            "default": 8
+        },
+        {
+            "attr": "dispersion_on",
+            "desc": "Whether to enable dispersion",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "dispersion",
+            "desc": "The dispersion amount",
+            "type": "FLOAT",
+            "default": -1.0
+        },
+        {
+            "attr": "interpolation_on",
+            "desc": "",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "imap_min_rate",
+            "desc": "",
+            "type": "INT",
+            "default": -1
+        },
+        {
+            "attr": "imap_max_rate",
+            "desc": "",
+            "type": "INT",
+            "default": 1
+        },
+        {
+            "attr": "imap_color_thresh",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.25
+        },
+        {
+            "attr": "imap_norm_thresh",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.4000000059604645
+        },
+        {
+            "attr": "imap_samples",
+            "desc": "",
+            "type": "INT",
+            "default": 20
+        },
+        {
+            "attr": "translucency_on",
+            "desc": "Whether or not transluceny should be turned on",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "translucency",
+            "desc": "",
+            "type": "COLOR",
+            "default": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "attr": "translucency_tex",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "translucency_tex_mult",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "thickness",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 999999984306749500.0
+        },
+        {
+            "attr": "scatter_coeff",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 0.0
+        },
+        {
+            "attr": "scatter_direction",
+            "desc": "",
+            "type": "FLOAT",
+            "default": 1.0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

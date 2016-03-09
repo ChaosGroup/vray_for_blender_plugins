@@ -2,8 +2,7 @@
     "Desciption": "Particle ID",
     "ID": "TexParticleId",
     "Name": "Particle ID",
-    "Parameters": [
-    ],
+    "Parameters": [],
     "Type": "TEXTURE",
     "Widget": {
         "widgets": []

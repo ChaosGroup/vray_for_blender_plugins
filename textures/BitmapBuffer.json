@@ -1,234 +1,253 @@
 {
-    "Desciption": "Image File", 
-    "ID": "BitmapBuffer", 
-    "Name": "Image File", 
+    "Desciption": "Image File",
+    "ID": "BitmapBuffer",
+    "Name": "Image File",
     "Parameters": [
         {
-            "attr": "filter_type", 
+            "attr": "filter_type",
             "default": "-1",
-            "desc": "Filtering", 
+            "desc": "Filtering",
             "items": [
                 [
-                    "-1", 
-                    "Nearest", 
+                    "-1",
+                    "Nearest",
                     "Nearest"
-                ], 
+                ],
                 [
-                    "0", 
-                    "None", 
+                    "0",
+                    "None",
                     "None"
-                ], 
+                ],
                 [
-                    "1", 
-                    "Mip-Map", 
+                    "1",
+                    "Mip-Map",
                     "Mip-map filtering"
-                ], 
+                ],
                 [
-                    "2", 
-                    "Area", 
+                    "2",
+                    "Area",
                     "Summed area filtering"
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "filter_blur", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "filter_blur",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "color_space", 
-            "default": "2", 
-            "desc": "Color space", 
+            "attr": "color_space",
+            "default": "2",
+            "desc": "Color space",
             "items": [
                 [
-                    "0", 
-                    "Linear", 
+                    "0",
+                    "Linear",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Gamma corrected", 
+                    "1",
+                    "Gamma corrected",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "sRGB", 
+                    "2",
+                    "sRGB",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "gamma", 
-            "default": 1.0, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "gamma",
+            "default": 1.0,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "maya_compatible", 
-            "default": false, 
-            "desc": "", 
+            "attr": "maya_compatible",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "allow_negative_colors", 
-            "default": true, 
-            "desc": "if false negative colors will be clamped", 
+            "attr": "allow_negative_colors",
+            "default": true,
+            "desc": "if false negative colors will be clamped",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "interpolation", 
-            "default": "0", 
-            "desc": "Interpolation method for the Mip-Map filtering", 
+            "attr": "interpolation",
+            "default": "0",
+            "desc": "Interpolation method for the Mip-Map filtering",
             "items": [
                 [
-                    "0", 
-                    "Bilinear", 
+                    "0",
+                    "Bilinear",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Bicubic", 
+                    "1",
+                    "Bicubic",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Quadratic", 
+                    "2",
+                    "Quadratic",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "load_file", 
-            "default": true, 
-            "desc": "if set to false, the file would not be loaded", 
+            "attr": "load_file",
+            "default": true,
+            "desc": "if set to false, the file would not be loaded",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "frame_sequence", 
-            "default": false, 
-            "desc": "", 
+            "attr": "frame_sequence",
+            "default": false,
+            "desc": "",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "frame_number", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "frame_number",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "frame_offset", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "frame_offset",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "use_data_window", 
-            "default": true, 
-            "desc": "true to use the data window information in e.g. OpenEXR files; otherwise false", 
+            "attr": "use_data_window",
+            "default": true,
+            "desc": "true to use the data window information in e.g. OpenEXR files; otherwise false",
             "type": "BOOL"
-        }, 
+        },
         {
-            "attr": "psd_group_name", 
-            "default": "", 
-            "desc": "", 
+            "attr": "psd_group_name",
+            "default": "",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "psd_alpha_name", 
-            "default": "", 
-            "desc": "", 
+            "attr": "psd_alpha_name",
+            "default": "",
+            "desc": "",
             "type": "STRING"
-        }, 
+        },
         {
-            "attr": "ifl_start_frame", 
-            "default": 0, 
-            "desc": "", 
-            "type": "INT", 
+            "attr": "ifl_start_frame",
+            "default": 0,
+            "desc": "",
+            "type": "INT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ifl_playback_rate", 
-            "default": 1, 
-            "desc": "", 
-            "type": "FLOAT", 
+            "attr": "ifl_playback_rate",
+            "default": 1,
+            "desc": "",
+            "type": "FLOAT",
             "ui": {
-                "max": 1048576, 
-                "min": -1048576, 
-                "soft_max": 64, 
+                "max": 1048576,
+                "min": -1048576,
+                "soft_max": 64,
                 "soft_min": 0
             }
-        }, 
+        },
         {
-            "attr": "ifl_end_condition", 
-            "default": "0", 
-            "desc": "Image file list (IFL) end condition", 
+            "attr": "ifl_end_condition",
+            "default": "0",
+            "desc": "Image file list (IFL) end condition",
             "items": [
                 [
-                    "0", 
-                    "Loop", 
+                    "0",
+                    "Loop",
                     ""
-                ], 
+                ],
                 [
-                    "1", 
-                    "Ping Pong", 
+                    "1",
+                    "Ping Pong",
                     ""
-                ], 
+                ],
                 [
-                    "2", 
-                    "Hold", 
+                    "2",
+                    "Hold",
                     ""
                 ]
-            ], 
+            ],
             "type": "ENUM"
-        }, 
+        },
         {
-            "attr": "file", 
-            "default": "", 
-            "desc": "The file name; can contain <UDIM> or <UVTILE> tags for Mari or Mudbox tiles respectively,or $nU and $nV for explicit tiles; lower-case tags consider the tiles as starting from 0 whereas upper-case tags start from 1", 
-            "type": "STRING"
-        }, 
+            "attr": "file",
+            "default": "",
+            "desc": "The file name; can contain <UDIM> or <UVTILE> tags for Mari or Mudbox tiles respectively,or $nU and $nV for explicit tiles; lower-case tags consider the tiles as starting from 0 whereas upper-case tags start from 1",
+            "type": "STRING",
+            "ui": {
+                "file_extensions": [
+                    "exr",
+                    "png",
+                    "bmp",
+                    "tga",
+                    "hdr",
+                    "jpg",
+                    "jpeg",
+                    "pic",
+                    "tif",
+                    "tiff",
+                    "psd",
+                    "vrimg",
+                    "sgi",
+                    "rgb",
+                    "rgba"
+                ]
+            }
+        },
         {
-            "attr": "bitmap", 
-            "default": "", 
-            "desc": "Output BitmapBuffer plugin", 
-            "skip": true, 
+            "attr": "bitmap",
+            "default": "",
+            "desc": "Output BitmapBuffer plugin",
+            "skip": true,
             "type": "OUTPUT_PLUGIN"
         }
-    ], 
-    "Type": "TEXTURE", 
+    ],
+    "Type": "TEXTURE",
     "Widget": {
         "widgets": []
     }

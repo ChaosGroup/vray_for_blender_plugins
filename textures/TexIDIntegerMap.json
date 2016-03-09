@@ -1,0 +1,43 @@
+{
+    "ID": "TexIDIntegerMap",
+    "Name": "ID Integer Map",
+    "Desciption": "TexIDIntegerMap",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "id_tex",
+            "desc": "This texture will suply the IDs",
+            "type": "INT_TEXTURE",
+            "default": 0
+        },
+        {
+            "attr": "ids",
+            "desc": "List of ids",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "values",
+            "desc": "List of values for each id in \"ids\"",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        },
+        {
+            "attr": "default",
+            "desc": "Default value. Returned when no matching id is found",
+            "type": "INT",
+            "default": 0
+        },
+        {
+            "attr": "nsamples",
+            "desc": "The number of samples of the underlying geometry plugin. If not supplied, global nsamples will be used",
+            "type": "INT",
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
