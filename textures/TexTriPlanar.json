@@ -1,0 +1,238 @@
+{
+    "ID": "TexTriPlanar",
+    "Name": "TriPlanar",
+    "Desciption": "TriPlanar mapped texture",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "texture_mode",
+            "desc": "Specifies whether to use the same texture on all axes, or separate textures for each axis",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Same Texture On All Axes",
+                    ""
+                ],
+                [
+                    "1",
+                    "Different Texture On Each Axis",
+                    ""
+                ]
+            ],
+            "default": "0"
+        },
+        {
+            "attr": "texture_x",
+            "desc": "The base texture, or the texture for the X axis if texture mode is set to different textures",
+            "type": "TEXTURE",
+            "options": ["LINKED_ONLY"],
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "attr": "texture_y",
+            "desc": "The texture for the Y axis",
+            "type": "TEXTURE",
+            "options": ["LINKED_ONLY"],
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "texture_z",
+            "desc": "The texture for the Z axis",
+            "type": "TEXTURE",
+            "options": ["LINKED_ONLY"],
+            "default": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "enabled": true,
+                "attributes": [
+                    [
+                        "textureSlot",
+                        2
+                    ]
+                ]
+            }
+        },
+        {
+            "attr": "scale",
+            "desc": "Scale of the texture; larger values increase the number of texture repeats, lower values make the texture larger",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "rollout": "",
+                "min": 0.0
+            }
+        },
+        {
+            "attr": "blend",
+            "desc": "Amount of blending at the plane seams",
+            "type": "FLOAT",
+            "default": 1.0,
+            "ui": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        },
+        {
+            "attr": "frame_offset",
+            "desc": "Offset from the reference frame center (object or reference node)",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "rollout": ""
+            }
+        },
+        {
+            "attr": "texture_rotation",
+            "desc": "Texture rotations for the three axes, in degrees, in texture space",
+            "type": "VECTOR",
+            "default": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ui": {
+                "min": 0.0,
+                "max": 360.0
+            }
+        },
+        {
+            "attr": "random_texture_offset",
+            "desc": "Randomize the texture offset in texture space",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "random_texture_rotation",
+            "desc": "Randomize the texture rotation from one object to another, in texture space. The \"texture rotation\" parameter, if non-zero, is used as increments for the rotation",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "random_axis",
+            "desc": "Randomly permute the axes",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "random_frame_rotation",
+            "desc": "Random frame rotation (in object or reference space)",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "random_mode",
+            "desc": "Specifies what to use to randomize the offset/rotation",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "By Face Material ID",
+                    ""
+                ],
+                [
+                    "1",
+                    "By Object Render ID",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "enabled": true
+            }
+        },
+        {
+            "attr": "ref_space",
+            "name": "Reference Space",
+            "desc": "The space that the projection takes place in, either local object space, or some other object in the scene. If the space is set to reference object(Node), but no object is specified, world space is used",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Local Object",
+                    ""
+                ],
+                [
+                    "1",
+                    "Reference To Another Object",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "rollout": "",
+                "display_name": "Reference space"
+            }
+        },
+        {
+            "attr": "node_ref_transform",
+            "desc": "The reference object's world transform, when the reference space is set to reference object(Node). If this parameter is missing, world space is used",
+            "type": "TRANSFORM",
+            "default": "",
+            "ui": {
+                "enabled": true
+            }
+        }
+    ],
+    "Widget": {
+        "node_widgets": [
+            {
+                "attrs": [
+                    { "name": "texture_mode", "label" : "" }
+                ],
+                "layout": "COLUMN"
+            }
+        ],
+        "widgets": [
+            {
+                "attrs": [
+                    { "name": "scale" },
+                    { "name": "blend" }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    { "name": "random_texture_offset" },
+                    { "name": "random_texture_rotation" },
+                    { "name": "random_axis" },
+                    { "name": "random_mode" }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "attrs": [
+                    { "name": "ref_space", "label": "Ref. Space" }
+                ],
+                "layout": "COLUMN"
+            }
+        ]
+    }
+}

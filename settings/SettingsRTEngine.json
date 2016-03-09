@@ -205,7 +205,7 @@
         },
         {
             "attr": "disable_render_elements",
-            "default": true,
+            "default": false,
             "desc": "Produce only RGBA",
             "type": "BOOL",
             "ui": {

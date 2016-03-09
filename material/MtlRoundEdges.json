@@ -1,7 +1,8 @@
 {
-    "Desciption": "",
     "ID": "MtlRoundEdges",
-    "Name": "Round Edges",
+    "Type": "MATERIAL",
+    "Name": "Rounded Corners",
+    "Desciption": "",
     "Parameters": [
         {
             "attr": "base_mtl",
@@ -15,39 +16,94 @@
             "desc": "Rounding radius",
             "type": "FLOAT_TEXTURE",
             "ui": {
+                "min": 0,
                 "max": 1048576,
-                "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0
             }
         },
         {
+            "attr": "base_mtl",
+            "desc": "Base material",
+            "type": "PLUGIN",
+            "default": "NULL"
+        },
+        {
             "attr": "radius_mode",
             "desc": "0 - the radius parameter is in object space, 1 - the radius parameter is in world space",
-            "type": "INT",
-            "default": 0
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Object Space",
+                    "The radius parameter is in object space"
+                ],
+                [
+                    "1",
+                    "World Space",
+                    "the radius parameter is in world space"
+                ]
+            ],
+            "default": "0"
         },
         {
             "attr": "raytraced",
-            "desc": "true to use raytracing to compute the rounded corners and false to use static mesh analysis",
+            "desc": "Use raytracing to compute the rounded corners and false to use static mesh analysis",
             "type": "BOOL",
             "default": true
         },
         {
             "attr": "raytraced_consider_same_object_only",
+            "name": "Consider Same Object Only",
             "desc": "true to consider only corners on the same object, and false to consider other intersecting objects",
             "type": "BOOL",
-            "default": true
+            "default": true,
+            "ui": {
+                "display_name": "Consider same object only",
+                "enabled": true
+            }
         },
         {
             "attr": "raytraced_mode",
             "desc": "Which corners to smooth: 0 - both convex and concave; 1 - convex only; 2 - concave only",
-            "type": "INT",
-            "default": 0
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Convex and Concave",
+                    ""
+                ],
+                [
+                    "1",
+                    "Convex Only",
+                    ""
+                ],
+                [
+                    "2",
+                    "Concave Only",
+                    ""
+                ]
+            ],
+            "default": "0",
+            "ui": {
+                "display_name": "Mode",
+                "enabled": true
+            }
         }
     ],
-    "Type": "MATERIAL",
     "Widget": {
-        "widgets": []
+        "node_widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "radius_mode", "label": "Space" },
+                    { "name": "raytraced" },
+                    { "name": "raytraced_mode", "label": "Mode" },
+                    { "name": "raytraced_consider_same_object_only", "label" : "Same Object Only" }
+                ]
+            }
+        ],
+        "widgets": [
+        ]
     }
 }
