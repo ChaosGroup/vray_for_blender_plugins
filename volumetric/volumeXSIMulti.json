@@ -2,7 +2,7 @@
     "ID": "volumeXSIMulti",
     "Name": "volume XSI Multi",
     "Desciption": "volumeXSIMulti",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "volumes",

@@ -2,7 +2,7 @@
     "ID": "VolumeMulti",
     "Name": "Volume Multi",
     "Desciption": "VolumeMulti",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "volumes",

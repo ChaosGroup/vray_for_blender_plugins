@@ -6,7 +6,7 @@
     "Parameters": [
         {
             "attr": "compatibility_with",
-            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ..",
+            "desc": "This is used to differentiate between textures exported from different applications",
             "type": "ENUM",
             "items": [
                 [

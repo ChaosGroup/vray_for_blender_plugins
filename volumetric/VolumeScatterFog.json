@@ -2,7 +2,7 @@
     "ID": "VolumeScatterFog",
     "Name": "Volume Scatter Fog",
     "Desciption": "VolumeScatterFog",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "emission",

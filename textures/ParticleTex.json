@@ -6,7 +6,7 @@
     "Parameters": [
         {
             "attr": "compatibility_with",
-            "desc": "This is used to differentiate between textures exported from different applications. The value means : 0 - 3ds Max (this is also the default), 1 - Maya, ..",
+            "desc": "This is used to differentiate between textures exported from different applications",
             "type": "ENUM",
             "items": [
                 [
@@ -340,7 +340,7 @@
         },
         {
             "attr": "color_mode",
-            "desc": "0: not per particle; 1: pp color; 2: pp emission 1; 3: pp user color 1; etc..",
+            "desc": "0: not per particle; 1: pp color; 2: pp emission 1; 3: pp user color 1",
             "type": "INT",
             "default": 1
         },
@@ -367,7 +367,7 @@
         },
         {
             "attr": "radius_mode",
-            "desc": "0: not per particle; 1: pp radius; 2: pp user scalar 1; etc..",
+            "desc": "0: not per particle; 1: pp radius; 2: pp user scalar 1",
             "type": "INT",
             "default": 1
         },

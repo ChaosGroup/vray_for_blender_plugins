@@ -2,7 +2,7 @@
     "ID": "VolumeChannels",
     "Name": "Volume Channels",
     "Desciption": "VolumeChannels",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "base_volume",

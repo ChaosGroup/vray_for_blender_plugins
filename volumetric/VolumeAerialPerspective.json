@@ -2,7 +2,7 @@
     "ID": "VolumeAerialPerspective",
     "Name": "Volume Aerial Perspective",
     "Desciption": "VolumeAerialPerspective",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "sun",

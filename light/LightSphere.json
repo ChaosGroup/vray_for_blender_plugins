@@ -293,16 +293,11 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0
-<<<<<<< HEAD
             },
             "options": [
                 "LINKED_ONLY"
             ]
         },
-=======
-            }
-        },
->>>>>>> test/houdini
         {
             "attr": "subdivs",
             "default": 8,

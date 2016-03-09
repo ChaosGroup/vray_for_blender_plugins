@@ -2,7 +2,7 @@
     "ID": "VolumeFog",
     "Name": "Volume Fog",
     "Desciption": "VolumeFog",
-    "Type": "VOLUMETRIC",
+    "Type": "EFFECT",
     "Parameters": [
         {
             "attr": "emission",
