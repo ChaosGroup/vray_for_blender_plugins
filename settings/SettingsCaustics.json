@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "on",
-            "default": true,
+            "default": false,
             "desc": "Enable caustics computation",
             "name": "Use Caustics",
             "type": "BOOL",
