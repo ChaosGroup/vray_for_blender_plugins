@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "type",
-            "default": "1",
+            "default": "3",
             "desc": "The type of the image sampler",
             "items": [
                 [
@@ -460,7 +460,7 @@
                     ""
                 ]
             ],
-            "default": "0",
+            "default": "1",
             "ui": {
                 "display_name": "Adaptive method",
                 "enabled": true
