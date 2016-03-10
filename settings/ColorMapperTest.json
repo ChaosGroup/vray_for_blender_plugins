@@ -2,7 +2,7 @@
     "ID": "ColorMapperTest",
     "Name": "Color Mapper Test",
     "Desciption": "ColorMapperTest",
-    "Type": "SETTINGS",
+    "Type": "MISC",
     "Parameters": [
         {
             "attr": "type",

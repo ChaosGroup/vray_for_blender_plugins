@@ -2,7 +2,7 @@
     "ID": "CustomGlsl",
     "Name": "Custom Glsl",
     "Desciption": "CustomGlsl",
-    "Type": "SETTINGS",
+    "Type": "MISC",
     "Parameters": [],
     "Widget": {
         "widgets": []

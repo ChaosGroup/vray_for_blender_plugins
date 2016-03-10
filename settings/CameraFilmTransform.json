@@ -2,7 +2,7 @@
     "ID": "CameraFilmTransform",
     "Name": "Camera Film Transform",
     "Desciption": "CameraFilmTransform",
-    "Type": "SETTINGS",
+    "Type": "MISC",
     "Parameters": [
         {
             "attr": "prescale",

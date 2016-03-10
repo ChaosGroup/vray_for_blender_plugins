@@ -2,7 +2,7 @@
     "ID": "CameraDome",
     "Name": "Camera Dome",
     "Desciption": "CameraDome",
-    "Type": "SETTINGS",
+    "Type": "MISC",
     "Parameters": [
         {
             "attr": "flip_x",
