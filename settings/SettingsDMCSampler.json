@@ -58,7 +58,7 @@
             "type": "FLOAT",
             "ui": {
                 "max": 1048576,
-                "min": -1048576,
+                "min": 0,
                 "soft_max": 64,
                 "soft_min": 0,
                 "display_name": "Subdivs multiplier"
@@ -94,13 +94,39 @@
         },
         {
             "attr": "use_local_subdivs",
-            "desc": "true if shading subdivs in materials/lights/GI should be used, and false to determine subdivs automatically",
-            "type": "BOOL",
-            "default": true
+            "default": true,
+            "desc": "If shading subdivs in materials/lights/GI should be used, and false to determine subdivs automatically",
+            "type": "BOOL"
         }
     ],
     "Type": "SETTINGS",
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {   "layout" : "SPLIT",
+                "splits" : [
+                    {   "layout" : "COLUMN",
+                        "align" : true,
+                        "attrs" : [
+                            { "name" : "adaptive_amount", "slider" : true },
+                            { "name" : "adaptive_threshold", "label" : "Noise Thresh." },
+                            { "name" : "subdivs_mult" }
+                        ]
+                    },
+                    {   "layout" : "COLUMN",
+                        "align" : true,
+                        "attrs" : [
+                            { "name" : "adaptive_min_samples", "label" : "Min. Samples" },
+                            { "name" : "time_dependent" },
+                            { "name" : "div_shade_subdivs" }
+                        ]
+                    }
+                ]
+            },
+            {   "layout": "ROW",
+                "attrs": [
+                    { "name": "use_local_subdivs" }
+                ]
+            }
+        ]
     }
 }
