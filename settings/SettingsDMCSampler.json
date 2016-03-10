@@ -65,19 +65,6 @@
             }
         },
         {
-            "attr": "path_sampler_type",
-            "default": 2,
-            "desc": "",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
-                "display_name": "Path sampler type"
-            }
-        },
-        {
             "attr": "div_shade_subdivs",
             "desc": "Allow VRay to divide the number of samples for lights, materials etc by the number of AA samples in order to achieve roughly the same quality and number of rays when changing AA settings",
             "type": "BOOL",
