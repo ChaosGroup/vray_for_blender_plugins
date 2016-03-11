@@ -1,6 +1,6 @@
 {
     "ID": "GeomLocalRayserver",
-    "Name": "Geom Local Rayserver",
+    "Name": "Local Rayserver",
     "Desciption": "GeomLocalRayserver",
     "Type": "GEOMETRY",
     "Parameters": [

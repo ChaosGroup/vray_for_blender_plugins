@@ -1,6 +1,6 @@
 {
     "ID": "GeomSphere",
-    "Name": "Geom Sphere",
+    "Name": "Sphere",
     "Desciption": "GeomSphere",
     "Type": "GEOMETRY",
     "Parameters": [

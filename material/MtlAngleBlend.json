@@ -1,6 +1,6 @@
 {
     "ID": "MtlAngleBlend",
-    "Name": "Mtl Angle Blend",
+    "Name": "Angle Blend",
     "Desciption": "MtlAngleBlend",
     "Type": "MATERIAL",
     "Parameters": [

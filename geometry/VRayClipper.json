@@ -2,7 +2,7 @@
     "ID": "VRayClipper",
     "Name": "V Ray Clipper",
     "Desciption": "VRayClipper",
-    "Type": "GEOMETRY",
+    "Type": "OBJECT",
     "Parameters": [
         {
             "attr": "enabled",
@@ -55,7 +55,7 @@
         {
             "attr": "exclusion_nodes",
             "desc": "List of node plugins to consider for inclusion/exclusion",
-            "type": "PLUGIN_LIST",
+            "type": "PLUGIN",
             "elements_count": 0,
             "default": null,
             "ui": {
@@ -70,13 +70,14 @@
             }
         },
         {
-            "attr": "exclusion_mode",
-            "desc": "false to include the nodes listed, true to exclude the nodes listed",
-            "type": "BOOL",
-            "default": true,
-            "ui": {
-                "display_name": "As Exclusive list"
-            }
+            "attr" : "exclusion_mode",
+            "desc" : "Exclusion Mode",
+            "type" : "ENUM",
+            "items" : [
+                ["0", "Include", ""],
+                ["1", "Exclude", ""]
+            ],
+            "default" : "1"
         },
         {
             "attr": "transform",

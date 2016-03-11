@@ -32,6 +32,13 @@
             "desc": "",
             "type": "INT",
             "default": 0
+        },
+        {
+            "attr" : "object",
+            "desc" : "",
+            "type" : "STRING",
+            "skip" :  true,
+            "default" : ""
         }
     ],
     "Type": "EFFECT",

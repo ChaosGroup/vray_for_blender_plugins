@@ -1,6 +1,6 @@
 {
     "ID": "MtlDiffuse",
-    "Name": "Mtl Diffuse",
+    "Name": "Diffuse",
     "Desciption": "MtlDiffuse",
     "Type": "MATERIAL",
     "Parameters": [

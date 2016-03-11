@@ -1,6 +1,6 @@
 {
     "ID": "GeomBox",
-    "Name": "Geom Box",
+    "Name": "Box",
     "Desciption": "GeomBox",
     "Type": "GEOMETRY",
     "Parameters": [

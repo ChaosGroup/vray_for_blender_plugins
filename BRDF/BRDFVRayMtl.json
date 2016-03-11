@@ -1039,6 +1039,14 @@
     ],
     "Type": "BRDF",
     "Widget": {
+        "node_widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "brdf_type" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "label": "Reflections",

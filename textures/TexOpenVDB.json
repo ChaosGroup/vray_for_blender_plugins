@@ -8,6 +8,7 @@
             "attr": "file",
             "desc": "The path to OpenVDB file",
             "type": "STRING",
+            "subtype": "FILE_PATH",
             "default": "",
             "ui": {
                 "file_extensions": [
