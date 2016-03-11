@@ -204,6 +204,14 @@
     ],
     "Type": "UVWGEN",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "type" },
+                    { "name": "object_space" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "layout": "COLUMN",

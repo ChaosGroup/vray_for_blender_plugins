@@ -220,11 +220,19 @@
             "attr": "use_curve",
             "desc": "If true the blend curve is used",
             "type": "INT",
+            "skip": true,
             "default": 0
         }
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "mix_amount" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "attrs": [

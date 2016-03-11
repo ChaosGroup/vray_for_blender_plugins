@@ -176,6 +176,13 @@
     ],
     "Type": "UVWGEN",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "uvw_channel" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

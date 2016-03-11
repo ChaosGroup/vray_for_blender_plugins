@@ -49,6 +49,28 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "use_mtl_id" }
+                ]
+            },
+            {   "layout": "COLUMN",
+                "attrs": [ { "name": "id", "label": "Material ID" } ],
+                "visible": { "prop": "use_mtl_id", "condition" : true}
+            },
+            {   "layout": "COLUMN",
+                "attrs": [ { "name": "id", "label": "Object ID" } ],
+                "visible": { "prop": "use_mtl_id", "condition" : false }
+            },
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "affect_matte_objects" },
+                    { "name": "consider_for_aa" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

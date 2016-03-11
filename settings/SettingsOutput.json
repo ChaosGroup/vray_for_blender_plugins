@@ -459,6 +459,13 @@
             "desc": "If true, Velocity channel will be saved zero base instead of the default 0.5 based",
             "type": "BOOL",
             "default": false
+        },
+        {
+            "attr" : "relements_separateFiles",
+            "name" : "Separate Files",
+            "desc" : "Save render channels in separate files",
+            "type" : "BOOL",
+            "skip" : true
         }
     ],
     "Type": "SETTINGS",

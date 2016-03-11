@@ -1,7 +1,7 @@
 {
     "ID": "TexMayaFluid",
-    "Name": "Maya Fluid",
-    "Desciption": "TexMayaFluid",
+    "Name": "Phoenix Fluid",
+    "Desciption": "Fluid data texture for Phoenix shader",
     "Type": "TEXTURE",
     "Parameters": [
         {
@@ -116,9 +116,42 @@
             "desc": "Converts the current frame number to cache frame number",
             "type": "FLOAT",
             "default": 0.0
+        },
+        {
+            "attr" : "out_flame",
+            "desc" : "Flame",
+            "type" : "OUTPUT_FLOAT_TEXTURE",
+            "default" : 1.0
+        },
+        {
+            "attr" : "out_fuel",
+            "desc" : "Fuel",
+            "type" : "OUTPUT_FLOAT_TEXTURE",
+            "default" : 1.0
+        },
+        {
+            "attr" : "out_density",
+            "desc" : "Density",
+            "type" : "OUTPUT_FLOAT_TEXTURE",
+            "default" : 1.0
+        },
+        {
+            "attr" : "domain",
+            "name" : "Domain",
+            "desc" : "Simulation domain",
+            "type" : "GEOMETRY",
+            "skip" : true,
+            "default" : ""
         }
     ],
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {   "layout" : "COLUMN",
+                "attrs" : [
+                    { "name" : "interpolation_type" },
+                    { "name" : "mb_type" }
+                ]
+            }
+        ]
     }
 }

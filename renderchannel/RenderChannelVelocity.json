@@ -54,6 +54,18 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "max_velocity" },
+                    { "name": "max_velocity_last_frame", "label": "Max. Last" },
+                    { "name": "clamp_velocity" },
+                    { "name": "ignore_z" },
+                    { "name": "filtering" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

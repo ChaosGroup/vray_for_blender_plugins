@@ -66,6 +66,18 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "red_id" },
+                    { "name": "green_id" },
+                    { "name": "blue_id" },
+                    { "name": "use_mtl_id" },
+                    { "name": "affect_matte_objects" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

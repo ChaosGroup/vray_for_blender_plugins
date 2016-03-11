@@ -133,9 +133,15 @@
         },
         {
             "attr": "adaptation_only",
-            "default": false,
+            "default": "0",
             "desc": "When this parameter is on, the color mapping will not be applied to the final image, however V-Ray will proceed with all its calculations as though color mapping is applied (e.g. the noise levels will be corrected accordingly)",
-            "type": "BOOL",
+            "type" : "ENUM",
+            "items" : [
+                ["0", "Color Mapping & Gamma", "Both \"Color Mapping\" and \"Gamma\" are applied"],
+                ["1", "Don't Affect Colors",   "Nothing is applied"],
+                ["2", "Color Mapping Only",    "Only color mapping is applied"]
+            ],
+            "default" : "0",
             "ui": {
                 "display_name": "Mode"
             }
@@ -167,6 +173,9 @@
             "default": 1,
             "desc": "Input gamma for textures",
             "skip": true,
+            "available": [
+                "BLENDER"
+            ],
             "type": "FLOAT",
             "ui": {
                 "max": 1048576,
@@ -174,6 +183,37 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
+        },
+        {
+            "attr" : "use_input_gamma",
+            "desc" : "Use global \"Input Gamma\" for textures",
+            "type" : "BOOL",
+            "skip" : true,
+            "default" : false,
+            "available": [
+                "BLENDER"
+            ]
+        },
+        {
+            "attr" : "sync_with_gamma",
+            "desc" : "Set Blender \"Color Management\" Gamma to (1.0 / ColorMapping.Gamma)",
+            "type" : "BOOL",
+            "skip" : true,
+            "default" : false,
+            "available": [
+                "BLENDER"
+            ]
+        },
+        {
+            "attr" : "preview_use_scene_cm",
+            "name" : "Use For Preview",
+            "desc" : "Use current scene \"Color Mapping\" settings",
+            "type" : "BOOL",
+            "skip" : true,
+            "default" : true,
+            "available": [
+                "BLENDER"
+            ]
         }
     ],
     "Type": "SETTINGS",

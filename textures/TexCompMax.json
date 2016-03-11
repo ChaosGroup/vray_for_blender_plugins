@@ -222,6 +222,13 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "operator", "label" : "" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "attrs": [

@@ -18,6 +18,14 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "filtering" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

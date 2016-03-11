@@ -62,6 +62,14 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "operation" },
+                    { "name": "use_alpha" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

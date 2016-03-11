@@ -58,11 +58,24 @@
             ], 
             "name": "Type", 
             "skip": true, 
-            "type": "ENUM"
+            "type": "ENUM",
+            "available": [
+                "BLENDER"
+            ]
         }
     ], 
     "Type": "RENDERCHANNEL", 
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "type" },
+                    { "name": "color_mapping" },
+                    { "name": "consider_for_aa" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

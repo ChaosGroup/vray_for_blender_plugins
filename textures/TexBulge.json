@@ -375,6 +375,15 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "align": true,
+                "attrs": [
+                    { "name": "u_width" },
+                    { "name": "v_width" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "align": true,

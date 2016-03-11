@@ -32,6 +32,13 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "invert_alpha" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "attrs": [

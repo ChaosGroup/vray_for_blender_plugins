@@ -2,6 +2,8 @@
     "Desciption": "Remap float value",
     "ID": "TexRemapFloat",
     "Name": "Remap Float",
+    "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "value",
@@ -40,8 +42,15 @@
             }
         }
     ],
-    "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "low" },
+                    { "name": "high" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "align": true,

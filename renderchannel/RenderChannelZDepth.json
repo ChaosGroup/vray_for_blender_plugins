@@ -54,6 +54,22 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "align": true,
+                "attrs": [
+                    { "name": "depth_black", "label": "Black Distance" },
+                    { "name": "depth_white", "label": "White Distance" }
+                ]
+            },
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "depth_from_camera" },
+                    { "name": "depth_clamp" },
+                    { "name": "filtering" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

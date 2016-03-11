@@ -2,6 +2,8 @@
     "Desciption": "Remap values",
     "ID": "TexRemap",
     "Name": "Remap",
+    "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input_value",
@@ -388,7 +390,6 @@
             "default": 0.0
         }
     ],
-    "Type": "TEXTURE",
     "Widget": {
         "widgets": [
             {

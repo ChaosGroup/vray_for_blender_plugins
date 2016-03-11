@@ -56,6 +56,13 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "color" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

@@ -30,154 +30,37 @@
         },
         {
             "attr": "alias",
-            "default": "1",
+            "default": "101",
             "desc": "",
             "items": [
-                [
-                    "130",
-                    "Raw Total Lightning",
-                    ""
-                ],
-                [
-                    "124",
-                    "Background",
-                    ""
-                ],
-                [
-                    "131",
-                    "Bump Normal",
-                    ""
-                ],
-                [
-                    "129",
-                    "Total Lightning",
-                    ""
-                ],
-                [
-                    "132",
-                    "Samplerate",
-                    ""
-                ],
-                [
-                    "120",
-                    "Refraction Filter",
-                    ""
-                ],
-                [
-                    "122",
-                    "Real Color",
-                    ""
-                ],
-                [
-                    "133",
-                    "SSS",
-                    ""
-                ],
-                [
-                    "121",
-                    "Raw Refraction",
-                    ""
-                ],
-                [
-                    "112",
-                    "Raw Shadow",
-                    ""
-                ],
-                [
-                    "119",
-                    "Raw Reflection",
-                    ""
-                ],
-                [
-                    "128",
-                    "Matte Shadow",
-                    ""
-                ],
-                [
-                    "113",
-                    "Velocity",
-                    ""
-                ],
-                [
-                    "105",
-                    "Shadow",
-                    ""
-                ],
-                [
-                    "104",
-                    "Self Illumination",
-                    ""
-                ],
-                [
-                    "107",
-                    "Lightning",
-                    ""
-                ],
-                [
-                    "106",
-                    "Specular",
-                    ""
-                ],
-                [
-                    "101",
-                    "Diffuse",
-                    ""
-                ],
-                [
-                    "103",
-                    "Refraction",
-                    ""
-                ],
-                [
-                    "110",
-                    "Raw GI",
-                    ""
-                ],
-                [
-                    "102",
-                    "Reflection",
-                    ""
-                ],
-                [
-                    "127",
-                    "Wire Color",
-                    ""
-                ],
-                [
-                    "126",
-                    "Color",
-                    ""
-                ],
-                [
-                    "125",
-                    "Alpha",
-                    ""
-                ],
-                [
-                    "111",
-                    "Raw Lightning",
-                    ""
-                ],
-                [
-                    "109",
-                    "Caustics",
-                    ""
-                ],
-                [
-                    "108",
-                    "GI",
-                    ""
-                ],
-                [
-                    "118",
-                    "Reflection Filter",
-                    ""
-                ],
-                [
-                    "1",
-                    "RGB",
-                    ""
-                ]
+                [ "101", "Diffuse", "" ],
+                [ "102", "Reflection", "" ],
+                [ "103", "Refraction", "" ],
+                [ "104", "Self Illumination", "" ],
+                [ "105", "Shadow", "" ],
+                [ "106", "Specular", "" ],
+                [ "107", "Lightning", "" ],
+                [ "108", "GI", "" ],
+                [ "109", "Caustics", "" ],
+                [ "110", "Raw GI", "" ],
+                [ "111", "Raw Lightning", "" ],
+                [ "112", "Raw Shadow", "" ],
+                [ "113", "Velocity", "" ],
+                [ "118", "Reflection Filter", "" ],
+                [ "119", "Raw Reflection", "" ],
+                [ "120", "Refraction Filter", "" ],
+                [ "121", "Raw Refraction", "" ],
+                [ "122", "Real Color", "" ],
+                [ "124", "Background", "" ],
+                [ "125", "Alpha", "" ],
+                [ "126", "Color", "" ],
+                [ "127", "Wire Color", "" ],
+                [ "128", "Matte Shadow", "" ],
+                [ "129", "Total Lightning", "" ],
+                [ "130", "Raw Total Lightning", "" ],
+                [ "131", "Bump Normal", "" ],
+                [ "132", "Samplerate", "" ],
+                [ "133", "SSS", "" ]
             ],
             "name": "Type",
             "type": "ENUM"
@@ -197,6 +80,17 @@
     ],
     "Type": "RENDERCHANNEL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "alias" },
+                    { "name": "color_mapping" },
+                    { "name": "filtering" },
+                    { "name": "consider_for_aa" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

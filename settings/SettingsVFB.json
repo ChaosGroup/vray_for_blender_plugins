@@ -302,6 +302,13 @@
             "default": false,
             "desc": "",
             "type": "BOOL"
+        },
+        {
+            "attr": "use",
+            "default": false,
+            "desc": "",
+            "skip": true,
+            "type": "BOOL"
         }
     ],
     "Type": "SETTINGS",

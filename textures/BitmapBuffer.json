@@ -245,10 +245,70 @@
             "desc": "Output BitmapBuffer plugin",
             "skip": true,
             "type": "OUTPUT_PLUGIN"
+        },
+        {
+            "attr" : "use_input_gamma",
+            "desc" : "Use \"Input Gamma\" parameter from \"Color Mapping\" as \"Gamma\"",
+            "type" : "BOOL",
+            "skip" : true,
+            "default" : true,
+            "available": [
+                "BLENDER"
+            ]
         }
     ],
     "Type": "TEXTURE",
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {   "layout" : "COLUMN",
+                "align" : false,
+                "attrs" : [
+                    { "name" : "color_space" },
+                    {
+                        "name" : "gamma",
+                        "active" : {
+                            "prop" : "color_space",
+                            "value" : 1
+                        }
+                    },
+                    { "name" : "interpolation" },
+                    { "name" : "filter_type" },
+                    {
+                        "name" : "filter_blur",
+                        "active" : {
+                            "prop" : "filter_type",
+                            "value" : 0,
+                            "condition" : "not_equal"
+                        }
+                    }
+                ]
+            },
+
+            {   "layout" : "SPLIT",
+                "splits" : [
+                    {   "layout" : "COLUMN",
+                        "align" : true,
+                        "attrs" : [
+                            { "name" : "use_input_gamma" }
+                        ]
+                    },
+                    {   "layout" : "COLUMN",
+                        "align" : true,
+                        "attrs" : [
+                            { "name" : "allow_negative_colors" },
+                            { "name" : "use_data_window" }
+                        ]
+                    }
+                ]
+            },
+
+            {   "layout" : "COLUMN",
+                "align" : false,
+                "attrs" : [
+                    { "name" : "psd_group_name", "label" : "PSD Group" },
+                    { "name" : "psd_alpha_name", "label" : "PSD Alpha" }
+                ]
+            }
+        ]
     }
 }
