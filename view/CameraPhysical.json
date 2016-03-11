@@ -376,7 +376,7 @@
         },
         {
             "attr": "specify_fov",
-            "default": false,
+            "default": true,
             "desc": "Use field of view instead of use the focal length, film width, scale etc",
             "type": "BOOL"
         },
