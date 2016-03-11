@@ -194,11 +194,11 @@
                 "align": true,
                 "attrs": [
                     {
-                        "label": "Num Samples",
+                        "label": "Theta Samples",
                         "name": "brdf_nsamples_d_theta"
                     },
                     {
-                        "label": "Num Samples",
+                        "label": "Phi Samples",
                         "name": "brdf_nsamples_d_phi"
                     }
                 ],
