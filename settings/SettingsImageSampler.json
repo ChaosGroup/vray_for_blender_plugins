@@ -120,13 +120,6 @@
             }
         },
         {
-            "attr": "dmc_show_samples",
-            "default": false,
-            "desc": "true to show the samples for the adaptive DMC image sampler",
-            "name": "Show Samples",
-            "type": "BOOL"
-        },
-        {
             "attr": "dmc_per_pixel_filtering",
             "default": false,
             "desc": "true to enable per-pixel filtering for the adaptive DMC image sampler",
@@ -229,13 +222,6 @@
                 "display_name": "Normals threshold",
                 "enabled": true
             }
-        },
-        {
-            "attr": "subdivision_show_samples",
-            "default": false,
-            "desc": "",
-            "name": "Show Samples",
-            "type": "BOOL"
         },
         {
             "attr": "progressive_minSubdivs",
@@ -545,9 +531,6 @@
                         "align": true,
                         "attrs": [
                             {
-                                "name": "dmc_show_samples"
-                            },
-                            {
                                 "name": "dmc_per_pixel_filtering"
                             }
                         ],
@@ -612,9 +595,6 @@
                     {
                         "align": true,
                         "attrs": [
-                            {
-                                "name": "subdivision_show_samples"
-                            },
                             {
                                 "name": "subdivision_jitter"
                             },
