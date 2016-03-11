@@ -35,6 +35,14 @@
     ],
     "Type": "MATERIAL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "double_sided" },
+                    { "name": "allow_negative_colors" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

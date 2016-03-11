@@ -194,8 +194,13 @@
         {
             "attr": "stereo_interocular_method",
             "desc": "Specifies the camera position relative to the left and right views: 0 - center, 1 - keep left view, 2 - keep right view",
-            "type": "INT",
-            "default": 0
+            "type": "ENUM",
+            "items": [
+                [ "0", "Center",     "" ],
+                [ "1", "Keep Left",  "" ],
+                [ "2", "Keep Right", "" ]
+            ],
+            "default": "0"
         },
         {
             "attr": "stereo_specify_focus",
@@ -210,16 +215,26 @@
             "default": 1.0
         },
         {
-            "attr": "stereo_focus_method",
-            "desc": "The focus method: 0 - parallel, 1 - rotate, 2 - shift",
-            "type": "INT",
-            "default": 0
+            "attr": "stereo_view",
+            "desc": "Specifies which view to render",
+            "type": "ENUM",
+            "items" : [
+                [ "0", "Both",  "Both views will be rendered side by side" ],
+                [ "1", "Left",  "Only the left view will be rendered" ],
+                [ "2", "Right", "Only the right view will be rendered" ]
+            ],
+            "default": "0"
         },
         {
-            "attr": "stereo_view",
-            "desc": "Specifies which view to render: 0 - both views, 1 - left view, 2 - right view",
-            "type": "INT",
-            "default": 0
+            "attr": "stereo_focus_method",
+            "desc": "Specifies which view to render",
+            "type": "ENUM",
+            "items" : [
+                [ "0", "Parallel", "Both cameras have their focus points directly in front of them" ],
+                [ "1", "Rotation", "The stereoscopy is achieved by rotating the left and right views so that their focus points coincide at the distance from the eyes where the lines of sight for each eye converge called fusion distance" ],
+                [ "2", "Shear",    "The orientation of both views remain the same but each eyes view is sheared along Z so that the two frustums converge at the fusion distance" ]
+            ],
+            "default": "0"
         }
     ],
     "Type": "CAMERA",

@@ -144,12 +144,16 @@
     ],
     "Type": "MATERIAL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name" : "map_type" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "attrs": [
-                    {
-                        "name": ""
-                    },
                     {
                         "name": "bump_delta_scale"
                     },

@@ -204,6 +204,13 @@
     ],
     "Type": "UVWGEN",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "mapping_type" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

@@ -63,14 +63,14 @@
     ],
     "Type": "LIGHT",
     "Widget": {
-        "widgets": [
+        "node_widgets": [
             {
                 "attrs": [
                     {
                         "name": "enabled"
                     }
                 ],
-                "layout": "ROW"
+                "layout": "COLUMN"
             },
             {
                 "attrs": [
@@ -82,7 +82,7 @@
                         "name": "mode"
                     }
                 ],
-                "layout": "ROW"
+                "layout": "COLUMN"
             },
             {
                 "attrs": [
@@ -93,8 +93,10 @@
                         "name": "compensate_exposure"
                     }
                 ],
-                "layout": "ROW"
+                "layout": "COLUMN"
             }
+        ],
+        "widgets": [
         ]
     }
 }

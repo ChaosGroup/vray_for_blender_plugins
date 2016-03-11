@@ -35,6 +35,13 @@
     ],
     "Type": "MATERIAL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name" : "material_id_number" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

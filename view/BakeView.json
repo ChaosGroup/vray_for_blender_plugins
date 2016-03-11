@@ -229,6 +229,13 @@
             "desc": "Material for \"Bake By Material\"",
             "skip": true,
             "type": "STRING"
+        },
+        {
+            "attr" : "square_resolution",
+            "desc" : "Set square resolution",
+            "type" : "BOOL",
+            "skip" : true,
+            "default" : true
         }
     ],
     "Type": "SETTINGS",

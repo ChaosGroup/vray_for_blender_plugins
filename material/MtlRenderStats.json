@@ -62,6 +62,18 @@
     ],
     "Type": "MATERIAL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name" : "visibility", "label" : "Primary Visibility" },
+                    { "name" : "camera_visibility", "label" : "Camera" },
+                    { "name" : "gi_visibility", "label" : "GI" },
+                    { "name" : "shadows_visibility", "label" : "Shadows" },
+                    { "name" : "reflections_visibility", "label" : "Reflections" },
+                    { "name" : "refractions_visibility", "label" : "Refractions" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

@@ -36,6 +36,9 @@
             "default": "",
             "desc": "Expanded material",
             "name": "Material",
+            "available": [
+                "BLENDER"
+            ],
             "skip": true,
             "type": "MATERIAL"
         },
@@ -46,6 +49,9 @@
             "name": "Expanded",
             "options": [
                 "HIDDEN"
+            ],
+            "available": [
+                "BLENDER"
             ],
             "skip": true,
             "type": "BOOL"

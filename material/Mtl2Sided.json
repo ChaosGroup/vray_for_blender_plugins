@@ -91,6 +91,13 @@
     ],
     "Type": "MATERIAL",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name" : "force_1sided" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

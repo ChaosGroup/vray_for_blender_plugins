@@ -310,6 +310,14 @@
     ],
     "Type": "GEOMETRY",
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    {  "name": "type" },
+                    {  "name": "displacement_amount", "label": "Amount" }
+                ]
+            }
+        ],
         "widgets": [
             {
                 "attrs": [
