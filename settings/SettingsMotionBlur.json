@@ -147,7 +147,7 @@
             }
         }
     ],
-    "Type": "SETTINGS",
+    "Type": "CAMERA",
     "Widget": {
         "widgets": []
     }
