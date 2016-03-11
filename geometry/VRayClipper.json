@@ -8,7 +8,7 @@
             "attr": "enabled",
             "desc": "",
             "type": "BOOL",
-            "default": true
+            "default": false
         },
         {
             "attr": "affect_light",
