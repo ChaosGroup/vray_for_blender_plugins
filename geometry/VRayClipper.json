@@ -118,6 +118,16 @@
             "default": null
         },
         {
+            "attr": "use_obj_mesh",
+            "name": "Use Object Mesh",
+            "desc": "Use object mesh instead of plane for clipping",
+            "type": "BOOL",
+            "default": false,
+            "available": [
+                "BLENDER"
+            ]
+        },
+        {
             "attr": "invert_inside",
             "desc": "Specifies the boolean operation to perform: 0 - intersection, 1 - substraction(scene - clip_mesh)",
             "type": "INT",
