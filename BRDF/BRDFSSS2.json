@@ -174,12 +174,6 @@
             "type": "BOOL"
         },
         {
-            "attr": "legacy_mode",
-            "default": false,
-            "desc": "Turns on the old method for computing volume properties from the scatter_radius",
-            "type": "BOOL"
-        },
-        {
             "attr": "geometry_based_sampling",
             "default": false,
             "desc": "",
@@ -379,9 +373,6 @@
                         "attrs": [
                             {
                                 "name": "linear_workflow"
-                            },
-                            {
-                                "name": "legacy_mode"
                             }
                         ],
                         "layout": "COLUMN"

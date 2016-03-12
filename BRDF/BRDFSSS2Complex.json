@@ -141,12 +141,6 @@
             }
         },
         {
-            "attr": "legacy_mode",
-            "default": false,
-            "desc": "true to turn on the old method for calculating volume properties from the scatter_radius",
-            "type": "BOOL"
-        },
-        {
             "attr": "specular_color",
             "default": [
                 1,
