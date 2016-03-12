@@ -465,7 +465,8 @@
             "name" : "Separate Files",
             "desc" : "Save render channels in separate files",
             "type" : "BOOL",
-            "skip" : true
+            "skip" : true,
+            "default": true
         }
     ],
     "Type": "SETTINGS",
