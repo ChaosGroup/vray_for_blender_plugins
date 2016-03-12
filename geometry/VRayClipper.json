@@ -129,9 +129,14 @@
         },
         {
             "attr": "invert_inside",
-            "desc": "Specifies the boolean operation to perform: 0 - intersection, 1 - substraction(scene - clip_mesh)",
-            "type": "INT",
-            "default": 1
+            "name": "Operation",
+            "desc": "Specifies the boolean operation to perform",
+            "type" : "ENUM",
+            "items" : [
+                ["0", "Intersection", ""],
+                ["1", "Substraction", ""]
+            ],
+            "default" : "1"
         }
     ],
     "Widget": {
