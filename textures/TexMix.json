@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexMix",
     "Name": "Mix",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

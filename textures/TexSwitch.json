@@ -3,6 +3,7 @@
     "Name": "Switch",
     "Desciption": "TexSwitch",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "nodes",

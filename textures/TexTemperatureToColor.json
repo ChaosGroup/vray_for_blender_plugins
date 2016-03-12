@@ -2,6 +2,7 @@
     "Desciption": "Temperature to color",
     "ID": "TexTemperatureToColor",
     "Name": "Temperature To Color",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

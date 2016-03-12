@@ -3,6 +3,7 @@
     "Name": "Color Correct",
     "Desciption": "TexColorCorrect",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "in_color",

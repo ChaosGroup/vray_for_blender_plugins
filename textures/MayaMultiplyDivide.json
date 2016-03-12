@@ -3,6 +3,7 @@
     "Name": "Maya Multiply Divide",
     "Desciption": "MayaMultiplyDivide",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color1",

@@ -2,6 +2,7 @@
     "Desciption": "Vector to vector texture",
     "ID": "TexVector",
     "Name": "Vector To Texture",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "vector",

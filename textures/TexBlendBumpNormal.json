@@ -3,6 +3,7 @@
     "Name": "Blend Bump Normal",
     "Desciption": "TexBlendBumpNormal",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "normalMap1",

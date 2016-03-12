@@ -3,6 +3,7 @@
     "Name": "Plus Minus Average",
     "Desciption": "TexPlusMinusAverage",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "operation",

@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexCombineFloat",
     "Name": "Combine Float",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "value",

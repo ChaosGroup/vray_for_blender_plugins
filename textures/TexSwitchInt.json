@@ -3,6 +3,7 @@
     "Name": "Switch Int",
     "Desciption": "TexSwitchInt",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "nodes",

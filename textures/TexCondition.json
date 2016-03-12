@@ -1,13 +1,17 @@
 {
     "ID": "TexCondition",
-    "Name": "Condition",
+    "Name": "Condition (From Texture)",
     "Desciption": "TexCondition",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "operation",
-            "desc": "The condition check: 0 - equal, 1 - not equal, 2 - greater than, 3 - greater or equal, 4 - less than, 5 - less or equal",
+            "desc": "The condition check",
             "type": "INT_TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ],
             "default": 0
         },
         {

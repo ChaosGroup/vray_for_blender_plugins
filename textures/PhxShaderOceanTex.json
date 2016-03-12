@@ -3,6 +3,7 @@
     "Name": "Phx Shader Ocean Tex",
     "Desciption": "PhxShaderOceanTex",
     "Type": "TEXTURE",
+    "Subtype": "PHOENIX",
     "Parameters": [
         {
             "attr": "compatibility_with",

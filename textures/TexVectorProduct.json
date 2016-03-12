@@ -2,6 +2,7 @@
     "Desciption": "Vector product",
     "ID": "TexVectorProduct",
     "Name": "Vector Product",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "operation",

@@ -3,6 +3,7 @@
     "Name": "Phx Shader Tex Alpha",
     "Desciption": "PhxShaderTexAlpha",
     "Type": "TEXTURE",
+    "Subtype": "PHOENIX",
     "Parameters": [
         {
             "attr": "ttex",

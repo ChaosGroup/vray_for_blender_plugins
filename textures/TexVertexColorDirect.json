@@ -2,6 +2,7 @@
     "ID": "TexVertexColorDirect",
     "Name": "Vertex Color Direct",
     "Desciption": "TexVertexColorDirect",
+    "Subtype": "UTILITY",
     "Type": "TEXTURE",
     "Parameters": [
         {

@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexOutput",
     "Name": "Output",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

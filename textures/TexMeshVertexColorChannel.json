@@ -1,7 +1,7 @@
 {
     "Desciption": "",
     "ID": "TexMeshVertexColorChannel",
-    "Name": "Mesh Vertex Channel",
+    "Name": "Mesh Map Channel",
     "Parameters": [
         {
             "attr": "channelIndex",

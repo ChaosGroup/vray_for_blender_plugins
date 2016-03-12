@@ -3,6 +3,7 @@
     "Name": "Int To Float",
     "Desciption": "TexIntToFloat",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

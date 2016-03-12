@@ -3,6 +3,7 @@
     "Name": "Color Average",
     "Desciption": "TexColorAverage",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

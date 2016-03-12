@@ -1,7 +1,7 @@
 {
     "Desciption": "",
     "ID": "TexNoise",
-    "Name": "Noise (Maya)",
+    "Name": "Noise",
     "Parameters": [
         {
             "attr": "color",

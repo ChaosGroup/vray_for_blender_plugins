@@ -3,6 +3,7 @@
     "Name": "Color Condition",
     "Desciption": "TexColorCondition",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color_a",

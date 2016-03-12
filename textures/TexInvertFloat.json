@@ -3,6 +3,7 @@
     "Name": "Invert Float",
     "Desciption": "TexInvertFloat",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "texture",

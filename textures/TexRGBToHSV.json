@@ -3,6 +3,7 @@
     "Name": "RGB To HSV",
     "Desciption": "TexRGBToHSV",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "inRgb",

@@ -2,6 +2,7 @@
     "Desciption": "Color correct",
     "ID": "ColorCorrect",
     "Name": "Color Correct",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "source_color",

@@ -3,6 +3,7 @@
     "Name": "Normal Map Flip",
     "Desciption": "TexNormalMapFlip",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

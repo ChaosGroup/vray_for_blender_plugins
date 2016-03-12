@@ -3,6 +3,7 @@
     "Name": "Float 3 To AColor",
     "Desciption": "Float3ToAColor",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "float1",

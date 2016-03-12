@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexCombineColor",
     "Name": "Combine Color",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color",

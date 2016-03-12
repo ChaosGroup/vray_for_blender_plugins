@@ -3,6 +3,7 @@
     "Name": "Color 2 Scalar",
     "Desciption": "TexColor2Scalar",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "clr_txt",

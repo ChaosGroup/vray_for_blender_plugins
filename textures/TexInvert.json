@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexInvert",
     "Name": "Invert",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "texture",

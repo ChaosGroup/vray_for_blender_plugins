@@ -1,8 +1,9 @@
 {
     "ID": "TexAColorChannel",
-    "Name": "AColor Channel",
+    "Name": "Color Channel",
     "Desciption": "TexAColorChannel",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color_a",
@@ -23,32 +24,32 @@
         },
         {
             "attr": "mode",
-            "desc": "which component of the color should be returned - 0:red;1:green;2:blue;3:alpha;4:intensity",
+            "desc": "Which component of the color should be returned",
             "type": "ENUM",
             "items": [
                 [
                     "0",
-                    "red",
+                    "Red",
                     ""
                 ],
                 [
                     "1",
-                    "green",
+                    "Green",
                     ""
                 ],
                 [
                     "2",
-                    "blue",
+                    "Blue",
                     ""
                 ],
                 [
                     "3",
-                    "alpha",
+                    "Alpha",
                     ""
                 ],
                 [
                     "4",
-                    "intensity",
+                    "Intensity",
                     ""
                 ]
             ],
@@ -56,6 +57,13 @@
         }
     ],
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "mode" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

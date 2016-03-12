@@ -3,6 +3,7 @@
     "Name": "Clamp",
     "Desciption": "TexClamp",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "texture",

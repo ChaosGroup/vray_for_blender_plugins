@@ -3,6 +3,7 @@
     "Name": "Max Gamma",
     "Desciption": "TexMaxGamma",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",
@@ -23,7 +24,7 @@
         },
         {
             "attr": "color_space",
-            "desc": "The color space (0 - linear; 1 - inverse gamma; 2 - sRGB)",
+            "desc": "The color space",
             "type": "ENUM",
             "items": [
                 [

@@ -3,6 +3,7 @@
     "Name": "Color Texture To Mono",
     "Desciption": "ColorTextureToMono",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "value",

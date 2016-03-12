@@ -3,6 +3,7 @@
     "Name": "Color Curve",
     "Desciption": "TexColorCurve",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

@@ -1,8 +1,9 @@
 {
     "ID": "TexSetRange",
-    "Name": "Set Range",
+    "Name": "Range",
     "Desciption": "TexSetRange",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "value",

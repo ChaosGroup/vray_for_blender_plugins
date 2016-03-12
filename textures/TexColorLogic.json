@@ -3,6 +3,7 @@
     "Name": "Color Logic",
     "Desciption": "TexColorLogic",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color_a",

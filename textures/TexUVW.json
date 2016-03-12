@@ -12,7 +12,7 @@
         },
         {
             "attr": "component",
-            "desc": "Specifies which component to show (0 - all, 1 - u, 2 - v, 3 - w)",
+            "desc": "Specifies which component to show",
             "type": "ENUM",
             "items": [
                 [

@@ -33,7 +33,7 @@
         "node_widgets": [
             {   "layout": "COLUMN",
                 "attrs": [
-                    { "label": "Attr. Name", "name": "user_attribute" }
+                    { "name": "user_attribute", "label": "Attr. Name" }
                 ]
             }
         ],

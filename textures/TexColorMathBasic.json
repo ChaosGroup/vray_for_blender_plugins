@@ -3,6 +3,7 @@
     "Name": "Color Math Basic",
     "Desciption": "TexColorMathBasic",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "op",

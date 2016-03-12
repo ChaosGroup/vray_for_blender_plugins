@@ -3,6 +3,7 @@
     "Name": "Color Switch",
     "Desciption": "TexColorSwitch",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

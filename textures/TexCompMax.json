@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexCompMax",
     "Name": "Comp Max",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

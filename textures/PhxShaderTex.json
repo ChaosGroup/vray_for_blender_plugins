@@ -3,6 +3,7 @@
     "Name": "Phx Shader Tex",
     "Desciption": "PhxShaderTex",
     "Type": "TEXTURE",
+    "Subtype": "PHOENIX",
     "Parameters": [
         {
             "attr": "compatibility_with",

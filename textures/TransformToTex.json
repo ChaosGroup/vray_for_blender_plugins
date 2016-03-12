@@ -3,6 +3,7 @@
     "Name": "Transform To Tex",
     "Desciption": "TransformToTex",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

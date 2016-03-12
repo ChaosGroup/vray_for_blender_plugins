@@ -3,6 +3,7 @@
     "Name": "Color Constant",
     "Desciption": "TexColorConstant",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color",

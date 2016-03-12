@@ -3,6 +3,7 @@
     "Name": "Color Mask",
     "Desciption": "TexColorMask",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "in_color",

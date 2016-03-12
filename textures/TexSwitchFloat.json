@@ -3,6 +3,7 @@
     "Name": "Switch Float",
     "Desciption": "TexSwitchFloat",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "nodes",

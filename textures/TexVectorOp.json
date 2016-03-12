@@ -2,6 +2,7 @@
     "Desciption": "Vector operations",
     "ID": "TexVectorOp",
     "Name": "Vector Operations",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "vector_a",

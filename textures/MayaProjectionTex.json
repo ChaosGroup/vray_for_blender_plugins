@@ -3,6 +3,7 @@
     "Name": "Maya Projection Tex",
     "Desciption": "MayaProjectionTex",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

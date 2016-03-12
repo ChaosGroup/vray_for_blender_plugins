@@ -1,12 +1,13 @@
 {
     "ID": "TexCondition2",
-    "Name": "Condition 2",
+    "Name": "Condition",
     "Desciption": "TexCondition2",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "operation",
-            "desc": "0 : Equal; 1 : Not equal; 2 : Greater than; 3 : Greater or equal; 4 : Less than; 5 : Less or equal",
+            "desc": "The condition check",
             "type": "ENUM",
             "items": [
                 [
@@ -78,6 +79,13 @@
         }
     ],
     "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "operation", "label" : "Cond." }
+                ]
+            }
+        ],
         "widgets": []
     }
 }

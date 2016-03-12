@@ -2,6 +2,7 @@
     "Desciption": "Color operations",
     "ID": "TexAColorOp",
     "Name": "Color Operations",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color_a",

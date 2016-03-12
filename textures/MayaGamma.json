@@ -3,6 +3,7 @@
     "ID": "MayaGamma",
     "Name": "Gamma",
     "Desciption": "Gamma correction texture",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

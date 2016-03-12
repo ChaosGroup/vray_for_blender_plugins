@@ -3,6 +3,7 @@
     "Name": "Particle Tex",
     "Desciption": "ParticleTex",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

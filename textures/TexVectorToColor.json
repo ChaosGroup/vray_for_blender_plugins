@@ -2,6 +2,7 @@
     "Desciption": "Vector to color",
     "ID": "TexVectorToColor",
     "Name": "Vector To Color",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

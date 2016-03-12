@@ -1,6 +1,6 @@
 {
     "ID": "TexSimplexNoise",
-    "Name": "Simplex Noise",
+    "Name": "Noise (Simplex)",
     "Desciption": "TexSimplexNoise",
     "Type": "TEXTURE",
     "Parameters": [

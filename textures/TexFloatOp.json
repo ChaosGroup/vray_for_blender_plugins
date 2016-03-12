@@ -2,6 +2,7 @@
     "Desciption": "Float operations",
     "ID": "TexFloatOp",
     "Name": "Float Operations",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "float_a",

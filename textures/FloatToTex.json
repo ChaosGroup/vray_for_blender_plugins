@@ -2,6 +2,7 @@
     "Desciption": "Float to texture",
     "ID": "FloatToTex",
     "Name": "FloatToTex",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

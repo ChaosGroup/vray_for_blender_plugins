@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexBlend",
     "Name": "Blend",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color_a",

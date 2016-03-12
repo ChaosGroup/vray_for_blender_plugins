@@ -3,6 +3,7 @@
     "Name": "Color 8 Mix",
     "Desciption": "TexColor8Mix",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "compatibility_with",

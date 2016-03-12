@@ -3,6 +3,7 @@
     "Name": "UVW Gen To Texture",
     "Desciption": "TexUVWGenToTexture",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

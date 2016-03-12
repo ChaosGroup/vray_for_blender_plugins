@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "TexFloatToColor",
     "Name": "Float To Color",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "input",

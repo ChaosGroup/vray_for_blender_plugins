@@ -3,6 +3,7 @@
     "Name": "Combine Color Light Mtl",
     "Desciption": "TexCombineColorLightMtl",
     "Type": "TEXTURE",
+    "Subtype": "UTILITY",
     "Parameters": [
         {
             "attr": "color",
