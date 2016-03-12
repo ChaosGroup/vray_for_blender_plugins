@@ -448,7 +448,7 @@
             ],
             "default": "1",
             "ui": {
-                "display_name": "Adaptive method",
+                "display_name": "Adaptive Method",
                 "enabled": true
             }
         },
@@ -476,11 +476,12 @@
         "widgets": [
             {
                 "attrs": [
+                    { "name": "dmc_adaptive_method" },
                     {
                         "name": "type"
                     }
                 ],
-                "layout": "ROW"
+                "layout": "COLUMN"
             },
             {
                 "layout": "SEPARATOR"

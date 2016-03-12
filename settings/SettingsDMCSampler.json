@@ -109,8 +109,9 @@
                     }
                 ]
             },
-            {   "layout": "ROW",
+            {   "layout": "COLUMN",
                 "attrs": [
+                    { "name": "random_seed" },
                     { "name": "use_local_subdivs" }
                 ]
             }
