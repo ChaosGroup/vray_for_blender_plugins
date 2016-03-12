@@ -6,7 +6,7 @@
         {
             "attr": "type",
             "default": "0",
-            "desc": "Camera typ",
+            "desc": "Camera type",
             "items": [
                 [
                     "0",
@@ -99,14 +99,17 @@
         },
         {
             "attr": "fov",
-            "default": 0.785398,
+            "default": 45,
             "desc": "Field of view; if negative, the field of view will not be modified",
             "type": "FLOAT",
+            "options": [
+                "EXPORT_AS_RADIANS"
+            ],
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 180,
+                "soft_min": 45,
                 "display_name": "FOV"
             }
         },
