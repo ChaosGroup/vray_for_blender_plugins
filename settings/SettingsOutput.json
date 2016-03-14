@@ -411,45 +411,17 @@
         },
         {
             "attr": "img_format",
-            "default": "SettingsJPEG",
             "desc": "Output image format",
             "items": [
-                [
-                    "SettingsPNG",
-                    "PNG",
-                    ""
-                ],
-                [
-                    "SettingsJPEG",
-                    "JPEG",
-                    ""
-                ],
-                [
-                    "SettingsTIFF",
-                    "TIFF",
-                    ""
-                ],
-                [
-                    "SettingsTGA",
-                    "TGA",
-                    ""
-                ],
-                [
-                    "SettingsSGI",
-                    "SGI",
-                    ""
-                ],
-                [
-                    "SettingsEXR",
-                    "OpenEXR",
-                    ""
-                ],
-                [
-                    "SettingsVRST",
-                    "VRayImage",
-                    "V-Ray Image Format"
-                ]
+                [ "0", "PNG", "" ],
+                [ "1", "JPEG", "" ],
+                [ "2", "TIFF", "" ],
+                [ "3", "TGA", "" ],
+                [ "4", "SGI", "" ],
+                [ "5", "OpenEXR", "" ],
+                [ "6", "VRayImage", "V-Ray Image Format" ]
             ],
+            "default": "1",
             "name": "Image Format",
             "skip": true,
             "type": "ENUM"
