@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "filter_type",
-            "default": "-1",
+            "default": "0",
             "desc": "Filtering",
             "items": [
                 [
