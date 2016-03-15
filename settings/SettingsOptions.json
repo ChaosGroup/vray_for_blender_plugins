@@ -80,7 +80,6 @@
             "name": "Self Illumination",
             "type": "BOOL",
             "ui": {
-                "inverted": true,
                 "display_name": "Disable self-illumination"
             }
         },
