@@ -6,9 +6,9 @@
         {
             "attr": "color",
             "default": [
-                0.0,
-                0.0,
-                0.0
+                1.0,
+                1.0,
+                1.0
             ],
             "desc": "The self-illumination color",
             "type": "TEXTURE",
