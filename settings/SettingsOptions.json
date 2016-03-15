@@ -75,7 +75,7 @@
         },
         {
             "attr": "light_disableSelfIllumination",
-            "default": true,
+            "default": false,
             "desc": "self-Illumination",
             "name": "Self Illumination",
             "type": "BOOL",
