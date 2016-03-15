@@ -172,6 +172,11 @@
     "Type": "BRDF",
     "Widget": {
         "widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "map_type" }
+                ]
+            },
             {
                 "attrs": [
                     {
