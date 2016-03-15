@@ -363,7 +363,7 @@
         },
         {
             "attr": "frame_stamp_text",
-            "default": "",
+            "default": "V-Ray %vraycore | %rendertime",
             "desc": "Frame stamp text",
             "type": "STRING"
         },
