@@ -138,23 +138,23 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 1.0,
+                "soft_min": 0.05,
                 "display_name": "Detail radius [px]",
                 "enabled": true
             }
         },
         {
             "attr": "detail_subdivs_mult",
-            "default": 60,
+            "default": 8,
             "desc": "The number of samples taken for the high-precision sampling as a percentage of the irradiance map Hemispheric subdivs",
             "name": "Detail Enhancement Subdivs Mult",
             "type": "FLOAT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 24,
+                "soft_min": 1,
                 "display_name": "Detail subdivs mult",
                 "enabled": true
             }
