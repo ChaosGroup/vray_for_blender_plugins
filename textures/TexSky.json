@@ -183,6 +183,7 @@
                     {
                         "name": "auto_sun"
                     },
+                    { "name": "sun_dir_only"},
                     {
                         "label": "Sun Invisible",
                         "name": "invisible"
