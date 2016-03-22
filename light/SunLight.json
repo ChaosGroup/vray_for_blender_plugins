@@ -114,7 +114,7 @@
         },
         {
             "attr": "sky_model",
-            "default": "0",
+            "default": "3",
             "desc": "Selects the procedural model used to simulate the TexSky texture",
             "items": [
                 [
@@ -324,8 +324,13 @@
         {
             "attr": "color_mode",
             "desc": "This option affects the way the color in the Filter color parameter affects the color of the sun",
-            "type": "INT",
-            "default": 0
+            "type": "ENUM",
+            "items" : [
+                [ "0", "Filter", "This option allows the user to shift the hue of the V-Ray Sun and Sky system towards the color specified in the Filter color field" ],
+                [ "1", "Direct", "This option sets the color of the V-Ray sun to match the color in the Filter Color parameter. In this case the intensity of the light does not depend on the V-Ray Suns position in the sky and is controlled through the intensity multiplier." ],
+                [ "2", "Override", "This option sets the color of the V-Ray sun to match the color in the Filter Color parameter but the intensity of theof the light still depends on the V-Ray Suns position in the sky." ]
+            ],
+            "default": "0"
         },
         {
             "attr": "shadow_color",
@@ -368,6 +373,7 @@
                                 "label": "",
                                 "name": "filter_color"
                             },
+                            { "label" : "", "name": "color_mode" },
                             {
                                 "name": "turbidity"
                             },
@@ -382,7 +388,8 @@
                             },
                             {
                                 "name": "size_multiplier"
-                            }
+                            },
+                            { "name": "ground_albedo" }
                         ],
                         "layout": "COLUMN"
                     },

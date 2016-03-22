@@ -217,7 +217,8 @@
                             },
                             {
                                 "name": "size_multiplier"
-                            }
+                            },
+                            { "name": "ground_albedo" }
                         ],
                         "layout": "COLUMN"
                     },
