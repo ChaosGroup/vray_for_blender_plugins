@@ -44,8 +44,8 @@
         },
         {
             "attr": "img_file",
-            "default": "%F_%C",
-            "desc": "Render file name (Variables: %C - camera name; %S - scene name; %F - blendfile name)",
+            "default": "$F_$C",
+            "desc": "Render file name (Variables: $C - camera name; $S - scene name; $F - blendfile name)",
             "type": "STRING",
             "ui": {
                 "display_name": "File name"
@@ -53,8 +53,8 @@
         },
         {
             "attr": "img_dir",
-            "default": "//render/%F/",
-            "desc": "Render file directory (Variables: %C - camera name; %S - scene name; %F - blendfile name)",
+            "default": "//render/$F/",
+            "desc": "Render file directory (Variables: $C - camera name; $S - scene name; $F - blendfile name)",
             "subtype": "DIR_PATH",
             "type": "STRING",
             "ui": {
