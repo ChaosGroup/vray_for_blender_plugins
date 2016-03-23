@@ -103,7 +103,7 @@
         },
         {
             "attr": "lock_size",
-            "default": false,
+            "default": true,
             "desc": "Lock bucket size (X = Y)",
             "skip": true,
             "type": "BOOL"
