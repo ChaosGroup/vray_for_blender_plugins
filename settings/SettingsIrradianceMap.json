@@ -146,15 +146,15 @@
         },
         {
             "attr": "detail_subdivs_mult",
-            "default": 8,
+            "default": 0.3,
             "desc": "The number of samples taken for the high-precision sampling as a percentage of the irradiance map Hemispheric subdivs",
             "name": "Detail Enhancement Subdivs Mult",
             "type": "FLOAT",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 24,
-                "soft_min": 1,
+                "max": 128,
+                "min": 0.01,
+                "soft_max": 1.0,
+                "soft_min": 0.1,
                 "display_name": "Detail subdivs mult",
                 "enabled": true
             }

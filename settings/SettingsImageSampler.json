@@ -285,15 +285,15 @@
         },
         {
             "attr": "progressive_bundleSize",
-            "default": 64,
+            "default": 128,
             "desc": "Bundle size for the progressive image sampler",
             "name": "Bundle Size",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 128,
+                "soft_min": 32,
                 "display_name": "Ray bundle size",
                 "enabled": true
             }

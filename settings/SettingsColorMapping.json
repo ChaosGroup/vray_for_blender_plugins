@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "type",
-            "default": "0",
+            "default": "6",
             "desc": "",
             "items": [
                 [
@@ -88,14 +88,14 @@
         },
         {
             "attr": "gamma",
-            "default": 1,
+            "default": 2.2,
             "desc": "Gamma correction for the output image regardless of the color mapping mode",
             "type": "FLOAT",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "max": 10.0,
+                "min": 0.01,
+                "soft_max": 2.2,
+                "soft_min": 0.454,
                 "display_name": "Gamma"
             }
         },

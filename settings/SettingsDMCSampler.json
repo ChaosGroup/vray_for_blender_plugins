@@ -40,7 +40,7 @@
         },
         {
             "attr": "adaptive_min_samples",
-            "default": 8,
+            "default": 16,
             "desc": "The minimum number of samples that must be made before the early termination algorithm is used",
             "type": "INT",
             "ui": {
@@ -81,7 +81,7 @@
         },
         {
             "attr": "use_local_subdivs",
-            "default": true,
+            "default": false,
             "desc": "If shading subdivs in materials/lights/GI should be used, and false to determine subdivs automatically",
             "type": "BOOL"
         }
