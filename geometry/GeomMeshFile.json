@@ -349,11 +349,19 @@
         },
         {
             "attr": "animation",
-            "default": false,
+            "default": "NONE",
             "desc": "Animated proxy",
             "name": "Animation",
+            "items": [
+                [ "NONE",   "None",   "No animation" ],
+                [ "MANUAL", "Manual", "Set manually" ],
+                [ "SCENE",  "Scene",  "Get from scene" ]
+            ],
+            "available": [
+                "BLENDER"
+            ],
             "skip": true,
-            "type": "BOOL"
+            "type": "ENUM"
         },
         {
             "attr": "dirpath",
