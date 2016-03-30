@@ -8,7 +8,7 @@
             "attr": "input",
             "default": 0,
             "desc": "The color value",
-            "type": "FLOAT_TEXTURE",
+            "type": "TEXTURE",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
