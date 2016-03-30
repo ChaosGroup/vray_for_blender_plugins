@@ -6,7 +6,7 @@
     "Parameters": [
         {
             "attr": "input",
-            "default": 0,
+            "default": [0,0,0],
             "desc": "The color value",
             "type": "TEXTURE",
             "ui": {
