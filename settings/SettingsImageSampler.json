@@ -64,17 +64,6 @@
             }
         },
         {
-            "attr": "fixed_per_pixel_filtering",
-            "default": false,
-            "desc": "true to enable per-pixel filtering for the fixed sampler",
-            "name": "Per Pixel Filtering",
-            "type": "BOOL",
-            "ui": {
-                "display_name": "Per-pixel filtering",
-                "enabled": true
-            }
-        },
-        {
             "attr": "dmc_minSubdivs",
             "default": 1,
             "desc": "Min. subdivs value for the adaptive DMC image sampler",
@@ -116,17 +105,6 @@
                 "soft_max": 0.1,
                 "soft_min": 0.005,
                 "display_name": "Threshold",
-                "enabled": true
-            }
-        },
-        {
-            "attr": "dmc_per_pixel_filtering",
-            "default": false,
-            "desc": "true to enable per-pixel filtering for the adaptive DMC image sampler",
-            "name": "Per Pixel Filtering",
-            "type": "BOOL",
-            "ui": {
-                "display_name": "Per-pixel filtering",
                 "enabled": true
             }
         },
@@ -498,9 +476,6 @@
                 "attrs": [
                     {
                         "name": "fixed_subdivs"
-                    },
-                    {
-                        "name": "fixed_per_pixel_filtering"
                     }
                 ],
                 "layout": "COLUMN",
@@ -526,16 +501,7 @@
                                 "name": "dmc_maxSubdivs"
                             }
                         ],
-                        "layout": "COLUMN"
-                    },
-                    {
-                        "align": true,
-                        "attrs": [
-                            {
-                                "name": "dmc_per_pixel_filtering"
-                            }
-                        ],
-                        "layout": "COLUMN"
+                        "layout": "ROW"
                     }
                 ]
             },
