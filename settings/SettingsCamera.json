@@ -162,6 +162,27 @@
     ],
     "Type": "CAMERA",
     "Widget": {
-        "widgets": []
+        "widgets": [
+            {
+                "attrs": [
+                    {
+                        "name": "dont_affect_settings"
+                    }
+                ],
+                "layout": "COLUMN"
+            },
+            {
+                "show": {
+                    "value": 2,
+                    "prop": "dont_affect_settings"
+                },
+                "attrs": [
+                    {
+                        "name": "dont_affect_settings"
+                    }
+                ],
+                "layout": "COLUMN"
+            }
+        ]
     }
 }
