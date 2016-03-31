@@ -569,10 +569,16 @@
                                 "name": "shadowShape"
                             },
                             {
-                                "name": "shadowRadius1"
+                                "name": "shadowRadius",
+                                "label": "Shadow Radius U"
                             },
                             {
-                                "name": "shadowRadius2"
+                                "name": "shadowRadius1",
+                                "label": "Shadow Radius V"
+                            },
+                            {
+                                "name": "shadowRadius2",
+                                "label": "Shadow Radius W"
                             }
                         ],
                         "layout": "COLUMN"
