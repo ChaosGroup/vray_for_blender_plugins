@@ -42,6 +42,17 @@
             }
         },
         {
+            "attr": "focus_from_camera",
+            "type": "BOOL",
+            "default": false,
+            "desc": "Get Focus Distance From Camera",
+            "name": "Get Focus Distance From Camera",
+            "skip": true,
+            "available": [
+                "HOUDINI"
+            ]
+        },
+        {
             "attr": "focal_dist",
             "default": 200,
             "desc": "Determines the distance from the camera at which objects will be in perfect focus",
