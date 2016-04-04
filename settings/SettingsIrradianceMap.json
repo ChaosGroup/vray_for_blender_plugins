@@ -192,26 +192,26 @@
         },
         {
             "attr": "interpolation_mode",
-            "default": "2",
+            "default": "1",
             "desc": "Method for interpolating the GI value from the samples in the irradiance map",
             "items": [
                 [
-                    "0",
+                    "3",
                     "Least squares with Voronoi weights",
                     ""
                 ],
                 [
-                    "1",
+                    "2",
                     "Delone triangulation",
                     ""
                 ],
                 [
-                    "2",
+                    "1",
                     "Least squares fit",
                     ""
                 ],
                 [
-                    "3",
+                    "0",
                     "Weighted average",
                     ""
                 ]
