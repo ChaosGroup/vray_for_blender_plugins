@@ -296,7 +296,7 @@
         {
             "attr": "power",
             "default": 0,
-            "desc": "Limuous power (in lm); if zero, the default lumious power from the IES profile is used",
+            "desc": "Power in lumen [lm]; if zero, the default power from the IES profile is used",
             "type": "FLOAT",
             "ui": {
                 "max": 1048576,
