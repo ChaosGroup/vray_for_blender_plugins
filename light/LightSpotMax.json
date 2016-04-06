@@ -620,10 +620,6 @@
                         "align": true,
                         "attrs": [
                             {
-                                "label": "Radius",
-                                "name": "fallsize"
-                            },
-                            {
                                 "name": "hotspot"
                             },
                             {
@@ -661,12 +657,16 @@
                                 "name": "shadowShape"
                             },
                             {
-                                "label": "R U",
-                                "name": "shadowRadius1"
+                                "name": "shadowRadius",
+                                "label": "Shadow Radius U"
                             },
                             {
-                                "label": "R V",
-                                "name": "shadowRadius2"
+                                "name": "shadowRadius1",
+                                "label": "Shadow Radius V"
+                            },
+                            {
+                                "name": "shadowRadius2",
+                                "label": "Shadow Radius W"
                             }
                         ],
                         "layout": "COLUMN"
