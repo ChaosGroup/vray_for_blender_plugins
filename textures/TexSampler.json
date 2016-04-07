@@ -283,6 +283,13 @@
             "type": "OUTPUT_FLOAT_TEXTURE"
         },
         {
+            "attr": "random_by_polyShell",
+            "name": "Random By Polygon Shell",
+            "default": 0.0,
+            "desc": "Random value based on the polygon shell (connected mesh component) the current face belongs to",
+            "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
             "attr": "uv_set_name",
             "default": "",
             "desc": "The name of the uv channel that should be used",
