@@ -49,10 +49,11 @@
             "default": [
                 0.5,
                 0.5,
-                0.5
+                0.5,
+                1.0
             ],
             "desc": "The ambient color",
-            "type": "COLOR"
+            "type": "TEXTURE"
         },
         {
             "attr": "compensate_exposure",
