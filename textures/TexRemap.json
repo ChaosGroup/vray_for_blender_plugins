@@ -387,7 +387,7 @@
             "attr": "input_max_tex",
             "desc": "",
             "type": "FLOAT_TEXTURE",
-            "default": 0.0
+            "default": 1.0
         }
     ],
     "Widget": {
