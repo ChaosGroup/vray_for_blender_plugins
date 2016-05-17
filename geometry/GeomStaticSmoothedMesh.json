@@ -317,7 +317,7 @@
             },
             {
                 "active": {
-                    "prop": "use_globals"
+                    "prop": "use_globals", "value" : 0
                 },
                 "layout": "SPLIT",
                 "splits": [
