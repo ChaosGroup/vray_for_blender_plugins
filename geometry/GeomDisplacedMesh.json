@@ -258,20 +258,22 @@
             "desc": "Displacement type",
             "items": [
                 [
-                    "NOR",
+                    "0",
                     "Normal",
                     "Normal displacement"
                 ],
                 [
-                    "2D",
+                    "1",
                     "2D",
                     "2D displacement"
                 ],
                 [
-                    "3D",
+                    "2",
                     "Vector",
                     "Vector displacement"
-                ]
+                ],
+                [ "2", "Vector (Absolute)", "Vector displacement" ],
+                [ "3", "Vector (Object)",   "Vector displacement" ],
             ],
             "name": "Mode",
             "skip": true,
