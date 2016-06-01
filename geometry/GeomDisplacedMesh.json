@@ -273,7 +273,7 @@
                     "Vector displacement"
                 ],
                 [ "2", "Vector (Absolute)", "Vector displacement" ],
-                [ "3", "Vector (Object)",   "Vector displacement" ],
+                [ "3", "Vector (Object)",   "Vector displacement" ]
             ],
             "name": "Mode",
             "skip": true,
