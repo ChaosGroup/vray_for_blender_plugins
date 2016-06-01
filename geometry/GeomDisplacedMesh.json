@@ -254,7 +254,7 @@
         },
         {
             "attr": "type",
-            "default": "NOR",
+            "default": "0",
             "desc": "Displacement type",
             "items": [
                 [
