@@ -2,7 +2,7 @@
     "ID": "CameraDefault",
     "Name": "Camera Default",
     "Desciption": "CameraDefault",
-    "Type": "MISC",
+    "Type": "CAMERA",
     "Parameters": [
         {
             "attr": "orthographic",
