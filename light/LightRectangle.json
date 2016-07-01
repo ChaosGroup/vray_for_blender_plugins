@@ -437,7 +437,7 @@
         },
         {
             "attr": "use_rect_tex",
-            "default": true,
+            "default": false,
             "desc": "true if the texture should be used",
             "type": "BOOL",
             "ui": {
