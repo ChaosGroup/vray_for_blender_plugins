@@ -871,10 +871,11 @@
             "default": [
                 0.2,
                 0.2,
-                0.2
+                0.2,
+                1.0
             ],
             "desc": "",
-            "type": "COLOR"
+            "type": "ACOLOR"
         },
         {
             "attr": "mod_t",

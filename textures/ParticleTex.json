@@ -346,16 +346,6 @@
             "default": 1
         },
         {
-            "attr": "color",
-            "desc": "",
-            "type": "COLOR",
-            "default": [
-                1.0,
-                1.0,
-                1.0
-            ]
-        },
-        {
             "attr": "map",
             "desc": "",
             "type": "TEXTURE",
