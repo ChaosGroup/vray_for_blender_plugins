@@ -140,26 +140,20 @@
         },
         {
             "attr": "solidbelow",
-            "default": 0,
-            "desc": "",
-            "type": "INT",
+            "default": false,
+            "desc": "Invert Volume",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Invert Volume"
             }
         },
         {
             "attr": "displacement",
-            "default": 0,
-            "desc": "",
-            "type": "INT",
+            "default": false,
+            "desc": "Enable Displacement",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Enable Displacement"
             }
         },
         {
@@ -233,14 +227,11 @@
         },
         {
             "attr": "lightcache",
-            "default": 1,
+            "default": true,
             "desc": "if true, a light cache will be used for diffuse lighting",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Use Light Cache"
             }
         },
         {
@@ -323,14 +314,11 @@
         },
         {
             "attr": "jitter",
-            "default": 1,
-            "desc": "",
-            "type": "INT",
+            "default": true,
+            "desc": "jitter",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Jittering"
             }
         },
         {
@@ -608,14 +596,11 @@
         },
         {
             "attr": "mod_e",
-            "default": 0,
+            "default": false,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Modulate with Texture"
             }
         },
         {
@@ -754,14 +739,11 @@
         },
         {
             "attr": "mod_d",
-            "default": 0,
+            "default": false,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Modulate with Texture"
             }
         },
         {
@@ -879,14 +861,11 @@
         },
         {
             "attr": "mod_t",
-            "default": 0,
+            "default": false,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Modulate with Texture"
             }
         },
         {
@@ -1106,14 +1085,12 @@
         },
         {
             "attr": "al_enable",
-            "default": 1,
+            "default": false,
             "desc": "enable the additional emissive lights",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Enable Lighting",
+                "tab": "Light from Fire"
             }
         },
         {
@@ -1268,26 +1245,21 @@
         },
         {
             "attr": "generate_gi",
-            "default": 1,
+            "default": true,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Generate GI",
+                "tab": "Visibility"
             }
         },
         {
             "attr": "receive_gi",
-            "default": 1,
+            "default": true,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Receive GI"
             }
         },
         {
@@ -1316,26 +1288,20 @@
         },
         {
             "attr": "generate_caust",
-            "default": 1,
+            "default": true,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Generate Caustics"
             }
         },
         {
             "attr": "receive_caust",
-            "default": 1,
+            "default": true,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "display_name": "Receive Caustics"
             }
         },
         {

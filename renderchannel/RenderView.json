@@ -181,9 +181,26 @@
         },
         {
             "attr": "stereo_on",
-            "desc": "Enable stereo rendering",
-            "type": "BOOL",
-            "default": false
+            "desc": "Enable stereo rendering and select output layout",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "disabled",
+                    "disabled"
+                ],
+                [
+                    "1",
+                    "enabled, side-by-side",
+                    "enabled, side-by-side"
+                ],
+                [
+                    "2",
+                    "enabled, top-bottom",
+                    "enabled, top-bottom"
+                ]
+            ],
+            "default": "0"
         },
         {
             "attr": "stereo_eye_distance",

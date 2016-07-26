@@ -156,9 +156,26 @@
         },
         {
             "attr": "opencl_resizeTextures",
-            "default": true,
-            "desc": "true to resize textures for the GPU based on opencl_texsize; false to use full resolution textures",
-            "type": "BOOL",
+            "default": "1",
+            "desc": "Textures transfer mode for the GPU",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Transfer \"as is\" (don't resize, don't use paging)",
+                    ""
+                ],
+                [
+                    "1",
+                    "Resize textures",
+                    ""
+                ],
+                [
+                    "2",
+                    "Use texture paging(out-of-core textures) CUDA only",
+                    ""
+                ]
+            ],
             "ui": {
                 "display_name": "GPU Resize textures"
             }
@@ -196,10 +213,12 @@
         },
         {
             "attr": "undersampling",
-            "default": true,
-            "desc": "Use undersampling",
-            "type": "BOOL",
+            "default": 4,
+            "desc": "Non-zero to use undersampling, 0 otherwise. The value specifies the blur resolution. Value of n means 1/(2^n) initial resolution in each dimension.",
+            "type": "INT",
             "ui": {
+                "max": 5,
+                "min": 0,
                 "display_name": "Undersampling"
             }
         },

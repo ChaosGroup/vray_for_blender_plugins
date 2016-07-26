@@ -137,14 +137,10 @@
         },
         {
             "attr": "traceReflections",
-            "default": 1,
+            "default": true,
             "desc": "",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
                 "rollout": "Options",
                 "display_name": "Trace reflections"
             }

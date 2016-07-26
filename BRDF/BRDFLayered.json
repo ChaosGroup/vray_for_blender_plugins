@@ -35,9 +35,31 @@
         },
         {
             "attr": "additive_mode",
-            "desc": "",
-            "type": "BOOL",
-            "default": false
+            "desc": "Weight for the material layers. 0 = Default, 1 = Additive. 2 and 3 used by RT GPU only (2 = MDL normalize, 3 = MDL clamp max)",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Default",
+                    "Default"
+                ],
+                [
+                    "1",
+                    "Additive",
+                    "Additive"
+                ],
+                [
+                    "2",
+                    "MDL normalize",
+                    "MDL normalize"
+                ],
+                [
+                    "3",
+                    "MDL clamp max",
+                    "MDL clamp max"
+                ]
+            ],
+            "default": "0"
         },
         {
             "attr": "transparency",

@@ -41,9 +41,9 @@
         },
         {
             "attr": "visibility",
-            "default": true,
+            "default": 1.0,
             "desc": "Overall visibility",
-            "type": "BOOL"
+            "type": "FLOAT"
         },
         {
             "attr": "use",
