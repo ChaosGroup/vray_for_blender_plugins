@@ -806,14 +806,10 @@
         },
         {
             "attr": "option_fix_dark_edges",
-            "default": 1,
+            "default": true,
             "desc": "true to fix dark edges for glossy reflections with low samples; only set this to false for compatibility with older versions",
-            "type": "INT",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
                 "display_name": "Fix dark edges"
             }
         },

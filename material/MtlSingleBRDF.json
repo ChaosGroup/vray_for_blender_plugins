@@ -22,9 +22,36 @@
         },
         {
             "attr": "double_sided",
-            "default": true,
-            "desc": "1 to make the material double-sided",
-            "type": "BOOL"
+            "default": "1",
+            "desc": "0 - single sided, 1 - to make the material double-sided, 2 - make back faces pointing at camera transparent for camera rays, 3 - make back faces transparent for all ray types except shadow rays, 4 - same as 3 but back faces are also visible to rays that have been refracted(and are not GI or reflection rays",
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "Single-sided",
+                    "Single sided"
+                ],
+                [
+                    "1",
+                    "Double-sided",
+                    "Make the material double-sided"
+                ],
+                [
+                    "2",
+                    "Transparent For Camera Rays",
+                    "Make back faces pointing at camera transparent for camera rays"
+                ],
+                [
+                    "3",
+                    "Transparent Except For Shadow Rays",
+                    "Make back faces transparent for all ray types except shadow rays"
+                ],
+                [
+                    "4",
+                    "Transparent Except For Shadow/Refracted Rays",
+                    "Same as 3 but back faces are also visible to rays that have been refracted(and are not GI or reflection rays)"
+                ]
+            ]
         },
         {
             "attr": "allow_negative_colors",

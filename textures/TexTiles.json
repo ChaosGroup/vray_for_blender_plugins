@@ -555,27 +555,19 @@
         },
         {
             "attr": "row_modify",
-            "default": 0,
-            "desc": "if 1 - custom row parameters",
-            "type": "INT",
+            "default": false,
+            "desc": "if true - custom row parameters",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
                 "enabled": true
             }
         },
         {
             "attr": "column_modify",
-            "default": 0,
-            "desc": "if 1 - custom column parameters",
-            "type": "INT",
+            "default": false,
+            "desc": "if true - custom column parameters",
+            "type": "BOOL",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
                 "enabled": true
             }
         },
