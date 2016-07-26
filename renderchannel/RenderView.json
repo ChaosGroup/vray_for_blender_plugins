@@ -186,18 +186,18 @@
             "items": [
                 [
                     "0",
-                    "disabled",
-                    "disabled"
+                    "Disabled",
+                    "Disabled"
                 ],
                 [
                     "1",
-                    "enabled, side-by-side",
-                    "enabled, side-by-side"
+                    "Enabled, Side-By-Side",
+                    "Enabled, side-by-side"
                 ],
                 [
                     "2",
-                    "enabled, top-bottom",
-                    "enabled, top-bottom"
+                    "Enabled, Top-Bottom",
+                    "Enabled, top-bottom"
                 ]
             ],
             "default": "0"

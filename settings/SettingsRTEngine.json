@@ -162,18 +162,18 @@
             "items": [
                 [
                     "0",
-                    "Transfer \"as is\" (don't resize, don't use paging)",
-                    ""
+                    "Transfer \"As Is\" (Don't Resize, Don't Use Paging)",
+                    "Transfer \"as is\" (don't resize, don't use paging)"
                 ],
                 [
                     "1",
-                    "Resize textures",
-                    ""
+                    "Resize Textures",
+                    "Resize textures"
                 ],
                 [
                     "2",
-                    "Use texture paging(out-of-core textures) CUDA only",
-                    ""
+                    "Use Texture Paging(Out-Of-Core Textures) CUDA Only",
+                    "Use texture paging(out-of-core textures) CUDA only"
                 ]
             ],
             "ui": {
