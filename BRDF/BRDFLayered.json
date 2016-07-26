@@ -50,12 +50,12 @@
                 ],
                 [
                     "2",
-                    "MDL normalize",
+                    "MDL Normalize",
                     "MDL normalize"
                 ],
                 [
                     "3",
-                    "MDL clamp max",
+                    "MDL Clamp Max",
                     "MDL clamp max"
                 ]
             ],
