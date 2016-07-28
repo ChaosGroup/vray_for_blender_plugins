@@ -1114,12 +1114,17 @@
                 [
                     "0",
                     "Simple",
-                    ""
+                    "Simple"
                 ],
                 [
                     "1",
                     "Inside",
-                    ""
+                    "Inside"
+                ],
+                [
+                    "2",
+                    "Reduced Grid",
+                    "Reduced Grid"
                 ]
             ]
         },
