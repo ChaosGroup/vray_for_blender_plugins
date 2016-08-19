@@ -405,18 +405,6 @@
             }
         },
         {
-            "attr": "play_speed",
-            "default": 1,
-            "desc": "",
-            "type": "FLOAT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
-        },
-        {
             "attr": "noscatter",
             "default": "2",
             "desc": "No Scatter",

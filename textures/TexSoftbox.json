@@ -975,12 +975,6 @@
             "default": ""
         },
         {
-            "attr": "grad_rad_on",
-            "desc": "Turn on radial gradient",
-            "type": "BOOL",
-            "default": false
-        },
-        {
             "attr": "grad_rad_flip",
             "name": "Flip",
             "desc": "Flip radial gradient",
@@ -1002,12 +996,6 @@
             "desc": "Radial gradient colors",
             "type": "LIST",
             "default": ""
-        },
-        {
-            "attr": "frame_on",
-            "desc": "Turn on frame",
-            "type": "BOOL",
-            "default": false
         },
         {
             "attr": "frame_flip",
