@@ -53,15 +53,14 @@
         },
         {
             "attr": "bloom_mode",
-            "default": 0,
-            "desc": "0-image 1-image and buffer  2-buffer",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "desc": "Bloom mode",
+            "type": "ENUM",
+            "items": [
+                [ "0", "Image Only", "" ],
+                [ "1", "Image and Render Elements", "" ],
+                [ "2", "Render Elements Only", "" ]
+            ],
+            "default": "0"
         },
         {
             "attr": "bloom_mask_intensity_on",
@@ -155,27 +154,25 @@
         },
         {
             "attr": "glare_type",
-            "default": 0,
-            "desc": "0- from image  1 - from render camera  2 - from camera params",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "desc": "Glare type",
+            "type": "ENUM",
+            "items": [
+                [ "0", "From Image", "" ],
+                [ "1", "From Render Camera", "" ],
+                [ "2", "From Camera Params", "" ]
+            ],
+            "default": "1"
         },
         {
             "attr": "glare_mode",
-            "default": 0,
-            "desc": "0-image 1-image and buffer  2-buffer",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "desc": "Glare mode",
+            "type": "ENUM",
+            "items": [
+                [ "0", "Image Only", "" ],
+                [ "1", "Image and Render Elements", "" ],
+                [ "2", "Render Elements Only", "" ]
+            ],
+            "default": "0"
         },
         {
             "attr": "glare_image_path",
