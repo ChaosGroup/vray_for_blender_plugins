@@ -15,6 +15,7 @@
             "desc": "Bump texture",
             "name": "Bump Texture",
             "type": "FLOAT_TEXTURE",
+            "precision": 4,
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
@@ -52,6 +53,7 @@
             "desc": "Bump amount texture",
             "name": "Bump Amount Texture",
             "type": "FLOAT_TEXTURE",
+            "precision": 4,
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
