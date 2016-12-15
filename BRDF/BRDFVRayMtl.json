@@ -158,6 +158,12 @@
             }
         },
         {
+            "attr": "option_glossy_fresnel",
+            "default": true,
+            "desc": "Enable glossy fresnel",
+            "type": "BOOL"
+        },
+        {
             "attr": "fresnel_ior",
             "default": 1.6,
             "desc": "The ior for calculating the Fresnel term",
@@ -1434,6 +1440,7 @@
                         "label": "Glossy Rays As GI",
                         "name": "option_glossy_rays_as_gi"
                     },
+                    { "label": "Glossy Fresnel", "name": "option_glossy_fresnel" },
                     {
                         "label": "Energy Mode",
                         "name": "option_energy_mode"
