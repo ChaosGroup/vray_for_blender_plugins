@@ -387,11 +387,17 @@
         },
         {
             "attr": "probabilistic_lights_on",
-            "desc": "Enable probabilistic lights",
-            "type": "BOOL",
-            "default": false,
+            "name": "Lights Evaluation Mode",
+            "desc": "Lights evaluation mode",
+            "type": "ENUM",
+            "default": "0",
+            "items": [
+                [ "0", "Full Lights Evaluation", "" ],
+                [ "1", "Uniform Probabilistic Lights", "" ],
+                [ "2", "Adaptive Lights", "" ]
+            ],
             "ui": {
-                "display_name": "Enable probabilistic lights"
+                "display_name": "Lights Evaluation Mode"
             }
         },
         {
