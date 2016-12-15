@@ -59,6 +59,30 @@
             "default": "0"
         },
         {
+            "attr": "generate_render_elements",
+            "desc": "How to add the needed render elements (0 - Minimal: Only noiseLevel and defocusAmount; 1 - By Denoiser Type: Only those needed for the specific denoiser type (one-pass or render elements); 2 - Add all possible denoising elements so that denoising type can be switched)",
+            "name": "Render Elements",
+            "items": [
+                [
+                    "0",
+                    "Minimal",
+                    "Only noiseLevel and defocusAmount"
+                ],
+                [
+                    "1",
+                    "By Denoiser Type",
+                    "Only those needed for the specific denoiser type (one-pass or render elements)"
+                ],
+                [
+                    "2",
+                    "All Possible",
+                    "Add all possible denoising elements so that denoising type can be switched)"
+                ]
+            ],
+            "type": "ENUM",
+            "default": "2"
+        },
+        {
             "attr": "preset",
             "desc": "Specifies one a few predefined presets for the radius and the strength",
             "items": [
