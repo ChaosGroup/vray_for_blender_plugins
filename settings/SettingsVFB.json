@@ -306,6 +306,16 @@
             "desc": "",
             "skip": true,
             "type": "BOOL"
+        },
+        {
+            "attr": "hardware_accelerated",
+            "desc": "Hardware Acceleration",
+            "type": "ENUM",
+            "items": [
+                [ "0", "CPU", "" ],
+                [ "1", "GPU", "" ]
+            ],
+            "default": "1"
         }
     ],
     "Type": "SETTINGS",
