@@ -18,6 +18,20 @@
         },
         
         {
+            "attr" : "tiling_factor",
+            "default" : 1.0,
+            "desc" : "",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "ccmult",
+            "default" : 1.0,
+            "desc" : "Clear Coat Multiplier",
+            "type" : "FLOAT_TEXTURE"
+        },
+        
+        {
             "attr" : "paintcolor",
             "default" : [ 0.0, 0.0, 0.0, 0.0 ],
             "desc" : "Paint replacement color",
@@ -32,24 +46,10 @@
         },
         
         {
-            "attr" : "ccmult",
-            "default" : 1.0,
-            "desc" : "Clear Coat Multiplier",
-            "type" : "FLOAT_TEXTURE"
-        },
-        
-        {
             "attr" : "uvwgen",
             "default" : null,
             "desc" : "",
             "type" : "PLUGIN"
-        },
-        
-        {
-            "attr" : "tiling_factor",
-            "default" : 1.0,
-            "desc" : "",
-            "type" : "FLOAT"
         },
         
         {
