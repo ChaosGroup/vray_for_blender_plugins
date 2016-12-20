@@ -3,9 +3,7 @@
     "Desciption" : "BRDFScanned",
     "ID" : "BRDFScanned",
     "Name" : "Scanned",
-    "Parameters" : 
-    [
-        
+    "Parameters" : [
         {
             "attr" : "file",
             "default" : "",
