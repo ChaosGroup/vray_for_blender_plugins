@@ -3,7 +3,9 @@
     "Desciption" : "BRDFScanned",
     "ID" : "BRDFScanned",
     "Name" : "Scanned",
-    "Parameters" : [
+    "Parameters" : 
+    [
+        
         {
             "attr" : "file",
             "default" : "",
@@ -56,6 +58,315 @@
             "desc" : "All parameters serialized to a binary param block",
             "elements_count" : 0,
             "type" : "INT_LIST"
+        },
+        
+        {
+            "attr" : "plain",
+            "default" : "0",
+            "desc" : "This option modifies the rendering in order to improve the result for materials without large details",
+            "items" : 
+            [
+                [ "0", "PL None", "No plain strategy" ],
+                
+                [
+                    "1",
+                    "PL HMG",
+                    "The material is homogenous, an averaged brdf is used instead texture (LighShot::vb), uv mapping must be provided"
+                ],
+                
+                [
+                    "2",
+                    "PL HMGSYM",
+                    "The material is homogenous, symmetrized brdf is used instead texture (LightShot::vbs), no uv mapping is needed"
+                ],
+                
+                [
+                    "3",
+                    "PL SCRAMBLE",
+                    "The material has symmetric average brdf but small details are existing (sand,carpaint, ). the texture is used after scrambling , no uv mapping is needed"
+                ]
+            ],
+            "type" : "ENUM"
+        },
+        
+        {
+            "attr" : "invgamma",
+            "default" : 1.0,
+            "desc" : "Inverse gamma",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "saturation",
+            "default" : 1.0,
+            "desc" : "",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "depthMul",
+            "default" : 1.0,
+            "desc" : "Displacement/paralax  multiplier",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "disablewmap",
+            "default" : false,
+            "desc" : "Disable use of the enlargement, directly the original small sample is used for rendering",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "filter",
+            "default" : [ 1.0, 1.0, 1.0 ],
+            "desc" : "General result multiplier (tint)",
+            "type" : "COLOR"
+        },
+        
+        {
+            "attr" : "uvtrans",
+            "default" : [ 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0 ],
+            "desc" : "UV mapping transformation matrix",
+            "type" : "TRANSFORM"
+        },
+        
+        {
+            "attr" : "bumpmul",
+            "default" : 0.0,
+            "desc" : "Bump multiplier for the inclined views",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "bumpstart",
+            "default" : 0.0,
+            "desc" : "The z value of the view vector below which bump is gradualy applied",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "subdivisions",
+            "default" : 0,
+            "desc" : "The reflection rays count",
+            "type" : "INT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "cutoff",
+            "default" : 0.010,
+            "desc" : "Stop of the indirect ray if the total weight is below this value",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 1,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "mapChannel",
+            "default" : 1,
+            "desc" : "The mapping channel",
+            "type" : "INT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "dome",
+            "default" : false,
+            "desc" : "Prevent double lighting by direct and reflection rays",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "multdirect",
+            "default" : 1,
+            "desc" : "Multiplier for direct light",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "multrefl",
+            "default" : 1,
+            "desc" : "Multiplier for reflected light",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "multgi",
+            "default" : 1,
+            "desc" : "Multiplier for GI light",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "traceDepth",
+            "default" : -1,
+            "desc" : "The maximum reflection depth limit (-1 is controlled by the global options)",
+            "type" : "INT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 64,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "scrambleSize",
+            "default" : 0.0660,
+            "desc" : "Used when the plain option is set to PL_SCRAMBLE, determines the size of the pieces that are continuous in the uv space, measured in cm",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 1,
+                "soft_min" : 0
+            }
+        },
+        
+        {
+            "attr" : "sceneScale",
+            "default" : 100.0,
+            "desc" : "The size of one scene unit in cm",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "ccior",
+            "default" : 1.0,
+            "desc" : "The clear coat ior, used for carpaints and other materials with thin refractive layer",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "cchlight",
+            "default" : 1,
+            "desc" : "The clear coat highlights",
+            "type" : "INT"
+        },
+        
+        {
+            "attr" : "ccbump",
+            "default" : 1.0,
+            "desc" : "Used to make the clear coat not perfect",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "unfRefl",
+            "default" : false,
+            "desc" : "Uniform reflections distribution",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "twoside",
+            "default" : false,
+            "desc" : "Same as two side in the standard material",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "displace",
+            "default" : false,
+            "desc" : "Edge displacement, used to prevent the flat appearance of the edges",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "noPrimGI",
+            "default" : true,
+            "desc" : "The primary rays are rendered without using the GI engine (better acuracity, lower speed)",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "retrace",
+            "default" : 0.0,
+            "desc" : "The minimal path length of a reflected ray that allows to use GI, if the path is shorter 'fear' ray tracing is used",
+            "type" : "FLOAT"
+        },
+        
+        {
+            "attr" : "noTransp",
+            "default" : false,
+            "desc" : "Force opaque rendering even if backside lighting is present",
+            "type" : "BOOL"
+        },
+        
+        {
+            "attr" : "transpMul",
+            "default" : 1.0,
+            "desc" : "Multiplies the transparency (only the transparency, the translucency remains!)",
+            "type" : "FLOAT",
+            "ui" : 
+            {
+                "max" : 1048576,
+                "min" : -1048576,
+                "soft_max" : 1,
+                "soft_min" : 0
+            }
         }
     ],
     "Type" : "BRDF",
