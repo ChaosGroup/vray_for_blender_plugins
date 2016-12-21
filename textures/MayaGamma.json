@@ -18,8 +18,13 @@
         {
             "attr": "gamma",
             "desc": "Gamma values",
-            "type": "FLOAT",
-            "default": 2.2
+            "type": "ACOLOR",
+            "default": [
+                2.2,
+                2.2,
+                2.2,
+                2.2
+            ]
         },
         {
             "attr": "color",

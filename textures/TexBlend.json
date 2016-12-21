@@ -30,10 +30,10 @@
             "desc": "",
             "type": "FLOAT_TEXTURE",
             "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
+                "min": 0,
+                "max": 1,
+                "soft_min": 0,
+                "soft_max": 1
             }
         },
         {

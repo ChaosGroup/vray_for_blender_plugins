@@ -261,6 +261,7 @@
         },
         {
             "attr": "ies_file",
+            "name": "IES File",
             "default": "",
             "desc": "IES file with luminaire description",
             "subtype": "FILE_PATH",

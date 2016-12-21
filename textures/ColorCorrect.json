@@ -9,10 +9,11 @@
             "default": [
                 0,
                 0,
+                0,
                 0
             ],
             "desc": "Source color",
-            "type": "COLOR"
+            "type": "ACOLOR"
         },
         {
             "attr": "texture_map",

@@ -909,16 +909,6 @@
             }
         },
         {
-            "attr": "grad_vert_on",
-            "desc": "Turn on vertical gradient",
-            "type": "BOOL",
-            "default": false,
-            "ui": {
-                "rollout": "Gradients",
-                "display_name": "V Vignette On"
-            }
-        },
-        {
             "attr": "grad_vert_flip",
             "name": "Flip",
             "desc": "Flip vertical gradient",
@@ -940,16 +930,6 @@
             "desc": "Vertical gradient colors",
             "type": "LIST",
             "default": ""
-        },
-        {
-            "attr": "grad_horiz_on",
-            "desc": "Turn on horizontal gradient",
-            "type": "BOOL",
-            "default": false,
-            "ui": {
-                "rollout": "",
-                "display_name": "U Vignette On"
-            }
         },
         {
             "attr": "grad_horiz_flip",
@@ -975,12 +955,6 @@
             "default": ""
         },
         {
-            "attr": "grad_rad_on",
-            "desc": "Turn on radial gradient",
-            "type": "BOOL",
-            "default": false
-        },
-        {
             "attr": "grad_rad_flip",
             "name": "Flip",
             "desc": "Flip radial gradient",
@@ -1002,12 +976,6 @@
             "desc": "Radial gradient colors",
             "type": "LIST",
             "default": ""
-        },
-        {
-            "attr": "frame_on",
-            "desc": "Turn on frame",
-            "type": "BOOL",
-            "default": false
         },
         {
             "attr": "frame_flip",
@@ -1126,7 +1094,19 @@
                 "max": 10
             }
         },
+
         {
+            "attr": "grad_vert_on",
+            "desc": "Turn on vertical gradient",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "rollout": "Gradients",
+                "display_name": "V Vignette On"
+            }
+        },
+        {
+            "available": [ "BLENDER" ],
             "attr": "ramp_grad_vert",
             "default": "",
             "desc": "Vertical gradient",
@@ -1137,6 +1117,17 @@
             }
         },
         {
+            "attr": "grad_horiz_on",
+            "desc": "Turn on horizontal gradient",
+            "type": "BOOL",
+            "default": false,
+            "ui": {
+                "rollout": "",
+                "display_name": "U Vignette On"
+            }
+        },
+        {
+            "available": [ "BLENDER" ],
             "attr": "ramp_grad_horiz",
             "default": "",
             "desc": "Horizontal gradient",
@@ -1144,6 +1135,57 @@
             "attrs": {
                 "colors": "grad_horiz_col",
                 "positions": "grad_horiz_pos"
+            }
+        },
+        {
+            "available": [ "BLENDER" ],
+            "attr": "grad_rad_on",
+            "desc": "Radial Gradient",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "available": [ "BLENDER" ],
+            "attr": "ramp_grad_rad",
+            "default": "",
+            "desc": "Radial Gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors": "grad_rad_col",
+                "positions": "grad_rad_pos"
+            }
+        },
+        {
+            "available": [ "BLENDER" ],
+            "attr": "frame_on",
+            "desc": "Frame Gradient",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "available": [ "BLENDER" ],
+            "attr": "ramp_frame",
+            "default": "",
+            "desc": "Frame Gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors": "frame_col",
+                "positions": "frame_pos"
+            }
+        },
+
+        {
+            "attr": "frame_on",
+            "default": "",
+            "desc": "Frame gradient",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors": "frame_col",
+                "positions": "frame_pos"
+            },
+            "ui": {
+                "rollout": "",
+                "display_name": "Frame Vignette On"
             }
         },
         {

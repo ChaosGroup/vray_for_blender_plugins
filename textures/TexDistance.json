@@ -107,16 +107,6 @@
             }
         },
         {
-            "attr": "nouvw_color",
-            "default": [
-                0.5,
-                0.5,
-                0.5
-            ],
-            "desc": "The color when there are no valid uvw coordinates",
-            "type": "TEXTURE"
-        },
-        {
             "attr": "color",
             "default": [
                 1.0,
@@ -159,17 +149,6 @@
                 "soft_max": 64,
                 "soft_min": 0
             }
-        },
-        {
-            "attr": "far_tex",
-            "default": [
-                1,
-                1,
-                1,
-                1
-            ],
-            "desc": "",
-            "type": "TEXTURE"
         },
         {
             "attr": "nouvw_color",
@@ -217,18 +196,6 @@
             "type": "OUTPUT_FLOAT_TEXTURE",
             "ui": {
                 "rollout": "<EndRollout>"
-            }
-        },
-        {
-            "attr": "distance",
-            "default": 1,
-            "desc": "",
-            "type": "FLOAT_TEXTURE",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
             }
         },
         {

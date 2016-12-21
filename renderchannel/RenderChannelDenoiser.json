@@ -1,0 +1,173 @@
+{
+    "ID": "RenderChannelDenoiser",
+    "Name": "Denoiser",
+    "Desciption": "RenderChannelDenoiser",
+    "Type": "RENDERCHANNEL",
+    "Parameters": [
+        {
+            "attr": "name",
+            "desc": "",
+            "type": "STRING",
+            "default": "denoiser"
+        },
+        {
+            "attr": "enabled",
+            "desc": "",
+            "type": "BOOL",
+            "default": true
+        },
+        {
+            "attr": "mode",
+            "desc": "Specifies what to do with the result",
+            "name": "Denoise Mode",
+            "items": [
+                [
+                    "0",
+                    "None",
+                    "Do not calculate a denoised result"
+                ],
+                [
+                    "1",
+                    "Replace RGB",
+                    "Replace the RGB channel with the denoised result"
+                ],
+                [
+                    "2",
+                    "Separate Channel",
+                    "Generate a separate channel with the denoised result"
+                ]
+            ],
+            "type": "ENUM",
+            "default": "2"
+        },
+        {
+            "attr": "type",
+            "desc": "Denoise type",
+            "items": [
+                [
+                    "0",
+                    "RGB Only",
+                    "One-pass denoising on RGB channel only"
+                ],
+                [
+                    "1",
+                    "All Channels",
+                    "Denoise render elements separately"
+                ]
+            ],
+            "type": "ENUM",
+            "default": "0"
+        },
+        {
+            "attr": "generate_render_elements",
+            "desc": "How to add the needed render elements (0 - Minimal: Only noiseLevel and defocusAmount; 1 - By Denoiser Type: Only those needed for the specific denoiser type (one-pass or render elements); 2 - Add all possible denoising elements so that denoising type can be switched)",
+            "name": "Render Elements",
+            "items": [
+                [
+                    "0",
+                    "Minimal",
+                    "Only noiseLevel and defocusAmount"
+                ],
+                [
+                    "1",
+                    "By Denoiser Type",
+                    "Only those needed for the specific denoiser type (one-pass or render elements)"
+                ],
+                [
+                    "2",
+                    "All Possible",
+                    "Add all possible denoising elements so that denoising type can be switched)"
+                ]
+            ],
+            "type": "ENUM",
+            "default": "2"
+        },
+        {
+            "attr": "preset",
+            "desc": "Specifies one a few predefined presets for the radius and the strength",
+            "items": [
+                [
+                    "0",
+                    "Mild",
+                    "Mild denoising"
+                ],
+                [
+                    "1",
+                    "Default",
+                    "the default denoising mode"
+                ],
+                [
+                    "2",
+                    "Strong",
+                    "Strong mode"
+                ],
+                [
+                    "3",
+                    "Custom",
+                    "Custom radius and noise thresholds"
+                ]
+            ],
+            "type": "ENUM",
+            "default": "1"
+        },
+        {
+            "attr": "radius",
+            "desc": "Specifies pixel radius for denoising",
+            "type": "FLOAT",
+            "default": 10.0
+        },
+        {
+            "attr": "strength",
+            "desc": "Denoiser strength, a multiplier for the noise level render element from V-Ray",
+            "type": "FLOAT",
+            "default": 1.0
+        },
+        {
+            "attr": "use_gpu",
+            "name": "Use GPU",
+            "desc": "Enable usage of GPU version if OpenCL support is found",
+            "type": "BOOL",
+            "default": false
+        },
+        {
+            "attr": "progressive_update",
+            "desc": "Frequency of update during progressive rendering (0 - never; 100 - update as often as possible)",
+            "type": "INT",
+            "ui": {
+                "max": 100,
+                "min": 0
+            },
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "node_widgets": [
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "name" },
+                    { "name": "preset", "label": "Preset" },
+                    { "name": "mode", "label": "Mode" },
+                    { "name": "type", "label": "Type" }
+                ]
+            }
+        ],
+        "widgets": [
+            {   "layout": "COLUMN",
+                "active": {
+                    "prop": "preset",
+                    "value": 3
+                },
+                "attrs": [
+                    { "name": "radius" },
+                    { "name": "strength" }
+                ]
+            },
+            {   "layout": "COLUMN",
+                "attrs": [
+                    { "name": "use_gpu" },
+                    { "name": "progressive_update", "slider" : true }
+                ]
+            }
+        ]
+    }
+}
