@@ -65,6 +65,8 @@
     "Type": "LIGHT",
     "Widget": {
         "node_widgets": [
+        ],
+        "widgets": [
             {
                 "attrs": [
                     {
@@ -83,7 +85,7 @@
                         "name": "mode"
                     }
                 ],
-                "layout": "COLUMN"
+                "layout": "ROW"
             },
             {
                 "attrs": [
@@ -96,8 +98,6 @@
                 ],
                 "layout": "COLUMN"
             }
-        ],
-        "widgets": [
         ]
     }
 }
