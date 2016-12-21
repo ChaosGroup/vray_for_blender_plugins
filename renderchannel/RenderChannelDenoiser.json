@@ -8,7 +8,7 @@
             "attr": "name",
             "desc": "",
             "type": "STRING",
-            "default": "denoiser"
+            "default": "VRayDenoiser"
         },
         {
             "attr": "enabled",
