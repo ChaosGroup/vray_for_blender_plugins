@@ -654,7 +654,8 @@
                             },
                             {
                                 "name": "affectDiffuse"
-                            }
+                            },
+                            { "name": "affect_alpha" }
                         ],
                         "layout": "COLUMN"
                     }
