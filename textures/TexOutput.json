@@ -19,15 +19,26 @@
         },
         {
             "attr": "alpha_from_intensity",
-            "default": 0,
             "desc": "If 2 - the alpha is forced to 1.0f; 1 - the resulting alpha is the color intensity (if compatibility_with is 0) or the color luminance (if compatibility_with is 1); 0 - the alpha is taken from the bitmap alpha",
-            "type": "INT",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
+            "type": "ENUM",
+            "items": [
+                [
+                    "0",
+                    "From Texture",
+                    ""
+                ],
+                [
+                    "1",
+                    "From Intensity",
+                    ""
+                ],
+                [
+                    "2",
+                    "Force Opaque",
+                    ""
+                ]
+            ],
+            "default": "1"
         },
         {
             "attr": "invert",
@@ -46,25 +57,23 @@
         },
         {
             "attr": "color_mult",
-            "default": [
-                1,
-                1,
-                1,
-                1
-            ],
+            "name": "RGB Level",
             "desc": "A multiplier for the texture color",
-            "type": "TEXTURE"
+            "type": "FLOAT",
+            "default": 1.0,
+            "options": [
+                "EXPORT_AS_ACOLOR"
+            ]
         },
         {
             "attr": "color_offset",
-            "default": [
-                0,
-                0,
-                0,
-                0
-            ],
+            "name": "RGB Offset",
             "desc": "An additional offset for the texture color",
-            "type": "TEXTURE"
+            "type": "FLOAT",
+            "default": 1.0,
+            "options": [
+                "EXPORT_AS_ACOLOR"
+            ]
         },
         {
             "attr": "alpha_mult",
@@ -141,6 +150,7 @@
         },
         {
             "attr": "texmap",
+            "name": "Input",
             "default": [
                 1,
                 1,
@@ -164,17 +174,17 @@
         },
         {
             "attr": "output_mult",
-            "desc": "A multiplier for the output AColor",
-            "type": "TEXTURE",
-            "default": [
-                1.0,
-                1.0,
-                1.0,
-                1.0
+            "name": "Output Amount",
+            "desc": "A multiplier for the output color",
+            "type": "FLOAT",
+            "default": 1.0,
+            "options": [
+                "EXPORT_AS_ACOLOR"
             ]
         },
         {
             "attr": "output_clamp",
+            "name": "Clamp",
             "desc": "Clamp the output in [0.0,1.0] range",
             "type": "BOOL",
             "default": false
@@ -182,6 +192,19 @@
     ],
     "Type": "TEXTURE",
     "Widget": {
+        "node_widgets": [
+            {
+                "layout": "COLUMN",
+                "attrs": [
+                    { "name": "invert" },
+                    { "name": "output_clamp" },
+                    { "name": "alpha_from_intensity", "label": "Alpha" },
+                    { "name": "color_mult" },
+                    { "name": "color_offset" },
+                    { "name": "output_mult" }
+                ]
+            }
+        ],
         "widgets": []
     }
 }
