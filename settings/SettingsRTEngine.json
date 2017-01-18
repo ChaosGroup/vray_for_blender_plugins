@@ -6,7 +6,7 @@
         {
             "attr": "cpu_bundle_size",
             "default": 128,
-            "desc": "Number of samples to transfer over the network for RT-CPU",
+            "desc": "Number of samples to transfer over the network for CPU",
             "type": "INT",
             "ui": {
                 "max": 1048576,
@@ -19,7 +19,7 @@
         {
             "attr": "cpu_samples_per_pixel",
             "default": 4,
-            "desc": "Number of samples per pixel for RT-CPU",
+            "desc": "Number of samples per pixel for CPU",
             "type": "INT",
             "ui": {
                 "max": 1048576,
@@ -32,27 +32,27 @@
         {
             "attr": "gpu_bundle_size",
             "default": 128,
-            "desc": "Number of samples to transfer over the network for RT-GPU",
+            "desc": "Number of samples to transfer over the network for GPU",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "GPU Ray bundle size"
+                "display_name": "Ray Bundle"
             }
         },
         {
             "attr": "gpu_samples_per_pixel",
             "default": 1,
-            "desc": "Number of samples per pixel for RT-GPU",
+            "desc": "Number of samples per pixel for GPU",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "GPU Rays per pixel"
+                "display_name": "Rays Per Pixel"
             }
         },
         {
@@ -151,7 +151,7 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "GPU Texture Size"
+                "display_name": "Size"
             }
         },
         {
@@ -162,7 +162,7 @@
             "items": [
                 [
                     "0",
-                    "Transfer \"As Is\" (Don't Resize, Don't Use Paging)",
+                    "As Is",
                     "Transfer \"as is\" (don't resize, don't use paging)"
                 ],
                 [
@@ -172,12 +172,12 @@
                 ],
                 [
                     "2",
-                    "Use Texture Paging(Out-Of-Core Textures) CUDA Only",
-                    "Use texture paging(out-of-core textures) CUDA only"
+                    "Texture Paging",
+                    "Use texture paging (out-of-core textures, CUDA only)"
                 ]
             ],
             "ui": {
-                "display_name": "GPU Resize textures"
+                "display_name": "Resize Textures"
             }
         },
         {
@@ -187,18 +187,18 @@
             "items": [
                 [
                     "0",
-                    "32-Bit Float",
-                    ""
+                    "32-Bit",
+                    "32-Bit Float"
                 ],
                 [
                     "1",
-                    "16-Bit Half Float",
-                    ""
+                    "16-Bit",
+                    "16-Bit Half Float"
                 ]
             ],
             "type": "ENUM",
             "ui": {
-                "display_name": "GPU Texture Format"
+                "display_name": "Format"
             }
         },
         {
@@ -241,7 +241,7 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "Max. render time (min)"
+                "display_name": "Time (min)"
             }
         },
         {
@@ -254,7 +254,7 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "Max. paths per pixel"
+                "display_name": "Paths / Pixel"
             }
         },
         {
@@ -267,7 +267,7 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "Max. noise"
+                "display_name": "Noise"
             }
         },
         {
