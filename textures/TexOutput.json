@@ -70,7 +70,7 @@
             "name": "RGB Offset",
             "desc": "An additional offset for the texture color",
             "type": "FLOAT",
-            "default": 1.0,
+            "default": 0.0,
             "options": [
                 "EXPORT_AS_ACOLOR"
             ]
