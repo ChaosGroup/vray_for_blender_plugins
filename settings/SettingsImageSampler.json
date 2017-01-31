@@ -282,9 +282,10 @@
             "desc": "If true, the AA mask will be rendered",
             "name": "Show Mask",
             "type": "BOOL",
+            "skip": true,
             "ui": {
-                "display_name": "Show AA mask",
-                "enabled": true
+                "display_name": "Show AA mask (DEPRECATED)",
+                "enabled": false
             }
         },
         {
@@ -606,9 +607,6 @@
                             },
                             {
                                 "name": "progressive_bundleSize"
-                            },
-                            {
-                                "name": "progressive_showMask"
                             }
                         ],
                         "layout": "COLUMN"
