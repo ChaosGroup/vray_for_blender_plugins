@@ -142,12 +142,6 @@
             }
         },
         {
-            "attr": "bump_tex",
-            "desc": "Bump texture; this is deprecated, use bump_tex_color or bump_tex_float",
-            "type": "PLUGIN",
-            "default": null
-        },
-        {
             "attr": "normal_map_mult",
             "desc": "Multiplier applied to the normal map",
             "type": "FLOAT",
