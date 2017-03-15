@@ -388,6 +388,17 @@
             "desc": "",
             "type": "FLOAT_TEXTURE",
             "default": 1.0
+        },
+        {
+            "attr": "color_ramp",
+            "default": "",
+            "desc": "Color Ramp",
+            "type": "WIDGET_RAMP",
+            "attrs": {
+                "colors": "color_colors",
+                "positions": "color_positions",
+                "interpolations": "color_types"
+            }
         }
     ],
     "Widget": {
