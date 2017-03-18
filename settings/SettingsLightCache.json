@@ -11,14 +11,14 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 10000,
                 "soft_min": 0,
                 "display_name": "Subdivs"
             }
         },
         {
             "attr": "sample_size",
-            "default": 0.03,
+            "default": 0.01,
             "desc": "This determines the spacing of the samples in the light cache",
             "type": "FLOAT",
             "ui": {
@@ -64,7 +64,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 10000,
                 "soft_min": 0,
                 "display_name": "Filter samples",
                 "enabled": true
@@ -78,7 +78,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Filter size",
                 "enabled": true
@@ -96,13 +96,13 @@
         },
         {
             "attr": "prefilter_samples",
-            "default": 10,
+            "default": 20,
             "desc": "Number of prefilter samples",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1000,
                 "soft_min": 0,
                 "display_name": "Prefilter samples",
                 "enabled": true
@@ -116,7 +116,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 100,
                 "soft_min": 0,
                 "display_name": "Depth"
             }
@@ -248,7 +248,7 @@
         },
         {
             "attr": "num_passes",
-            "default": 4,
+            "default": 8,
             "desc": "The light cache is computed in several passes, which are then combined into the final light cache",
             "type": "INT",
             "ui": {
@@ -261,7 +261,7 @@
         },
         {
             "attr": "use_for_glossy_rays",
-            "default": false,
+            "default": true,
             "desc": "If this option is on, the light cache will be used to compute lighting for glossy rays as well, in addition to normal GI rays",
             "type": "BOOL",
             "ui": {
@@ -288,7 +288,7 @@
         },
         {
             "attr": "retrace_enabled",
-            "default": false,
+            "default": true,
             "desc": "Enable retrace of light cache",
             "type": "BOOL",
             "ui": {
@@ -297,7 +297,7 @@
         },
         {
             "attr": "retrace_threshold",
-            "default": 1,
+            "default": 2,
             "desc": "Retrace treshold, relative to the light cache sample size",
             "type": "FLOAT",
             "ui": {
@@ -329,7 +329,7 @@
             "attr": "retrace_leak_prevention",
             "desc": "Enables additional checks to mimize light leaks; 0.0 means no checks",
             "type": "FLOAT",
-            "default": 0.0,
+            "default": 0.8,
             "ui": {
                 "display_name": "Leak prevention",
                 "enabled": true,
