@@ -346,7 +346,7 @@
         },
         {
             "attr": "ray_max_intensity_on",
-            "default": false,
+            "default": true,
             "desc": "Enable clamping of secondary rays",
             "name": "Limit Ray Intensity",
             "type": "BOOL",
@@ -390,7 +390,7 @@
             "name": "Lights Evaluation Mode",
             "desc": "Lights evaluation mode",
             "type": "ENUM",
-            "default": "0",
+            "default": "2",
             "items": [
                 [ "0", "Full Lights Evaluation", "" ],
                 [ "1", "Uniform Probabilistic Lights", "" ],
@@ -404,7 +404,7 @@
             "attr": "num_probabilistic_lights",
             "desc": "The number of probabilistic lights to use when probabilistic_lights_on is true",
             "type": "INT",
-            "default": 8,
+            "default": 16,
             "ui": {
                 "display_name": "Number of probabilistic lights",
                 "enabled": true,
