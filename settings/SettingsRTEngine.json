@@ -194,6 +194,11 @@
                     "1",
                     "16-Bit",
                     "16-Bit Half Float"
+                ],
+				[
+                    "2",
+                    "8-Bit",
+                    "8-Bit"
                 ]
             ],
             "type": "ENUM",
