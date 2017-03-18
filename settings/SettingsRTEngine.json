@@ -156,13 +156,13 @@
         },
         {
             "attr": "opencl_resizeTextures",
-            "default": "1",
+            "default": "0",
             "desc": "Textures transfer mode for the GPU",
             "type": "ENUM",
             "items": [
                 [
                     "0",
-                    "As Is",
+                    "Full-Size Textures",
                     "Transfer \"as is\" (don't resize, don't use paging)"
                 ],
                 [
@@ -172,7 +172,7 @@
                 ],
                 [
                     "2",
-                    "Texture Paging",
+                    "On-Demand mip-mapped textures",
                     "Use texture paging (out-of-core textures, CUDA only)"
                 ]
             ],
@@ -182,7 +182,7 @@
         },
         {
             "attr": "opencl_textureFormat",
-            "default": "1",
+            "default": "2",
             "desc": "Format for the textures on the GPU",
             "items": [
                 [
