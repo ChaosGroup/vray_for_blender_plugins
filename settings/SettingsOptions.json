@@ -404,7 +404,7 @@
             "attr": "num_probabilistic_lights",
             "desc": "The number of probabilistic lights to use when probabilistic_lights_on is true",
             "type": "INT",
-            "default": 16,
+            "default": 8,
             "ui": {
                 "display_name": "Number of probabilistic lights",
                 "enabled": true,
