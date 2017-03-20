@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "size",
-            "default": 1.5,
+            "default": 2.0,
             "desc": "Filter width",
             "type": "FLOAT",
             "ui": {

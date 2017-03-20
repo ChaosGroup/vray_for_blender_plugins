@@ -455,7 +455,6 @@
         "widgets": [
             {
                 "attrs": [
-                    { "name": "dmc_adaptive_method" },
                     {
                         "name": "type"
                     }
