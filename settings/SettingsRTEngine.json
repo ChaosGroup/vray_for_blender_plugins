@@ -156,13 +156,13 @@
         },
         {
             "attr": "opencl_resizeTextures",
-            "default": "1",
+            "default": "0",
             "desc": "Textures transfer mode for the GPU",
             "type": "ENUM",
             "items": [
                 [
                     "0",
-                    "As Is",
+                    "Full-Size Textures",
                     "Transfer \"as is\" (don't resize, don't use paging)"
                 ],
                 [
@@ -172,7 +172,7 @@
                 ],
                 [
                     "2",
-                    "Texture Paging",
+                    "On-Demand mip-mapped textures",
                     "Use texture paging (out-of-core textures, CUDA only)"
                 ]
             ],
@@ -182,7 +182,7 @@
         },
         {
             "attr": "opencl_textureFormat",
-            "default": "1",
+            "default": "2",
             "desc": "Format for the textures on the GPU",
             "items": [
                 [
@@ -194,6 +194,11 @@
                     "1",
                     "16-Bit",
                     "16-Bit Half Float"
+                ],
+				[
+                    "2",
+                    "8-Bit",
+                    "8-Bit"
                 ]
             ],
             "type": "ENUM",
@@ -246,20 +251,20 @@
         },
         {
             "attr": "max_sample_level",
-            "default": 0,
+            "default": 10000,
             "desc": "Max sample level (0 = inf)",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 500000,
                 "soft_min": 0,
                 "display_name": "Paths / Pixel"
             }
         },
         {
             "attr": "noise_threshold",
-            "default": 0.001,
+            "default": 0.008,
             "desc": "Noise threshold for the image sampler (0 = inf)",
             "type": "FLOAT",
             "ui": {

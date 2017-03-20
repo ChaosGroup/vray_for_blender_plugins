@@ -346,7 +346,7 @@
         },
         {
             "attr": "ray_max_intensity_on",
-            "default": false,
+            "default": true,
             "desc": "Enable clamping of secondary rays",
             "name": "Limit Ray Intensity",
             "type": "BOOL",
@@ -390,7 +390,7 @@
             "name": "Lights Evaluation Mode",
             "desc": "Lights evaluation mode",
             "type": "ENUM",
-            "default": "0",
+            "default": "2",
             "items": [
                 [ "0", "Full Lights Evaluation", "" ],
                 [ "1", "Uniform Probabilistic Lights", "" ],

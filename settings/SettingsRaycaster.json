@@ -5,7 +5,7 @@
     "Parameters": [
         {
             "attr": "maxLevels",
-            "default": 60,
+            "default": 80,
             "desc": "Max. tree depth",
             "type": "INT",
             "ui": {
@@ -44,7 +44,7 @@
         },
         {
             "attr": "dynMemLimit",
-            "default": 4000,
+            "default": 6000,
             "desc": "Limit for dynamic geometry, in megabytes",
             "type": "INT",
             "ui": {
@@ -58,7 +58,7 @@
         {
             "attr": "embreeUse",
             "name": "Use Embree",
-            "default": false,
+            "default": true,
             "desc": "Enable/Disable using the embree ray caster",
             "type": "BOOL",
             "ui": {
@@ -90,7 +90,7 @@
         {
             "attr": "embreeLowMemory",
             "name": "Embree Low Memory",
-            "default": true,
+            "default": false,
             "desc": "Try to conserve memory, using potentially slower algorithms",
             "type": "BOOL",
             "ui": {
