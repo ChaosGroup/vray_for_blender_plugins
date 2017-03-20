@@ -86,7 +86,7 @@
         },
         {
             "attr": "prefilter",
-            "default": false,
+            "default": true,
             "desc": "Filter light cache sampler before rendering",
             "type": "BOOL",
             "ui": {
@@ -348,9 +348,6 @@
                     "at": "SettingsGI"
                 },
                 "attrs": [
-                    {
-                        "name": "adaptive_sampling"
-                    },
                     {
                         "name": "auto_save"
                     },

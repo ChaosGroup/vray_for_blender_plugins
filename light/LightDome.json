@@ -408,7 +408,7 @@
         },
         {
             "attr": "dome_spherical",
-            "default": false,
+            "default": true,
             "desc": "",
             "type": "BOOL"
         },
@@ -463,7 +463,7 @@
             "attr": "affect_alpha",
             "desc": "true if the light appears in the alpha and false otherwise",
             "type": "BOOL",
-            "default": true
+            "default": false
         }
     ],
     "Type": "LIGHT",

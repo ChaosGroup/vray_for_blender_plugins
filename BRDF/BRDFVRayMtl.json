@@ -122,7 +122,8 @@
                 "soft_max": 64,
                 "soft_min": 0,
                 "display_name": "Reflection glossiness"
-            }
+            },
+            "options": [ "INVERT_MULTIPLIER" ]
         },
         {
             "attr": "hilight_glossiness",
@@ -436,7 +437,8 @@
                 "soft_max": 64,
                 "soft_min": 0,
                 "display_name": "Refraction glossiness"
-            }
+            },
+            "options": [ "INVERT_MULTIPLIER" ]
         },
         {
             "attr": "refract_subdivs",

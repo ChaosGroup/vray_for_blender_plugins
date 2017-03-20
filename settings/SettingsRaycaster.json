@@ -31,7 +31,7 @@
         },
         {
             "attr": "faceLevelCoef",
-            "default": 2,
+            "default": 1.0,
             "desc": "Balance coefficient between depth and faces per voxel",
             "type": "FLOAT",
             "ui": {

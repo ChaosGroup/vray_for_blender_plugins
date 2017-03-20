@@ -161,12 +161,13 @@
         },
         {
             "attr": "ray_distance_on",
+            "name": "Ray Distance",
             "default": false,
             "desc": "Limit ray distance",
             "name": "Limit Ray Distance",
             "type": "BOOL",
             "ui": {
-                "display_name": "Ray Distance On",
+                "display_name": "Ray Distance",
                 "enabled": true
             }
         },
@@ -180,7 +181,7 @@
                 "min": -1048576,
                 "soft_max": 64,
                 "soft_min": 0,
-                "display_name": "Ray Distance",
+                "display_name": "Max. Ray Distance",
                 "enabled": true,
                 "spin_step": 1.0
             }
