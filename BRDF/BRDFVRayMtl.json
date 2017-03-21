@@ -712,7 +712,7 @@
         },
         {
             "attr": "translucency_thickness",
-            "default": 1000000000000000000.0,
+            "default": 1000.0,
             "desc": "Maximum distance to trace inside the object",
             "type": "FLOAT",
             "ui": {
