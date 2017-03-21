@@ -141,7 +141,7 @@
                 ["1", "Don't Affect Colors",   "Nothing is applied"],
                 ["2", "Color Mapping Only",    "Only color mapping is applied"]
             ],
-            "default" : "0",
+            "default" : "2",
             "ui": {
                 "display_name": "Mode"
             }
