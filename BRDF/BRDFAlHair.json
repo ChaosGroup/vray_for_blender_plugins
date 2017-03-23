@@ -1,0 +1,231 @@
+{
+   "Desciption" : "BRDFAlHair",
+   "ID" : "BRDFAlHair",
+   "Name" : "AlHair",
+   "Parameters" : [
+      {
+         "attr" : "opacity",
+         "default" : 1.0,
+         "desc" : "",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "melanin",
+         "default" : 0.1500000059604645,
+         "desc" : "The melanin content of the hair fibre. Use this to generate natural colors for mammalian hair. 0 will give white hair, 0.2-04 blonde, 0.4-0.6 red, 0.6-0.8 brown and 0.8-1.0 black hair. If you want to set the color of the hair with a texture map, set this to 0 and use the Dye color parameter",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "dye_color",
+         "default" : [ 1.0, 1.0, 1.0, 1.0 ],
+         "desc" : "Color tint to apply to the hair",
+         "type" : "TEXTURE"
+      },
+      {
+         "attr" : "specular_width",
+         "default" : 3.0,
+         "desc" : "The width of the hair highlights, essentially how shiny the hair appears. Values in the range 1-7 are sensible for human hair",
+         "type" : "FLOAT"
+      },
+      {
+         "attr" : "specular_shift",
+         "default" : 4.0,
+         "desc" : "How much the highlights are shifted along the hair by the cuticles on the hair fibre. Generally this wants to be 1 to 1.5 times the value of the Width parameter",
+         "type" : "FLOAT"
+      },
+      {
+         "attr" : "diffuse_color",
+         "default" : [ 1.0, 1.0, 1.0, 1.0 ],
+         "desc" : "Tint on the diffuse illumination",
+         "type" : "TEXTURE"
+      },
+      {
+         "attr" : "diffuse_strength",
+         "default" : 1.0,
+         "desc" : "Multiplier on the strength of the diffuse illumination",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "forward_scattering",
+         "default" : 0.6999999880790710,
+         "desc" : "Controls the amount of light bleeding through the hair in dual-scattering mode",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "back_scattering",
+         "default" : 0.6999999880790710,
+         "desc" : "Controls the amount of light kicked back from the hair in dual-scattering mode",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "specular1_color",
+         "default" : [ 1.0, 1.0, 1.0, 1.0 ],
+         "desc" : "",
+         "type" : "TEXTURE"
+      },
+      {
+         "attr" : "specular1_strength",
+         "default" : 1.0,
+         "desc" : "",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "specular1_shift",
+         "default" : 0.0,
+         "desc" : "Offset on the shift of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "specular1_width_scale",
+         "default" : 1.0,
+         "desc" : "Multiplier on the width of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "specular2_color",
+         "default" : [ 1.0, 1.0, 1.0, 1.0 ],
+         "desc" : "",
+         "type" : "TEXTURE"
+      },
+      {
+         "attr" : "specular2_strength",
+         "default" : 1.0,
+         "desc" : "",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "specular2_shift",
+         "default" : 0.0,
+         "desc" : "Offset on the shift of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "specular2_width_scale",
+         "default" : 1.0,
+         "desc" : "Multiplier on the width of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "glint_strength",
+         "default" : 2.50,
+         "desc" : "Strength of the caustic glints. Sensible values are in the range 1-5",
+         "type" : "FLOAT"
+      },
+      {
+         "attr" : "transmission_color",
+         "default" : [ 1.0, 1.0, 1.0, 1.0 ],
+         "desc" : "",
+         "type" : "TEXTURE"
+      },
+      {
+         "attr" : "transmission_strength",
+         "default" : 1.0,
+         "desc" : "",
+         "type" : "FLOAT_TEXTURE",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "transmission_shift",
+         "default" : 0.0,
+         "desc" : "Offset on the shift of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "transmission_width_scale",
+         "default" : 1.0,
+         "desc" : "Multiplier on the width of this lobe's highlight",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "glint_rolloff",
+         "default" : 5.0,
+         "desc" : "Controls the rolloff of the caustic glints in the hair. Lower values make the glints more pingy, higher values make them softer and less apparent",
+         "type" : "FLOAT"
+      },
+      {
+         "attr" : "transmission_rolloff",
+         "default" : 10.0,
+         "desc" : "Controls the rolloff of the transmission highlight. Essentially, if you want the transmission highlight to only appear when the light is directly behind the hair, set this value to 10 or lower. If you want to increase the amount the highlight spreads as the light comes around from behind, set this value higher than 10",
+         "type" : "FLOAT"
+      },
+      {
+         "attr" : "random_melanin",
+         "default" : 0.07999999821186066,
+         "desc" : "Adds a random offset to the melanin content of the hair. Values from 0.05 to 0.2 give a very natural color variation",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "random_hue",
+         "default" : 0.0,
+         "desc" : "Adds a random offest to the hue of the dye color",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "random_saturation",
+         "default" : 0.0,
+         "desc" : "Adds a random offest to the saturation of the Dye color",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "random_tangent",
+         "default" : 0.0,
+         "desc" : "Adds a random offset to the hair tangent which can be useful for breaking up uniform-looking grooms. Note that this value is dependent on your scene scale",
+         "type" : "FLOAT_TEXTURE"
+      },
+      {
+         "attr" : "diffuse_indirect_strength",
+         "default" : 0.0,
+         "desc" : "",
+         "type" : "FLOAT",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      },
+      {
+         "attr" : "glossy_indirect_strength",
+         "default" : 0.0,
+         "desc" : "",
+         "type" : "FLOAT",
+         "ui" : {
+            "max" : 1.0,
+            "min" : 0.0
+         }
+      }
+   ],
+   "Type" : "BRDF",
+   "Widget" : {
+      "widgets" : []
+   }
+}
