@@ -80,7 +80,7 @@
         },
         {
             "attr": "dmc_maxSubdivs",
-            "default": 4,
+            "default": 24,
             "desc": "Max. subdivs value for the adaptive DMC image sampler",
             "name": "Max. Subdivs",
             "type": "INT",
