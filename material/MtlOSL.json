@@ -1,0 +1,50 @@
+{
+   "Desciption" : "MtlOSL",
+   "ID" : "MtlOSL",
+   "Name" : "Mtl OSL",
+   "Parameters" : [
+      {
+         "attr" : "shader_file",
+         "default" : "",
+         "desc" : "Path to a *.oso file",
+         "type" : "STRING",
+         "ui" : {
+            "file_extensions" : [ "oso" ]
+         }
+      },
+      {
+         "attr" : "input_parameters",
+         "default" : null,
+         "desc" : "Input parameter values in the order and type declared by the osl shader",
+         "type" : "LIST"
+      },
+      {
+         "attr" : "output_closure",
+         "default" : "",
+         "desc" : "Name of the output closure color as declared in the osl shader",
+         "type" : "STRING"
+      },
+      {
+         "attr" : "uvwgen",
+         "default" : "",
+         "desc" : "The uvw generator for the material",
+         "type" : "UVWGEN"
+      },
+      {
+         "attr" : "max_ray_depth",
+         "default" : 5,
+         "desc" : "Maximum trace depth allowed for material evaluation",
+         "type" : "INT"
+      },
+      {
+         "attr" : "include_path",
+         "default" : "",
+         "desc" : "Alternative include directory",
+         "type" : "STRING"
+      }
+   ],
+   "Type" : "MATERIAL",
+   "Widget" : {
+      "widgets" : []
+   }
+}

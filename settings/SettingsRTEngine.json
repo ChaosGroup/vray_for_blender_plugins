@@ -219,7 +219,7 @@
         {
             "attr": "undersampling",
             "default": 4,
-            "desc": "Non-zero to use undersampling, 0 otherwise. The value specifies the blur resolution. Value of n means 1/(2^n) initial resolution in each dimension.",
+            "desc": "Non-zero to use undersampling, 0 otherwise. The value specifies the blur resolution. Value of n means 1/(2^n) initial resolution in each dimension",
             "type": "INT",
             "ui": {
                 "max": 5,
