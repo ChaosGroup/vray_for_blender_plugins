@@ -1097,6 +1097,7 @@
                             {
                                 "name": "fresnel"
                             },
+                            { "label": "Glossy Fresnel", "name": "option_glossy_fresnel" },
                             {
                                 "name": "fresnel_ior_lock"
                             }
@@ -1442,7 +1443,6 @@
                         "label": "Glossy Rays As GI",
                         "name": "option_glossy_rays_as_gi"
                     },
-                    { "label": "Glossy Fresnel", "name": "option_glossy_fresnel" },
                     {
                         "label": "Energy Mode",
                         "name": "option_energy_mode"
