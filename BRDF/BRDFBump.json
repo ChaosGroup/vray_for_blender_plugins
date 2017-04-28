@@ -49,7 +49,7 @@
         },
         {
             "attr": "bump_tex_mult_tex",
-            "default": 0.1,
+            "default": 1.0,
             "desc": "Bump amount texture",
             "name": "Bump Amount Texture",
             "type": "FLOAT_TEXTURE",
