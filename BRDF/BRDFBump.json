@@ -115,7 +115,10 @@
             "attr": "normal_uvwgen",
             "default": "",
             "desc": "The uvw generator for the normal map texture when \"Type\" is \"Normal (Tangent)\"",
-            "type": "PLUGIN"
+            "type": "PLUGIN",
+            "options": [
+                "HIDDEN"
+            ]
         },
         {
             "attr": "maya_compatible",
