@@ -2,6 +2,7 @@
     "Desciption": "",
     "ID": "VRayStereoscopicSettings",
     "Name": "VRayStereoscopicSettings",
+    "Type": "CAMERA",
     "Parameters": [
         {
             "attr": "eye_distance",
