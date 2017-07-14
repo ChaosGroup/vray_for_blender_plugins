@@ -445,6 +445,10 @@
                     {
                         "label": "Placement",
                         "name": "placement_type"
+                    },
+                    {
+                        "label": "Tiling",
+                        "name": "tile"
                     }
                 ],
                 "layout": "COLUMN"
