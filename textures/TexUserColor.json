@@ -41,6 +41,16 @@
                 0.5,
                 1.0
             ]
+        },
+        {
+            "attr": "attribute_priority",
+            "desc": "User attribute lookup priority",
+            "type": "ENUM",
+            "items": [
+                [ "0", "Map Channel", "" ],
+                [ "1", "User Attribute", ""]
+            ],
+            "default": "1"
         }
     ],
     "Type": "TEXTURE",

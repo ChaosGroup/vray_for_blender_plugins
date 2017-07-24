@@ -1,0 +1,18 @@
+{
+    "ID": "TexExtMapChannels",
+    "Name": "TexExtMapChannels",
+    "Desciption": "TexExtMapChannels",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "map_channels",
+            "desc": "Override map channels.",
+            "type": "LIST",
+            "elements_count": 0,
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}

@@ -53,6 +53,12 @@
             "type": "INT_LIST",
             "elements_count": 0,
             "default": 0
+        },
+        {
+            "attr": "map_channels",
+            "desc": "",
+            "type": "TEXTURE",
+            "default": null
         }
     ],
     "Type": "MATERIAL",

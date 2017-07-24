@@ -1,0 +1,18 @@
+{
+    "ID": "TexExtMaterialID",
+    "Name": "TexExtMaterialID",
+    "Desciption": "TexExtMaterialID",
+    "Type": "TEXTURE",
+    "Parameters": [
+        {
+            "attr": "ids_list",
+            "desc": "",
+            "type": "INT_LIST",
+            "elements_count": 0,
+            "default": 0
+        }
+    ],
+    "Widget": {
+        "widgets": []
+    }
+}
