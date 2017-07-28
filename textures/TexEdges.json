@@ -156,15 +156,6 @@
             {
                 "attrs": [
                     {
-                        "label": "Width",
-                        "name": "pixel_width"
-                    }
-                ],
-                "layout": "COLUMN"
-            },
-            {
-                "attrs": [
-                    {
                         "name": "show_hidden_edges"
                     },
                     {
