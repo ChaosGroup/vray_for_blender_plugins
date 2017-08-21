@@ -1,0 +1,56 @@
+{
+    "ID": "RenderChannelCryptomatte",
+    "Desciption": "",
+    "Name": "Cryptomatte",
+    "Parameters": [
+        {
+            "name": "Name",
+            "attr": "name",
+            "default": "VRayCryptomatte",
+            "desc": "Channel name",
+            "type": "STRING"
+        },
+        {
+            "attr": "alias",
+            "desc": "",
+            "type": "INT",
+            "default": 157
+        },
+        {
+            "name": "ID Type",
+            "attr": "id_type",
+            "desc": "Defines which criteria is used to represent individual cryptomatte object",
+            "items": [
+                [ "0", "Node Name", "Node name" ],
+                [ "1", "Material Name", "Material name" ],
+                [ "2", "Node Name Hierarchy", "Node name hierarchy" ]
+            ],
+            "type": "ENUM",
+            "default": "0"
+        },
+        {
+            "name": "Scene Name Index",
+            "attr": "scene_name_index",
+            "desc": "Optional parameter to override the index used to access the scene_name parameter from the VRayPlugin",
+            "type": "INT",
+            "default": -1
+        },
+        {
+            "name": "EXR Metadata",
+            "attr": "write_metadata",
+            "desc": "Controls if metadata will be appended to the EXR extra attributes",
+            "items": [
+                [ "0", "None", "The plugin will not append any metadata" ],
+                [ "1", "Required Metadata", "Write required metadata only" ],
+                [ "2", "Metadata & Manifest", "Write required metadata and manifest" ]
+            ],
+            "type": "ENUM",
+            "default": "2"
+        }
+    ],
+    "Type": "RENDERCHANNEL",
+    "Widget": {
+        "node_widgets": [],
+        "widgets": []
+    }
+}
