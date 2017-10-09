@@ -583,6 +583,9 @@
             ],
             "desc": "The absorption (fog) color texture",
             "type": "TEXTURE",
+            "options": [
+                "LINKED_ONLY"
+            ],
             "ui": {
                 "display_name": "Fog color"
             }
