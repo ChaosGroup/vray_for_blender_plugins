@@ -66,6 +66,33 @@
             }
         },
         {
+            "attr": "opacity_mode",
+            "default": "2",
+            "desc": "Opacity mode",
+            "items": [
+                [
+                    "0",
+                    "Normal",
+                    "Normal"
+                ],
+                [
+                    "1",
+                    "Clip",
+                    "Clip"
+                ],
+                [
+                    "2",
+                    "Stochastic",
+                    "Stochastic"
+                ]
+            ],
+            "type": "ENUM",
+            "ui": {
+                "rollout": "Reflection layer",
+                "display_name": "Opacity Mode"
+            }
+        },
+        {
             "attr": "brdf_type",
             "default": "1",
             "desc": "The BRDF type",
@@ -1090,6 +1117,10 @@
                             {
                                 "name": "hilight_glossiness_lock",
                                 "label": "Hilight Gloss. Lock"
+                            },
+                            {
+                                "name": "opacity_mode",
+                                "label": "Opacity mode"
                             }
                         ],
                         "layout": "COLUMN"
