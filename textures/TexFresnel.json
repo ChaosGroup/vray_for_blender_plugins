@@ -30,9 +30,9 @@
         {
             "attr": "white_color",
             "default": [
-                0.0,
-                0.0,
-                0.0
+                1.0,
+                1.0,
+                1.0
             ],
             "desc": "Refraction (front) color",
             "type": "TEXTURE",
@@ -58,6 +58,7 @@
             "default": 1.0,
             "desc": "",
             "type": "FLOAT_TEXTURE",
+            "options": [ "LINKED_ONLY" ],
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
@@ -70,6 +71,7 @@
             "default": 1.0,
             "desc": "",
             "type": "FLOAT_TEXTURE",
+            "options": [ "LINKED_ONLY" ],
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
