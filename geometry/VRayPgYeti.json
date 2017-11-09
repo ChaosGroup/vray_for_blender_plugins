@@ -1,0 +1,18 @@
+{
+	"Type": "GEOMETRY",
+	"ID": "VRayPgYeti",
+	"Name": "Yeti (V-Ray)",
+	"Description": "Yeti *.fur cache loader",
+	"Parameters": [
+		{
+			"attr": "file",
+			"default": "",
+			"desc": "Path to a *.fur file",
+			"subtype": "FILE_PATH",
+			"type": "STRING"
+		}
+	],
+	"Widget": {
+		"widgets": []
+	}
+}
