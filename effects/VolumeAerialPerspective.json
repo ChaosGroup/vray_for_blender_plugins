@@ -37,11 +37,24 @@
             "default": 1.0
         },
         {
+            "attr": "filter_color",
+            "default": [ 1, 1, 1 ],
+            "desc": "Filter color for the fog. Note that fog color depends on the color of the sky",
+            "type": "COLOR"
+        },
+        {
             "attr": "affect_env",
             "name": "Affect Environment Rays",
             "desc": "Specify whether aerial perspective is applied to environment rays",
             "type": "BOOL",
             "default": false
+        },
+        {
+            "attr": "affect_bg",
+            "name": "Affect Background",
+            "desc": "Specify whether aerial perspective is applied to the background",
+            "type": "BOOL",
+            "default": true
         }
     ],
     "Widget": {
@@ -51,7 +64,9 @@
                     { "name": "distance" },
                     { "name": "atm_height" },
                     { "name": "inscat_mult" },
-                    { "name": "affect_env" }
+                    { "name": "filter_color" },
+                    { "name": "affect_env" },
+                    { "name": "affect_bg" }
                 ],
                 "layout": "COLUMN"
             }
