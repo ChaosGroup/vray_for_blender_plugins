@@ -38,6 +38,18 @@
             }
         },
         {
+            "attr": "blend_angle",
+            "default": 5.73917,
+            "desc": "The angle (in degrees) (up from the horizon) where the sky starts to blend with the ground albedo. Values close to 0.0 produce a sharper horizon line, while larger values produce a softer horizon line",
+            "type": "FLOAT"
+        },
+        {
+            "attr": "horizon_offset",
+            "default": 0.0,
+            "desc": "Horizon offset under the sky-dome. Allows the user to manually lower the horizon line",
+            "type": "FLOAT"
+        },
+        {
             "attr": "water_vapour",
             "default": 2,
             "desc": "",
@@ -383,6 +395,8 @@
                             {
                                 "name": "water_vapour"
                             },
+                            { "name" : "blend_angle" },
+                            { "name" : "horizon_offset" },
                             {
                                 "name": "intensity_multiplier"
                             },
