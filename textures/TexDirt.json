@@ -172,7 +172,7 @@
             "desc": "if true the render_nodes list is inclusive",
             "type": "BOOL",
             "ui": {
-                "display_name": "As Inclusive list"
+                "display_name": "Render Nodes As Inclusive list"
             }
         },
         {
@@ -197,7 +197,7 @@
             "desc": "if true the affect_result_nodes list is inclusive",
             "type": "BOOL",
             "ui": {
-                "display_name": "As Inclusive list"
+                "display_name": "Result Nodes As Inclusive list"
             }
         },
         {
