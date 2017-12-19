@@ -4,18 +4,6 @@
     "Name": "User Color",
     "Parameters": [
         {
-            "attr": "default_value",
-            "default": 1,
-            "desc": "Default value if the attribute is not found",
-            "type": "FLOAT_TEXTURE",
-            "ui": {
-                "max": 1048576,
-                "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0
-            }
-        },
-        {
             "attr": "user_attribute",
             "default": "",
             "desc": "User attribute name of type float or color",
