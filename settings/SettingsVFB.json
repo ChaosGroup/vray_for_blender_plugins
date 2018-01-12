@@ -178,6 +178,7 @@
             "attr": "glare_image_path",
             "default": "",
             "desc": "",
+            "subtype": "FILE_PATH",
             "type": "STRING"
         },
         {
