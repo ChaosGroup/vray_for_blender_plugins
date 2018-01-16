@@ -29,13 +29,6 @@
             "default": "0"
         },
         {
-            "name": "Scene Name Index",
-            "attr": "scene_name_index",
-            "desc": "Optional parameter to override the index used to access the scene_name parameter from the VRayPlugin",
-            "type": "INT",
-            "default": -1
-        },
-        {
             "name": "EXR Metadata",
             "attr": "write_metadata",
             "desc": "Controls if metadata will be appended to the EXR extra attributes",
