@@ -146,7 +146,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Reflection glossiness"
             }
@@ -159,7 +159,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Hilight glossiness",
                 "enabled": true
@@ -199,7 +199,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 100,
                 "soft_min": 0,
                 "display_name": "Fresnel IOR",
                 "enabled": true
@@ -247,7 +247,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1000,
                 "soft_min": 0,
                 "display_name": "Max depth"
             }
@@ -310,7 +310,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Dim fall-off",
                 "enabled": true
@@ -351,8 +351,8 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 1,
+                "soft_min": -1,
                 "rollout": "",
                 "display_name": "Anisotropy(-1..1)"
             }
@@ -365,8 +365,8 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 10000,
+                "soft_min": -10000,
                 "display_name": "Anisotropy rotation"
             }
         },
@@ -447,7 +447,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 100,
                 "soft_min": 0,
                 "display_name": "Refraction IOR"
             }
@@ -460,7 +460,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Refraction glossiness"
             }
@@ -496,8 +496,8 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 1000,
+                "soft_min": 1,
                 "display_name": "Max depth"
             }
         },
@@ -578,8 +578,8 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 150,
+                "soft_min": 1,
                 "display_name": "Abberation",
                 "enabled": true
             }
@@ -623,7 +623,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 100000,
                 "soft_min": 0,
                 "display_name": "Fog multiplier"
             }
@@ -704,7 +704,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 10000,
                 "soft_min": 0,
                 "display_name": "Light multiplier",
                 "enabled": true
@@ -718,7 +718,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Scatter direction",
                 "enabled": true
@@ -732,7 +732,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Scatter coeff",
                 "enabled": true
@@ -746,7 +746,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 100000,
                 "soft_min": 0,
                 "display_name": "Thickness",
                 "enabled": true
@@ -805,7 +805,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "display_name": "Cutoff"
             }
@@ -873,8 +873,8 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
-                "soft_min": 0,
+                "soft_max": 1000,
+                "soft_min": -1000,
                 "enabled": true
             }
         },
@@ -1021,7 +1021,7 @@
                 "enabled": true,
                 "min": 0.0010000000474974514,
                 "max": 1000.0,
-                "soft_min": 2.0,
+                "soft_min": 0.0001,
                 "soft_max": 10.0
             }
         },
