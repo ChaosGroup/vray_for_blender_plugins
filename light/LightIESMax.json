@@ -283,10 +283,22 @@
             "type": "COLOR"
         },
         {
-            "attr": "soft_shadows",
-            "default": false,
-            "desc": "true to use the shape of the light as described in the IES profile",
-            "type": "BOOL"
+            "attr" : "soft_shadows",
+            "default" : "0",
+            "desc" : "0 works as point light; 1 to use the shape of the light for shadows; 2 to also use it for illumination",
+            "items" : [
+                [ "0", "No", "No" ],
+                [ "1", "Use light shape for Shadows", "Use light shape for Shadows" ],
+                [
+                    "2",
+                    "Use light shape for Shadows and Illumination",
+                    "Use light shape for Shadows and Illumination"
+                ]
+            ],
+            "type" : "ENUM",
+            "ui" : {
+                "rollout" : "Shadows"
+            }
         },
         {
             "attr": "area_speculars",
