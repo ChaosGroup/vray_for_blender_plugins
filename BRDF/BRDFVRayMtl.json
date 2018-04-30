@@ -11,7 +11,7 @@
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 1,
                 "soft_min": 0,
                 "tab": "V-Ray Material Basic",
                 "rollout": "Basic"
