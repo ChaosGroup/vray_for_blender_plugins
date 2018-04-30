@@ -23,17 +23,17 @@
             "items": [
                 [
                     "0",
-                    "None",
+                    "Only generate render elements",
                     "Do not calculate a denoised result"
                 ],
                 [
                     "1",
-                    "Replace RGB",
+                    "Hide denoiser element",
                     "Replace the RGB channel with the denoised result"
                 ],
                 [
                     "2",
-                    "Separate Channel",
+                    "Show denoiser element",
                     "Generate a separate channel with the denoised result"
                 ]
             ],
