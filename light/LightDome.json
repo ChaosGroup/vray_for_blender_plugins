@@ -413,6 +413,13 @@
             "type": "BOOL"
         },
         {
+            "name": "Adaptive Dome",
+            "attr": "dome_adaptive",
+            "default": false,
+            "desc": "Enable adaptive dome algorithm",
+            "type": "BOOL"
+        },
+        {
             "attr": "tex_adaptive",
             "default": 1,
             "desc": "",
@@ -530,6 +537,9 @@
                     {
                         "align": true,
                         "attrs": [
+                            {
+                                "name": "dome_adaptive"
+                            },
                             {
                                 "name": "dome_spherical"
                             }
