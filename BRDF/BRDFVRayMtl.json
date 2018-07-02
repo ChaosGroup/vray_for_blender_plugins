@@ -138,6 +138,17 @@
             }
         },
         {
+            "attr": "metalness",
+            "default": 0.0,
+            "desc": "When this is 0.0, the material uses dielectric reflections, and when it is 1.0, metallic reflections are used",
+            "type": "FLOAT_TEXTURE",
+            "ui": {
+                "soft_min": 0,
+                "soft_max": 1,
+                "display_name": "Metalness"
+            }
+        },
+        {
             "attr": "reflect_glossiness",
             "default": 1,
             "desc": "The glossiness of the reflections",
