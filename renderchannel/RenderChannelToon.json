@@ -1,0 +1,94 @@
+{
+   "Desciption" : "RenderChannelToon",
+   "ID" : "RenderChannelToon",
+   "Name" : "Toon",
+   "Parameters" : [
+      {
+         "attr" : "enableDeepOutput",
+         "default" : true,
+         "desc" : "",
+         "type" : "BOOL",
+         "ui" : {}
+      },
+      {
+         "attr" : "name",
+         "default" : "ColorChannel",
+         "desc" : "",
+         "type" : "STRING"
+      },
+      {
+         "attr" : "alias",
+         "default" : 154,
+         "desc" : "",
+         "type" : "INT"
+      },
+      {
+         "attr" : "color_mapping",
+         "default" : false,
+         "desc" : "true to apply color mapping to the channel; false otherwise",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "consider_for_aa",
+         "default" : false,
+         "desc" : "",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "filtering",
+         "default" : true,
+         "desc" : "",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "derive_raw_channels",
+         "default" : true,
+         "desc" : "true if raw channels should be derived from the respective color and filter channel",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "vfb_color_corrections",
+         "default" : true,
+         "desc" : "False to disable ALL VFB color corrections(sRGB, curves, white balance, etc...) when saving the channel data to a file or showing it on a display. True to apply VFB color corrections when saving the channel data to a file or showing it on a display. If true some color corrections might still be disabled, based on the type of file being saved",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "denoise",
+         "default" : false,
+         "desc" : "true to denoise the channel; false otherwise",
+         "type" : "BOOL"
+      },
+      {
+         "attr" : "light_path_expression",
+         "default" : "",
+         "desc" : "",
+         "type" : "STRING"
+      },
+      {
+         "attr" : "invert_color",
+         "default" : false,
+         "desc" : "",
+         "type" : "BOOL"
+      }
+   ],
+   "Type" : "RENDERCHANNEL",
+   "Widget" : {
+      "widgets" : [
+         {
+            "layout": "COLUMN",
+             "attrs": [
+                  { "name": "enableDeepOutput" },
+                  { "name": "name" },
+                  { "name": "color_mapping" },
+                  { "name": "consider_for_aa" },
+                  { "name": "filtering" },
+                  { "name": "derive_raw_channels" },
+                  { "name": "vfb_color_corrections" },
+                  { "name": "denoise" },
+                  { "name": "light_path_expression" },
+                  { "name": "invert_color" }
+             ]
+         }
+      ]
+   }
+}
