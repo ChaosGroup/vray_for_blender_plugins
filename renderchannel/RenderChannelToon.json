@@ -12,7 +12,7 @@
       },
       {
          "attr" : "name",
-         "default" : "ColorChannel",
+         "default" : "Toon",
          "desc" : "",
          "type" : "STRING"
       },
