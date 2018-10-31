@@ -80,12 +80,10 @@
                   { "name": "enableDeepOutput" },
                   { "name": "name" },
                   { "name": "color_mapping" },
-                  { "name": "consider_for_aa" },
+                  { "name": "consider_for_aa", "label": "Consider for Anti Aliasing"},
                   { "name": "filtering" },
-                  { "name": "derive_raw_channels" },
                   { "name": "vfb_color_corrections" },
                   { "name": "denoise" },
-                  { "name": "light_path_expression" },
                   { "name": "invert_color" }
              ]
          }
