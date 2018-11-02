@@ -410,28 +410,6 @@
             "type": "BOOL"
         },
         {
-            "attr": "dmc_adaptive_method",
-            "desc": "Switches between legacy and new adaptive sampling",
-            "type": "ENUM",
-            "items": [
-                [
-                    "0",
-                    "Legacy",
-                    ""
-                ],
-                [
-                    "1",
-                    "Default",
-                    ""
-                ]
-            ],
-            "default": "1",
-            "ui": {
-                "display_name": "Adaptive Method",
-                "enabled": true
-            }
-        },
-        {
             "attr": "progressive_progNoiseThreshold",
             "desc": "Progressive noise threshold active pixels percent at which the threshold is reduced",
             "type": "INT",

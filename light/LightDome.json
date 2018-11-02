@@ -370,13 +370,13 @@
         },
         {
             "attr": "tex_resolution",
-            "default": 512,
+            "default": 2048,
             "desc": "",
             "type": "INT",
             "ui": {
                 "max": 1048576,
                 "min": -1048576,
-                "soft_max": 64,
+                "soft_max": 2048,
                 "soft_min": 0,
                 "display_name": "Texture resolution",
                 "enabled": true
