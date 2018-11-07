@@ -459,6 +459,7 @@
         },
         {
             "attr": "spottyness",
+            "name": "Spottiness",
             "desc": "Controls the randomization of the density\tof the individual cells used by the Billow noise type. When Spottyness is close to 0, all the cells will be the same density.  As you increase Spottyness, some cells will be denser or thinner than others, in a random fashion",
             "type": "FLOAT_TEXTURE",
             "default": 0.10000000149011612

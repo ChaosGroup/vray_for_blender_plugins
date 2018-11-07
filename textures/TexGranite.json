@@ -438,6 +438,7 @@
         },
         {
             "attr": "spottyness",
+            "name": "Spottiness",
             "default": 1.0,
             "desc": "",
             "type": "FLOAT_TEXTURE",
