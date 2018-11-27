@@ -51,7 +51,7 @@
                 [ "119", "Raw Reflection", "" ],
                 [ "120", "Refraction Filter", "" ],
                 [ "121", "Raw Refraction", "" ],
-                [ "122", "Real Color", "" ],
+                [ "122", "Unclamped Color", "" ],
                 [ "124", "Background", "" ],
                 [ "125", "Alpha", "" ],
                 [ "126", "Color", "" ],
