@@ -171,18 +171,31 @@
         },
         {
           "attr": "auto_white_balance",
-          "default": 0,
-          "desc": "Auto-white balance mode (0 - disabled; 1 - temperature; 2 - RGB). This feature requires light cache GI",
-          "type": "INT",
+          "default": "0",
+          "desc": "auto white balance type",
+          "items": [
+            [
+              "0",
+              "Disable",
+              ""
+            ],
+            [
+              "1",
+              "Temperature",
+              ""
+            ],
+            [
+              "2",
+              "RGB",
+              ""
+            ]
+
+          ],
+          "type": "ENUM",
           "ui": {
-            "max": 2,
-            "min": 0,
-            "soft_max": 2,
-            "soft_min": 0,
-            "display_name": "auto white balance",
-            "enabled": true
-            }
-         },
+            "display_name": "Auto white balance"
+          }
+        },
          {
           "attr": "auto_exposure_compensation",
           "default": 0,
