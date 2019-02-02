@@ -158,8 +158,59 @@
             "skip": true,
             "desc": "Override FOV",
             "type": "BOOL"
+        },
+        {
+            "attr": "auto_exposure",
+            "default": false,
+            "desc": "true to enable auto-exposure. This feature requires light cache GI",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Auto exposure",
+                "enabled": true
+            }
+        },
+        {
+          "attr": "auto_white_balance",
+          "default": "0",
+          "desc": "auto white balance type",
+          "items": [
+            [
+              "0",
+              "Disable",
+              ""
+            ],
+            [
+              "1",
+              "Temperature",
+              ""
+            ],
+            [
+              "2",
+              "RGB",
+              ""
+            ]
+
+          ],
+          "type": "ENUM",
+          "ui": {
+            "display_name": "Auto white balance"
+          }
+        },
+         {
+          "attr": "auto_exposure_compensation",
+          "default": 0,
+          "desc": " Additional compensation for the auto-exposure value, in f-stops. A value of 1.0 makes the result twice as bright, and -1.0 makes it twice as dark",
+          "type": "FLOAT",
+          "ui": {
+            "max": 5,
+            "min": -5,
+            "soft_max": 5,
+            "soft_min": -5,
+            "display_name": "auto exposure compensation",
+            "enabled": true
+            }
         }
-    ],
+        ],
     "Type": "CAMERA",
     "Widget": {
         "widgets": [

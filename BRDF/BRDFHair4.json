@@ -1,0 +1,355 @@
+{
+  "Desciption": "",
+  "ID": "BRDFHair4",
+  "Name": "Hair 4",
+  "Parameters": [
+    {
+      "attr": "melanin",
+      "default": 0.3,
+      "desc": "The melanin content of the hair fibre. 0 corresponds to white hair, 0.1-0.2 blonde, 0.3-0.4 red, 0.5-0.8 brown and 0.8-1.0 black hair.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "pheomelanin",
+      "default": 0,
+      "desc": "The redness (pheomelanin content) of the hair fibre as fraction of all melanin. 1.0 makes the hair redder.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "dye_color",
+      "default": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "desc": " Color tint to apply to the hair.",
+      "type": "TEXTURE",
+      "ui": {
+        "tab": "V-Ray Hair 4",
+        "rollout": "General parameters"
+      }
+    },
+    {
+      "attr": "transparency",
+      "default": [
+        0,
+        0,
+        0
+      ],
+      "desc": "Transparency",
+      "type": "TEXTURE"
+    },
+    {
+      "attr": "diffuse_color",
+      "default": [
+        1,
+        1,
+        1
+      ],
+      "desc": "Diffuse hair color",
+      "type": "TEXTURE",
+      "ui": {
+        "rollout": "Diffuse"
+      }
+    },
+    {
+      "attr": "diffuse_amount",
+      "default": 0,
+      "desc": "Multiplier for the diffuse color",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1048576,
+        "min": -1048576,
+        "soft_max": 64,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "glossiness",
+      "default": 0.5,
+      "desc": "The glossiness along the hair strand. It primarily controls the width of the highlight, essentially how shiny the hair appears.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "primary_glossiness_boost",
+      "default": 0.4,
+      "desc": " Additional scaling factor to boost the primary reflection glossiness. This can be useful for reproducing the effect of shiny coating on rough looking fur.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "softness",
+      "default": 0.5,
+      "desc": " The glossiness across the hair strand. It controls the overall softness of the hair.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "highlight_shift",
+      "default": 2,
+      "desc": " How much the highlights are shifted along the hair by the cuticles on the hair fibre. Values in the range 2-4 are typical for human hair.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 10,
+        "min": 0,
+        "soft_max": 10,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "ior",
+      "default": 1.55,
+      "desc": " Hair index of refration. The animal cuticle scales often form a layered structure, resulting in increased primary reflection. This can be modeled with higher index of refraction. The typical value for human hair is 1.55.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 10,
+        "min": 0,
+        "soft_max": 10,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "trace_depth",
+      "desc": " The number of indirect bounces used to compute the effect of the multiple scattering. It can significantly affect the hair appearance, especially for light colored hairs. The number of bounces necessary can vary from 5 for dark colored hairs, to 30 and more for light colored ones.",
+      "type": "INT",
+      "default": 10
+    },
+    {
+      "attr": "subdivs",
+      "desc": " [UI] minValue=(1), maxValue=(1000), quantityType=(localSubdivs), gpuSupport=(none)",
+      "type": "INT",
+      "default": 8
+    },
+    {
+      "attr": "gray_hair_density",
+      "default": 0,
+      "desc": "The frequency at which gray hairs appear.",
+      "type": "FLOAT_TEXTURE",
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+
+    {
+      "attr": "random_melanin",
+      "desc": "Adds a random offset to the melanin content of the hair.",
+      "type": "FLOAT",
+      "default": 0.0,
+      "ui": {
+        "max": 1,
+        "min": 0,
+        "soft_max": 1,
+        "soft_min": 0
+      }
+    },
+    {
+      "attr": "random_dye_hue",
+      "desc": "Adds a random offest to the hue of the Dye color.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_dye_saturation",
+      "desc": "Adds a random offest to the saturation of the Dye color.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_dye_value",
+      "desc": "Adds a random offest to the value of the Dye color.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_ior",
+      "desc": "Adds a random offset to the Index of refration.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_tangent",
+      "desc": "Adds a random offset to the hair tangent. Note that this value is scene scale dependent.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_glossiness",
+      "desc": "Adds a random offset to the glossiness of the hair.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_softness",
+      "desc": "Adds a random offset to the softness of the hair.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "random_highlight_shift",
+      "desc": "Adds a random offset to the Highlight shift.",
+      "type": "FLOAT",
+      "default": 0.0
+    },
+    {
+      "attr": "glint_strength",
+      "desc": "The strength of the second more focused colored highlight.",
+      "type": "FLOAT",
+      "default": 0.2
+    },
+    {
+      "attr": "glint_variation",
+      "desc": "The amount of random variation along the strand applied to the colored highlights.",
+      "type": "FLOAT",
+      "default": 0.3
+    },
+    {
+      "attr": "glitter_strength",
+      "desc": "The strength of the primary reflection non-uniformity. Induces more focused reflection, which is randomly perturbed along the strand. More pronounced with hard lightning produced by small or collimated light sources.",
+      "type": "FLOAT",
+      "default": 0.3
+    },
+    {
+      "attr": "glitter_size",
+      "desc": "The size of the glitter perturbation pattern. Increasing the value will prolong the pattern.",
+      "type": "FLOAT",
+      "default": 1.0
+    },
+    {
+      "attr": "glitter_scale",
+      "desc": "The units scale factor of the distance along the strand. Internally the variation along the strand is set in real world units. This parameter allows to correct the appearance for hair not modeled in real world scale. Values below 1.0 will shrink the variation pattern, while values above 1.0 will elongate it.",
+      "type": "FLOAT",
+      "default": 1.0
+    },
+    {
+      "attr": "primary_tint",
+      "default": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "desc": "Color tint to apply to the primary specular component.",
+      "type": "TEXTURE",
+      "ui": {
+        "tab": "V-Ray Hair 4",
+        "rollout": "General parameters"
+      }
+    },
+    {
+      "attr": "secondary_tint",
+      "default": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "desc": "Color tint to apply to the secondary specular component",
+      "type": "TEXTURE",
+      "ui": {
+        "tab": "V-Ray Hair 4",
+        "rollout": "General parameters"
+      }
+    },
+    {
+      "attr": "transmission_tint",
+      "default": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "desc": " Color tint to apply to the hair.",
+      "type": "TEXTURE",
+      "ui": {
+        "tab": "V-Ray Hair 4",
+        "rollout": "General parameters"
+      }
+    }
+  ],
+  "Type": "BRDF",
+  "Widget": {
+    "widgets": [
+      {
+        "attrs": [
+          {
+            "name": "trace_depth"
+          },
+          {
+            "name": "subdivs"
+          },
+          {
+            "name": "random_melanin"
+          },
+          {
+            "name": "random_dye_hue"
+          },
+          {
+            "name": "random_dye_saturation"
+          },
+          {
+            "name": "random_dye_value"
+          },
+          {
+            "name": "random_ior"
+          },
+          {
+            "name": "random_tangent"
+          },
+          {
+            "name": "random_glossiness"
+          },
+          {
+            "name": "random_softness"
+          },
+          {
+            "name": "random_highlight_shift"
+          },
+          {
+            "name": "glint_strength"
+          },
+          {
+            "name": "glint_variation"
+          },
+          {
+            "name": "glitter_strength"
+          },
+          {
+            "name": "glitter_size"
+          },
+          {
+            "name": "glitter_scale"
+          }
+        ],
+        "layout": "COLUMN"
+      }
+    ]
+  }
+}
