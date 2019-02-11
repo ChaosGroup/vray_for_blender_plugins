@@ -2,7 +2,7 @@
     "ID": "VRayClipper",
     "Name": "V Ray Clipper",
     "Desciption": "VRayClipper",
-    "Type": "NODE",
+    "Type": "OBJECT",
     "Parameters": [
         {
             "attr": "enabled",
