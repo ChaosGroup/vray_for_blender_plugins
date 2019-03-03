@@ -1165,10 +1165,6 @@
                             {
                                 "label": "Fwd/Bck Coeff",
                                 "name": "translucency_scatter_dir"
-                            },
-                            {
-                                "label": "Light Multiplier",
-                                "name": "translucency_light_mult"
                             }
                         ],
                         "layout": "COLUMN"
