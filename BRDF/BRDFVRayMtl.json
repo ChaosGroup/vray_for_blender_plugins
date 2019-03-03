@@ -1087,14 +1087,6 @@
                 "layout": "SEPARATOR"
             },
             {
-                "attrs": [
-                    {
-                        "name": "fog"
-                    }
-                ],
-                "layout": "ROW"
-            },
-            {
                 "layout": "SPLIT",
                 "splits": [
                     {
