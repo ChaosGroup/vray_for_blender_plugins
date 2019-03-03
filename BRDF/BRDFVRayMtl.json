@@ -605,7 +605,7 @@
             "desc": "The absorption (fog) color",
             "type": "COLOR",
             "ui": {
-                "tab": "V-Ray Material Advanced",
+                "enabled:": false,
                 "rollout": "Fog",
                 "display_name": "Fog color"
             }
@@ -619,11 +619,9 @@
             ],
             "desc": "The absorption (fog) color texture",
             "type": "TEXTURE",
-            "options": [
-                "LINKED_ONLY"
-            ],
             "ui": {
-                "display_name": "Fog color"
+                "display_name": "Fog color",
+                "enabled": true
             }
         },
         {
@@ -1093,11 +1091,10 @@
                         "align": true,
                         "attrs": [
                             {
-                                "label": "",
-                                "name": "fog_color"
+                                "name": "fog_mult"
                             },
                             {
-                                "name": "fog_mult"
+                                "name": "fog_unit_scale_on"
                             }
                         ],
                         "layout": "COLUMN"
@@ -1107,9 +1104,6 @@
                         "attrs": [
                             {
                                 "name": "fog_bias"
-                            },
-                            {
-                                "name": "fog_unit_scale_on"
                             }
                         ],
                         "layout": "COLUMN"
