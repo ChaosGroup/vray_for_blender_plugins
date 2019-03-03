@@ -685,6 +685,11 @@
                     "3",
                     "Hybrid model",
                     ""
+                ],
+                [
+                    "4",
+                    "Volumetric translucency",
+                    ""
                 ]
             ],
             "type": "ENUM",
@@ -858,6 +863,15 @@
             "type": "BOOL",
             "ui": {
                 "display_name": "Fix dark edges"
+            }
+        },
+        {
+            "attr": "fog_unit_scale_on",
+            "default": true,
+            "desc": "Enable unit scale multiplication, when calculating absorption. When this is enabled, the fog multiplier is in cm^-1. When this is disabled, the fog multiplier is in scene_units^-1.",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Fog unit scale"
             }
         },
         {
@@ -1051,19 +1065,9 @@
                             }
                         ],
                         "layout": "COLUMN"
-                    },
-                    {
-                        "align": true,
-                        "attrs": [
-                            {
-                                "name": "fog_mult"
-                            },
-                            {
-                                "name": "fog_bias"
-                            }
-                        ],
-                        "layout": "COLUMN"
                     }
+
+
                 ]
             },
             {
@@ -1078,6 +1082,49 @@
                 ],
                 "layout": "COLUMN"
             },
+            {
+                "label": "Fog",
+                "layout": "SEPARATOR"
+            },
+            {
+                "attrs": [
+                    {
+                        "name": "fog"
+                    }
+                ],
+                "layout": "ROW"
+            },
+            {
+                "layout": "SPLIT",
+                "splits": [
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "label": "",
+                                "name": "fog_color"
+                            },
+                            {
+                                "name": "fog_mult"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    },
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "name": "fog_bias"
+                            },
+                            {
+                                "name": "fog_unit_scale_on"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    }
+                ]
+            },
+
             {
                 "label": "Translucency",
                 "layout": "SEPARATOR"
@@ -1096,9 +1143,10 @@
                     {
                         "align": true,
                         "attrs": [
+
                             {
-                                "label": "",
-                                "name": "translucency_color"
+                                "label": "Light Multiplier",
+                                "name": "translucency_light_mult"
                             },
                             {
                                 "label": "Thickness",
