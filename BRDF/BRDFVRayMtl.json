@@ -605,7 +605,7 @@
             "desc": "The absorption (fog) color",
             "type": "COLOR",
             "ui": {
-                "tab": "V-Ray Material Advanced",
+                "enabled:": false,
                 "rollout": "Fog",
                 "display_name": "Fog color"
             }
@@ -619,11 +619,9 @@
             ],
             "desc": "The absorption (fog) color texture",
             "type": "TEXTURE",
-            "options": [
-                "LINKED_ONLY"
-            ],
             "ui": {
-                "display_name": "Fog color"
+                "display_name": "Fog color",
+                "enabled": true
             }
         },
         {
@@ -684,6 +682,11 @@
                 [
                     "3",
                     "Hybrid model",
+                    ""
+                ],
+                [
+                    "4",
+                    "Volumetric translucency",
                     ""
                 ]
             ],
@@ -858,6 +861,15 @@
             "type": "BOOL",
             "ui": {
                 "display_name": "Fix dark edges"
+            }
+        },
+        {
+            "attr": "fog_unit_scale_on",
+            "default": true,
+            "desc": "Enable unit scale multiplication, when calculating absorption. When this is enabled, the fog multiplier is in cm^-1. When this is disabled, the fog multiplier is in scene_units^-1.",
+            "type": "BOOL",
+            "ui": {
+                "display_name": "Fog unit scale"
             }
         },
         {
@@ -1051,19 +1063,9 @@
                             }
                         ],
                         "layout": "COLUMN"
-                    },
-                    {
-                        "align": true,
-                        "attrs": [
-                            {
-                                "name": "fog_mult"
-                            },
-                            {
-                                "name": "fog_bias"
-                            }
-                        ],
-                        "layout": "COLUMN"
                     }
+
+
                 ]
             },
             {
@@ -1078,6 +1080,37 @@
                 ],
                 "layout": "COLUMN"
             },
+            {
+                "label": "Fog",
+                "layout": "SEPARATOR"
+            },
+            {
+                "layout": "SPLIT",
+                "splits": [
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "name": "fog_mult"
+                            },
+                            {
+                                "name": "fog_unit_scale_on"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    },
+                    {
+                        "align": true,
+                        "attrs": [
+                            {
+                                "name": "fog_bias"
+                            }
+                        ],
+                        "layout": "COLUMN"
+                    }
+                ]
+            },
+
             {
                 "label": "Translucency",
                 "layout": "SEPARATOR"
@@ -1096,9 +1129,10 @@
                     {
                         "align": true,
                         "attrs": [
+
                             {
-                                "label": "",
-                                "name": "translucency_color"
+                                "label": "Light Multiplier",
+                                "name": "translucency_light_mult"
                             },
                             {
                                 "label": "Thickness",
@@ -1117,10 +1151,6 @@
                             {
                                 "label": "Fwd/Bck Coeff",
                                 "name": "translucency_scatter_dir"
-                            },
-                            {
-                                "label": "Light Multiplier",
-                                "name": "translucency_light_mult"
                             }
                         ],
                         "layout": "COLUMN"
