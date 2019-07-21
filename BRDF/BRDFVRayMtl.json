@@ -866,7 +866,7 @@
         {
             "attr": "fog_unit_scale_on",
             "default": true,
-            "desc": "Enable unit scale multiplication, when calculating absorption. When this is enabled, the fog multiplier is in cm^-1. When this is disabled, the fog multiplier is in scene_units^-1.",
+            "desc": "Enable unit scale multiplication, when calculating absorption. When this is enabled, the fog multiplier is in cm^-1. When this is disabled, the fog multiplier is in scene_units^-1",
             "type": "BOOL",
             "ui": {
                 "display_name": "Fog unit scale"
