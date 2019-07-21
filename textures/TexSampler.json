@@ -163,9 +163,9 @@
         },
         {
             "attr": "material_id",
-            "default": 1,
+            "default": 0,
             "desc": "The surface material id, if the surface supports it",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_INT_TEXTURE"
         },
         {
             "attr": "flipped_normal",
@@ -249,15 +249,15 @@
         },
         {
             "attr": "object_id",
-            "default": 1.0,
+            "default": 0,
             "desc": "The object ID of the hit object",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_INT_TEXTURE"
         },
         {
             "attr": "parent_object_id",
-            "default": 1.0,
+            "default": 0,
             "desc": "The object ID of the parent object",
-            "type": "OUTPUT_FLOAT_TEXTURE"
+            "type": "OUTPUT_INT_TEXTURE"
         },
         {
             "attr": "velocity",
@@ -288,6 +288,12 @@
             "default": 0.0,
             "desc": "Random value based on the polygon shell (connected mesh component) the current face belongs to",
             "type": "OUTPUT_FLOAT_TEXTURE"
+        },
+        {
+            "attr": "face_index",
+            "default": -1,
+            "desc": "Index of triangle face hit by ray (-1 if not applicable)",
+            "type": "OUTPUT_INT_TEXTURE"
         },
         {
             "attr": "uv_set_name",
