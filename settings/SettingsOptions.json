@@ -242,7 +242,7 @@
         },
         {
             "attr": "misc_lowThreadPriority",
-            "default": false,
+            "default": true,
             "desc": "Low thread priority",
             "name": "Low Thread Priority",
             "type": "BOOL",
